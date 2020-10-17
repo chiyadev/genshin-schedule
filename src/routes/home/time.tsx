@@ -44,7 +44,7 @@ const Time = () => {
         &lt; {hour}:{minute}:{second} &gt;
       </div>
 
-      <div className="text-xs">
+      <div className="text-xs text-gray-600">
         {resetMinutes > 60 ? (
           <span>
             {resetHours} hour{resetHours !== 1 && "s"}
