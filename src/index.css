@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Bonobo';
+    src: URL('/assets/fonts/Bonobo Regular.ttf') format('truetype');
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #2e313d;
+    font-family: 'Bonobo', arial, sans-serif;
+    color: white;
+}

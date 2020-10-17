@@ -1,11 +1,11 @@
 {
-  "name": "genshin",
+  "name": "Genshin Schedule",
   "short_name": "genshin",
   "start_url": "/",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#fff",
-  "theme_color": "#673ab8",
+  "orientation": "landscape",
+  "background_color": "#2e313d",
+  "theme_color": "#2e313d",
   "icons": [
     {
       "src": "/assets/icons/android-chrome-192x192.png",
