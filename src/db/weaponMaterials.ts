@@ -22,15 +22,15 @@ export const BorealWolf: WeaponMaterial = {
   wiki: "https://genshin-impact.fandom.com/wiki/Boreal_Wolf%27s_Milk_Tooth"
 };
 
-export const MistVeiled: WeaponMaterial = {
+export const MistVeiledElixir: WeaponMaterial = {
   type: "Weapon Ascension Material",
-  name: "Mist Veiled",
+  name: "Mist Veiled Elixir",
   wiki: "https://genshin-impact.fandom.com/wiki/Mist_Veiled_Lead_Elixir"
 };
 
-export const Dandelion: WeaponMaterial = {
+export const DandelionGladiator: WeaponMaterial = {
   type: "Weapon Ascension Material",
-  name: "Dandelion",
+  name: "Dandelion Gladiator",
   wiki:
     "https://genshin-impact.fandom.com/wiki/Fetters_of_the_Dandelion_Gladiator"
 };
@@ -45,7 +45,7 @@ export const WeaponMaterials = [
   Decarabian,
   Guyun,
   BorealWolf,
-  MistVeiled,
-  Dandelion,
+  MistVeiledElixir,
+  DandelionGladiator,
   Aerosiderite
 ];

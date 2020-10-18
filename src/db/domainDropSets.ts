@@ -2,10 +2,10 @@ import { Artifact } from "./artifacts";
 import {
   Aerosiderite,
   BorealWolf,
-  Dandelion,
+  DandelionGladiator,
   Decarabian,
   Guyun,
-  MistVeiled,
+  MistVeiledElixir,
   WeaponMaterial
 } from "./weaponMaterials";
 import {
@@ -67,14 +67,14 @@ export const RuinsOfThirstingCapital: DomainDropSet = {
   type: "Domain Drop Set",
   name: "Ruins of Thirsting Capital",
   days: WedSat,
-  items: [Dandelion]
+  items: [DandelionGladiator]
 };
 
 export const AltarOfTheFalls: DomainDropSet = {
   type: "Domain Drop Set",
   name: "Altar of the Falls",
   days: Sun,
-  items: [Decarabian, BorealWolf, Dandelion]
+  items: [Decarabian, BorealWolf, DandelionGladiator]
 };
 
 export const Thundercloud: DomainDropSet = {
@@ -88,7 +88,7 @@ export const ThunderingRuins: DomainDropSet = {
   type: "Domain Drop Set",
   name: "Thundering Ruins",
   days: TuesFri,
-  items: [MistVeiled]
+  items: [MistVeiledElixir]
 };
 
 export const TrailGroundsOfThunder: DomainDropSet = {
@@ -102,7 +102,7 @@ export const ElectrostaticField: DomainDropSet = {
   type: "Domain Drop Set",
   name: "Electrostatic Field",
   days: Sun,
-  items: [Guyun, MistVeiled, Aerosiderite]
+  items: [Guyun, MistVeiledElixir, Aerosiderite]
 };
 
 export const ForsakenRiftDrops1: DomainDropSet = {
