@@ -8,6 +8,7 @@ export type Configs = {
     value: number;
     time: number;
   };
+  customizeQuery: string;
 };
 
 export const DefaultConfigs: Configs = {
@@ -16,7 +17,8 @@ export const DefaultConfigs: Configs = {
   resin: {
     value: ResinCap,
     time: Date.now()
-  }
+  },
+  customizeQuery: ""
 };
 
 export function useConfig<TKey extends keyof Configs>(key: TKey) {

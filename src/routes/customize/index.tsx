@@ -1,11 +1,11 @@
 import { h } from "preact";
 import Search from "./search";
-import { useState } from "preact/hooks";
 import Characters from "./characters";
 import Help from "./help";
+import { useConfig } from "../../configs";
 
 const Customize = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useConfig("customizeQuery");
 
   return (
     <div className="container mx-auto p-4">

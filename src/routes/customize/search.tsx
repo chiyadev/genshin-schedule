@@ -18,7 +18,7 @@ const Search = ({
             "font-bold": !!value
           }
         )}
-        placeholder="Search for characters, domains, ascension materials, etc."
+        placeholder="Search characters, ascension materials and tasks."
         autoFocus
         value={value}
         onInput={({ currentTarget: { value } }) => setValue(value)}
