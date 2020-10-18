@@ -8,7 +8,7 @@ import { cx } from "emotion";
 import { Domains } from "../../db/domains";
 import { DomainDropSets } from "../../db/domainDropSets";
 
-const talentMatToCharacters = Characters.reduce((x, c) => {
+const materialToCharacters = Characters.reduce((x, c) => {
   const list = x[c.talentMaterial.name];
 
   if (list) list.push(c);
@@ -31,13 +31,28 @@ const CharacterList = ({ search }: { search: string }) => {
       }
     }
 
+    for (const region of Regions) {
+      if (region.name.toLowerCase().includes(text)) {
+        for (const character of region.characters) {
+          set.add(character);
+        }
+      }
+    }
+
+    function addByMaterial(material: string) {
+      const characters = materialToCharacters[material];
+      if (characters) {
+        for (const character of characters) {
+          set.add(character);
+        }
+      }
+    }
+
     for (const domain of Domains) {
       if (domain.name.toLowerCase().includes(text)) {
         for (const drops of domain.drops) {
           for (const item of drops.items) {
-            for (const character of talentMatToCharacters[item.name] || []) {
-              set.add(character);
-            }
+            addByMaterial(item.name);
           }
         }
       }
@@ -46,17 +61,7 @@ const CharacterList = ({ search }: { search: string }) => {
     for (const drops of DomainDropSets) {
       if (drops.name && drops.name.toLowerCase().includes(text)) {
         for (const item of drops.items) {
-          for (const character of talentMatToCharacters[item.name] || []) {
-            set.add(character);
-          }
-        }
-      }
-    }
-
-    for (const region of Regions) {
-      if (region.name.toLowerCase().includes(text)) {
-        for (const character of region.characters) {
-          set.add(character);
+          addByMaterial(item.name);
         }
       }
     }
