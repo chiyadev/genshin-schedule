@@ -5,10 +5,12 @@ import { Weapon, Weapons } from "../../db/weapons";
 import { WeaponMaterial } from "../../db/weaponMaterials";
 import DropLabel from "../../dropLabel";
 import Checkbox from "../../checkbox";
-import { arrayToggle } from "../../utils";
+import { arrayToggle, useTabTitle } from "../../utils";
 
 const WeaponInfo = ({ weapon }: { weapon: string }) => {
   const info = useMemo(() => Weapons.find(c => c.name === weapon), [weapon]);
+
+  useTabTitle(info?.name);
 
   return (
     <div className="container mx-auto p-4">

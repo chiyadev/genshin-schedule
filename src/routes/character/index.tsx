@@ -5,12 +5,14 @@ import { TalentMaterial } from "../../db/talentMaterials";
 import { useConfig } from "../../configs";
 import DropLabel from "../../dropLabel";
 import Checkbox from "../../checkbox";
-import { arrayToggle } from "../../utils";
+import { arrayToggle, useTabTitle } from "../../utils";
 
 const CharacterInfo = ({ character }: { character: string }) => {
   const info = useMemo(() => Characters.find(c => c.name === character), [
     character
   ]);
+
+  useTabTitle(info?.name);
 
   return (
     <div className="container mx-auto p-4">

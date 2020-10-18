@@ -1,6 +1,9 @@
 import { h } from "preact";
+import { useTabTitle } from "../../utils";
 
 const NotFound = () => {
+  useTabTitle("Not Found");
+
   return (
     <div className="container mx-auto p-4">
       <div className="font-bold text-xl mb-4">404 Not Found</div>

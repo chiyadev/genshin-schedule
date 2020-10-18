@@ -6,10 +6,12 @@ import Help from "./help";
 import WeaponList from "./weaponList";
 import { useEffect } from "preact/hooks";
 import { forceCheck } from "react-lazyload";
+import { useTabTitle } from "../../utils";
 
 const Customize = () => {
   const [search, setSearch] = useConfig("customizeQuery");
 
+  useTabTitle("Customize");
   useEffect(forceCheck, [search]);
 
   return (
