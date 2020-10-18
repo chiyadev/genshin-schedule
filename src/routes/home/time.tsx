@@ -23,6 +23,16 @@ const Time = () => {
     .toString()
     .padStart(2, "0");
 
+  const dayOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ][date.getDay()];
+
   const resetDate = new Date(
     date.getFullYear(),
     date.getMonth(),
@@ -45,6 +55,8 @@ const Time = () => {
       </div>
 
       <div className="text-xs text-gray-600">
+        <span>{dayOfWeek}, </span>
+
         {resetMinutes > 60 ? (
           <span>
             {resetHours} hour{resetHours !== 1 && "s"}
