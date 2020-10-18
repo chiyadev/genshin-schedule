@@ -20,7 +20,7 @@ const CharacterInfo = ({ character }: { character: string }) => {
 
 const Inner = ({ character }: { character: Character }) => {
   return (
-    <div className="bg-white text-black rounded px-4 flex flex-col divide-y divide-gray-300">
+    <div className="bg-white text-black rounded px-4 flex flex-col divide-y divide-gray-300 shadow-lg">
       <a href={character.wiki}>
         <div className="space-x-2 py-4 flex flex-row">
           <img

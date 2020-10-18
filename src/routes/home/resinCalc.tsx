@@ -31,7 +31,7 @@ const ResinCalculator = () => {
     <div className="space-y-4">
       <div className="text-lg">Resin calculator</div>
 
-      <div className="bg-white text-black rounded p-4 flex flex flex-col">
+      <div className="bg-white text-black rounded p-4 flex flex flex-col shadow-lg">
         <div className="flex flex-row space-x-2">
           <img src="/assets/game/resin.png" className="w-10 h-10" />
 
