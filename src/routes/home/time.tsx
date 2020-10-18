@@ -31,7 +31,7 @@ const Time = () => {
     "Thursday",
     "Friday",
     "Saturday"
-  ][date.getDay()];
+  ][(7 + (date.getDay() + (date.getHours() < 4 ? -1 : 0))) % 7];
 
   const resetDate = new Date(
     date.getFullYear(),
