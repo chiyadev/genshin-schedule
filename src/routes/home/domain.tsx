@@ -1,10 +1,15 @@
 import { h } from "preact";
+import { css, cx } from "emotion";
 
 const Domain = () => {
   return (
     <div
-      className="w-full border border-white shadow-lg rounded"
-      style={{ backgroundColor: "#3a3e4d" }}
+      className={cx(
+        "w-full border border-white shadow-lg rounded",
+        css`
+          background-color: rgba(0, 0, 0, 0.1);
+        `
+      )}
     >
       <a href="https://genshin-impact.fandom.com/wiki/Hidden_Palace_of_Lianshan_Formula">
         <div className="w-full p-4 bg-white font-bold text-black flex flex-row">
