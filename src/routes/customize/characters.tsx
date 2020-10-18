@@ -2,6 +2,9 @@ import { h } from "preact";
 import { useMemo } from "preact/hooks";
 import { Character, Characters as CharacterList } from "../../db/characters";
 import { Regions } from "../../db/regions";
+import { Link } from "preact-router";
+import { useConfig } from "../../configs";
+import { cx } from "emotion";
 
 const Characters = ({ search }: { search: string }) => {
   const list = useMemo(() => {
@@ -44,15 +47,29 @@ const Characters = ({ search }: { search: string }) => {
       </div>
 
       {list.map(character => (
-        <CharacterIcon key={character.name} character={character} />
+        <Link key={character.name} href={`/characters/${character.name}`}>
+          <CharacterIcon character={character} />
+        </Link>
       ))}
     </div>
   );
 };
 
 const CharacterIcon = ({ character }: { character: Character }) => {
+  const [existing] = useConfig("characters");
+
+  const alreadyAdded = useMemo(() => existing.includes(character.name), [
+    existing,
+    character.name
+  ]);
+
   return (
-    <div className="inline-block m-1 text-center bg-white text-black rounded shadow-lg w-24 cursor-pointer">
+    <div
+      className={cx(
+        "inline-block m-1 text-center bg-white text-black rounded shadow-lg w-24",
+        { "opacity-50": alreadyAdded }
+      )}
+    >
       <img
         className="w-20 h-20 mx-auto mt-2 rounded-full"
         src={`/assets/characters/Character_${character.name}_Thumb.png`}
