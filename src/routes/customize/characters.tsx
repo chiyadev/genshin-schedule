@@ -38,10 +38,7 @@ const Characters = ({ search }: { search: string }) => {
   return (
     <div className="">
       <div className="text-xl font-bold mb-2">
-        <img
-          src="/assets/elements/Element_Anemo.png"
-          className="w-8 h-8 inline"
-        />
+        <img src="/assets/elements/Anemo.png" className="w-8 h-8 inline" />
 
         <span className="align-middle"> Characters</span>
       </div>
