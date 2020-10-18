@@ -62,13 +62,13 @@ const DomainDisplay = ({ domain }: { domain: Domain }) => {
       )}
     >
       <a href={domain.wiki}>
-        <div className="w-full p-4 bg-white text-black">
+        <div className="w-full p-4 bg-white text-black flex flex-row w-full">
           <img
             src="/assets/game/domain.png"
-            className="inline mr-2 w-10 h-10 object-contain"
+            className="mr-2 w-10 object-contain"
           />
 
-          <div className="inline-block align-middle">
+          <div className="flex flex-col justify-center">
             <div className="text-lg font-bold">{domain.name}</div>
             <div className="text-xs text-gray-600">
               {category?.name} ({category?.dropDescription})

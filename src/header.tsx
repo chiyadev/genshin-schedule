@@ -5,7 +5,7 @@ import { Link } from "preact-router";
 const Header = () => {
   return (
     <nav className="container mx-auto p-4 flex flex-row">
-      <Link href="/" className="font-bold flex-shrink-0">
+      <Link href="/" className="font-bold truncate">
         <img
           src="/assets/favicon-32x32.png"
           className="w-6 h-6 inline mr-1 rounded"
