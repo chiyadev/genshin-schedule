@@ -27,6 +27,16 @@ export type DayOfWeek =
   | "Friday"
   | "Saturday";
 
+export const DaysOfWeek: DayOfWeek[] = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+
 const MonThur: DayOfWeek[] = ["Monday", "Thursday"];
 const TuesFri: DayOfWeek[] = ["Tuesday", "Friday"];
 const WedSat: DayOfWeek[] = ["Wednesday", "Saturday"];

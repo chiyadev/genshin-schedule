@@ -2,7 +2,7 @@ import { h } from "preact";
 import { Character, Characters } from "../../db/characters";
 import { useMemo } from "preact/hooks";
 import { TalentMaterial } from "../../db/talentMaterials";
-import { DomainDropSets } from "../../db/domainDropSets";
+import { DayOfWeek, DaysOfWeek, DomainDropSets } from "../../db/domainDropSets";
 import { Domains } from "../../db/domains";
 import { useConfig } from "../../configs";
 
@@ -47,13 +47,26 @@ const Inner = ({ character }: { character: Character }) => {
 };
 
 const TalentMat = ({ material }: { material: TalentMaterial }) => {
-  const dropSet = useMemo(() => {
-    return DomainDropSets.find(d => d.items.includes(material));
+  const domain = useMemo(() => {
+    const drops = DomainDropSets.find(d => d.items.includes(material));
+    return drops && Domains.find(d => d.drops.includes(drops));
   }, [material]);
 
-  const domain = useMemo(() => {
-    return dropSet && Domains.find(d => d.drops.includes(dropSet));
-  }, [dropSet]);
+  const dropDays = useMemo(() => {
+    const days = new Set<DayOfWeek>();
+
+    if (domain) {
+      for (const drops of domain.drops) {
+        if (drops.items.includes(material)) {
+          for (const day of drops.days) {
+            days.add(day);
+          }
+        }
+      }
+    }
+
+    return DaysOfWeek.filter(d => days.has(d));
+  }, [domain, material]);
 
   return (
     <div className="space-y-2">
@@ -82,7 +95,7 @@ const TalentMat = ({ material }: { material: TalentMaterial }) => {
             <span className="align-middle"> {domain.name}</span>
           </a>
 
-          <span className="align-middle"> on {dropSet?.days.join(", ")}</span>
+          <span className="align-middle"> on {dropDays.join(", ")}</span>
         </div>
       )}
     </div>
