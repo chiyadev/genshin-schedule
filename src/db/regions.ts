@@ -14,7 +14,7 @@ import {
   Amber,
   Barbara,
   Beidou,
-  Bennet,
+  Bennett,
   Character,
   Chongyun,
   Diluc,
@@ -55,7 +55,7 @@ export const Mondstadt: Region = {
   characters: [
     Amber,
     Barbara,
-    Bennet,
+    Bennett,
     Diluc,
     Fischl,
     Jean,

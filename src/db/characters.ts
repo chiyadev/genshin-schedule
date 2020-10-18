@@ -36,10 +36,10 @@ export const Beidou: Character = {
   talentMaterial: Gold
 };
 
-export const Bennet: Character = {
+export const Bennett: Character = {
   type: "Character",
-  name: "Bennet",
-  wiki: "https://genshin-impact.fandom.com/wiki/Bennet",
+  name: "Bennett",
+  wiki: "https://genshin-impact.fandom.com/wiki/Bennett",
   talentMaterial: Resistance
 };
 
@@ -159,7 +159,7 @@ export const Characters = [
   Amber,
   Barbara,
   Beidou,
-  Bennet,
+  Bennett,
   Chongyun,
   Diluc,
   Fischl,
