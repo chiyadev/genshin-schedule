@@ -166,7 +166,7 @@ const TalentMaterialDisplay = ({
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
           <img
-            src={`/assets/talents/${material.name}.png`}
+            src={`/assets/characters/${material.name}.png`}
             className="w-12 h-12"
           />
           <div className="flex flex-col justify-center">

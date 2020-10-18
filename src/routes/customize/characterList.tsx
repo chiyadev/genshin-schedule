@@ -110,7 +110,7 @@ const CharacterIcon = ({ character }: { character: Character }) => {
 
         <div className="text-xs text-gray-600">
           <img
-            src={`/assets/talents/${character.talentMaterial.name}.png`}
+            src={`/assets/characters/${character.talentMaterial.name}.png`}
             className="w-3 h-3 inline opacity-75"
           />
 
