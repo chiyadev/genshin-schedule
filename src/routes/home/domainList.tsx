@@ -13,12 +13,18 @@ import { DomainCategories } from "../../db/domainCategories";
 import { DomainDropSet, DomainDropSets } from "../../db/domainDropSets";
 import { TalentMaterial } from "../../db/talentMaterials";
 import { Link } from "preact-router";
+import { WeaponMaterial } from "../../db/weaponMaterials";
+import { Weapon, Weapons } from "../../db/weapons";
 
 type ScheduledDomain = {
   domain: Domain;
   talentMaterials: {
     material: TalentMaterial;
     characters: Character[];
+  }[];
+  weaponMaterials: {
+    material: WeaponMaterial;
+    weapons: Weapon[];
   }[];
 };
 
@@ -29,6 +35,7 @@ const DomainList = () => {
   useRerenderFrequency(1000);
 
   const [characters] = useConfig("characters");
+  const [weapons] = useConfig("weapons");
 
   const domains = useMemo(() => {
     const results: ScheduledDomain[] = [];
@@ -40,7 +47,8 @@ const DomainList = () => {
         results.push(
           (scheduled = {
             domain,
-            talentMaterials: []
+            talentMaterials: [],
+            weaponMaterials: []
           })
         );
       }
@@ -54,15 +62,16 @@ const DomainList = () => {
       }
     };
 
+    const currentDrops = DomainDropSets.filter(drops =>
+      drops.days.includes(dayOfWeek)
+    );
+
     for (const charName of characters) {
       const character = Characters.find(char => char.name === charName);
 
       if (character) {
-        for (const drops of DomainDropSets) {
-          if (
-            drops.days.includes(dayOfWeek) &&
-            drops.items.includes(character.talentMaterial)
-          ) {
+        for (const drops of currentDrops) {
+          if (drops.items.includes(character.talentMaterial)) {
             const domain = getDomainFromDrops(drops);
             const scheduled = domain && getScheduled(domain);
 
@@ -70,6 +79,7 @@ const DomainList = () => {
               const group = scheduled.talentMaterials.find(
                 x => x.material === character.talentMaterial
               );
+
               if (group) {
                 group.characters.push(character);
               } else {
@@ -84,8 +94,36 @@ const DomainList = () => {
       }
     }
 
+    for (const weaponName of weapons) {
+      const weapon = Weapons.find(weapon => weapon.name === weaponName);
+
+      if (weapon) {
+        for (const drops of currentDrops) {
+          if (drops.items.includes(weapon.material)) {
+            const domain = getDomainFromDrops(drops);
+            const scheduled = domain && getScheduled(domain);
+
+            if (scheduled) {
+              const group = scheduled.weaponMaterials.find(
+                x => x.material === weapon.material
+              );
+
+              if (group) {
+                group.weapons.push(weapon);
+              } else {
+                scheduled.weaponMaterials.push({
+                  material: weapon.material,
+                  weapons: [weapon]
+                });
+              }
+            }
+          }
+        }
+      }
+    }
+
     return results.sort((a, b) => a.domain.name.localeCompare(b.domain.name));
-  }, [characters, dayOfWeek]);
+  }, [characters, weapons, dayOfWeek]);
 
   return useMemo(
     () => (
@@ -113,7 +151,11 @@ const DomainList = () => {
   );
 };
 
-const DomainDisplay = ({ domain, talentMaterials }: ScheduledDomain) => {
+const DomainDisplay = ({
+  domain,
+  talentMaterials,
+  weaponMaterials
+}: ScheduledDomain) => {
   const category = useMemo(() => {
     return DomainCategories.find(category => category.domains.includes(domain));
   }, [domain]);
@@ -144,10 +186,26 @@ const DomainDisplay = ({ domain, talentMaterials }: ScheduledDomain) => {
       <div className="divide-y divide-gray-800">
         {useMemo(
           () =>
-            talentMaterials.map(material => (
-              <TalentMaterialDisplay
-                key={material.material.name}
-                {...material}
+            talentMaterials.map(({ material, characters }) => (
+              <MaterialDisplay
+                key={material.name}
+                material={material}
+                items={characters}
+                assetPath="characters"
+                roundItems
+              />
+            )),
+          [talentMaterials]
+        )}
+
+        {useMemo(
+          () =>
+            weaponMaterials.map(({ material, weapons }) => (
+              <MaterialDisplay
+                key={material.name}
+                material={material}
+                items={weapons}
+                assetPath="weapons"
               />
             )),
           [talentMaterials]
@@ -157,16 +215,23 @@ const DomainDisplay = ({ domain, talentMaterials }: ScheduledDomain) => {
   );
 };
 
-const TalentMaterialDisplay = ({
+const MaterialDisplay = ({
   material,
-  characters
-}: ScheduledDomain["talentMaterials"][0]) => {
+  items,
+  assetPath,
+  roundItems
+}: {
+  material: TalentMaterial | WeaponMaterial;
+  items: (Character | Weapon)[];
+  assetPath: "characters" | "weapons";
+  roundItems?: boolean;
+}) => {
   return (
-    <div className="p-4 space-y-2">
+    <div className="p-4 space-y-4">
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
           <img
-            src={`/assets/characters/${material.name}.png`}
+            src={`/assets/${assetPath}/${material.name}.png`}
             className="w-12 h-12"
           />
           <div className="flex flex-col justify-center">
@@ -176,20 +241,24 @@ const TalentMaterialDisplay = ({
         </div>
       </a>
 
-      {characters.map(character => (
-        <Link
-          key={character.name}
-          className="pl-4 flex flex-row space-x-2"
-          href={`/characters/${character.name}`}
-        >
-          <img
-            className="x-8 h-8 rounded-full"
-            src={`/assets/characters/${character.name}.png`}
-          />
+      <div className="space-y-2">
+        {items.map(item => (
+          <Link
+            key={item.name}
+            className="pl-4 flex flex-row space-x-2"
+            href={`/${assetPath}/${item.name}`}
+          >
+            <img
+              className={cx("w-8 h-8 object-cover", {
+                "rounded-full": roundItems
+              })}
+              src={`/assets/${assetPath}/${item.name}.png`}
+            />
 
-          <div className="flex flex-col justify-center">{character.name}</div>
-        </Link>
-      ))}
+            <div className="flex flex-col justify-center">{item.name}</div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
