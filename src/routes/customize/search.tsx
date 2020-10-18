@@ -18,8 +18,7 @@ const Search = ({
             "font-bold": !!value
           }
         )}
-        placeholder="Search characters, ascension materials and tasks."
-        autoFocus
+        placeholder="Search characters, weapons and more."
         value={value}
         onInput={({ currentTarget: { value } }) => setValue(value)}
       />
