@@ -1,14 +1,31 @@
 import { h } from "preact";
 import { useMemo } from "preact/hooks";
-import { Characters as CharacterList } from "../../db/characters";
+import { Character, Characters as CharacterList } from "../../db/characters";
+import { Regions } from "../../db/regions";
 
 const Characters = ({ search }: { search: string }) => {
   const list = useMemo(() => {
     const text = search.toLowerCase();
+    const set = new Set<Character>();
 
-    return CharacterList.filter(c =>
-      c.name.toLowerCase().includes(text)
-    ).sort((a, b) => a.name.localeCompare(b.name));
+    for (const character of CharacterList) {
+      if (
+        character.name.toLowerCase().includes(text) ||
+        character.talentMaterial.name.toLowerCase().includes(text)
+      ) {
+        set.add(character);
+      }
+    }
+
+    for (const region of Regions) {
+      if (region.name.toLowerCase().includes(text)) {
+        for (const character of region.characters) {
+          set.add(character);
+        }
+      }
+    }
+
+    return Array.from(set).sort((a, b) => a.name.localeCompare(b.name));
   }, [search]);
 
   if (list.length === 0) {
@@ -27,18 +44,32 @@ const Characters = ({ search }: { search: string }) => {
       </div>
 
       {list.map(character => (
-        <div
-          key={character.name}
-          className="inline-block m-1 text-center bg-white text-black rounded shadow-lg w-24 cursor-pointer"
-        >
+        <CharacterIcon key={character.name} character={character} />
+      ))}
+    </div>
+  );
+};
+
+const CharacterIcon = ({ character }: { character: Character }) => {
+  return (
+    <div className="inline-block m-1 text-center bg-white text-black rounded shadow-lg w-24 cursor-pointer">
+      <img
+        className="w-20 h-20 mx-auto mt-2 rounded-full"
+        src={`/assets/characters/Character_${character.name}_Thumb.png`}
+      />
+
+      <div className="text-center p-2">
+        <div className="text-sm">{character.name}</div>
+
+        <div className="text-xs text-gray-600">
           <img
-            className="w-20 h-20 mx-auto mt-2 rounded-full"
-            src={`/assets/characters/Character_${character.name}_Thumb.png`}
+            src={`/assets/talents/Item_Teachings_of__${character.talentMaterial.name}_.png`}
+            className="w-3 h-3 inline opacity-75"
           />
 
-          <div className="text-center text-sm p-2">{character.name}</div>
+          <span className="align-middle"> {character.talentMaterial.name}</span>
         </div>
-      ))}
+      </div>
     </div>
   );
 };
