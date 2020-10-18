@@ -4,6 +4,7 @@ import { ResinCap } from "./db/resins";
 export type Configs = {
   server: "America" | "Europe" | "Asia";
   characters: string[];
+  weapons: string[];
   resin: {
     value: number;
     time: number;
@@ -14,6 +15,7 @@ export type Configs = {
 export const DefaultConfigs: Configs = {
   server: "America",
   characters: [],
+  weapons: [],
   resin: {
     value: ResinCap,
     time: Date.now()

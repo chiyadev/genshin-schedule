@@ -8,6 +8,7 @@ import { DomainDropSets } from "../../db/domainDropSets";
 import { cx } from "emotion";
 import { Weapon, Weapons } from "../../db/weapons";
 import LazyLoad from "react-lazyload";
+import { useConfig } from "../../configs";
 
 const materialToWeapons = Weapons.reduce((x, c) => {
   const list = x[c.material.name];
@@ -99,11 +100,18 @@ const WeaponList = ({ search }: { search: string }) => {
 };
 
 const WeaponIcon = ({ weapon }: { weapon: Weapon }) => {
+  const [existing] = useConfig("weapons");
+
+  const alreadyAdded = useMemo(() => existing.includes(weapon.name), [
+    existing,
+    weapon.name
+  ]);
+
   return (
     <div
       className={cx(
         "inline-block m-1 text-center bg-white text-black rounded shadow-lg w-32",
-        { "opacity-50": false }
+        { "opacity-50": alreadyAdded }
       )}
     >
       <LazyLoad>
