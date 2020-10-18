@@ -15,3 +15,7 @@ html {
 body {
   font-family: "Bonobo", arial, sans-serif;
 }
+
+img {
+  pointer-events: none;
+}

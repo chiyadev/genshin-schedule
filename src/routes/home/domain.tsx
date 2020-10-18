@@ -15,7 +15,7 @@ const Domain = () => {
         <div className="w-full p-4 bg-white font-bold text-black flex flex-row">
           <img
             src="/assets/game/domain.png"
-            className="inline mr-2 pointer-events-none object-contain"
+            className="inline mr-2 object-contain"
           />
 
           <div className="flex-1 flex flex-col justify-center">
