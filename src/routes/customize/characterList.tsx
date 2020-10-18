@@ -1,17 +1,18 @@
 import { h } from "preact";
+
 import { useMemo } from "preact/hooks";
-import { Character, Characters as CharacterList } from "../../db/characters";
+import { Character, Characters } from "../../db/characters";
 import { Regions } from "../../db/regions";
 import { Link } from "preact-router";
 import { useConfig } from "../../configs";
 import { cx } from "emotion";
 
-const Characters = ({ search }: { search: string }) => {
+const CharacterList = ({ search }: { search: string }) => {
   const list = useMemo(() => {
     const text = search.toLowerCase();
     const set = new Set<Character>();
 
-    for (const character of CharacterList) {
+    for (const character of Characters) {
       if (
         character.name.toLowerCase().includes(text) ||
         character.talentMaterial.name.toLowerCase().includes(text)
@@ -88,4 +89,4 @@ const CharacterIcon = ({ character }: { character: Character }) => {
   );
 };
 
-export default Characters;
+export default CharacterList;

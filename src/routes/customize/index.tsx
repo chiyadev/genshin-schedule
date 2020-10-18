@@ -1,6 +1,7 @@
 import { h } from "preact";
+
 import Search from "./search";
-import Characters from "./characters";
+import CharacterList from "./characterList";
 import Help from "./help";
 import { useConfig } from "../../configs";
 
@@ -16,7 +17,7 @@ const Customize = () => {
       </div>
 
       <div className=" mt-8">
-        <Characters search={search} />
+        <CharacterList search={search} />
       </div>
     </div>
   );
