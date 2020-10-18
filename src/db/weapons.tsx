@@ -52,7 +52,7 @@ generate({ material: BorealWolf }, [
   "Harbinger of Dawn",
   "Sacrificial Bow",
   "Sacrificial Greatsword",
-  "Sharpshooter's Oath	",
+  "Sharpshooter's Oath",
   "Skyward Atlas",
   "Skyward Blade",
   "Skyward Harp",
@@ -96,7 +96,7 @@ generate({ material: Guyun }, [
 
 generate({ material: MistVeiledElixir }, [
   "Debate Club",
-  "Dragon's Bane	",
+  "Dragon's Bane",
   "Eye of Perception",
   "Fillet Blade",
   "Halberd",
