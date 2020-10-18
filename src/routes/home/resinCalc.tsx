@@ -75,27 +75,47 @@ const ResinCalculator = () => {
           <div className="flex flex-col justify-center">/{ResinCap}</div>
         </div>
 
-        {useMemo(
-          () => (
-            <div className="text-xs text-gray-600 ml-2 pl-10">
-              <div>
-                {clampResin(current + getResinRecharge(2 * 3600000))} in 2 hours
-              </div>
-              <div>
-                {clampResin(current + getResinRecharge(4 * 3600000))} in 4 hours
-              </div>
-              <div>
-                {clampResin(current + getResinRecharge(8 * 3600000))} in 8 hours
-              </div>
-              <div>
-                {clampResin(current + getResinRecharge(12 * 3600000))} in 12
-                hours
-              </div>
-            </div>
-          ),
-          [current]
-        )}
+        <ResinExtrapolations current={current} />
       </div>
+    </div>
+  );
+};
+
+const ResinExtrapolations = ({ current }: { current: number }) => {
+  const values = useMemo(() => {
+    const values: { [key: string]: number } = {};
+    let last = current;
+
+    const addValue = (hours: number) => {
+      if (last < 120) {
+        last = values[hours] = clampResin(
+          current + getResinRecharge(hours * 3600000)
+        );
+      }
+    };
+
+    addValue(2);
+
+    for (let i = 4; i < 24; i += 4) {
+      addValue(i);
+    }
+
+    return values;
+  }, [current]);
+
+  const hours = Object.keys(values);
+
+  if (hours.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="text-xs text-gray-600 ml-2 pl-10">
+      {hours.map(hour => (
+        <div key={hour}>
+          {values[hour]} in {hour} hours
+        </div>
+      ))}
     </div>
   );
 };
