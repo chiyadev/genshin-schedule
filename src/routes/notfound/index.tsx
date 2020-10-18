@@ -1,6 +1,5 @@
 import { h } from "preact";
 import { useTabTitle } from "../../utils";
-
 const NotFound = () => {
   useTabTitle("Not Found");
 

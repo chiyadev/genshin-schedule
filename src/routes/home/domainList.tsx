@@ -15,6 +15,7 @@ import { TalentMaterial } from "../../db/talentMaterials";
 import { Link } from "preact-router";
 import { WeaponMaterial } from "../../db/weaponMaterials";
 import { Weapon, Weapons } from "../../db/weapons";
+import { Regions } from "../../db/regions";
 
 type ScheduledDomain = {
   domain: Domain;
@@ -156,6 +157,10 @@ const DomainDisplay = ({
   talentMaterials,
   weaponMaterials
 }: ScheduledDomain) => {
+  const region = useMemo(() => {
+    return Regions.find(region => region.domains.includes(domain));
+  }, [domain]);
+
   const category = useMemo(() => {
     return DomainCategories.find(category => category.domains.includes(domain));
   }, [domain]);
@@ -178,12 +183,14 @@ const DomainDisplay = ({
 
           <div className="flex flex-col justify-center">
             <div className="text-lg font-bold">{domain.name}</div>
-            <div className="text-xs text-gray-600">{category?.name}</div>
+            <div className="text-xs text-gray-600">
+              {category?.name}, {region?.name}
+            </div>
           </div>
         </div>
       </a>
 
-      <div className="divide-y divide-gray-800">
+      <div className="px-4 divide-y divide-gray-800">
         {useMemo(
           () =>
             talentMaterials.map(({ material, characters }) => (
@@ -227,7 +234,7 @@ const MaterialDisplay = ({
   roundItems?: boolean;
 }) => {
   return (
-    <div className="p-4 space-y-4">
+    <div className="py-4 space-y-4">
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
           <img
