@@ -105,17 +105,17 @@ const ResinExtrapolations = ({ current }: { current: number }) => {
 
   const hours = Object.keys(values);
 
-  if (hours.length === 0) {
-    return null;
-  }
-
   return (
     <div className="text-xs text-gray-600 ml-2 pl-10">
-      {hours.map(hour => (
-        <div key={hour}>
-          {values[hour]} in {hour} hours
-        </div>
-      ))}
+      {current >= 120 ? (
+        <div>Your resins are full!</div>
+      ) : (
+        hours.map(hour => (
+          <div key={hour}>
+            {values[hour]} in {hour} hours
+          </div>
+        ))
+      )}
     </div>
   );
 };

@@ -139,11 +139,11 @@ const DomainList = () => {
           </div>
         ) : (
           <div className="text-sm">
-            Nothing. How about some{" "}
+            Nothing. Maybe do some{" "}
             <a href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops">
               Ley Lines
-            </a>{" "}
-            instead?
+            </a>
+            ?
           </div>
         )}
       </div>
