@@ -2,9 +2,9 @@ import { h } from "preact";
 import { Character, Characters } from "../../db/characters";
 import { useMemo } from "preact/hooks";
 import { TalentMaterial } from "../../db/talentMaterials";
-import { DayOfWeek, DaysOfWeek, DomainDropSets } from "../../db/domainDropSets";
-import { Domains } from "../../db/domains";
 import { useConfig } from "../../configs";
+import DropLabel from "../../dropLabel";
+import Checkbox from "../../checkbox";
 
 const CharacterInfo = ({ character }: { character: string }) => {
   const info = useMemo(() => Characters.find(c => c.name === character), [
@@ -30,7 +30,7 @@ const Inner = ({ character }: { character: Character }) => {
 
           <div className="flex flex-col justify-center">
             <div className="text-xl font-bold">{character.name}</div>
-            <div className="text-xs text-gray-600">Character information</div>
+            <div className="text-xs text-gray-600">{character.type}</div>
           </div>
         </div>
       </a>
@@ -47,27 +47,6 @@ const Inner = ({ character }: { character: Character }) => {
 };
 
 const TalentMat = ({ material }: { material: TalentMaterial }) => {
-  const domain = useMemo(() => {
-    const drops = DomainDropSets.find(d => d.items.includes(material));
-    return drops && Domains.find(d => d.drops.includes(drops));
-  }, [material]);
-
-  const dropDays = useMemo(() => {
-    const days = new Set<DayOfWeek>();
-
-    if (domain) {
-      for (const drops of domain.drops) {
-        if (drops.items.includes(material)) {
-          for (const day of drops.days) {
-            days.add(day);
-          }
-        }
-      }
-    }
-
-    return DaysOfWeek.filter(d => days.has(d));
-  }, [domain, material]);
-
   return (
     <div className="space-y-2">
       <a href={material.wiki}>
@@ -83,19 +62,7 @@ const TalentMat = ({ material }: { material: TalentMaterial }) => {
         </div>
       </a>
 
-      {domain && (
-        <div className="pl-12 mx-2 text-sm">
-          <span className="align-middle">Dropped in </span>
-
-          <a href={domain.wiki}>
-            <img src="/assets/game/Domain.png" className="w-4 h-4 inline" />
-
-            <span className="align-middle"> {domain.name}</span>
-          </a>
-
-          <span className="align-middle"> on {dropDays.join(", ")}</span>
-        </div>
-      )}
+      <DropLabel item={material} />
     </div>
   );
 };
@@ -109,23 +76,20 @@ const Toggle = ({ character }: { character: Character }) => {
   ]);
 
   return (
-    <label>
-      <input
-        type="checkbox"
-        checked={exists}
-        onChange={({ currentTarget: { checked } }) => {
-          if (checked) {
-            setList(
-              [...list, character.name].filter((v, i, a) => a.indexOf(v) === i)
-            );
-          } else {
-            setList(list.filter(c => c !== character.name));
-          }
-        }}
-      />
-
-      <span> Show on schedule</span>
-    </label>
+    <Checkbox
+      value={exists}
+      setValue={value => {
+        if (value) {
+          setList(
+            [...list, character.name].filter((v, i, a) => a.indexOf(v) === i)
+          );
+        } else {
+          setList(list.filter(c => c !== character.name));
+        }
+      }}
+    >
+      Show on schedule
+    </Checkbox>
   );
 };
 
