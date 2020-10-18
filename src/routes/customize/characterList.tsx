@@ -101,7 +101,7 @@ const CharacterIcon = ({ character }: { character: Character }) => {
   return (
     <div
       className={cx(
-        "inline-block m-1 text-center bg-white text-black rounded shadow-lg w-24",
+        "inline-block m-1 text-center bg-white text-black rounded shadow-lg w-32",
         { "opacity-50": alreadyAdded }
       )}
     >

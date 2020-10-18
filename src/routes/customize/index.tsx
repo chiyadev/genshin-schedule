@@ -1,9 +1,9 @@
 import { h } from "preact";
-
+import { useConfig } from "../../configs";
 import Search from "./search";
 import CharacterList from "./characterList";
 import Help from "./help";
-import { useConfig } from "../../configs";
+import WeaponList from "./weaponList";
 
 const Customize = () => {
   const [search, setSearch] = useConfig("customizeQuery");
@@ -16,8 +16,9 @@ const Customize = () => {
         <Help />
       </div>
 
-      <div className=" mt-8">
+      <div className="mt-8 space-y-8">
         <CharacterList search={search} />
+        <WeaponList search={search} />
       </div>
     </div>
   );
