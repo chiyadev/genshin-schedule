@@ -85,7 +85,7 @@ const TalentMat = ({ material }: { material: TalentMaterial }) => {
 
       {domain && (
         <div className="pl-12 mx-2 text-sm">
-          <span className="align-middle">Dropped from </span>
+          <span className="align-middle">Dropped in </span>
 
           <a href={domain.wiki}>
             <img src="/assets/game/domain.png" className="w-4 h-4 inline" />
