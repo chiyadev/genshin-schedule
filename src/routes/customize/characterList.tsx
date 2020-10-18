@@ -7,6 +7,7 @@ import { useConfig } from "../../configs";
 import { cx } from "emotion";
 import { Domains } from "../../db/domains";
 import { DomainDropSets } from "../../db/domainDropSets";
+import LazyLoad from "react-lazyload";
 
 const materialToCharacters = Characters.reduce((x, c) => {
   const list = x[c.talentMaterial.name];
@@ -105,10 +106,12 @@ const CharacterIcon = ({ character }: { character: Character }) => {
         { "opacity-50": alreadyAdded }
       )}
     >
-      <img
-        className="w-20 h-20 mx-auto mt-2 rounded-full"
-        src={`/assets/characters/${character.name}.png`}
-      />
+      <LazyLoad>
+        <img
+          className="w-20 h-20 mx-auto mt-2 rounded-full"
+          src={`/assets/characters/${character.name}.png`}
+        />
+      </LazyLoad>
 
       <div className="text-center p-2">
         <div className="text-sm">{character.name}</div>

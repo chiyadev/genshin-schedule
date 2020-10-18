@@ -7,6 +7,7 @@ import { Domains } from "../../db/domains";
 import { DomainDropSets } from "../../db/domainDropSets";
 import { cx } from "emotion";
 import { Weapon, Weapons } from "../../db/weapons";
+import LazyLoad from "react-lazyload";
 
 const materialToWeapons = Weapons.reduce((x, c) => {
   const list = x[c.material.name];
@@ -105,10 +106,12 @@ const WeaponIcon = ({ weapon }: { weapon: Weapon }) => {
         { "opacity-50": false }
       )}
     >
-      <img
-        className="w-20 h-20 mx-auto mt-2 object-cover"
-        src={`/assets/weapons/${weapon.name}.png`}
-      />
+      <LazyLoad>
+        <img
+          className="w-20 h-20 mx-auto mt-2 object-cover"
+          src={`/assets/weapons/${weapon.name}.png`}
+        />
+      </LazyLoad>
 
       <div className="text-center p-2 truncate">
         <div className="text-sm truncate">{weapon.name}</div>

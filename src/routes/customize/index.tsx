@@ -4,9 +4,13 @@ import Search from "./search";
 import CharacterList from "./characterList";
 import Help from "./help";
 import WeaponList from "./weaponList";
+import { useEffect } from "preact/hooks";
+import { forceCheck } from "react-lazyload";
 
 const Customize = () => {
   const [search, setSearch] = useConfig("customizeQuery");
+
+  useEffect(forceCheck, [search]);
 
   return (
     <div className="container mx-auto p-4">
