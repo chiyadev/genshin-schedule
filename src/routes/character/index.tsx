@@ -73,7 +73,7 @@ const TalentMat = ({ material }: { material: TalentMaterial }) => {
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
           <img
-            src={`/assets/talents/Item_Teachings_of__${material.name}_.png`}
+            src={`/assets/talents/${material.name}.png`}
             className="w-12 h-12"
           />
           <div className="flex flex-col justify-center">
@@ -88,7 +88,7 @@ const TalentMat = ({ material }: { material: TalentMaterial }) => {
           <span className="align-middle">Dropped in </span>
 
           <a href={domain.wiki}>
-            <img src="/assets/game/domain.png" className="w-4 h-4 inline" />
+            <img src="/assets/game/Domain.png" className="w-4 h-4 inline" />
 
             <span className="align-middle"> {domain.name}</span>
           </a>

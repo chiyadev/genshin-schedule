@@ -130,7 +130,7 @@ const DomainDisplay = ({ domain, talentMaterials }: ScheduledDomain) => {
       <a href={domain.wiki}>
         <div className="w-full p-4 bg-white text-black flex flex-row w-full">
           <img
-            src="/assets/game/domain.png"
+            src="/assets/game/Domain.png"
             className="mr-2 w-10 object-contain"
           />
 
@@ -166,7 +166,7 @@ const TalentMaterialDisplay = ({
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
           <img
-            src={`/assets/talents/Item_Teachings_of__${material.name}_.png`}
+            src={`/assets/talents/${material.name}.png`}
             className="w-12 h-12"
           />
           <div className="flex flex-col justify-center">

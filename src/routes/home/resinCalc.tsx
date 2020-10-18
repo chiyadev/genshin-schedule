@@ -40,7 +40,7 @@ const ResinCalculator = () => {
 
       <div className="bg-white text-black rounded p-4 space-y-2 flex flex flex-col shadow-lg">
         <div className="flex flex-row space-x-2">
-          <img src="/assets/game/resin.png" className="w-10 h-10" />
+          <img src="/assets/game/Resin.png" className="w-10 h-10" />
 
           <input
             ref={resinInput}
