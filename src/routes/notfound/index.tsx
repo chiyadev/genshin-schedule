@@ -1,14 +1,11 @@
 import { h } from "preact";
-import { Link } from "preact-router/match";
 
 const NotFound = () => {
   return (
-    <div>
-      <h1>Error 404</h1>
-      <p>That page doesn&apos;t exist.</p>
-      <Link href="/">
-        <h4>Back to Home</h4>
-      </Link>
+    <div className="container mx-auto p-4">
+      <div className="font-bold text-xl mb-4">404 Not Found</div>
+
+      <div className="mb-4">Requested page does not exist.</div>
     </div>
   );
 };
