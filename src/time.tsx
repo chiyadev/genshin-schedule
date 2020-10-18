@@ -1,5 +1,7 @@
 import { useConfig } from "./configs";
+
 import { useEffect, useState } from "preact/hooks";
+import { DaysOfWeek } from "./db/domainDropSets";
 
 export function useServerDate() {
   const [server] = useConfig("server");
@@ -38,4 +40,24 @@ export function useRerenderFrequency(interval: number) {
       clearInterval(handle);
     };
   }, [interval]);
+}
+
+export const ServerResetHour = 4;
+
+export function getServerNextReset(serverDate: Date) {
+  return new Date(
+    serverDate.getFullYear(),
+    serverDate.getMonth(),
+    serverDate.getDate() + (serverDate.getHours() < ServerResetHour ? 0 : 1),
+    4 // 4AM
+  );
+}
+
+export function getServerDayOfWeek(serverDate: Date) {
+  return DaysOfWeek[
+    (7 +
+      (serverDate.getDay() +
+        (serverDate.getHours() < ServerResetHour ? -1 : 0))) %
+      7
+  ];
 }

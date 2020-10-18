@@ -1,5 +1,10 @@
 import { h } from "preact";
-import { useRerenderFrequency, useServerDate } from "../../time";
+import {
+  getServerDayOfWeek,
+  getServerNextReset,
+  useRerenderFrequency,
+  useServerDate
+} from "../../time";
 import { Configs, useConfig } from "../../configs";
 import { FaClock } from "react-icons/fa";
 
@@ -23,22 +28,8 @@ const Time = () => {
     .toString()
     .padStart(2, "0");
 
-  const dayOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-  ][(7 + (date.getDay() + (date.getHours() < 4 ? -1 : 0))) % 7];
-
-  const resetDate = new Date(
-    date.getFullYear(),
-    date.getMonth(),
-    date.getDate() + (date.getHours() < 4 ? 0 : 1),
-    4 // 4AM
-  );
+  const dayOfWeek = getServerDayOfWeek(date);
+  const resetDate = getServerNextReset(date);
 
   const resetCooldown = resetDate.getTime() - date.getTime();
   const resetHours = Math.floor(resetCooldown / 3600000);
