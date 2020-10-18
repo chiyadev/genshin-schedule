@@ -25,7 +25,7 @@ const Inner = ({ character }: { character: Character }) => {
         <div className="space-x-2 py-4 flex flex-row">
           <img
             className="w-16 h-16 rounded-full"
-            src={`/assets/characters/Character_${character.name}_Thumb.png`}
+            src={`/assets/characters/${character.name}.png`}
           />
 
           <div className="flex flex-col justify-center">

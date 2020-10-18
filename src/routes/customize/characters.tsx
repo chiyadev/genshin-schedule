@@ -72,7 +72,7 @@ const CharacterIcon = ({ character }: { character: Character }) => {
     >
       <img
         className="w-20 h-20 mx-auto mt-2 rounded-full"
-        src={`/assets/characters/Character_${character.name}_Thumb.png`}
+        src={`/assets/characters/${character.name}.png`}
       />
 
       <div className="text-center p-2">

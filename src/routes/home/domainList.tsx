@@ -184,7 +184,7 @@ const TalentMaterialDisplay = ({
         >
           <img
             className="x-8 h-8 rounded-full"
-            src={`/assets/characters/Character_${character.name}_Thumb.png`}
+            src={`/assets/characters/${character.name}.png`}
           />
 
           <div className="flex flex-col justify-center">{character.name}</div>
