@@ -89,10 +89,24 @@ const DomainList = () => {
 
   return useMemo(
     () => (
-      <div className="space-y-4 flex flex-col">
-        {domains.map(domain => (
-          <DomainDisplay key={domain.domain.name} {...domain} />
-        ))}
+      <div className="space-y-4">
+        <div className="text-lg">Today&apos;s domains</div>
+
+        {domains.length ? (
+          <div className="space-y-4 flex flex-col">
+            {domains.map(domain => (
+              <DomainDisplay key={domain.domain.name} {...domain} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-sm">
+            Nothing. How about some{" "}
+            <a href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops">
+              Ley Lines
+            </a>{" "}
+            instead?
+          </div>
+        )}
       </div>
     ),
     [domains]
