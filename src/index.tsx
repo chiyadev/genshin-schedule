@@ -6,6 +6,7 @@ import "./index.css";
 import Header from "./header";
 import Footer from "./footer";
 import Home from "./routes/home";
+import Customize from "./routes/customize";
 import NotFound from "./routes/notfound";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
 
       <Router>
         <Route path="/" component={Home} />
+        <Route path="/customize" component={Customize} />
         <Route default component={NotFound} />
       </Router>
 
