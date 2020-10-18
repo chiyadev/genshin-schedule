@@ -5,6 +5,7 @@ import { TalentMaterial } from "../../db/talentMaterials";
 import { useConfig } from "../../configs";
 import DropLabel from "../../dropLabel";
 import Checkbox from "../../checkbox";
+import { arrayToggle } from "../../utils";
 
 const CharacterInfo = ({ character }: { character: string }) => {
   const info = useMemo(() => Characters.find(c => c.name === character), [
@@ -78,15 +79,7 @@ const Toggle = ({ character }: { character: Character }) => {
   return (
     <Checkbox
       value={exists}
-      setValue={value => {
-        if (value) {
-          setList(
-            [...list, character.name].filter((v, i, a) => a.indexOf(v) === i)
-          );
-        } else {
-          setList(list.filter(c => c !== character.name));
-        }
-      }}
+      setValue={value => setList(arrayToggle(list, character.name, value))}
     >
       Show on schedule
     </Checkbox>

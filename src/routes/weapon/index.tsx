@@ -5,6 +5,7 @@ import { Weapon, Weapons } from "../../db/weapons";
 import { WeaponMaterial } from "../../db/weaponMaterials";
 import DropLabel from "../../dropLabel";
 import Checkbox from "../../checkbox";
+import { arrayToggle } from "../../utils";
 
 const WeaponInfo = ({ weapon }: { weapon: string }) => {
   const info = useMemo(() => Weapons.find(c => c.name === weapon), [weapon]);
@@ -72,15 +73,7 @@ const Toggle = ({ weapon }: { weapon: Weapon }) => {
   return (
     <Checkbox
       value={exists}
-      setValue={value => {
-        if (value) {
-          setList(
-            [...list, weapon.name].filter((v, i, a) => a.indexOf(v) === i)
-          );
-        } else {
-          setList(list.filter(c => c !== weapon.name));
-        }
-      }}
+      setValue={value => setList(arrayToggle(list, weapon.name, value))}
     >
       Show on schedule
     </Checkbox>
