@@ -1,11 +1,21 @@
 import { h } from "preact";
-
 import { useMemo } from "preact/hooks";
 import { Character, Characters } from "../../db/characters";
 import { Regions } from "../../db/regions";
 import { Link } from "preact-router";
 import { useConfig } from "../../configs";
 import { cx } from "emotion";
+import { Domains } from "../../db/domains";
+import { DomainDropSets } from "../../db/domainDropSets";
+
+const talentMatToCharacters = Characters.reduce((x, c) => {
+  const list = x[c.talentMaterial.name];
+
+  if (list) list.push(c);
+  else x[c.talentMaterial.name] = [c];
+
+  return x;
+}, {} as { [key: string]: Character[] });
 
 const CharacterList = ({ search }: { search: string }) => {
   const list = useMemo(() => {
@@ -18,6 +28,28 @@ const CharacterList = ({ search }: { search: string }) => {
         character.talentMaterial.name.toLowerCase().includes(text)
       ) {
         set.add(character);
+      }
+    }
+
+    for (const domain of Domains) {
+      if (domain.name.toLowerCase().includes(text)) {
+        for (const drops of domain.drops) {
+          for (const item of drops.items) {
+            for (const character of talentMatToCharacters[item.name] || []) {
+              set.add(character);
+            }
+          }
+        }
+      }
+    }
+
+    for (const drops of DomainDropSets) {
+      if (drops.name && drops.name.toLowerCase().includes(text)) {
+        for (const item of drops.items) {
+          for (const character of talentMatToCharacters[item.name] || []) {
+            set.add(character);
+          }
+        }
       }
     }
 
@@ -37,7 +69,7 @@ const CharacterList = ({ search }: { search: string }) => {
   }
 
   return (
-    <div className="">
+    <div>
       <div className="text-xl font-bold mb-2">
         <img src="/assets/elements/Anemo.png" className="w-8 h-8 inline" />
 
