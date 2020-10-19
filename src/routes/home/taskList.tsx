@@ -41,7 +41,7 @@ const MapDisplay = () => {
           "w-full rounded shadow-lg",
           css`
             height: 26rem;
-            background: rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.1) !important;
           `
         )}
       />

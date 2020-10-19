@@ -1,5 +1,4 @@
 import { h } from "preact";
-
 import { Route, Router } from "preact-router";
 import { useState } from "preact/hooks";
 

@@ -13,8 +13,8 @@ const Map = () => {
         className={cx(
           "w-full h-full",
           css`
-            background: #2e313d;
-            z-index: 0;
+            z-index: 0 !important;
+            background: #2e313d !important;
           `
         )}
       />
