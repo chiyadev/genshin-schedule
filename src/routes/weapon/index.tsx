@@ -27,7 +27,7 @@ const Inner = ({ weapon }: { weapon: Weapon }) => {
         <div className="space-x-2 py-4 flex flex-row">
           <img
             className="w-16 h-16 object-cover"
-            src={`/assets/weapons/${weapon.name}.png`}
+            src={`/assets/game/${weapon.name}.png`}
           />
 
           <div className="flex flex-col justify-center">
@@ -54,7 +54,7 @@ const WeaponMat = ({ material }: { material: WeaponMaterial }) => {
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
           <img
-            src={`/assets/weapons/${material.name}.png`}
+            src={`/assets/game/${material.name}.png`}
             className="w-12 h-12"
           />
           <div className="flex flex-col justify-center">

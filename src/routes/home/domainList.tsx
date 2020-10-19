@@ -190,7 +190,7 @@ const DomainDisplay = ({
               key={material.name}
               material={material}
               items={characters}
-              assetPath="characters"
+              path="characters"
               roundItems
             />
           )),
@@ -204,7 +204,7 @@ const DomainDisplay = ({
               key={material.name}
               material={material}
               items={weapons}
-              assetPath="weapons"
+              path="weapons"
             />
           )),
         [talentMaterials]
@@ -216,12 +216,12 @@ const DomainDisplay = ({
 const MaterialDisplay = ({
   material,
   items,
-  assetPath,
+  path,
   roundItems
 }: {
   material: TalentMaterial | WeaponMaterial;
   items: (Character | Weapon)[];
-  assetPath: "characters" | "weapons";
+  path: "characters" | "weapons";
   roundItems?: boolean;
 }) => {
   return (
@@ -229,7 +229,7 @@ const MaterialDisplay = ({
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
           <img
-            src={`/assets/${assetPath}/${material.name}.png`}
+            src={`/assets/game/${material.name}.png`}
             className="w-10 h-10"
           />
           <div className="flex flex-col justify-center">
@@ -244,13 +244,13 @@ const MaterialDisplay = ({
           <Link
             key={item.name}
             className="pl-4 flex flex-row space-x-2"
-            href={`/${assetPath}/${item.name}`}
+            href={`/${path}/${item.name}`}
           >
             <img
               className={cx("w-6 h-6 object-cover", {
                 "rounded-full": roundItems
               })}
-              src={`/assets/${assetPath}/${item.name}.png`}
+              src={`/assets/game/${item.name}.png`}
             />
 
             <div className="flex flex-col justify-center text-sm">
