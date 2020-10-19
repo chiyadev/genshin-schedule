@@ -69,7 +69,7 @@ const Info = () => {
 
       <div className="py-4 text-sm">
         <Checkbox value={!visible} setValue={v => setVisible(!v)}>
-          Hide forever
+          Do not show again
         </Checkbox>
       </div>
     </WhiteCard>
