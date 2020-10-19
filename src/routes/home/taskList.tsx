@@ -2,15 +2,16 @@ import { h } from "preact";
 import { useConfig } from "../../configs";
 import Map from "../../map";
 import { css, cx } from "emotion";
-import { FaAngleRight } from "react-icons/fa";
+import { FaAngleRight, FaTimes } from "react-icons/fa";
 import { Link } from "preact-router";
+import SectionHeading from "./sectionHeading";
 
 const TaskList = () => {
-  const [tasks, setTasks] = useConfig("tasks");
+  const [tasks, setTasks] = useConfig("taskIds");
 
   return (
     <div className="space-y-4">
-      <div className="text-lg">Today&apos;s Tasks</div>
+      <SectionHeading>Today&apos;s Tasks</SectionHeading>
 
       {tasks.length ? (
         <div className="space-y-4 flex flex-col">
@@ -19,7 +20,10 @@ const TaskList = () => {
           ))}
         </div>
       ) : (
-        <div className="text-sm">Nothing.</div>
+        <div className="text-sm">
+          <FaTimes className="inline" /> Nothing. Create a task by opening the
+          map.
+        </div>
       )}
 
       <MapDisplay />
@@ -46,9 +50,9 @@ const MapDisplay = () => {
         )}
       />
 
-      <div className="text-right text-xs text-gray-600">
+      <div className="text-right text-xs">
         <Link href="/map">
-          View map
+          Open map
           <FaAngleRight className="inline" />
         </Link>
       </div>

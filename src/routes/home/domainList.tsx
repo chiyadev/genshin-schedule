@@ -17,6 +17,8 @@ import { WeaponMaterial } from "../../db/weaponMaterials";
 import { Weapon, Weapons } from "../../db/weapons";
 import { Regions } from "../../db/regions";
 import WhiteCard from "../../whiteCard";
+import { FaTimes } from "react-icons/fa";
+import SectionHeading from "./sectionHeading";
 
 type ScheduledDomain = {
   domain: Domain;
@@ -130,7 +132,7 @@ const DomainList = () => {
   return useMemo(
     () => (
       <div className="space-y-4">
-        <div className="text-lg">Today&apos;s Domains</div>
+        <SectionHeading>Today&apos;s Domains</SectionHeading>
 
         {domains.length ? (
           <div className="space-y-4 flex flex-col">
@@ -140,7 +142,7 @@ const DomainList = () => {
           </div>
         ) : (
           <div className="text-sm">
-            Nothing. Maybe do some{" "}
+            <FaTimes className="inline" /> Nothing. Maybe do some{" "}
             <a href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops">
               Ley Lines
             </a>

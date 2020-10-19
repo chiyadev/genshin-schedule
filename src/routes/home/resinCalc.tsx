@@ -5,6 +5,7 @@ import { useConfig } from "../../configs";
 import { clampResin, getResinRecharge, ResinCap } from "../../db/resins";
 import { useRerenderFrequency, useServerDate } from "../../time";
 import WhiteCard from "../../whiteCard";
+import SectionHeading from "./sectionHeading";
 
 function useMeasuredTextWidth(className: string, text: string) {
   return useMemo(() => {
@@ -38,7 +39,7 @@ const ResinCalculator = () => {
 
   return (
     <div className="space-y-4">
-      <div className="text-lg">Resin Calculator</div>
+      <SectionHeading>Resin Calculator</SectionHeading>
 
       <WhiteCard>
         <div className="flex flex-row space-x-2">
