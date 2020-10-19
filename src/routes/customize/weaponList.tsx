@@ -2,80 +2,47 @@ import { Link } from "preact-router";
 import { h } from "preact";
 import { useMemo } from "preact/hooks";
 import { Regions } from "../../db/regions";
-import { WeaponMaterial, WeaponMaterials } from "../../db/weaponMaterials";
-import { Domains } from "../../db/domains";
-import { DomainDropSets } from "../../db/domainDropSets";
 import { cx } from "emotion";
 import { Weapon, Weapons } from "../../db/weapons";
 import LazyLoad from "react-lazyload";
 import { useConfig } from "../../configs";
+import { MemorySearch } from "../../memorySearch";
+import { MultiMap } from "../../multiMap";
 
-const materialToWeapons = Weapons.reduce((x, c) => {
-  const list = x[c.material.name];
+const db = new MemorySearch<Weapon>();
+const materialToWeapons = new MultiMap<string, Weapon>();
 
-  if (list) list.push(c);
-  else x[c.material.name] = [c];
+for (const weapon of Weapons) {
+  db.add(weapon.type, weapon);
+  db.add(weapon.name, weapon);
+  db.add(weapon.material.name, weapon);
 
-  return x;
-}, {} as { [key: string]: Weapon[] });
+  materialToWeapons.add(weapon.material.name, weapon);
+}
+
+for (const region of Regions) {
+  for (const domain of region.domains) {
+    for (const drops of domain.drops) {
+      for (const item of drops.items) {
+        for (const weapon of materialToWeapons.get(item.name)) {
+          db.add(region.name, weapon);
+          db.add(domain.name, weapon);
+
+          drops.name && db.add(drops.name, weapon);
+          drops.days.forEach(day => db.add(day, weapon));
+        }
+      }
+    }
+  }
+}
 
 const WeaponList = ({ search }: { search: string }) => {
-  const list = useMemo(() => {
-    const text = search.toLowerCase();
-    const set = new Set<Weapon>();
+  const results = useMemo(
+    () => db.search(search).sort((a, b) => a.name.localeCompare(b.name)),
+    [search]
+  );
 
-    for (const weapon of Weapons) {
-      if (
-        weapon.name.toLowerCase().includes(text) ||
-        weapon.material.name.toLowerCase().includes(text)
-      ) {
-        set.add(weapon);
-      }
-    }
-
-    function addByMaterial(material: string) {
-      const weapons = materialToWeapons[material];
-      if (weapons) {
-        for (const weapon of weapons) {
-          set.add(weapon);
-        }
-      }
-    }
-
-    for (const region of Regions) {
-      if (region.name.toLowerCase().includes(text)) {
-        for (const domain of region.domains) {
-          for (const drops of domain.drops) {
-            for (const item of drops.items) {
-              addByMaterial(item.name);
-            }
-          }
-        }
-      }
-    }
-
-    for (const domain of Domains) {
-      if (domain.name.toLowerCase().includes(text)) {
-        for (const drops of domain.drops) {
-          for (const item of drops.items) {
-            addByMaterial(item.name);
-          }
-        }
-      }
-    }
-
-    for (const drops of DomainDropSets) {
-      if (drops.name && drops.name.toLowerCase().includes(text)) {
-        for (const item of drops.items) {
-          addByMaterial(item.name);
-        }
-      }
-    }
-
-    return Array.from(set).sort((a, b) => a.name.localeCompare(b.name));
-  }, [search]);
-
-  if (list.length === 0) {
+  if (results.length === 0) {
     return null;
   }
 
@@ -90,7 +57,7 @@ const WeaponList = ({ search }: { search: string }) => {
         <span className="align-middle"> Weapons</span>
       </div>
 
-      {list.map(weapon => (
+      {results.map(weapon => (
         <Link key={weapon.name} href={`/weapons/${weapon.name}`}>
           <WeaponIcon weapon={weapon} />
         </Link>

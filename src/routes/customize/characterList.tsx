@@ -5,72 +5,48 @@ import { Regions } from "../../db/regions";
 import { Link } from "preact-router";
 import { useConfig } from "../../configs";
 import { cx } from "emotion";
-import { Domains } from "../../db/domains";
-import { DomainDropSets } from "../../db/domainDropSets";
 import LazyLoad from "react-lazyload";
+import { MemorySearch } from "../../memorySearch";
+import { DomainOfMastery } from "../../db/domainCategories";
+import { MultiMap } from "../../multiMap";
 
-const materialToCharacters = Characters.reduce((x, c) => {
-  const list = x[c.talentMaterial.name];
+const db = new MemorySearch<Character>();
+const materialToCharacters = new MultiMap<string, Character>();
 
-  if (list) list.push(c);
-  else x[c.talentMaterial.name] = [c];
+for (const character of Characters) {
+  db.add(character.type, character);
+  db.add(character.name, character);
+  db.add(character.talentMaterial.name, character);
 
-  return x;
-}, {} as { [key: string]: Character[] });
+  materialToCharacters.add(character.talentMaterial.name, character);
+}
+
+for (const region of Regions) {
+  for (const character of region.characters) {
+    db.add(region.name, character);
+  }
+}
+
+for (const domain of DomainOfMastery.domains) {
+  for (const drops of domain.drops) {
+    for (const item of drops.items) {
+      for (const character of materialToCharacters.get(item.name)) {
+        db.add(domain.name, character);
+
+        drops.name && db.add(drops.name, character);
+        drops.days.forEach(day => db.add(day, character));
+      }
+    }
+  }
+}
 
 const CharacterList = ({ search }: { search: string }) => {
-  const list = useMemo(() => {
-    const text = search.toLowerCase();
-    const set = new Set<Character>();
+  const results = useMemo(
+    () => db.search(search).sort((a, b) => a.name.localeCompare(b.name)),
+    [search]
+  );
 
-    for (const character of Characters) {
-      if (
-        character.name.toLowerCase().includes(text) ||
-        character.talentMaterial.name.toLowerCase().includes(text)
-      ) {
-        set.add(character);
-      }
-    }
-
-    for (const region of Regions) {
-      if (region.name.toLowerCase().includes(text)) {
-        for (const character of region.characters) {
-          set.add(character);
-        }
-      }
-    }
-
-    function addByMaterial(material: string) {
-      const characters = materialToCharacters[material];
-      if (characters) {
-        for (const character of characters) {
-          set.add(character);
-        }
-      }
-    }
-
-    for (const domain of Domains) {
-      if (domain.name.toLowerCase().includes(text)) {
-        for (const drops of domain.drops) {
-          for (const item of drops.items) {
-            addByMaterial(item.name);
-          }
-        }
-      }
-    }
-
-    for (const drops of DomainDropSets) {
-      if (drops.name && drops.name.toLowerCase().includes(text)) {
-        for (const item of drops.items) {
-          addByMaterial(item.name);
-        }
-      }
-    }
-
-    return Array.from(set).sort((a, b) => a.name.localeCompare(b.name));
-  }, [search]);
-
-  if (list.length === 0) {
+  if (results.length === 0) {
     return null;
   }
 
@@ -82,7 +58,7 @@ const CharacterList = ({ search }: { search: string }) => {
         <span className="align-middle"> Characters</span>
       </div>
 
-      {list.map(character => (
+      {results.map(character => (
         <Link key={character.name} href={`/characters/${character.name}`}>
           <CharacterIcon character={character} />
         </Link>
