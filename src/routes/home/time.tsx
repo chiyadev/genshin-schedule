@@ -7,6 +7,7 @@ import {
 } from "../../time";
 import { Configs, useConfig } from "../../configs";
 import { FaClock } from "react-icons/fa";
+import { clampResin, getResinRecharge } from "../../db/resins";
 
 const Time = () => {
   const date = useServerDate();
@@ -32,9 +33,10 @@ const Time = () => {
   const dayOfWeek = getServerDayOfWeek(date);
   const resetDate = getServerNextReset(date);
 
-  const resetCooldown = resetDate.getTime() - date.getTime();
-  const resetHours = Math.floor(resetCooldown / 3600000);
-  const resetMinutes = Math.round(resetCooldown / 60000);
+  const resetTime = resetDate.getTime() - date.getTime();
+  const resetHours = Math.floor(resetTime / 3600000);
+  const resetMinutes = Math.round(resetTime / 60000);
+  const resetResins = clampResin(getResinRecharge(resetTime));
 
   return (
     <div className="text-center">
@@ -69,7 +71,13 @@ const Time = () => {
           </span>
         )}
 
-        <span> until reset</span>
+        <span> until reset </span>
+
+        {resetResins < 120 && (
+          <span>
+            ({resetResins} resin{resetResins !== 1 && "s"})
+          </span>
+        )}
       </div>
 
       {offset !== 0 && (
