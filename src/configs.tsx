@@ -13,6 +13,7 @@ export type Configs = {
   tasks: string[];
   customizeQuery: string;
   mapState: { lat: number; lng: number; zoom: number };
+  paimonBg: boolean;
 };
 
 export const DefaultConfigs: Configs = {
@@ -30,7 +31,8 @@ export const DefaultConfigs: Configs = {
     lat: -24.83,
     lng: 54.73,
     zoom: 5.6
-  }
+  },
+  paimonBg: false
 };
 
 export function useConfig<TKey extends keyof Configs>(key: TKey) {

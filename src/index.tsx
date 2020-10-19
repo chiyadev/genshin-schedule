@@ -5,6 +5,7 @@ import { useState } from "preact/hooks";
 
 import "./index.css";
 
+import Background from "./background";
 import Header from "./header";
 import Footer from "./footer";
 import Home from "./routes/home";
@@ -22,6 +23,8 @@ const App = () => {
 
   return (
     <div>
+      <Background />
+
       {!special && <Header />}
 
       <div>

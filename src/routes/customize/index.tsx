@@ -7,6 +7,7 @@ import WeaponList from "./weaponList";
 import { useEffect } from "preact/hooks";
 import { forceCheck } from "react-lazyload";
 import { useTabTitle } from "../../utils";
+import Miscellaneous from "./miscellaneous";
 
 const Customize = () => {
   const [search, setSearch] = useConfig("customizeQuery");
@@ -25,6 +26,7 @@ const Customize = () => {
       <div className="mt-8 space-y-8">
         <CharacterList search={search} />
         <WeaponList search={search} />
+        <Miscellaneous search={search} />
       </div>
     </div>
   );
