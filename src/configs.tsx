@@ -10,7 +10,7 @@ export type Configs = {
   };
   characters: string[];
   weapons: string[];
-  tasks: string[];
+  taskIds: string[];
   customizeQuery: string;
   mapState: { lat: number; lng: number; zoom: number };
   paimonBg: boolean;
@@ -26,7 +26,7 @@ export const DefaultConfigs: Configs = {
   },
   characters: [],
   weapons: [],
-  tasks: [],
+  taskIds: [],
   customizeQuery: "",
   mapState: {
     lat: -24.83,
@@ -39,4 +39,21 @@ export const DefaultConfigs: Configs = {
 
 export function useConfig<TKey extends keyof Configs>(key: TKey) {
   return useLocalStorage<Configs[TKey]>(key, DefaultConfigs[key]);
+}
+
+export type Task = {
+  id: string;
+  icon: string;
+  name: string;
+  description?: string;
+  location: { lat: number; lng: number };
+};
+
+export function useTaskInfo(id: string) {
+  return useLocalStorage<Task>(`task_${id}`, {
+    id,
+    name: "",
+    icon: "",
+    location: { lat: 0, lng: 0 }
+  });
 }
