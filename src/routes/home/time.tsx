@@ -75,7 +75,7 @@ const Time = () => {
 
         {resetResins < 120 && (
           <span>
-            ({resetResins} resin{resetResins !== 1 && "s"})
+            (+{resetResins} resin{resetResins !== 1 && "s"})
           </span>
         )}
       </div>
