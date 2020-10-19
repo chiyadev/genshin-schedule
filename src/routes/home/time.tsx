@@ -10,6 +10,7 @@ import { FaClock } from "react-icons/fa";
 
 const Time = () => {
   const date = useServerDate();
+  const [offset, setOffset] = useConfig("offsetDays");
 
   useRerenderFrequency(100);
 
@@ -42,7 +43,17 @@ const Time = () => {
       </div>
 
       <div className="font-bold text-4xl">
-        &lt; {hour}:{minute}:{second} &gt;
+        <span className="cursor-pointer" onClick={() => setOffset(offset - 1)}>
+          &lt;
+        </span>
+
+        <span> {hour}</span>
+        <span>:{minute}:</span>
+        <span>{second} </span>
+
+        <span className="cursor-pointer" onClick={() => setOffset(offset + 1)}>
+          &gt;
+        </span>
       </div>
 
       <div className="text-xs text-gray-600">
@@ -60,6 +71,13 @@ const Time = () => {
 
         <span> until reset</span>
       </div>
+
+      {offset !== 0 && (
+        <div className="text-xs text-red-600">
+          Showing schedule in {offset >= 0 ? "+" : "-"}
+          {Math.abs(offset)} day{Math.abs(offset) !== 1 && "s"}
+        </div>
+      )}
     </div>
   );
 };

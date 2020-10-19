@@ -1,31 +1,31 @@
 import { useConfig } from "./configs";
-
 import { useEffect, useState } from "preact/hooks";
 import { DaysOfWeek } from "./db/domainDropSets";
 
 export function useServerDate() {
   const [server] = useConfig("server");
+  const [offsetDays] = useConfig("offsetDays");
 
   const now = new Date();
   const utc = now.getTime() + now.getTimezoneOffset() * 60000;
 
-  let offset: number;
+  let offsetHours: number;
 
   switch (server) {
     case "America":
-      offset = -5;
+      offsetHours = -5;
       break;
 
     case "Europe":
-      offset = 1;
+      offsetHours = 1;
       break;
 
     case "Asia":
-      offset = 8;
+      offsetHours = 8;
       break;
   }
 
-  return new Date(utc + 3600000 * offset);
+  return new Date(utc + 3600000 * offsetHours + 86400000 * offsetDays);
 }
 
 export function useRerenderFrequency(interval: number) {
