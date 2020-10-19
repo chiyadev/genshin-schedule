@@ -2,6 +2,10 @@ import { ComponentChildren, h } from "preact";
 import { Map as Leaflet, TileLayer } from "react-leaflet";
 import { css, cx } from "emotion";
 import { useConfig } from "./configs";
+import MapTaskLayer from "./mapTaskLayer";
+import MapTaskCreateLayer from "./mapTaskCreateLayer";
+import { randomStr } from "./random";
+import { useRef } from "preact/hooks";
 
 import "leaflet/dist/leaflet.css";
 
@@ -14,7 +18,12 @@ const Map = ({
   children?: ComponentChildren;
   minimal?: boolean;
 }) => {
-  const [{ lat, lng, zoom }, setState] = useConfig("mapState");
+  const [state, setState] = useConfig("mapState");
+  const [createTask, setCreateTask] = useConfig("mapCreateTask");
+  const [defaultTask] = useConfig("mapDefaultTask");
+
+  // after reading initial state, only update it
+  const { lat, lng, zoom } = useRef(state).current;
 
   // adapted from https://github.com/GenshinMap/genshinmap.github.io/blob/master/js/index.js
   return (
@@ -41,17 +50,29 @@ const Map = ({
           }
         `
       )}
-      onmoveend={({ target }) =>
+      onclick={({ latlng: location }) => {
+        setCreateTask({
+          id: randomStr(6),
+          dueTime: 0,
+          ...defaultTask,
+          ...createTask,
+          location
+        });
+      }}
+      onmoveend={({ target }) => {
         setState({
           ...target.getCenter(),
           zoom: Math.round(target.getZoom() * 100) / 100
-        })
-      }
+        });
+      }}
     >
       <TileLayer
         url="https://s.chiya.dev/genshin/map/{z}/ppp{x}_{y}.jpg"
         attribution='<a href="https://bbs.mihoyo.com/ys/article/1328298" target="_blank" rel="noreferrer noopener">yuanshen.site</a>'
       />
+
+      <MapTaskLayer />
+      <MapTaskCreateLayer />
 
       {children}
     </Leaflet>

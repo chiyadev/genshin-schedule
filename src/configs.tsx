@@ -13,6 +13,8 @@ export type Configs = {
   taskIds: string[];
   customizeQuery: string;
   mapState: { lat: number; lng: number; zoom: number };
+  mapCreateTask: Task | null;
+  mapDefaultTask: Pick<Task, "name" | "icon" | "refreshTime">;
   paimonBg: boolean;
   showSiteInfo: boolean;
 };
@@ -33,6 +35,13 @@ export const DefaultConfigs: Configs = {
     lng: 54.73,
     zoom: 5.6
   },
+  mapCreateTask: null,
+  mapDefaultTask: {
+    name: "Iron Chunk",
+    icon: "Iron Chunk",
+    refreshTime: 86400000
+  },
+
   paimonBg: false,
   showSiteInfo: true
 };
@@ -47,13 +56,25 @@ export type Task = {
   name: string;
   description?: string;
   location: { lat: number; lng: number };
+  dueTime: number;
+  refreshTime: number;
 };
 
 export function useTaskInfo(id: string) {
   return useLocalStorage<Task>(`task_${id}`, {
     id,
-    name: "",
-    icon: "",
-    location: { lat: 0, lng: 0 }
+    ...DefaultConfigs.mapDefaultTask,
+
+    location: { lat: 0, lng: 0 },
+    dueTime: 0
   });
+}
+
+export function useTaskCreator() {
+  const [tasks, setTasks] = useConfig("taskIds");
+
+  return (task: Task) => {
+    localStorage.setItem(`task_${task.id}`, JSON.stringify(task));
+    setTasks([...tasks, task.id].filter((v, i, a) => a.indexOf(v) === i));
+  };
 }

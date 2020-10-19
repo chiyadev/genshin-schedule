@@ -6,6 +6,7 @@ import { FaAngleRight, FaTimes } from "react-icons/fa";
 import { Link } from "preact-router";
 import SectionHeading from "./sectionHeading";
 import WhiteCard from "../../whiteCard";
+import { useRerenderFrequency, useServerDate } from "../../time";
 
 const TaskList = () => {
   const [tasks] = useConfig("taskIds");
@@ -37,13 +38,29 @@ const TaskList = () => {
 const TaskDisplay = ({ id }: { id: string }) => {
   const [task, setTask] = useTaskInfo(id);
 
-  return (
-    <div className="py-2">
-      <div className="font-bold">{task.name}</div>
+  const date = useServerDate();
+  useRerenderFrequency(1000);
 
-      {task.description && (
-        <div className="text-xs text-gray-600">{task.description}</div>
-      )}
+  if (date.getTime() < task.dueTime) {
+    return null;
+  }
+
+  return (
+    <div className="py-2 flex flex-row space-x-2">
+      <div className="flex flex-col justify-center flex-shrink-0">
+        <img
+          className="w-8 h-8 object-contain"
+          src={`/assets/game/${task.icon}.png`}
+        />
+      </div>
+
+      <div className="flex flex-col justify-center">
+        <div className="font-bold">{task.name}</div>
+
+        {task.description && (
+          <div className="text-xs text-gray-600">{task.description}</div>
+        )}
+      </div>
     </div>
   );
 };
