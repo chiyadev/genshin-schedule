@@ -3,7 +3,7 @@ import { css, cx } from "emotion";
 import { useMemo, useRef } from "preact/hooks";
 import { useConfig } from "../../configs";
 import { clampResin, getResinRecharge, ResinCap } from "../../db/resins";
-import { useRerenderFrequency } from "../../time";
+import { useRerenderFrequency, useServerDate } from "../../time";
 
 function useMeasuredTextWidth(className: string, text: string) {
   return useMemo(() => {
@@ -23,11 +23,12 @@ const ResinCalculator = () => {
   const [resin, setResin] = useConfig("resin");
   const resinInput = useRef<HTMLInputElement>(null);
 
+  const date = useServerDate();
   useRerenderFrequency(1000);
 
   const current = useMemo(() => {
-    return resin.value + getResinRecharge(Date.now() - resin.time);
-  }, [resin]);
+    return resin.value + getResinRecharge(date.getTime() - resin.time);
+  }, [resin, date]);
 
   const inputWidth = useMeasuredTextWidth(
     "text-xl font-bold",
@@ -67,7 +68,7 @@ const ResinCalculator = () => {
             onInput={({ currentTarget: { valueAsNumber } }) =>
               setResin({
                 value: Math.max(0, Math.min(ResinCap, valueAsNumber || 0)),
-                time: Date.now()
+                time: date.getTime()
               })
             }
           />
