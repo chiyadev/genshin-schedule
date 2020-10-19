@@ -8,10 +8,10 @@ const Header = () => {
       <Link href="/" className="font-bold truncate">
         <img
           src="/assets/favicon-32x32.png"
-          className="w-6 h-6 inline mr-1 rounded"
+          className="w-6 h-6 inline rounded"
         />
 
-        <span className="align-middle">Genshin Schedule</span>
+        <span className="align-middle"> Genshin Schedule</span>
       </Link>
 
       <div className="flex-1" />
