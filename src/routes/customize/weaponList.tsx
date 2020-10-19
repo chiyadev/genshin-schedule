@@ -47,8 +47,8 @@ const WeaponList = ({ search }: { search: string }) => {
   }
 
   return (
-    <div>
-      <div className="text-xl font-bold mb-2">
+    <div className="space-y-2">
+      <div className="text-xl font-bold">
         <img
           src="/assets/weapons/Aquila Favonia.png"
           className="w-8 h-8 inline object-cover"
@@ -57,11 +57,13 @@ const WeaponList = ({ search }: { search: string }) => {
         <span className="align-middle"> Weapons</span>
       </div>
 
-      {results.map(weapon => (
-        <Link key={weapon.name} href={`/weapons/${weapon.name}`}>
-          <WeaponIcon weapon={weapon} />
-        </Link>
-      ))}
+      <div>
+        {results.map(weapon => (
+          <Link key={weapon.name} href={`/weapons/${weapon.name}`}>
+            <WeaponIcon weapon={weapon} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

@@ -51,18 +51,20 @@ const CharacterList = ({ search }: { search: string }) => {
   }
 
   return (
-    <div>
-      <div className="text-xl font-bold mb-2">
+    <div className="space-y-2">
+      <div className="text-xl font-bold">
         <img src="/assets/elements/Anemo.png" className="w-8 h-8 inline" />
 
         <span className="align-middle"> Characters</span>
       </div>
 
-      {results.map(character => (
-        <Link key={character.name} href={`/characters/${character.name}`}>
-          <CharacterIcon character={character} />
-        </Link>
-      ))}
+      <div>
+        {results.map(character => (
+          <Link key={character.name} href={`/characters/${character.name}`}>
+            <CharacterIcon character={character} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
