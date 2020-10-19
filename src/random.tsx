@@ -1,4 +1,9 @@
-// https://stackoverflow.com/a/47496558/13160620
 export function randomStr(length: number) {
-  return [...Array(length)].map(() => Math.random().toString(36)[2]).join("");
+  const chars: string[] = [];
+
+  for (let i = 0; i < length; i++) {
+    chars[i] = Math.random().toString(36)[2];
+  }
+
+  return chars.join("");
 }
