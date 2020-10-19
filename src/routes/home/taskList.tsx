@@ -1,6 +1,7 @@
 import { h } from "preact";
 import { useConfig } from "../../configs";
 import Map from "../../map";
+import { css, cx } from "emotion";
 
 const TaskList = () => {
   const [tasks, setTasks] = useConfig("tasks");
@@ -19,7 +20,16 @@ const TaskList = () => {
         <div className="text-sm">Nothing.</div>
       )}
 
-      <Map />
+      <Map
+        minimal
+        className={cx(
+          "w-full rounded shadow-lg",
+          css`
+            height: 26rem;
+            background: rgba(0, 0, 0, 0.1);
+          `
+        )}
+      />
     </div>
   );
 };

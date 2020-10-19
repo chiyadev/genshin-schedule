@@ -1,18 +1,19 @@
-import { h } from "preact";
-import {
-  Map as Leaflet,
-  Marker,
-  Popup,
-  TileLayer,
-  useLeaflet
-} from "react-leaflet";
+import { ComponentChildren, h } from "preact";
+import { Map as Leaflet, TileLayer } from "react-leaflet";
 import { css, cx } from "emotion";
 import { useConfig } from "./configs";
-import { LatLng } from "leaflet";
 
 import "leaflet/dist/leaflet.css";
 
-const Map = () => {
+const Map = ({
+  className,
+  children,
+  minimal
+}: {
+  className?: string;
+  children?: ComponentChildren;
+  minimal?: boolean;
+}) => {
   const [{ lat, lng, zoom }, setState] = useConfig("mapState");
 
   // adapted from https://github.com/GenshinMap/genshinmap.github.io/blob/master/js/index.js
@@ -28,14 +29,12 @@ const Map = () => {
         [0, 0],
         [-66.5, 90]
       ]}
-      attributionControl={false}
-      zoomControl={false}
+      attributionControl={!minimal}
+      zoomControl={!minimal}
       className={cx(
-        "w-full rounded shadow-lg",
+        className,
+        // https://github.com/Leaflet/Leaflet/issues/3575#issuecomment-688644225
         css`
-          height: 26rem;
-
-          /* https://github.com/Leaflet/Leaflet/issues/3575#issuecomment-688644225 */
           .leaflet-tile-container img {
             width: 256.5px !important;
             height: 256.5px !important;
@@ -49,7 +48,12 @@ const Map = () => {
         })
       }
     >
-      <TileLayer url="https://s.chiya.dev/genshin/map/{z}/ppp{x}_{y}.jpg" />
+      <TileLayer
+        url="https://s.chiya.dev/genshin/map/{z}/ppp{x}_{y}.jpg"
+        attribution='<a href="https://bbs.mihoyo.com/ys/article/1328298">yuanshen.site</a>'
+      />
+
+      {children}
     </Leaflet>
   );
 };
