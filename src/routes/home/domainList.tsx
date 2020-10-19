@@ -16,6 +16,7 @@ import { Link } from "preact-router";
 import { WeaponMaterial } from "../../db/weaponMaterials";
 import { Weapon, Weapons } from "../../db/weapons";
 import { Regions } from "../../db/regions";
+import WhiteCard from "../../whiteCard";
 
 type ScheduledDomain = {
   domain: Domain;
@@ -129,7 +130,7 @@ const DomainList = () => {
   return useMemo(
     () => (
       <div className="space-y-4">
-        <div className="text-lg">Today&apos;s domains</div>
+        <div className="text-lg">Today&apos;s Domains</div>
 
         {domains.length ? (
           <div className="space-y-4 flex flex-col">
@@ -166,16 +167,9 @@ const DomainDisplay = ({
   }, [domain]);
 
   return (
-    <div
-      className={cx(
-        "w-full border border-white shadow-lg rounded",
-        css`
-          background-color: rgba(0, 0, 0, 0.1);
-        `
-      )}
-    >
+    <WhiteCard divide>
       <a href={domain.wiki}>
-        <div className="w-full p-4 bg-white text-black flex flex-row w-full">
+        <div className="space-x-2 py-4 flex flex-row">
           <img
             src="/assets/game/Domain.png"
             className="mr-2 w-10 object-contain"
@@ -190,35 +184,33 @@ const DomainDisplay = ({
         </div>
       </a>
 
-      <div className="px-4 divide-y divide-gray-800">
-        {useMemo(
-          () =>
-            talentMaterials.map(({ material, characters }) => (
-              <MaterialDisplay
-                key={material.name}
-                material={material}
-                items={characters}
-                assetPath="characters"
-                roundItems
-              />
-            )),
-          [talentMaterials]
-        )}
+      {useMemo(
+        () =>
+          talentMaterials.map(({ material, characters }) => (
+            <MaterialDisplay
+              key={material.name}
+              material={material}
+              items={characters}
+              assetPath="characters"
+              roundItems
+            />
+          )),
+        [talentMaterials]
+      )}
 
-        {useMemo(
-          () =>
-            weaponMaterials.map(({ material, weapons }) => (
-              <MaterialDisplay
-                key={material.name}
-                material={material}
-                items={weapons}
-                assetPath="weapons"
-              />
-            )),
-          [talentMaterials]
-        )}
-      </div>
-    </div>
+      {useMemo(
+        () =>
+          weaponMaterials.map(({ material, weapons }) => (
+            <MaterialDisplay
+              key={material.name}
+              material={material}
+              items={weapons}
+              assetPath="weapons"
+            />
+          )),
+        [talentMaterials]
+      )}
+    </WhiteCard>
   );
 };
 
@@ -252,17 +244,19 @@ const MaterialDisplay = ({
         {items.map(item => (
           <Link
             key={item.name}
-            className="pl-4 flex flex-row space-x-2"
+            className="pl-6 flex flex-row space-x-2"
             href={`/${assetPath}/${item.name}`}
           >
             <img
-              className={cx("w-8 h-8 object-cover", {
+              className={cx("w-6 h-6 object-cover", {
                 "rounded-full": roundItems
               })}
               src={`/assets/${assetPath}/${item.name}.png`}
             />
 
-            <div className="flex flex-col justify-center">{item.name}</div>
+            <div className="flex flex-col justify-center text-sm">
+              {item.name}
+            </div>
           </Link>
         ))}
       </div>

@@ -8,7 +8,7 @@ const TaskList = () => {
 
   return (
     <div className="space-y-4">
-      <div className="text-lg">Today&apos;s tasks</div>
+      <div className="text-lg">Today&apos;s Tasks</div>
 
       {tasks.length ? (
         <div className="space-y-4 flex flex-col">

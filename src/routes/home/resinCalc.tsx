@@ -4,6 +4,7 @@ import { useMemo, useRef } from "preact/hooks";
 import { useConfig } from "../../configs";
 import { clampResin, getResinRecharge, ResinCap } from "../../db/resins";
 import { useRerenderFrequency, useServerDate } from "../../time";
+import WhiteCard from "../../whiteCard";
 
 function useMeasuredTextWidth(className: string, text: string) {
   return useMemo(() => {
@@ -37,9 +38,9 @@ const ResinCalculator = () => {
 
   return (
     <div className="space-y-4">
-      <div className="text-lg">Resin calculator</div>
+      <div className="text-lg">Resin Calculator</div>
 
-      <div className="bg-white text-black rounded p-4 space-y-2 flex flex flex-col shadow-lg">
+      <WhiteCard>
         <div className="flex flex-row space-x-2">
           <img src="/assets/game/Resin.png" className="w-10 h-10" />
 
@@ -77,7 +78,7 @@ const ResinCalculator = () => {
         </div>
 
         <ResinExtrapolations current={current} />
-      </div>
+      </WhiteCard>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import { WeaponMaterial } from "../../db/weaponMaterials";
 import DropLabel from "../../dropLabel";
 import Checkbox from "../../checkbox";
 import { arrayToggle, useTabTitle } from "../../utils";
+import WhiteCard from "../../whiteCard";
 
 const WeaponInfo = ({ weapon }: { weapon: string }) => {
   const info = useMemo(() => Weapons.find(c => c.name === weapon), [weapon]);
@@ -21,7 +22,7 @@ const WeaponInfo = ({ weapon }: { weapon: string }) => {
 
 const Inner = ({ weapon }: { weapon: Weapon }) => {
   return (
-    <div className="bg-white text-black rounded px-4 flex flex-col divide-y divide-gray-300 shadow-lg">
+    <WhiteCard divide>
       <a href={weapon.wiki}>
         <div className="space-x-2 py-4 flex flex-row">
           <img
@@ -43,7 +44,7 @@ const Inner = ({ weapon }: { weapon: Weapon }) => {
       <div className="py-4 text-sm">
         <Toggle weapon={weapon} />
       </div>
-    </div>
+    </WhiteCard>
   );
 };
 

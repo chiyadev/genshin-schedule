@@ -6,6 +6,7 @@ import { useConfig } from "../../configs";
 import DropLabel from "../../dropLabel";
 import Checkbox from "../../checkbox";
 import { arrayToggle, useTabTitle } from "../../utils";
+import WhiteCard from "../../whiteCard";
 
 const CharacterInfo = ({ character }: { character: string }) => {
   const info = useMemo(() => Characters.find(c => c.name === character), [
@@ -23,7 +24,7 @@ const CharacterInfo = ({ character }: { character: string }) => {
 
 const Inner = ({ character }: { character: Character }) => {
   return (
-    <div className="bg-white text-black rounded px-4 flex flex-col divide-y divide-gray-300 shadow-lg">
+    <WhiteCard divide>
       <a href={character.wiki}>
         <div className="space-x-2 py-4 flex flex-row">
           <img
@@ -45,7 +46,7 @@ const Inner = ({ character }: { character: Character }) => {
       <div className="py-4 text-sm">
         <Toggle character={character} />
       </div>
-    </div>
+    </WhiteCard>
   );
 };
 
