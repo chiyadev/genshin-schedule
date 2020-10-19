@@ -50,7 +50,7 @@ const Map = ({
     >
       <TileLayer
         url="https://s.chiya.dev/genshin/map/{z}/ppp{x}_{y}.jpg"
-        attribution='<a href="https://bbs.mihoyo.com/ys/article/1328298">yuanshen.site</a>'
+        attribution='<a href="https://bbs.mihoyo.com/ys/article/1328298" target="_blank" rel="noreferrer noopener">yuanshen.site</a>'
       />
 
       {children}
