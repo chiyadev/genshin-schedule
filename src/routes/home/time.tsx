@@ -81,7 +81,10 @@ const Time = () => {
       </div>
 
       {offset !== 0 && (
-        <div className="text-xs text-red-600 font-bold">
+        <div
+          className="text-xs text-red-600 font-bold cursor-pointer"
+          onClick={() => setOffset(0)}
+        >
           Showing schedule in {offset >= 0 ? "+" : "-"}
           {Math.abs(offset)} day{Math.abs(offset) !== 1 && "s"}
         </div>
