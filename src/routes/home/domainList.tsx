@@ -170,10 +170,7 @@ const DomainDisplay = ({
     <WhiteCard divide>
       <a href={domain.wiki}>
         <div className="space-x-2 py-4 flex flex-row">
-          <img
-            src="/assets/game/Domain.png"
-            className="mr-2 w-10 object-contain"
-          />
+          <img src="/assets/game/Domain.png" className="w-10 object-contain" />
 
           <div className="flex flex-col justify-center">
             <div className="text-lg font-bold">{domain.name}</div>
@@ -231,7 +228,7 @@ const MaterialDisplay = ({
         <div className="space-x-2 flex flex-row">
           <img
             src={`/assets/${assetPath}/${material.name}.png`}
-            className="w-12 h-12"
+            className="w-10 h-10"
           />
           <div className="flex flex-col justify-center">
             <div className="text-lg">{material.name}</div>
@@ -244,7 +241,7 @@ const MaterialDisplay = ({
         {items.map(item => (
           <Link
             key={item.name}
-            className="pl-6 flex flex-row space-x-2"
+            className="pl-4 flex flex-row space-x-2"
             href={`/${assetPath}/${item.name}`}
           >
             <img
