@@ -3,24 +3,34 @@ import { ResinCap } from "./db/resins";
 
 export type Configs = {
   server: "America" | "Europe" | "Asia";
-  characters: string[];
-  weapons: string[];
+  offsetDays: number;
   resin: {
     value: number;
     time: number;
   };
+  characters: string[];
+  weapons: string[];
+  tasks: string[];
   customizeQuery: string;
+  mapState: { lat: number; lng: number; zoom: number };
 };
 
 export const DefaultConfigs: Configs = {
   server: "America",
-  characters: [],
-  weapons: [],
+  offsetDays: 0,
   resin: {
     value: ResinCap,
-    time: Date.now()
+    time: 0
   },
-  customizeQuery: ""
+  characters: [],
+  weapons: [],
+  tasks: [],
+  customizeQuery: "",
+  mapState: {
+    lat: -24.83,
+    lng: 54.73,
+    zoom: 5.6
+  }
 };
 
 export function useConfig<TKey extends keyof Configs>(key: TKey) {

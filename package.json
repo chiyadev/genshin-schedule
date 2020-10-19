@@ -24,14 +24,17 @@
   "dependencies": {
     "@rehooks/local-storage": "^2.4.0",
     "@types/react-lazyload": "^3.0.0",
+    "@types/react-leaflet": "^2.5.2",
     "emotion": "^10.0.27",
+    "leaflet": "^1.7.1",
     "preact": "^10.3.1",
     "preact-jsx-chai": "^3.0.0",
     "preact-markup": "^2.0.0",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1",
     "react-icons": "^3.11.0",
-    "react-lazyload": "^3.0.0"
+    "react-lazyload": "^3.0.0",
+    "react-leaflet": "^2.7.0"
   },
   "devDependencies": {
     "@teamsupercell/typings-for-css-modules-loader": "^2.2.0",
