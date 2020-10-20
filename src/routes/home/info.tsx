@@ -29,7 +29,7 @@ const Info = () => {
       <div className="py-4 text-sm space-y-4">
         <div>
           Genshin Schedule is a website to help you keep track of time-related
-          game events for Genshin Impact.
+          game activities in Genshin Impact.
         </div>
 
         <ul className="list-disc list-inside">

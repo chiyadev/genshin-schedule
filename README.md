@@ -1,19 +1,16 @@
-# genshin
+# Genshin Schedule
 
-## CLI Commands
-*   `npm install`: Installs dependencies
+Genshin Schedule is a website to help you keep track of time-related game activities in Genshin Impact.
 
-*   `npm run dev`: Run a development, HMR server
+For more information, visit [genshin.chiya.dev](https://genshin.chiya.dev).
 
-*   `npm run serve`: Run a production-like server
+## Building from source
 
-*   `npm run build`: Production-ready build
+This project was bootstrapped using [preact-cli](https://github.com/preactjs/preact-cli).
 
-*   `npm run lint`: Pass TypeScript files using TSLint
+1. Clone repo
+2. `yarn && yarn dev`
 
-*   `npm run test`: Run Jest and Enzyme with
-    [`enzyme-adapter-preact-pure`](https://github.com/preactjs/enzyme-adapter-preact-pure) for
-    your tests
+## To-do
 
-
-For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
+- Online sync
