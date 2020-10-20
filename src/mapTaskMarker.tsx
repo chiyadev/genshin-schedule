@@ -1,6 +1,6 @@
 import { Task, useConfig } from "./configs";
-import { Marker } from "react-leaflet";
-import { ComponentChildren, h } from "preact";
+import { Marker, MarkerProps } from "react-leaflet";
+import { ComponentChildren, h, Ref } from "preact";
 import {
   StateUpdater,
   useEffect,
@@ -14,6 +14,7 @@ import { MemorySearch } from "./memorySearch";
 import MapPopup from "./mapPopup";
 import { cx } from "emotion";
 import { memo } from "preact/compat";
+import { useServerDate } from "./time";
 
 type TimeUnit = "week" | "day" | "hour" | "minute";
 
@@ -73,7 +74,12 @@ const MapTaskMarker = ({
   const [page, setPage] = useState<Page>(pages[0]);
 
   return (
-    <Marker ref={markerRef} position={task.location} icon={markerIcon}>
+    <InnerMarker
+      task={task}
+      markerRef={markerRef}
+      position={task.location}
+      icon={markerIcon}
+    >
       <MapPopup
         divide
         onOpen={() => {
@@ -111,7 +117,26 @@ const MapTaskMarker = ({
           )}
         </div>
       </MapPopup>
-    </Marker>
+    </InnerMarker>
+  );
+};
+
+const InnerMarker = ({
+  task,
+  markerRef,
+  ...props
+}: MarkerProps & {
+  task: Task;
+  markerRef?: Ref<typeof Marker>;
+}) => {
+  const date = useServerDate(60000);
+
+  return (
+    <Marker
+      ref={markerRef}
+      opacity={task.dueTime <= date.getTime() ? 1 : 0.5}
+      {...props}
+    />
   );
 };
 

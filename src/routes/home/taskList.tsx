@@ -12,6 +12,13 @@ import { memo } from "preact/compat";
 
 const TaskList = () => {
   const [tasks, setTasks] = useConfig("tasks");
+  const date = useServerDate(60000);
+
+  const filtered = useMemo(() => {
+    return tasks
+      .filter(task => task.dueTime <= date.getTime())
+      .sort((a, b) => a.dueTime + a.refreshTime - b.dueTime - b.refreshTime);
+  }, [date, tasks]);
 
   return (
     <div className="space-y-4">
@@ -20,9 +27,9 @@ const TaskList = () => {
       <div>
         {useMemo(
           () =>
-            tasks.length ? (
+            filtered.length ? (
               <WhiteCard divide>
-                {tasks.map(task => (
+                {filtered.map(task => (
                   <TaskDisplay
                     key={task.id}
                     task={task}
@@ -50,7 +57,7 @@ const TaskList = () => {
                 the map.
               </div>
             ),
-          [setTasks, tasks]
+          [filtered, setTasks]
         )}
       </div>
 
@@ -62,12 +69,6 @@ const TaskList = () => {
 const TaskDisplay = ({ task }: { task: Task; setTask: StateUpdater<Task> }) => {
   const [, setMapState] = useConfig("mapState");
   const [, setFocusedTask] = useConfig("mapFocusedTask");
-
-  const date = useServerDate(60000);
-
-  if (date.getTime() < task.dueTime) {
-    return null;
-  }
 
   return (
     <div

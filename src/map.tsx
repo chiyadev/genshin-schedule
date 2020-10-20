@@ -4,7 +4,7 @@ import { css, cx } from "emotion";
 import { Task, useConfig } from "./configs";
 import { StateUpdater, useMemo } from "preact/hooks";
 import MapTaskMarker from "./mapTaskMarker";
-import { FaCheck, FaTrash } from "react-icons/fa";
+import { FaCheck, FaTimes, FaTrash } from "react-icons/fa";
 import { randomStr } from "./random";
 import { memo } from "preact/compat";
 
@@ -133,6 +133,7 @@ const TaskLayer = () => {
 };
 
 const TaskDoneButton = ({
+  task,
   setTask
 }: {
   task: Task;
@@ -140,20 +141,37 @@ const TaskDoneButton = ({
 }) => {
   const date = useServerDate(1000);
 
-  return (
-    <div
-      className="cursor-pointer text-green-600"
-      onClick={() => {
-        setTask(task => ({
-          ...task,
-          dueTime: date.getTime() + task.refreshTime
-        }));
-      }}
-    >
-      <FaCheck className="inline" />
-      <span className="align-middle"> Mark as done</span>
-    </div>
-  );
+  if (task.dueTime <= date.getTime()) {
+    return (
+      <div
+        className="cursor-pointer text-green-600"
+        onClick={() => {
+          setTask(task => ({
+            ...task,
+            dueTime: date.getTime() + task.refreshTime
+          }));
+        }}
+      >
+        <FaCheck className="inline" />
+        <span className="align-middle"> Mark as done</span>
+      </div>
+    );
+  } else {
+    return (
+      <div
+        className="cursor-pointer text-red-600"
+        onClick={() => {
+          setTask(task => ({
+            ...task,
+            dueTime: date.getTime()
+          }));
+        }}
+      >
+        <FaTimes className="inline" />
+        <span className="align-middle"> Mark as todo</span>
+      </div>
+    );
+  }
 };
 
 const TaskCreateLayer = () => {
