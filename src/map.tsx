@@ -173,7 +173,7 @@ const TaskDoneButton = ({
         }}
       >
         <FaTimes className="inline" />
-        <span className="align-middle"> Mark as todo</span>
+        <span className="align-middle"> Mark as to-do</span>
       </div>
     );
   }
@@ -182,6 +182,8 @@ const TaskDoneButton = ({
 const TaskCreateLayer = () => {
   const [task, setTask] = useConfig("mapCreateTask");
   const [, setTasks] = useConfig("tasks");
+
+  const date = useServerDate(1000);
 
   if (!task.visible) {
     return null;
@@ -200,13 +202,14 @@ const TaskCreateLayer = () => {
         });
       }}
       alwaysOpen
+      showDue={false}
       onClose={() => setTask(task => ({ ...task, visible: false }))}
       footer={
         <div
           className="cursor-pointer"
           onClick={() => {
             setTask(task => ({ ...task, visible: false }));
-            setTasks(tasks => [...tasks, task]);
+            setTasks(tasks => [...tasks, { ...task, dueTime: date.getTime() }]);
           }}
         >
           <FaCheck className="inline" />

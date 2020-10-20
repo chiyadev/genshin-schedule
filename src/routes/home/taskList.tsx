@@ -2,7 +2,7 @@ import { h } from "preact";
 import { Task, useConfig } from "../../configs";
 import Map from "../../map";
 import { css, cx } from "emotion";
-import { FaAngleRight, FaTimes } from "react-icons/fa";
+import { FaAngleRight, FaCheck, FaTimes } from "react-icons/fa";
 import { Link } from "preact-router";
 import SectionHeading from "./sectionHeading";
 import WhiteCard from "../../whiteCard";
@@ -29,7 +29,7 @@ const TaskList = () => {
     <div className="space-y-4">
       <SectionHeading>Today&apos;s Tasks</SectionHeading>
 
-      <div>
+      <div className="space-y-2">
         {useMemo(
           () =>
             filtered.length ? (
@@ -64,9 +64,30 @@ const TaskList = () => {
             ),
           [filtered, setTasks]
         )}
+
+        {filtered.length !== 0 && (
+          <div className="text-right text-xs">
+            <MarkEverythingDone setTasks={setTasks} />
+          </div>
+        )}
       </div>
 
-      <MapDisplay />
+      <div className="space-y-2">
+        <Map
+          minimal
+          className={cx(
+            "w-full rounded shadow-lg",
+            css`
+              height: 26rem;
+              background: rgba(0, 0, 0, 0.1) !important;
+            `
+          )}
+        />
+
+        <div className="text-right text-xs">
+          <OpenMap />
+        </div>
+      </div>
     </div>
   );
 };
@@ -102,27 +123,43 @@ const TaskDisplay = ({ task }: { task: Task; setTask: StateUpdater<Task> }) => {
   );
 };
 
-const MapDisplay = () => {
-  return (
-    <div className="space-y-2">
-      <Map
-        minimal
-        className={cx(
-          "w-full rounded shadow-lg",
-          css`
-            height: 26rem;
-            background: rgba(0, 0, 0, 0.1) !important;
-          `
-        )}
-      />
+const MarkEverythingDone = ({
+  setTasks
+}: {
+  setTasks: StateUpdater<Task[]>;
+}) => {
+  const date = useServerDate(1000);
 
-      <div className="text-right text-xs">
-        <Link href="/map">
-          Open map
-          <FaAngleRight className="inline" />
-        </Link>
-      </div>
-    </div>
+  return (
+    <span
+      className="cursor-pointer"
+      onClick={() => {
+        setTasks(tasks =>
+          tasks.map(task => {
+            if (task.dueTime <= date.getTime()) {
+              return {
+                ...task,
+                dueTime: date.getTime() + task.refreshTime
+              };
+            } else {
+              return task;
+            }
+          })
+        );
+      }}
+    >
+      <span className="align-middle">Mark everything as done </span>
+      <FaCheck className="inline" />
+    </span>
+  );
+};
+
+const OpenMap = () => {
+  return (
+    <Link href="/map">
+      <span className="align-middle">Open map</span>
+      <FaAngleRight className="inline" />
+    </Link>
   );
 };
 

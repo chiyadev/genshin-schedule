@@ -9,7 +9,7 @@ import {
   useState
 } from "preact/hooks";
 import L from "leaflet";
-import { FaAngleLeft, FaSyncAlt } from "react-icons/fa";
+import { FaAngleLeft, FaClock, FaSyncAlt } from "react-icons/fa";
 import { MemorySearch } from "./memorySearch";
 import MapPopup from "./mapPopup";
 import { cx } from "emotion";
@@ -17,6 +17,7 @@ import { memo } from "preact/compat";
 import { useServerDate } from "./time";
 
 type TimeUnit = "week" | "day" | "hour" | "minute";
+const TimeUnits: TimeUnit[] = ["week", "day", "hour", "minute"];
 
 function getUnitMs(unit: TimeUnit) {
   switch (unit) {
@@ -34,6 +35,26 @@ function getUnitMs(unit: TimeUnit) {
   }
 }
 
+function getBestUnit(ms: number) {
+  for (const unit of TimeUnits) {
+    if (ms % getUnitMs(unit) === 0) {
+      return unit;
+    }
+  }
+
+  return "minute";
+}
+
+function getLargestUnit(ms: number) {
+  for (const unit of TimeUnits) {
+    if (ms >= getUnitMs(unit)) {
+      return unit;
+    }
+  }
+
+  return "minute";
+}
+
 type Page = "Info" | "Icon";
 const pages: Page[] = ["Info", "Icon"];
 
@@ -41,6 +62,7 @@ const MapTaskMarker = ({
   task,
   setTask,
   alwaysOpen,
+  showDue = true,
   onOpen,
   onClose,
   footer
@@ -48,6 +70,7 @@ const MapTaskMarker = ({
   task: Task;
   setTask: StateUpdater<Task>;
   alwaysOpen?: boolean;
+  showDue?: boolean;
   onOpen?: () => void;
   onClose?: () => void;
   footer?: ComponentChildren;
@@ -97,6 +120,7 @@ const MapTaskMarker = ({
             setTask={setTask}
             setPage={setPage}
             autoFocus={alwaysOpen}
+            showDue={showDue}
           />
         ) : page === "Icon" ? (
           <IconPage setTask={setTask} setPage={setPage} />
@@ -144,12 +168,14 @@ const InfoPage = ({
   task,
   setTask,
   setPage,
-  autoFocus
+  autoFocus,
+  showDue
 }: {
   task: Task;
   setTask: StateUpdater<Task>;
   setPage: StateUpdater<Page>;
   autoFocus?: boolean;
+  showDue?: boolean;
 }) => {
   const nameRef = useRef<HTMLInputElement>(null);
 
@@ -160,7 +186,7 @@ const InfoPage = ({
   }, [autoFocus]);
 
   return (
-    <div className="py-2 flex flex-col space-y-2">
+    <div className="py-2 flex flex-col space-y-1">
       <input
         ref={nameRef}
         value={task.name}
@@ -189,13 +215,15 @@ const InfoPage = ({
           src={`/assets/game/${task.icon}.png`}
           className="w-4 h-4 object-contain inline"
         />
-        <span> Icon</span>
+        <span> Set icon</span>
       </div>
 
       <IntervalPicker
         value={task.refreshTime}
         setValue={value => setTask(task => ({ ...task, refreshTime: value }))}
       />
+
+      {showDue && <DueTimeText task={task} />}
     </div>
   );
 };
@@ -207,15 +235,8 @@ const IntervalPicker = ({
   value: number;
   setValue: (value: number) => void;
 }) => {
-  const [unit, setUnit] = useState<TimeUnit>(() => {
-    for (const unit of ["week", "day", "hour", "minute"] as TimeUnit[]) {
-      if (value % getUnitMs(unit) === 0) {
-        return unit;
-      }
-    }
-
-    return "minute";
-  });
+  const [unit, setUnit] = useState<TimeUnit>(() => getBestUnit(value));
+  const displayValue = Math.round(value / getUnitMs(unit));
 
   return (
     <div className="flex flex-row text-xs">
@@ -227,7 +248,7 @@ const IntervalPicker = ({
       <input
         type="number"
         min={1}
-        value={Math.round(value / getUnitMs(unit))}
+        value={displayValue}
         onInput={({ currentTarget: { valueAsNumber } }) => {
           setValue((valueAsNumber || 1) * getUnitMs(unit));
         }}
@@ -238,11 +259,43 @@ const IntervalPicker = ({
         value={unit}
         onChange={({ currentTarget: { value } }) => setUnit(value as TimeUnit)}
       >
-        <option value="week">Weeks</option>
-        <option value="day">Days</option>
-        <option value="hour">Hours</option>
-        <option value="minute">Minutes</option>
+        {TimeUnits.map(unit => (
+          <option key={unit} value={unit}>
+            {unit}
+            {displayValue !== 1 && "s"}
+          </option>
+        ))}
       </select>
+    </div>
+  );
+};
+
+const DueTimeText = ({ task }: { task: Task }) => {
+  const date = useServerDate(60000);
+  const delta = task.dueTime - date.getTime();
+  const unit = getLargestUnit(delta);
+  const displayValue = Math.round(delta / getUnitMs(unit));
+
+  return (
+    <div className={cx("text-xs", { "text-red-600": displayValue <= 0 })}>
+      <FaClock className="inline" />
+
+      <span className="align-middle">
+        {" "}
+        {displayValue === 0 ? (
+          <span>Due now</span>
+        ) : displayValue > 0 ? (
+          <span>
+            Due in {displayValue} {unit}
+            {displayValue !== 1 && "s"}
+          </span>
+        ) : (
+          <span>
+            Due {-displayValue} {unit}
+            {-displayValue !== 1 && "s"} ago
+          </span>
+        )}
+      </span>
     </div>
   );
 };
