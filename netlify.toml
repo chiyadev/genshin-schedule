@@ -1,0 +1,8 @@
+[build]
+command = "yarn build --no-prerender"
+publish = "build/"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
