@@ -76,7 +76,9 @@ const Toggle = ({ weapon }: { weapon: Weapon }) => {
   return (
     <Checkbox
       value={exists}
-      setValue={value => setList(arrayToggle(list, weapon.name, value))}
+      setValue={value => {
+        setList(list => arrayToggle(list, weapon.name, value));
+      }}
     >
       Show on schedule
     </Checkbox>

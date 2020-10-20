@@ -82,7 +82,9 @@ const Toggle = ({ character }: { character: Character }) => {
   return (
     <Checkbox
       value={exists}
-      setValue={value => setList(arrayToggle(list, character.name, value))}
+      setValue={value => {
+        setList(list => arrayToggle(list, character.name, value));
+      }}
     >
       Show on schedule
     </Checkbox>

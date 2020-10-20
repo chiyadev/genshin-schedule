@@ -22,7 +22,6 @@
     "build/*"
   ],
   "dependencies": {
-    "@rehooks/local-storage": "^2.4.0",
     "@types/react-lazyload": "^3.0.0",
     "@types/react-leaflet": "^2.5.2",
     "emotion": "^10.0.27",

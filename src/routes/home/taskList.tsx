@@ -46,7 +46,7 @@ const TaskDisplay = ({ id }: { id: string }) => {
   }
 
   return (
-    <div className="py-2 flex flex-row space-x-2">
+    <div className="py-2 flex flex-row space-x-2 cursor-pointer">
       <div className="flex flex-col justify-center flex-shrink-0">
         <img
           className="w-8 h-8 object-contain"
