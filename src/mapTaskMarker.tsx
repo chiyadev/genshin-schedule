@@ -37,13 +37,15 @@ const pages: Page[] = ["Info", "Icon"];
 const MapTaskMarker = ({
   task,
   setTask,
+  alwaysOpen,
   onClose,
-  menu
+  footer
 }: {
   task: Task;
   setTask: StateUpdater<Task>;
+  alwaysOpen?: boolean;
   onClose?: () => void;
-  menu?: ComponentChildren;
+  footer?: ComponentChildren;
 }) => {
   const markerIcon = useMemo(
     () =>
@@ -56,7 +58,11 @@ const MapTaskMarker = ({
 
   const markerRef = useRef<any>(null);
 
-  useEffect(() => markerRef.current.leafletElement.openPopup(), [task]);
+  useEffect(() => {
+    if (alwaysOpen) {
+      markerRef.current.leafletElement.openPopup();
+    }
+  }, [task]);
 
   const [page, setPage] = useState<Page>(pages[0]);
 
@@ -64,14 +70,26 @@ const MapTaskMarker = ({
     <Marker ref={markerRef} position={task.location} icon={markerIcon}>
       <MapPopup divide onClose={onClose}>
         {page === "Info" ? (
-          <InfoPage task={task} setTask={setTask} setPage={setPage} />
+          <InfoPage
+            task={task}
+            setTask={setTask}
+            setPage={setPage}
+            autoFocus={alwaysOpen}
+          />
         ) : page === "Icon" ? (
-          <IconPage task={task} setTask={setTask} setPage={setPage} />
+          <IconPage setTask={setTask} setPage={setPage} />
         ) : null}
 
-        <Menu page={page} setPage={setPage}>
-          {menu}
-        </Menu>
+        <div className="py-2 space-x-2 text-xs flex flex-row">
+          {page === "Info" ? (
+            footer
+          ) : (
+            <div className="cursor-pointer" onClick={() => setPage("Info")}>
+              <FaAngleLeft className="inline" />
+              <span className="align-middle"> Back</span>
+            </div>
+          )}
+        </div>
       </MapPopup>
     </Marker>
   );
@@ -80,15 +98,21 @@ const MapTaskMarker = ({
 const InfoPage = ({
   task,
   setTask,
-  setPage
+  setPage,
+  autoFocus
 }: {
   task: Task;
   setTask: StateUpdater<Task>;
   setPage: StateUpdater<Page>;
+  autoFocus?: boolean;
 }) => {
   const nameRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => nameRef.current.focus(), []);
+  useEffect(() => {
+    if (autoFocus) {
+      nameRef.current.focus();
+    }
+  }, [autoFocus]);
 
   return (
     <div className="py-2 flex flex-col space-y-2">
@@ -184,7 +208,13 @@ for (const icon of icons) {
   iconDb.add(icon, icon);
 }
 
-const IconPage = ({ setTask, setPage }: ComponentProps<typeof InfoPage>) => {
+const IconPage = ({
+  setTask,
+  setPage
+}: {
+  setTask: StateUpdater<Task>;
+  setPage: StateUpdater<Page>;
+}) => {
   const [search, setSearch] = useConfig("iconQuery");
   const results = useMemo(() => iconDb.search(search), [search]);
 
@@ -219,31 +249,6 @@ const IconPage = ({ setTask, setPage }: ComponentProps<typeof InfoPage>) => {
           [results]
         )}
       </div>
-    </div>
-  );
-};
-
-const Menu = ({
-  page,
-  setPage,
-  children
-}: {
-  page: Page;
-  setPage: StateUpdater<Page>;
-  children?: ComponentChildren;
-}) => {
-  return (
-    <div className="py-2 space-x-2 text-xs flex flex-row">
-      {page !== "Info" && (
-        <div className="cursor-pointer" onClick={() => setPage("Info")}>
-          <FaAngleLeft className="inline" />
-          <span className="align-middle"> Back</span>
-        </div>
-      )}
-
-      <div className="flex-1" />
-
-      {children}
     </div>
   );
 };

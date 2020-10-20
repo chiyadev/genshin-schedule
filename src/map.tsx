@@ -2,7 +2,7 @@ import { ComponentChildren, h } from "preact";
 import { Map as Leaflet, TileLayer } from "react-leaflet";
 import { css, cx } from "emotion";
 import { useConfig } from "./configs";
-import { useRef } from "preact/hooks";
+import { useMemo, useRef } from "preact/hooks";
 import MapTaskMarker from "./mapTaskMarker";
 import { FaCheck } from "react-icons/fa";
 
@@ -69,10 +69,45 @@ const Map = ({
         attribution='<a href="https://bbs.mihoyo.com/ys/article/1328298" target="_blank" rel="noreferrer noopener">yuanshen.site</a>'
       />
 
+      <TaskLayer />
       <TaskCreateLayer />
 
       {children}
     </Leaflet>
+  );
+};
+
+const TaskLayer = () => {
+  const [tasks, setTasks] = useConfig("tasks");
+
+  return (
+    <div>
+      {useMemo(
+        () =>
+          tasks.map(task => (
+            <MapTaskMarker
+              key={task.id}
+              task={task}
+              setTask={newTask => {
+                setTasks(tasks =>
+                  tasks.map(oldTask => {
+                    if (oldTask.id === task.id) {
+                      if (typeof newTask === "function") {
+                        return newTask(oldTask);
+                      } else {
+                        return newTask;
+                      }
+                    } else {
+                      return oldTask;
+                    }
+                  })
+                );
+              }}
+            />
+          )),
+        [tasks]
+      )}
+    </div>
   );
 };
 
@@ -87,17 +122,18 @@ const TaskCreateLayer = () => {
   return (
     <MapTaskMarker
       task={task}
-      setTask={task => {
-        setTask(t => {
-          if (typeof task === "function") {
-            task = task(t);
+      setTask={newTask => {
+        setTask(oldTask => {
+          if (typeof newTask === "function") {
+            newTask = newTask(oldTask);
           }
 
-          return { ...t, ...task };
+          return { ...oldTask, ...newTask };
         });
       }}
+      alwaysOpen
       onClose={() => setTask(task => ({ ...task, visible: false }))}
-      menu={
+      footer={
         <div
           className="cursor-pointer"
           onClick={() => {
