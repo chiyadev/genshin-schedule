@@ -17,7 +17,12 @@ const TaskList = () => {
   const filtered = useMemo(() => {
     return tasks
       .filter(task => task.dueTime <= date.getTime())
-      .sort((a, b) => a.dueTime + a.refreshTime - b.dueTime - b.refreshTime);
+      .sort((a, b) => {
+        const icon = a.icon.localeCompare(b.icon);
+        if (icon !== 0) return icon;
+
+        return a.dueTime + a.refreshTime - b.dueTime - b.refreshTime;
+      });
   }, [date, tasks]);
 
   return (
@@ -53,8 +58,8 @@ const TaskList = () => {
               </WhiteCard>
             ) : (
               <div className="text-sm">
-                <FaTimes className="inline" /> Nothing. Create a task by opening
-                the map.
+                <FaTimes className="inline" /> Nothing. Create a task by
+                clicking on the map.
               </div>
             ),
           [filtered, setTasks]

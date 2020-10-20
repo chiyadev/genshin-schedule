@@ -1,5 +1,5 @@
 import { ComponentChildren, h } from "preact";
-import { Map as Leaflet, TileLayer } from "react-leaflet";
+import { Map as Leaflet, TileLayer, useLeaflet } from "react-leaflet";
 import { css, cx } from "emotion";
 import { Task, useConfig } from "./configs";
 import { StateUpdater, useMemo } from "preact/hooks";
@@ -140,6 +140,7 @@ const TaskDoneButton = ({
   setTask: StateUpdater<Task>;
 }) => {
   const date = useServerDate(1000);
+  const leaflet = useLeaflet();
 
   if (task.dueTime <= date.getTime()) {
     return (
@@ -150,6 +151,8 @@ const TaskDoneButton = ({
             ...task,
             dueTime: date.getTime() + task.refreshTime
           }));
+
+          leaflet.map?.closePopup();
         }}
       >
         <FaCheck className="inline" />
@@ -165,6 +168,8 @@ const TaskDoneButton = ({
             ...task,
             dueTime: date.getTime()
           }));
+
+          leaflet.map?.closePopup();
         }}
       >
         <FaTimes className="inline" />
