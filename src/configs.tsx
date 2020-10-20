@@ -93,6 +93,7 @@ export type Configs = {
   mapState: MapLocation & { zoom: number };
   mapCreateTask: Task & { visible: boolean };
   mapFocusedTask: string | false;
+  mapTaskList: boolean;
   paimonBg: boolean;
   showSiteInfo: boolean;
 };
@@ -134,6 +135,7 @@ export const DefaultConfigs: Configs = {
     visible: false
   },
   mapFocusedTask: false,
+  mapTaskList: true,
   paimonBg: false,
   showSiteInfo: true
 };
