@@ -92,6 +92,7 @@ export type Configs = {
   iconQuery: string;
   mapState: MapLocation & { zoom: number };
   mapCreateTask: Task & { visible: boolean };
+  mapFocusedTask: string | false;
   paimonBg: boolean;
   showSiteInfo: boolean;
 };
@@ -132,6 +133,7 @@ export const DefaultConfigs: Configs = {
     refreshTime: 86400000,
     visible: false
   },
+  mapFocusedTask: false,
   paimonBg: false,
   showSiteInfo: true
 };

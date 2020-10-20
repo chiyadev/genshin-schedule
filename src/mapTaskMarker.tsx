@@ -1,6 +1,7 @@
 import { Task, useConfig } from "./configs";
+
 import { Marker } from "react-leaflet";
-import { ComponentChildren, ComponentProps, h } from "preact";
+import { ComponentChildren, h } from "preact";
 import {
   StateUpdater,
   useEffect,
@@ -12,6 +13,7 @@ import L from "leaflet";
 import { FaAngleLeft, FaSyncAlt } from "react-icons/fa";
 import { MemorySearch } from "./memorySearch";
 import MapPopup from "./mapPopup";
+import { cx } from "emotion";
 
 type TimeUnit = "week" | "day" | "hour" | "minute";
 
@@ -38,15 +40,18 @@ const MapTaskMarker = ({
   task,
   setTask,
   alwaysOpen,
+  onOpen,
   onClose,
   footer
 }: {
   task: Task;
   setTask: StateUpdater<Task>;
   alwaysOpen?: boolean;
+  onOpen?: () => void;
   onClose?: () => void;
   footer?: ComponentChildren;
 }) => {
+  const markerRef = useRef<any>(null);
   const markerIcon = useMemo(
     () =>
       new L.Icon({
@@ -56,19 +61,30 @@ const MapTaskMarker = ({
     [task.icon]
   );
 
-  const markerRef = useRef<any>(null);
+  const [focusedTask, setFocusedTask] = useConfig("mapFocusedTask");
+  const focused = focusedTask === task.id;
 
   useEffect(() => {
-    if (alwaysOpen) {
+    if (alwaysOpen || focused) {
       markerRef.current.leafletElement.openPopup();
     }
-  }, [task]);
+  }, [task, focused]);
 
   const [page, setPage] = useState<Page>(pages[0]);
 
   return (
     <Marker ref={markerRef} position={task.location} icon={markerIcon}>
-      <MapPopup divide onClose={onClose}>
+      <MapPopup
+        divide
+        onOpen={() => {
+          onOpen?.();
+          setFocusedTask(task.id);
+        }}
+        onClose={() => {
+          onClose?.();
+          focused && setFocusedTask(false);
+        }}
+      >
         {page === "Info" ? (
           <InfoPage
             task={task}
@@ -80,7 +96,11 @@ const MapTaskMarker = ({
           <IconPage setTask={setTask} setPage={setPage} />
         ) : null}
 
-        <div className="py-2 space-x-2 text-xs flex flex-row">
+        <div
+          className={cx("py-2 space-x-2 text-xs flex flex-row", {
+            "justify-end": page === "Info"
+          })}
+        >
           {page === "Info" ? (
             footer
           ) : (

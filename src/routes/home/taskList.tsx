@@ -59,6 +59,9 @@ const TaskList = () => {
 };
 
 const TaskDisplay = ({ task }: { task: Task; setTask: StateUpdater<Task> }) => {
+  const [, setMapState] = useConfig("mapState");
+  const [, setFocusedTask] = useConfig("mapFocusedTask");
+
   const date = useServerDate();
   useRerenderFrequency(1000);
 
@@ -67,7 +70,13 @@ const TaskDisplay = ({ task }: { task: Task; setTask: StateUpdater<Task> }) => {
   }
 
   return (
-    <div className="py-2 flex flex-row space-x-2 cursor-pointer">
+    <div
+      className="py-2 flex flex-row space-x-2 cursor-pointer"
+      onClick={() => {
+        setMapState({ ...task.location, zoom: 6.4 });
+        setFocusedTask(task.id);
+      }}
+    >
       <div className="flex flex-col justify-center flex-shrink-0">
         <img
           className="w-8 h-8 object-contain"

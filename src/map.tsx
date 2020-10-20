@@ -4,10 +4,10 @@ import { css, cx } from "emotion";
 import { useConfig } from "./configs";
 import { useMemo, useRef } from "preact/hooks";
 import MapTaskMarker from "./mapTaskMarker";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaTrash } from "react-icons/fa";
+import { randomStr } from "./random";
 
 import "leaflet/dist/leaflet.css";
-import { randomStr } from "./random";
 
 const Map = ({
   className,
@@ -18,11 +18,8 @@ const Map = ({
   children?: ComponentChildren;
   minimal?: boolean;
 }) => {
-  const [state, setState] = useConfig("mapState");
+  const [{ lat, lng, zoom }, setState] = useConfig("mapState");
   const [, setCreateTask] = useConfig("mapCreateTask");
-
-  // after reading initial state, only update it
-  const { lat, lng, zoom } = useRef(state).current;
 
   // adapted from https://github.com/GenshinMap/genshinmap.github.io/blob/master/js/index.js
   return (
@@ -103,6 +100,26 @@ const TaskLayer = () => {
                   })
                 );
               }}
+              footer={
+                <div className="flex flex-row w-full space-x-2">
+                  <div
+                    className="cursor-pointer"
+                    onClick={() =>
+                      setTasks(tasks => tasks.filter(t => t.id !== task.id))
+                    }
+                  >
+                    <FaTrash className="inline" />
+                    <span className="align-middle"> Delete</span>
+                  </div>
+
+                  <div className="flex-1" />
+
+                  <div className="cursor-pointer text-green-600">
+                    <FaCheck className="inline" />
+                    <span className="align-middle"> Mark as done</span>
+                  </div>
+                </div>
+              }
             />
           )),
         [tasks]
