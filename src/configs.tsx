@@ -1,11 +1,35 @@
 import { ResinCap } from "./db/resins";
 import { StateUpdater, useCallback, useEffect, useState } from "preact/hooks";
+import { MultiMap } from "./multiMap";
+
+type StorageEventCallback = (value: unknown, parsed: boolean) => void;
+const storageEvents = new MultiMap<string, StorageEventCallback>();
+
+window.addEventListener("storage", ev => {
+  if (ev.key) {
+    let value: unknown;
+    let parsed = false;
+
+    // parse only once for performance
+    try {
+      value = JSON.parse(ev.newValue || "");
+      parsed = true;
+    } catch {
+      value = ev.newValue;
+    }
+
+    for (const callback of storageEvents.get(ev.key)) {
+      callback(value, parsed);
+    }
+  }
+});
 
 export function useLocalStorage<T>(
   key: string,
   defaultValue: T
 ): [T, StateUpdater<T>] {
-  const getValue = useCallback(() => {
+  // returns the latest parsed value or hook default
+  const getCurrent = useCallback(() => {
     try {
       return JSON.parse(localStorage.getItem(key) || "") as T;
     } catch {
@@ -13,30 +37,41 @@ export function useLocalStorage<T>(
     }
   }, [key, defaultValue]);
 
-  const [value, setValue] = useState(getValue);
+  const [value, setValue] = useState(getCurrent);
 
   useEffect(() => {
-    const handler = (e: StorageEvent) => {
-      if (e.key === key) {
-        setValue(getValue());
+    const handler: StorageEventCallback = (value, parsed) => {
+      if (parsed) {
+        setValue(value as T);
+      } else {
+        setValue(defaultValue);
       }
     };
 
-    window.addEventListener("storage", handler);
-    return () => window.removeEventListener("storage", handler);
-  }, [key, getValue]);
+    storageEvents.add(key, handler);
+
+    return () => {
+      storageEvents.remove(key, handler);
+    };
+  }, [key, defaultValue]);
 
   return [
     value,
     useCallback(
       newValue => {
+        // pass latest parsed value if partial updating
         if (typeof newValue === "function") {
-          newValue = (newValue as any)(getValue());
+          newValue = (newValue as any)(getCurrent());
         }
 
         localStorage.setItem(key, JSON.stringify(newValue));
+
+        // synchronize value across all hooks
+        for (const callback of storageEvents.get(key)) {
+          callback(newValue, true);
+        }
       },
-      [key, getValue]
+      [key, getCurrent]
     )
   ];
 }
@@ -54,13 +89,14 @@ export type Configs = {
   weapons: string[];
   tasks: Task[];
   customizeQuery: string;
+  iconQuery: string;
   mapState: MapLocation & { zoom: number };
   mapCreateTask: Task & { visible: boolean };
   paimonBg: boolean;
   showSiteInfo: boolean;
 };
 
-type Task = {
+export type Task = {
   id: string;
   icon: string;
   name: string;
@@ -81,6 +117,7 @@ export const DefaultConfigs: Configs = {
   weapons: [],
   tasks: [],
   customizeQuery: "",
+  iconQuery: "",
   mapState: {
     lat: -24.83,
     lng: 54.73,
@@ -92,7 +129,6 @@ export const DefaultConfigs: Configs = {
     icon: "Iron Chunk",
     location: { lat: 0, lng: 0 },
     dueTime: 0,
-
     refreshTime: 86400000,
     visible: false
   },
