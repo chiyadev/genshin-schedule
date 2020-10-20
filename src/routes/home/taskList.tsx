@@ -100,7 +100,7 @@ const TaskDisplay = ({ task }: { task: Task; setTask: StateUpdater<Task> }) => {
     <div
       className="py-2 flex flex-row space-x-2 cursor-pointer"
       onClick={() => {
-        setMapState({ ...task.location, zoom: 6.4 });
+        setMapState({ ...task.location, zoom: 5.6 });
         setFocusedTask(task.id);
       }}
     >
