@@ -2,7 +2,6 @@ import { h } from "preact";
 import {
   getServerDayOfWeek,
   getServerNextReset,
-  useRerenderFrequency,
   useServerDate
 } from "../../time";
 import { Configs, useConfig } from "../../configs";
@@ -13,8 +12,6 @@ import { memo } from "preact/compat";
 const Time = () => {
   const date = useServerDate();
   const [offset, setOffset] = useConfig("offsetDays");
-
-  useRerenderFrequency(100);
 
   const hour = date
     .getHours()

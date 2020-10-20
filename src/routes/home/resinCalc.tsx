@@ -3,7 +3,7 @@ import { css, cx } from "emotion";
 import { useMemo, useRef } from "preact/hooks";
 import { useConfig } from "../../configs";
 import { clampResin, getResinRecharge, ResinCap } from "../../db/resins";
-import { useRerenderFrequency, useServerDate } from "../../time";
+import { useServerDate } from "../../time";
 import WhiteCard from "../../whiteCard";
 import SectionHeading from "./sectionHeading";
 import { memo } from "preact/compat";
@@ -26,8 +26,7 @@ const ResinCalculator = () => {
   const [resin, setResin] = useConfig("resin");
   const resinInput = useRef<HTMLInputElement>(null);
 
-  const date = useServerDate();
-  useRerenderFrequency(1000);
+  const date = useServerDate(60000);
 
   const current = useMemo(() => {
     return resin.value + getResinRecharge(date.getTime() - resin.time);

@@ -2,7 +2,29 @@ import { useConfig } from "./configs";
 import { useEffect, useState } from "preact/hooks";
 import { DaysOfWeek } from "./db/domainDropSets";
 
-export function useServerDate() {
+const rerenderCallbacks = new Set<() => void>();
+
+setInterval(() => {
+  rerenderCallbacks.forEach(callback => callback());
+});
+
+export function useServerDate(frequency = 100) {
+  const [count, setCount] = useState(() => Math.floor(Date.now() / frequency));
+
+  useEffect(() => {
+    const tick = () => {
+      // this allows hooks with the same frequency to rerender at the same time
+      const current = Math.floor(Date.now() / frequency);
+      current !== count && setCount(current);
+    };
+
+    rerenderCallbacks.add(tick);
+
+    return () => {
+      rerenderCallbacks.delete(tick);
+    };
+  }, [count]);
+
   const [server] = useConfig("server");
   const [offsetDays] = useConfig("offsetDays");
 
@@ -26,20 +48,6 @@ export function useServerDate() {
   }
 
   return new Date(utc + 3600000 * offsetHours + 86400000 * offsetDays);
-}
-
-export function useRerenderFrequency(interval: number) {
-  const [, update] = useState(0);
-
-  useEffect(() => {
-    const handle = setInterval(() => {
-      update(i => i + 1);
-    }, interval);
-
-    return () => {
-      clearInterval(handle);
-    };
-  }, [interval]);
 }
 
 export const ServerResetHour = 4;

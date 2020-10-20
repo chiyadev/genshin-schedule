@@ -6,7 +6,7 @@ import { FaAngleRight, FaTimes } from "react-icons/fa";
 import { Link } from "preact-router";
 import SectionHeading from "./sectionHeading";
 import WhiteCard from "../../whiteCard";
-import { useRerenderFrequency, useServerDate } from "../../time";
+import { useServerDate } from "../../time";
 import { StateUpdater, useMemo } from "preact/hooks";
 import { memo } from "preact/compat";
 
@@ -63,8 +63,7 @@ const TaskDisplay = ({ task }: { task: Task; setTask: StateUpdater<Task> }) => {
   const [, setMapState] = useConfig("mapState");
   const [, setFocusedTask] = useConfig("mapFocusedTask");
 
-  const date = useServerDate();
-  useRerenderFrequency(1000);
+  const date = useServerDate(60000);
 
   if (date.getTime() < task.dueTime) {
     return null;

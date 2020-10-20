@@ -2,11 +2,7 @@ import { h } from "preact";
 import { cx } from "emotion";
 import { Domain, Domains } from "../../db/domains";
 import { useMemo } from "preact/hooks";
-import {
-  getServerDayOfWeek,
-  useRerenderFrequency,
-  useServerDate
-} from "../../time";
+import { getServerDayOfWeek, useServerDate } from "../../time";
 import { useConfig } from "../../configs";
 import { Character, Characters } from "../../db/characters";
 import { DomainCategories } from "../../db/domainCategories";
@@ -34,10 +30,8 @@ type ScheduledDomain = {
 };
 
 const DomainList = () => {
-  const date = useServerDate();
+  const date = useServerDate(60000);
   const dayOfWeek = getServerDayOfWeek(date);
-
-  useRerenderFrequency(1000);
 
   const [characters] = useConfig("characters");
   const [weapons] = useConfig("weapons");
