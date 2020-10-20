@@ -34,10 +34,11 @@ const Map = ({
       zoom={zoom}
       maxBounds={[
         [0, 0],
+
         [-66.5, 90]
       ]}
       attributionControl={!minimal}
-      zoomControl={!minimal}
+      zoomControl={false}
       className={className}
       onclick={({ latlng: location }) =>
         setCreateTask(task => ({

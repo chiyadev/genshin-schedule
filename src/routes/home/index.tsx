@@ -6,6 +6,7 @@ import DomainList from "./domainList";
 import TaskList from "./taskList";
 import Info from "./info";
 import { memo } from "preact/compat";
+import Map from "./map";
 
 const Home = () => {
   useTabTitle();
@@ -15,7 +16,12 @@ const Home = () => {
       <Time />
       <Info />
       <ResinCalculator />
-      <TaskList />
+
+      <div className="space-y-4">
+        <TaskList />
+        <Map />
+      </div>
+
       <DomainList />
     </div>
   );
