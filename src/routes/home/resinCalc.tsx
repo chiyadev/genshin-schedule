@@ -43,7 +43,7 @@ const ResinCalculator = () => {
 
       <WhiteCard>
         <div className="flex flex-row space-x-2">
-          <img src="/assets/game/Resin.png" className="w-10 h-10" />
+          <img alt="Resin" src="/assets/game/Resin.png" className="w-10 h-10" />
 
           <input
             ref={resinInput}

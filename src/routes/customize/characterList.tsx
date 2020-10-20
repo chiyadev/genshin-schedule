@@ -53,7 +53,11 @@ const CharacterList = ({ search }: { search: string }) => {
   return (
     <div className="space-y-2">
       <div className="text-xl font-bold">
-        <img src="/assets/game/Anemo.png" className="w-8 h-8 inline" />
+        <img
+          alt="Character"
+          src="/assets/game/Anemo.png"
+          className="w-8 h-8 inline"
+        />
 
         <span className="align-middle"> Characters</span>
       </div>
@@ -86,6 +90,7 @@ const CharacterIcon = ({ character }: { character: Character }) => {
     >
       <LazyLoad>
         <img
+          alt={character.name}
           className="w-20 h-20 mx-auto mt-2 rounded-full"
           src={`/assets/game/${character.name}.png`}
         />
@@ -96,6 +101,7 @@ const CharacterIcon = ({ character }: { character: Character }) => {
 
         <div className="text-xs text-gray-600">
           <img
+            alt={character.talentMaterial.name}
             src={`/assets/game/${character.talentMaterial.name}.png`}
             className="w-3 h-3 inline opacity-75"
           />

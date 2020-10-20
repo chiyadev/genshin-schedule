@@ -7,6 +7,7 @@ const Header = () => {
     <nav className="container mx-auto p-4 flex flex-row">
       <Link href="/" className="font-bold truncate">
         <img
+          alt="Genshin Schedule"
           src="/assets/favicon-32x32.png"
           className="w-6 h-6 inline rounded"
         />

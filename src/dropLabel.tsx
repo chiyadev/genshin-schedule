@@ -39,7 +39,11 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
       <span className="align-middle">Dropped from </span>
 
       <a href={domain.wiki} className="font-bold">
-        <img src="/assets/game/Domain.png" className="w-4 h-4 inline" />
+        <img
+          alt="Domain"
+          src="/assets/game/Domain.png"
+          className="w-4 h-4 inline"
+        />
 
         <span className="align-middle"> {domain.name}</span>
       </a>

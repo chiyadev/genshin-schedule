@@ -28,8 +28,9 @@ const Inner = ({ character }: { character: Character }) => {
       <a href={character.wiki}>
         <div className="space-x-2 py-4 flex flex-row">
           <img
-            className="w-16 h-16 rounded-full"
+            alt={character.name}
             src={`/assets/game/${character.name}.png`}
+            className="w-16 h-16 rounded-full"
           />
 
           <div className="flex flex-col justify-center">
@@ -56,6 +57,7 @@ const TalentMat = ({ material }: { material: TalentMaterial }) => {
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
           <img
+            alt={material.name}
             src={`/assets/game/${material.name}.png`}
             className="w-12 h-12"
           />

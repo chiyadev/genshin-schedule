@@ -49,7 +49,7 @@ const TaskList = () => {
                 the map.
               </div>
             ),
-          [tasks]
+          [setTasks, tasks]
         )}
       </div>
 
@@ -79,8 +79,9 @@ const TaskDisplay = ({ task }: { task: Task; setTask: StateUpdater<Task> }) => {
     >
       <div className="flex flex-col justify-center flex-shrink-0">
         <img
-          className="w-8 h-8 object-contain"
+          alt={task.icon}
           src={`/assets/game/${task.icon}.png`}
+          className="w-8 h-8 object-contain"
         />
       </div>
 

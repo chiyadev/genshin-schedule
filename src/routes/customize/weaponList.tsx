@@ -50,6 +50,7 @@ const WeaponList = ({ search }: { search: string }) => {
     <div className="space-y-2">
       <div className="text-xl font-bold">
         <img
+          alt="Weapon"
           src="/assets/game/Aquila Favonia.png"
           className="w-8 h-8 inline object-cover"
         />
@@ -85,8 +86,9 @@ const WeaponIcon = ({ weapon }: { weapon: Weapon }) => {
     >
       <LazyLoad>
         <img
-          className="w-20 h-20 mx-auto mt-2 object-cover"
+          alt={weapon.name}
           src={`/assets/game/${weapon.name}.png`}
+          className="w-20 h-20 mx-auto mt-2 object-cover"
         />
       </LazyLoad>
 
@@ -95,6 +97,7 @@ const WeaponIcon = ({ weapon }: { weapon: Weapon }) => {
 
         <div className="text-xs text-gray-600 truncate">
           <img
+            alt={weapon.material.name}
             src={`/assets/game/${weapon.material.name}.png`}
             className="w-3 h-3 inline opacity-75"
           />

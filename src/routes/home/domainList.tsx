@@ -1,5 +1,5 @@
 import { h } from "preact";
-import { css, cx } from "emotion";
+import { cx } from "emotion";
 import { Domain, Domains } from "../../db/domains";
 import { useMemo } from "preact/hooks";
 import {
@@ -172,7 +172,11 @@ const DomainDisplay = ({
     <WhiteCard divide>
       <a href={domain.wiki}>
         <div className="space-x-2 py-4 flex flex-row">
-          <img src="/assets/game/Domain.png" className="w-10 object-contain" />
+          <img
+            alt="Domain"
+            src="/assets/game/Domain.png"
+            className="w-10 object-contain"
+          />
 
           <div className="flex flex-col justify-center">
             <div className="text-lg font-bold">{domain.name}</div>
@@ -207,7 +211,7 @@ const DomainDisplay = ({
               path="weapons"
             />
           )),
-        [talentMaterials]
+        [weaponMaterials]
       )}
     </WhiteCard>
   );
@@ -229,6 +233,7 @@ const MaterialDisplay = ({
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
           <img
+            alt={material.name}
             src={`/assets/game/${material.name}.png`}
             className="w-10 h-10"
           />
@@ -247,10 +252,11 @@ const MaterialDisplay = ({
             href={`/${path}/${item.name}`}
           >
             <img
+              alt={item.name}
+              src={`/assets/game/${item.name}.png`}
               className={cx("w-6 h-6 object-cover", {
                 "rounded-full": roundItems
               })}
-              src={`/assets/game/${item.name}.png`}
             />
 
             <div className="flex flex-col justify-center text-sm">

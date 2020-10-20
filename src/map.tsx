@@ -2,7 +2,7 @@ import { ComponentChildren, h } from "preact";
 import { Map as Leaflet, TileLayer } from "react-leaflet";
 import { css, cx } from "emotion";
 import { useConfig } from "./configs";
-import { useMemo, useRef } from "preact/hooks";
+import { useMemo } from "preact/hooks";
 import MapTaskMarker from "./mapTaskMarker";
 import { FaCheck, FaTrash } from "react-icons/fa";
 import { randomStr } from "./random";
@@ -104,11 +104,12 @@ const TaskLayer = () => {
                 <div className="flex flex-row w-full space-x-2">
                   <div
                     className="cursor-pointer"
-                    onClick={() =>
-                      setTasks(tasks => tasks.filter(t => t.id !== task.id))
-                    }
+                    onClick={() => {
+                      setTasks(tasks => tasks.filter(t => t.id !== task.id));
+                    }}
                   >
                     <FaTrash className="inline" />
+
                     <span className="align-middle"> Delete</span>
                   </div>
 
@@ -122,7 +123,7 @@ const TaskLayer = () => {
               }
             />
           )),
-        [tasks]
+        [setTasks, tasks]
       )}
     </div>
   );

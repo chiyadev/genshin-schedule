@@ -11,6 +11,7 @@ const Background = () => {
 
   return (
     <img
+      alt="Paimon"
       src="/assets/game/Paimon.png"
       className={cx(
         "fixed",

@@ -13,7 +13,11 @@ const Info = () => {
   return (
     <WhiteCard divide>
       <div className="py-4 flex flex-row space-x-2">
-        <img src="/assets/apple-touch-icon.png" className="w-10 h-10 rounded" />
+        <img
+          alt="Genshin Schedule"
+          src="/assets/apple-touch-icon.png"
+          className="w-10 h-10 rounded"
+        />
 
         <div className="flex flex-col justify-center">
           <div className="text-lg font-bold">Genshin Schedule</div>

@@ -1,5 +1,4 @@
 import { Task, useConfig } from "./configs";
-
 import { Marker } from "react-leaflet";
 import { ComponentChildren, h } from "preact";
 import {
@@ -68,7 +67,7 @@ const MapTaskMarker = ({
     if (alwaysOpen || focused) {
       markerRef.current.leafletElement.openPopup();
     }
-  }, [task, focused]);
+  }, [task, focused, alwaysOpen]);
 
   const [page, setPage] = useState<Page>(pages[0]);
 
@@ -160,6 +159,7 @@ const InfoPage = ({
         onClick={() => setPage("Icon")}
       >
         <img
+          alt={task.icon}
           src={`/assets/game/${task.icon}.png`}
           className="w-4 h-4 object-contain inline"
         />
@@ -258,6 +258,7 @@ const IconPage = ({
             results.map(icon => (
               <img
                 key={icon}
+                alt={icon}
                 src={`/assets/game/${icon}.png`}
                 className="w-8 h-8 object-contain inline-block cursor-pointer pointer-events-auto"
                 onClick={() => {
@@ -266,7 +267,7 @@ const IconPage = ({
                 }}
               />
             )),
-          [results]
+          [results, setPage, setTask]
         )}
       </div>
     </div>
