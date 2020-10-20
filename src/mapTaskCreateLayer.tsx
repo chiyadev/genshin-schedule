@@ -6,6 +6,7 @@ import L from "leaflet";
 import { css } from "emotion";
 import { FaAngleLeft, FaCheck, FaSyncAlt } from "react-icons/fa";
 import { MemorySearch } from "./memorySearch";
+import MapPopup from "./mapPopup";
 
 const MapTaskCreateLayer = () => {
   const [task, setTask] = useConfig("mapCreateTask");
@@ -78,46 +79,25 @@ const Inner = ({
 
   return (
     <Marker ref={markerRef} position={task.location} icon={markerIcon}>
-      <Popup
-        autoPan={false}
-        onClose={() => setTask(null)}
-        className={css`
-          font-family: Bonobo;
+      <MapPopup divide onClose={() => setTask(null)}>
+        {page === "Info" ? (
+          <InfoPage
+            task={task}
+            setTask={setTask}
+            page={page}
+            setPage={setPage}
+          />
+        ) : page === "Icon" ? (
+          <IconPage
+            task={task}
+            setTask={setTask}
+            page={page}
+            setPage={setPage}
+          />
+        ) : null}
 
-          .leaflet-popup-content-wrapper {
-            /* rounded */
-            border-radius: 0.25rem;
-
-            /* shadow-lg */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-              0 4px 6px -2px rgba(0, 0, 0, 0.05);
-          }
-
-          .leaflet-popup-content {
-            margin: 0;
-          }
-        `}
-      >
-        <div className="px-2 flex flex-col text-base divide-y divide-gray-300">
-          {page === "Info" ? (
-            <InfoPage
-              task={task}
-              setTask={setTask}
-              page={page}
-              setPage={setPage}
-            />
-          ) : page === "Icon" ? (
-            <IconPage
-              task={task}
-              setTask={setTask}
-              page={page}
-              setPage={setPage}
-            />
-          ) : null}
-
-          <Menu task={task} setTask={setTask} page={page} setPage={setPage} />
-        </div>
-      </Popup>
+        <Menu task={task} setTask={setTask} page={page} setPage={setPage} />
+      </MapPopup>
     </Marker>
   );
 };

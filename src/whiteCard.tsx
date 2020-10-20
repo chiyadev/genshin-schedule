@@ -15,8 +15,7 @@ const WhiteCard = ({
       className={cx(
         className,
         "bg-white text-black rounded flex flex-col shadow-lg",
-        divide ? "px-4" : "p-4",
-        { "divide-y divide-gray-300": divide }
+        divide ? "px-4 divide-y divide-gray-300" : "p-4"
       )}
     >
       {children}
