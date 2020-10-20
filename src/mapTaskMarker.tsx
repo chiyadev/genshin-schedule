@@ -114,17 +114,21 @@ const MapTaskMarker = ({
           focused && setFocusedTask(false);
         }}
       >
-        {page === "Info" ? (
-          <InfoPage
-            task={task}
-            setTask={setTask}
-            setPage={setPage}
-            autoFocus={alwaysOpen}
-            showDue={showDue}
-          />
-        ) : page === "Icon" ? (
-          <IconPage setTask={setTask} setPage={setPage} />
-        ) : null}
+        {useMemo(
+          () =>
+            page === "Info" ? (
+              <InfoPage
+                task={task}
+                setTask={setTask}
+                setPage={setPage}
+                autoFocus={alwaysOpen}
+                showDue={showDue}
+              />
+            ) : page === "Icon" ? (
+              <IconPage setTask={setTask} setPage={setPage} />
+            ) : null,
+          [alwaysOpen, page, setTask, showDue, task]
+        )}
 
         <div
           className={cx("py-2 space-x-2 text-xs flex flex-row", {
@@ -187,15 +191,24 @@ const InfoPage = ({
 
   return (
     <div className="py-2 flex flex-col space-y-1">
-      <input
-        ref={nameRef}
-        value={task.name}
-        onInput={({ currentTarget: { value } }) => {
-          setTask(task => ({ ...task, name: value }));
-        }}
-        className="font-bold"
-        placeholder={task.icon}
-      />
+      <div className="flex flex-row space-x-2">
+        <img
+          alt={task.icon}
+          src={`/assets/game/${task.icon}.png`}
+          className="w-6 h-6 object-contain pointer-events-auto cursor-pointer"
+          onClick={() => setPage("Icon")}
+        />
+
+        <input
+          ref={nameRef}
+          value={task.name}
+          onInput={({ currentTarget: { value } }) => {
+            setTask(task => ({ ...task, name: value }));
+          }}
+          className="font-bold flex-1"
+          placeholder={task.icon}
+        />
+      </div>
 
       <textarea
         value={task.description || ""}
@@ -205,18 +218,6 @@ const InfoPage = ({
         className="text-sm text-gray-600 resize-none h-12"
         placeholder="Task description"
       />
-
-      <div
-        className="text-xs flex flex-row cursor-pointer"
-        onClick={() => setPage("Icon")}
-      >
-        <img
-          alt={task.icon}
-          src={`/assets/game/${task.icon}.png`}
-          className="w-4 h-4 object-contain inline"
-        />
-        <span> Set icon</span>
-      </div>
 
       <IntervalPicker
         value={task.refreshTime}
@@ -300,10 +301,75 @@ const DueTimeText = ({ task }: { task: Task }) => {
   );
 };
 
-const icons = ["Iron Chunk", "White Iron Chunk", "Crystal Chunk"];
 const iconDb = new MemorySearch<string>();
 
-for (const icon of icons) {
+for (const icon of [
+  "Iron Chunk",
+  "White Iron Chunk",
+  "Crystal Chunk",
+
+  // character exp materials
+  "Wanderer's Advice",
+  "Adventurer's Experience",
+  "Hero's Wit",
+
+  // weapon enhancement materials
+  "Enhancement Ore",
+  "Fine Enhancement Ore",
+  "Mystic Enhancement Ore",
+
+  // character ascension materials
+  "Brilliant Diamond Sliver",
+  "Vayuda Turquoise Sliver",
+  "Shivada Jade Sliver",
+  "Vajrada Amethyst Sliver",
+  "Prithiva Topaz Sliver",
+  "Varunada Lazurite Sliver",
+  "Agnidus Agate Sliver",
+
+  // common ascension materials
+  "Slime Condensate",
+  "Damaged Mask",
+  "Firm Arrowhead",
+  "Divining Scroll",
+  "Heavy Horn",
+  "Dead Ley Line Branch",
+  "Chaos Device",
+  "Mist Grass Pollen",
+  "Hunter's Sacrificial Knife",
+  "Recruit's Insignia",
+  "Treasure Hoarder Insignia",
+  "Fragile Bone Shard",
+  "Whopperflower Nectar",
+
+  // local specialties
+  "Calla Lily",
+  "Cecilia",
+  "Dandelion Seed",
+  "Philanemo Mushroom",
+  "Small Lamp Grass",
+  "Valberry",
+  "Windwheel Aster",
+  "Wolfhook",
+  "Cor Lapis",
+  "Glaze Lily",
+  "Jueyun Chili",
+  "Noctilucous Jade",
+  "Qingxin",
+  "Silk Flower",
+  "Starconch",
+  "Violetgrass",
+
+  // cooking ingredients
+  "Lotus Head",
+  "Raw Meat",
+  "Matsutake",
+  "Crab",
+  "Fowl",
+  "Wheat",
+  "Almond",
+  "Shrimp Meat"
+]) {
   iconDb.add(icon, icon);
 }
 

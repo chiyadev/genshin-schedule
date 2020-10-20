@@ -181,9 +181,6 @@ const TaskDoneButton = ({
 
 const TaskCreateLayer = () => {
   const [task, setTask] = useConfig("mapCreateTask");
-  const [, setTasks] = useConfig("tasks");
-
-  const date = useServerDate(1000);
 
   if (!task.visible) {
     return null;
@@ -204,19 +201,28 @@ const TaskCreateLayer = () => {
       alwaysOpen
       showDue={false}
       onClose={() => setTask(task => ({ ...task, visible: false }))}
-      footer={
-        <div
-          className="cursor-pointer"
-          onClick={() => {
-            setTask(task => ({ ...task, visible: false }));
-            setTasks(tasks => [...tasks, { ...task, dueTime: date.getTime() }]);
-          }}
-        >
-          <FaCheck className="inline" />
-          <span className="align-middle"> Create</span>
-        </div>
-      }
+      footer={<TaskCreateButton />}
     />
+  );
+};
+
+const TaskCreateButton = () => {
+  const [task, setTask] = useConfig("mapCreateTask");
+  const [, setTasks] = useConfig("tasks");
+
+  const date = useServerDate(1000);
+
+  return (
+    <div
+      className="cursor-pointer"
+      onClick={() => {
+        setTask(task => ({ ...task, visible: false }));
+        setTasks(tasks => [...tasks, { ...task, dueTime: date.getTime() }]);
+      }}
+    >
+      <FaCheck className="inline" />
+      <span className="align-middle"> Create</span>
+    </div>
   );
 };
 
