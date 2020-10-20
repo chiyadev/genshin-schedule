@@ -1,0 +1,12 @@
+/* https://github.com/Leaflet/Leaflet/issues/3575#issuecomment-688644225 */
+.leaflet-tile-container img {
+  width: 256.5px !important;
+  height: 256.5px !important;
+}
+
+.leaflet-marker-pane .leaflet-marker-icon {
+  background: white;
+  padding: 0.25rem;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}

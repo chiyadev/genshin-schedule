@@ -1,15 +1,15 @@
 import { ComponentChildren, h } from "preact";
 import { Map as Leaflet, TileLayer, useLeaflet } from "react-leaflet";
-import { css, cx } from "emotion";
 import { Task, useConfig } from "./configs";
 import { StateUpdater, useMemo } from "preact/hooks";
 import MapTaskMarker from "./mapTaskMarker";
 import { FaCheck, FaTimes, FaTrash } from "react-icons/fa";
 import { randomStr } from "./random";
 import { memo } from "preact/compat";
+import { useServerDate } from "./time";
 
 import "leaflet/dist/leaflet.css";
-import { useServerDate } from "./time";
+import "./map.css";
 
 const Map = ({
   className,
@@ -38,16 +38,7 @@ const Map = ({
       ]}
       attributionControl={!minimal}
       zoomControl={!minimal}
-      className={cx(
-        className,
-        // https://github.com/Leaflet/Leaflet/issues/3575#issuecomment-688644225
-        css`
-          .leaflet-tile-container img {
-            width: 256.5px !important;
-            height: 256.5px !important;
-          }
-        `
-      )}
+      className={className}
       onclick={({ latlng: location }) =>
         setCreateTask(task => ({
           ...task,
@@ -209,6 +200,7 @@ const TaskCreateLayer = () => {
 const TaskCreateButton = () => {
   const [task, setTask] = useConfig("mapCreateTask");
   const [, setTasks] = useConfig("tasks");
+  const [, setFocusedTask] = useConfig("mapFocusedTask");
 
   const date = useServerDate(1000);
 
@@ -218,6 +210,7 @@ const TaskCreateButton = () => {
       onClick={() => {
         setTask(task => ({ ...task, visible: false }));
         setTasks(tasks => [...tasks, { ...task, dueTime: date.getTime() }]);
+        setFocusedTask(false);
       }}
     >
       <FaCheck className="inline" />

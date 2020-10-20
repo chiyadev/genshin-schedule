@@ -80,7 +80,7 @@ const MapTaskMarker = ({
     () =>
       new L.Icon({
         iconUrl: `/assets/game/${task.icon}.png`,
-        iconSize: [32, 32]
+        iconSize: [36, 36]
       }),
     [task.icon]
   );
