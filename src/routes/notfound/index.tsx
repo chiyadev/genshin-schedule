@@ -1,5 +1,7 @@
 import { h } from "preact";
 import { useTabTitle } from "../../utils";
+import { memo } from "preact/compat";
+
 const NotFound = () => {
   useTabTitle("Not Found");
 
@@ -12,4 +14,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default memo(NotFound);

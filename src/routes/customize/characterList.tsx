@@ -9,6 +9,7 @@ import LazyLoad from "react-lazyload";
 import { MemorySearch } from "../../memorySearch";
 import { DomainOfMastery } from "../../db/domainCategories";
 import { MultiMap } from "../../multiMap";
+import { memo } from "preact/compat";
 
 const db = new MemorySearch<Character>();
 const materialToCharacters = new MultiMap<string, Character>();
@@ -49,7 +50,6 @@ const CharacterList = ({ search }: { search: string }) => {
   if (results.length === 0) {
     return null;
   }
-
   return (
     <div className="space-y-2">
       <div className="text-xl font-bold">
@@ -113,4 +113,4 @@ const CharacterIcon = ({ character }: { character: Character }) => {
   );
 };
 
-export default CharacterList;
+export default memo(CharacterList);

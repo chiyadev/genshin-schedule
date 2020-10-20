@@ -8,6 +8,7 @@ import { useEffect } from "preact/hooks";
 import { forceCheck } from "react-lazyload";
 import { useTabTitle } from "../../utils";
 import Miscellaneous from "./miscellaneous";
+import { memo } from "preact/compat";
 
 const Customize = () => {
   const [search, setSearch] = useConfig("customizeQuery");
@@ -32,4 +33,4 @@ const Customize = () => {
   );
 };
 
-export default Customize;
+export default memo(Customize);

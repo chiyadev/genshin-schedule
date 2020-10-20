@@ -1,6 +1,7 @@
 import { useConfig } from "./configs";
 import { h } from "preact";
 import { css, cx } from "emotion";
+import { memo } from "preact/compat";
 
 const Background = () => {
   const [background] = useConfig("paimonBg");
@@ -26,4 +27,4 @@ const Background = () => {
   );
 };
 
-export default Background;
+export default memo(Background);

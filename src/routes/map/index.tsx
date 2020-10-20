@@ -4,6 +4,7 @@ import { css, cx } from "emotion";
 import Header from "../../header";
 import { useState } from "preact/hooks";
 import { useTabTitle } from "../../utils";
+import { memo } from "preact/compat";
 
 const Map = () => {
   useTabTitle("Map");
@@ -47,4 +48,4 @@ const HeaderWrapper = () => {
   );
 };
 
-export default Map;
+export default memo(Map);

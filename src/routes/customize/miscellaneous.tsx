@@ -4,6 +4,7 @@ import { useConfig } from "../../configs";
 import { FaCog } from "react-icons/fa";
 import { MemorySearch } from "../../memorySearch";
 import { useMemo } from "preact/hooks";
+import { memo } from "preact/compat";
 
 type Option = "background";
 const options: Option[] = ["background"];
@@ -48,4 +49,4 @@ const Miscellaneous = ({ search }: { search: string }) => {
   );
 };
 
-export default Miscellaneous;
+export default memo(Miscellaneous);

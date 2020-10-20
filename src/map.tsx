@@ -8,6 +8,7 @@ import { FaCheck, FaTrash } from "react-icons/fa";
 import { randomStr } from "./random";
 
 import "leaflet/dist/leaflet.css";
+import { memo } from "preact/compat";
 
 const Map = ({
   className,
@@ -167,4 +168,4 @@ const TaskCreateLayer = () => {
   );
 };
 
-export default Map;
+export default memo(Map);

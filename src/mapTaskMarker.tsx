@@ -13,6 +13,7 @@ import { FaAngleLeft, FaSyncAlt } from "react-icons/fa";
 import { MemorySearch } from "./memorySearch";
 import MapPopup from "./mapPopup";
 import { cx } from "emotion";
+import { memo } from "preact/compat";
 
 type TimeUnit = "week" | "day" | "hour" | "minute";
 
@@ -274,4 +275,4 @@ const IconPage = ({
   );
 };
 
-export default MapTaskMarker;
+export default memo(MapTaskMarker);

@@ -1,5 +1,7 @@
 import { ComponentChildren, h } from "preact";
+
 import { cx } from "emotion";
+import { memo } from "preact/compat";
 
 const WhiteCard = ({
   className,
@@ -23,4 +25,4 @@ const WhiteCard = ({
   );
 };
 
-export default WhiteCard;
+export default memo(WhiteCard);

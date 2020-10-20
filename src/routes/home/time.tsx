@@ -8,6 +8,7 @@ import {
 import { Configs, useConfig } from "../../configs";
 import { FaClock } from "react-icons/fa";
 import { clampResin, getResinRecharge } from "../../db/resins";
+import { memo } from "preact/compat";
 
 const Time = () => {
   const date = useServerDate();
@@ -112,4 +113,4 @@ const ServerText = () => {
   );
 };
 
-export default Time;
+export default memo(Time);

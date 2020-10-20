@@ -5,6 +5,7 @@ import ResinCalculator from "./resinCalc";
 import DomainList from "./domainList";
 import TaskList from "./taskList";
 import Info from "./info";
+import { memo } from "preact/compat";
 
 const Home = () => {
   useTabTitle();
@@ -20,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);

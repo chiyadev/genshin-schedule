@@ -2,6 +2,7 @@ import { h } from "preact";
 import WhiteCard from "../../whiteCard";
 import { useConfig } from "../../configs";
 import Checkbox from "../../checkbox";
+import { memo } from "preact/compat";
 
 const Info = () => {
   const [visible, setVisible] = useConfig("showSiteInfo");
@@ -80,4 +81,4 @@ const Info = () => {
   );
 };
 
-export default Info;
+export default memo(Info);

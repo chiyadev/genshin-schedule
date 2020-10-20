@@ -8,6 +8,7 @@ import LazyLoad from "react-lazyload";
 import { useConfig } from "../../configs";
 import { MemorySearch } from "../../memorySearch";
 import { MultiMap } from "../../multiMap";
+import { memo } from "preact/compat";
 
 const db = new MemorySearch<Weapon>();
 const materialToWeapons = new MultiMap<string, Weapon>();
@@ -109,4 +110,4 @@ const WeaponIcon = ({ weapon }: { weapon: Weapon }) => {
   );
 };
 
-export default WeaponList;
+export default memo(WeaponList);

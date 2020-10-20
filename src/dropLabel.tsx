@@ -7,6 +7,7 @@ import {
 } from "./db/domainDropSets";
 import { Domains } from "./db/domains";
 import { h } from "preact";
+import { memo } from "preact/compat";
 
 const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   const domain = useMemo(() => {
@@ -53,4 +54,4 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   );
 };
 
-export default DropLabel;
+export default memo(DropLabel);

@@ -8,6 +8,7 @@ import SectionHeading from "./sectionHeading";
 import WhiteCard from "../../whiteCard";
 import { useRerenderFrequency, useServerDate } from "../../time";
 import { StateUpdater, useMemo } from "preact/hooks";
+import { memo } from "preact/compat";
 
 const TaskList = () => {
   const [tasks, setTasks] = useConfig("tasks");
@@ -120,4 +121,4 @@ const MapDisplay = () => {
   );
 };
 
-export default TaskList;
+export default memo(TaskList);

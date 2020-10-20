@@ -1,4 +1,5 @@
 import { h } from "preact";
+import { memo } from "preact/compat";
 
 const Help = () => {
   return (
@@ -20,4 +21,4 @@ const Help = () => {
   );
 };
 
-export default Help;
+export default memo(Help);

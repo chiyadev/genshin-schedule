@@ -1,6 +1,7 @@
 import { h } from "preact";
 import { Popup, PopupProps } from "react-leaflet";
 import { css, cx } from "emotion";
+import { memo } from "preact/compat";
 
 const MapPopup = ({
   autoPan = false,
@@ -45,4 +46,4 @@ const MapPopup = ({
   );
 };
 
-export default MapPopup;
+export default memo(MapPopup);

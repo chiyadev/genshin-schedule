@@ -7,6 +7,7 @@ import DropLabel from "../../dropLabel";
 import Checkbox from "../../checkbox";
 import { arrayToggle, useTabTitle } from "../../utils";
 import WhiteCard from "../../whiteCard";
+import { memo } from "preact/compat";
 
 const WeaponInfo = ({ weapon }: { weapon: string }) => {
   const info = useMemo(() => Weapons.find(c => c.name === weapon), [weapon]);
@@ -87,4 +88,4 @@ const Toggle = ({ weapon }: { weapon: Weapon }) => {
   );
 };
 
-export default WeaponInfo;
+export default memo(WeaponInfo);

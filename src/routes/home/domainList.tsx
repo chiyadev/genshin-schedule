@@ -19,6 +19,7 @@ import { Regions } from "../../db/regions";
 import WhiteCard from "../../whiteCard";
 import { FaTimes } from "react-icons/fa";
 import SectionHeading from "./sectionHeading";
+import { memo } from "preact/compat";
 
 type ScheduledDomain = {
   domain: Domain;
@@ -269,4 +270,4 @@ const MaterialDisplay = ({
   );
 };
 
-export default DomainList;
+export default memo(DomainList);

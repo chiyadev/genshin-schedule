@@ -7,6 +7,7 @@ import DropLabel from "../../dropLabel";
 import Checkbox from "../../checkbox";
 import { arrayToggle, useTabTitle } from "../../utils";
 import WhiteCard from "../../whiteCard";
+import { memo } from "preact/compat";
 
 const CharacterInfo = ({ character }: { character: string }) => {
   const info = useMemo(() => Characters.find(c => c.name === character), [
@@ -93,4 +94,4 @@ const Toggle = ({ character }: { character: Character }) => {
   );
 };
 
-export default CharacterInfo;
+export default memo(CharacterInfo);

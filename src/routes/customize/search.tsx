@@ -1,6 +1,7 @@
 import { h } from "preact";
 import { css, cx } from "emotion";
 import { FaSearch } from "react-icons/fa";
+import { memo } from "preact/compat";
 
 const Search = ({
   value,
@@ -37,4 +38,4 @@ const Search = ({
   );
 };
 
-export default Search;
+export default memo(Search);

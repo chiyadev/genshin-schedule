@@ -1,4 +1,5 @@
 import { ComponentChildren, h } from "preact";
+import { memo } from "preact/compat";
 //import { css, cx } from "emotion";
 
 const SectionHeading = ({ children }: { children?: ComponentChildren }) => {
@@ -21,4 +22,4 @@ const SectionHeading = ({ children }: { children?: ComponentChildren }) => {
   );
 };
 
-export default SectionHeading;
+export default memo(SectionHeading);

@@ -6,6 +6,7 @@ import { clampResin, getResinRecharge, ResinCap } from "../../db/resins";
 import { useRerenderFrequency, useServerDate } from "../../time";
 import WhiteCard from "../../whiteCard";
 import SectionHeading from "./sectionHeading";
+import { memo } from "preact/compat";
 
 function useMeasuredTextWidth(className: string, text: string) {
   return useMemo(() => {
@@ -123,4 +124,4 @@ const ResinExtrapolations = ({ current }: { current: number }) => {
   );
 };
 
-export default ResinCalculator;
+export default memo(ResinCalculator);

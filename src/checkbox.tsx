@@ -1,4 +1,5 @@
 import { ComponentChildren, h } from "preact";
+import { memo } from "preact/compat";
 
 const Checkbox = ({
   value,
@@ -22,4 +23,4 @@ const Checkbox = ({
   );
 };
 
-export default Checkbox;
+export default memo(Checkbox);

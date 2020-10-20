@@ -1,6 +1,7 @@
 import { h } from "preact";
 import { FaCog } from "react-icons/fa";
 import { Link } from "preact-router";
+import { memo } from "preact/compat";
 
 const Header = () => {
   return (
@@ -25,4 +26,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);
