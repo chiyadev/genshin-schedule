@@ -1,5 +1,5 @@
 import { h } from "preact";
-import { useConfig, useTaskInfo } from "../../configs";
+import { Task, useConfig } from "../../configs";
 import Map from "../../map";
 import { css, cx } from "emotion";
 import { FaAngleRight, FaTimes } from "react-icons/fa";
@@ -7,26 +7,49 @@ import { Link } from "preact-router";
 import SectionHeading from "./sectionHeading";
 import WhiteCard from "../../whiteCard";
 import { useRerenderFrequency, useServerDate } from "../../time";
+import { StateUpdater, useMemo } from "preact/hooks";
 
 const TaskList = () => {
-  const [tasks] = useConfig("taskIds");
+  const [tasks, setTasks] = useConfig("tasks");
 
   return (
     <div className="space-y-4">
       <SectionHeading>Today&apos;s Tasks</SectionHeading>
 
       <div>
-        {tasks.length ? (
-          <WhiteCard divide>
-            {tasks.map(task => (
-              <TaskDisplay key={task} id={task} />
-            ))}
-          </WhiteCard>
-        ) : (
-          <div className="text-sm">
-            <FaTimes className="inline" /> Nothing. Create a task by opening the
-            map.
-          </div>
+        {useMemo(
+          () =>
+            tasks.length ? (
+              <WhiteCard divide>
+                {tasks.map(task => (
+                  <TaskDisplay
+                    key={task.id}
+                    task={task}
+                    setTask={newTask =>
+                      setTasks(tasks => {
+                        return tasks.map(oldTask => {
+                          if (oldTask.id === task.id) {
+                            if (typeof newTask === "function") {
+                              return newTask(oldTask);
+                            } else {
+                              return newTask;
+                            }
+                          } else {
+                            return oldTask;
+                          }
+                        });
+                      })
+                    }
+                  />
+                ))}
+              </WhiteCard>
+            ) : (
+              <div className="text-sm">
+                <FaTimes className="inline" /> Nothing. Create a task by opening
+                the map.
+              </div>
+            ),
+          [tasks]
         )}
       </div>
 
@@ -35,9 +58,7 @@ const TaskList = () => {
   );
 };
 
-const TaskDisplay = ({ id }: { id: string }) => {
-  const [task, setTask] = useTaskInfo(id);
-
+const TaskDisplay = ({ task }: { task: Task; setTask: StateUpdater<Task> }) => {
   const date = useServerDate();
   useRerenderFrequency(1000);
 

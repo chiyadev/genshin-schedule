@@ -2,12 +2,12 @@ import { ComponentChildren, h } from "preact";
 import { Map as Leaflet, TileLayer } from "react-leaflet";
 import { css, cx } from "emotion";
 import { useConfig } from "./configs";
-import MapTaskLayer from "./mapTaskLayer";
-import MapTaskCreateLayer from "./mapTaskCreateLayer";
-import { randomStr } from "./random";
 import { useRef } from "preact/hooks";
+import MapTaskMarker from "./mapTaskMarker";
+import { FaCheck } from "react-icons/fa";
 
 import "leaflet/dist/leaflet.css";
+import { randomStr } from "./random";
 
 const Map = ({
   className,
@@ -19,8 +19,7 @@ const Map = ({
   minimal?: boolean;
 }) => {
   const [state, setState] = useConfig("mapState");
-  const [createTask, setCreateTask] = useConfig("mapCreateTask");
-  const [defaultTask] = useConfig("mapDefaultTask");
+  const [, setCreateTask] = useConfig("mapCreateTask");
 
   // after reading initial state, only update it
   const { lat, lng, zoom } = useRef(state).current;
@@ -50,15 +49,14 @@ const Map = ({
           }
         `
       )}
-      onclick={({ latlng: location }) => {
-        setCreateTask({
+      onclick={({ latlng: location }) =>
+        setCreateTask(task => ({
+          ...task,
           id: randomStr(6),
-          dueTime: 0,
-          ...defaultTask,
-          ...createTask,
-          location
-        });
-      }}
+          location,
+          visible: true
+        }))
+      }
       onmoveend={({ target }) => {
         setState({
           ...target.getCenter(),
@@ -71,11 +69,47 @@ const Map = ({
         attribution='<a href="https://bbs.mihoyo.com/ys/article/1328298" target="_blank" rel="noreferrer noopener">yuanshen.site</a>'
       />
 
-      <MapTaskLayer />
-      <MapTaskCreateLayer />
+      <TaskCreateLayer />
 
       {children}
     </Leaflet>
+  );
+};
+
+const TaskCreateLayer = () => {
+  const [task, setTask] = useConfig("mapCreateTask");
+  const [, setTasks] = useConfig("tasks");
+
+  if (!task.visible) {
+    return null;
+  }
+
+  return (
+    <MapTaskMarker
+      task={task}
+      setTask={task => {
+        setTask(t => {
+          if (typeof task === "function") {
+            task = task(t);
+          }
+
+          return { ...t, ...task };
+        });
+      }}
+      onClose={() => setTask(task => ({ ...task, visible: false }))}
+      menu={
+        <div
+          className="cursor-pointer"
+          onClick={() => {
+            setTask(task => ({ ...task, visible: false }));
+            setTasks(tasks => [...tasks, task]);
+          }}
+        >
+          <FaCheck className="inline" />
+          <span className="align-middle"> Create</span>
+        </div>
+      }
+    />
   );
 };
 

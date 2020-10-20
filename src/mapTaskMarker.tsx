@@ -1,38 +1,17 @@
-import { Task, useConfig, useTaskCreator } from "./configs";
-import { Marker, Popup } from "react-leaflet";
-import { ComponentProps, h } from "preact";
-import { useEffect, useMemo, useRef, useState } from "preact/hooks";
+import { Task, useConfig } from "./configs";
+import { Marker } from "react-leaflet";
+import { ComponentChildren, ComponentProps, h } from "preact";
+import {
+  StateUpdater,
+  useEffect,
+  useMemo,
+  useRef,
+  useState
+} from "preact/hooks";
 import L from "leaflet";
-import { css } from "emotion";
-import { FaAngleLeft, FaCheck, FaSyncAlt } from "react-icons/fa";
+import { FaAngleLeft, FaSyncAlt } from "react-icons/fa";
 import { MemorySearch } from "./memorySearch";
 import MapPopup from "./mapPopup";
-
-const MapTaskCreateLayer = () => {
-  const [task, setTask] = useConfig("mapCreateTask");
-  const [, setDefaultTask] = useConfig("mapDefaultTask");
-
-  if (!task) {
-    return null;
-  }
-
-  return (
-    <Inner
-      task={task}
-      setTask={task => {
-        setTask(task);
-
-        if (task) {
-          setDefaultTask({
-            name: task.name,
-            icon: task.icon,
-            refreshTime: task.refreshTime
-          });
-        }
-      }}
-    />
-  );
-};
 
 type TimeUnit = "week" | "day" | "hour" | "minute";
 
@@ -52,15 +31,19 @@ function getUnitMs(unit: TimeUnit) {
   }
 }
 
-type PopupPage = "Info" | "Icon";
-const PopupPages: PopupPage[] = ["Info", "Icon"];
+type Page = "Info" | "Icon";
+const pages: Page[] = ["Info", "Icon"];
 
-const Inner = ({
+const MapTaskMarker = ({
   task,
-  setTask
+  setTask,
+  onClose,
+  menu
 }: {
   task: Task;
-  setTask: (task: Task | null) => void;
+  setTask: StateUpdater<Task>;
+  onClose?: () => void;
+  menu?: ComponentChildren;
 }) => {
   const markerIcon = useMemo(
     () =>
@@ -75,28 +58,20 @@ const Inner = ({
 
   useEffect(() => markerRef.current.leafletElement.openPopup(), [task]);
 
-  const [page, setPage] = useState<PopupPage>(PopupPages[0]);
+  const [page, setPage] = useState<Page>(pages[0]);
 
   return (
     <Marker ref={markerRef} position={task.location} icon={markerIcon}>
-      <MapPopup divide onClose={() => setTask(null)}>
+      <MapPopup divide onClose={onClose}>
         {page === "Info" ? (
-          <InfoPage
-            task={task}
-            setTask={setTask}
-            page={page}
-            setPage={setPage}
-          />
+          <InfoPage task={task} setTask={setTask} setPage={setPage} />
         ) : page === "Icon" ? (
-          <IconPage
-            task={task}
-            setTask={setTask}
-            page={page}
-            setPage={setPage}
-          />
+          <IconPage task={task} setTask={setTask} setPage={setPage} />
         ) : null}
 
-        <Menu task={task} setTask={setTask} page={page} setPage={setPage} />
+        <Menu page={page} setPage={setPage}>
+          {menu}
+        </Menu>
       </MapPopup>
     </Marker>
   );
@@ -106,9 +81,10 @@ const InfoPage = ({
   task,
   setTask,
   setPage
-}: ComponentProps<typeof Inner> & {
-  page: PopupPage;
-  setPage: (page: PopupPage) => void;
+}: {
+  task: Task;
+  setTask: StateUpdater<Task>;
+  setPage: StateUpdater<Page>;
 }) => {
   const nameRef = useRef<HTMLInputElement>(null);
 
@@ -120,7 +96,7 @@ const InfoPage = ({
         ref={nameRef}
         value={task.name}
         onInput={({ currentTarget: { value } }) => {
-          setTask({ ...task, name: value });
+          setTask(task => ({ ...task, name: value }));
         }}
         className="font-bold"
         placeholder={task.icon}
@@ -129,7 +105,7 @@ const InfoPage = ({
       <textarea
         value={task.description || ""}
         onInput={({ currentTarget: { value } }) => {
-          setTask({ ...task, description: value });
+          setTask(task => ({ ...task, description: value }));
         }}
         className="text-sm text-gray-600 resize-none h-12"
         placeholder="Task description"
@@ -148,7 +124,7 @@ const InfoPage = ({
 
       <IntervalPicker
         value={task.refreshTime}
-        setValue={value => setTask({ ...task, refreshTime: value })}
+        setValue={value => setTask(task => ({ ...task, refreshTime: value }))}
       />
     </div>
   );
@@ -208,12 +184,8 @@ for (const icon of icons) {
   iconDb.add(icon, icon);
 }
 
-const IconPage = ({
-  task,
-  setTask,
-  setPage
-}: ComponentProps<typeof InfoPage>) => {
-  const [search, setSearch] = useState("");
+const IconPage = ({ setTask, setPage }: ComponentProps<typeof InfoPage>) => {
+  const [search, setSearch] = useConfig("iconQuery");
   const results = useMemo(() => iconDb.search(search), [search]);
 
   const inputRef = useRef<HTMLInputElement>(null);
@@ -239,7 +211,7 @@ const IconPage = ({
                 src={`/assets/game/${icon}.png`}
                 className="w-8 h-8 object-contain inline-block cursor-pointer pointer-events-auto"
                 onClick={() => {
-                  setTask({ ...task, name: icon, icon });
+                  setTask(task => ({ ...task, name: icon, icon }));
                   setPage("Info");
                 }}
               />
@@ -252,13 +224,14 @@ const IconPage = ({
 };
 
 const Menu = ({
-  task,
-  setTask,
   page,
-  setPage
-}: ComponentProps<typeof InfoPage>) => {
-  const createTask = useTaskCreator();
-
+  setPage,
+  children
+}: {
+  page: Page;
+  setPage: StateUpdater<Page>;
+  children?: ComponentChildren;
+}) => {
   return (
     <div className="py-2 space-x-2 text-xs flex flex-row">
       {page !== "Info" && (
@@ -270,18 +243,9 @@ const Menu = ({
 
       <div className="flex-1" />
 
-      <div
-        className="cursor-pointer"
-        onClick={() => {
-          createTask(task);
-          setTask(null);
-        }}
-      >
-        <FaCheck className="inline" />
-        <span className="align-middle"> Create</span>
-      </div>
+      {children}
     </div>
   );
 };
 
-export default MapTaskCreateLayer;
+export default MapTaskMarker;
