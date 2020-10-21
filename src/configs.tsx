@@ -136,7 +136,7 @@ export const DefaultConfigs: Configs = {
   },
   mapFocusedTask: false,
   mapTaskList: true,
-  paimonBg: false,
+  paimonBg: true,
   showSiteInfo: true
 };
 
