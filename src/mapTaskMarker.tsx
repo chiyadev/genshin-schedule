@@ -274,7 +274,7 @@ const IntervalPicker = ({
 const DueTimeText = ({ task }: { task: Task }) => {
   const date = useServerDate(60000);
   const delta = task.dueTime - date.getTime();
-  const unit = getLargestUnit(delta);
+  const unit = getLargestUnit(Math.abs(delta));
   const displayValue = Math.round(delta / getUnitMs(unit));
 
   return (
@@ -372,6 +372,28 @@ for (const icon of [
 ]) {
   iconDb.add(icon, icon);
 }
+const knownTimers: { [key: string]: number | undefined } = {
+  "Iron Chunk": 24,
+  "White Iron Chunk": 48,
+  "Crystal Chunk": 72,
+
+  "Calla Lily": 48,
+  Cecilia: 48,
+  "Dandelion Seed": 48,
+  "Philanemo Mushroom": 48,
+  "Small Lamp Grass": 48,
+  Valberry: 48,
+  "Windwheel Aster": 48,
+  Wolfhook: 48,
+  "Cor Lapis": 48,
+  "Glaze Lily": 48,
+  "Jueyun Chili": 48,
+  "Noctilucous Jade": 48,
+  Qingxin: 48,
+  "Silk Flower": 48,
+  Starconch: 48,
+  Violetgrass: 48
+};
 
 const IconPage = ({
   setTask,
@@ -407,7 +429,14 @@ const IconPage = ({
                 src={`/assets/game/${icon}.png`}
                 className="w-8 h-8 object-contain inline-block cursor-pointer pointer-events-auto"
                 onClick={() => {
-                  setTask(task => ({ ...task, name: icon, icon }));
+                  const timer = knownTimers[icon];
+
+                  setTask(task => ({
+                    ...task,
+                    name: icon,
+                    icon,
+                    refreshTime: timer ? timer * 3600000 : task.refreshTime
+                  }));
                   setPage("Info");
                 }}
               />
