@@ -302,11 +302,14 @@ const DueTimeText = ({ task }: { task: Task }) => {
 };
 
 const iconDb = new MemorySearch<string>();
-
-for (const icon of [
+const icons = [
   "Iron Chunk",
   "White Iron Chunk",
   "Crystal Chunk",
+  "Electro Crystal",
+  "Cor Lapis",
+  "Noctilucous Jade",
+  "Resin",
 
   // character exp materials
   "Wanderer's Advice",
@@ -349,12 +352,11 @@ for (const icon of [
   "Philanemo Mushroom",
   "Small Lamp Grass",
   "Valberry",
+
   "Windwheel Aster",
   "Wolfhook",
-  "Cor Lapis",
   "Glaze Lily",
   "Jueyun Chili",
-  "Noctilucous Jade",
   "Qingxin",
   "Silk Flower",
   "Starconch",
@@ -369,13 +371,19 @@ for (const icon of [
   "Wheat",
   "Almond",
   "Shrimp Meat"
-]) {
+];
+
+for (const icon of icons) {
   iconDb.add(icon, icon);
 }
+
 const knownTimers: { [key: string]: number | undefined } = {
   "Iron Chunk": 24,
   "White Iron Chunk": 48,
   "Crystal Chunk": 72,
+  "Electro Crystal": 48,
+  "Cor Lapis": 72,
+  "Noctilucous Jade": 48,
 
   "Calla Lily": 48,
   Cecilia: 48,
@@ -385,10 +393,8 @@ const knownTimers: { [key: string]: number | undefined } = {
   Valberry: 48,
   "Windwheel Aster": 48,
   Wolfhook: 48,
-  "Cor Lapis": 48,
   "Glaze Lily": 48,
   "Jueyun Chili": 48,
-  "Noctilucous Jade": 48,
   Qingxin: 48,
   "Silk Flower": 48,
   Starconch: 48,
@@ -403,7 +409,12 @@ const IconPage = ({
   setPage: StateUpdater<Page>;
 }) => {
   const [search, setSearch] = useConfig("iconQuery");
-  const results = useMemo(() => iconDb.search(search), [search]);
+  const results = useMemo(() => {
+    const set = new Set(iconDb.search(search));
+
+    // preserve display order
+    return icons.filter(icon => set.has(icon));
+  }, [search]);
 
   const inputRef = useRef<HTMLInputElement>(null);
 
