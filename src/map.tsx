@@ -1,7 +1,7 @@
 import { ComponentChildren, h } from "preact";
 import { Map as Leaflet, TileLayer, useLeaflet } from "react-leaflet";
 import { Task, useConfig } from "./configs";
-import { StateUpdater, useMemo } from "preact/hooks";
+import { StateUpdater, useMemo, useRef } from "preact/hooks";
 import MapTaskMarker from "./mapTaskMarker";
 import { FaCheck, FaTimes, FaTrash } from "react-icons/fa";
 import { randomStr } from "./random";
@@ -22,6 +22,8 @@ const Map = ({
 }) => {
   const [{ lat, lng, zoom }, setState] = useConfig("mapState");
   const [, setCreateTask] = useConfig("mapCreateTask");
+
+  const syncRef = useRef<number>();
 
   // adapted from https://github.com/GenshinMap/genshinmap.github.io/blob/master/js/index.js
   return (
@@ -48,11 +50,14 @@ const Map = ({
           visible: true
         }))
       }
+      onmove={() => clearTimeout(syncRef.current)}
       onmoveend={({ target }) => {
-        setState({
-          ...target.getCenter(),
-          zoom: Math.round(target.getZoom() * 100) / 100
-        });
+        syncRef.current = window.setTimeout(() => {
+          setState({
+            ...target.getCenter(),
+            zoom: Math.round(target.getZoom() * 100) / 100
+          });
+        }, 1000);
       }}
     >
       <TileLayer
