@@ -127,7 +127,10 @@ const DomainList = () => {
   return useMemo(
     () => (
       <div className="space-y-4">
-        <SectionHeading>Today&apos;s Domains</SectionHeading>
+        <SectionHeading>
+          Today&apos;s Domains
+          {domains.length !== 0 && <span> ({domains.length})</span>}
+        </SectionHeading>
 
         {domains.length ? (
           <div className="space-y-4 flex flex-col">

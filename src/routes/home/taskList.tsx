@@ -15,7 +15,7 @@ const TaskList = () => {
   return (
     <div className="space-y-4">
       <SectionHeading>
-        Today&apos;s Tasks{tasks.length ? <span> ({tasks.length})</span> : null}
+        Today&apos;s Tasks{tasks.length !== 0 && <span> ({tasks.length})</span>}
       </SectionHeading>
 
       {tasks.length ? (
