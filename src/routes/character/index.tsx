@@ -89,7 +89,13 @@ const Toggle = ({ character }: { character: Character }) => {
         setList(list => arrayToggle(list, character.name, value));
       }}
     >
-      Show on schedule
+      <div className="inline-block align-middle ml-2">
+        <div>Show on schedule</div>
+
+        <div className="text-xs text-gray-600">
+          Scheduled domains will appear on the days they are available.
+        </div>
+      </div>
     </Checkbox>
   );
 };
