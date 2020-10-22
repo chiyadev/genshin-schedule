@@ -28,8 +28,8 @@ const TaskList = () => {
         </div>
       ) : (
         <div className="text-sm">
-          <FaTimes className="inline" /> Nothing. Create a task by clicking on
-          the map.
+          <FaTimes className="inline" /> No tasks for now. Create one by
+          clicking on the map.
         </div>
       )}
     </div>

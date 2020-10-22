@@ -140,7 +140,7 @@ const DomainList = () => {
           </div>
         ) : (
           <div className="text-sm">
-            <FaTimes className="inline" /> Nothing. Maybe do some{" "}
+            <FaTimes className="inline" /> No domains for today. Maybe do some{" "}
             <a href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops">
               Ley Lines
             </a>
