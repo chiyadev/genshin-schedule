@@ -57,7 +57,7 @@ const Map = ({
             ...target.getCenter(),
             zoom: Math.round(target.getZoom() * 100) / 100
           });
-        }, 1000);
+        }, 100);
       }}
     >
       <TileLayer
