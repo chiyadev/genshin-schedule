@@ -15,6 +15,7 @@ import MapPopup from "./mapPopup";
 import { cx } from "emotion";
 import { memo } from "preact/compat";
 import { useServerDate } from "./time";
+import LazyLoad from "react-lazyload";
 
 type TimeUnit = "week" | "day" | "hour" | "minute";
 const TimeUnits: TimeUnit[] = ["week", "day", "hour", "minute"];
@@ -176,7 +177,6 @@ const InfoPage = ({
   showDue
 }: {
   task: Task;
-
   setTask: StateUpdater<Task>;
   setPage: StateUpdater<Page>;
   autoFocus?: boolean;
@@ -303,35 +303,48 @@ const DueTimeText = ({ task }: { task: Task }) => {
 };
 
 const iconDb = new MemorySearch<string>();
-const icons = [
+const icons: string[] = [];
+
+function addIcons(type: string, names: string[]) {
+  for (const name of names) {
+    icons.push(name);
+    iconDb.add(name, name);
+    type && iconDb.add(type, name);
+  }
+}
+
+addIcons("ore", [
   "Iron Chunk",
   "White Iron Chunk",
   "Crystal Chunk",
   "Electro Crystal",
   "Cor Lapis",
-  "Noctilucous Jade",
-  "Resin",
+  "Noctilucous Jade"
+]);
 
-  // character exp materials
+addIcons("character exp material", [
   "Wanderer's Advice",
   "Adventurer's Experience",
-  "Hero's Wit",
+  "Hero's Wit"
+]);
 
-  // weapon enhancement materials
+addIcons("weapon enhancement material", [
   "Enhancement Ore",
   "Fine Enhancement Ore",
-  "Mystic Enhancement Ore",
+  "Mystic Enhancement Ore"
+]);
 
-  // character ascension materials
+addIcons("character ascension material", [
   "Brilliant Diamond Sliver",
   "Vayuda Turquoise Sliver",
   "Shivada Jade Sliver",
   "Vajrada Amethyst Sliver",
   "Prithiva Topaz Sliver",
   "Varunada Lazurite Sliver",
-  "Agnidus Agate Sliver",
+  "Agnidus Agate Sliver"
+]);
 
-  // common ascension materials
+addIcons("common ascension material", [
   "Slime Condensate",
   "Damaged Mask",
   "Firm Arrowhead",
@@ -344,26 +357,30 @@ const icons = [
   "Recruit's Insignia",
   "Treasure Hoarder Insignia",
   "Fragile Bone Shard",
-  "Whopperflower Nectar",
+  "Whopperflower Nectar"
+]);
 
-  // local specialties
+addIcons("local specialty mondstadt", [
   "Calla Lily",
   "Cecilia",
   "Dandelion Seed",
   "Philanemo Mushroom",
   "Small Lamp Grass",
   "Valberry",
-
   "Windwheel Aster",
-  "Wolfhook",
-  "Glaze Lily",
+  "Wolfhook"
+]);
+
+addIcons("local specialty liyue", [
   "Jueyun Chili",
   "Qingxin",
   "Silk Flower",
   "Starconch",
   "Violetgrass",
+  "Glaze Lily"
+]);
 
-  // cooking ingredients
+addIcons("cooking ingredient", [
   "Lotus Head",
   "Raw Meat",
   "Matsutake",
@@ -372,11 +389,39 @@ const icons = [
   "Wheat",
   "Almond",
   "Shrimp Meat"
-];
+]);
 
-for (const icon of icons) {
-  iconDb.add(icon, icon);
-}
+addIcons("artifact", [
+  "Adventurer",
+  "Archaic Petra",
+  "Berserker",
+  "Bloodstained Chivalry",
+  "Brave Heart",
+  "Crimson Witch of Flames",
+  "Defender's Will",
+  "Gambler",
+  "Gladiator's Finale",
+  "Instructor",
+  "Lavawalker",
+  "Lucky Dog",
+  "Maiden Beloved",
+  "Martial Artist",
+  "Noblesse Oblige",
+  "Prayers for Destiny",
+  "Prayers for Illumination",
+  "Prayers for Wisdom",
+  "Prayers to Springtime",
+  "Resolution of Sojourner",
+  "Retracing Bolide",
+  "Scholar",
+  "The Exile",
+  "Thundering Fury",
+  "Thundersoother",
+  "Tiny Miracle",
+  "Traveling Doctor",
+  "Viridescent Venerer",
+  "Wanderer's Troupe"
+]);
 
 const knownTimers: { [key: string]: number | undefined } = {
   "Iron Chunk": 24,
@@ -452,23 +497,26 @@ const IconPage = ({
         {useMemo(
           () =>
             results.map(icon => (
-              <img
-                key={icon}
-                alt={icon}
-                src={`/assets/game/${icon}.png`}
-                className="w-8 h-8 object-contain inline-block cursor-pointer pointer-events-auto"
-                onClick={() => {
-                  const timer = knownTimers[icon];
+              <div key={icon} className="inline-block">
+                <LazyLoad overflow>
+                  <img
+                    alt={icon}
+                    src={`/assets/game/${icon}.png`}
+                    className="w-8 h-8 object-contain cursor-pointer pointer-events-auto"
+                    onClick={() => {
+                      const timer = knownTimers[icon];
 
-                  setTask(task => ({
-                    ...task,
-                    name: icon,
-                    icon,
-                    refreshTime: timer ? timer * 3600000 : task.refreshTime
-                  }));
-                  setPage("Info");
-                }}
-              />
+                      setTask(task => ({
+                        ...task,
+                        name: icon,
+                        icon,
+                        refreshTime: timer ? timer * 3600000 : task.refreshTime
+                      }));
+                      setPage("Info");
+                    }}
+                  />
+                </LazyLoad>
+              </div>
             )),
           [results, setPage, setTask]
         )}
