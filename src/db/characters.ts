@@ -155,10 +155,18 @@ export const Xingqiu: Character = {
   talentMaterial: Gold
 };
 
+export const Klee: Character = {
+  type: "Character",
+  name: "Klee",
+  wiki: "https://genshin-impact.fandom.com/wiki/Klee",
+  talentMaterial: Freedom
+};
+
 export const Characters = [
   Amber,
   Barbara,
   Beidou,
+
   Bennett,
   Chongyun,
   Diluc,
@@ -175,5 +183,6 @@ export const Characters = [
   Sucrose,
   Venti,
   Xiangling,
-  Xingqiu
+  Xingqiu,
+  Klee
 ];
