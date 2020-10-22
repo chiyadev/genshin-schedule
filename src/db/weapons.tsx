@@ -68,6 +68,7 @@ generate({ material: BorealWolf }, [
 generate({ material: DandelionGladiator }, [
   "Beginner's Protector",
   "Favonius Greatsword",
+  "Favonius Lance",
   "Favonius Warbow",
   "Lost Prayer to the Sacred Winds",
   "Otherworldly Story",
@@ -75,6 +76,7 @@ generate({ material: DandelionGladiator }, [
   "Sacrificial Fragments",
   "Sacrificial Sword",
   "Skyward Spine",
+
   "Traveler's Handy Sword",
   "White Iron Greatsword",
   "Wolf's Gravestone"
