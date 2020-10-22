@@ -176,16 +176,17 @@ const InfoPage = ({
   showDue
 }: {
   task: Task;
+
   setTask: StateUpdater<Task>;
   setPage: StateUpdater<Page>;
   autoFocus?: boolean;
   showDue?: boolean;
 }) => {
-  const nameRef = useRef<HTMLInputElement>(null);
+  const descriptionRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     if (autoFocus) {
-      nameRef.current.focus();
+      descriptionRef.current.focus();
     }
   }, [autoFocus]);
 
@@ -200,7 +201,6 @@ const InfoPage = ({
         />
 
         <input
-          ref={nameRef}
           value={task.name}
           onInput={({ currentTarget: { value } }) => {
             setTask(task => ({ ...task, name: value }));
@@ -211,6 +211,7 @@ const InfoPage = ({
       </div>
 
       <textarea
+        ref={descriptionRef}
         value={task.description || ""}
         onInput={({ currentTarget: { value } }) => {
           setTask(task => ({ ...task, description: value }));
@@ -409,6 +410,8 @@ const IconPage = ({
   setPage: StateUpdater<Page>;
 }) => {
   const [search, setSearch] = useConfig("iconQuery");
+  const [scroll, setScroll] = useConfig("iconListScroll");
+
   const results = useMemo(() => {
     const set = new Set(iconDb.search(search));
 
@@ -416,7 +419,22 @@ const IconPage = ({
     return icons.filter(icon => set.has(icon));
   }, [search]);
 
+  const listRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    listRef.current.scrollTo({ top: scroll });
+  }, []); // only on init
+
+  useEffect(() => {
+    const handle = () => {
+      setScroll(listRef.current.scrollTop);
+    };
+
+    listRef.current.addEventListener("scroll", handle);
+
+    return () => listRef.current.removeEventListener("scroll", handle);
+  }, [setScroll]);
 
   useEffect(() => inputRef.current.focus(), []);
 
@@ -430,7 +448,7 @@ const IconPage = ({
         placeholder="Search icons"
       />
 
-      <div className="w-64 h-32 overflow-y-auto">
+      <div ref={listRef} className="w-64 h-32 overflow-y-auto">
         {useMemo(
           () =>
             results.map(icon => (

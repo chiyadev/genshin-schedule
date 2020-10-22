@@ -90,6 +90,7 @@ export type Configs = {
   tasks: Task[];
   customizeQuery: string;
   iconQuery: string;
+  iconListScroll: number;
   mapState: MapLocation & { zoom: number };
   mapCreateTask: Task & { visible: boolean };
   mapFocusedTask: string | false;
@@ -120,6 +121,7 @@ export const DefaultConfigs: Configs = {
   tasks: [],
   customizeQuery: "",
   iconQuery: "",
+  iconListScroll: 0,
   mapState: {
     lat: -24.83,
     lng: 54.73,
