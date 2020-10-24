@@ -8,6 +8,10 @@ import Checkbox from "../../checkbox";
 import { arrayToggle, useTabTitle } from "../../utils";
 import WhiteCard from "../../whiteCard";
 import { memo } from "preact/compat";
+import { CommonMaterial } from "../../db/commonMaterials";
+import { randomStr } from "../../random";
+import { route } from "preact-router";
+import { FaPlus } from "react-icons/fa";
 
 const WeaponInfo = ({ weapon }: { weapon: string }) => {
   const info = useMemo(() => Weapons.find(c => c.name === weapon), [weapon]);
@@ -39,20 +43,27 @@ const Inner = ({ weapon }: { weapon: Weapon }) => {
         </div>
       </a>
 
-      <div className="py-4 flex flex-col space-y-4">
-        <WeaponMat material={weapon.material} />
-      </div>
+      <WeaponMat weapon={weapon} material={weapon.material} />
 
-      <div className="py-4 text-sm">
-        <Toggle weapon={weapon} />
-      </div>
+      {weapon.commonMaterials.map(material => (
+        <CommonMat key={material.name} weapon={weapon} material={material} />
+      ))}
     </WhiteCard>
   );
 };
 
-const WeaponMat = ({ material }: { material: WeaponMaterial }) => {
+const WeaponMat = ({
+  weapon,
+  material
+}: {
+  weapon: Weapon;
+  material: WeaponMaterial;
+}) => {
+  const [list, setList] = useConfig("weapons");
+  const exists = useMemo(() => list.includes(weapon.name), [list, weapon]);
+
   return (
-    <div className="space-y-2">
+    <div className="py-4 space-y-4 text-sm flex flex-col">
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
           <img
@@ -67,32 +78,75 @@ const WeaponMat = ({ material }: { material: WeaponMaterial }) => {
         </div>
       </a>
 
-      <div className="pl-12 mx-2 text-sm">
-        <DropLabel item={material} />
-      </div>
+      <DropLabel item={material} />
+
+      <Checkbox
+        value={exists}
+        setValue={value => {
+          setList(list => arrayToggle(list, weapon.name, value));
+        }}
+      >
+        <div className="inline-block align-middle ml-2">
+          <div>Show on schedule</div>
+
+          <div className="text-xs text-gray-600">
+            Scheduled domains will appear on the days they are available.
+          </div>
+        </div>
+      </Checkbox>
     </div>
   );
 };
 
-const Toggle = ({ weapon }: { weapon: Weapon }) => {
-  const [list, setList] = useConfig("weapons");
-  const exists = useMemo(() => list.includes(weapon.name), [list, weapon]);
+const CommonMat = ({
+  weapon,
+  material
+}: {
+  weapon: Weapon;
+  material: CommonMaterial;
+}) => {
+  const [center] = useConfig("mapState");
+  const [, setTask] = useConfig("mapCreateTask");
 
   return (
-    <Checkbox
-      value={exists}
-      setValue={value => {
-        setList(list => arrayToggle(list, weapon.name, value));
-      }}
-    >
-      <div className="inline-block align-middle ml-2">
-        <div>Show on schedule</div>
-
-        <div className="text-xs text-gray-600">
-          Scheduled domains will appear on the days they are available.
+    <div className="py-4 space-y-4">
+      <a href={material.wiki}>
+        <div className="space-x-2 flex flex-row">
+          <img
+            alt={material.name}
+            src={`/assets/game/${material.item}.png`}
+            className="w-12 h-12 object-contain"
+          />
+          <div className="flex flex-col justify-center">
+            <div className="text-lg">{material.name}</div>
+            <div className="text-xs text-gray-600">{material.type}</div>
+          </div>
         </div>
+      </a>
+
+      <div className="text-sm">
+        <span
+          className="cursor-pointer"
+          onClick={() => {
+            setTask(task => ({
+              ...task,
+              id: randomStr(6),
+              location: center,
+              name: material.name,
+              icon: material.item,
+              description: `ascension material for ${weapon.name}`,
+              visible: true
+            }));
+
+            route("/map");
+          }}
+        >
+          <FaPlus className="inline" />
+
+          <span className="align-middle"> Add as task</span>
+        </span>
       </div>
-    </Checkbox>
+    </div>
   );
 };
 

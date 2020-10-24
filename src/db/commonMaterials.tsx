@@ -57,8 +57,8 @@ export const ChaosPart: CommonMaterial = {
 export const MistGrass: CommonMaterial = {
   type: "Common Ascension Material",
   name: "Mist Grass",
-  wiki: "https://genshin-impact.fandom.com/wiki/Mist_Flower_Pollen",
-  item: "Mist Flower Pollen"
+  wiki: "https://genshin-impact.fandom.com/wiki/Mist_Grass_Pollen",
+  item: "Mist Grass Pollen"
 };
 
 export const FatuiKnife: CommonMaterial = {
