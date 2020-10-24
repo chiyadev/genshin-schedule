@@ -67,7 +67,9 @@ const WeaponMat = ({ material }: { material: WeaponMaterial }) => {
         </div>
       </a>
 
-      <DropLabel item={material} />
+      <div className="pl-12 mx-2 text-sm">
+        <DropLabel item={material} />
+      </div>
     </div>
   );
 };

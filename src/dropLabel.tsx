@@ -36,7 +36,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   }
 
   return (
-    <div className="pl-12 mx-2 text-sm">
+    <span>
       <span className="align-middle">Dropped from </span>
 
       <a href={domain.wiki} className="font-bold">
@@ -50,7 +50,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
       </a>
 
       <span className="align-middle"> on {dropDays.join(", ")}</span>
-    </div>
+    </span>
   );
 };
 
