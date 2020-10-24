@@ -3,6 +3,7 @@ import { StateUpdater, useMemo } from "preact/hooks";
 import { h } from "preact";
 import WhiteCard from "./whiteCard";
 import { useServerDate } from "./time";
+import { memo } from "preact/compat";
 
 export function useCurrentTasks() {
   const [tasks] = useConfig("tasks");
@@ -82,4 +83,4 @@ const TaskDisplay = ({ task }: { task: Task; setTask: StateUpdater<Task> }) => {
   );
 };
 
-export default TaskListCard;
+export default memo(TaskListCard);
