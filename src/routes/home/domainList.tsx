@@ -231,8 +231,8 @@ const MaterialDisplay = ({
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
           <img
-            alt={material.name}
-            src={`/assets/game/${material.name}.png`}
+            alt={material.item}
+            src={`/assets/game/${material.item}.png`}
             className="w-10 h-10"
           />
           <div className="flex flex-col justify-center">

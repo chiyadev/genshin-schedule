@@ -57,7 +57,7 @@ const WeaponMat = ({ material }: { material: WeaponMaterial }) => {
         <div className="space-x-2 flex flex-row">
           <img
             alt={material.name}
-            src={`/assets/game/${material.name}.png`}
+            src={`/assets/game/${material.item}.png`}
             className="w-12 h-12"
           />
           <div className="flex flex-col justify-center">

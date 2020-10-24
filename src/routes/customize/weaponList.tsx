@@ -99,7 +99,7 @@ const WeaponIcon = ({ weapon }: { weapon: Weapon }) => {
         <div className="text-xs text-gray-600 truncate">
           <img
             alt={weapon.material.name}
-            src={`/assets/game/${weapon.material.name}.png`}
+            src={`/assets/game/${weapon.material.item}.png`}
             className="w-3 h-3 inline opacity-75"
           />
 
