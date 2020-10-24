@@ -7,118 +7,131 @@ import {
   MistVeiledElixir,
   WeaponMaterial
 } from "./weaponMaterials";
+import {
+  BoneShard,
+  ChaosPart,
+  CommonMaterial,
+  FatuiInsignia,
+  FatuiKnife,
+  HilichurlArrowhead,
+  HilichurlHorn,
+  HilichurlMask,
+  LeyLine,
+  MistGrass,
+  SamachurlScroll,
+  Slime,
+  TreasureHoarderInsignia,
+  WhopperflowerNectar
+} from "./commonMaterials";
 
-type WeaponPartial = {
-  material: WeaponMaterial;
-};
-
-export type Weapon = WeaponPartial & {
+export type Weapon = {
   type: "Weapon";
   name: string;
   wiki: string;
+  material: WeaponMaterial;
+  commonMaterials: CommonMaterial[];
 };
 
 export const Weapons: Weapon[] = [];
 
-function generate(partial: WeaponPartial, names: string[]) {
-  for (const name of names) {
-    Weapons.push({
-      type: "Weapon",
-      name,
-      wiki: `https://genshin-impact.fandom.com/wiki/${encodeURIComponent(
-        name.replace(" ", "_")
-      )}`,
-      ...partial
-    });
-  }
+function add(
+  name: string,
+  material: WeaponMaterial,
+  commonMaterials: CommonMaterial[]
+) {
+  Weapons.push({
+    type: "Weapon",
+    name,
+    wiki: `https://genshin-impact.fandom.com/wiki/${encodeURIComponent(
+      name.replace(" ", "_")
+    )}`,
+    material,
+    commonMaterials
+  });
 }
 
-generate({ material: Decarabian }, [
-  "Aquila Favonia",
-  "Cool Steel",
-  "Favonius Codex",
-  "Favonius Sword",
-  "Ferrous Shadow",
-  "Magic Guide",
-  "Raven Bow",
-  "The Bell",
-  "The Stringless",
-  "The Viridescent Hunt"
-]);
+add("Aquila Favonia", Decarabian, [HilichurlHorn, HilichurlArrowhead]);
+add("Cool Steel", Decarabian, [HilichurlHorn, HilichurlArrowhead]);
+add("Favonius Codex", Decarabian, [HilichurlHorn, SamachurlScroll]);
+add("Favonius Sword", Decarabian, [HilichurlHorn, HilichurlArrowhead]);
+add("Ferrous Shadow", Decarabian, [HilichurlHorn, WhopperflowerNectar]);
+add("Magic Guide", Decarabian, [HilichurlHorn, Slime]);
+add("Raven Bow", Decarabian, [HilichurlHorn, HilichurlArrowhead]);
+add("The Bell", Decarabian, [HilichurlHorn, WhopperflowerNectar]);
+add("The Stringless", Decarabian, [HilichurlHorn, HilichurlArrowhead]);
+add("The Viridescent Hunt", Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 
-generate({ material: BorealWolf }, [
-  "Alley Hunter",
-  "Bloodtainted Greatsword",
-  "Harbinger of Dawn",
-  "Sacrificial Bow",
-  "Sacrificial Greatsword",
-  "Sharpshooter's Oath",
-  "Skyward Atlas",
-  "Skyward Blade",
-  "Skyward Harp",
-  "Skyward Pride",
-  "Sword of Descension",
-  "The Black Sword",
-  "The Flute",
-  "The Widsith",
-  "Thrilling Tales of Dragon Slayers",
-  "Wine and Song"
+add("Alley Hunter", BorealWolf, [LeyLine, TreasureHoarderInsignia]);
+add("Bloodtainted Greatsword", BorealWolf, [LeyLine, HilichurlArrowhead]);
+add("Harbinger of Dawn", BorealWolf, [LeyLine, Slime]);
+add("Sacrificial Bow", BorealWolf, [LeyLine, Slime]);
+add("Sacrificial Greatsword", BorealWolf, [LeyLine, HilichurlArrowhead]);
+add("Sharpshooter's Oath", BorealWolf, [LeyLine, Slime]);
+add("Skyward Atlas", BorealWolf, [LeyLine, HilichurlArrowhead]);
+add("Skyward Blade", BorealWolf, [LeyLine, Slime]);
+add("Skyward Harp", BorealWolf, [LeyLine, HilichurlArrowhead]);
+add("Skyward Pride", BorealWolf, [LeyLine, Slime]);
+add("Sword of Descension", BorealWolf, [LeyLine, TreasureHoarderInsignia]);
+add("The Black Sword", BorealWolf, [LeyLine, Slime]);
+add("The Flute", BorealWolf, [LeyLine, Slime]);
+add("The Widsith", BorealWolf, [LeyLine, HilichurlMask]);
+add("Thrilling Tales of Dragon Slayers", BorealWolf, [
+  LeyLine,
+  SamachurlScroll
 ]);
+add("Wine and Song", BorealWolf, [LeyLine, SamachurlScroll]);
 
-generate({ material: DandelionGladiator }, [
-  "Beginner's Protector",
-  "Favonius Greatsword",
-  "Favonius Lance",
-  "Favonius Warbow",
-  "Lost Prayer to the Sacred Winds",
-  "Otherworldly Story",
-  "Recurve Bow",
-  "Sacrificial Fragments",
-  "Sacrificial Sword",
-  "Skyward Spine",
-
-  "Traveler's Handy Sword",
-  "White Iron Greatsword",
-  "Wolf's Gravestone"
+add("Beginner's Protector", DandelionGladiator, [ChaosPart, SamachurlScroll]);
+add("Favonius Greatsword", DandelionGladiator, [ChaosPart, FatuiInsignia]);
+add("Favonius Lance", DandelionGladiator, [ChaosPart, Slime]);
+add("Favonius Warbow", DandelionGladiator, [ChaosPart, WhopperflowerNectar]);
+add("Lost Prayer to the Sacred Winds", DandelionGladiator, [ChaosPart, Slime]);
+add("Otherworldly Story", DandelionGladiator, [ChaosPart, HilichurlMask]);
+add("Recurve Bow", DandelionGladiator, [ChaosPart, SamachurlScroll]);
+add("Sacrificial Fragments", DandelionGladiator, [
+  ChaosPart,
+  TreasureHoarderInsignia
 ]);
+add("Sacrificial Sword", DandelionGladiator, [ChaosPart, SamachurlScroll]);
+add("Skyward Spine", DandelionGladiator, [ChaosPart, SamachurlScroll]);
+add("Traveler's Handy Sword", DandelionGladiator, [ChaosPart, SamachurlScroll]);
+add("White Iron Greatsword", DandelionGladiator, [ChaosPart, Slime]);
+add("Wolf's Gravestone", DandelionGladiator, [ChaosPart, SamachurlScroll]);
 
-generate({ material: Guyun }, [
-  "Blackcliff Warbow",
-  "Crescent Pike",
-  "Dark Iron Sword",
-  "Emerald Orb",
-  "Lion's Roar",
-  "Primordial Jade Winged-Spear",
-  "Rust",
-  "Slingshot",
-  "Solar Pearl",
-  "White Tassel",
-  "Whiteblind"
-]);
+add("Blackcliff Warbow", Guyun, [FatuiKnife, TreasureHoarderInsignia]);
+add("Crescent Pike", Guyun, [FatuiKnife, TreasureHoarderInsignia]);
+add("Dark Iron Sword", Guyun, [FatuiKnife, HilichurlMask]);
+add("Emerald Orb", Guyun, [FatuiKnife, TreasureHoarderInsignia]);
+add("Lion's Roar", Guyun, [FatuiKnife, TreasureHoarderInsignia]);
+add("Primordial Jade Winged-Spear", Guyun, [FatuiKnife, FatuiInsignia]);
+add("Rust", Guyun, [FatuiKnife, HilichurlMask]);
+add("Slingshot", Guyun, [FatuiKnife, HilichurlMask]);
+add("Solar Pearl", Guyun, [FatuiKnife, WhopperflowerNectar]);
+add("White Tassel", Guyun, [FatuiKnife, FatuiInsignia]);
+add("Whiteblind", Guyun, [FatuiKnife, TreasureHoarderInsignia]);
 
-generate({ material: MistVeiledElixir }, [
-  "Debate Club",
-  "Dragon's Bane",
-  "Eye of Perception",
-  "Fillet Blade",
-  "Halberd",
-  "Messenger",
-  "Prototype Crescent",
-  "Prototype Malice",
-  "Prototype Rancour",
-  "Rainslasher",
-  "Twin Nephrite"
+add("Debate Club", MistVeiledElixir, [MistGrass, HilichurlMask]);
+add("Dragon's Bane", MistVeiledElixir, [MistGrass, SamachurlScroll]);
+add("Eye of Perception", MistVeiledElixir, [MistGrass, HilichurlMask]);
+add("Fillet Blade", MistVeiledElixir, [MistGrass, TreasureHoarderInsignia]);
+add("Halberd", MistVeiledElixir, [MistGrass, WhopperflowerNectar]);
+add("Messenger", MistVeiledElixir, [MistGrass, TreasureHoarderInsignia]);
+add("Prototype Crescent", MistVeiledElixir, [
+  MistGrass,
+  TreasureHoarderInsignia
 ]);
+add("Prototype Malice", MistVeiledElixir, [MistGrass, HilichurlArrowhead]);
+add("Prototype Rancour", MistVeiledElixir, [MistGrass, FatuiInsignia]);
+add("Rainslasher", MistVeiledElixir, [MistGrass, SamachurlScroll]);
+add("Twin Nephrite", MistVeiledElixir, [MistGrass, FatuiInsignia]);
 
-generate({ material: Aerosiderite }, [
-  "Black Tassel",
-  "Compound Bow",
-  "Iron Sting",
-  "Mappa Mare",
-  "Prototype Aminus",
-  "Prototype Grudge",
-  "Royal Grimoire",
-  "Serpent Spine",
-  "Skyrider Greatsword",
-  "Skyrider Sword"
-]);
+add("Black Tassel", Aerosiderite, [BoneShard, HilichurlArrowhead]);
+add("Compound Bow", Aerosiderite, [BoneShard, FatuiInsignia]);
+add("Iron Sting", Aerosiderite, [BoneShard, WhopperflowerNectar]);
+add("Mappa Mare", Aerosiderite, [BoneShard, Slime]);
+add("Prototype Aminus", Aerosiderite, [BoneShard, HilichurlMask]);
+add("Prototype Grudge", Aerosiderite, [BoneShard, HilichurlMask]);
+add("Royal Grimoire", Aerosiderite, [BoneShard, Slime]);
+add("Serpent Spine", Aerosiderite, [BoneShard, WhopperflowerNectar]);
+add("Skyrider Greatsword", Aerosiderite, [BoneShard, TreasureHoarderInsignia]);
+add("Skyrider Sword", Aerosiderite, [BoneShard, FatuiInsignia]);
