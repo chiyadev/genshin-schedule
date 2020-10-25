@@ -16,6 +16,7 @@ import { cx } from "emotion";
 import { memo } from "preact/compat";
 import { useServerDate } from "./time";
 import LazyLoad from "react-lazyload";
+import { CommonMaterials } from "./db/commonMaterials";
 
 type TimeUnit = "week" | "day" | "hour" | "minute";
 const TimeUnits: TimeUnit[] = ["week", "day", "hour", "minute"];
@@ -244,7 +245,7 @@ const IntervalPicker = ({
     <div className="flex flex-row text-xs">
       <div>
         <FaSyncAlt className="inline" />
-        <span className="align-middle"> Refreshes every:</span>
+        <span className="align-middle"> Respawns every:</span>
       </div>
 
       <input
@@ -344,21 +345,10 @@ addIcons("character ascension material", [
   "Agnidus Agate Sliver"
 ]);
 
-addIcons("common ascension material", [
-  "Slime Condensate",
-  "Damaged Mask",
-  "Firm Arrowhead",
-  "Divining Scroll",
-  "Heavy Horn",
-  "Dead Ley Line Branch",
-  "Chaos Device",
-  "Mist Grass Pollen",
-  "Hunter's Sacrificial Knife",
-  "Recruit's Insignia",
-  "Treasure Hoarder Insignia",
-  "Fragile Bone Shard",
-  "Whopperflower Nectar"
-]);
+addIcons(
+  "common ascension material",
+  CommonMaterials.map(material => material.item)
+);
 
 addIcons("local specialty mondstadt", [
   "Calla Lily",

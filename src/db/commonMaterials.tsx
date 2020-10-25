@@ -43,8 +43,8 @@ export const HilichurlHorn: CommonMaterial = {
 export const LeyLine: CommonMaterial = {
   type: "Common Ascension Material",
   name: "Ley Line",
-  wiki: "https://genshin-impact.fandom.com/wiki/Dead_Ley_Line_Branches",
-  item: "Dead Ley Line Branches"
+  wiki: "https://genshin-impact.fandom.com/wiki/Dead_Ley_Line_Branch",
+  item: "Dead Ley Line Branch"
 };
 
 export const ChaosPart: CommonMaterial = {
