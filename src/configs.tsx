@@ -88,6 +88,7 @@ export type Configs = {
   characters: string[];
   weapons: string[];
   artifacts: string[];
+  itemNotes: { [key: string]: string };
   tasks: Task[];
   customizeQuery: string;
   iconQuery: string;
@@ -110,6 +111,11 @@ export type Task = {
   refreshTime: number;
 };
 
+const defaultMapCenter = {
+  lat: -24.83,
+  lng: 54.73
+};
+
 export const DefaultConfigs: Configs = {
   server: "America",
   offsetDays: 0,
@@ -120,20 +126,20 @@ export const DefaultConfigs: Configs = {
   characters: [],
   weapons: [],
   artifacts: [],
+  itemNotes: {},
   tasks: [],
   customizeQuery: "",
   iconQuery: "",
   iconListScroll: 0,
   mapState: {
-    lat: -24.83,
-    lng: 54.73,
+    ...defaultMapCenter,
     zoom: 5.6
   },
   mapCreateTask: {
     id: "temp",
     name: "Iron Chunk",
     icon: "Iron Chunk",
-    location: { lat: 0, lng: 0 },
+    location: defaultMapCenter,
     dueTime: 0,
     refreshTime: 86400000,
     visible: false

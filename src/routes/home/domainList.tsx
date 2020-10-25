@@ -308,7 +308,10 @@ const MaterialDisplay = ({
             />
 
             <div className="flex flex-col justify-center text-sm">
-              {item.name}
+              <div>
+                {item.name}
+                <NoteText name={item.name} />
+              </div>
             </div>
           </Link>
         ))}
@@ -333,12 +336,26 @@ const ArtifactDisplay = ({ artifacts }: { artifacts: Artifact[] }) => {
           />
 
           <div className="flex flex-col justify-center text-sm">
-            {item.name}
+            <div>
+              {item.name}
+              <NoteText name={item.name} />
+            </div>
           </div>
         </Link>
       ))}
     </div>
   );
+};
+
+const NoteText = ({ name }: { name: string }) => {
+  const [notes] = useConfig("itemNotes");
+  const note = notes[name];
+
+  if (!note) {
+    return null;
+  }
+
+  return <span className="text-gray-600"> &mdash; {note}</span>;
 };
 
 export default memo(DomainList);

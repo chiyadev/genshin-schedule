@@ -11,7 +11,7 @@ import { memo } from "preact/compat";
 import { CommonMaterial } from "../../db/commonMaterials";
 import { randomStr } from "../../random";
 import { route } from "preact-router";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus, FaRegStickyNote } from "react-icons/fa";
 
 const WeaponInfo = ({ weapon }: { weapon: string }) => {
   const info = useMemo(() => Weapons.find(c => c.name === weapon), [weapon]);
@@ -48,6 +48,8 @@ const Inner = ({ weapon }: { weapon: Weapon }) => {
       {weapon.commonMaterials.map(material => (
         <CommonMat key={material.name} weapon={weapon} material={material} />
       ))}
+
+      <Notes weapon={weapon} />
     </WhiteCard>
   );
 };
@@ -144,6 +146,31 @@ const CommonMat = ({
           <span className="align-middle"> Add as task</span>
         </span>
       </div>
+    </div>
+  );
+};
+
+const Notes = ({ weapon }: { weapon: Weapon }) => {
+  const [notes, setNotes] = useConfig("itemNotes");
+
+  return (
+    <div className="py-4 space-y-2">
+      <div className="text-lg">
+        <FaRegStickyNote className="inline" />
+        <span className="align-middle"> Additional notes</span>
+      </div>
+
+      <textarea
+        className="w-full text-sm"
+        placeholder="e.g. Lumine's weapon"
+        value={notes[weapon.name] || ""}
+        onInput={({ currentTarget: { value } }) => {
+          setNotes(notes => ({
+            ...notes,
+            [weapon.name]: value
+          }));
+        }}
+      />
     </div>
   );
 };
