@@ -5,13 +5,20 @@ import { useMemo } from "preact/hooks";
 import { getServerDayOfWeek, useServerDate } from "../../time";
 import { useConfig } from "../../configs";
 import { Character, Characters } from "../../db/characters";
-import { DomainCategories } from "../../db/domainCategories";
+import {
+  DomainCategories,
+  DomainCategory,
+  DomainOfBlessing,
+  DomainOfForgery,
+  DomainOfMastery,
+  Trounce
+} from "../../db/domainCategories";
 import { DomainDropSet, DomainDropSets } from "../../db/domainDropSets";
 import { TalentMaterial } from "../../db/talentMaterials";
 import { Link } from "preact-router";
 import { WeaponMaterial } from "../../db/weaponMaterials";
 import { Weapon, Weapons } from "../../db/weapons";
-import { Regions } from "../../db/regions";
+import { Region, Regions } from "../../db/regions";
 import WhiteCard from "../../whiteCard";
 import { FaTimes } from "react-icons/fa";
 import SectionHeading from "./sectionHeading";
@@ -20,6 +27,8 @@ import { Artifact, Artifacts } from "../../db/artifacts";
 
 type ScheduledDomain = {
   domain: Domain;
+  region?: Region;
+  category?: DomainCategory;
   talentMaterials: {
     material: TalentMaterial;
     characters: Character[];
@@ -46,9 +55,16 @@ const DomainList = () => {
       let scheduled = results.find(result => result.domain === domain);
 
       if (!scheduled) {
+        const region = Regions.find(region => region.domains.includes(domain));
+        const category = DomainCategories.find(category =>
+          category.domains.includes(domain)
+        );
+
         results.push(
           (scheduled = {
             domain,
+            region,
+            category,
             talentMaterials: [],
             weaponMaterials: [],
             artifacts: []
@@ -140,7 +156,19 @@ const DomainList = () => {
       }
     }
 
-    return results.sort((a, b) => a.domain.name.localeCompare(b.domain.name));
+    const cates: (DomainCategory | undefined)[] = [
+      Trounce,
+      DomainOfMastery,
+      DomainOfForgery,
+      DomainOfBlessing
+    ];
+
+    return results.sort((a, b) => {
+      const category = cates.indexOf(a.category) - cates.indexOf(b.category);
+      if (category !== 0) return category;
+
+      return a.domain.name.localeCompare(b.domain.name);
+    });
   }, [characters, weapons, artifacts, dayOfWeek]);
 
   return useMemo(
@@ -174,18 +202,12 @@ const DomainList = () => {
 
 const DomainDisplay = ({
   domain,
+  region,
+  category,
   talentMaterials,
   weaponMaterials,
   artifacts
 }: ScheduledDomain) => {
-  const region = useMemo(() => {
-    return Regions.find(region => region.domains.includes(domain));
-  }, [domain]);
-
-  const category = useMemo(() => {
-    return DomainCategories.find(category => category.domains.includes(domain));
-  }, [domain]);
-
   return (
     <WhiteCard divide>
       <a href={domain.wiki}>
@@ -199,7 +221,9 @@ const DomainDisplay = ({
           <div className="flex flex-col justify-center">
             <div className="text-lg font-bold">{domain.name}</div>
             <div className="text-xs text-gray-600">
-              {category?.name}, {region?.name}
+              {category && <a href={category.wiki}>{category.name}</a>}
+              {", "}
+              {region && <a href={region.wiki}>{region.name}</a>}
             </div>
           </div>
         </div>
@@ -233,7 +257,8 @@ const DomainDisplay = ({
       )}
 
       {useMemo(
-        () => artifacts.length && <ArtifactDisplay artifacts={artifacts} />,
+        () =>
+          artifacts.length !== 0 && <ArtifactDisplay artifacts={artifacts} />,
         [artifacts]
       )}
     </WhiteCard>
