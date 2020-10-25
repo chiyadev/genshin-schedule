@@ -2,7 +2,12 @@ import { h } from "preact";
 import { css, cx } from "emotion";
 import { useEffect, useMemo, useRef, useState } from "preact/hooks";
 import { useConfig } from "../../configs";
-import { clampResin, getResinRecharge, ResinCap } from "../../db/resins";
+import {
+  clampResin,
+  getResinRecharge,
+  ResinCap,
+  ResinRechargePerMinute
+} from "../../db/resins";
 import { useServerDate } from "../../time";
 import WhiteCard from "../../whiteCard";
 import SectionHeading from "./sectionHeading";
@@ -86,7 +91,7 @@ const ResinCalculator = () => {
             }
           />
 
-          <div className="flex flex-col justify-center">/{ResinCap}</div>
+          <div className="flex flex-col justify-center">/ {ResinCap}</div>
         </div>
 
         <ResinExtrapolations current={current} />
@@ -96,15 +101,16 @@ const ResinCalculator = () => {
 };
 
 const ResinExtrapolations = ({ current }: { current: number }) => {
+  const [{ time: startTime }] = useConfig("resin");
+
   const values = useMemo(() => {
-    const values: { [key: string]: number } = {};
-    let last = current;
+    const values: { time: string; value: number }[] = [];
 
     const addValue = (hours: number) => {
-      if (last < 120) {
-        last = values[hours] = clampResin(
-          current + getResinRecharge(hours * 3600000)
-        );
+      const value = clampResin(current + getResinRecharge(hours * 3600000));
+
+      if (value < 120) {
+        values.push({ time: `${hours} hours`, value });
       }
     };
 
@@ -114,19 +120,39 @@ const ResinExtrapolations = ({ current }: { current: number }) => {
       addValue(i);
     }
 
-    return values;
-  }, [current]);
+    const capRemaining = (ResinCap - current) / ResinRechargePerMinute;
+    const capDate = new Date(startTime + capRemaining * 60000);
+    const capHours = Math.floor(capRemaining / 60);
+    const capMinutes = Math.floor(capRemaining % 60);
+    const capHoursText = `${capHours} hour${capHours === 1 ? "" : "s"}`;
+    const capMinutesText = `${capMinutes} minutes`;
 
-  const hours = Object.keys(values);
+    values.push({
+      time: [
+        capHours === 0 ? "" : capHoursText,
+        capMinutes === 0 ? "" : capMinutesText,
+        `(${capDate
+          .getHours()
+          .toString()
+          .padStart(2, "0")}:${capDate
+          .getMinutes()
+          .toString()
+          .padStart(2, "0")})`
+      ].join(" "),
+      value: ResinCap
+    });
+
+    return values;
+  }, [current, startTime]);
 
   return (
     <div className="text-xs text-gray-600 ml-2 pl-10">
       {current >= 120 ? (
         <div>Your resins are full!</div>
       ) : (
-        hours.map(hour => (
-          <div key={hour}>
-            {values[hour]} in {hour} hours
+        values.map(({ time, value }) => (
+          <div key={time}>
+            {value} in {time}
           </div>
         ))
       )}
