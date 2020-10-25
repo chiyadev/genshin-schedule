@@ -75,8 +75,6 @@ const Info = () => {
           Please refer to the{" "}
           <a
             href="https://github.com/chiyadev/genshin-schedule/wiki"
-            target="_blank"
-            rel="noopener noreferrer"
             className="text-blue-600"
           >
             website guide

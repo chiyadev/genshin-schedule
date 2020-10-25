@@ -7,11 +7,7 @@ const Footer = () => {
   return (
     <div className="container mx-auto p-4 text-xs text-gray-600 space-y-2">
       <div>
-        <a
-          href="https://github.com/chiyadev/genshin-schedule/wiki"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/chiyadev/genshin-schedule/wiki">
           <FaQuestion className="inline" />
           <span className="align-middle">
             {" "}
