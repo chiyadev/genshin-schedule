@@ -88,7 +88,7 @@ const CharacterIcon = ({ character }: { character: Character }) => {
         { "opacity-50": alreadyAdded }
       )}
     >
-      <LazyLoad>
+      <LazyLoad height="5rem">
         <img
           alt={character.name}
           className="w-20 h-20 mx-auto mt-2 rounded-full"

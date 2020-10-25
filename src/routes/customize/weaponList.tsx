@@ -85,7 +85,7 @@ const WeaponIcon = ({ weapon }: { weapon: Weapon }) => {
         { "opacity-50": alreadyAdded }
       )}
     >
-      <LazyLoad>
+      <LazyLoad height="5rem">
         <img
           alt={weapon.name}
           src={`/assets/game/${weapon.name}.png`}

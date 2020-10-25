@@ -19,7 +19,7 @@ const Search = ({
             "font-bold": !!value
           }
         )}
-        placeholder="Search characters, weapons and more."
+        placeholder="Search characters, weapons and artifacts."
         value={value}
         onInput={({ currentTarget: { value } }) => setValue(value)}
       />
