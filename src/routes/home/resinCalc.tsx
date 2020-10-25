@@ -1,5 +1,4 @@
 import { h } from "preact";
-
 import { css, cx } from "emotion";
 import { useEffect, useMemo, useRef, useState } from "preact/hooks";
 import { useConfig } from "../../configs";
@@ -11,13 +10,13 @@ import { memo } from "preact/compat";
 
 function useMeasuredTextWidth(className: string, text: string) {
   // fixes https://github.com/chiyadev/genshin-schedule/issues/2
-  const [, update] = useState(0);
+  const [update, setUpdate] = useState(0);
 
   useEffect(() => {
-    update(i => i + 1);
+    setUpdate(i => i + 1);
 
     if ("fonts" in document) {
-      (document as any).fonts.ready.then(() => update(i => i + 1));
+      (document as any).fonts.ready.then(() => setUpdate(i => i + 1));
     }
   }, []);
 
@@ -31,7 +30,7 @@ function useMeasuredTextWidth(className: string, text: string) {
     document.body.removeChild(span);
 
     return width;
-  }, [className, text]);
+  }, [update, className, text]);
 }
 
 const ResinCalculator = () => {
