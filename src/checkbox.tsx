@@ -11,7 +11,7 @@ const Checkbox = ({
   children?: ComponentChildren;
 }) => {
   return (
-    <label className="flex flex-row">
+    <label className="flex flex-row space-x-2">
       <div className="flex flex-col justify-center">
         <input
           type="checkbox"
@@ -20,7 +20,7 @@ const Checkbox = ({
         />
       </div>
 
-      {children}
+      <div>{children}</div>
     </label>
   );
 };

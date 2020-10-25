@@ -89,12 +89,10 @@ const TalentMat = ({
           setList(list => arrayToggle(list, character.name, value));
         }}
       >
-        <div className="inline-block align-middle ml-2">
-          <div>Show on schedule</div>
+        <div>Show on schedule</div>
 
-          <div className="text-xs text-gray-600">
-            Scheduled domains will appear on the days they are available.
-          </div>
+        <div className="text-xs text-gray-600">
+          Scheduled domains will appear on the days they are available.
         </div>
       </Checkbox>
     </div>
