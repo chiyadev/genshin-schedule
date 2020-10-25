@@ -47,7 +47,9 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
         <span className="align-middle"> {domain.name}</span>
       </a>
 
-      <span className="align-middle"> on {dropDays.join(", ")}</span>
+      {dropDays.length !== 7 && (
+        <span className="align-middle"> on {dropDays.join(", ")}</span>
+      )}
     </span>
   );
 };
