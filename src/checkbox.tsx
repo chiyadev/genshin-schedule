@@ -11,14 +11,16 @@ const Checkbox = ({
   children?: ComponentChildren;
 }) => {
   return (
-    <label>
-      <input
-        type="checkbox"
-        checked={value}
-        onChange={({ currentTarget: { checked } }) => setValue(checked)}
-      />
+    <label className="flex flex-row">
+      <div className="flex flex-col justify-center">
+        <input
+          type="checkbox"
+          checked={value}
+          onChange={({ currentTarget: { checked } }) => setValue(checked)}
+        />
+      </div>
 
-      <span> {children}</span>
+      {children}
     </label>
   );
 };
