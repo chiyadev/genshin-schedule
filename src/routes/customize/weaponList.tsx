@@ -52,7 +52,7 @@ const WeaponList = ({ search }: { search: string }) => {
       <div className="text-xl font-bold">
         <img
           alt="Weapon"
-          src="/assets/game/Aquila Favonia.png"
+          src="/assets/game/Skyward Pride.png"
           className="w-8 h-8 inline object-cover"
         />
 
