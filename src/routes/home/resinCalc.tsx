@@ -102,6 +102,7 @@ const ResinCalculator = () => {
 
 const ResinExtrapolations = ({ current }: { current: number }) => {
   const [{ time: startTime }] = useConfig("resin");
+  const date = useServerDate(60000);
 
   const values = useMemo(() => {
     const values: { time: string; value: number }[] = [];
@@ -120,10 +121,12 @@ const ResinExtrapolations = ({ current }: { current: number }) => {
       addValue(i);
     }
 
-    const capRemaining = (ResinCap - current) / ResinRechargePerMinute;
-    const capDate = new Date(startTime + capRemaining * 60000);
-    const capHours = Math.floor(capRemaining / 60);
-    const capMinutes = Math.floor(capRemaining % 60);
+    const capDate = new Date(
+      startTime + ((ResinCap - current) / ResinRechargePerMinute) * 60000
+    );
+    const capTime = capDate.getTime() - date.getTime();
+    const capHours = Math.floor(capTime / 3600000);
+    const capMinutes = Math.floor((capTime % 3600000) / 60000);
     const capHoursText = `${capHours} hour${capHours === 1 ? "" : "s"}`;
     const capMinutesText = `${capMinutes} minutes`;
 
@@ -143,7 +146,7 @@ const ResinExtrapolations = ({ current }: { current: number }) => {
     });
 
     return values;
-  }, [current, startTime]);
+  }, [current, startTime, date]);
 
   return (
     <div className="text-xs text-gray-600 ml-2 pl-10">
