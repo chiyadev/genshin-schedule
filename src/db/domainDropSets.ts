@@ -2,9 +2,14 @@ import {
   Adventurer,
   ArchaicPetra,
   Artifact,
+  Berserker,
+  BloodstainedChivalry,
   BraveHeart,
   CrimsonWitchOfFlames,
   DefendersWill,
+  Gambler,
+  GladiatorsFinale,
+  Instructor,
   Lavawalker,
   LuckyDog,
   MaidenBeloved,
@@ -12,11 +17,14 @@ import {
   NoblesseOblige,
   ResolutionOfSojourner,
   RetracingBolide,
+  Scholar,
+  TheExile,
   ThunderingFury,
   Thundersoother,
   TinyMiracle,
   TravelingDoctor,
-  ViridescentVenerer
+  ViridescentVenerer,
+  WanderersTroupe
 } from "./artifacts";
 import {
   Aerosiderite,
@@ -56,11 +64,12 @@ export const DaysOfWeek: DayOfWeek[] = [
   "Saturday"
 ];
 
+const Trounce: DayOfWeek[] = ["Monday"];
 const MonThur: DayOfWeek[] = ["Monday", "Thursday"];
 const TuesFri: DayOfWeek[] = ["Tuesday", "Friday"];
 const WedSat: DayOfWeek[] = ["Wednesday", "Saturday"];
 const Sun: DayOfWeek[] = ["Sunday"];
-const All: DayOfWeek[] = [...MonThur, ...TuesFri, ...WedSat, ...Sun];
+const AnyDay: DayOfWeek[] = [...MonThur, ...TuesFri, ...WedSat, ...Sun];
 
 export type DomainDropSet = {
   type: "Domain Drop Set";
@@ -175,32 +184,44 @@ export const TaishanMansionDrops4: DomainDropSet = {
 
 export const MidsummerCourtyardDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: All,
+  days: AnyDay,
   items: [Adventurer, ResolutionOfSojourner, ThunderingFury, Thundersoother]
 };
 
 export const DomainOfGuyunDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: All,
+  days: AnyDay,
   items: [LuckyDog, BraveHeart, ArchaicPetra, RetracingBolide]
 };
 
 export const ValleyOfRemembranceDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: All,
+  days: AnyDay,
   items: [TravelingDoctor, TinyMiracle, ViridescentVenerer, MaidenBeloved]
 };
 
 export const HiddenPalaceOfZhouFormulaDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: All,
+  days: AnyDay,
   items: [DefendersWill, MartialArtist, CrimsonWitchOfFlames, Lavawalker]
 };
 
 export const ClearPoolAndMountainCavernDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: All,
-  items: [NoblesseOblige]
+  days: AnyDay,
+  items: [BloodstainedChivalry, NoblesseOblige, Gambler, Scholar]
+};
+
+export const ConfrontStormterrorDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Trounce,
+  items: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe]
+};
+
+export const WolfOfTheNorthChallengeDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Trounce,
+  items: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe]
 };
 
 export const DomainDropSets = [
@@ -224,5 +245,7 @@ export const DomainDropSets = [
   DomainOfGuyunDrops,
   ValleyOfRemembranceDrops,
   HiddenPalaceOfZhouFormulaDrops,
-  ClearPoolAndMountainCavernDrops
+  ClearPoolAndMountainCavernDrops,
+  ConfrontStormterrorDrops,
+  WolfOfTheNorthChallengeDrops
 ];

@@ -2,6 +2,7 @@ import {
   AltarOfTheFalls,
   CityOfReflections,
   ClearPoolAndMountainCavernDrops,
+  ConfrontStormterrorDrops,
   DomainDropSet,
   DomainOfGuyunDrops,
   ElectrostaticField,
@@ -20,7 +21,8 @@ import {
   Thundercloud,
   ThunderingRuins,
   TrailGroundsOfThunder,
-  ValleyOfRemembranceDrops
+  ValleyOfRemembranceDrops,
+  WolfOfTheNorthChallengeDrops
 } from "./domainDropSets";
 
 export type Domain = {
@@ -116,6 +118,20 @@ export const TaishanMansion: Domain = {
   ]
 };
 
+export const ConfrontStormterror: Domain = {
+  type: "Domain",
+  name: "Confront Stormterror",
+  wiki: "https://genshin-impact.fandom.com/wiki/Confront_Stormterror",
+  drops: [ConfrontStormterrorDrops]
+};
+
+export const WolfOfTheNorthChallenge: Domain = {
+  type: "Domain",
+  name: "Wolf of the North Challenge",
+  wiki: "https://genshin-impact.fandom.com/wiki/Wolf_of_the_North_Challenge",
+  drops: [WolfOfTheNorthChallengeDrops]
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -125,5 +141,7 @@ export const Domains = [
   HiddenPalaceOfZhouFormula,
   ClearPoolAndMountainCavern,
   ForsakenRift,
-  TaishanMansion
+  TaishanMansion,
+  ConfrontStormterror,
+  WolfOfTheNorthChallenge
 ];
