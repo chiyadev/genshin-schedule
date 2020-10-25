@@ -10,47 +10,50 @@ import { h } from "preact";
 import { memo } from "preact/compat";
 
 const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
-  const domain = useMemo(() => {
-    const drops = DomainDropSets.find(d => d.items.includes(item));
-    return drops && Domains.find(d => d.drops.includes(drops));
+  const domains = useMemo(() => {
+    const drops = DomainDropSets.filter(d => d.items.includes(item));
+    return drops && Domains.filter(d => d.drops.some(d => drops.includes(d)));
   }, [item]);
 
-  const dropDays = useMemo(() => {
-    const days = new Set<DayOfWeek>();
-
-    if (domain) {
-      for (const drops of domain.drops) {
-        if (drops.items.includes(item)) {
-          for (const day of drops.days) {
-            days.add(day);
-          }
-        }
-      }
-    }
-
-    return DaysOfWeek.filter(d => days.has(d));
-  }, [domain, item]);
-
-  if (!domain) {
+  if (!domains.length) {
     return <span>This item does not drop from any domains.</span>;
   }
 
   return (
-    <span>
-      <a href={domain.wiki}>
-        <img
-          alt="Domain"
-          src="/assets/game/Domain.png"
-          className="w-4 h-4 inline"
-        />
+    <div>
+      {domains.map((domain, i) => {
+        const days = new Set<DayOfWeek>();
 
-        <span className="align-middle"> {domain.name}</span>
-      </a>
+        for (const drops of domain.drops) {
+          if (drops.items.includes(item)) {
+            for (const day of drops.days) {
+              days.add(day);
+            }
+          }
+        }
 
-      {dropDays.length !== 7 && (
-        <span className="align-middle"> on {dropDays.join(", ")}</span>
-      )}
-    </span>
+        return (
+          <a key={domain.name} href={domain.wiki} className="block">
+            <img
+              alt="Domain"
+              src="/assets/game/Domain.png"
+              className="w-4 h-4 inline"
+            />
+
+            <span className="align-middle">
+              <span> {domain.name}</span>
+
+              {days.size !== 7 && (
+                <span>
+                  {" "}
+                  on {DaysOfWeek.filter(d => days.has(d)).join(", ")}
+                </span>
+              )}
+            </span>
+          </a>
+        );
+      })}
+    </div>
   );
 };
 
