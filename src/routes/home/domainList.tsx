@@ -16,6 +16,7 @@ import WhiteCard from "../../whiteCard";
 import { FaTimes } from "react-icons/fa";
 import SectionHeading from "./sectionHeading";
 import { memo } from "preact/compat";
+import { Artifact, Artifacts } from "../../db/artifacts";
 
 type ScheduledDomain = {
   domain: Domain;
@@ -27,6 +28,7 @@ type ScheduledDomain = {
     material: WeaponMaterial;
     weapons: Weapon[];
   }[];
+  artifacts: Artifact[];
 };
 
 const DomainList = () => {
@@ -35,6 +37,7 @@ const DomainList = () => {
 
   const [characters] = useConfig("characters");
   const [weapons] = useConfig("weapons");
+  const [artifacts] = useConfig("artifacts");
 
   const domains = useMemo(() => {
     const results: ScheduledDomain[] = [];
@@ -47,7 +50,8 @@ const DomainList = () => {
           (scheduled = {
             domain,
             talentMaterials: [],
-            weaponMaterials: []
+            weaponMaterials: [],
+            artifacts: []
           })
         );
       }
@@ -121,8 +125,23 @@ const DomainList = () => {
       }
     }
 
+    for (const artName of artifacts) {
+      const artifact = Artifacts.find(artifact => artifact.name === artName);
+
+      if (artifact) {
+        for (const drops of currentDrops) {
+          if (drops.items.includes(artifact)) {
+            const domain = getDomainFromDrops(drops);
+            const scheduled = domain && getScheduled(domain);
+
+            scheduled && scheduled.artifacts.push(artifact);
+          }
+        }
+      }
+    }
+
     return results.sort((a, b) => a.domain.name.localeCompare(b.domain.name));
-  }, [characters, weapons, dayOfWeek]);
+  }, [characters, weapons, artifacts, dayOfWeek]);
 
   return useMemo(
     () => (
@@ -156,7 +175,8 @@ const DomainList = () => {
 const DomainDisplay = ({
   domain,
   talentMaterials,
-  weaponMaterials
+  weaponMaterials,
+  artifacts
 }: ScheduledDomain) => {
   const region = useMemo(() => {
     return Regions.find(region => region.domains.includes(domain));
@@ -211,6 +231,11 @@ const DomainDisplay = ({
           )),
         [weaponMaterials]
       )}
+
+      {useMemo(
+        () => artifacts.length && <ArtifactDisplay artifacts={artifacts} />,
+        [artifacts]
+      )}
     </WhiteCard>
   );
 };
@@ -263,6 +288,30 @@ const MaterialDisplay = ({
           </Link>
         ))}
       </div>
+    </div>
+  );
+};
+
+const ArtifactDisplay = ({ artifacts }: { artifacts: Artifact[] }) => {
+  return (
+    <div className="py-4 space-y-2">
+      {artifacts.map(item => (
+        <Link
+          key={item.name}
+          className="pl-4 flex flex-row space-x-2"
+          href={`/artifacts/${item.name}`}
+        >
+          <img
+            alt={item.name}
+            src={`/assets/game/${item.name}.png`}
+            className="w-6 h-6 object-fit"
+          />
+
+          <div className="flex flex-col justify-center text-sm">
+            {item.name}
+          </div>
+        </Link>
+      ))}
     </div>
   );
 };
