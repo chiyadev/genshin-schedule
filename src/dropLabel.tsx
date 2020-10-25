@@ -32,7 +32,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   }, [domain, item]);
 
   if (!domain) {
-    return null;
+    return <span>This item does not drop from any domains.</span>;
   }
 
   return (

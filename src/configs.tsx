@@ -87,6 +87,7 @@ export type Configs = {
   };
   characters: string[];
   weapons: string[];
+  artifacts: string[];
   tasks: Task[];
   customizeQuery: string;
   iconQuery: string;
@@ -118,6 +119,7 @@ export const DefaultConfigs: Configs = {
   },
   characters: [],
   weapons: [],
+  artifacts: [],
   tasks: [],
   customizeQuery: "",
   iconQuery: "",

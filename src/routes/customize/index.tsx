@@ -9,6 +9,7 @@ import { forceCheck } from "react-lazyload";
 import { useTabTitle } from "../../utils";
 import Miscellaneous from "./miscellaneous";
 import { memo } from "preact/compat";
+import ArtifactList from "./artifactList";
 
 const Customize = () => {
   const [search, setSearch] = useConfig("customizeQuery");
@@ -27,6 +28,7 @@ const Customize = () => {
       <div className="mt-8 space-y-8">
         <CharacterList search={search} />
         <WeaponList search={search} />
+        <ArtifactList search={search} />
         <Miscellaneous search={search} />
       </div>
     </div>

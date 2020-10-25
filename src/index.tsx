@@ -12,6 +12,7 @@ import Map from "./routes/map";
 import Customize from "./routes/customize";
 import CharacterInfo from "./routes/character";
 import WeaponInfo from "./routes/weapon";
+import ArtifactInfo from "./routes/artifact";
 import NotFound from "./routes/notfound";
 
 const specialRoutes = ["/map"];
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/customize" component={Customize} />
           <Route path="/characters/:character" component={CharacterInfo} />
           <Route path="/weapons/:weapon" component={WeaponInfo} />
+          <Route path="/artifacts/:artifact" component={ArtifactInfo} />
           <Route default component={NotFound} />
         </Router>
       </div>
