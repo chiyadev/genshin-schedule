@@ -1,6 +1,7 @@
 import { h } from "preact";
+
 import { css, cx } from "emotion";
-import { useMemo, useRef } from "preact/hooks";
+import { useEffect, useMemo, useRef, useState } from "preact/hooks";
 import { useConfig } from "../../configs";
 import { clampResin, getResinRecharge, ResinCap } from "../../db/resins";
 import { useServerDate } from "../../time";
@@ -9,6 +10,17 @@ import SectionHeading from "./sectionHeading";
 import { memo } from "preact/compat";
 
 function useMeasuredTextWidth(className: string, text: string) {
+  // fixes https://github.com/chiyadev/genshin-schedule/issues/2
+  const [, update] = useState(0);
+
+  useEffect(() => {
+    update(i => i + 1);
+
+    if ("fonts" in document) {
+      (document as any).fonts.ready.then(() => update(i => i + 1));
+    }
+  }, []);
+
   return useMemo(() => {
     const span = document.createElement("span");
     span.className = className;
