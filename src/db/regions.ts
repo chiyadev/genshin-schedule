@@ -1,6 +1,7 @@
 import {
   CeciliaGarden,
   ClearPoolAndMountainCavern,
+  ConfrontStormterror,
   Domain,
   DomainOfGuyun,
   ForsakenRift,
@@ -8,7 +9,8 @@ import {
   HiddenPalaceOfZhouFormula,
   MidsummerCourtyard,
   TaishanMansion,
-  ValleyOfRemembrance
+  ValleyOfRemembrance,
+  WolfOfTheNorthChallenge
 } from "./domains";
 import {
   Amber,
@@ -50,7 +52,9 @@ export const Mondstadt: Region = {
     CeciliaGarden,
     MidsummerCourtyard,
     ValleyOfRemembrance,
-    ForsakenRift
+    ForsakenRift,
+    ConfrontStormterror,
+    WolfOfTheNorthChallenge
   ],
   characters: [
     Amber,

@@ -1,6 +1,7 @@
 import {
   CeciliaGarden,
   ClearPoolAndMountainCavern,
+  ConfrontStormterror,
   Domain,
   DomainOfGuyun,
   ForsakenRift,
@@ -8,7 +9,8 @@ import {
   HiddenPalaceOfZhouFormula,
   MidsummerCourtyard,
   TaishanMansion,
-  ValleyOfRemembrance
+  ValleyOfRemembrance,
+  WolfOfTheNorthChallenge
 } from "./domains";
 
 export type DomainCategory = {
@@ -45,8 +47,16 @@ export const DomainOfMastery: DomainCategory = {
   domains: [ForsakenRift, TaishanMansion]
 };
 
+export const Trounce: DomainCategory = {
+  name: "Trounce",
+  wiki: "https://genshin-impact.fandom.com/wiki/Category:Weekly_Bosses",
+  dropDescription: "Weekly Challenge",
+  domains: [ConfrontStormterror, WolfOfTheNorthChallenge]
+};
+
 export const DomainCategories = [
   DomainOfForgery,
   DomainOfBlessing,
-  DomainOfMastery
+  DomainOfMastery,
+  Trounce
 ];
