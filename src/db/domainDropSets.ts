@@ -1,4 +1,23 @@
-import { Artifact } from "./artifacts";
+import {
+  Adventurer,
+  ArchaicPetra,
+  Artifact,
+  BraveHeart,
+  CrimsonWitchOfFlames,
+  DefendersWill,
+  Lavawalker,
+  LuckyDog,
+  MaidenBeloved,
+  MartialArtist,
+  NoblesseOblige,
+  ResolutionOfSojourner,
+  RetracingBolide,
+  ThunderingFury,
+  Thundersoother,
+  TinyMiracle,
+  TravelingDoctor,
+  ViridescentVenerer
+} from "./artifacts";
 import {
   Aerosiderite,
   BorealWolf,
@@ -41,6 +60,7 @@ const MonThur: DayOfWeek[] = ["Monday", "Thursday"];
 const TuesFri: DayOfWeek[] = ["Tuesday", "Friday"];
 const WedSat: DayOfWeek[] = ["Wednesday", "Saturday"];
 const Sun: DayOfWeek[] = ["Sunday"];
+const All: DayOfWeek[] = [...MonThur, ...TuesFri, ...WedSat, ...Sun];
 
 export type DomainDropSet = {
   type: "Domain Drop Set";
@@ -153,6 +173,36 @@ export const TaishanMansionDrops4: DomainDropSet = {
   items: [Prosperity, Diligence, Gold]
 };
 
+export const MidsummerCourtyardDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: All,
+  items: [Adventurer, ResolutionOfSojourner, ThunderingFury, Thundersoother]
+};
+
+export const DomainOfGuyunDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: All,
+  items: [LuckyDog, BraveHeart, ArchaicPetra, RetracingBolide]
+};
+
+export const ValleyOfRemembranceDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: All,
+  items: [TravelingDoctor, TinyMiracle, ViridescentVenerer, MaidenBeloved]
+};
+
+export const HiddenPalaceOfZhouFormulaDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: All,
+  items: [DefendersWill, MartialArtist, CrimsonWitchOfFlames, Lavawalker]
+};
+
+export const ClearPoolAndMountainCavernDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: All,
+  items: [NoblesseOblige]
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
@@ -169,5 +219,10 @@ export const DomainDropSets = [
   TaishanMansionDrops1,
   TaishanMansionDrops2,
   TaishanMansionDrops3,
-  TaishanMansionDrops4
+  TaishanMansionDrops4,
+  MidsummerCourtyardDrops,
+  DomainOfGuyunDrops,
+  ValleyOfRemembranceDrops,
+  HiddenPalaceOfZhouFormulaDrops,
+  ClearPoolAndMountainCavernDrops
 ];

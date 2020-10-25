@@ -1,12 +1,16 @@
 import {
   AltarOfTheFalls,
   CityOfReflections,
+  ClearPoolAndMountainCavernDrops,
   DomainDropSet,
+  DomainOfGuyunDrops,
   ElectrostaticField,
   ForsakenRiftDrops1,
   ForsakenRiftDrops2,
   ForsakenRiftDrops3,
   ForsakenRiftDrops4,
+  HiddenPalaceOfZhouFormulaDrops,
+  MidsummerCourtyardDrops,
   RuinsOfThirstingCapital,
   SubmergedValley,
   TaishanMansionDrops1,
@@ -15,7 +19,8 @@ import {
   TaishanMansionDrops4,
   Thundercloud,
   ThunderingRuins,
-  TrailGroundsOfThunder
+  TrailGroundsOfThunder,
+  ValleyOfRemembranceDrops
 } from "./domainDropSets";
 
 export type Domain = {
@@ -54,35 +59,37 @@ export const MidsummerCourtyard: Domain = {
   type: "Domain",
   name: "Midsummer Courtyard",
   wiki: "https://genshin-impact.fandom.com/wiki/Midsummer_Courtyard",
-  drops: []
+  drops: [MidsummerCourtyardDrops]
 };
 
 export const DomainOfGuyun: Domain = {
   type: "Domain",
   name: "Domain of Guyun",
   wiki: "https://genshin-impact.fandom.com/wiki/Domain_of_Guyun",
-  drops: []
+  drops: [DomainOfGuyunDrops]
 };
 
 export const ValleyOfRemembrance: Domain = {
   type: "Domain",
+
   name: "Valley of Remembrance",
+
   wiki: "https://genshin-impact.fandom.com/wiki/Valley_of_Remembrance",
-  drops: []
+  drops: [ValleyOfRemembranceDrops]
 };
 
 export const HiddenPalaceOfZhouFormula: Domain = {
   type: "Domain",
   name: "Hidden Palace of Zhou Formula",
   wiki: "https://genshin-impact.fandom.com/wiki/Hidden_Palace_of_Zhou_Formula",
-  drops: []
+  drops: [HiddenPalaceOfZhouFormulaDrops]
 };
 
 export const ClearPoolAndMountainCavern: Domain = {
   type: "Domain",
   name: "Clear Pool and Mountain Cavern",
   wiki: "https://genshin-impact.fandom.com/wiki/Clear_Pool_and_Mountain_Cavern",
-  drops: []
+  drops: [ClearPoolAndMountainCavernDrops]
 };
 
 export const ForsakenRift: Domain = {

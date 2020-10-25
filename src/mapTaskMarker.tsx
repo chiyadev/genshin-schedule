@@ -17,6 +17,7 @@ import { memo } from "preact/compat";
 import { useServerDate } from "./time";
 import LazyLoad from "react-lazyload";
 import { CommonMaterials } from "./db/commonMaterials";
+import { Artifacts } from "./db/artifacts";
 
 type TimeUnit = "week" | "day" | "hour" | "minute";
 const TimeUnits: TimeUnit[] = ["week", "day", "hour", "minute"];
@@ -381,37 +382,10 @@ addIcons("cooking ingredient", [
   "Shrimp Meat"
 ]);
 
-addIcons("artifact", [
-  "Adventurer",
-  "Archaic Petra",
-  "Berserker",
-  "Bloodstained Chivalry",
-  "Brave Heart",
-  "Crimson Witch of Flames",
-  "Defender's Will",
-  "Gambler",
-  "Gladiator's Finale",
-  "Instructor",
-  "Lavawalker",
-  "Lucky Dog",
-  "Maiden Beloved",
-  "Martial Artist",
-  "Noblesse Oblige",
-  "Prayers for Destiny",
-  "Prayers for Illumination",
-  "Prayers for Wisdom",
-  "Prayers to Springtime",
-  "Resolution of Sojourner",
-  "Retracing Bolide",
-  "Scholar",
-  "The Exile",
-  "Thundering Fury",
-  "Thundersoother",
-  "Tiny Miracle",
-  "Traveling Doctor",
-  "Viridescent Venerer",
-  "Wanderer's Troupe"
-]);
+addIcons(
+  "artifact",
+  Artifacts.map(artifact => artifact.name)
+);
 
 const knownTimers: { [key: string]: number | undefined } = {
   "Iron Chunk": 24,
