@@ -85,6 +85,7 @@ export type Configs = {
     value: number;
     time: number;
   };
+  resinEstimateMode: "time" | "value";
   characters: string[];
   weapons: string[];
   artifacts: string[];
@@ -123,6 +124,7 @@ export const DefaultConfigs: Configs = {
     value: ResinCap,
     time: 0
   },
+  resinEstimateMode: "time",
   characters: [],
   weapons: [],
   artifacts: [],

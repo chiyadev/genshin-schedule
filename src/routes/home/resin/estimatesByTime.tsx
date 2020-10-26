@@ -9,6 +9,7 @@ import {
 } from "../../../db/resins";
 import { h } from "preact";
 import { memo } from "preact/compat";
+import { formatDateSimple } from "./index";
 
 const EstimatesByTime = () => {
   const [resin] = useConfig("resin");
@@ -41,19 +42,13 @@ const EstimatesByTime = () => {
     const capHours = Math.floor(capTime / 3600000);
     const capMinutes = Math.floor((capTime % 3600000) / 60000);
     const capHoursText = `${capHours} hour${capHours === 1 ? "" : "s"}`;
-    const capMinutesText = `${capMinutes} minutes`;
+    const capMinutesText = `${capMinutes} minute${capMinutes === 1 ? "" : "s"}`;
 
     values.push({
       time: [
         capHours === 0 ? "" : capHoursText,
         capMinutes === 0 ? "" : capMinutesText,
-        `(${capDate
-          .getHours()
-          .toString()
-          .padStart(2, "0")}:${capDate
-          .getMinutes()
-          .toString()
-          .padStart(2, "0")})`
+        `(${formatDateSimple(capDate)})`
       ].join(" "),
       value: ResinCap
     });
@@ -61,20 +56,13 @@ const EstimatesByTime = () => {
     return values;
   }, [resin, date]);
 
-  const capped =
-    getResinRecharge(date.getTime() - resin.time) >= ResinCap - resin.value;
-
   return (
-    <div className="text-xs text-gray-600 ml-2 pl-10">
-      {capped ? (
-        <div>Your resins are full!</div>
-      ) : (
-        values.map(({ time, value }) => (
-          <div key={time}>
-            {value} in {time}
-          </div>
-        ))
-      )}
+    <div>
+      {values.map(({ time, value }) => (
+        <div key={time}>
+          {value} in {time}
+        </div>
+      ))}
     </div>
   );
 };
