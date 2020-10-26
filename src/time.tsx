@@ -41,7 +41,7 @@ export function useServerDate(frequency = 100) {
     return () => {
       rerenderCallbacks.delete(tick);
     };
-  }, [count]);
+  }, [count, frequency]);
 
   const [server] = useConfig("server");
   const [offsetDays] = useConfig("offsetDays");

@@ -44,5 +44,4 @@ const CommonMaterialDisplay = ({
     </div>
   );
 };
-
 export default memo(CommonMaterialDisplay);

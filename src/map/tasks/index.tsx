@@ -40,7 +40,7 @@ const TaskLayer = () => {
               footer={<Footer task={task} setTask={taskSetters[i]} />}
             />
           )),
-        [setTasks, taskSetters, tasks]
+        [taskSetters, tasks]
       )}
     </div>
   );

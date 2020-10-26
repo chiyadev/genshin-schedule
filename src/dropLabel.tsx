@@ -17,7 +17,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
 
   return (
     <div>
-      {domains.map((domain, i) => {
+      {domains.map(domain => {
         const days = new Set<DayOfWeek>();
 
         for (const drops of domain.drops) {

@@ -37,9 +37,9 @@ const IconPage = ({
       setScroll(listRef.current.scrollTop);
     };
 
-    listRef.current.addEventListener("scroll", handle);
-
-    return () => listRef.current.removeEventListener("scroll", handle);
+    const element = listRef.current;
+    element.addEventListener("scroll", handle);
+    return () => element.removeEventListener("scroll", handle);
   }, [setScroll]);
 
   useEffect(() => inputRef.current.focus(), []);
