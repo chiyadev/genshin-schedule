@@ -1,6 +1,24 @@
 import { useConfig } from "./configs";
 import { useEffect, useState } from "preact/hooks";
-import { DaysOfWeek } from "./db/domainDropSets";
+
+export type DayOfWeek =
+  | "Sunday"
+  | "Monday"
+  | "Tuesday"
+  | "Wednesday"
+  | "Thursday"
+  | "Friday"
+  | "Saturday";
+
+export const DaysOfWeek: DayOfWeek[] = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
 
 const rerenderCallbacks = new Set<() => void>();
 
@@ -68,4 +86,43 @@ export function getServerDayOfWeek(serverDate: Date) {
         (serverDate.getHours() < ServerResetHour ? -1 : 0))) %
       7
   ];
+}
+
+export type TimeUnit = "week" | "day" | "hour" | "minute";
+export const TimeUnits: TimeUnit[] = ["week", "day", "hour", "minute"];
+
+export function getTimeUnitMs(unit: TimeUnit) {
+  switch (unit) {
+    case "minute":
+      return 60000;
+
+    case "hour":
+      return 3600000;
+
+    case "day":
+      return 86400000;
+
+    case "week":
+      return 604800000;
+  }
+}
+
+export function getBestTimeUnit(ms: number) {
+  for (const unit of TimeUnits) {
+    if (ms % getTimeUnitMs(unit) === 0) {
+      return unit;
+    }
+  }
+
+  return "minute";
+}
+
+export function getLargestTimeUnit(ms: number) {
+  for (const unit of TimeUnits) {
+    if (ms >= getTimeUnitMs(unit)) {
+      return unit;
+    }
+  }
+
+  return "minute";
 }

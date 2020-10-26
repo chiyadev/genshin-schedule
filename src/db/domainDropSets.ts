@@ -44,25 +44,7 @@ import {
   Resistance,
   TalentMaterial
 } from "./talentMaterials";
-
-export type DayOfWeek =
-  | "Sunday"
-  | "Monday"
-  | "Tuesday"
-  | "Wednesday"
-  | "Thursday"
-  | "Friday"
-  | "Saturday";
-
-export const DaysOfWeek: DayOfWeek[] = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
+import { DayOfWeek } from "../time";
 
 const Trounce: DayOfWeek[] = ["Monday"];
 const MonThur: DayOfWeek[] = ["Monday", "Thursday"];

@@ -1,15 +1,15 @@
 import { h } from "preact";
 import { useConfig } from "../../configs";
 import Search from "./search";
-import CharacterList from "./characterList";
+import CharacterList from "./character";
 import Help from "./help";
-import WeaponList from "./weaponList";
+import WeaponList from "./weapon";
 import { useEffect } from "preact/hooks";
 import { forceCheck } from "react-lazyload";
 import { useTabTitle } from "../../utils";
 import Miscellaneous from "./miscellaneous";
 import { memo } from "preact/compat";
-import ArtifactList from "./artifactList";
+import ArtifactList from "./artifact";
 
 const Customize = () => {
   const [search, setSearch] = useConfig("customizeQuery");

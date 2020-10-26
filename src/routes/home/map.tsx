@@ -1,6 +1,7 @@
 import { css, cx } from "emotion";
+
 import { h } from "preact";
-import MapControl from "../../map";
+import MapCore from "../../map";
 import { Link } from "preact-router";
 import { FaAngleRight } from "react-icons/fa";
 import { memo } from "preact/compat";
@@ -8,7 +9,7 @@ import { memo } from "preact/compat";
 const Map = () => {
   return (
     <div className="space-y-1">
-      <MapControl
+      <MapCore
         minimal
         className={cx(
           "w-full rounded shadow-lg",

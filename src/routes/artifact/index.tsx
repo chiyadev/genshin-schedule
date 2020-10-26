@@ -1,13 +1,11 @@
 import { h } from "preact";
 import { useMemo } from "preact/hooks";
-import { useConfig } from "../../configs";
-import DropLabel from "../../dropLabel";
-import Checkbox from "../../checkbox";
-import { arrayToggle, useTabTitle } from "../../utils";
+import { useTabTitle } from "../../utils";
 import WhiteCard from "../../whiteCard";
 import { memo } from "preact/compat";
 import { Artifact, Artifacts } from "../../db/artifacts";
-import { FaRegStickyNote } from "react-icons/fa";
+import Toggle from "./toggle";
+import Note from "./note";
 
 const ArtifactInfo = ({ artifact }: { artifact: string }) => {
   const info = useMemo(() => Artifacts.find(c => c.name === artifact), [
@@ -42,57 +40,8 @@ const Inner = ({ artifact }: { artifact: Artifact }) => {
       </a>
 
       <Toggle artifact={artifact} />
-      <Notes artifact={artifact} />
+      <Note artifact={artifact} />
     </WhiteCard>
-  );
-};
-
-const Toggle = ({ artifact }: { artifact: Artifact }) => {
-  const [list, setList] = useConfig("artifacts");
-  const exists = useMemo(() => list.includes(artifact.name), [list, artifact]);
-
-  return (
-    <div className="py-4 text-sm space-y-4">
-      <DropLabel item={artifact} />
-
-      <Checkbox
-        value={exists}
-        setValue={value => {
-          setList(list => arrayToggle(list, artifact.name, value));
-        }}
-      >
-        <div>Show on schedule</div>
-
-        <div className="text-xs text-gray-600">
-          Scheduled domains will appear on the days they are available.
-        </div>
-      </Checkbox>
-    </div>
-  );
-};
-
-const Notes = ({ artifact }: { artifact: Artifact }) => {
-  const [notes, setNotes] = useConfig("itemNotes");
-
-  return (
-    <div className="py-4 space-y-2">
-      <div className="text-lg">
-        <FaRegStickyNote className="inline" />
-        <span className="align-middle"> Additional notes</span>
-      </div>
-
-      <textarea
-        className="w-full text-sm"
-        placeholder="e.g. Lumine's artifact"
-        value={notes[artifact.name] || ""}
-        onInput={({ currentTarget: { value } }) => {
-          setNotes(notes => ({
-            ...notes,
-            [artifact.name]: value
-          }));
-        }}
-      />
-    </div>
   );
 };
 

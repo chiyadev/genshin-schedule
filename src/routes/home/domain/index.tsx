@@ -1,10 +1,9 @@
 import { h } from "preact";
-import { cx } from "emotion";
-import { Domain, Domains } from "../../db/domains";
+import { Domain, Domains } from "../../../db/domains";
 import { useMemo } from "preact/hooks";
-import { getServerDayOfWeek, useServerDate } from "../../time";
-import { useConfig } from "../../configs";
-import { Character, Characters } from "../../db/characters";
+import { getServerDayOfWeek, useServerDate } from "../../../time";
+import { useConfig } from "../../../configs";
+import { Character, Characters } from "../../../db/characters";
 import {
   DomainCategories,
   DomainCategory,
@@ -12,20 +11,19 @@ import {
   DomainOfForgery,
   DomainOfMastery,
   Trounce
-} from "../../db/domainCategories";
-import { DomainDropSet, DomainDropSets } from "../../db/domainDropSets";
-import { TalentMaterial } from "../../db/talentMaterials";
-import { Link } from "preact-router";
-import { WeaponMaterial } from "../../db/weaponMaterials";
-import { Weapon, Weapons } from "../../db/weapons";
-import { Region, Regions } from "../../db/regions";
-import WhiteCard from "../../whiteCard";
+} from "../../../db/domainCategories";
+import { DomainDropSet, DomainDropSets } from "../../../db/domainDropSets";
+import { TalentMaterial } from "../../../db/talentMaterials";
+import { WeaponMaterial } from "../../../db/weaponMaterials";
+import { Weapon, Weapons } from "../../../db/weapons";
+import { Region, Regions } from "../../../db/regions";
 import { FaTimes } from "react-icons/fa";
-import SectionHeading from "./sectionHeading";
+import SectionHeading from "../sectionHeading";
 import { memo } from "preact/compat";
-import { Artifact, Artifacts } from "../../db/artifacts";
+import { Artifact, Artifacts } from "../../../db/artifacts";
+import DomainDisplay from "./domain";
 
-type ScheduledDomain = {
+export type ScheduledDomain = {
   domain: Domain;
   region?: Region;
   category?: DomainCategory;
@@ -40,7 +38,7 @@ type ScheduledDomain = {
   artifacts: Artifact[];
 };
 
-const DomainList = () => {
+const DomainView = () => {
   const date = useServerDate(60000);
   const dayOfWeek = getServerDayOfWeek(date);
 
@@ -48,6 +46,7 @@ const DomainList = () => {
   const [weapons] = useConfig("weapons");
   const [artifacts] = useConfig("artifacts");
 
+  // build schedule
   const domains = useMemo(() => {
     const results: ScheduledDomain[] = [];
 
@@ -187,7 +186,8 @@ const DomainList = () => {
           </div>
         ) : (
           <div className="text-sm">
-            <FaTimes className="inline" /> No domains for today. Maybe do some{" "}
+            <FaTimes className="inline" />
+            <span> No domains for today. Maybe try some </span>
             <a href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops">
               Ley Lines
             </a>
@@ -200,162 +200,4 @@ const DomainList = () => {
   );
 };
 
-const DomainDisplay = ({
-  domain,
-  region,
-  category,
-  talentMaterials,
-  weaponMaterials,
-  artifacts
-}: ScheduledDomain) => {
-  return (
-    <WhiteCard divide>
-      <a href={domain.wiki}>
-        <div className="space-x-2 py-4 flex flex-row">
-          <img
-            alt="Domain"
-            src="/assets/game/Domain.png"
-            className="w-10 object-contain"
-          />
-
-          <div className="flex flex-col justify-center">
-            <div className="text-lg font-bold">{domain.name}</div>
-            <div className="text-xs text-gray-600">
-              {category && <a href={category.wiki}>{category.name}</a>}
-              {", "}
-              {region && <a href={region.wiki}>{region.name}</a>}
-            </div>
-          </div>
-        </div>
-      </a>
-
-      {useMemo(
-        () =>
-          talentMaterials.map(({ material, characters }) => (
-            <MaterialDisplay
-              key={material.name}
-              material={material}
-              items={characters}
-              path="characters"
-              roundItems
-            />
-          )),
-        [talentMaterials]
-      )}
-
-      {useMemo(
-        () =>
-          weaponMaterials.map(({ material, weapons }) => (
-            <MaterialDisplay
-              key={material.name}
-              material={material}
-              items={weapons}
-              path="weapons"
-            />
-          )),
-        [weaponMaterials]
-      )}
-
-      {useMemo(
-        () =>
-          artifacts.length !== 0 && <ArtifactDisplay artifacts={artifacts} />,
-        [artifacts]
-      )}
-    </WhiteCard>
-  );
-};
-
-const MaterialDisplay = ({
-  material,
-  items,
-  path,
-  roundItems
-}: {
-  material: TalentMaterial | WeaponMaterial;
-  items: (Character | Weapon)[];
-  path: "characters" | "weapons";
-  roundItems?: boolean;
-}) => {
-  return (
-    <div className="py-4 space-y-4">
-      <a href={material.wiki}>
-        <div className="space-x-2 flex flex-row">
-          <img
-            alt={material.item}
-            src={`/assets/game/${material.item}.png`}
-            className="w-10 h-10"
-          />
-          <div className="flex flex-col justify-center">
-            <div className="text-lg">{material.name}</div>
-            <div className="text-xs text-gray-600">{material.type}</div>
-          </div>
-        </div>
-      </a>
-
-      <div className="space-y-2">
-        {items.map(item => (
-          <Link
-            key={item.name}
-            className="pl-4 flex flex-row space-x-2"
-            href={`/${path}/${item.name}`}
-          >
-            <img
-              alt={item.name}
-              src={`/assets/game/${item.name}.png`}
-              className={cx("w-6 h-6 object-cover", {
-                "rounded-full": roundItems
-              })}
-            />
-
-            <div className="flex flex-col justify-center text-sm">
-              <div>
-                {item.name}
-                <NoteText name={item.name} />
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const ArtifactDisplay = ({ artifacts }: { artifacts: Artifact[] }) => {
-  return (
-    <div className="py-4 space-y-2">
-      {artifacts.map(item => (
-        <Link
-          key={item.name}
-          className="pl-4 flex flex-row space-x-2"
-          href={`/artifacts/${item.name}`}
-        >
-          <img
-            alt={item.name}
-            src={`/assets/game/${item.name}.png`}
-            className="w-6 h-6 object-fit"
-          />
-
-          <div className="flex flex-col justify-center text-sm">
-            <div>
-              {item.name}
-              <NoteText name={item.name} />
-            </div>
-          </div>
-        </Link>
-      ))}
-    </div>
-  );
-};
-
-const NoteText = ({ name }: { name: string }) => {
-  const [notes] = useConfig("itemNotes");
-  const note = notes[name];
-
-  if (!note) {
-    return null;
-  }
-
-  return <span className="text-gray-600"> &mdash; {note}</span>;
-};
-
-export default memo(DomainList);
+export default memo(DomainView);

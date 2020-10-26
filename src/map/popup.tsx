@@ -3,7 +3,7 @@ import { Popup, PopupProps } from "react-leaflet";
 import { css, cx } from "emotion";
 import { memo } from "preact/compat";
 
-const MapPopup = ({
+const CardPopup = ({
   autoPan = false,
   className,
   children,
@@ -46,4 +46,4 @@ const MapPopup = ({
   );
 };
 
-export default memo(MapPopup);
+export default memo(CardPopup);

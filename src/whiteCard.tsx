@@ -1,5 +1,4 @@
 import { ComponentChildren, h } from "preact";
-
 import { cx } from "emotion";
 import { memo } from "preact/compat";
 

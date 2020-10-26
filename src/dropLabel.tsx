@@ -1,13 +1,9 @@
 import { useMemo } from "preact/hooks";
-import {
-  DayOfWeek,
-  DaysOfWeek,
-  DomainDropSet,
-  DomainDropSets
-} from "./db/domainDropSets";
+import { DomainDropSet, DomainDropSets } from "./db/domainDropSets";
 import { Domains } from "./db/domains";
 import { h } from "preact";
 import { memo } from "preact/compat";
+import { DayOfWeek, DaysOfWeek } from "./time";
 
 const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   const domains = useMemo(() => {
@@ -45,8 +41,8 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
 
               {days.size !== 7 && (
                 <span>
-                  {" "}
-                  on {DaysOfWeek.filter(d => days.has(d)).join(", ")}
+                  <span> on </span>
+                  {DaysOfWeek.filter(d => days.has(d)).join(", ")}
                 </span>
               )}
             </span>

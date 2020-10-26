@@ -1,11 +1,11 @@
 import { h } from "preact";
-import WhiteCard from "../../whiteCard";
-import { useConfig } from "../../configs";
-import Checkbox from "../../checkbox";
+import WhiteCard from "../../../whiteCard";
 import { memo } from "preact/compat";
+import Hide from "./hide";
+import { useConfig } from "../../../configs";
 
 const Info = () => {
-  const [visible, setVisible] = useConfig("showSiteInfo");
+  const [visible] = useConfig("showSiteInfo");
 
   if (!visible) {
     return null;
@@ -72,21 +72,19 @@ const Info = () => {
         </ul>
 
         <div>
-          Please refer to the{" "}
+          <span>Please refer to the </span>
           <a
             href="https://github.com/chiyadev/genshin-schedule/wiki"
             className="text-blue-600"
           >
             website guide
-          </a>{" "}
-          for usage instructions.
+          </a>
+          <span> for usage help.</span>
         </div>
       </div>
 
       <div className="py-4 text-sm">
-        <Checkbox value={!visible} setValue={v => setVisible(!v)}>
-          Do not show again
-        </Checkbox>
+        <Hide />
       </div>
     </WhiteCard>
   );

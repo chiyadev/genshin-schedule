@@ -1,19 +1,19 @@
 import { h } from "preact";
 import { useTabTitle } from "../../utils";
-import Time from "./time";
-import ResinCalculator from "./resinCalc";
-import DomainList from "./domainList";
-import TaskList from "./taskList";
+import DomainList from "./domain";
+import TaskList from "./tasks";
 import Info from "./info";
 import { memo } from "preact/compat";
 import Map from "./map";
+import ResinCalculator from "./resin";
+import Clock from "./clock";
 
 const Home = () => {
   useTabTitle();
 
   return (
     <div className="container mx-auto p-4 space-y-12">
-      <Time />
+      <Clock />
       <Info />
       <ResinCalculator />
 
