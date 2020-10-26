@@ -9,6 +9,7 @@ import SectionHeading from "../sectionHeading";
 import { memo } from "preact/compat";
 import EstimatesByTime from "./estimatesByTime";
 import { useMeasuredTextWidth } from "../../../utils";
+import Subtract from "./subtract";
 
 const ResinCalculator = () => {
   const [resin, setResin] = useConfig("resin");
@@ -58,13 +59,16 @@ const ResinCalculator = () => {
             onClick={() => resinInput.current.select()}
             onInput={({ currentTarget: { valueAsNumber } }) => {
               setResin({
-                value: Math.max(0, Math.min(ResinCap, valueAsNumber || 0)),
+                value: clampResin(valueAsNumber),
                 time: date.getTime()
               });
             }}
           />
 
           <div className="flex flex-col justify-center">/ {ResinCap}</div>
+          <div className="flex-1" />
+
+          <Subtract />
         </div>
 
         <EstimatesByTime />
