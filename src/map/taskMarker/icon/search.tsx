@@ -66,7 +66,8 @@ addIcons("local specialty liyue", [
   "Silk Flower",
   "Starconch",
   "Violetgrass",
-  "Glaze Lily"
+  "Glaze Lily",
+  "Horsetail"
 ]);
 
 addIcons("cooking ingredient", [
@@ -105,5 +106,6 @@ export const KnownResourceTimers: { [key: string]: number | undefined } = {
   Qingxin: 48,
   "Silk Flower": 48,
   Starconch: 48,
-  Violetgrass: 48
+  Violetgrass: 48,
+  Horsetail: 48 // source: https://www.reddit.com/r/Genshin_Impact/comments/jf7zhh/i_made_an_interactive_website_for_daily_domain/ga41wk5/?context=3
 };
