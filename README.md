@@ -4,6 +4,8 @@ Genshin Schedule is a website to help you keep track of time-related game activi
 
 For more information, visit [genshin.chiya.dev](https://genshin.chiya.dev).
 
+![home](images/home.png)
+
 ## Building from source
 
 This project was bootstrapped using [create-react-app](https://github.com/facebook/create-react-app).
