@@ -1,5 +1,6 @@
 [build]
-command = "yarn build --no-prerender"
+base = "web/"
+command = "yarn build"
 publish = "build/"
 
 [[redirects]]
