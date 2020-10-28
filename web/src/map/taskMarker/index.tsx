@@ -27,7 +27,7 @@ const TaskMarker = ({
   showDue = true,
   onOpen,
   onClose,
-  foote,
+  footer,
 }: {
   task: Task;
   setTask: Dispatch<SetStateAction<Task>>;

@@ -128,7 +128,7 @@ export const DefaultConfigs: Configs = {
   offsetDays: 0,
   resin: {
     value: ResinCap,
-    time: ,
+    time: 0,
   },
   resinEstimateMode: "time",
   characters: [],
@@ -141,7 +141,7 @@ export const DefaultConfigs: Configs = {
   iconListScroll: 0,
   mapState: {
     ...defaultMapCenter,
-    zoom: 5.6
+    zoom: 5,
   },
   mapCreateTask: {
     id: "temp",
@@ -150,12 +150,12 @@ export const DefaultConfigs: Configs = {
     location: defaultMapCenter,
     dueTime: 0,
     refreshTime: 86400000,
-    visible: false
+    visible: false,
   },
   mapFocusedTask: false,
   mapTaskList: true,
   paimonBg: true,
-  showSiteInfo: true
+  showSiteInfo: true,
 };
 
 export function useConfig<TKey extends keyof Configs>(key: TKey) {

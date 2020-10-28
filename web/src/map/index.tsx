@@ -44,7 +44,7 @@ const Map = ({
           ...task,
           id: randomStr(6),
           location,
-          visible: tru,
+          visible: true,
         }))
       }
       onmove={() => clearTimeout(syncRef.current)}

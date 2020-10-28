@@ -19,7 +19,7 @@ const EstimatesByTime = () => {
     const addValue = (hours: number) => {
       const value = clampResin(
         resin.value +
-        getResinRecharge(date.getTime() - resin.time + hours * 3600000)
+          getResinRecharge(date.getTime() - resin.time + hours * 3600000)
       );
 
       if (value && value < ResinCap) {
@@ -46,9 +46,9 @@ const EstimatesByTime = () => {
       time: [
         capHours === 0 ? "" : capHoursText,
         capMinutes === 0 ? "" : capMinutesText,
-        `(${formatDateSimple(capDate)}),
+        `(${formatDateSimple(capDate)})`,
       ].join(" "),
-      value: ResinCa,
+      value: ResinCap,
     });
 
     return values;

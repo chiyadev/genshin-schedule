@@ -81,11 +81,11 @@ export function getServerNextReset(serverDate: Date) {
 
 export function getServerDayOfWeek(serverDate: Date) {
   return DaysOfWeek[
-  (7 +
-    (serverDate.getDay() +
-      (serverDate.getHours() < ServerResetHour ? -1 : 0))) %
-  7
-    ];
+    (7 +
+      (serverDate.getDay() +
+        (serverDate.getHours() < ServerResetHour ? -1 : 0))) %
+      7
+  ];
 }
 
 export type TimeUnit = "week" | "day" | "hour" | "minute";

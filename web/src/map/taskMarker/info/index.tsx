@@ -15,7 +15,7 @@ const InfoPage = ({
   setTask,
   setPage,
   autoFocus,
-  showDu,
+  showDue,
 }: {
   task: Task;
   setTask: Dispatch<SetStateAction<Task>>;

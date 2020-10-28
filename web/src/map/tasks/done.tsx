@@ -38,7 +38,7 @@ const Done = ({
         onClick={() => {
           setTask((task) => ({
             ...task,
-            dueTime: date.getTime(,
+            dueTime: date.getTime(),
           }));
 
           leaflet.map?.closePopup();

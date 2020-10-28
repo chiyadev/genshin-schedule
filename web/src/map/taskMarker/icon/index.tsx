@@ -13,7 +13,7 @@ import Item from "./item";
 
 const IconPage = ({
   setTask,
-  setPag,
+  setPage,
 }: {
   setTask: Dispatch<SetStateAction<Task>>;
   setPage: Dispatch<SetStateAction<PopupPage>>;

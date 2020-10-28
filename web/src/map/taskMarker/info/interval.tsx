@@ -9,7 +9,7 @@ import { FaSyncAlt } from "react-icons/fa";
 
 const IntervalPicker = ({
   value,
-  setValu,
+  setValue,
 }: {
   value: number;
   setValue: (value: number) => void;

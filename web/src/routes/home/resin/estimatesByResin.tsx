@@ -29,9 +29,9 @@ const EstimatesByResin = () => {
             minutes ? `${minutes} minute${minutes === 1 ? "" : "s"}` : "",
             `(${formatDateSimple(
               new Date(date.getTime() + (remaining / ResinsPerMinute) * 60000)
-            )}),
+            )})`,
           ].join(" "),
-          valu,
+          value,
         });
       }
     };

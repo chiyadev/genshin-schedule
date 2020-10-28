@@ -40,8 +40,8 @@ export const CeciliaGarden: Domain = {
     CityOfReflections,
     SubmergedValley,
     RuinsOfThirstingCapital,
-    AltarOfTheFall,
-  ,
+    AltarOfTheFalls,
+  ],
 };
 
 export const HiddenPalaceOfLianshanFormula: Domain = {
@@ -53,45 +53,43 @@ export const HiddenPalaceOfLianshanFormula: Domain = {
     Thundercloud,
     ThunderingRuins,
     TrailGroundsOfThunder,
-    ElectrostaticField
-  ]
+    ElectrostaticField,
+  ],
 };
 
 export const MidsummerCourtyard: Domain = {
   type: "Domain",
   name: "Midsummer Courtyard",
   wiki: "https://genshin-impact.fandom.com/wiki/Midsummer_Courtyard",
-  drops: [MidsummerCourtyardDrops]
+  drops: [MidsummerCourtyardDrops],
 };
 
 export const DomainOfGuyun: Domain = {
   type: "Domain",
   name: "Domain of Guyun",
   wiki: "https://genshin-impact.fandom.com/wiki/Domain_of_Guyun",
-  drops: [DomainOfGuyunDrops]
+  drops: [DomainOfGuyunDrops],
 };
 
 export const ValleyOfRemembrance: Domain = {
   type: "Domain",
-
   name: "Valley of Remembrance",
-
   wiki: "https://genshin-impact.fandom.com/wiki/Valley_of_Remembrance",
-  drops: [ValleyOfRemembranceDrops]
+  drops: [ValleyOfRemembranceDrops],
 };
 
 export const HiddenPalaceOfZhouFormula: Domain = {
   type: "Domain",
   name: "Hidden Palace of Zhou Formula",
   wiki: "https://genshin-impact.fandom.com/wiki/Hidden_Palace_of_Zhou_Formula",
-  drops: [HiddenPalaceOfZhouFormulaDrops]
+  drops: [HiddenPalaceOfZhouFormulaDrops],
 };
 
 export const ClearPoolAndMountainCavern: Domain = {
   type: "Domain",
   name: "Clear Pool and Mountain Cavern",
   wiki: "https://genshin-impact.fandom.com/wiki/Clear_Pool_and_Mountain_Cavern",
-  drops: [ClearPoolAndMountainCavernDrops]
+  drops: [ClearPoolAndMountainCavernDrops],
 };
 
 export const ForsakenRift: Domain = {
@@ -102,8 +100,8 @@ export const ForsakenRift: Domain = {
     ForsakenRiftDrops1,
     ForsakenRiftDrops2,
     ForsakenRiftDrops3,
-    ForsakenRiftDrops4
-  ]
+    ForsakenRiftDrops4,
+  ],
 };
 
 export const TaishanMansion: Domain = {
@@ -114,22 +112,22 @@ export const TaishanMansion: Domain = {
     TaishanMansionDrops1,
     TaishanMansionDrops2,
     TaishanMansionDrops3,
-    TaishanMansionDrops4
-  ]
+    TaishanMansionDrops4,
+  ],
 };
 
 export const ConfrontStormterror: Domain = {
   type: "Domain",
   name: "Confront Stormterror",
   wiki: "https://genshin-impact.fandom.com/wiki/Confront_Stormterror",
-  drops: [ConfrontStormterrorDrops]
+  drops: [ConfrontStormterrorDrops],
 };
 
 export const WolfOfTheNorthChallenge: Domain = {
   type: "Domain",
   name: "Wolf of the North Challenge",
   wiki: "https://genshin-impact.fandom.com/wiki/Wolf_of_the_North_Challenge",
-  drops: [WolfOfTheNorthChallengeDrops]
+  drops: [WolfOfTheNorthChallengeDrops],
 };
 
 export const Domains = [
@@ -143,5 +141,5 @@ export const Domains = [
   ForsakenRift,
   TaishanMansion,
   ConfrontStormterror,
-  WolfOfTheNorthChallenge
+  WolfOfTheNorthChallenge,
 ];
