@@ -66,7 +66,9 @@ const Base = ({ children }: { children?: ReactNode }) => {
     <BrowserRouter>
       <Switch>
         {specialRoutes.map((route) => (
-          <Route path={route}>{children}</Route>
+          <Route key={route} path={route}>
+            {children}
+          </Route>
         ))}
 
         <Route>
