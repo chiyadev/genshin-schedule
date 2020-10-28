@@ -18,13 +18,41 @@ const App = () => {
   return (
     <Base>
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/map" exact component={Map} />
-        <Route path="/customize" exact component={Customize} />
-        <Route path="/characters/:character" exact component={CharacterInfo} />
-        <Route path="/weapons/:weapon" exact component={WeaponInfo} />
-        <Route path="/artifacts/:artifact" exact component={ArtifactInfo} />
-        <Route default exact component={NotFound} />
+        <Route path="/" exact render={() => <Home />} />
+        <Route path="/map" exact render={() => <Map />} />
+        <Route path="/customize" exact render={() => <Customize />} />
+
+        <Route
+          path="/characters/:character"
+          exact
+          render={({
+            match: {
+              params: { character },
+            },
+          }) => <CharacterInfo character={character} />}
+        />
+
+        <Route
+          path="/weapons/:weapon"
+          exact
+          render={({
+            match: {
+              params: { weapon },
+            },
+          }) => <WeaponInfo weapon={weapon} />}
+        />
+
+        <Route
+          path="/artifacts/:artifact"
+          exact
+          render={({
+            match: {
+              params: { artifact },
+            },
+          }) => <ArtifactInfo artifact={artifact} />}
+        />
+
+        <Route render={() => <NotFound />} />
       </Switch>
     </Base>
   );
