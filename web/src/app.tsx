@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "./app.css";
@@ -14,14 +14,9 @@ import WeaponInfo from "./routes/weapon";
 import ArtifactInfo from "./routes/artifact";
 import NotFound from "./routes/notfound";
 
-const specialRoutes = ["/map"];
-
 const App = () => {
   return (
-    <BrowserRouter>
-      <Background />
-      <Header />
-
+    <Base>
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/map" exact component={Map} />
@@ -31,8 +26,30 @@ const App = () => {
         <Route path="/artifacts/:artifact" exact component={ArtifactInfo} />
         <Route default exact component={NotFound} />
       </Switch>
+    </Base>
+  );
+};
 
-      <Footer />
+// no header/footer in special routes
+const specialRoutes = ["/map"];
+
+const Base = ({ children }: { children?: ReactNode }) => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        {specialRoutes.map((route) => (
+          <Route path={route}>{children}</Route>
+        ))}
+
+        <Route>
+          <Background />
+          <Header />
+
+          {children}
+
+          <Footer />
+        </Route>
+      </Switch>
     </BrowserRouter>
   );
 };
