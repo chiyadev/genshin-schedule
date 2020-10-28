@@ -21,7 +21,7 @@ const MaterialDisplay = ({
   ]);
 
   return (
-    <div className="py-4 space-y-4 text-sm flex flex-cl">
+    <div className="py-4 space-y-4 text-sm flex flex-col">
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
           <img
