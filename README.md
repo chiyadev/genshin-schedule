@@ -6,10 +6,10 @@ For more information, visit [genshin.chiya.dev](https://genshin.chiya.dev).
 
 ## Building from source
 
-This project was bootstrapped using [preact-cli](https://github.com/preactjs/preact-cli).
+This project was bootstrapped using [create-react-app](https://github.com/facebook/create-react-app).
 
 1. Clone repo
-2. `yarn && yarn dev`
+2. `yarn && yarn start`
 
 ## To-do
 
