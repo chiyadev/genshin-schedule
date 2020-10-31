@@ -30,6 +30,10 @@ namespace GenshinSchedule.SyncServer
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseCors(cors => cors.AllowAnyHeader()
+                                    .AllowAnyMethod()
+                                    .AllowAnyOrigin());
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints => endpoints.MapControllers());
