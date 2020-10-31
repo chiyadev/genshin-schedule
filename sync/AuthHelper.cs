@@ -1,17 +1,16 @@
 using System;
 using System.Security.Cryptography;
 using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using GenshinSchedule.SyncServer.Database;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
 namespace GenshinSchedule.SyncServer
 {
     public class AuthPayload
     {
-        [JsonPropertyName("id")]
+        [JsonProperty("id")]
         public int Id { get; set; }
     }
 
@@ -38,7 +37,7 @@ namespace GenshinSchedule.SyncServer
 
         public string CreateToken(AuthPayload payload)
         {
-            var data = JsonSerializer.SerializeToUtf8Bytes(payload);
+            var data = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(payload));
             var hash = ComputeHash(data);
 
             return $"{WebEncoders.Base64UrlEncode(data)}.{hash}";
@@ -69,7 +68,7 @@ namespace GenshinSchedule.SyncServer
             if (hash != ComputeHash(data))
                 return false;
 
-            payload = JsonSerializer.Deserialize<AuthPayload>(data);
+            payload = JsonConvert.DeserializeObject<AuthPayload>(Encoding.UTF8.GetString(data));
             return true;
         }
     }

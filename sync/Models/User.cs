@@ -1,15 +1,15 @@
 using System;
-using System.Text.Json.Serialization;
 using GenshinSchedule.SyncServer.Database;
+using Newtonsoft.Json;
 
 namespace GenshinSchedule.SyncServer.Models
 {
     public class User
     {
-        [JsonPropertyName("username")]
+        [JsonProperty("username")]
         public string Username { get; set; }
 
-        [JsonPropertyName("createdTime")]
+        [JsonProperty("createdTime")]
         public DateTime CreatedTime { get; set; }
 
         public static User FromDbModel(DbUser user) => new User

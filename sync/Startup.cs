@@ -17,7 +17,8 @@ namespace GenshinSchedule.SyncServer
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers()
+                    .AddNewtonsoftJson();
 
             services.AddAuthentication(AuthHandler.SchemeName)
                     .AddScheme<AuthOptions, AuthHandler>(AuthHandler.SchemeName, null);
