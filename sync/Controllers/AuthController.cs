@@ -29,7 +29,7 @@ namespace GenshinSchedule.SyncServer.Controllers
         {
             try
             {
-                var user = await _db.Users.AsNoTracking().FirstOrDefaultAsync(user => user.Username == request.Username);
+                var user = await _db.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Username == request.Username);
 
                 if (user == null)
                 {
