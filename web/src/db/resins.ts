@@ -6,5 +6,9 @@ export function getResinRecharge(ms: number) {
 }
 
 export function clampResin(value: number) {
-  return Math.floor(Math.max(0, Math.min(ResinCap, value)));
+  return Math.max(0, Math.min(ResinCap, value));
+}
+
+export function roundResin(value: number) {
+  return Math.floor(clampResin(value));
 }

@@ -1,7 +1,7 @@
 import React, { memo, useMemo, useRef, useState } from "react";
 import { css, cx } from "emotion";
 import { Configs, useConfig } from "../../../configs";
-import { clampResin, getResinRecharge, ResinCap } from "../../../db/resins";
+import { roundResin, getResinRecharge, ResinCap } from "../../../db/resins";
 import { useServerDate } from "../../../time";
 import WhiteCard from "../../../whiteCard";
 import SectionHeading from "../sectionHeading";
@@ -37,7 +37,7 @@ const ResinCalculator = () => {
 
   const inputWidth = useMeasuredTextWidth(
     "text-xl font-bold",
-    clampResin(current).toString()
+    roundResin(current).toString()
   );
 
   return (
@@ -84,11 +84,11 @@ const ResinCalculator = () => {
             )}
             min={0}
             max={ResinCap}
-            value={clampResin(current)}
+            value={roundResin(current)}
             onClick={() => resinInput.current?.select()}
             onInput={({ currentTarget: { valueAsNumber } }) => {
               setResin({
-                value: clampResin(valueAsNumber || 0),
+                value: roundResin(valueAsNumber || 0),
                 time: date.getTime(),
               });
             }}

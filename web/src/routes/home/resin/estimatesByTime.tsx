@@ -2,7 +2,7 @@ import React, { memo, useMemo } from "react";
 import { useConfig } from "../../../configs";
 import { useServerDate } from "../../../time";
 import {
-  clampResin,
+  roundResin,
   getResinRecharge,
   ResinCap,
   ResinsPerMinute,
@@ -17,7 +17,7 @@ const EstimatesByTime = () => {
     const values: { time: string; value: number }[] = [];
 
     const addValue = (hours: number) => {
-      const value = clampResin(
+      const value = roundResin(
         resin.value +
           getResinRecharge(date.getTime() - resin.time + hours * 3600000)
       );

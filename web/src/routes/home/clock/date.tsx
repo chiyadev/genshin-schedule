@@ -4,7 +4,7 @@ import {
   getServerNextReset,
   useServerDate,
 } from "../../../time";
-import { clampResin, getResinRecharge } from "../../../db/resins";
+import { roundResin, getResinRecharge } from "../../../db/resins";
 
 const Date = () => {
   const date = useServerDate();
@@ -13,7 +13,7 @@ const Date = () => {
   const resetTime = resetDate.getTime() - date.getTime();
   const resetHours = Math.floor(resetTime / 3600000);
   const resetMinutes = Math.round(resetTime / 60000);
-  const resetResins = clampResin(getResinRecharge(resetTime));
+  const resetResins = roundResin(getResinRecharge(resetTime));
 
   return (
     <div className="text-xs text-gray-600">
