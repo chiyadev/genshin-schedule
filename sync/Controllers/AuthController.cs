@@ -32,7 +32,26 @@ namespace GenshinSchedule.SyncServer.Controllers
                 var user = await _db.Users.AsNoTracking().FirstOrDefaultAsync(user => user.Username == request.Username);
 
                 if (user == null)
-                    return NotFound($"No such user '{request.Username}'.");
+                {
+                    user = new DbUser
+                    {
+                        Username    = request.Username,
+                        Password    = _hash.Hash(request.Password),
+                        CreatedTime = DateTime.UtcNow,
+
+                        WebData = new DbWebData
+                        {
+                            Token = Guid.NewGuid(),
+                            Data  = "{}"
+                        }
+                    };
+
+                    _db.Add(user);
+
+                    await _db.SaveChangesAsync();
+
+                    _logger.LogInformation($"Created user '{request.Username}'.");
+                }
 
                 return Ok(new AuthResponse
                 {
@@ -43,46 +62,6 @@ namespace GenshinSchedule.SyncServer.Controllers
             catch (Exception e)
             {
                 var message = $"Could not authenticate user '{request.Username}'.";
-
-                _logger.LogWarning(e, message);
-
-                return BadRequest(message);
-            }
-        }
-
-        [HttpPost("register")]
-        public async Task<ActionResult<RegisterResponse>> RegisterAsync(RegisterRequest request)
-        {
-            try
-            {
-                var user = new DbUser
-                {
-                    Username    = request.Username,
-                    Password    = _hash.Hash(request.Password),
-                    CreatedTime = DateTime.UtcNow,
-
-                    WebData = new DbWebData
-                    {
-                        Token = Guid.NewGuid(),
-                        Data  = "{}"
-                    }
-                };
-
-                _db.Add(user);
-
-                await _db.SaveChangesAsync();
-
-                _logger.LogInformation($"Created user '{request.Username}'.");
-
-                return Ok(new RegisterResponse
-                {
-                    Token = _auth.CreateToken(user),
-                    User  = Models.User.FromDbModel(user)
-                });
-            }
-            catch (Exception e)
-            {
-                var message = $"Could not create user '{request.Username}'.";
 
                 _logger.LogWarning(e, message);
 
