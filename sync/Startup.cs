@@ -19,6 +19,9 @@ namespace GenshinSchedule.SyncServer
         {
             services.AddControllers();
 
+            services.AddAuthentication(AuthHandler.SchemeName)
+                    .AddScheme<AuthOptions, AuthHandler>(AuthHandler.SchemeName, null);
+
             services.AddDbContextPool<SyncDbContext>(options => options.UseNpgsql(_configuration.GetConnectionString(nameof(SyncDbContext))));
 
             services.AddSingleton<AuthHelper>()
