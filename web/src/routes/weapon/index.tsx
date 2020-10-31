@@ -5,6 +5,7 @@ import WhiteCard from "../../whiteCard";
 import MaterialDisplay from "./material";
 import CommonMaterialDisplay from "./common";
 import Note from "./note";
+import GameImage from "../../gameImage";
 
 const WeaponInfo = ({ weapon }: { weapon: string }) => {
   const info = useMemo(() => Weapons.find((c) => c.name === weapon), [weapon]);
@@ -23,11 +24,7 @@ const Inner = ({ weapon }: { weapon: Weapon }) => {
     <WhiteCard divide>
       <a href={weapon.wiki}>
         <div className="space-x-2 py-4 flex flex-row">
-          <img
-            alt={weapon.name}
-            src={`/assets/game/${weapon.name}.png`}
-            className="w-16 h-16 object-cover"
-          />
+          <GameImage name={weapon.name} className="w-16 h-16 object-cover" />
 
           <div className="flex flex-col justify-center">
             <div className="text-xl font-bold">{weapon.name}</div>

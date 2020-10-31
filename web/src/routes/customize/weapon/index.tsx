@@ -2,6 +2,7 @@ import React, { memo, useMemo } from "react";
 import { WeaponSearch } from "./search";
 import Icon from "./icon";
 import { Link } from "react-router-dom";
+import SkywardPride from "../../../assets/game/Skyward Pride.png";
 
 const WeaponList = ({ search }: { search: string }) => {
   const results = useMemo(
@@ -19,10 +20,9 @@ const WeaponList = ({ search }: { search: string }) => {
       <div className="text-xl font-bold">
         <img
           alt="Weapon"
-          src="/assets/game/Skyward Pride.png"
+          src={SkywardPride}
           className="w-8 h-8 inline object-cover"
         />
-
         <span className="align-middle"> Weapons</span>
       </div>
 

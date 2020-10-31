@@ -2,6 +2,7 @@ import React, { memo, useMemo } from "react";
 import { CharacterSearch } from "./search";
 import Icon from "./icon";
 import { Link } from "react-router-dom";
+import Anemo from "../../../assets/game/Anemo.png";
 
 const CharacterList = ({ search }: { search: string }) => {
   const results = useMemo(
@@ -19,12 +20,7 @@ const CharacterList = ({ search }: { search: string }) => {
   return (
     <div className="space-y-2">
       <div className="text-xl font-bold">
-        <img
-          alt="Character"
-          src="/assets/game/Anemo.png"
-          className="w-8 h-8 inline"
-        />
-
+        <img alt="Anemo" src={Anemo} className="w-8 h-8 inline" />
         <span className="align-middle"> Characters</span>
       </div>
 

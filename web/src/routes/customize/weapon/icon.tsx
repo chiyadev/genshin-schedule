@@ -3,6 +3,7 @@ import { Weapon } from "../../../db/weapons";
 import { useConfig } from "../../../configs";
 import { cx } from "emotion";
 import LazyLoad from "react-lazyload";
+import GameImage from "../../../gameImage";
 
 const Icon = ({ weapon }: { weapon: Weapon }) => {
   const [existing] = useConfig("weapons");
@@ -20,9 +21,8 @@ const Icon = ({ weapon }: { weapon: Weapon }) => {
       )}
     >
       <LazyLoad height="5rem">
-        <img
-          alt={weapon.name}
-          src={`/assets/game/${weapon.name}.png`}
+        <GameImage
+          name={weapon.name}
           className="w-20 h-20 mx-auto mt-2 object-cover"
         />
       </LazyLoad>
@@ -31,9 +31,8 @@ const Icon = ({ weapon }: { weapon: Weapon }) => {
         <div className="text-sm truncate">{weapon.name}</div>
 
         <div className="text-xs text-gray-600 truncate">
-          <img
-            alt={weapon.material.name}
-            src={`/assets/game/${weapon.material.item}.png`}
+          <GameImage
+            name={weapon.material.item}
             className="w-3 h-3 inline opacity-75"
           />
 

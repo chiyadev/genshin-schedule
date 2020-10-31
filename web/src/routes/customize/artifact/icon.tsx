@@ -3,6 +3,7 @@ import { Artifact } from "../../../db/artifacts";
 import { useConfig } from "../../../configs";
 import { cx } from "emotion";
 import LazyLoad from "react-lazyload";
+import GameImage from "../../../gameImage";
 
 const Icon = ({ artifact }: { artifact: Artifact }) => {
   const [existing] = useConfig("artifacts");
@@ -20,9 +21,8 @@ const Icon = ({ artifact }: { artifact: Artifact }) => {
       )}
     >
       <LazyLoad height="5rem">
-        <img
-          alt={artifact.name}
-          src={`/assets/game/${artifact.name}.png`}
+        <GameImage
+          name={artifact.name}
           className="w-20 h-20 mx-auto mt-2 object-fit"
         />
       </LazyLoad>

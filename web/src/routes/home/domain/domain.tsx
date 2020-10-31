@@ -3,6 +3,7 @@ import WhiteCard from "../../../whiteCard";
 import { ScheduledDomain } from "./index";
 import MaterialDisplay from "./material";
 import ArtifactDisplay from "./artifact";
+import Domain from "../../../assets/game/Domain.png";
 
 const DomainDisplay = ({
   domain,
@@ -16,11 +17,7 @@ const DomainDisplay = ({
     <WhiteCard divide>
       <a href={domain.wiki}>
         <div className="space-x-2 py-4 flex flex-row">
-          <img
-            alt="Domain"
-            src="/assets/game/Domain.png"
-            className="w-10 object-contain"
-          />
+          <img alt="Domain" src={Domain} className="w-10 object-contain" />
 
           <div className="flex flex-col justify-center">
             <div className="text-lg font-bold">{domain.name}</div>

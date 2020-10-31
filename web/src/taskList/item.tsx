@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import { Task, useConfig } from "../configs";
+import GameImage from "../gameImage";
 
 const Item = ({ task }: { task: Task }) => {
   const [, setMapState] = useConfig("mapState");
@@ -14,11 +15,7 @@ const Item = ({ task }: { task: Task }) => {
       }}
     >
       <div className="flex flex-col justify-center flex-shrink-0">
-        <img
-          alt={task.icon}
-          src={`/assets/game/${task.icon}.png`}
-          className="w-8 h-8 object-contain"
-        />
+        <GameImage name={task.icon} className="w-8 h-8 object-contain" />
       </div>
 
       <div className="flex flex-col justify-center">

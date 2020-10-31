@@ -1,4 +1,5 @@
 import React, {
+  ComponentProps,
   Dispatch,
   memo,
   ReactNode,
@@ -16,19 +17,14 @@ import MarkerWrapper from "./markerWrapper";
 import Back from "./back";
 import InfoPage from "./info";
 import IconPage from "./icon";
+import { getGameImageSrc } from "../../gameImage";
+
+import "./icon.css";
 
 export type PopupPage = "info" | "icon";
 export const PopupPages: PopupPage[] = ["info", "icon"];
 
-const TaskMarker = ({
-  task,
-  setTask,
-  alwaysOpen,
-  showDue = true,
-  onOpen,
-  onClose,
-  footer,
-}: {
+const TaskMarker = (props: {
   task: Task;
   setTask: Dispatch<SetStateAction<Task>>;
   alwaysOpen?: boolean;
@@ -37,15 +33,45 @@ const TaskMarker = ({
   onClose?: () => void;
   footer?: ReactNode;
 }) => {
+  const { task } = props;
+  const [icon, setIcon] = useState<L.Icon>();
+
+  useEffect(() => {
+    (async () => {
+      try {
+        setIcon(
+          new L.Icon({
+            iconUrl: await getGameImageSrc(task.icon),
+            iconSize: [36, 36],
+            className: "task-icon",
+          })
+        );
+      } catch {
+        // ignored
+      }
+    })();
+  }, [task.icon]);
+
+  if (!icon) {
+    return null;
+  }
+
+  return <TaskMarkerCore icon={icon} {...props} />;
+};
+
+const TaskMarkerCore = ({
+  task,
+  setTask,
+  alwaysOpen,
+  showDue = true,
+  onOpen,
+  onClose,
+  footer,
+  icon,
+}: ComponentProps<typeof TaskMarker> & {
+  icon: L.Icon;
+}) => {
   const markerRef = useRef<any>(null);
-  const markerIcon = useMemo(
-    () =>
-      new L.Icon({
-        iconUrl: `/assets/game/${task.icon}.png`,
-        iconSize: [36, 36],
-      }),
-    [task.icon]
-  );
 
   const [focusedTask, setFocusedTask] = useConfig("mapFocusedTask");
   const focused = focusedTask === task.id;
@@ -63,7 +89,7 @@ const TaskMarker = ({
       task={task}
       markerRef={markerRef}
       position={task.location}
-      icon={markerIcon}
+      icon={icon}
     >
       <CardPopup
         divide

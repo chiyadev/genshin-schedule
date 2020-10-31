@@ -9,6 +9,7 @@ import { Task } from "../../../configs";
 import { PopupPage } from "../index";
 import IntervalPicker from "./interval";
 import DueText from "./due";
+import GameImage from "../../../gameImage";
 
 const InfoPage = ({
   task,
@@ -34,9 +35,8 @@ const InfoPage = ({
   return (
     <div className="py-2 flex flex-col space-y-1">
       <div className="flex flex-row space-x-2">
-        <img
-          alt={task.icon}
-          src={`/assets/game/${task.icon}.png`}
+        <GameImage
+          name={task.icon}
           className="w-6 h-6 object-contain pointer-events-auto cursor-pointer"
           onClick={() => setPage("icon")}
         />

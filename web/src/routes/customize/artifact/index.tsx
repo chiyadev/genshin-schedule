@@ -2,6 +2,7 @@ import React, { memo, useMemo } from "react";
 import { ArtifactSearch } from "./search";
 import Icon from "./icon";
 import { Link } from "react-router-dom";
+import TheExile from "../../../assets/game/The Exile.png";
 
 const ArtifactList = ({ search }: { search: string }) => {
   const results = useMemo(
@@ -19,12 +20,7 @@ const ArtifactList = ({ search }: { search: string }) => {
   return (
     <div className="space-y-2">
       <div className="text-xl font-bold">
-        <img
-          alt="Artifact"
-          src="/assets/game/The Exile.png"
-          className="w-8 h-8 inline"
-        />
-
+        <img alt="Artifact" src={TheExile} className="w-8 h-8 inline" />
         <span className="align-middle"> Artifacts</span>
       </div>
 

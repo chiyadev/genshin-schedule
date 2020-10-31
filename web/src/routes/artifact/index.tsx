@@ -4,6 +4,7 @@ import WhiteCard from "../../whiteCard";
 import { Artifact, Artifacts } from "../../db/artifacts";
 import Toggle from "./toggle";
 import Note from "./note";
+import GameImage from "../../gameImage";
 
 const ArtifactInfo = ({ artifact }: { artifact: string }) => {
   const info = useMemo(() => Artifacts.find((c) => c.name === artifact), [
@@ -24,11 +25,7 @@ const Inner = ({ artifact }: { artifact: Artifact }) => {
     <WhiteCard divide>
       <a href={artifact.wiki}>
         <div className="space-x-2 py-4 flex flex-row">
-          <img
-            alt={artifact.name}
-            src={`/assets/game/${artifact.name}.png`}
-            className="w-16 h-16 rounded-full"
-          />
+          <GameImage name={artifact.name} className="w-16 h-16 rounded-full" />
 
           <div className="flex flex-col justify-center">
             <div className="text-xl font-bold">{artifact.name}</div>

@@ -21,7 +21,7 @@ const Miscellaneous = ({ search }: { search: string }) => {
         {results.map((result) => {
           switch (result) {
             case "background":
-              return <Background />;
+              return <Background key="background" />;
           }
 
           return null;

@@ -9,6 +9,7 @@ import EstimatesByTime from "./estimatesByTime";
 import { useMeasuredTextWidth } from "../../../utils";
 import Subtract from "./subtract";
 import EstimatesByResin from "./estimatesByResin";
+import Resin from "../../../assets/game/Resin.png";
 
 export function formatDateSimple(date: Date) {
   const hour = date.getHours().toString().padStart(2, "0");
@@ -51,7 +52,7 @@ const ResinCalculator = () => {
         <div className="flex flex-row space-x-2">
           <img
             alt="Resin"
-            src="/assets/game/Resin.png"
+            src={Resin}
             className="w-10 h-10 pointer-events-auto cursor-pointer"
             onClick={() => {
               setMode((mode) => {

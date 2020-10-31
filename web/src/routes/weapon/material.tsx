@@ -5,6 +5,7 @@ import { useConfig } from "../../configs";
 import DropLabel from "../../dropLabel";
 import Checkbox from "../../checkbox";
 import { arrayToggle } from "../../utils";
+import GameImage from "../../gameImage";
 
 const MaterialDisplay = ({
   weapon,
@@ -20,11 +21,8 @@ const MaterialDisplay = ({
     <div className="py-4 space-y-4 text-sm flex flex-col">
       <a href={material.wiki}>
         <div className="space-x-2 flex flex-row">
-          <img
-            alt={material.name}
-            src={`/assets/game/${material.item}.png`}
-            className="w-12 h-12"
-          />
+          <GameImage name={material.item} className="w-12 h-12" />
+
           <div className="flex flex-col justify-center">
             <div className="text-lg">{material.name}</div>
             <div className="text-xs text-gray-600">{material.type}</div>

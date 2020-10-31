@@ -4,6 +4,7 @@ import { useTabTitle } from "../../utils";
 import WhiteCard from "../../whiteCard";
 import MaterialDisplay from "./material";
 import CommonMaterialDisplay from "./common";
+import GameImage from "../../gameImage";
 
 const CharacterInfo = ({ character }: { character: string }) => {
   const info = useMemo(() => Characters.find((c) => c.name === character), [
@@ -24,11 +25,7 @@ const Inner = ({ character }: { character: Character }) => {
     <WhiteCard divide>
       <a href={character.wiki}>
         <div className="space-x-2 py-4 flex flex-row">
-          <img
-            alt={character.name}
-            src={`/assets/game/${character.name}.png`}
-            className="w-16 h-16 rounded-full"
-          />
+          <GameImage name={character.name} className="w-16 h-16 rounded-full" />
 
           <div className="flex flex-col justify-center">
             <div className="text-xl font-bold">{character.name}</div>

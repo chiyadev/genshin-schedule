@@ -2,6 +2,7 @@ import React, { memo, useMemo } from "react";
 import { DomainDropSet, DomainDropSets } from "./db/domainDropSets";
 import { Domains } from "./db/domains";
 import { DayOfWeek, DaysOfWeek } from "./time";
+import Domain from "./assets/game/Domain.png";
 
 const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   const domains = useMemo(() => {
@@ -30,11 +31,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
 
         return (
           <a key={domain.name} href={domain.wiki} className="block">
-            <img
-              alt="Domain"
-              src="/assets/game/Domain.png"
-              className="w-4 h-4 inline"
-            />
+            <img alt="Domain" src={Domain} className="w-4 h-4 inline" />
 
             <span className="align-middle">
               <span> {domain.name}</span>
