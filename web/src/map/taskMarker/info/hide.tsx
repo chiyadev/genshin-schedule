@@ -1,6 +1,7 @@
 import React, { Dispatch, memo, SetStateAction } from "react";
 import { Task } from "../../../configs";
 import { FaEye } from "react-icons/fa";
+import { useLeaflet } from "react-leaflet";
 
 const HideCheck = ({
   task,
@@ -9,6 +10,8 @@ const HideCheck = ({
   task: Task;
   setTask: Dispatch<SetStateAction<Task>>;
 }) => {
+  const leaflet = useLeaflet();
+
   return (
     <label className="block text-xs flex flex-1 flex-row">
       <div className="flex-1">
@@ -21,6 +24,8 @@ const HideCheck = ({
         checked={!task.visible}
         onChange={({ currentTarget: { checked } }) => {
           setTask((task) => ({ ...task, visible: !checked }));
+
+          checked && leaflet.map?.closePopup();
         }}
       />
     </label>
