@@ -14,7 +14,7 @@ const Body = () => {
   const [error, setError] = useState<Error>();
 
   return (
-    <div className="space-y-4">
+    <form className="space-y-4">
       <div className="text-sm">
         Signing in allows your Genshin Schedule data including resin, tasks and
         domains to be synchronized across devices.
@@ -40,7 +40,7 @@ const Body = () => {
           </div>
         )}
       </div>
-    </div>
+    </form>
   );
 };
 

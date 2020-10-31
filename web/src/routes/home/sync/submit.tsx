@@ -20,6 +20,7 @@ const Submit = ({
 
   return (
     <button
+      type="submit"
       className={cx({ "text-gray-600": load || !password })}
       disabled={load || !password}
       onClick={async () => {
