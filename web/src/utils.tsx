@@ -57,7 +57,7 @@ export function useDueTasks() {
 
   return useMemo(() => {
     return tasks
-      .filter((task) => task.dueTime <= date.getTime())
+      .filter((task) => task.visible && task.dueTime <= date.getTime())
       .sort((a, b) => {
         const icon = a.icon.localeCompare(b.icon);
         if (icon !== 0) return icon;

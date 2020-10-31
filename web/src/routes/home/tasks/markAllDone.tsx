@@ -13,7 +13,7 @@ const MarkAllDone = () => {
       onClick={() => {
         setTasks((tasks) =>
           tasks.map((task) => {
-            if (task.dueTime <= date.getTime()) {
+            if (task.visible && task.dueTime <= date.getTime()) {
               return {
                 ...task,
                 dueTime: date.getTime() + task.refreshTime,

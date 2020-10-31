@@ -16,7 +16,7 @@ const MarkerWrapper = ({
   return (
     <Marker
       ref={markerRef}
-      opacity={task.dueTime <= date.getTime() ? 1 : 0.5}
+      opacity={task.visible && task.dueTime <= date.getTime() ? 1 : 0.5}
       {...props}
     />
   );

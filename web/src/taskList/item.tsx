@@ -10,7 +10,11 @@ const Item = ({ task }: { task: Task }) => {
     <div
       className="py-2 flex flex-row space-x-2 cursor-pointer"
       onClick={() => {
-        setMapState({ ...task.location, zoom: 5.6 });
+        setMapState({
+          lat: task.location.lat + 1.2,
+          lng: task.location.lng,
+          zoom: 5.6,
+        });
         setFocusedTask(task.id);
       }}
     >

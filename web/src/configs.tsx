@@ -101,7 +101,7 @@ export type Configs = {
   iconQuery: string;
   iconListScroll: number;
   mapState: MapLocation & { zoom: number };
-  mapCreateTask: Task & { visible: boolean };
+  mapCreateTask: Task;
   mapFocusedTask: string | false;
   mapTaskList: boolean;
   paimonBg: boolean;
@@ -113,6 +113,7 @@ export type Task = {
   icon: string;
   name: string;
   description?: string;
+  visible: boolean;
   location: MapLocation;
   dueTime: number;
   refreshTime: number;

@@ -10,6 +10,7 @@ import { PopupPage } from "../index";
 import IntervalPicker from "./interval";
 import DueText from "./due";
 import GameImage from "../../../gameImage";
+import HideCheck from "./hide";
 
 const InfoPage = ({
   task,
@@ -63,12 +64,17 @@ const InfoPage = ({
 
       <IntervalPicker
         value={task.refreshTime}
-        setValue={(value) =>
-          setTask((task) => ({ ...task, refreshTime: value }))
-        }
+        setValue={(value) => {
+          setTask((task) => ({ ...task, refreshTime: value }));
+        }}
       />
 
-      {showDue && <DueText task={task} />}
+      {showDue && (
+        <>
+          <HideCheck task={task} setTask={setTask} />
+          <DueText task={task} />
+        </>
+      )}
     </div>
   );
 };
