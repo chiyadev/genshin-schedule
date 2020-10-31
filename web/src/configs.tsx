@@ -82,6 +82,16 @@ export function useLocalStorage<T>(
   ];
 }
 
+export type LocalConfigs = {
+  apiUrl: string;
+  auth:
+    | false
+    | {
+        token: string;
+        username: string;
+      };
+};
+
 type MapLocation = { lat: number; lng: number };
 
 export type Configs = {
@@ -117,6 +127,11 @@ export type Task = {
   location: MapLocation;
   dueTime: number;
   refreshTime: number;
+};
+
+export const DefaultLocalConfigs: LocalConfigs = {
+  apiUrl: "https://genshin.chiya.dev/api/v1",
+  auth: false,
 };
 
 const defaultMapCenter = {
@@ -158,6 +173,10 @@ export const DefaultConfigs: Configs = {
   paimonBg: true,
   showSiteInfo: true,
 };
+
+export function useLocalConfig<TKey extends keyof LocalConfigs>(key: TKey) {
+  return useLocalStorage<LocalConfigs[TKey]>(key, DefaultLocalConfigs[key]);
+}
 
 export function useConfig<TKey extends keyof Configs>(key: TKey) {
   return useLocalStorage<Configs[TKey]>(key, DefaultConfigs[key]);

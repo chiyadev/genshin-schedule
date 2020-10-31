@@ -21,7 +21,7 @@ const Info = () => {
 
         <div className="flex flex-col justify-center">
           <div className="text-lg font-bold">Genshin Schedule</div>
-          <div className="text-xs text-gray-600">Website Information</div>
+          <div className="text-xs text-gray-600">Website information</div>
         </div>
       </div>
 
@@ -50,23 +50,6 @@ const Info = () => {
           <li>
             <strong>Domain View</strong> &mdash; Shows which domains can be
             cleared today for character talent/weapon ascension materials.
-          </li>
-        </ul>
-
-        <div>
-          This website is still a work-in-progress, so some features are not
-          implemented yet.
-        </div>
-
-        <ul className="list-disc list-inside">
-          <li>
-            No data synchronization &mdash; All data is stored locally on the
-            browser for now.
-          </li>
-          <li>
-            Missing character ascension crystals &mdash; In consideration; World
-            boss drops do not rotate, but it might be helpful to display them
-            here nonetheless.
           </li>
         </ul>
 
