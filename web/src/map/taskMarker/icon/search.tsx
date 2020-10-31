@@ -19,19 +19,19 @@ addIcons("ore", [
   "Crystal Chunk",
   "Electro Crystal",
   "Cor Lapis",
-  "Noctilucous Jade"
+  "Noctilucous Jade",
 ]);
 
 addIcons("character exp material", [
   "Wanderer's Advice",
   "Adventurer's Experience",
-  "Hero's Wit"
+  "Hero's Wit",
 ]);
 
 addIcons("weapon enhancement material", [
   "Enhancement Ore",
   "Fine Enhancement Ore",
-  "Mystic Enhancement Ore"
+  "Mystic Enhancement Ore",
 ]);
 
 addIcons("character ascension material", [
@@ -41,12 +41,12 @@ addIcons("character ascension material", [
   "Vajrada Amethyst Sliver",
   "Prithiva Topaz Sliver",
   "Varunada Lazurite Sliver",
-  "Agnidus Agate Sliver"
+  "Agnidus Agate Sliver",
 ]);
 
 addIcons(
   "common ascension material",
-  CommonMaterials.map(material => material.item)
+  CommonMaterials.map((material) => material.item)
 );
 
 addIcons("local specialty mondstadt", [
@@ -57,7 +57,7 @@ addIcons("local specialty mondstadt", [
   "Small Lamp Grass",
   "Valberry",
   "Windwheel Aster",
-  "Wolfhook"
+  "Wolfhook",
 ]);
 
 addIcons("local specialty liyue", [
@@ -67,23 +67,35 @@ addIcons("local specialty liyue", [
   "Starconch",
   "Violetgrass",
   "Glaze Lily",
-  "Horsetail"
+  "Horsetail",
 ]);
 
 addIcons("cooking ingredient", [
-  "Lotus Head",
-  "Raw Meat",
-  "Matsutake",
-  "Crab",
-  "Fowl",
-  "Wheat",
   "Almond",
-  "Shrimp Meat"
+  "Berry",
+  "Bird Egg",
+  "Cabbage",
+  "Crab",
+  "Fish",
+  "Fowl",
+  "Lotus Head",
+  "Matsutake",
+  "Mushroom",
+  "Mint",
+  "Onion",
+  "Potato",
+  "Radish",
+  "Raw Meat",
+  "Snapdragon",
+  "Sweet Flower",
+  "Shrimp Meat",
+  "Tomato",
+  "Wheat",
 ]);
 
 addIcons(
   "artifact",
-  Artifacts.map(artifact => artifact.name)
+  Artifacts.map((artifact) => artifact.name)
 );
 
 export const KnownResourceTimers: { [key: string]: number | undefined } = {
@@ -107,5 +119,5 @@ export const KnownResourceTimers: { [key: string]: number | undefined } = {
   "Silk Flower": 48,
   Starconch: 48,
   Violetgrass: 48,
-  Horsetail: 48 // source: https://www.reddit.com/r/Genshin_Impact/comments/jf7zhh/i_made_an_interactive_website_for_daily_domain/ga41wk5/?context=3
+  Horsetail: 48, // source: https://www.reddit.com/r/Genshin_Impact/comments/jf7zhh/i_made_an_interactive_website_for_daily_domain/ga41wk5/?context=3
 };
