@@ -11,10 +11,14 @@ namespace GenshinSchedule.SyncServer
 
         public byte[] Hash(string str, byte[] salt = null)
         {
-            salt ??= new byte[_saltSize];
+            if (salt == null)
+            {
+                salt = new byte[_saltSize];
 
-            using (var random = RandomNumberGenerator.Create())
+                using var random = RandomNumberGenerator.Create();
+
                 random.GetBytes(salt);
+            }
 
             // best practice from microsoft: https://docs.microsoft.com/en-us/aspnet/core/security/data-protection/consumer-apis/password-hashing?view=aspnetcore-3.1
             var hash = KeyDerivation.Pbkdf2(str, salt, KeyDerivationPrf.HMACSHA1, 10000, _hashSize);
@@ -33,10 +37,7 @@ namespace GenshinSchedule.SyncServer
 
             Array.Copy(buffer, 0, salt, 0, _saltSize);
 
-            var a = ((Span<byte>) buffer).Slice(_saltSize);
-            var b = Hash(str, salt);
-
-            return a.SequenceEqual(b);
+            return ((Span<byte>) buffer).SequenceEqual(Hash(str, salt));
         }
     }
 }

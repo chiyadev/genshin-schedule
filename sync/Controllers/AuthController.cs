@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace GenshinSchedule.SyncServer.Controllers
 {
-    [Route("auth")]
+    [ApiController, Route("auth")]
     public class AuthController : ControllerBase
     {
         readonly SyncDbContext _db;
@@ -51,6 +51,11 @@ namespace GenshinSchedule.SyncServer.Controllers
                     await _db.SaveChangesAsync();
 
                     _logger.LogInformation($"Created user '{request.Username}'.");
+                }
+                else
+                {
+                    if (!_hash.Test(user.Password, request.Password))
+                        return Unauthorized("Invalid username or password.");
                 }
 
                 return Ok(new AuthResponse
