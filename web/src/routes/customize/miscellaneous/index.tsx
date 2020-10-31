@@ -2,6 +2,7 @@ import React, { memo, useMemo } from "react";
 import { FaCog } from "react-icons/fa";
 import Background from "./background";
 import { MiscSearch } from "./search";
+import SignOut from "./signOut";
 
 const Miscellaneous = ({ search }: { search: string }) => {
   const results = useMemo(() => MiscSearch.search(search), [search]);
@@ -17,11 +18,14 @@ const Miscellaneous = ({ search }: { search: string }) => {
         <span className="align-middle"> Miscellaneous</span>
       </div>
 
-      <div>
+      <div className="space-y-4">
         {results.map((result) => {
           switch (result) {
             case "background":
               return <Background key="background" />;
+
+            case "signOut":
+              return <SignOut key="signOut" />;
           }
 
           return null;
