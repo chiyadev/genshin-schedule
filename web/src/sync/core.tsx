@@ -1,6 +1,7 @@
-import React, { memo, useEffect, useMemo, useRef, useState } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 import {
   ConfigKeys,
+  Configs,
   getConfigs,
   setConfigs,
   useLocalConfig,
@@ -9,8 +10,7 @@ import {
 import { SyncRequest, SyncResponse, WebData } from "./types";
 import { css, cx } from "emotion";
 import { FaSpinner } from "react-icons/fa";
-import { createPatch } from "rfc6902";
-import { Lock } from "semaphore-async-await";
+import { createPatch, Patch } from "rfc6902";
 
 const Core = ({
   authToken,
@@ -19,11 +19,40 @@ const Core = ({
   authToken: string;
   reset: () => void;
 }) => {
+  // create patches on change events
+  const [last, setLast] = useState<Partial<Configs>>();
+
+  const patchQueue = useRef<Patch>([]);
+  const patchTimeout = useRef<number>();
+
+  useLocalStorageListener((key) => {
+    if (!ConfigKeys.includes(key as any)) return;
+
+    clearTimeout(patchTimeout.current);
+
+    patchTimeout.current = window.setTimeout(() => {
+      if (!last) return;
+
+      const current = getConfigs();
+      const patch = createPatch(last, current);
+
+      setLast(current);
+      patchQueue.current.push(...patch);
+    }, 1000);
+  });
+
+  // send patches asynchronously
   const [apiUrl] = useLocalConfig("apiUrl");
-  const [current, setCurrent] = useState<WebData>();
+  const [sync, setSync] = useState<boolean>();
 
   useEffect(() => {
+    let mounted = true;
+
     (async () => {
+      // sync token
+      let token: string;
+
+      // load initial data
       try {
         const response = await fetch(`${apiUrl}/sync`, {
           method: "GET",
@@ -37,76 +66,80 @@ const Core = ({
           throw Error(await response.text());
         }
 
-        const data = (await response.json()) as WebData;
+        let data: Partial<Configs>;
+        ({ data, token } = (await response.json()) as WebData);
 
-        setCurrent(data);
-        setConfigs(data.data);
+        setLast(data);
+        setConfigs(data);
+        setSync(false);
       } catch (e) {
         console.error("could not retrieve sync data", e);
 
         reset();
+        return;
       }
-    })();
-  }, [apiUrl, authToken, reset]);
 
-  const [sync, setSync] = useState(false);
-  const syncLock = useMemo(() => new Lock(), []);
-  const syncTimeout = useRef<number>();
+      // enter sync loop
+      while (mounted) {
+        await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  useEffect(() => clearTimeout(syncTimeout.current), [current]);
-
-  useLocalStorageListener((key) => {
-    if (!ConfigKeys.includes(key as any)) return;
-
-    clearTimeout(syncTimeout.current);
-    syncTimeout.current = window.setTimeout(async () => {
-      await syncLock.acquire();
-      setSync(true);
-
-      try {
-        if (!current) return;
-
-        const newData = getConfigs();
-        const patch: SyncRequest = {
-          patch: createPatch(current.data, newData),
-          token: current.token,
-        };
-
-        if (!patch.patch.length) return;
-
-        const response = await fetch(`${apiUrl}/sync`, {
-          method: "PATCH",
-          headers: {
-            "content-type": "application/json",
-            authorization: `Bearer ${authToken}`,
-          },
-          body: JSON.stringify(patch),
-        });
-
-        if (response.status === 400) {
-          const data = (await response.json()) as WebData;
-
-          setCurrent(data);
-          setConfigs(data.data);
-        } else {
-          if (!response.ok) {
-            throw Error(await response.text());
+        try {
+          if (!patchQueue.current.length) {
+            continue;
           }
 
-          const { token } = (await response.json()) as SyncResponse;
+          setSync(true);
 
-          setCurrent({ data: newData, token });
+          const request: SyncRequest = {
+            patch: patchQueue.current,
+            token,
+          };
+
+          patchQueue.current = [];
+
+          const response = await fetch(`${apiUrl}/sync`, {
+            method: "PATCH",
+            headers: {
+              "content-type": "application/json",
+              authorization: `Bearer ${authToken}`,
+            },
+            body: JSON.stringify(request),
+          });
+
+          // token mismatch; overwrite local data
+          if (response.status === 400) {
+            let data: Partial<Configs>;
+            ({ data, token } = (await response.json()) as WebData);
+
+            setLast(data);
+            setConfigs(data);
+
+            patchQueue.current = [];
+          }
+
+          // patch success
+          else if (response.ok) {
+            ({ token } = (await response.json()) as SyncResponse);
+          }
+
+          // patch fail
+          else {
+            throw Error(await response.text());
+          }
+        } catch (e) {
+          console.log("could not send sync patch", e);
+        } finally {
+          setSync(false);
         }
-      } catch (e) {
-        console.error("could not send sync patch", e);
-      } finally {
-        syncLock.release();
-        setSync(false);
       }
-    }, 1000);
-  });
+    })();
 
-  if (!current) {
+    return () => {
+      mounted = false;
+    };
+  }, [apiUrl, authToken, reset]);
+
+  if (typeof sync === "undefined") {
     return (
       <div
         className={cx(

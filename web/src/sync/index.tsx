@@ -9,7 +9,7 @@ const Sync = ({ children }: { children?: ReactNode }) => {
   return (
     <>
       {children}
-      {auth && <Core authToken={auth.token} reset={reset} />}
+      {auth && <Core key={auth.token} authToken={auth.token} reset={reset} />}
     </>
   );
 };
