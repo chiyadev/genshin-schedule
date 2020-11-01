@@ -39,7 +39,10 @@ const Body = () => {
             {error ? (
               <span>{error.message}</span>
             ) : (
-              <span>Note: This is not an official miHoYo authorization.</span>
+              <span>
+                Note: This is not an official miHoYo authorization. Avoid
+                reusing your password.
+              </span>
             )}
           </div>
         )}

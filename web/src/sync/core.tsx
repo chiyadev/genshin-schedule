@@ -49,17 +49,17 @@ const Core = ({
     })();
   }, [apiUrl, authToken, reset]);
 
-  const timeout = useRef<number>();
   const [sync, setSync] = useState(false);
   const syncLock = useMemo(() => new Lock(), []);
+  const syncTimeout = useRef<number>();
 
-  useEffect(() => clearTimeout(timeout.current), [current]);
+  useEffect(() => clearTimeout(syncTimeout.current), [current]);
 
   useLocalStorageListener((key) => {
     if (!ConfigKeys.includes(key as any)) return;
 
-    clearTimeout(timeout.current);
-    timeout.current = window.setTimeout(async () => {
+    clearTimeout(syncTimeout.current);
+    syncTimeout.current = window.setTimeout(async () => {
       await syncLock.acquire();
       setSync(true);
 
