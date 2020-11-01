@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import WhiteCard from "../../../whiteCard";
 import Hide from "./hide";
 import { useConfig } from "../../../configs";
+import Favicon180x180 from "../../../assets/favicon-180x180.png";
 
 const Info = () => {
   const [visible] = useConfig("showSiteInfo");
@@ -15,7 +16,7 @@ const Info = () => {
       <div className="py-4 flex flex-row space-x-2">
         <img
           alt="Genshin Schedule"
-          src="/apple-touch-icon.png"
+          src={Favicon180x180}
           className="w-10 h-10 rounded"
         />
 
