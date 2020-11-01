@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import React, { ReactNode, useEffect } from "react";
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 
 import "./app.css";
 
@@ -14,6 +14,7 @@ import WeaponInfo from "./routes/weapon";
 import ArtifactInfo from "./routes/artifact";
 import NotFound from "./routes/notfound";
 import Sync from "./sync";
+import { trackView } from "./track";
 
 const App = () => {
   return (
@@ -66,6 +67,8 @@ const Base = ({ children }: { children?: ReactNode }) => {
   return (
     <Sync>
       <BrowserRouter>
+        <Track />
+
         <Switch>
           {specialRoutes.map((route) => (
             <Route key={route} path={route}>
@@ -85,6 +88,14 @@ const Base = ({ children }: { children?: ReactNode }) => {
       </BrowserRouter>
     </Sync>
   );
+};
+
+const Track = () => {
+  const { pathname, search } = useLocation();
+
+  useEffect(() => trackView(pathname + search), [pathname, search]);
+
+  return null;
 };
 
 export default App;

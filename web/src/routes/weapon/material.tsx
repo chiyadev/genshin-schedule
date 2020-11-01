@@ -6,6 +6,7 @@ import DropLabel from "../../dropLabel";
 import Checkbox from "../../checkbox";
 import { arrayToggle } from "../../utils";
 import GameImage from "../../gameImage";
+import { trackEvent } from "../../track";
 
 const MaterialDisplay = ({
   weapon,
@@ -36,6 +37,7 @@ const MaterialDisplay = ({
         value={exists}
         setValue={(value) => {
           setList((list) => arrayToggle(list, weapon.name, value));
+          trackEvent("weapon", "materialToggle");
         }}
       >
         <div>Show on schedule</div>

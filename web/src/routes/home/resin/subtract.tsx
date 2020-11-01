@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import { useConfig } from "../../../configs";
 import { useServerDate } from "../../../time";
 import { clampResin, getResinRecharge } from "../../../db/resins";
+import { trackEvent } from "../../../track";
 
 const resinUsages = [20, 40, 60];
 
@@ -24,6 +25,8 @@ const Subtract = () => {
               ),
               time: date.getTime(),
             }));
+
+            trackEvent("resin", `subtract${usage}`);
           }}
         >
           -{usage}

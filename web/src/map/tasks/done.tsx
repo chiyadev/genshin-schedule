@@ -3,6 +3,7 @@ import { Task } from "../../configs";
 import { useServerDate } from "../../time";
 import { useLeaflet } from "react-leaflet";
 import { FaCheck, FaTimes } from "react-icons/fa";
+import { trackEvent } from "../../track";
 
 const Done = ({
   task,
@@ -25,6 +26,8 @@ const Done = ({
           }));
 
           leaflet.map?.closePopup();
+
+          trackEvent("map", "taskDone");
         }}
       >
         <FaCheck className="inline" />
@@ -42,6 +45,8 @@ const Done = ({
           }));
 
           leaflet.map?.closePopup();
+
+          trackEvent("map", "taskUndone");
         }}
       >
         <FaTimes className="inline" />

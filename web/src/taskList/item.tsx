@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import { Task, useConfig } from "../configs";
 import GameImage from "../gameImage";
+import { trackEvent } from "../track";
 
 const Item = ({ task }: { task: Task }) => {
   const [, setMapState] = useConfig("mapState");
@@ -16,6 +17,8 @@ const Item = ({ task }: { task: Task }) => {
           zoom: 5.6,
         });
         setFocusedTask(task.id);
+
+        trackEvent("task", "focus");
       }}
     >
       <div className="flex flex-col justify-center flex-shrink-0">

@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import { useConfig } from "../../../configs";
 import { useServerDate } from "../../../time";
 import { FaCheck } from "react-icons/fa";
+import { trackEvent } from "../../../track";
 
 const MarkAllDone = () => {
   const [, setTasks] = useConfig("tasks");
@@ -23,6 +24,8 @@ const MarkAllDone = () => {
             }
           })
         );
+
+        trackEvent("task", "doneAll");
       }}
     >
       <span className="align-middle">Mark everything as done </span>

@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import { useServerDate } from "../../../time";
 import { useConfig } from "../../../configs";
+import { trackEvent } from "../../../track";
 
 const Time = () => {
   const date = useServerDate();
@@ -12,7 +13,13 @@ const Time = () => {
 
   return (
     <div className="font-bold text-4xl">
-      <span className="cursor-pointer" onClick={() => setOffset((o) => o - 1)}>
+      <span
+        className="cursor-pointer"
+        onClick={() => {
+          setOffset((o) => o - 1);
+          trackEvent("clock", "offsetBackward");
+        }}
+      >
         &lt;
       </span>
 
@@ -20,7 +27,13 @@ const Time = () => {
       <span>:{minute}:</span>
       <span>{second} </span>
 
-      <span className="cursor-pointer" onClick={() => setOffset((o) => o + 1)}>
+      <span
+        className="cursor-pointer"
+        onClick={() => {
+          setOffset((o) => o + 1);
+          trackEvent("clock", "offsetForward");
+        }}
+      >
         &gt;
       </span>
     </div>

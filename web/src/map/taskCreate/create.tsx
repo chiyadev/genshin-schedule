@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import { useConfig } from "../../configs";
 import { useServerDate } from "../../time";
 import { FaCheck } from "react-icons/fa";
+import { trackEvent } from "../../track";
 
 const Create = () => {
   const [task, setTask] = useConfig("mapCreateTask");
@@ -17,6 +18,8 @@ const Create = () => {
         setTask((task) => ({ ...task, visible: false }));
         setTasks((tasks) => [...tasks, { ...task, dueTime: date.getTime() }]);
         setFocusedTask(false);
+
+        trackEvent("map", "taskCreate");
       }}
     >
       <FaCheck className="inline" />

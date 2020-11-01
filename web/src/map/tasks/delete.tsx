@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import { Task, useConfig } from "../../configs";
 import { FaTrash } from "react-icons/fa";
+import { trackEvent } from "../../track";
 
 const Delete = ({ task }: { task: Task }) => {
   const [, setTasks] = useConfig("tasks");
@@ -10,6 +11,8 @@ const Delete = ({ task }: { task: Task }) => {
       className="cursor-pointer"
       onClick={() => {
         setTasks((tasks) => tasks.filter((t) => t.id !== task.id));
+
+        trackEvent("map", "taskDelete");
       }}
     >
       <FaTrash className="inline" />

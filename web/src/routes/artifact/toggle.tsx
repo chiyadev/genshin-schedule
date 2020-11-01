@@ -4,6 +4,7 @@ import { useConfig } from "../../configs";
 import DropLabel from "../../dropLabel";
 import Checkbox from "../../checkbox";
 import { arrayToggle } from "../../utils";
+import { trackEvent } from "../../track";
 
 const Toggle = ({ artifact }: { artifact: Artifact }) => {
   const [list, setList] = useConfig("artifacts");
@@ -17,6 +18,7 @@ const Toggle = ({ artifact }: { artifact: Artifact }) => {
         value={exists}
         setValue={(value) => {
           setList((list) => arrayToggle(list, artifact.name, value));
+          trackEvent("artifact", "toggle");
         }}
       >
         <div>Show on schedule</div>

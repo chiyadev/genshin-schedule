@@ -3,6 +3,7 @@ import { FaSignInAlt } from "react-icons/fa";
 import { cx } from "emotion";
 import { useLocalConfig } from "../../../configs";
 import { AuthRequest, AuthResponse } from "../../../sync/types";
+import { trackEvent } from "../../../track";
 
 const Submit = ({
   username,
@@ -47,6 +48,8 @@ const Submit = ({
           });
 
           setError(undefined);
+
+          trackEvent("sync", "enable");
         } catch (e) {
           setError(e);
         } finally {

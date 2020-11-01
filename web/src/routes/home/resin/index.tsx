@@ -1,7 +1,7 @@
 import React, { memo, useMemo, useRef, useState } from "react";
 import { css, cx } from "emotion";
 import { Configs, useConfig } from "../../../configs";
-import { roundResin, getResinRecharge, ResinCap } from "../../../db/resins";
+import { getResinRecharge, ResinCap, roundResin } from "../../../db/resins";
 import { useServerDate } from "../../../time";
 import WhiteCard from "../../../whiteCard";
 import SectionHeading from "../sectionHeading";
@@ -10,6 +10,7 @@ import { useMeasuredTextWidth } from "../../../utils";
 import Subtract from "./subtract";
 import EstimatesByResin from "./estimatesByResin";
 import Resin from "../../../assets/game/Resin.png";
+import { trackEvent } from "../../../track";
 
 export function formatDateSimple(date: Date) {
   const hour = date.getHours().toString().padStart(2, "0");
@@ -60,6 +61,8 @@ const ResinCalculator = () => {
                   (estimateModes.indexOf(mode) + 1) % estimateModes.length
                 ];
               });
+
+              trackEvent("resin", "estimateSwitch");
             }}
           />
 

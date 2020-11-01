@@ -21,6 +21,7 @@
     "react-icons": "^3.11.0",
     "react-lazyload": "^3.1.0",
     "react-leaflet": "^2.8.0",
+    "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "rfc6902": "^4.0.1",

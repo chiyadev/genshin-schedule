@@ -6,6 +6,7 @@ import DropLabel from "../../dropLabel";
 import Checkbox from "../../checkbox";
 import { arrayToggle } from "../../utils";
 import GameImage from "../../gameImage";
+import { trackEvent } from "../../track";
 
 const MaterialDisplay = ({
   character,
@@ -40,6 +41,7 @@ const MaterialDisplay = ({
         value={exists}
         setValue={(value) => {
           setList((list) => arrayToggle(list, character.name, value));
+          trackEvent("character", "materialToggle");
         }}
       >
         <div>Show on schedule</div>

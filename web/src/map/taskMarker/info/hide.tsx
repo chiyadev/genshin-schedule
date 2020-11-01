@@ -2,6 +2,7 @@ import React, { Dispatch, memo, SetStateAction } from "react";
 import { Task } from "../../../configs";
 import { FaEye } from "react-icons/fa";
 import { useLeaflet } from "react-leaflet";
+import { trackEvent } from "../../../track";
 
 const HideCheck = ({
   task,
@@ -26,6 +27,8 @@ const HideCheck = ({
           setTask((task) => ({ ...task, visible: !checked }));
 
           checked && leaflet.map?.closePopup();
+
+          trackEvent("map", "taskToggleHide");
         }}
       />
     </label>
