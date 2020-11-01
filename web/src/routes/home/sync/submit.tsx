@@ -24,7 +24,10 @@ const Submit = ({
       type="submit"
       className={cx({ "text-gray-600": load || !password })}
       disabled={load || !password}
-      onClick={async () => {
+      onClick={async (e) => {
+        // fixes network error on firefox: https://github.com/chiyadev/genshin-schedule/issues/8
+        e.preventDefault();
+
         setLoad(true);
 
         try {
