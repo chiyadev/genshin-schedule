@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useRef, useState } from "react";
+import React, { memo, useEffect, useMemo, useRef, useState } from "react";
 import {
   ConfigKeys,
   getConfigs,
@@ -10,6 +10,7 @@ import { SyncRequest, SyncResponse, WebData } from "./types";
 import { css, cx } from "emotion";
 import { FaSpinner } from "react-icons/fa";
 import { createPatch } from "rfc6902";
+import { Lock } from "semaphore-async-await";
 
 const Core = ({
   authToken,
@@ -50,6 +51,7 @@ const Core = ({
 
   const timeout = useRef<number>();
   const [sync, setSync] = useState(false);
+  const syncLock = useMemo(() => new Lock(), []);
 
   useEffect(() => clearTimeout(timeout.current), [current]);
 
@@ -58,6 +60,7 @@ const Core = ({
 
     clearTimeout(timeout.current);
     timeout.current = window.setTimeout(async () => {
+      await syncLock.acquire();
       setSync(true);
 
       try {
@@ -97,6 +100,7 @@ const Core = ({
       } catch (e) {
         console.error("could not send sync patch", e);
       } finally {
+        syncLock.release();
         setSync(false);
       }
     }, 1000);
