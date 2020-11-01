@@ -13,6 +13,7 @@ import CharacterInfo from "./routes/character";
 import WeaponInfo from "./routes/weapon";
 import ArtifactInfo from "./routes/artifact";
 import NotFound from "./routes/notfound";
+import Sync from "./sync";
 
 const App = () => {
   return (
@@ -63,24 +64,26 @@ const specialRoutes = ["/map"];
 
 const Base = ({ children }: { children?: ReactNode }) => {
   return (
-    <BrowserRouter>
-      <Switch>
-        {specialRoutes.map((route) => (
-          <Route key={route} path={route}>
+    <Sync>
+      <BrowserRouter>
+        <Switch>
+          {specialRoutes.map((route) => (
+            <Route key={route} path={route}>
+              {children}
+            </Route>
+          ))}
+
+          <Route>
+            <Background />
+            <Header />
+
             {children}
+
+            <Footer />
           </Route>
-        ))}
-
-        <Route>
-          <Background />
-          <Header />
-
-          {children}
-
-          <Footer />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+        </Switch>
+      </BrowserRouter>
+    </Sync>
   );
 };
 

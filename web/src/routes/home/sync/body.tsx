@@ -1,5 +1,5 @@
 import Form from "./form";
-import React, { memo, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { randomStr, randomWord } from "../../../random";
 import Submit from "./submit";
 
@@ -12,6 +12,10 @@ const Body = () => {
   const [password, setPassword] = useState("");
 
   const [error, setError] = useState<Error>();
+
+  useEffect(() => {
+    !password && setError(undefined);
+  }, [password]);
 
   return (
     <form className="space-y-4">

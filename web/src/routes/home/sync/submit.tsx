@@ -2,7 +2,7 @@ import React, { Dispatch, memo, SetStateAction, useState } from "react";
 import { FaSignInAlt } from "react-icons/fa";
 import { cx } from "emotion";
 import { useLocalConfig } from "../../../configs";
-import { AuthResponse } from "../../../sync/types";
+import { AuthRequest, AuthResponse } from "../../../sync/types";
 
 const Submit = ({
   username,
@@ -27,10 +27,12 @@ const Submit = ({
         setLoad(true);
 
         try {
+          const request: AuthRequest = { username, password };
+
           const response = await fetch(`${apiUrl}/auth`, {
             method: "POST",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify({ Username: username, password }),
+            body: JSON.stringify(request),
           });
 
           if (!response.ok) {

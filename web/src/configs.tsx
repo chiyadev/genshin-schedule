@@ -8,26 +8,35 @@ import {
 import { ResinCap } from "./db/resins";
 import { MultiMap } from "./multiMap";
 
-type StorageEventCallback = (value: unknown, parsed: boolean) => void;
-const storageEvents = new MultiMap<string, StorageEventCallback>();
+const storageEvents = new MultiMap<
+  string,
+  (value: unknown, parsed: boolean) => void
+>();
+
+const storageEventsAny = new Set<
+  (key: string, value: unknown, parsed: boolean) => void
+>();
+
+function invokeStorageListeners(key: string, value: unknown, parsed: boolean) {
+  storageEvents.get(key).forEach((c) => c(value, parsed));
+  storageEventsAny.forEach((c) => c(key, value, parsed));
+}
 
 window.addEventListener("storage", (ev) => {
-  if (ev.key) {
-    let value: unknown;
-    let parsed = false;
+  if (!ev.key) return;
 
-    // parse only once for performance
-    try {
-      value = JSON.parse(ev.newValue || "");
-      parsed = true;
-    } catch {
-      value = ev.newValue;
-    }
+  const key = ev.key || "";
+  let value: unknown;
+  let parsed = false;
 
-    for (const callback of storageEvents.get(ev.key)) {
-      callback(value, parsed);
-    }
+  try {
+    value = JSON.parse(ev.newValue || "");
+    parsed = true;
+  } catch {
+    value = ev.newValue;
   }
+
+  invokeStorageListeners(key, value, parsed);
 });
 
 export function useLocalStorage<T>(
@@ -46,7 +55,7 @@ export function useLocalStorage<T>(
   const [value, setValue] = useState(getCurrent);
 
   useEffect(() => {
-    const handler: StorageEventCallback = (value, parsed) => {
+    const handler = (value: unknown, parsed: boolean) => {
       if (parsed) {
         setValue(value as T);
       } else {
@@ -65,21 +74,32 @@ export function useLocalStorage<T>(
     value,
     useCallback(
       (newValue) => {
-        // pass latest parsed value if partial updating
         if (typeof newValue === "function") {
           newValue = (newValue as any)(getCurrent());
         }
 
         localStorage.setItem(key, JSON.stringify(newValue));
-
-        // synchronize value across all hooks
-        for (const callback of storageEvents.get(key)) {
-          callback(newValue, true);
-        }
+        invokeStorageListeners(key, newValue, true);
       },
       [key, getCurrent]
     ),
   ];
+}
+
+export function useLocalStorageListener(
+  callback: (key: string, value: unknown) => void
+) {
+  useEffect(() => {
+    const handler = (key: string, value: unknown, parsed: boolean) => {
+      parsed && callback(key, value);
+    };
+
+    storageEventsAny.add(handler);
+
+    return () => {
+      storageEventsAny.delete(handler);
+    };
+  }, [callback]);
 }
 
 export type LocalConfigs = {
@@ -180,4 +200,35 @@ export function useLocalConfig<TKey extends keyof LocalConfigs>(key: TKey) {
 
 export function useConfig<TKey extends keyof Configs>(key: TKey) {
   return useLocalStorage<Configs[TKey]>(key, DefaultConfigs[key]);
+}
+
+export const ConfigKeys = Object.keys(DefaultConfigs) as (keyof Configs)[];
+
+export function getConfigs(): Partial<Configs> {
+  const configs: Partial<Configs> = {};
+
+  for (const key of ConfigKeys) {
+    try {
+      const data = localStorage.getItem(key);
+
+      if (data) {
+        configs[key] = JSON.parse(data);
+      }
+    } catch {
+      // ignored
+    }
+  }
+
+  return configs;
+}
+
+export function setConfigs(configs: Partial<Configs>) {
+  for (const key of ConfigKeys) {
+    const data = configs[key];
+
+    if (typeof data !== "undefined") {
+      localStorage.setItem(key, JSON.stringify(data));
+      invokeStorageListeners(key, data, true);
+    }
+  }
 }
