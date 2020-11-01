@@ -5,10 +5,10 @@ namespace GenshinSchedule.SyncServer.Models
 {
     public class AuthRequest
     {
-        [JsonProperty("username"), Required, MinLength(3), MaxLength(20), RegularExpression("^(?=.{3,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$")]
+        [JsonProperty("username"), Required, MinLength(3), MaxLength(64), RegularExpression("^(?=.{3,64}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$")]
         public string Username { get; set; }
 
-        [JsonProperty("password"), Required, MaxLength(100)]
+        [JsonProperty("password"), Required, MaxLength(256)]
         public string Password { get; set; }
     }
 
