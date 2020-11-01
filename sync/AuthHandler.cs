@@ -54,6 +54,6 @@ namespace GenshinSchedule.SyncServer
     public static class AuthHandlerExtensions
     {
         public static int GetUserId(this HttpContext context)
-            => context.Items.TryGetValue(AuthHandler.PayloadKey, out var item) && item is int x ? x : 0;
+            => context.Items.TryGetValue(AuthHandler.PayloadKey, out var item) && item is AuthPayload payload ? payload.Id : 0;
     }
 }

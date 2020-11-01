@@ -33,7 +33,7 @@ namespace GenshinSchedule.SyncServer.Controllers
                 var user = await _db.Users.AsNoTracking().Include(u => u.WebData).FirstOrDefaultAsync(u => u.Id == userId);
 
                 if (user == null)
-                    return Forbid($"User {userId} unavailable.");
+                    return Forbid(AuthHandler.SchemeName);
 
                 return Ok(WebData.FromDbModel(user.WebData));
             }
@@ -57,7 +57,7 @@ namespace GenshinSchedule.SyncServer.Controllers
                 var user = await _db.Users.Include(u => u.WebData).FirstOrDefaultAsync(u => u.Id == userId);
 
                 if (user == null)
-                    return Forbid($"User {userId} unavailable.");
+                    return Forbid(AuthHandler.SchemeName);
 
                 var data = user.WebData;
 

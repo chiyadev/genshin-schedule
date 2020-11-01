@@ -35,7 +35,11 @@ namespace GenshinSchedule.SyncServer
                                     .AllowAnyMethod()
                                     .AllowAnyOrigin());
 
+            app.UseAuthentication();
+
             app.UseRouting();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints => endpoints.MapControllers());
         }
