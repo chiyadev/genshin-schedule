@@ -25,7 +25,7 @@ const MarkAllDone = () => {
           })
         );
 
-        trackEvent("task", "doneAll");
+        trackEvent("taskList", "taskDoneAll");
       }}
     >
       <span className="align-middle">Mark everything as done </span>
