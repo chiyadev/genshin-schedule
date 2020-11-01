@@ -49,6 +49,7 @@ const Core = ({
   }, [apiUrl, authToken, reset]);
 
   const timeout = useRef<number>();
+  const [sync, setSync] = useState(false);
 
   useEffect(() => clearTimeout(timeout.current), [current]);
 
@@ -57,6 +58,8 @@ const Core = ({
 
     clearTimeout(timeout.current);
     timeout.current = window.setTimeout(async () => {
+      setSync(true);
+
       try {
         if (!current) return;
 
@@ -93,35 +96,48 @@ const Core = ({
         }
       } catch (e) {
         console.error("could not send sync patch", e);
+      } finally {
+        setSync(false);
       }
     }, 1000);
   });
 
-  if (current) {
-    return null;
+  if (!current) {
+    return (
+      <div
+        className={cx(
+          "top-0 left-0 w-screen h-screen fixed bg-black opacity-75",
+          css`
+            z-index: 9999;
+          `
+        )}
+      >
+        <div
+          className={css`
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          `}
+        >
+          <FaSpinner className="animate-spin text-xl" />
+        </div>
+      </div>
+    );
   }
 
-  return (
-    <div
-      className={cx(
-        "top-0 left-0 w-screen h-screen fixed bg-black opacity-75",
-        css`
-          z-index: 9999;
-        `
-      )}
-    >
-      <div
-        className={css`
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        `}
-      >
-        <FaSpinner className="animate-spin text-xl" />
+  if (sync) {
+    return (
+      <div className="top-0 left-0 w-screen fixed flex flex-row justify-center p-1">
+        <div className="bg-white text-black text-xs shadow-lg rounded p-1">
+          <FaSpinner className="inline animate-spin" />
+          <span className="align-middle"> Saving...</span>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  return null;
 };
 
 export default memo(Core);
