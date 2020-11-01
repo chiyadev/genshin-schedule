@@ -9644,6 +9644,11 @@ rework@1.0.1:
     convert-source-map "^0.3.3"
     css "^2.0.0"
 
+rfc6902@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/rfc6902/-/rfc6902-4.0.1.tgz#1a6474e1e9c17a3f812fabc68cb3df9d7e46cc34"
+  integrity sha512-RZOewbzE7AGAAPxxoTg137y4rCzA9w+5F9O+j+JdwnXH9uNNIpDPf8eH4sIViqgjfvOak+nlBRiy17TPDn+PLA==
+
 rgb-regex@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/rgb-regex/-/rgb-regex-1.0.1.tgz#c0e0d6882df0e23be254a475e8edd41915feaeb1"

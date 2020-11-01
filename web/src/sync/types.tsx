@@ -1,4 +1,15 @@
 import { Configs } from "../configs";
+import { Patch } from "rfc6902";
+
+export type User = {
+  username: string;
+  createdTime: string;
+};
+
+export type WebData = {
+  token: string;
+  data: Partial<Configs>;
+};
 
 export type AuthRequest = {
   username: string;
@@ -10,12 +21,11 @@ export type AuthResponse = {
   user: User;
 };
 
-export type User = {
-  username: string;
-  createdTime: string;
+export type SyncRequest = {
+  token: string;
+  patch: Patch;
 };
 
-export type WebData = {
+export type SyncResponse = {
   token: string;
-  data: Partial<Configs>;
 };
