@@ -7,7 +7,8 @@ import { useLocalConfig } from "../../../configs";
 const Sync = () => {
   const [auth] = useLocalConfig("auth");
 
-  if (auth) {
+  // temporary disable
+  if (auth || true) {
     return null;
   }
 
