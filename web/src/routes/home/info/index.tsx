@@ -5,9 +5,9 @@ import { useConfig } from "../../../configs";
 import Favicon180x180 from "../../../assets/favicon-180x180.png";
 
 const Info = () => {
-  const [visible] = useConfig("showSiteInfo");
+  const [hidden] = useConfig("hiddenWidgets");
 
-  if (!visible) {
+  if (hidden.info) {
     return null;
   }
 

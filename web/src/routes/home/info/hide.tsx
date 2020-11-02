@@ -4,13 +4,13 @@ import Checkbox from "../../../checkbox";
 import { trackEvent } from "../../../track";
 
 const Hide = () => {
-  const [visible, setVisible] = useConfig("showSiteInfo");
+  const [hidden, setHidden] = useConfig("hiddenWidgets");
 
   return (
     <Checkbox
-      value={!visible}
+      value={!!hidden.info}
       setValue={(v) => {
-        setVisible(!v);
+        setHidden((widgets) => ({ ...widgets, info: true }));
         trackEvent("info", "hide");
       }}
     >

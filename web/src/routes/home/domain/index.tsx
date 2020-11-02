@@ -17,9 +17,9 @@ import { WeaponMaterial } from "../../../db/weaponMaterials";
 import { Weapon, Weapons } from "../../../db/weapons";
 import { Region, Regions } from "../../../db/regions";
 import { FaTimes } from "react-icons/fa";
-import SectionHeading from "../sectionHeading";
 import { Artifact, Artifacts } from "../../../db/artifacts";
 import DomainDisplay from "./domain";
+import Heading from "../heading";
 
 export type ScheduledDomain = {
   domain: Domain;
@@ -170,33 +170,36 @@ const DomainView = () => {
     });
   }, [characters, weapons, artifacts, dayOfWeek]);
 
+  const [hidden] = useConfig("hiddenWidgets");
+
   return useMemo(
     () => (
       <div className="space-y-4">
-        <SectionHeading>
+        <Heading type="domains">
           Today&apos;s Domains
           {domains.length !== 0 && <span> ({domains.length})</span>}
-        </SectionHeading>
+        </Heading>
 
-        {domains.length ? (
-          <div className="space-y-4 flex flex-col">
-            {domains.map((domain) => (
-              <DomainDisplay key={domain.domain.name} {...domain} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-sm">
-            <FaTimes className="inline" />
-            <span> No domains for today. Maybe try some </span>
-            <a href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops">
-              Ley Lines
-            </a>
-            ?
-          </div>
-        )}
+        {!hidden.domains &&
+          (domains.length ? (
+            <div className="space-y-4 flex flex-col">
+              {domains.map((domain) => (
+                <DomainDisplay key={domain.domain.name} {...domain} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-sm">
+              <FaTimes className="inline" />
+              <span> No domains for today. Maybe try some </span>
+              <a href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops">
+                Ley Lines
+              </a>
+              ?
+            </div>
+          ))}
       </div>
     ),
-    [domains]
+    [domains, hidden.domains]
   );
 };
 

@@ -112,6 +112,11 @@ export type LocalConfigs = {
       };
 };
 
+export const DefaultLocalConfigs: LocalConfigs = {
+  apiUrl: "https://genshin.chiya.dev/api/v1",
+  auth: false,
+};
+
 type MapLocation = { lat: number; lng: number };
 
 export type Configs = {
@@ -135,7 +140,15 @@ export type Configs = {
   mapFocusedTask: string | false;
   mapTaskList: boolean;
   paimonBg: boolean;
-  showSiteInfo: boolean;
+  hiddenWidgets: {
+    [key in
+      | "clock"
+      | "info"
+      | "sync"
+      | "resin"
+      | "tasks"
+      | "domains"]?: boolean;
+  };
 };
 
 export type Task = {
@@ -147,11 +160,6 @@ export type Task = {
   location: MapLocation;
   dueTime: number;
   refreshTime: number;
-};
-
-export const DefaultLocalConfigs: LocalConfigs = {
-  apiUrl: "https://genshin.chiya.dev/api/v1",
-  auth: false,
 };
 
 const defaultMapCenter = {
@@ -191,7 +199,7 @@ export const DefaultConfigs: Configs = {
   mapFocusedTask: false,
   mapTaskList: true,
   paimonBg: true,
-  showSiteInfo: true,
+  hiddenWidgets: {},
 };
 
 export function useLocalConfig<TKey extends keyof LocalConfigs>(key: TKey) {

@@ -3,8 +3,7 @@ import { useTabTitle } from "../../utils";
 import DomainList from "./domain";
 import TaskList from "./tasks";
 import Info from "./info";
-import Map from "./map";
-import ResinCalculator from "./resin";
+import ResinCalc from "./resin";
 import Clock from "./clock";
 import Sync from "./sync";
 
@@ -16,13 +15,8 @@ const Home = () => {
       <Clock />
       <Info />
       <Sync />
-      <ResinCalculator />
-
-      <div className="space-y-4">
-        <TaskList />
-        <Map />
-      </div>
-
+      <ResinCalc />
+      <TaskList />
       <DomainList />
     </div>
   );
