@@ -5,6 +5,7 @@ using GenshinSchedule.SyncServer.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Prometheus;
 
 namespace GenshinSchedule.SyncServer.Controllers
 {
@@ -23,6 +24,9 @@ namespace GenshinSchedule.SyncServer.Controllers
             _auth   = auth;
             _logger = logger;
         }
+
+        static readonly Counter _registrations = Metrics.CreateCounter("auth_registrations", "Number of new registrations.");
+        static readonly Counter _authorizations = Metrics.CreateCounter("auth_authorizations", "Number of account authorizations.");
 
         [HttpPost]
         public async Task<ActionResult<AuthResponse>> AuthAsync(AuthRequest request)
@@ -51,11 +55,15 @@ namespace GenshinSchedule.SyncServer.Controllers
                     await _db.SaveChangesAsync();
 
                     _logger.LogInformation($"Created user '{request.Username}'.");
+
+                    _registrations.Inc();
                 }
                 else
                 {
                     if (!_hash.Test(user.Password, request.Password))
                         return Unauthorized("Invalid username or password.");
+
+                    _authorizations.Inc();
                 }
 
                 return Ok(new AuthResponse

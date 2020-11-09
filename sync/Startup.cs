@@ -3,16 +3,19 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace GenshinSchedule.SyncServer
 {
     public class Startup
     {
         readonly IConfiguration _configuration;
+        readonly IHostEnvironment _environment;
 
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostEnvironment environment)
         {
             _configuration = configuration;
+            _environment   = environment;
         }
 
         public void ConfigureServices(IServiceCollection services)
@@ -27,6 +30,12 @@ namespace GenshinSchedule.SyncServer
 
             services.AddSingleton<AuthHelper>()
                     .AddSingleton<HashHelper>();
+
+            if (_environment.IsProduction())
+            {
+                services.AddSingleton<IMetricsService, MetricsService>()
+                        .AddTransient<IHostedService>(s => s.GetService<IMetricsService>());
+            }
         }
 
         public void Configure(IApplicationBuilder app)

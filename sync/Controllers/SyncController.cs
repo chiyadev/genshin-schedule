@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Prometheus;
 
 namespace GenshinSchedule.SyncServer.Controllers
 {
@@ -23,6 +24,11 @@ namespace GenshinSchedule.SyncServer.Controllers
             _logger = logger;
         }
 
+        static readonly Counter _actions = Metrics.CreateCounter("sync_actions", "Number of sync data actions.", new CounterConfiguration
+        {
+            LabelNames = new[] { "type" }
+        });
+
         [HttpGet]
         public async Task<ActionResult<WebData>> GetAsync()
         {
@@ -34,6 +40,8 @@ namespace GenshinSchedule.SyncServer.Controllers
 
                 if (user == null)
                     return Forbid(AuthHandler.SchemeName);
+
+                _actions.Labels("get").Inc();
 
                 return Ok(WebData.FromDbModel(user.WebData));
             }
@@ -80,6 +88,8 @@ namespace GenshinSchedule.SyncServer.Controllers
                 data.Token = Guid.NewGuid();
 
                 await _db.SaveChangesAsync();
+
+                _actions.Labels("patch").Inc();
 
                 return Ok(new SyncResponse
                 {
