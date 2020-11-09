@@ -69,6 +69,8 @@ const Core = ({
         let data: Partial<Configs>;
         ({ data, token } = (await response.json()) as WebData);
 
+        patchQueue.current = [];
+
         setLast(data);
         setConfigs(data);
         setSync(false);
@@ -95,8 +97,6 @@ const Core = ({
             token,
           };
 
-          patchQueue.current = [];
-
           const response = await fetch(`${apiUrl}/sync`, {
             method: "PATCH",
             headers: {
@@ -111,15 +111,20 @@ const Core = ({
             let data: Partial<Configs>;
             ({ data, token } = (await response.json()) as WebData);
 
+            patchQueue.current = [];
+
             setLast(data);
             setConfigs(data);
-
-            patchQueue.current = [];
+            setSync(false);
           }
 
           // patch success
           else if (response.ok) {
             ({ token } = (await response.json()) as SyncResponse);
+
+            patchQueue.current = [];
+
+            setSync(false);
           }
 
           // patch fail
@@ -128,10 +133,10 @@ const Core = ({
           }
         } catch (e) {
           console.log("could not send sync patch", e);
-        } finally {
-          setSync(false);
         }
       }
+
+      setSync(false);
     })();
 
     return () => {
