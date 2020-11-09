@@ -10,9 +10,11 @@ const materialToCharacters = new MultiMap<string, Character>();
 for (const character of Characters) {
   CharacterSearch.add(character.type, character);
   CharacterSearch.add(character.name, character);
-  CharacterSearch.add(character.talentMaterial.name, character);
 
-  materialToCharacters.add(character.talentMaterial.name, character);
+  for (const material of character.talentMaterials) {
+    CharacterSearch.add(material.name, character);
+    materialToCharacters.add(material.name, character);
+  }
 }
 
 for (const region of Regions) {
@@ -28,7 +30,7 @@ for (const domain of DomainOfMastery.domains) {
         CharacterSearch.add(domain.name, character);
 
         drops.name && CharacterSearch.add(drops.name, character);
-        drops.days.forEach(day => CharacterSearch.add(day, character));
+        drops.days.forEach((day) => CharacterSearch.add(day, character));
       }
     }
   }

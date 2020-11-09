@@ -5,6 +5,7 @@ import WhiteCard from "../../whiteCard";
 import MaterialDisplay from "./material";
 import CommonMaterialDisplay from "./common";
 import GameImage from "../../gameImage";
+import Toggle from "./toggle";
 
 const CharacterInfo = ({ character }: { character: string }) => {
   const info = useMemo(() => Characters.find((c) => c.name === character), [
@@ -34,15 +35,23 @@ const Inner = ({ character }: { character: Character }) => {
         </div>
       </a>
 
-      <MaterialDisplay
-        character={character}
-        material={character.talentMaterial}
-      />
+      {character.talentMaterials.map((material) => (
+        <MaterialDisplay
+          character={character}
+          material={material}
+          showToggle={character.talentMaterials.length === 1}
+        />
+      ))}
 
-      <CommonMaterialDisplay
-        character={character}
-        material={character.commonMaterial}
-      />
+      {character.commonMaterials.map((material) => (
+        <CommonMaterialDisplay character={character} material={material} />
+      ))}
+
+      {character.talentMaterials.length !== 1 && (
+        <div className="py-4 text-sm">
+          <Toggle character={character} />
+        </div>
+      )}
     </WhiteCard>
   );
 };

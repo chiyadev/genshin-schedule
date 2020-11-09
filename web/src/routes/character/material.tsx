@@ -1,27 +1,19 @@
-import React, { memo, useMemo } from "react";
+import React, { memo } from "react";
 import { Character } from "../../db/characters";
 import { TalentMaterial } from "../../db/talentMaterials";
-import { useConfig } from "../../configs";
 import DropLabel from "../../dropLabel";
-import Checkbox from "../../checkbox";
-import { arrayToggle } from "../../utils";
 import GameImage from "../../gameImage";
-import { trackEvent } from "../../track";
+import Toggle from "./toggle";
 
 const MaterialDisplay = ({
   character,
   material,
+  showToggle,
 }: {
   character: Character;
   material: TalentMaterial;
+  showToggle?: boolean;
 }) => {
-  const [list, setList] = useConfig("characters");
-
-  const exists = useMemo(() => list.includes(character.name), [
-    list,
-    character,
-  ]);
-
   return (
     <div className="py-4 space-y-4 text-sm flex flex-col">
       <a href={material.wiki}>
@@ -37,19 +29,7 @@ const MaterialDisplay = ({
 
       <DropLabel item={material} />
 
-      <Checkbox
-        value={exists}
-        setValue={(value) => {
-          setList((list) => arrayToggle(list, character.name, value));
-          trackEvent("character", "materialToggle");
-        }}
-      >
-        <div>Show on schedule</div>
-
-        <div className="text-xs text-gray-600">
-          Scheduled domains will appear on the days they are available.
-        </div>
-      </Checkbox>
+      {showToggle && <Toggle character={character} />}
     </div>
   );
 };

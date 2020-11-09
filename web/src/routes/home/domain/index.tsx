@@ -88,23 +88,25 @@ const DomainView = () => {
       const character = Characters.find((char) => char.name === charName);
 
       if (character) {
-        for (const drops of currentDrops) {
-          if (drops.items.includes(character.talentMaterial)) {
-            const domain = getDomainFromDrops(drops);
-            const scheduled = domain && getScheduled(domain);
+        for (const material of character.talentMaterials) {
+          for (const drops of currentDrops) {
+            if (drops.items.includes(material)) {
+              const domain = getDomainFromDrops(drops);
+              const scheduled = domain && getScheduled(domain);
 
-            if (scheduled) {
-              const group = scheduled.talentMaterials.find(
-                (x) => x.material === character.talentMaterial
-              );
+              if (scheduled) {
+                const group = scheduled.talentMaterials.find(
+                  (x) => x.material === material
+                );
 
-              if (group) {
-                group.characters.push(character);
-              } else {
-                scheduled.talentMaterials.push({
-                  material: character.talentMaterial,
-                  characters: [character],
-                });
+                if (group) {
+                  group.characters.push(character);
+                } else {
+                  scheduled.talentMaterials.push({
+                    material,
+                    characters: [character],
+                  });
+                }
               }
             }
           }

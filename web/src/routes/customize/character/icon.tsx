@@ -28,15 +28,18 @@ const Icon = ({ character }: { character: Character }) => {
       </LazyLoad>
 
       <div className="text-center p-2">
-        <div className="text-sm">{character.name}</div>
+        <div className="text-sm truncate">{character.name}</div>
 
         <div className="text-xs text-gray-600">
           <GameImage
-            name={character.talentMaterial.item}
+            name={character.talentMaterials[0].item}
             className="w-3 h-3 inline opacity-75"
           />
 
-          <span className="align-middle"> {character.talentMaterial.name}</span>
+          <span className="align-middle">
+            {" "}
+            {character.talentMaterials[0].name}
+          </span>
         </div>
       </div>
     </div>

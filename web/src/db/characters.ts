@@ -22,145 +22,152 @@ export type Character = {
   type: "Character";
   name: string;
   wiki: string;
-  talentMaterial: TalentMaterial;
-  commonMaterial: CommonMaterial;
+  talentMaterials: TalentMaterial[];
+  commonMaterials: CommonMaterial[];
 };
 
-export const Traveler: Character = {
+export const TravelerAnemo: Character = {
   type: "Character",
-  name: "Traveler",
+  name: "Traveler (Anemo)",
   wiki: "https://genshin-impact.fandom.com/wiki/Traveler#Anemo",
-  talentMaterial: Freedom,
-  commonMaterial: SamachurlScroll,
+  talentMaterials: [Resistance, Ballad],
+  commonMaterials: [SamachurlScroll],
+};
+
+export const TravelerGeo: Character = {
+  type: "Character",
+  name: "Traveler (Geo)",
+  wiki: "https://genshin-impact.fandom.com/wiki/Traveler#Geo",
+  talentMaterials: [Resistance, Diligence],
+  commonMaterials: [SamachurlScroll, HilichurlArrowhead],
 };
 
 export const Amber: Character = {
   type: "Character",
   name: "Amber",
   wiki: "https://genshin-impact.fandom.com/wiki/Amber",
-  talentMaterial: Freedom,
-  commonMaterial: HilichurlArrowhead,
+  talentMaterials: [Freedom],
+  commonMaterials: [HilichurlArrowhead],
 };
 
 export const Barbara: Character = {
   type: "Character",
   name: "Barbara",
   wiki: "https://genshin-impact.fandom.com/wiki/Barbara",
-  talentMaterial: Freedom,
-  commonMaterial: SamachurlScroll,
+  talentMaterials: [Freedom],
+  commonMaterials: [SamachurlScroll],
 };
 
 export const Beidou: Character = {
   type: "Character",
   name: "Beidou",
   wiki: "https://genshin-impact.fandom.com/wiki/Beidou",
-  talentMaterial: Gold,
-  commonMaterial: TreasureHoarderInsignia,
+  talentMaterials: [Gold],
+  commonMaterials: [TreasureHoarderInsignia],
 };
 
 export const Bennett: Character = {
   type: "Character",
   name: "Bennett",
   wiki: "https://genshin-impact.fandom.com/wiki/Bennett",
-  talentMaterial: Resistance,
-  commonMaterial: TreasureHoarderInsignia,
+  talentMaterials: [Resistance],
+  commonMaterials: [TreasureHoarderInsignia],
 };
 
 export const Chongyun: Character = {
   type: "Character",
   name: "Chongyun",
   wiki: "https://genshin-impact.fandom.com/wiki/Chongyun",
-
-  talentMaterial: Diligence,
-  commonMaterial: HilichurlMask,
+  talentMaterials: [Diligence],
+  commonMaterials: [HilichurlMask],
 };
 
 export const Diluc: Character = {
   type: "Character",
   name: "Diluc",
   wiki: "https://genshin-impact.fandom.com/wiki/Diluc",
-  talentMaterial: Resistance,
-  commonMaterial: FatuiInsignia,
+  talentMaterials: [Resistance],
+  commonMaterials: [FatuiInsignia],
 };
 
 export const Fischl: Character = {
   type: "Character",
   name: "Fischl",
   wiki: "https://genshin-impact.fandom.com/wiki/Fischl",
-  talentMaterial: Ballad,
-  commonMaterial: HilichurlArrowhead,
+  talentMaterials: [Ballad],
+  commonMaterials: [HilichurlArrowhead],
 };
 
 export const Jean: Character = {
   type: "Character",
   name: "Jean",
   wiki: "https://genshin-impact.fandom.com/wiki/Jean",
-  talentMaterial: Resistance,
-  commonMaterial: HilichurlMask,
+  talentMaterials: [Resistance],
+  commonMaterials: [HilichurlMask],
 };
 
 export const Kaeya: Character = {
   type: "Character",
   name: "Kaeya",
   wiki: "https://genshin-impact.fandom.com/wiki/Kaeya",
-  talentMaterial: Ballad,
-  commonMaterial: TreasureHoarderInsignia,
+  talentMaterials: [Ballad],
+  commonMaterials: [TreasureHoarderInsignia],
 };
 
 export const Keqing: Character = {
   type: "Character",
   name: "Keqing",
   wiki: "https://genshin-impact.fandom.com/wiki/Keqing",
-  talentMaterial: Prosperity,
-  commonMaterial: WhopperflowerNectar,
+  talentMaterials: [Prosperity],
+  commonMaterials: [WhopperflowerNectar],
 };
 
 export const Lisa: Character = {
   type: "Character",
   name: "Lisa",
   wiki: "https://genshin-impact.fandom.com/wiki/Lisa",
-  talentMaterial: Ballad,
-  commonMaterial: Slime,
+  talentMaterials: [Ballad],
+  commonMaterials: [Slime],
 };
 
 export const Mona: Character = {
   type: "Character",
   name: "Mona",
   wiki: "https://genshin-impact.fandom.com/wiki/Mona",
-  talentMaterial: Resistance,
-  commonMaterial: WhopperflowerNectar,
+  talentMaterials: [Resistance],
+  commonMaterials: [WhopperflowerNectar],
 };
 
 export const Ningguang: Character = {
   type: "Character",
   name: "Ningguang",
   wiki: "https://genshin-impact.fandom.com/wiki/Ningguang",
-  talentMaterial: Prosperity,
-  commonMaterial: FatuiInsignia,
+  talentMaterials: [Prosperity],
+  commonMaterials: [FatuiInsignia],
 };
 
 export const Noelle: Character = {
   type: "Character",
   name: "Noelle",
   wiki: "https://genshin-impact.fandom.com/wiki/Noelle",
-  talentMaterial: Resistance,
-  commonMaterial: HilichurlMask,
+  talentMaterials: [Resistance],
+  commonMaterials: [HilichurlMask],
 };
 
 export const Qiqi: Character = {
   type: "Character",
   name: "Qiqi",
   wiki: "https://genshin-impact.fandom.com/wiki/Qiqi",
-  talentMaterial: Prosperity,
-  commonMaterial: SamachurlScroll,
+  talentMaterials: [Prosperity],
+  commonMaterials: [SamachurlScroll],
 };
 
 export const Razor: Character = {
   type: "Character",
   name: "Razor",
   wiki: "https://genshin-impact.fandom.com/wiki/Razor",
-  talentMaterial: Resistance,
-  commonMaterial: HilichurlMask,
+  talentMaterials: [Resistance],
+  commonMaterials: [HilichurlMask],
 };
 
 export const Sucrose: Character = {
@@ -168,44 +175,45 @@ export const Sucrose: Character = {
   name: "Sucrose",
 
   wiki: "https://genshin-impact.fandom.com/wiki/Sucrose",
-  talentMaterial: Freedom,
-  commonMaterial: WhopperflowerNectar,
+  talentMaterials: [Freedom],
+  commonMaterials: [WhopperflowerNectar],
 };
 
 export const Venti: Character = {
   type: "Character",
   name: "Venti",
   wiki: "https://genshin-impact.fandom.com/wiki/Venti",
-  talentMaterial: Ballad,
-  commonMaterial: Slime,
+  talentMaterials: [Ballad],
+  commonMaterials: [Slime],
 };
 
 export const Xiangling: Character = {
   type: "Character",
   name: "Xiangling",
   wiki: "https://genshin-impact.fandom.com/wiki/Xiangling",
-  talentMaterial: Diligence,
-  commonMaterial: Slime,
+  talentMaterials: [Diligence],
+  commonMaterials: [Slime],
 };
 
 export const Xingqiu: Character = {
   type: "Character",
   name: "Xingqiu",
   wiki: "https://genshin-impact.fandom.com/wiki/Xingqiu",
-  talentMaterial: Gold,
-  commonMaterial: HilichurlMask,
+  talentMaterials: [Gold],
+  commonMaterials: [HilichurlMask],
 };
 
 export const Klee: Character = {
   type: "Character",
   name: "Klee",
   wiki: "https://genshin-impact.fandom.com/wiki/Klee",
-  talentMaterial: Freedom,
-  commonMaterial: SamachurlScroll,
+  talentMaterials: [Freedom],
+  commonMaterials: [SamachurlScroll],
 };
 
 export const Characters = [
-  Traveler,
+  TravelerAnemo,
+  TravelerGeo,
   Amber,
   Barbara,
   Beidou,
