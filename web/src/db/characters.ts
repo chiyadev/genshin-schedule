@@ -26,6 +26,14 @@ export type Character = {
   commonMaterial: CommonMaterial;
 };
 
+export const Traveler: Character = {
+  type: "Character",
+  name: "Traveler",
+  wiki: "https://genshin-impact.fandom.com/wiki/Traveler#Anemo",
+  talentMaterial: Freedom,
+  commonMaterial: SamachurlScroll,
+};
+
 export const Amber: Character = {
   type: "Character",
   name: "Amber",
@@ -197,6 +205,7 @@ export const Klee: Character = {
 };
 
 export const Characters = [
+  Traveler,
   Amber,
   Barbara,
   Beidou,
