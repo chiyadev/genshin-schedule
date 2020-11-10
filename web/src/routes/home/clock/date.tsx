@@ -4,7 +4,7 @@ import {
   getServerNextReset,
   useServerDate,
 } from "../../../time";
-import { roundResin, getResinRecharge } from "../../../db/resins";
+import { roundResin, getResinRecharge, ResinCap } from "../../../db/resins";
 
 const Date = () => {
   const date = useServerDate();
@@ -31,7 +31,7 @@ const Date = () => {
 
       <span> until reset </span>
 
-      {resetResins < 120 && (
+      {resetResins < ResinCap && (
         <span>
           (+{resetResins} resin{resetResins !== 1 && "s"})
         </span>

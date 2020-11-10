@@ -86,7 +86,7 @@ const Body = ({ hover }: { hover: boolean }) => {
         <div className="flex flex-col justify-center">/ {ResinCap}</div>
         <div className="flex-1" />
 
-        {hover && <Subtract />}
+        {hover && <Subtract current={current} />}
       </div>
 
       <div className="text-xs text-gray-600 ml-2 pl-10">
