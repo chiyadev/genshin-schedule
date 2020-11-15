@@ -211,6 +211,22 @@ export const Klee: Character = {
   commonMaterials: [SamachurlScroll],
 };
 
+export const Tartaglia: Character = {
+  type: "Character",
+  name: "Tartaglia",
+  wiki: "https://genshin-impact.fandom.com/wiki/Tartaglia",
+  talentMaterials: [Freedom],
+  commonMaterials: [FatuiInsignia],
+};
+
+export const Diona: Character = {
+  type: "Character",
+  name: "Diona",
+  wiki: "https://genshin-impact.fandom.com/wiki/Diona",
+  talentMaterials: [Freedom],
+  commonMaterials: [HilichurlArrowhead],
+};
+
 export const Characters = [
   TravelerAnemo,
   TravelerGeo,
@@ -235,4 +251,6 @@ export const Characters = [
   Xiangling,
   Xingqiu,
   Klee,
+  Tartaglia,
+  Diona,
 ];

@@ -10,7 +10,7 @@ import {
   MidsummerCourtyard,
   TaishanMansion,
   ValleyOfRemembrance,
-  WolfOfTheNorthChallenge
+  WolfOfTheNorthChallenge,
 } from "./domains";
 import {
   Amber,
@@ -20,10 +20,12 @@ import {
   Character,
   Chongyun,
   Diluc,
+  Diona,
   Fischl,
   Jean,
   Kaeya,
   Keqing,
+  Klee,
   Lisa,
   Mona,
   Ningguang,
@@ -31,9 +33,10 @@ import {
   Qiqi,
   Razor,
   Sucrose,
+  Tartaglia,
   Venti,
   Xiangling,
-  Xingqiu
+  Xingqiu,
 } from "./characters";
 
 export type Region = {
@@ -54,7 +57,7 @@ export const Mondstadt: Region = {
     ValleyOfRemembrance,
     ForsakenRift,
     ConfrontStormterror,
-    WolfOfTheNorthChallenge
+    WolfOfTheNorthChallenge,
   ],
   characters: [
     Amber,
@@ -69,8 +72,10 @@ export const Mondstadt: Region = {
     Noelle,
     Razor,
     Sucrose,
-    Venti
-  ]
+    Venti,
+    Klee,
+    Diona,
+  ],
 };
 
 export const Liyue: Region = {
@@ -82,9 +87,17 @@ export const Liyue: Region = {
     DomainOfGuyun,
     HiddenPalaceOfZhouFormula,
     ClearPoolAndMountainCavern,
-    TaishanMansion
+    TaishanMansion,
   ],
-  characters: [Beidou, Chongyun, Keqing, Ningguang, Qiqi, Xiangling, Xingqiu]
+  characters: [Beidou, Chongyun, Keqing, Ningguang, Qiqi, Xiangling, Xingqiu],
 };
 
-export const Regions = [Mondstadt, Liyue];
+export const Snezhnaya: Region = {
+  type: "Region",
+  name: "Snezhnaya",
+  wiki: "https://genshin-impact.fandom.com/wiki/Snezhnaya",
+  domains: [],
+  characters: [Tartaglia],
+};
+
+export const Regions = [Mondstadt, Liyue, Snezhnaya];
