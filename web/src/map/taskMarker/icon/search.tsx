@@ -72,6 +72,7 @@ addIcons("local specialty liyue", [
 
 addIcons("cooking ingredient", [
   "Almond",
+  "Apple",
   "Berry",
   "Bird Egg",
   "Cabbage",
@@ -89,6 +90,7 @@ addIcons("cooking ingredient", [
   "Radish",
   "Raw Meat",
   "Snapdragon",
+  "Sunsettia",
   "Sweet Flower",
   "Shrimp Meat",
   "Tomato",
