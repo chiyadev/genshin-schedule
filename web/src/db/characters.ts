@@ -228,8 +228,8 @@ export const Diona: Character = {
 };
 
 export const Characters = [
-  TravelerAnemo,
-  TravelerGeo,
+  //TravelerAnemo,
+  //TravelerGeo,
   Amber,
   Barbara,
   Beidou,
