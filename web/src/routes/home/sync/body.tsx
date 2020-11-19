@@ -34,18 +34,21 @@ const Body = () => {
       <div className="text-sm space-y-2">
         <Submit username={username} password={password} setError={setError} />
 
-        {password && (
-          <div className="text-xs text-red-600">
-            {error ? (
-              <span>{error.message}</span>
-            ) : (
-              <span>
-                Note: This is not an official miHoYo authorization. Avoid
-                reusing your password.
-              </span>
-            )}
-          </div>
-        )}
+        <div className="text-xs">
+          {error ? (
+            <span className="text-red-600">Error: {error.message}</span>
+          ) : (
+            <span className="text-gray-600">
+              * Never reuse your miHoYo password on Genshin-related websites.{" "}
+              <a
+                className="text-blue-600"
+                href="https://github.com/chiyadev/genshin-schedule/wiki/Regarding-miHoYo-account-security"
+              >
+                Read more.
+              </a>
+            </span>
+          )}
+        </div>
       </div>
     </form>
   );
