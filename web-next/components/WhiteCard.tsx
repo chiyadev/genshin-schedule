@@ -1,22 +1,20 @@
-import { LightMode, StackDivider, VStack } from "@chakra-ui/react";
+import { StackDivider, VStack } from "@chakra-ui/react";
 import React, { memo, ReactNode } from "react";
 
-const WhiteCard = ({ children, divide }: { children?: ReactNode; divide?: boolean }) => {
+const WhiteCard = ({ children, divide, padding = 4 }: { children?: ReactNode; divide?: boolean; padding?: number }) => {
   return (
-    <LightMode>
-      <VStack
-        align="stretch"
-        bg="white"
-        color="black"
-        borderRadius="md"
-        boxShadow="lg"
-        p={4}
-        spacing={divide ? 4 : 0}
-        divider={divide ? <StackDivider borderColor="gray.200" /> : undefined}
-      >
-        {children}
-      </VStack>
-    </LightMode>
+    <VStack
+      align="stretch"
+      bg="white"
+      color="black"
+      borderRadius="md"
+      boxShadow="lg"
+      p={padding}
+      spacing={divide ? padding : 0}
+      divider={divide ? <StackDivider borderColor="gray.200" /> : undefined}
+    >
+      {children}
+    </VStack>
   );
 };
 

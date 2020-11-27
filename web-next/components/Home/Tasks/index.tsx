@@ -4,9 +4,11 @@ import { useDueTasks } from "../../../utils/tasks";
 //import TaskListCard from "../../../taskList";
 import MarkAllDone from "./MarkAllDone";
 import { FaAngleRight, FaTimes } from "react-icons/fa";
-//import MapCore from "../../../map";
 import NextLink from "next/link";
 import { chakra, Icon, Link, VStack } from "@chakra-ui/react";
+import dynamic from "next/dynamic";
+
+const MapCore = dynamic(() => import("../../Map"), { ssr: false });
 
 const TaskList = () => {
   const tasks = useDueTasks();
@@ -32,16 +34,15 @@ const TaskList = () => {
         )}
 
         <VStack align="stretch" spacing={1}>
-          {/*<MapCore
+          <chakra.div h="md" boxShadow="lg" bg="gray.800" borderRadius="md">
+            <MapCore
               minimal
-              className={cx(
-                "w-full rounded shadow-lg",
-                css`
-                  height: 26rem;
-                  background: rgba(0, 0, 0, 0.1) !important;
-                `
-              )}
-            />*/}
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+            />
+          </chakra.div>
 
           <chakra.div textAlign="right" fontSize="sm">
             <NextLink href="/map" passHref>

@@ -6,9 +6,11 @@ export const DaysOfWeek: DayOfWeek[] = ["Sunday", "Monday", "Tuesday", "Wednesda
 
 const rerenderCallbacks = new Set<() => void>();
 
-setInterval(() => {
-  rerenderCallbacks.forEach((callback) => callback());
-});
+if (typeof window !== "undefined") {
+  setInterval(() => {
+    rerenderCallbacks.forEach((callback) => callback());
+  });
+}
 
 export function useServerDate(frequency = 100) {
   const [count, setCount] = useState(() => Math.floor(Date.now() / frequency));

@@ -1,10 +1,11 @@
 import React, { memo } from "react";
 import { AppProps } from "next/app";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import "./_app.css";
-import "../components/NProgress.css";
 import NProgress from "../components/NProgress";
 import Head from "next/head";
+import "./_app.css";
+import "../components/NProgress.css";
+import "leaflet/dist/leaflet.css";
 
 const fallbackFonts =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
