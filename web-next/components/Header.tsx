@@ -20,10 +20,10 @@ const Header = () => {
 
       <NextLink href="/customize" passHref>
         <Link flexShrink={0}>
-          <Icon as={FaCog} />
-          <chakra.span ml={1} verticalAlign="middle">
-            Customize
-          </chakra.span>
+          <HStack spacing={1}>
+            <Icon as={FaCog} />
+            <chakra.span>Customize</chakra.span>
+          </HStack>
         </Link>
       </NextLink>
     </HStack>
