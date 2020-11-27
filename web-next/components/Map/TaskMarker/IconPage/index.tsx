@@ -47,7 +47,10 @@ const IconPage = ({
   return (
     <VStack align="stretch" spacing={0}>
       <InputGroup size="sm" zIndex={1}>
-        <InputLeftElement pointerEvents="none" children={<Icon as={FaSearch} color="gray.500" fontSize="md" />} />
+        <InputLeftElement pointerEvents="none">
+          <Icon as={FaSearch} color="gray.500" fontSize="md" />
+        </InputLeftElement>
+
         <Input
           ref={inputRef}
           variant="flushed"

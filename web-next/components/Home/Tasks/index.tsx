@@ -41,7 +41,7 @@ const TaskList = () => {
         )}
 
         <VStack align="stretch" spacing={1}>
-          <chakra.div ref={mapRef} h="md" boxShadow="lg" bg="gray.800" borderRadius="md">
+          <chakra.div ref={mapRef} h="md" boxShadow="lg" bg="gray.800" overflow="hidden" borderRadius="md">
             <MapCore
               minimal
               style={{

@@ -7,7 +7,7 @@ const Footer = () => {
     <DarkMode>
       <HStack as="footer" spacing={4} justify="center" pt={4} pb={4} textAlign="center" color="gray.500">
         <Tooltip label="GitHub">
-          <Link href="https://github.com/chiyadev/nhitomi" isExternal>
+          <Link href="https://github.com/chiyadev/genshin-schedule" isExternal>
             <Icon as={FaGithub} />
           </Link>
         </Tooltip>

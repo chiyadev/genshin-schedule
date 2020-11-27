@@ -9,10 +9,10 @@ const Header = () => {
     <HStack as="nav" p={4} spacing={4} color="white">
       <NextLink href="/" passHref>
         <Link fontWeight="bold" flexShrink={0}>
-          <chakra.img alt="logo" src={Favicon32x32} w={6} h={6} borderRadius="md" d="inline" mr={2} />
-          <chakra.span fontSize="lg" verticalAlign="middle">
-            Genshin Schedule
-          </chakra.span>
+          <HStack spacing={2}>
+            <chakra.img alt="logo" src={Favicon32x32} w={6} h={6} borderRadius="md" />
+            <chakra.span fontSize="lg">Genshin Schedule</chakra.span>
+          </HStack>
         </Link>
       </NextLink>
 
@@ -20,8 +20,10 @@ const Header = () => {
 
       <NextLink href="/customize" passHref>
         <Link flexShrink={0}>
-          <Icon as={FaCog} mr={1} />
-          <span>Customize</span>
+          <Icon as={FaCog} />
+          <chakra.span ml={1} verticalAlign="middle">
+            Customize
+          </chakra.span>
         </Link>
       </NextLink>
     </HStack>

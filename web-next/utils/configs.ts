@@ -101,7 +101,7 @@ if (typeof window !== "undefined") {
   if (auth) {
     localStorage.removeItem("auth");
 
-    setAuthToken(JSON.parse(auth).token);
+    setAuthToken(undefined, JSON.parse(auth).token);
     setTimeout(() => window.location.reload());
   }
 }
