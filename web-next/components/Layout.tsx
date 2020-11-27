@@ -1,43 +1,20 @@
-import React, { ReactNode } from "react";
-import Link from "next/link";
+import React, { memo, ReactNode } from "react";
 import Head from "next/head";
+import { chakra, Flex, SlideFade, Spacer } from "@chakra-ui/react";
+import Footer from "./Footer";
 
-type Props = {
-  children?: ReactNode;
-  title?: string;
-};
-
-const Layout = ({ children, title }: Props) => (
-  <div>
+const Layout = ({ children, title = [] }: { children?: ReactNode; title?: (string | undefined)[] }) => (
+  <SlideFade in>
     <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <title>{[...title.map((x) => x?.trim()).filter((x) => x), "Genshin Schedule"].join(" · ")}</title>
     </Head>
-    <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{" "}
-        |{" "}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{" "}
-        |{" "}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{" "}
-        | <a href="/api/users">Users API</a>
-      </nav>
-    </header>
 
-    {children}
-
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
-  </div>
+    <Flex direction="column" w="full" minH="100vh" maxW="1200px" mx="auto">
+      <chakra.div p={4}>{children}</chakra.div>
+      <Spacer />
+      <Footer />
+    </Flex>
+  </SlideFade>
 );
 
-export default Layout;
+export default memo(Layout);
