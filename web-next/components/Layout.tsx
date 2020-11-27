@@ -3,6 +3,7 @@ import Head from "next/head";
 import { chakra, Flex, SlideFade, Spacer } from "@chakra-ui/react";
 import Header from "./Header";
 import Footer from "./Footer";
+import Background from "./Background";
 
 const Layout = ({
   children,
@@ -13,13 +14,14 @@ const Layout = ({
   title?: (string | undefined)[];
   layout?: boolean;
 }) => (
-  <SlideFade in>
+  <SlideFade in unmountOnExit>
     <Head>
       <title>{[...title.map((x) => x?.trim()).filter((x) => x), "Genshin Schedule"].join(" · ")}</title>
     </Head>
 
     {layout ? (
       <Flex direction="column" w="full" minH="100vh" maxW="1200px" mx="auto">
+        <Background />
         <Header />
         <chakra.div p={4}>{children}</chakra.div>
         <Spacer />

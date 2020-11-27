@@ -85,7 +85,7 @@ const Resin = () => {
           </chakra.div>
           <Spacer />
 
-          <Fade in={hover}>
+          <Fade in={hover} unmountOnExit>
             <Subtractor current={current} />
           </Fade>
         </HStack>
