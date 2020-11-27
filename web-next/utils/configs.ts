@@ -1,4 +1,4 @@
-import { createContext, Dispatch, MutableRefObject, SetStateAction, useCallback, useContext } from "react";
+import { createContext, Dispatch, SetStateAction, useCallback, useContext } from "react";
 import { ResinCap } from "../db/resins";
 import { setAuthToken } from "./api";
 
@@ -89,38 +89,22 @@ if (typeof window !== "undefined") {
   const auth = localStorage.getItem("auth");
 
   if (auth) {
+    localStorage.removeItem("auth");
+
     setAuthToken(JSON.parse(auth).token);
-
-    for (const key of ["auth", ...ConfigKeys]) {
-      localStorage.removeItem(key);
-    }
-
     setTimeout(() => window.location.reload());
   }
 }
 
-export const ConfigContext = createContext<[Configs, Dispatch<SetStateAction<Configs>>, MutableRefObject<Configs>]>([
-  DefaultConfigs,
-  () => {},
-  { current: DefaultConfigs },
-]);
+export const ConfigsContext = createContext<[Configs, Dispatch<SetStateAction<Configs>>]>([DefaultConfigs, () => {}]);
+export const SyncContext = createContext<{ enabled: boolean }>({ enabled: false });
 
-export function useConfigs(): [Configs, Dispatch<SetStateAction<Configs>>] {
-  const [value, setValue, ref] = useContext(ConfigContext);
+export function useConfigs() {
+  return useContext(ConfigsContext);
+}
 
-  return [
-    value,
-    useCallback(
-      (newValue) => {
-        if (typeof newValue === "function") {
-          newValue = newValue(ref.current);
-        }
-
-        setValue((ref.current = newValue));
-      },
-      [setValue, ref]
-    ),
-  ];
+export function useSync() {
+  return useContext(SyncContext);
 }
 
 export function useConfig<TKey extends keyof Configs>(

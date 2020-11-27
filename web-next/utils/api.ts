@@ -3,7 +3,6 @@ import { Configs } from "./configs";
 import { destroyCookie, parseCookies, setCookie } from "nookies";
 import { GetServerSidePropsContext } from "next";
 import node_fetch from "node-fetch";
-import { Dispatch, useCallback, useEffect, useState } from "react";
 
 export type User = {
   username: string;
@@ -34,6 +33,13 @@ export type SyncResponse = {
   token: string;
 };
 
+export const PublicApiUrl = process.env.GS_API_PUBLIC || "https://genshin.chiya.dev/api/v1";
+export const InternalApiUrl = process.env.GS_API_INTERNAL || PublicApiUrl;
+
+export function createApiClient(ctx?: Pick<GetServerSidePropsContext, "req">): ApiClient {
+  return new ApiClient(ctx?.req ? InternalApiUrl : PublicApiUrl, getAuthToken(ctx));
+}
+
 export function getAuthToken(ctx?: Pick<GetServerSidePropsContext, "req">): string | undefined {
   return parseCookies(ctx).token;
 }
@@ -47,34 +53,6 @@ export function setAuthToken(ctx?: Pick<GetServerSidePropsContext, "res">, token
   } else {
     destroyCookie(ctx, "token");
   }
-}
-
-const listeners = new Set<(value?: string) => void>();
-
-export function useAuthToken(): [string | undefined, Dispatch<string | undefined>] {
-  const [value, setValue] = useState(getAuthToken);
-
-  useEffect(() => {
-    listeners.add(setValue);
-    return () => {
-      listeners.delete(setValue);
-    };
-  }, []);
-
-  return [
-    value,
-    useCallback((newValue) => {
-      setAuthToken(undefined, newValue);
-      listeners.forEach((listener) => listener(newValue));
-    }, []),
-  ];
-}
-
-export const PublicApiUrl = process.env.GS_API_PUBLIC || "https://genshin.chiya.dev/api/v1";
-export const InternalApiUrl = process.env.GS_API_INTERNAL || PublicApiUrl;
-
-export function createApiClient(ctx?: Pick<GetServerSidePropsContext, "req">): ApiClient {
-  return new ApiClient(ctx?.req ? InternalApiUrl : PublicApiUrl, getAuthToken(ctx));
 }
 
 export class ApiClient {

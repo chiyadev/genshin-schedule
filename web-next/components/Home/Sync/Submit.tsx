@@ -2,9 +2,8 @@ import React, { Dispatch, memo, SetStateAction, useState } from "react";
 import { FaSignInAlt } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { Button, Icon } from "@chakra-ui/react";
-import { createApiClient, useAuthToken } from "../../../utils/api";
-import { useConfigs } from "../../../utils/configs";
-import { useSyncToken } from "../../../utils/sync";
+import { createApiClient, setAuthToken } from "../../../utils/api";
+import { useRouter } from "next/router";
 
 const Submit = ({
   username,
@@ -15,9 +14,7 @@ const Submit = ({
   password: string;
   setError: Dispatch<SetStateAction<Error | undefined>>;
 }) => {
-  const [, setConfigs] = useConfigs();
-  const [, setAuthToken] = useAuthToken();
-  const [, setSyncToken] = useSyncToken();
+  const router = useRouter();
   const [load, setLoad] = useState(false);
 
   return (
@@ -36,17 +33,12 @@ const Submit = ({
 
         try {
           const client = createApiClient();
-          const { token: authToken } = await client.auth({ username, password });
+          const { token } = await client.auth({ username, password });
 
-          client.token = authToken;
-          const { data, token: syncToken } = await client.getSync();
-
-          setConfigs((configs) => ({ ...configs, ...data }));
-          setAuthToken(authToken);
-          setSyncToken(syncToken);
-          setError(undefined);
-
+          setAuthToken(undefined, token);
           trackEvent("sync", "enable");
+
+          setTimeout(() => router.reload());
         } catch (e) {
           setError(e);
         } finally {

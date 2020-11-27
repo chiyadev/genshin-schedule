@@ -3,12 +3,12 @@ import WhiteCard from "../../WhiteCard";
 import { WiCloud } from "react-icons/wi";
 import Content from "./Content";
 import { chakra, HStack, Icon } from "@chakra-ui/react";
-import { useSyncToken } from "../../../utils/sync";
+import { useSync } from "../../../utils/configs";
 
 const Sync = () => {
-  const [token] = useSyncToken();
+  const { enabled } = useSync();
 
-  if (token) {
+  if (enabled) {
     return null;
   }
 
