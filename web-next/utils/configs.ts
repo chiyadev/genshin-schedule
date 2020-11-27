@@ -1,6 +1,16 @@
-import { createContext, Dispatch, SetStateAction, useCallback, useContext } from "react";
+import {
+  createContext,
+  Dispatch,
+  MutableRefObject,
+  SetStateAction,
+  useCallback,
+  useContext,
+  useLayoutEffect,
+  useState,
+} from "react";
 import { ResinCap } from "../db/resins";
 import { setAuthToken } from "./api";
+import { MultiMap } from "./multiMap";
 
 type MapLocation = { lat: number; lng: number };
 
@@ -96,32 +106,68 @@ if (typeof window !== "undefined") {
   }
 }
 
-export const ConfigsContext = createContext<[Configs, Dispatch<SetStateAction<Configs>>]>([DefaultConfigs, () => {}]);
-export const SyncContext = createContext<{ enabled: boolean }>({ enabled: false });
+export const ConfigsContext = createContext<{
+  ref: MutableRefObject<Configs>;
+  set: Dispatch<SetStateAction<Configs>>;
+  events: MultiMap<string, () => void>;
+}>({
+  ref: { current: DefaultConfigs },
+  set: () => {},
+  events: new MultiMap(),
+});
 
-export function useConfigs() {
-  return useContext(ConfigsContext);
-}
+export function useConfigs(): [Configs, Dispatch<SetStateAction<Configs>>] {
+  const { ref, set, events } = useContext(ConfigsContext);
+  const [, setUpdate] = useState(0);
 
-export function useSync() {
-  return useContext(SyncContext);
+  useLayoutEffect(() => {
+    const handler = () => setUpdate((i) => i + 1);
+
+    for (const key of ConfigKeys) {
+      events.add(key, handler);
+    }
+
+    return () => {
+      for (const key of ConfigKeys) {
+        events.remove(key, handler);
+      }
+    };
+  }, [ref, events]);
+
+  return [ref.current, set];
 }
 
 export function useConfig<TKey extends keyof Configs>(
   key: TKey
 ): [Configs[TKey], Dispatch<SetStateAction<Configs[TKey]>>] {
-  const [value, setValue] = useConfigs();
+  const { ref, set, events } = useContext(ConfigsContext);
+  const [, setUpdate] = useState(0);
+
+  useLayoutEffect(() => {
+    const handler = () => setUpdate((i) => i + 1);
+
+    events.add(key, handler);
+    return () => {
+      events.remove(key, handler);
+    };
+  }, [key, ref, events]);
 
   return [
-    value[key],
+    ref.current[key],
     useCallback(
       (newValue) => {
-        setValue((value) => ({
+        set((value) => ({
           ...value,
           [key]: typeof newValue === "function" ? newValue(value[key]) : newValue,
         }));
       },
-      [key, setValue]
+      [key, set]
     ),
   ];
+}
+
+export const SyncContext = createContext<{ enabled: boolean }>({ enabled: false });
+
+export function useSync() {
+  return useContext(SyncContext);
 }

@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useRef } from "react";
 import WidgetWrapper from "../WidgetWrapper";
 import { useDueTasks } from "../../../utils/tasks";
 import TaskListCard from "../../TaskListCard";
@@ -12,6 +12,7 @@ const MapCore = dynamic(() => import("../../Map"), { ssr: false });
 
 const TaskList = () => {
   const tasks = useDueTasks();
+  const mapRef = useRef<HTMLDivElement>(null);
 
   return (
     <WidgetWrapper
@@ -21,7 +22,13 @@ const TaskList = () => {
       <VStack align="stretch" spacing={4} color="white">
         {tasks.length ? (
           <VStack align="stretch" spacing={1}>
-            <TaskListCard />
+            <TaskListCard
+              onTaskClick={() => {
+                mapRef.current?.scrollIntoView({
+                  block: "center",
+                });
+              }}
+            />
 
             <chakra.div textAlign="right">
               <MarkAllDone />
@@ -34,7 +41,7 @@ const TaskList = () => {
         )}
 
         <VStack align="stretch" spacing={1}>
-          <chakra.div h="md" boxShadow="lg" bg="gray.800" borderRadius="md">
+          <chakra.div ref={mapRef} h="md" boxShadow="lg" bg="gray.800" borderRadius="md">
             <MapCore
               minimal
               style={{

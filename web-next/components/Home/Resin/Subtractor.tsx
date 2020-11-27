@@ -12,7 +12,7 @@ const Subtractor = ({ current }: { current: number }) => {
   const date = useServerDate(60000);
 
   return (
-    <HStack spacing={0}>
+    <HStack spacing={2}>
       {resinUsages.map(
         (usage) =>
           current - usage > 0 && (
@@ -21,6 +21,7 @@ const Subtractor = ({ current }: { current: number }) => {
               variant="link"
               color="gray.500"
               size="sm"
+              minW={0}
               onClick={() => {
                 setResin((resin) => ({
                   value: clampResin(clampResin(resin.value + getResinRecharge(date.getTime() - resin.time)) - usage),

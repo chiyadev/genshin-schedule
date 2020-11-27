@@ -12,6 +12,7 @@ const ServerText = () => {
       colorScheme="white"
       fontWeight="bold"
       verticalAlign="baseline"
+      minW={0}
       onClick={() => {
         setServer(ServerList[(ServerList.indexOf(server) + 1) % ServerList.length]);
         trackEvent("clock", "serverSwitch");

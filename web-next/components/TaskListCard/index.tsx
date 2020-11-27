@@ -4,7 +4,7 @@ import { useDueTasks } from "../../utils/tasks";
 import Item from "./Item";
 import { Task, useConfig } from "../../utils/configs";
 
-const TaskListCard = () => {
+const TaskListCard = ({ onTaskClick }: { onTaskClick?: (task: Task) => void }) => {
   const tasks = useDueTasks();
   const [, setTasks] = useConfig("tasks");
 
@@ -30,10 +30,11 @@ const TaskListCard = () => {
 
   return (
     <WhiteCard divide>
-      {useMemo(() => tasks.map((task, i) => <Item key={task.id} task={task} setTask={taskSetters[i]} />), [
-        taskSetters,
-        tasks,
-      ])}
+      {useMemo(
+        () =>
+          tasks.map((task, i) => <Item key={task.id} task={task} setTask={taskSetters[i]} onTaskClick={onTaskClick} />),
+        [taskSetters, tasks, onTaskClick]
+      )}
     </WhiteCard>
   );
 };

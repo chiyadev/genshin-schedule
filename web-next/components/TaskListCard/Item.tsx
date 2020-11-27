@@ -5,7 +5,15 @@ import { trackEvent } from "../../utils/umami";
 import DoneButton from "./DoneButton";
 import { getAssetByName } from "../../assets";
 
-const Item = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateAction<Task>> }) => {
+const Item = ({
+  task,
+  setTask,
+  onTaskClick,
+}: {
+  task: Task;
+  setTask: Dispatch<SetStateAction<Task>>;
+  onTaskClick?: (task: Task) => void;
+}) => {
   const [, setMapState] = useConfig("mapState");
   const [, setFocusedTask] = useConfig("mapFocusedTask");
 
@@ -19,6 +27,7 @@ const Item = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateAction<
             variant="link"
             size="lg"
             colorScheme="black"
+            minW={0}
             onClick={() => {
               setMapState({
                 lat: task.location.lat + 1.5,
@@ -27,6 +36,7 @@ const Item = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateAction<
               });
 
               setFocusedTask(task.id);
+              onTaskClick?.(task);
 
               trackEvent("taskList", "taskFocus");
             }}

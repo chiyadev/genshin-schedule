@@ -1,6 +1,18 @@
-import React, { memo, ReactNode, SetStateAction, useCallback, useEffect, useMemo, useState } from "react";
+import React, {
+  Dispatch,
+  memo,
+  ReactNode,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { WebData } from "../utils/api";
 import { ConfigKeys, Configs, ConfigsContext, DefaultConfigs, SyncContext } from "../utils/configs";
+import { MultiMap } from "../utils/multiMap";
 
 const ConfigsProvider = ({ initial, children }: { initial?: WebData | null; children?: ReactNode }) => {
   if (initial) {
@@ -64,9 +76,9 @@ const LocalConfigsProvider = ({ children }: { children?: ReactNode }) => {
   }, []);
 
   return (
-    <ConfigsContext.Provider value={useMemo(() => [value, setValue], [value, setValue])}>
+    <ConfigsContextRoot value={value} setValue={setValue}>
       {children}
-    </ConfigsContext.Provider>
+    </ConfigsContextRoot>
   );
 };
 
@@ -75,8 +87,53 @@ const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; 
   const [token, setToken] = useState(initial.token);
 
   return (
-    <ConfigsContext.Provider value={useMemo(() => [value, setValue], [value, setValue])}>
+    <ConfigsContextRoot value={value} setValue={setValue}>
       <SyncContext.Provider value={useMemo(() => ({ enabled: true }), [])}>{children}</SyncContext.Provider>
+    </ConfigsContextRoot>
+  );
+};
+
+const ConfigsContextRoot = ({
+  value,
+  setValue,
+  children,
+}: {
+  value: Configs;
+  setValue: Dispatch<SetStateAction<Configs>>;
+  children?: ReactNode;
+}) => {
+  const ref = useRef(value);
+  const events = useMemo(() => new MultiMap<string, () => void>(), []);
+
+  useLayoutEffect(() => {
+    const changes = ConfigKeys.filter((key) => {
+      const previous = (ref.current as any)[key];
+      const current = (value as any)[key];
+
+      return previous !== current;
+    });
+
+    ref.current = value;
+
+    for (const key of changes) {
+      for (const callback of events.get(key)) {
+        callback();
+      }
+    }
+  }, [value, events]);
+
+  return (
+    <ConfigsContext.Provider
+      value={useMemo(
+        () => ({
+          ref,
+          set: setValue,
+          events,
+        }),
+        [ref, setValue, events]
+      )}
+    >
+      {children}
     </ConfigsContext.Provider>
   );
 };
