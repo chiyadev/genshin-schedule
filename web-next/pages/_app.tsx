@@ -6,11 +6,14 @@ import Head from "next/head";
 import "./_app.css";
 import "../components/NProgress.css";
 import "leaflet/dist/leaflet.css";
+import { useScrollPreserver } from "../utils/scrollPreserver";
 
 const fallbackFonts =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
 
 function App({ Component, pageProps }: AppProps) {
+  useScrollPreserver();
+
   return (
     <ChakraProvider
       theme={extendTheme({

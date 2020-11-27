@@ -5,7 +5,6 @@ import React, {
   SetStateAction,
   useCallback,
   useEffect,
-  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -105,7 +104,7 @@ const ConfigsContextRoot = ({
   const ref = useRef(value);
   const events = useMemo(() => new MultiMap<string, () => void>(), []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const changes = ConfigKeys.filter((key) => {
       const previous = (ref.current as any)[key];
       const current = (value as any)[key];

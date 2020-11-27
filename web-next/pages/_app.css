@@ -13,6 +13,10 @@
     background: none !important;
 }
 
+.leaflet-container .leaflet-pane {
+    z-index: 1;
+}
+
 .task-map .leaflet-marker-pane .leaflet-marker-icon {
     background: white;
     padding: 0.25rem;

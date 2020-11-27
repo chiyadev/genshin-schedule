@@ -5,7 +5,7 @@ import {
   SetStateAction,
   useCallback,
   useContext,
-  useLayoutEffect,
+  useEffect,
   useState,
 } from "react";
 import { ResinCap } from "../db/resins";
@@ -120,7 +120,7 @@ export function useConfigs(): [Configs, Dispatch<SetStateAction<Configs>>] {
   const { ref, set, events } = useContext(ConfigsContext);
   const [, setUpdate] = useState(0);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handler = () => setUpdate((i) => i + 1);
 
     for (const key of ConfigKeys) {
@@ -143,7 +143,7 @@ export function useConfig<TKey extends keyof Configs>(
   const { ref, set, events } = useContext(ConfigsContext);
   const [, setUpdate] = useState(0);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handler = () => setUpdate((i) => i + 1);
 
     events.add(key, handler);
