@@ -3,7 +3,6 @@ import { TalentMaterial, TalentMaterialWiki } from "../../../db/talentMaterials"
 import { WeaponMaterial, WeaponMaterialWiki } from "../../../db/weaponMaterials";
 import { Character } from "../../../db/characters";
 import { Weapon } from "../../../db/weapons";
-//import { cx } from "emotion";
 import NoteText from "./NoteText";
 import NextLink from "next/link";
 import { chakra, HStack, Link, VStack } from "@chakra-ui/react";

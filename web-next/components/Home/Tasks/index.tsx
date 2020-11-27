@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import WidgetWrapper from "../WidgetWrapper";
 import { useDueTasks } from "../../../utils/tasks";
-//import TaskListCard from "../../../taskList";
+import TaskListCard from "../../TaskListCard";
 import MarkAllDone from "./MarkAllDone";
 import { FaAngleRight, FaTimes } from "react-icons/fa";
 import NextLink from "next/link";
@@ -21,7 +21,7 @@ const TaskList = () => {
       <VStack align="stretch" spacing={4} color="white">
         {tasks.length ? (
           <VStack align="stretch" spacing={1}>
-            {/*<TaskListCard />*/}
+            <TaskListCard />
 
             <chakra.div textAlign="right">
               <MarkAllDone />
