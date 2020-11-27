@@ -22,7 +22,7 @@ const MaterialDisplay = ({
   return (
     <VStack align="stretch" spacing={4}>
       <HStack spacing={2}>
-        <chakra.img alt={material.name} src={getAssetByName(material.item)} w={10} h={10} />
+        <chakra.img alt={material.name} src={getAssetByName(material.item)} w={10} h={10} objectFit="contain" />
 
         <div>
           <chakra.div fontSize="lg">
@@ -49,17 +49,18 @@ const MaterialDisplay = ({
 
       <VStack align="start" spacing={2} pl={4}>
         {items.map((item) => (
-          <HStack spacing={2}>
+          <HStack key={item.name} spacing={2}>
             <chakra.img
               alt={item.name}
               src={getAssetByName(item.name)}
               w={6}
               h={6}
+              objectFit="contain"
               borderRadius={roundIcon ? "full" : undefined}
             />
 
             <div>
-              <NextLink key={item.name} href={`/${path}/${item.name}`} passHref>
+              <NextLink href={`/${path}/${item.name}`} passHref>
                 <Link>{item.name}</Link>
               </NextLink>
 

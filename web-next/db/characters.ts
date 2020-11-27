@@ -1,12 +1,4 @@
-import {
-  Ballad,
-  Diligence,
-  Freedom,
-  Gold,
-  Prosperity,
-  Resistance,
-  TalentMaterial,
-} from "./talentMaterials";
+import { Ballad, Diligence, Freedom, Gold, Prosperity, Resistance, TalentMaterial } from "./talentMaterials";
 import {
   CommonMaterial,
   FatuiInsignia,
@@ -17,6 +9,8 @@ import {
   TreasureHoarderInsignia,
   WhopperflowerNectar,
 } from "./commonMaterials";
+
+export const CharacterWiki = "https://genshin-impact.fandom.com/wiki/Characters";
 
 export type Character = {
   type: "Character";

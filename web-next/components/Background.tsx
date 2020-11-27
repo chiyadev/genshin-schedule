@@ -1,13 +1,14 @@
 import React, { memo } from "react";
 import { useConfig } from "../utils/configs";
 import { Paimon } from "../assets";
-import { chakra, Fade } from "@chakra-ui/react";
+import { chakra } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 const Background = () => {
   const [background] = useConfig("paimonBg");
 
   return (
-    <Fade in={background} unmountOnExit>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: background ? 1 : 0 }}>
       <chakra.img
         alt="background"
         src={Paimon}
@@ -17,7 +18,7 @@ const Background = () => {
         right="-5%"
         bottom="-20%"
       />
-    </Fade>
+    </motion.div>
   );
 };
 

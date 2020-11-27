@@ -3,7 +3,7 @@ import { useConfig } from "../../../utils/configs";
 import TaskMarker from "../TaskMarker";
 import CreateButton from "./CreateButton";
 import { useMapEvent } from "react-leaflet";
-import { randomStr } from "../../../utils/random";
+import { randomStr } from "../../../utils";
 
 const TaskCreateLayer = () => {
   const [task, setTask] = useConfig("mapCreateTask");

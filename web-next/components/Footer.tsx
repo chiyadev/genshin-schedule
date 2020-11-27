@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import { FaGithub, FaHeart, FaQuestion } from "react-icons/fa";
 import { chakra, DarkMode, HStack, Icon, Link, Tooltip, VStack } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 const Footer = () => {
   return (
@@ -8,9 +9,11 @@ const Footer = () => {
       <VStack align="stretch" spacing={2} p={4} color="gray.500">
         <chakra.div fontSize="sm" textAlign="center">
           <p>
-            <Link href="https://genshin.chiya.dev">
-              <em>genshin.chiya.dev</em>
-            </Link>
+            <NextLink href="/" passHref>
+              <Link>
+                <em>genshin.chiya.dev</em>
+              </Link>
+            </NextLink>
             <span> is not affiliated with or endorsed by </span>
             <Link href="https://mihoyo.com/" isExternal>
               <em>miHoYo</em>

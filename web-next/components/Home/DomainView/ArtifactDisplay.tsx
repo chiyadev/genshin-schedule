@@ -9,10 +9,10 @@ const ArtifactDisplay = ({ artifacts }: { artifacts: Artifact[] }) => {
   return (
     <VStack align="start" spacing={2} pl={4}>
       {artifacts.map((item) => (
-        <HStack spacing={2}>
+        <HStack key={item.name} spacing={2}>
           <chakra.img alt={item.name} src={getAssetByName(item.name)} w={6} h={6} />
 
-          <NextLink key={item.name} href={`/artifacts/${item.name}`} passHref>
+          <NextLink href={`/artifacts/${item.name}`} passHref>
             <Link>{item.name}</Link>
           </NextLink>
 

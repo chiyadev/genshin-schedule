@@ -4,7 +4,7 @@ import { GetServerSideProps } from "next";
 import ConfigsProvider from "../../components/ConfigsProvider";
 import Layout from "../../components/Layout";
 import Search from "../../components/Customize/Search";
-import { VStack } from "@chakra-ui/layout";
+import { VStack } from "@chakra-ui/react";
 import CharacterList from "../../components/Customize/CharacterList";
 import WeaponList from "../../components/Customize/WeaponList";
 import ArtifactList from "../../components/Customize/ArtifactList";

@@ -1,9 +1,8 @@
 import React, { memo, useMemo } from "react";
 import { useConfig } from "../../../utils/configs";
-import { AspectRatio, chakra, HStack, Text, VStack } from "@chakra-ui/react";
+import { AspectRatio, chakra, HStack, Link, Text, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import NextLink from "next/link";
-import { Link } from "@chakra-ui/layout";
 import { Weapon } from "../../../db/weapons";
 import IconImage from "../IconImage";
 

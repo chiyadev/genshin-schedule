@@ -5,7 +5,7 @@ import {
   Decarabian,
   Guyun,
   MistVeiledElixir,
-  WeaponMaterial
+  WeaponMaterial,
 } from "./weaponMaterials";
 import {
   BoneShard,
@@ -21,8 +21,10 @@ import {
   SamachurlScroll,
   Slime,
   TreasureHoarderInsignia,
-  WhopperflowerNectar
+  WhopperflowerNectar,
 } from "./commonMaterials";
+
+export const WeaponWiki = "https://genshin-impact.fandom.com/wiki/Weapons";
 
 export type Weapon = {
   type: "Weapon";
@@ -34,19 +36,13 @@ export type Weapon = {
 
 export const Weapons: Weapon[] = [];
 
-function add(
-  name: string,
-  material: WeaponMaterial,
-  commonMaterials: CommonMaterial[]
-) {
+function add(name: string, material: WeaponMaterial, commonMaterials: CommonMaterial[]) {
   Weapons.push({
     type: "Weapon",
     name,
-    wiki: `https://genshin-impact.fandom.com/wiki/${encodeURIComponent(
-      name.replace(" ", "_")
-    )}`,
+    wiki: `https://genshin-impact.fandom.com/wiki/${encodeURIComponent(name.replace(" ", "_"))}`,
     material,
-    commonMaterials
+    commonMaterials,
   });
 }
 
@@ -75,10 +71,7 @@ add("Sword of Descension", BorealWolf, [LeyLine, TreasureHoarderInsignia]);
 add("The Black Sword", BorealWolf, [LeyLine, Slime]);
 add("The Flute", BorealWolf, [LeyLine, Slime]);
 add("The Widsith", BorealWolf, [LeyLine, HilichurlMask]);
-add("Thrilling Tales of Dragon Slayers", BorealWolf, [
-  LeyLine,
-  SamachurlScroll
-]);
+add("Thrilling Tales of Dragon Slayers", BorealWolf, [LeyLine, SamachurlScroll]);
 add("Wine and Song", BorealWolf, [LeyLine, SamachurlScroll]);
 
 add("Beginner's Protector", DandelionGladiator, [ChaosPart, SamachurlScroll]);
@@ -88,10 +81,7 @@ add("Favonius Warbow", DandelionGladiator, [ChaosPart, WhopperflowerNectar]);
 add("Lost Prayer to the Sacred Winds", DandelionGladiator, [ChaosPart, Slime]);
 add("Otherworldly Story", DandelionGladiator, [ChaosPart, HilichurlMask]);
 add("Recurve Bow", DandelionGladiator, [ChaosPart, SamachurlScroll]);
-add("Sacrificial Fragments", DandelionGladiator, [
-  ChaosPart,
-  TreasureHoarderInsignia
-]);
+add("Sacrificial Fragments", DandelionGladiator, [ChaosPart, TreasureHoarderInsignia]);
 add("Sacrificial Sword", DandelionGladiator, [ChaosPart, SamachurlScroll]);
 add("Skyward Spine", DandelionGladiator, [ChaosPart, SamachurlScroll]);
 add("Traveler's Handy Sword", DandelionGladiator, [ChaosPart, SamachurlScroll]);
@@ -116,10 +106,7 @@ add("Eye of Perception", MistVeiledElixir, [MistGrass, HilichurlMask]);
 add("Fillet Blade", MistVeiledElixir, [MistGrass, TreasureHoarderInsignia]);
 add("Halberd", MistVeiledElixir, [MistGrass, WhopperflowerNectar]);
 add("Messenger", MistVeiledElixir, [MistGrass, TreasureHoarderInsignia]);
-add("Prototype Crescent", MistVeiledElixir, [
-  MistGrass,
-  TreasureHoarderInsignia
-]);
+add("Prototype Crescent", MistVeiledElixir, [MistGrass, TreasureHoarderInsignia]);
 add("Prototype Malice", MistVeiledElixir, [MistGrass, HilichurlArrowhead]);
 add("Prototype Rancour", MistVeiledElixir, [MistGrass, FatuiInsignia]);
 add("Rainslasher", MistVeiledElixir, [MistGrass, SamachurlScroll]);

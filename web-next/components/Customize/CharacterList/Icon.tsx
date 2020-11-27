@@ -1,10 +1,9 @@
 import React, { memo, useMemo } from "react";
 import { Character } from "../../../db/characters";
 import { useConfig } from "../../../utils/configs";
-import { AspectRatio, chakra, HStack, VStack } from "@chakra-ui/react";
+import { AspectRatio, chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import NextLink from "next/link";
-import { Link } from "@chakra-ui/layout";
 import IconImage from "../IconImage";
 
 const Icon = ({ visible = true, character }: { visible?: boolean; character: Character }) => {

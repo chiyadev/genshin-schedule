@@ -1,6 +1,8 @@
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import { useServerDate } from "./time";
 import { useConfig } from "./configs";
+import { useRouter } from "next/router";
+import { randomStr } from "./index";
 
 export function useDueTasks() {
   const [tasks] = useConfig("tasks");
@@ -16,4 +18,29 @@ export function useDueTasks() {
         return a.dueTime + a.refreshTime - b.dueTime - b.refreshTime;
       });
   }, [date, tasks]);
+}
+
+export function useTaskCreator() {
+  const router = useRouter();
+
+  const [center] = useConfig("mapState");
+  const [, setTask] = useConfig("mapCreateTask");
+
+  return useCallback(
+    async (material: { name: string; item?: string }, description?: string, openMap = true) => {
+      // todo: this is broken
+      setTask((task) => ({
+        ...task,
+        id: randomStr(6),
+        location: center,
+        name: material.name,
+        icon: material.item || material.name,
+        description,
+        visible: true,
+      }));
+
+      openMap && (await router.push("/map"));
+    },
+    [router, center, setTask]
+  );
 }

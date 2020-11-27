@@ -1,9 +1,10 @@
 import React, { memo, ReactNode } from "react";
 import Head from "next/head";
-import { chakra, Flex, SlideFade, Spacer } from "@chakra-ui/react";
+import { chakra, Flex, Spacer } from "@chakra-ui/react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Background from "./Background";
+import { motion } from "framer-motion";
 
 const Layout = ({
   children,
@@ -14,23 +15,27 @@ const Layout = ({
   title?: (string | undefined)[];
   layout?: boolean;
 }) => (
-  <SlideFade in unmountOnExit>
+  <>
     <Head>
       <title>{[...title.map((x) => x?.trim()).filter((x) => x), "Genshin Schedule"].join(" · ")}</title>
     </Head>
 
     {layout ? (
-      <Flex direction="column" w="full" minH="100vh" maxW="1200px" mx="auto">
-        <Background />
-        <Header />
-        <chakra.div p={4}>{children}</chakra.div>
-        <Spacer />
-        <Footer />
-      </Flex>
+      <chakra.div overflow="hidden">
+        <motion.div initial={{ y: 16, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
+          <Flex direction="column" minH="100vh" maxW="1200px" mx="auto">
+            <Background />
+            <Header />
+            <chakra.div p={4}>{children}</chakra.div>
+            <Spacer />
+            <Footer />
+          </Flex>
+        </motion.div>
+      </chakra.div>
     ) : (
       children
     )}
-  </SlideFade>
+  </>
 );
 
 export default memo(Layout);
