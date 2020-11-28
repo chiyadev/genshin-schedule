@@ -56,7 +56,7 @@ const IconPage = ({
           variant="flushed"
           fontSize="md"
           value={search}
-          onInput={({ currentTarget: { value } }) => setSearch(value)}
+          onChange={({ currentTarget: { value } }) => setSearch(value)}
           placeholder="Search icons"
         />
       </InputGroup>

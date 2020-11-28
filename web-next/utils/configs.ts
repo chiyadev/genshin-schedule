@@ -166,7 +166,13 @@ export function useConfig<TKey extends keyof Configs>(
   ];
 }
 
-export const SyncContext = createContext<{ enabled: boolean }>({ enabled: false });
+export const SyncContext = createContext<{
+  enabled: boolean;
+  synchronize: () => Promise<void>;
+}>({
+  enabled: false,
+  synchronize: () => Promise.resolve(),
+});
 
 export function useSync() {
   return useContext(SyncContext);

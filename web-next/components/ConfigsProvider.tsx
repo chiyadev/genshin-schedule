@@ -9,9 +9,11 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { WebData } from "../utils/api";
+import { createApiClient, WebData } from "../utils/api";
 import { ConfigKeys, Configs, ConfigsContext, DefaultConfigs, SyncContext } from "../utils/configs";
 import { MultiMap } from "../utils/multiMap";
+import { PromiseSignal } from "../utils/promiseSignal";
+import { createPatch, Patch } from "rfc6902";
 
 const ConfigsProvider = ({ initial, children }: { initial?: WebData | null; children?: ReactNode }) => {
   if (initial) {
@@ -83,11 +85,92 @@ const LocalConfigsProvider = ({ children }: { children?: ReactNode }) => {
 
 const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; children?: ReactNode }) => {
   const [value, setValue] = useState(() => ({ ...DefaultConfigs, ...initial.data }));
-  const [token, setToken] = useState(initial.token);
+  const [sync, setSync] = useState(false);
+
+  const lastValue = useRef(value);
+  const patchQueue: Patch = useMemo(() => [], []);
+  const patchTimeout = useRef<number>();
+
+  const pushPatches = useCallback(() => {
+    const patch = createPatch(lastValue.current, value);
+    lastValue.current = value;
+    patchQueue.push(...patch);
+  }, [value]);
+
+  useEffect(() => {
+    clearTimeout(patchTimeout.current);
+    patchTimeout.current = window.setTimeout(pushPatches, 200);
+  }, [pushPatches]);
+
+  const signals: PromiseSignal<void>[] = useMemo(() => [], []);
+
+  useEffect(() => {
+    let mounted = true;
+    let token = initial.token;
+
+    (async () => {
+      while (mounted) {
+        await new Promise((resolve) => setTimeout(resolve, 100));
+
+        if (!patchQueue.length) {
+          continue;
+        }
+
+        setSync(true);
+
+        try {
+          const patch = [...patchQueue];
+          patchQueue.length = 0;
+
+          const client = createApiClient();
+          const result = await client.patchSync({ patch, token });
+
+          switch (result.type) {
+            case "success":
+              token = result.token;
+              break;
+
+            case "failure":
+              token = result.token;
+              setValue((lastValue.current = { ...DefaultConfigs, ...result.data }));
+              break;
+          }
+
+          signals.forEach((signal) => signal.resolve());
+        } catch (e) {
+          console.error(e);
+          signals.forEach((signal) => signal.reject(e));
+        } finally {
+          setSync(false);
+          signals.length = 0;
+        }
+      }
+    })();
+
+    return () => {
+      mounted = false;
+    };
+  }, [signals, patchQueue]);
 
   return (
     <ConfigsContextRoot value={value} setValue={setValue}>
-      <SyncContext.Provider value={useMemo(() => ({ enabled: true }), [])}>{children}</SyncContext.Provider>
+      <SyncContext.Provider
+        value={useMemo(
+          () => ({
+            enabled: true,
+            synchronize: () => {
+              pushPatches();
+
+              const signal = new PromiseSignal<void>();
+              signals.push(signal);
+              return signal.promise;
+            },
+          }),
+          [pushPatches, signals]
+        )}
+      >
+        {children}
+      </SyncContext.Provider>
     </ConfigsContextRoot>
   );
 };

@@ -44,7 +44,7 @@ const InfoPage = ({
 
         <Input
           value={task.name}
-          onInput={({ currentTarget: { value } }) => {
+          onChange={({ currentTarget: { value } }) => {
             setTask((task) => ({ ...task, name: value }));
           }}
           flex={1}
@@ -63,7 +63,7 @@ const InfoPage = ({
         ref={descriptionRef}
         variant="unstyled"
         value={task.description || ""}
-        onInput={({ currentTarget: { value } }) => {
+        onChange={({ currentTarget: { value } }) => {
           setTask((task) => ({ ...task, description: value }));
         }}
         color="gray.500"

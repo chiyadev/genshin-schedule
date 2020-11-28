@@ -20,7 +20,7 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: (value: 
         size="sm"
         min={1}
         value={displayValue}
-        onInput={({ currentTarget: { valueAsNumber } }) => {
+        onChange={({ currentTarget: { valueAsNumber } }) => {
           setValue((valueAsNumber || 1) * getTimeUnitMs(unit));
         }}
         flex={1}

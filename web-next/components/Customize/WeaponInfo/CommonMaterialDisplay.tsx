@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useState } from "react";
 import { CommonMaterial, CommonMaterialWiki } from "../../../db/commonMaterials";
 import { FaPlus } from "react-icons/fa";
 import { Button, chakra, HStack, Icon, Link, VStack } from "@chakra-ui/react";
@@ -8,6 +8,7 @@ import { Weapon } from "../../../db/weapons";
 
 const CommonMaterialDisplay = ({ weapon, material }: { weapon: Weapon; material: CommonMaterial }) => {
   const createTask = useTaskCreator();
+  const [create, setCreate] = useState(false);
 
   return (
     <VStack align="start" spacing={4}>
@@ -31,8 +32,15 @@ const CommonMaterialDisplay = ({ weapon, material }: { weapon: Weapon; material:
       <Button
         size="sm"
         leftIcon={<Icon as={FaPlus} />}
+        isLoading={create}
         onClick={async () => {
-          await createTask(material, `ascension material for ${weapon.name}`);
+          setCreate(true);
+
+          try {
+            await createTask(material, `ascension material for ${weapon.name}`);
+          } finally {
+            setCreate(false);
+          }
         }}
       >
         Add as task

@@ -17,7 +17,7 @@ const Search = () => {
           autoFocus
           bg="white"
           value={value}
-          onInput={({ currentTarget: { value } }) => setValue(value)}
+          onChange={({ currentTarget: { value } }) => setValue(value)}
           placeholder="Search characters, weapons and artifacts."
         />
       </InputGroup>

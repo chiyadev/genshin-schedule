@@ -19,7 +19,7 @@ const NoteInput = ({ weapon }: { weapon: Weapon }) => {
         w="full"
         placeholder="e.g. Lumine's weapon"
         value={notes[weapon.name] || ""}
-        onInput={({ currentTarget: { value } }) => {
+        onChange={({ currentTarget: { value } }) => {
           setNotes((notes) => ({
             ...notes,
             [weapon.name]: value,

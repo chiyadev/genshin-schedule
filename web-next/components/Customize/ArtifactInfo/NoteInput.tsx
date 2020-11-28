@@ -19,7 +19,7 @@ const NoteInput = ({ artifact }: { artifact: Artifact }) => {
         w="full"
         placeholder="e.g. Lumine's artifact"
         value={notes[artifact.name] || ""}
-        onInput={({ currentTarget: { value } }) => {
+        onChange={({ currentTarget: { value } }) => {
           setNotes((notes) => ({
             ...notes,
             [artifact.name]: value,

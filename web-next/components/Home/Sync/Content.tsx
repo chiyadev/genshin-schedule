@@ -26,7 +26,7 @@ const Content = () => {
           placeholder="Username"
           autoComplete="username"
           value={username}
-          onInput={({ currentTarget: { value } }) => setUsername(value)}
+          onChange={({ currentTarget: { value } }) => setUsername(value)}
         />
       </FormControl>
 
@@ -39,7 +39,7 @@ const Content = () => {
           placeholder="Password"
           autoComplete="current-password"
           value={password}
-          onInput={({ currentTarget: { value } }) => setPassword(value)}
+          onChange={({ currentTarget: { value } }) => setPassword(value)}
         />
       </FormControl>
 

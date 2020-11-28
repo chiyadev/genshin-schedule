@@ -70,7 +70,7 @@ const Resin = () => {
             cursor={focus ? undefined : "pointer"}
             value={roundResin(current).toString()}
             onClick={() => resinInput.current?.select()}
-            onInput={({ currentTarget: { valueAsNumber } }) => {
+            onChange={({ currentTarget: { valueAsNumber } }) => {
               setResin({
                 value: roundResin(valueAsNumber || 0),
                 time: date.getTime(),

@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useState } from "react";
 import { Character } from "../../../db/characters";
 import { CommonMaterial, CommonMaterialWiki } from "../../../db/commonMaterials";
 import { FaPlus } from "react-icons/fa";
@@ -8,6 +8,7 @@ import { useTaskCreator } from "../../../utils/tasks";
 
 const CommonMaterialDisplay = ({ character, material }: { character: Character; material: CommonMaterial }) => {
   const createTask = useTaskCreator();
+  const [create, setCreate] = useState(false);
 
   return (
     <VStack align="start" spacing={4}>
@@ -31,8 +32,15 @@ const CommonMaterialDisplay = ({ character, material }: { character: Character; 
       <Button
         size="sm"
         leftIcon={<Icon as={FaPlus} />}
+        isLoading={create}
         onClick={async () => {
-          await createTask(material, `ascension material for ${character.name}`);
+          setCreate(true);
+
+          try {
+            await createTask(material, `ascension material for ${character.name}`);
+          } finally {
+            setCreate(false);
+          }
         }}
       >
         Add as task
