@@ -28,7 +28,9 @@ namespace GenshinSchedule.SyncServer
 
         static readonly AuthenticationTicket _successTicket = new AuthenticationTicket(new ClaimsPrincipal(new ClaimsIdentity(null, SchemeName)), SchemeName);
 
+#pragma warning disable 1998
         protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
+#pragma warning restore 1998
         {
             try
             {
