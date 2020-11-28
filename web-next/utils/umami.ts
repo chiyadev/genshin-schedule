@@ -1,6 +1,6 @@
 // umami tracker typescript port: https://gist.github.com/phosphene47/81c3545b90c21e8d33be416a602f1388
 
-const connectionStr = process.env.REACT_APP_UMAMI_URL; // connection format "https://umami/websiteId"
+const connectionStr = process.env.NEXT_PUBLIC_UMAMI_URL; // connection format "https://umami/websiteId"
 let connection: undefined | { collectUrl: string; websiteId: string };
 
 if (typeof window !== "undefined" && connectionStr) {

@@ -41,7 +41,7 @@ const ArtifactInfo = ({ data, name }: Props) => {
         {artifact ? (
           <WhiteCard divide>
             <HStack spacing={2}>
-              <chakra.img alt={artifact.name} src={getAssetByName(artifact.name)} w={16} h={16} borderRadius="full" />
+              <chakra.img alt={artifact.name} src={getAssetByName(artifact.name)} w={16} h={16} objectFit="contain" />
 
               <div>
                 <chakra.div fontSize="xl" fontWeight="bold">

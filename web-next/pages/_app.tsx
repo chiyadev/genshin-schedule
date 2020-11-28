@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useEffect } from "react";
 import { AppProps } from "next/app";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import NProgress from "../components/NProgress";
@@ -8,14 +8,16 @@ import "../components/NProgress.css";
 import "leaflet/dist/leaflet.css";
 import { useScrollPreserver } from "../utils/scrollPreserver";
 import { loadPolyfills } from "../utils/polyfills";
+import { trackView } from "../utils/umami";
 
 loadPolyfills();
 
 const fallbackFonts =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps, router }: AppProps) {
   useScrollPreserver();
+  useEffect(() => trackView(router.asPath), [router]);
 
   return (
     <ChakraProvider

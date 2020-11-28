@@ -33,8 +33,8 @@ export type SyncResponse = {
   token: string;
 };
 
-export const PublicApiUrl = process.env.GS_API_PUBLIC || "https://genshin.chiya.dev/api/v1";
-export const InternalApiUrl = process.env.GS_API_INTERNAL || PublicApiUrl;
+export const PublicApiUrl = process.env.NEXT_PUBLIC_API_PUBLIC || "https://genshin.chiya.dev/api/v1";
+export const InternalApiUrl = process.env.NEXT_PUBLIC_API_INTERNAL || PublicApiUrl;
 
 export function createApiClient(ctx?: Pick<GetServerSidePropsContext, "req">): ApiClient {
   return new ApiClient(ctx?.req ? InternalApiUrl : PublicApiUrl, getAuthToken(ctx));
