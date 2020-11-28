@@ -1,4 +1,4 @@
-import { Button, chakra } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import React, { memo } from "react";
 import { ServerList, useConfig } from "../../../utils/configs";
 import { trackEvent } from "../../../utils/umami";

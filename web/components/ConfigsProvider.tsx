@@ -85,7 +85,7 @@ const LocalConfigsProvider = ({ children }: { children?: ReactNode }) => {
 
 const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; children?: ReactNode }) => {
   const [value, setValue] = useState(() => ({ ...DefaultConfigs, ...initial.data }));
-  const [sync, setSync] = useState(false);
+  const [, setSync] = useState(false);
 
   const lastValue = useRef(value);
   const patchQueue: Patch = useMemo(() => [], []);

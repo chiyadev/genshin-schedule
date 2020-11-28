@@ -6,14 +6,16 @@ executors:
     environment:
       DOCKER_IMAGE_WEB: r.chiya.dev/genshin-web
       DOCKER_IMAGE_SYNC: r.chiya.dev/genshin-sync
-      UMAMI_URL: https://a.chiya.dev/57a842aa-1d89-4c48-aaea-2b9b98b4e818
+      NEXT_PUBLIC_UMAMI_URL: https://a.chiya.dev/57a842aa-1d89-4c48-aaea-2b9b98b4e818
+      NEXT_PUBLIC_API_PUBLIC: https://genshin.chiya.dev/api/v1
+      NEXT_PUBLIC_API_INTERNAL: http://genshin-sync
 
 jobs:
   deploy-web:
     executor: default
     steps:
       - checkout
-      - run: docker build -t $DOCKER_IMAGE_WEB -f Dockerfile.web --build-arg UMAMI_URL .
+      - run: docker build -t $DOCKER_IMAGE_WEB -f Dockerfile.web --build-arg NEXT_PUBLIC_UMAMI_URL --build-arg NEXT_PUBLIC_API_PUBLIC --build-arg NEXT_PUBLIC_API_INTERNAL .
       - run: echo "$DOCKER_PASSWORD" | docker login $DOCKER_REGISTRY -u "$DOCKER_USERNAME" --password-stdin
       - run: docker push $DOCKER_IMAGE_WEB
 

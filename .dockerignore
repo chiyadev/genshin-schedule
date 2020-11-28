@@ -1,0 +1,6 @@
+/web/node_modules
+/web/build
+/web/.next
+
+/sync/bin
+/sync/obj

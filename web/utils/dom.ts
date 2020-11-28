@@ -1,12 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { CSSObject } from "@emotion/react";
 
 export function useMeasuredTextWidth(text: string, style: CSSObject) {
+  const [value, setValue] = useState<number>();
   const [update, setUpdate] = useState(0);
 
   useEffect(() => {
-    setUpdate((i) => i + 1);
-
     // attempt to fix https://github.com/chiyadev/genshin-schedule/issues/2
     if ("fonts" in document) {
       (document as any).fonts.ready.then(() => setUpdate((i) => i + 1));
@@ -18,20 +17,20 @@ export function useMeasuredTextWidth(text: string, style: CSSObject) {
     return () => clearInterval(interval);
   }, []);
 
-  return useMemo(() => {
-    if (typeof window !== "undefined") {
-      const span = document.createElement("span");
-      span.innerText = text;
+  useEffect(() => {
+    const span = document.createElement("span");
+    span.innerText = text;
 
-      for (const key of Object.keys(style)) {
-        (span.style as any)[key] = (style as any)[key];
-      }
-
-      document.body.appendChild(span);
-      const width = span.getBoundingClientRect().width;
-      document.body.removeChild(span);
-
-      return width;
+    for (const key of Object.keys(style)) {
+      (span.style as any)[key] = (style as any)[key];
     }
+
+    document.body.appendChild(span);
+    const { width } = span.getBoundingClientRect();
+    document.body.removeChild(span);
+
+    setValue(width);
   }, [update, text, style]);
+
+  return value;
 }
