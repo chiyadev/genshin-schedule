@@ -9,6 +9,7 @@ import Anemo from "./game/Anemo.png";
 import Apple from "./game/Apple.png";
 import AquilaFavonia from "./game/Aquila Favonia.png";
 import ArchaicPetra from "./game/Archaic Petra.png";
+import Bamboo from "./game/Bamboo.png";
 import Barbara from "./game/Barbara.png";
 import BasaltPillar from "./game/Basalt Pillar.png";
 import BeginnersProtector from "./game/Beginner's Protector.png";
@@ -24,6 +25,7 @@ import BloodtaintedGreatsword from "./game/Bloodtainted Greatsword.png";
 import BorealWolfsMilkTooth from "./game/Boreal Wolf's Milk Tooth.png";
 import BraveHeart from "./game/Brave Heart.png";
 import BrilliantDiamondSliver from "./game/Brilliant Diamond Sliver.png";
+import ButterflyWings from "./game/Butterfly Wings.png";
 import Cabbage from "./game/Cabbage.png";
 import CallaLily from "./game/Calla Lily.png";
 import Carrot from "./game/Carrot.png";
@@ -39,6 +41,7 @@ import CrescentPike from "./game/Crescent Pike.png";
 import CrimsonWitchofFlames from "./game/Crimson Witch of Flames.png";
 import Cryo from "./game/Cryo.png";
 import CrystalChunk from "./game/Crystal Chunk.png";
+import CrystalCore from "./game/Crystal Core.png";
 import DamagedMask from "./game/Damaged Mask.png";
 import DandelionSeed from "./game/Dandelion Seed.png";
 import DarkIronSword from "./game/Dark Iron Sword.png";
@@ -69,8 +72,10 @@ import FineEnhancementOre from "./game/Fine Enhancement Ore.png";
 import FirmArrowhead from "./game/Firm Arrowhead.png";
 import Fischl from "./game/Fischl.png";
 import Fish from "./game/Fish.png";
+import FlamingFlowerStamen from "./game/Flaming Flower Stamen.png";
 import Fowl from "./game/Fowl.png";
 import FragileBoneShard from "./game/Fragile Bone Shard.png";
+import Frog from "./game/Frog.png";
 import Gambler from "./game/Gambler.png";
 import Geo from "./game/Geo.png";
 import GladiatorsFinale from "./game/Gladiator's Finale.png";
@@ -97,17 +102,22 @@ import Lavawalker from "./game/Lavawalker.png";
 import LightningPrism from "./game/Lightning Prism.png";
 import LionsRoar from "./game/Lion's Roar.png";
 import Lisa from "./game/Lisa.png";
+import LizardTail from "./game/Lizard Tail.png";
+import LoachPearl from "./game/Loach Pearl.png";
 import LostPrayertotheSacredWinds from "./game/Lost Prayer to the Sacred Winds.png";
 import LotusHead from "./game/Lotus Head.png";
 import LuckyDog from "./game/Lucky Dog.png";
+import LuminescentSpine from "./game/Luminescent Spine.png";
 import LuminousSandsfromGuyun from "./game/Luminous Sands from Guyun.png";
 import MagicGuide from "./game/Magic Guide.png";
+import MagicalCrystalChunk from "./game/Magical Crystal Chunk.png";
 import MaidenBeloved from "./game/Maiden Beloved.png";
 import MappaMare from "./game/Mappa Mare.png";
 import MartialArtist from "./game/Martial Artist.png";
 import Matsutake from "./game/Matsutake.png";
 import Messenger from "./game/Messenger.png";
 import Mint from "./game/Mint.png";
+import MistFlowerCorolla from "./game/Mist Flower Corolla.png";
 import MistGrassPollen from "./game/Mist Grass Pollen.png";
 import MistVeiledLeadElixir from "./game/Mist Veiled Lead Elixir.png";
 import Mona from "./game/Mona.png";
@@ -235,6 +245,7 @@ export {
   Apple,
   AquilaFavonia,
   ArchaicPetra,
+  Bamboo,
   Barbara,
   BasaltPillar,
   BeginnersProtector,
@@ -250,6 +261,7 @@ export {
   BorealWolfsMilkTooth,
   BraveHeart,
   BrilliantDiamondSliver,
+  ButterflyWings,
   Cabbage,
   CallaLily,
   Carrot,
@@ -265,6 +277,7 @@ export {
   CrimsonWitchofFlames,
   Cryo,
   CrystalChunk,
+  CrystalCore,
   DamagedMask,
   DandelionSeed,
   DarkIronSword,
@@ -295,8 +308,10 @@ export {
   FirmArrowhead,
   Fischl,
   Fish,
+  FlamingFlowerStamen,
   Fowl,
   FragileBoneShard,
+  Frog,
   Gambler,
   Geo,
   GladiatorsFinale,
@@ -323,17 +338,22 @@ export {
   LightningPrism,
   LionsRoar,
   Lisa,
+  LizardTail,
+  LoachPearl,
   LostPrayertotheSacredWinds,
   LotusHead,
   LuckyDog,
+  LuminescentSpine,
   LuminousSandsfromGuyun,
   MagicGuide,
+  MagicalCrystalChunk,
   MaidenBeloved,
   MappaMare,
   MartialArtist,
   Matsutake,
   Messenger,
   Mint,
+  MistFlowerCorolla,
   MistGrassPollen,
   MistVeiledLeadElixir,
   Mona,
@@ -463,6 +483,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Apple": return Apple;
     case "Aquila Favonia": return AquilaFavonia;
     case "Archaic Petra": return ArchaicPetra;
+    case "Bamboo": return Bamboo;
     case "Barbara": return Barbara;
     case "Basalt Pillar": return BasaltPillar;
     case "Beginner's Protector": return BeginnersProtector;
@@ -478,6 +499,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Boreal Wolf's Milk Tooth": return BorealWolfsMilkTooth;
     case "Brave Heart": return BraveHeart;
     case "Brilliant Diamond Sliver": return BrilliantDiamondSliver;
+    case "Butterfly Wings": return ButterflyWings;
     case "Cabbage": return Cabbage;
     case "Calla Lily": return CallaLily;
     case "Carrot": return Carrot;
@@ -493,6 +515,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Crimson Witch of Flames": return CrimsonWitchofFlames;
     case "Cryo": return Cryo;
     case "Crystal Chunk": return CrystalChunk;
+    case "Crystal Core": return CrystalCore;
     case "Damaged Mask": return DamagedMask;
     case "Dandelion Seed": return DandelionSeed;
     case "Dark Iron Sword": return DarkIronSword;
@@ -523,8 +546,10 @@ export function getAssetByName(name: string): string | undefined {
     case "Firm Arrowhead": return FirmArrowhead;
     case "Fischl": return Fischl;
     case "Fish": return Fish;
+    case "Flaming Flower Stamen": return FlamingFlowerStamen;
     case "Fowl": return Fowl;
     case "Fragile Bone Shard": return FragileBoneShard;
+    case "Frog": return Frog;
     case "Gambler": return Gambler;
     case "Geo": return Geo;
     case "Gladiator's Finale": return GladiatorsFinale;
@@ -551,17 +576,22 @@ export function getAssetByName(name: string): string | undefined {
     case "Lightning Prism": return LightningPrism;
     case "Lion's Roar": return LionsRoar;
     case "Lisa": return Lisa;
+    case "Lizard Tail": return LizardTail;
+    case "Loach Pearl": return LoachPearl;
     case "Lost Prayer to the Sacred Winds": return LostPrayertotheSacredWinds;
     case "Lotus Head": return LotusHead;
     case "Lucky Dog": return LuckyDog;
+    case "Luminescent Spine": return LuminescentSpine;
     case "Luminous Sands from Guyun": return LuminousSandsfromGuyun;
     case "Magic Guide": return MagicGuide;
+    case "Magical Crystal Chunk": return MagicalCrystalChunk;
     case "Maiden Beloved": return MaidenBeloved;
     case "Mappa Mare": return MappaMare;
     case "Martial Artist": return MartialArtist;
     case "Matsutake": return Matsutake;
     case "Messenger": return Messenger;
     case "Mint": return Mint;
+    case "Mist Flower Corolla": return MistFlowerCorolla;
     case "Mist Grass Pollen": return MistGrassPollen;
     case "Mist Veiled Lead Elixir": return MistVeiledLeadElixir;
     case "Mona": return Mona;

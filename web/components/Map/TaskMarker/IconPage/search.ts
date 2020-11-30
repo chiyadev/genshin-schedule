@@ -20,6 +20,7 @@ addIcons("ore", [
   { name: "Iron Chunk", timer: 24 },
   { name: "White Iron Chunk", timer: 48 },
   { name: "Crystal Chunk", timer: 72 },
+  { name: "Magical Crystal Chunk", timer: "reset" },
   { name: "Electro Crystal", timer: 48 },
   { name: "Cor Lapis", timer: 48 },
   { name: "Noctilucous Jade", timer: 48 },
@@ -38,13 +39,13 @@ addIcons("weapon enhancement material", [
 ]);
 
 addIcons("character ascension material", [
+  { name: "Agnidus Agate Sliver" },
   { name: "Brilliant Diamond Sliver" },
-  { name: "Vayuda Turquoise Sliver" },
+  { name: "Prithiva Topaz Sliver" },
   { name: "Shivada Jade Sliver" },
   { name: "Vajrada Amethyst Sliver" },
-  { name: "Prithiva Topaz Sliver" },
   { name: "Varunada Lazurite Sliver" },
-  { name: "Agnidus Agate Sliver" },
+  { name: "Vayuda Turquoise Sliver" },
 ]);
 
 addIcons(
@@ -64,13 +65,14 @@ addIcons("local specialty mondstadt", [
 ]);
 
 addIcons("local specialty liyue", [
+  { name: "Bamboo", timer: 48 },
+  { name: "Glaze Lily", timer: 48 },
+  { name: "Horsetail", timer: 48 },
   { name: "Jueyun Chili", timer: 48 },
   { name: "Qingxin", timer: 48 },
   { name: "Silk Flower", timer: 48 },
   { name: "Starconch", timer: 48 },
   { name: "Violetgrass", timer: 48 },
-  { name: "Glaze Lily", timer: 48 },
-  { name: "Horsetail", timer: 48 },
 ]);
 
 addIcons("cooking ingredient", [
@@ -85,19 +87,30 @@ addIcons("cooking ingredient", [
   { name: "Fowl", timer: 24 },
   { name: "Lotus Head", timer: 24 },
   { name: "Matsutake", timer: 24 },
-  { name: "Mushroom", timer: 24 },
   { name: "Mint", timer: 24 },
+  { name: "Mushroom", timer: 24 },
   { name: "Onion", timer: 24 },
   { name: "Pinecone", timer: 24 },
   { name: "Potato", timer: 24 },
   { name: "Radish", timer: 24 },
   { name: "Raw Meat", timer: 24 },
+  { name: "Shrimp Meat", timer: 24 },
   { name: "Snapdragon", timer: 24 },
   { name: "Sunsettia", timer: 24 },
   { name: "Sweet Flower", timer: 24 },
-  { name: "Shrimp Meat", timer: 24 },
   { name: "Tomato", timer: 24 },
   { name: "Wheat", timer: 24 },
+]);
+
+addIcons("material", [
+  { name: "Butterfly Wings", timer: 24 },
+  { name: "Crystal Core", timer: 24 },
+  { name: "Flaming Flower Stamen", timer: 24 },
+  { name: "Frog", timer: 24 },
+  { name: "Lizard Tail", timer: 24 },
+  { name: "Loach Pearl", timer: 24 },
+  { name: "Luminescent Spine", timer: 24 },
+  { name: "Mist Flower Corolla", timer: 24 },
 ]);
 
 addIcons(
