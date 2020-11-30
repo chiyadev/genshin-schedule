@@ -3,118 +3,104 @@ import { CommonMaterials } from "../../../../db/commonMaterials";
 import { Artifacts } from "../../../../db/artifacts";
 import { Task } from "../../../../utils/configs";
 
+export const KnownResourceTimers: Record<string, Task["refreshTime"]> = {};
 export const IconSearch = new MemorySearch<string>();
 export const Icons: string[] = [];
 
-function addIcons(type: string, names: string[]) {
-  for (const name of names) {
+function addIcons(type: string, items: { name: string; timer?: Task["refreshTime"] }[]) {
+  for (const { name, timer } of items) {
     Icons.push(name);
     IconSearch.add(name, name);
     type && IconSearch.add(type, name);
+    timer && (KnownResourceTimers[name] = typeof timer === "number" ? timer * 3600000 : timer);
   }
 }
 
 addIcons("ore", [
-  "Iron Chunk",
-  "White Iron Chunk",
-  "Crystal Chunk",
-  "Electro Crystal",
-  "Cor Lapis",
-  "Noctilucous Jade",
+  { name: "Iron Chunk", timer: 24 },
+  { name: "White Iron Chunk", timer: 48 },
+  { name: "Crystal Chunk", timer: 72 },
+  { name: "Electro Crystal", timer: 48 },
+  { name: "Cor Lapis", timer: 48 },
+  { name: "Noctilucous Jade", timer: 48 },
 ]);
 
-addIcons("character exp material", ["Wanderer's Advice", "Adventurer's Experience", "Hero's Wit"]);
+addIcons("character exp material", [
+  { name: "Wanderer's Advice" },
+  { name: "Adventurer's Experience" },
+  { name: "Hero's Wit" },
+]);
 
-addIcons("weapon enhancement material", ["Enhancement Ore", "Fine Enhancement Ore", "Mystic Enhancement Ore"]);
+addIcons("weapon enhancement material", [
+  { name: "Enhancement Ore" },
+  { name: "Fine Enhancement Ore" },
+  { name: "Mystic Enhancement Ore" },
+]);
 
 addIcons("character ascension material", [
-  "Brilliant Diamond Sliver",
-  "Vayuda Turquoise Sliver",
-  "Shivada Jade Sliver",
-  "Vajrada Amethyst Sliver",
-  "Prithiva Topaz Sliver",
-  "Varunada Lazurite Sliver",
-  "Agnidus Agate Sliver",
+  { name: "Brilliant Diamond Sliver" },
+  { name: "Vayuda Turquoise Sliver" },
+  { name: "Shivada Jade Sliver" },
+  { name: "Vajrada Amethyst Sliver" },
+  { name: "Prithiva Topaz Sliver" },
+  { name: "Varunada Lazurite Sliver" },
+  { name: "Agnidus Agate Sliver" },
 ]);
 
 addIcons(
   "common ascension material",
-  CommonMaterials.map((material) => material.item)
+  CommonMaterials.map((material) => ({ name: material.item, timer: "reset" }))
 );
 
 addIcons("local specialty mondstadt", [
-  "Calla Lily",
-  "Cecilia",
-  "Dandelion Seed",
-  "Philanemo Mushroom",
-  "Small Lamp Grass",
-  "Valberry",
-  "Windwheel Aster",
-  "Wolfhook",
+  { name: "Calla Lily", timer: 48 },
+  { name: "Cecilia", timer: 48 },
+  { name: "Dandelion Seed", timer: 48 },
+  { name: "Philanemo Mushroom", timer: 48 },
+  { name: "Small Lamp Grass", timer: 48 },
+  { name: "Valberry", timer: 48 },
+  { name: "Windwheel Aster", timer: 48 },
+  { name: "Wolfhook", timer: 48 },
 ]);
 
 addIcons("local specialty liyue", [
-  "Jueyun Chili",
-  "Qingxin",
-  "Silk Flower",
-  "Starconch",
-  "Violetgrass",
-  "Glaze Lily",
-  "Horsetail",
+  { name: "Jueyun Chili", timer: 48 },
+  { name: "Qingxin", timer: 48 },
+  { name: "Silk Flower", timer: 48 },
+  { name: "Starconch", timer: 48 },
+  { name: "Violetgrass", timer: 48 },
+  { name: "Glaze Lily", timer: 48 },
+  { name: "Horsetail", timer: 48 },
 ]);
 
 addIcons("cooking ingredient", [
-  "Almond",
-  "Apple",
-  "Berry",
-  "Bird Egg",
-  "Cabbage",
-  "Carrot",
-  "Crab",
-  "Fish",
-  "Fowl",
-  "Lotus Head",
-  "Matsutake",
-  "Mushroom",
-  "Mint",
-  "Onion",
-  "Pinecone",
-  "Potato",
-  "Radish",
-  "Raw Meat",
-  "Snapdragon",
-  "Sunsettia",
-  "Sweet Flower",
-  "Shrimp Meat",
-  "Tomato",
-  "Wheat",
+  { name: "Almond", timer: 24 },
+  { name: "Apple", timer: 24 },
+  { name: "Berry", timer: 24 },
+  { name: "Bird Egg", timer: 24 },
+  { name: "Cabbage", timer: 24 },
+  { name: "Carrot", timer: 24 },
+  { name: "Crab", timer: 24 },
+  { name: "Fish", timer: 24 },
+  { name: "Fowl", timer: 24 },
+  { name: "Lotus Head", timer: 24 },
+  { name: "Matsutake", timer: 24 },
+  { name: "Mushroom", timer: 24 },
+  { name: "Mint", timer: 24 },
+  { name: "Onion", timer: 24 },
+  { name: "Pinecone", timer: 24 },
+  { name: "Potato", timer: 24 },
+  { name: "Radish", timer: 24 },
+  { name: "Raw Meat", timer: 24 },
+  { name: "Snapdragon", timer: 24 },
+  { name: "Sunsettia", timer: 24 },
+  { name: "Sweet Flower", timer: 24 },
+  { name: "Shrimp Meat", timer: 24 },
+  { name: "Tomato", timer: 24 },
+  { name: "Wheat", timer: 24 },
 ]);
 
 addIcons(
   "artifact",
-  Artifacts.map((artifact) => artifact.name)
+  Artifacts.map((artifact) => ({ name: artifact.name, timer: 24 }))
 );
-
-export const KnownResourceTimers: Record<string, Task["refreshTime"]> = {
-  "Iron Chunk": 24,
-  "White Iron Chunk": 48,
-  "Crystal Chunk": 72,
-  "Electro Crystal": 48,
-  "Cor Lapis": 72,
-  "Noctilucous Jade": 48,
-  "Calla Lily": 48,
-  Cecilia: 48,
-  "Dandelion Seed": 48,
-  "Philanemo Mushroom": 48,
-  "Small Lamp Grass": 48,
-  Valberry: 48,
-  "Windwheel Aster": 48,
-  Wolfhook: 48,
-  "Glaze Lily": 48,
-  "Jueyun Chili": 48,
-  Qingxin: 48,
-  "Silk Flower": 48,
-  Starconch: 48,
-  Violetgrass: 48,
-  Horsetail: 48, // source: https://www.reddit.com/r/Genshin_Impact/comments/jf7zhh/i_made_an_interactive_website_for_daily_domain/ga41wk5/?context=3
-};

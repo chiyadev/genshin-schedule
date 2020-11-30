@@ -85,7 +85,7 @@ const InfoPage = ({
 
                 return {
                   ...task,
-                  refreshTime: typeof timer === "number" ? timer * 3600000 : DefaultConfigs.mapCreateTask.refreshTime,
+                  refreshTime: typeof timer === "number" ? timer : DefaultConfigs.mapCreateTask.refreshTime,
                 };
               });
             }}
