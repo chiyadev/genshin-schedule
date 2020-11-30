@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { useConfig } from "../../../utils/configs";
-import { useServerDate } from "../../../utils/time";
+import { getServerNextResetDate, useServerDate } from "../../../utils/time";
 import { FaCheck } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { Button, Icon } from "@chakra-ui/react";
@@ -22,7 +22,10 @@ const MarkAllDone = () => {
             if (task.visible && task.dueTime <= date.getTime()) {
               return {
                 ...task,
-                dueTime: date.getTime() + task.refreshTime,
+                dueTime:
+                  task.refreshTime === "reset"
+                    ? getServerNextResetDate(date).getTime()
+                    : date.getTime() + task.refreshTime,
               };
             } else {
               return task;

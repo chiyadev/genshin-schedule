@@ -1,6 +1,6 @@
 import React, { Dispatch, memo, SetStateAction } from "react";
 import { Task } from "../../../utils/configs";
-import { useServerDate } from "../../../utils/time";
+import { getServerNextResetDate, useServerDate } from "../../../utils/time";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { useMap } from "react-leaflet";
@@ -21,7 +21,8 @@ const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateA
         onClick={() => {
           setTask((task) => ({
             ...task,
-            dueTime: date.getTime() + task.refreshTime,
+            dueTime:
+              task.refreshTime === "reset" ? getServerNextResetDate(date).getTime() : date.getTime() + task.refreshTime,
           }));
 
           map.closePopup();

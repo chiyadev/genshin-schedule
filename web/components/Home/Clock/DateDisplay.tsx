@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { getServerDayOfWeek, getServerNextReset, useServerDate } from "../../../utils/time";
+import { getServerDayOfWeek, getServerNextResetDate, useServerDate } from "../../../utils/time";
 import { getResinRecharge, ResinCap, roundResin } from "../../../db/resins";
 import { chakra } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/configs";
@@ -8,10 +8,10 @@ const DateDisplay = () => {
   const date = useServerDate();
   const [offsetDays] = useConfig("offsetDays");
 
-  const resetDate = getServerNextReset(date);
+  const resetDate = getServerNextResetDate(date);
   const resetTime = resetDate.getTime() - date.getTime();
   const resetHours = Math.floor(resetTime / 3600000);
-  const resetMinutes = Math.round(resetTime / 60000);
+  const resetMinutes = Math.floor(resetTime / 60000);
   const resetResins = roundResin(getResinRecharge(resetTime));
 
   return (

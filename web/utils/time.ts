@@ -47,6 +47,7 @@ export function useServerDate(frequency = 100) {
       break;
 
     case "Asia":
+    case "TW, HK, MO":
       offsetHours = 8;
       break;
   }
@@ -56,12 +57,12 @@ export function useServerDate(frequency = 100) {
 
 export const ServerResetHour = 4;
 
-export function getServerNextReset(serverDate: Date) {
+export function getServerNextResetDate(serverDate: Date) {
   return new Date(
     serverDate.getFullYear(),
     serverDate.getMonth(),
     serverDate.getDate() + (serverDate.getHours() < ServerResetHour ? 0 : 1),
-    4 // 4AM
+    ServerResetHour
   );
 }
 

@@ -1,11 +1,13 @@
 import React, { Dispatch, memo, SetStateAction, useEffect, useRef, useState } from "react";
-import { Task } from "../../../../utils/configs";
+import { DefaultConfigs, Task } from "../../../../utils/configs";
 import { PopupPage } from "../index";
 import IntervalPicker from "./IntervalPicker";
 import DueText from "./DueText";
 import HideCheck from "./HideCheck";
 import { chakra, HStack, Input, Textarea, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../../assets";
+import IntervalResetCheck from "./IntervalResetCheck";
+import { KnownResourceTimers } from "../IconPage/search";
 
 const InfoPage = ({
   task,
@@ -74,16 +76,38 @@ const InfoPage = ({
       />
 
       <VStack align="stretch" spacing={1}>
-        <IntervalPicker
-          value={task.refreshTime}
-          setValue={(value) => {
-            setTask((task) => ({ ...task, refreshTime: value }));
-          }}
-        />
+        {task.refreshTime === "reset" ? (
+          <IntervalResetCheck
+            value
+            setValue={() => {
+              setTask((task) => {
+                const timer = KnownResourceTimers[task.icon];
+
+                return {
+                  ...task,
+                  refreshTime: typeof timer === "number" ? timer * 3600000 : DefaultConfigs.mapCreateTask.refreshTime,
+                };
+              });
+            }}
+          />
+        ) : (
+          <IntervalPicker
+            value={task.refreshTime}
+            setValue={(value) => {
+              setTask((task) => ({ ...task, refreshTime: value }));
+            }}
+          />
+        )}
 
         {showDue && (
           <>
-            <HideCheck task={task} setTask={setTask} />
+            <HideCheck
+              value={!task.visible}
+              setValue={(v) => {
+                setTask((task) => ({ ...task, visible: !v }));
+              }}
+            />
+
             <DueText task={task} />
           </>
         )}

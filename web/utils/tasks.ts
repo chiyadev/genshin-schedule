@@ -15,7 +15,7 @@ export function useDueTasks() {
         const icon = a.icon.localeCompare(b.icon);
         if (icon) return icon;
 
-        return a.dueTime + a.refreshTime - b.dueTime - b.refreshTime;
+        return a.dueTime - b.dueTime;
       });
   }, [date, tasks]);
 }

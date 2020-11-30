@@ -1,7 +1,7 @@
 import { FaCheck } from "react-icons/fa";
 import React, { Dispatch, memo, SetStateAction } from "react";
 import { Task } from "../../utils/configs";
-import { useServerDate } from "../../utils/time";
+import { getServerNextResetDate, useServerDate } from "../../utils/time";
 import { trackEvent } from "../../utils/umami";
 import { Icon, IconButton } from "@chakra-ui/react";
 
@@ -19,7 +19,8 @@ const DoneButton = ({ setTask }: { setTask: Dispatch<SetStateAction<Task>> }) =>
       onClick={() => {
         setTask((task) => ({
           ...task,
-          dueTime: date.getTime() + task.refreshTime,
+          dueTime:
+            task.refreshTime === "reset" ? getServerNextResetDate(date).getTime() : date.getTime() + task.refreshTime,
         }));
 
         trackEvent("taskList", "taskDone");

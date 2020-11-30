@@ -1,6 +1,7 @@
 import { MemorySearch } from "../../../../utils/memorySearch";
 import { CommonMaterials } from "../../../../db/commonMaterials";
 import { Artifacts } from "../../../../db/artifacts";
+import { Task } from "../../../../utils/configs";
 
 export const IconSearch = new MemorySearch<string>();
 export const Icons: string[] = [];
@@ -94,7 +95,7 @@ addIcons(
   Artifacts.map((artifact) => artifact.name)
 );
 
-export const KnownResourceTimers: { [key: string]: number | undefined } = {
+export const KnownResourceTimers: Record<string, Task["refreshTime"]> = {
   "Iron Chunk": 24,
   "White Iron Chunk": 48,
   "Crystal Chunk": 72,

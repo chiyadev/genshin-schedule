@@ -1,12 +1,13 @@
-import React, { memo, useRef, useState } from "react";
+import React, { Dispatch, memo, useRef, useState } from "react";
 import { getBestTimeUnit, getTimeUnitMs, TimeUnit, TimeUnits } from "../../../../utils/time";
 import { FaSyncAlt } from "react-icons/fa";
 import { chakra, HStack, Icon, Input, Select } from "@chakra-ui/react";
+import { Task } from "../../../../utils/configs";
 
-const IntervalPicker = ({ value, setValue }: { value: number; setValue: (value: number) => void }) => {
+const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch<Task["refreshTime"]> }) => {
   const ref = useRef<HTMLInputElement>(null);
   const [unit, setUnit] = useState<TimeUnit>(() => getBestTimeUnit(value));
-  const displayValue = Math.round(value / getTimeUnitMs(unit));
+  const displayValue = Math.floor(value / getTimeUnitMs(unit));
 
   return (
     <HStack fontSize="sm" spacing={2}>
@@ -36,7 +37,17 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: (value: 
         w={20}
         h={4}
         value={unit}
-        onChange={({ currentTarget: { value } }) => setUnit(value as TimeUnit)}
+        onChange={({ currentTarget: { value } }) => {
+          switch (value) {
+            case "reset":
+              setValue("reset");
+              break;
+
+            default:
+              setUnit(value as TimeUnit);
+              break;
+          }
+        }}
       >
         {TimeUnits.map((unit) => (
           <option key={unit} value={unit}>
@@ -44,6 +55,8 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: (value: 
             {displayValue !== 1 && "s"}
           </option>
         ))}
+
+        <option value="reset">server reset (4AM)</option>
       </Select>
     </HStack>
   );

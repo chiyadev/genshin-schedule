@@ -76,7 +76,7 @@ const IconPage = ({
                       ...task,
                       name: icon,
                       icon,
-                      refreshTime: timer ? timer * 3600000 : task.refreshTime,
+                      refreshTime: typeof timer === "number" ? timer * 3600000 : timer || task.refreshTime,
                     }));
 
                     setPage("info");

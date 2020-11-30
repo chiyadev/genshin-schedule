@@ -15,7 +15,7 @@ import { MultiMap } from "./multiMap";
 type MapLocation = { lat: number; lng: number };
 
 export type Configs = {
-  server: "America" | "Europe" | "Asia";
+  server: "America" | "Europe" | "Asia" | "TW, HK, MO";
   offsetDays: number;
   resin: {
     value: number;
@@ -48,7 +48,7 @@ export type Task = {
   visible: boolean;
   location: MapLocation;
   dueTime: number;
-  refreshTime: number;
+  refreshTime: number | "reset";
 };
 
 const defaultMapCenter = {

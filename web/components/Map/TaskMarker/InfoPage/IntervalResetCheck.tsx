@@ -1,18 +1,18 @@
 import React, { Dispatch, memo } from "react";
-import { FaEye } from "react-icons/fa";
+import { FaSyncAlt } from "react-icons/fa";
 import { trackEvent } from "../../../../utils/umami";
 import { useMap } from "react-leaflet";
 import { Checkbox, HStack, Icon, Spacer } from "@chakra-ui/react";
 
-const HideCheck = ({ value, setValue }: { value: boolean; setValue: Dispatch<boolean> }) => {
+const IntervalResetCheck = ({ value, setValue }: { value: boolean; setValue: Dispatch<boolean> }) => {
   const map = useMap();
 
   return (
     <HStack spacing={2}>
-      <Icon as={FaEye} />
+      <Icon as={FaSyncAlt} />
 
       <HStack as="label" spacing={2} cursor="pointer" flex={1}>
-        <div>Hide temporarily</div>
+        <div>Respawns on server reset (4AM)</div>
         <Spacer />
 
         <Checkbox
@@ -30,4 +30,4 @@ const HideCheck = ({ value, setValue }: { value: boolean; setValue: Dispatch<boo
   );
 };
 
-export default memo(HideCheck);
+export default memo(IntervalResetCheck);

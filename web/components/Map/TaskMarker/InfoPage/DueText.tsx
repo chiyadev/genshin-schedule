@@ -8,7 +8,7 @@ const DueText = ({ task }: { task: Task }) => {
   const date = useServerDate(60000);
   const delta = task.dueTime - date.getTime();
   const unit = getLargestTimeUnit(Math.abs(delta));
-  const displayValue = Math.round(delta / getTimeUnitMs(unit));
+  const displayValue = Math.floor(delta / getTimeUnitMs(unit));
 
   return (
     <HStack fontSize="sm" color={displayValue <= 0 ? "red.500" : undefined} spacing={2}>
