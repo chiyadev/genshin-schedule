@@ -49,6 +49,7 @@ export function setAuthToken(ctx?: Pick<GetServerSidePropsContext, "res">, token
     setCookie(ctx, "token", token, {
       sameSite: "strict",
       secure: window.location.protocol === "https:",
+      expires: new Date(2100, 1, 1),
     });
   } else {
     destroyCookie(ctx, "token");
