@@ -221,6 +221,22 @@ export const Diona: Character = {
   commonMaterials: [HilichurlArrowhead],
 };
 
+export const Zhongli: Character = {
+  type: "Character",
+  name: "Zhongli",
+  wiki: "https://genshin-impact.fandom.com/wiki/Zhongli",
+  talentMaterials: [Gold],
+  commonMaterials: [Slime],
+};
+
+export const Xinyan: Character = {
+  type: "Character",
+  name: "Xinyan",
+  wiki: "https://genshin-impact.fandom.com/wiki/Xinyan",
+  talentMaterials: [Gold],
+  commonMaterials: [TreasureHoarderInsignia],
+};
+
 export const Characters = [
   //TravelerAnemo,
   //TravelerGeo,
@@ -247,4 +263,6 @@ export const Characters = [
   Klee,
   Tartaglia,
   Diona,
+  Zhongli,
+  Xinyan,
 ];

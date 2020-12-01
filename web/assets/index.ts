@@ -233,6 +233,8 @@ import WolfsGravestone from "./game/Wolf's Gravestone.png";
 import Wolfhook from "./game/Wolfhook.png";
 import Xiangling from "./game/Xiangling.png";
 import Xingqiu from "./game/Xingqiu.png";
+import Xinyan from "./game/Xinyan.png";
+import Zhongli from "./game/Zhongli.png";
 
 export {
   AdventurersExperience,
@@ -469,6 +471,8 @@ export {
   Wolfhook,
   Xiangling,
   Xingqiu,
+  Xinyan,
+  Zhongli,
 };
 
 export function getAssetByName(name: string): string | undefined {
@@ -707,5 +711,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Wolfhook": return Wolfhook;
     case "Xiangling": return Xiangling;
     case "Xingqiu": return Xingqiu;
+    case "Xinyan": return Xinyan;
+    case "Zhongli": return Zhongli;
   }
 }
