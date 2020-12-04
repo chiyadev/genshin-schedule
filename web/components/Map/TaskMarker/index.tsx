@@ -8,6 +8,7 @@ import InfoPage from "./InfoPage";
 import IconPage from "./IconPage";
 import { getAssetByName } from "../../../assets";
 import { HStack } from "@chakra-ui/react";
+import OffsetWarning from "./OffsetWarning";
 
 export type PopupPage = "info" | "icon";
 export const PopupPages: PopupPage[] = ["info", "icon"];
@@ -39,6 +40,7 @@ const TaskMarker = ({
     });
   }, [task.icon]);
 
+  const [offset] = useConfig("offsetDays");
   const [focused, setFocused] = useConfig("mapFocusedTask");
   const isFocused = focused === task.id;
 
@@ -64,6 +66,8 @@ const TaskMarker = ({
           isFocused && setFocused(false);
         }}
       >
+        {!!offset && <OffsetWarning />}
+
         {useMemo(
           () =>
             page === "info" ? (

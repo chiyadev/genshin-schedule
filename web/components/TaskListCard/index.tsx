@@ -21,6 +21,14 @@ const TaskListCard = ({ onItemClick }: { onItemClick?: (task: Task) => void }) =
     }
   }, [focused, setFocused, tasks]);
 
+  const focusPrevious = useCallback(() => {
+    if (focused) {
+      setFocused(tasks[(tasks.length + tasks.findIndex((task) => task.id === focused) - 1) % tasks.length]);
+    } else {
+      setFocused(tasks[0]);
+    }
+  }, [focused, setFocused, tasks]);
+
   const setFocusedTask = useCallback(
     (newTask: SetStateAction<Task>) => {
       setTasks((tasks) => {
@@ -42,7 +50,7 @@ const TaskListCard = ({ onItemClick }: { onItemClick?: (task: Task) => void }) =
 
   const setFocusedDone = useTaskDoneSetter(setFocusedTask);
 
-  const toggleDone = useCallback(() => {
+  const focusedDone = useCallback(() => {
     if (focused) {
       setFocusedDone(true);
       focusNext();
@@ -50,7 +58,9 @@ const TaskListCard = ({ onItemClick }: { onItemClick?: (task: Task) => void }) =
   }, [setFocusedDone, focused, focusNext]);
 
   useHotkeys("n", focusNext, [focusNext]);
-  useHotkeys("d", toggleDone, [toggleDone]);
+  useHotkeys("shift+n", focusPrevious, [focusPrevious]);
+
+  useHotkeys("d", focusedDone, [focusedDone]);
 
   return (
     <WhiteCard divide>
