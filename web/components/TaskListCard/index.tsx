@@ -4,6 +4,7 @@ import { useDueTasks, useTaskDoneSetter, useTaskFocusSetter, useTaskSetters } fr
 import Item from "./Item";
 import { Task, useConfig } from "../../utils/configs";
 import { useHotkeys } from "react-hotkeys-hook";
+import { trackEvent } from "../../utils/umami";
 
 const TaskListCard = ({ onItemClick }: { onItemClick?: (task: Task) => void }) => {
   const tasks = useDueTasks();
@@ -57,10 +58,32 @@ const TaskListCard = ({ onItemClick }: { onItemClick?: (task: Task) => void }) =
     }
   }, [setFocusedDone, focused, focusNext]);
 
-  useHotkeys("n", focusNext, [focusNext]);
-  useHotkeys("shift+n", focusPrevious, [focusPrevious]);
+  useHotkeys(
+    "n",
+    () => {
+      focusNext();
+      trackEvent("taskList", "taskFocusNext");
+    },
+    [focusNext]
+  );
 
-  useHotkeys("d", focusedDone, [focusedDone]);
+  useHotkeys(
+    "shift+n",
+    () => {
+      focusPrevious();
+      trackEvent("taskList", "taskFocusPrevious");
+    },
+    [focusPrevious]
+  );
+
+  useHotkeys(
+    "d",
+    () => {
+      focusedDone();
+      trackEvent("taskList", "taskDoneNext");
+    },
+    [focusedDone]
+  );
 
   return (
     <WhiteCard divide>
