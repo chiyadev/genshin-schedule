@@ -14,7 +14,7 @@ You may use the provided Dockerfiles ([web](Dockerfile.web) and [sync](Dockerfil
 
 ### Web Frontend
 
-Frontend was bootstrapped using [create-react-app](https://github.com/facebook/create-react-app).
+Frontend was bootstrapped using [next.js](https://github.com/vercel/next.js/).
 
 Prerequisites:
 
@@ -24,7 +24,7 @@ Prerequisites:
 Steps:
 
 1. Clone repo
-2. `cd web && yarn && yarn start`
+2. `cd web && yarn && yarn dev`
 
 ### Sync Backend
 
@@ -43,7 +43,7 @@ Steps:
 
 ```json
 {
-  "Secret": "some random string",
+  "Secret": "some long and secure random secret string",
   "ConnectionStrings": {
     "SyncDbContext": "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=genshin;"
   }
