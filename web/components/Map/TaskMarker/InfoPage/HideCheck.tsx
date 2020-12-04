@@ -1,11 +1,11 @@
 import React, { Dispatch, memo } from "react";
 import { FaEye } from "react-icons/fa";
 import { trackEvent } from "../../../../utils/umami";
-import { useMap } from "react-leaflet";
 import { Checkbox, HStack, Icon, Spacer } from "@chakra-ui/react";
+import { useTaskFocusSetter } from "../../../../utils/tasks";
 
 const HideCheck = ({ value, setValue }: { value: boolean; setValue: Dispatch<boolean> }) => {
-  const map = useMap();
+  const setFocused = useTaskFocusSetter();
 
   return (
     <HStack spacing={2}>
@@ -21,7 +21,7 @@ const HideCheck = ({ value, setValue }: { value: boolean; setValue: Dispatch<boo
           onChange={({ currentTarget: { checked } }) => {
             setValue(checked);
 
-            checked && map.closePopup();
+            checked && setFocused();
             trackEvent("map", "taskToggleHide");
           }}
         />

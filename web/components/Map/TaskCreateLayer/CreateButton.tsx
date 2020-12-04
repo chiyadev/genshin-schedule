@@ -8,7 +8,7 @@ import { Button, Icon } from "@chakra-ui/react";
 const CreateButton = () => {
   const [task, setTask] = useConfig("mapCreateTask");
   const [, setTasks] = useConfig("tasks");
-  const [, setFocusedTask] = useConfig("mapFocusedTask");
+  const [, setFocused] = useConfig("mapFocusedTask");
 
   const date = useServerDate(1000);
 
@@ -22,7 +22,7 @@ const CreateButton = () => {
       onClick={() => {
         setTask((task) => ({ ...task, visible: false }));
         setTasks((tasks) => [...tasks, { ...task, dueTime: date.getTime() }]);
-        setFocusedTask(false);
+        setFocused(false);
 
         trackEvent("map", "taskCreate");
       }}

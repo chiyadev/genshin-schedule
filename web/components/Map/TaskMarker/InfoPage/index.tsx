@@ -1,4 +1,4 @@
-import React, { Dispatch, memo, SetStateAction, useEffect, useRef, useState } from "react";
+import React, { Dispatch, memo, SetStateAction, useState } from "react";
 import { DefaultConfigs, Task } from "../../../../utils/configs";
 import { PopupPage } from "../index";
 import IntervalPicker from "./IntervalPicker";
@@ -13,23 +13,14 @@ const InfoPage = ({
   task,
   setTask,
   setPage,
-  autoFocus,
   showDue,
 }: {
   task: Task;
   setTask: Dispatch<SetStateAction<Task>>;
   setPage: Dispatch<SetStateAction<PopupPage>>;
-  autoFocus?: boolean;
   showDue?: boolean;
 }) => {
   const [nameFocus, setNameFocus] = useState(false);
-  const descriptionRef = useRef<HTMLTextAreaElement>(null);
-
-  useEffect(() => {
-    if (autoFocus) {
-      descriptionRef.current?.focus();
-    }
-  }, [autoFocus]);
 
   return (
     <VStack align="stretch" spacing={1}>
@@ -62,7 +53,6 @@ const InfoPage = ({
       </HStack>
 
       <Textarea
-        ref={descriptionRef}
         variant="unstyled"
         value={task.description || ""}
         onChange={({ currentTarget: { value } }) => {

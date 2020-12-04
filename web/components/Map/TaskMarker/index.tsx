@@ -39,14 +39,14 @@ const TaskMarker = ({
     });
   }, [task.icon]);
 
-  const [focusedTask, setFocusedTask] = useConfig("mapFocusedTask");
-  const focused = focusedTask === task.id;
+  const [focused, setFocused] = useConfig("mapFocusedTask");
+  const isFocused = focused === task.id;
 
   useEffect(() => {
-    if (alwaysOpen || focused) {
+    if (alwaysOpen || isFocused) {
       markerRef.current.openPopup();
     }
-  }, [task, focused, alwaysOpen]);
+  }, [alwaysOpen, isFocused]);
 
   const [page, setPage] = useState<PopupPage>(PopupPages[0]);
 
@@ -57,21 +57,21 @@ const TaskMarker = ({
         divide
         onOpen={() => {
           onOpen?.();
-          setFocusedTask(task.id);
+          setFocused(task.id);
         }}
         onClose={() => {
           onClose?.();
-          focused && setFocusedTask(false);
+          isFocused && setFocused(false);
         }}
       >
         {useMemo(
           () =>
             page === "info" ? (
-              <InfoPage task={task} setTask={setTask} setPage={setPage} autoFocus={alwaysOpen} showDue={showDue} />
+              <InfoPage task={task} setTask={setTask} setPage={setPage} showDue={showDue} />
             ) : page === "icon" ? (
               <IconPage setTask={setTask} setPage={setPage} />
             ) : null,
-          [alwaysOpen, page, setTask, showDue, task]
+          [page, setTask, showDue, task]
         )}
 
         <HStack fontSize="sm" spacing={2} justify={page === "info" ? "flex-end" : undefined}>

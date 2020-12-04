@@ -1,39 +1,63 @@
-import React, { Dispatch, memo, SetStateAction, useMemo } from "react";
+import React, { memo, SetStateAction, useCallback, useMemo } from "react";
 import WhiteCard from "../WhiteCard";
-import { useDueTasks } from "../../utils/tasks";
+import { useDueTasks, useTaskDoneSetter, useTaskFocusSetter, useTaskSetters } from "../../utils/tasks";
 import Item from "./Item";
 import { Task, useConfig } from "../../utils/configs";
+import { useHotkeys } from "react-hotkeys-hook";
 
-const TaskListCard = ({ onTaskClick }: { onTaskClick?: (task: Task) => void }) => {
+const TaskListCard = ({ onItemClick }: { onItemClick?: (task: Task) => void }) => {
   const tasks = useDueTasks();
   const [, setTasks] = useConfig("tasks");
+  const taskSetters = useTaskSetters(tasks, setTasks);
 
-  const taskSetters: Dispatch<SetStateAction<Task>>[] = useMemo(() => {
-    return tasks.map((task) => {
-      return (newTask) => {
-        setTasks((tasks) =>
-          tasks.map((oldTask) => {
-            if (oldTask.id === task.id) {
-              if (typeof newTask === "function") {
-                return newTask(oldTask);
-              } else {
-                return newTask;
-              }
+  const [focused] = useConfig("mapFocusedTask");
+  const setFocused = useTaskFocusSetter();
+
+  const focusNext = useCallback(() => {
+    if (focused) {
+      setFocused(tasks[(tasks.findIndex((task) => task.id === focused) + 1) % tasks.length]);
+    } else {
+      setFocused(tasks[0]);
+    }
+  }, [focused, setFocused, tasks]);
+
+  const setFocusedTask = useCallback(
+    (newTask: SetStateAction<Task>) => {
+      setTasks((tasks) => {
+        return tasks.map((task) => {
+          if (task.id === focused) {
+            if (typeof newTask === "function") {
+              return newTask(task);
             } else {
-              return oldTask;
+              return newTask;
             }
-          })
-        );
-      };
-    });
-  }, [tasks, setTasks]);
+          } else {
+            return task;
+          }
+        });
+      });
+    },
+    [setTasks, focused]
+  );
+
+  const setFocusedDone = useTaskDoneSetter(setFocusedTask);
+
+  const toggleDone = useCallback(() => {
+    if (focused) {
+      setFocusedDone(true);
+      focusNext();
+    }
+  }, [setFocusedDone, focused, focusNext]);
+
+  useHotkeys("n", focusNext, [focusNext]);
+  useHotkeys("d", toggleDone, [toggleDone]);
 
   return (
     <WhiteCard divide>
       {useMemo(
         () =>
-          tasks.map((task, i) => <Item key={task.id} task={task} setTask={taskSetters[i]} onTaskClick={onTaskClick} />),
-        [taskSetters, tasks, onTaskClick]
+          tasks.map((task, i) => <Item key={task.id} task={task} setTask={taskSetters[i]} onTaskClick={onItemClick} />),
+        [tasks, taskSetters, onItemClick]
       )}
     </WhiteCard>
   );

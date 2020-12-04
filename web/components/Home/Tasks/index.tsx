@@ -23,7 +23,7 @@ const TaskList = () => {
         {tasks.length ? (
           <VStack align="stretch" spacing={1}>
             <TaskListCard
-              onTaskClick={() => {
+              onItemClick={() => {
                 mapRef.current?.scrollIntoView({
                   block: "center",
                 });

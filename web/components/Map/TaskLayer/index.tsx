@@ -1,30 +1,22 @@
-import React, { Dispatch, memo, SetStateAction, useMemo } from "react";
-import { Task, useConfig } from "../../../utils/configs";
+import React, { memo, useEffect, useMemo } from "react";
+import { useConfig } from "../../../utils/configs";
 import TaskMarker from "../TaskMarker";
 import Footer from "./Footer";
+import { useTaskSetters } from "../../../utils/tasks";
+import { useMap } from "react-leaflet";
+import { useHotkeys } from "react-hotkeys-hook";
 
 const TaskLayer = () => {
+  const map = useMap();
+  const [focused, setFocused] = useConfig("mapFocusedTask");
   const [tasks, setTasks] = useConfig("tasks");
+  const taskSetters = useTaskSetters(tasks, setTasks);
 
-  const taskSetters: Dispatch<SetStateAction<Task>>[] = useMemo(() => {
-    return tasks.map((task) => {
-      return (newTask) => {
-        setTasks((tasks) =>
-          tasks.map((oldTask) => {
-            if (oldTask.id === task.id) {
-              if (typeof newTask === "function") {
-                return newTask(oldTask);
-              } else {
-                return newTask;
-              }
-            } else {
-              return oldTask;
-            }
-          })
-        );
-      };
-    });
-  }, [tasks, setTasks]);
+  useEffect(() => {
+    !focused && map.closePopup();
+  }, [focused, map]);
+
+  useHotkeys("esc", () => setFocused(false));
 
   return (
     <>

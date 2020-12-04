@@ -1,6 +1,6 @@
-import { useCallback, useMemo } from "react";
-import { useServerDate } from "./time";
-import { useConfig, useSync } from "./configs";
+import { Dispatch, SetStateAction, useCallback, useMemo } from "react";
+import { getServerNextResetDate, useServerDate } from "./time";
+import { Task, useConfig, useSync } from "./configs";
 import { useRouter } from "next/router";
 import { randomStr } from "./index";
 
@@ -47,5 +47,74 @@ export function useTaskCreator() {
       openMap && (await router.push("/map"));
     },
     [router, center, setTask, synchronize]
+  );
+}
+
+export function useTaskSetters(
+  tasks: Task[],
+  setTasks: Dispatch<SetStateAction<Task[]>>
+): Dispatch<SetStateAction<Task>>[] {
+  return useMemo(() => {
+    return tasks.map((task) => {
+      return (newTask) => {
+        setTasks((tasks) =>
+          tasks.map((oldTask) => {
+            if (oldTask.id === task.id) {
+              if (typeof newTask === "function") {
+                return newTask(oldTask);
+              } else {
+                return newTask;
+              }
+            } else {
+              return oldTask;
+            }
+          })
+        );
+      };
+    });
+  }, [tasks, setTasks]);
+}
+
+export function useTaskFocusSetter() {
+  const [, setMapState] = useConfig("mapState");
+  const [, setFocused] = useConfig("mapFocusedTask");
+
+  return useCallback(
+    (task?: Task) => {
+      if (task) {
+        setMapState({
+          lat: task.location.lat + 1.5,
+          lng: task.location.lng,
+          zoom: 5.6,
+        });
+
+        setFocused(task.id);
+      } else {
+        setFocused(false);
+      }
+    },
+    [setMapState, setFocused]
+  );
+}
+
+export function useTaskDoneSetter(setTask: Dispatch<SetStateAction<Task>>) {
+  const date = useServerDate(1000);
+
+  return useCallback(
+    (done: boolean) => {
+      if (done) {
+        setTask((task) => ({
+          ...task,
+          dueTime:
+            task.refreshTime === "reset" ? getServerNextResetDate(date).getTime() : date.getTime() + task.refreshTime,
+        }));
+      } else {
+        setTask((task) => ({
+          ...task,
+          dueTime: date.getTime(),
+        }));
+      }
+    },
+    [date, setTask]
   );
 }

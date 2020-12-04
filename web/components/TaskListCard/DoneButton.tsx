@@ -1,12 +1,13 @@
 import { FaCheck } from "react-icons/fa";
 import React, { Dispatch, memo, SetStateAction } from "react";
 import { Task } from "../../utils/configs";
-import { getServerNextResetDate, useServerDate } from "../../utils/time";
 import { trackEvent } from "../../utils/umami";
 import { Icon, IconButton } from "@chakra-ui/react";
+import { useTaskDoneSetter, useTaskFocusSetter } from "../../utils/tasks";
 
-const DoneButton = ({ setTask }: { setTask: Dispatch<SetStateAction<Task>> }) => {
-  const date = useServerDate(1000);
+const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateAction<Task>> }) => {
+  const setDone = useTaskDoneSetter(setTask);
+  const setFocused = useTaskFocusSetter();
 
   return (
     <IconButton
@@ -17,11 +18,8 @@ const DoneButton = ({ setTask }: { setTask: Dispatch<SetStateAction<Task>> }) =>
       icon={<Icon as={FaCheck} />}
       aria-label="Mark as done"
       onClick={() => {
-        setTask((task) => ({
-          ...task,
-          dueTime:
-            task.refreshTime === "reset" ? getServerNextResetDate(date).getTime() : date.getTime() + task.refreshTime,
-        }));
+        setDone(true);
+        setFocused(task);
 
         trackEvent("taskList", "taskDone");
       }}

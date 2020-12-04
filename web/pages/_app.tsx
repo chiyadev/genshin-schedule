@@ -13,7 +13,7 @@ import { trackView } from "../utils/umami";
 loadPolyfills();
 
 const fallbackFonts =
-  "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"";
+  '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
 
 function App({ Component, pageProps, router }: AppProps) {
   useScrollPreserver();
@@ -24,23 +24,23 @@ function App({ Component, pageProps, router }: AppProps) {
       theme={extendTheme({
         fonts: {
           body: `Bonobo, ${fallbackFonts}`,
-          heading: `Bonobo, ${fallbackFonts}`
+          heading: `Bonobo, ${fallbackFonts}`,
         },
         fontSizes: {
           xs: "10px",
           sm: "12px",
           md: "14px",
           lg: "16px",
-          xl: "18px"
+          xl: "18px",
         },
         styles: {
           global: {
             body: {
               bg: "#2e313d",
-              fontSize: "md"
-            }
-          }
-        }
+              fontSize: "md",
+            },
+          },
+        },
       })}
     >
       <Head>

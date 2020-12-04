@@ -1,9 +1,10 @@
 import { Button, chakra, HStack } from "@chakra-ui/react";
 import React, { Dispatch, memo, SetStateAction } from "react";
-import { Task, useConfig } from "../../utils/configs";
+import { Task } from "../../utils/configs";
 import { trackEvent } from "../../utils/umami";
 import DoneButton from "./DoneButton";
 import { getAssetByName } from "../../assets";
+import { useTaskFocusSetter } from "../../utils/tasks";
 
 const Item = ({
   task,
@@ -14,8 +15,7 @@ const Item = ({
   setTask: Dispatch<SetStateAction<Task>>;
   onTaskClick?: (task: Task) => void;
 }) => {
-  const [, setMapState] = useConfig("mapState");
-  const [, setFocusedTask] = useConfig("mapFocusedTask");
+  const setFocused = useTaskFocusSetter();
 
   return (
     <HStack spacing={2} my={-1}>
@@ -29,13 +29,7 @@ const Item = ({
             colorScheme="black"
             minW={0}
             onClick={() => {
-              setMapState({
-                lat: task.location.lat + 1.5,
-                lng: task.location.lng,
-                zoom: 5.6,
-              });
-
-              setFocusedTask(task.id);
+              setFocused(task);
               onTaskClick?.(task);
 
               trackEvent("taskList", "taskFocus");
@@ -53,7 +47,7 @@ const Item = ({
       </chakra.div>
 
       <chakra.div flexShrink={0}>
-        <DoneButton setTask={setTask} />
+        <DoneButton task={task} setTask={setTask} />
       </chakra.div>
     </HStack>
   );
