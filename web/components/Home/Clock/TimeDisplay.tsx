@@ -23,6 +23,7 @@ const TimeDisplay = () => {
     trackEvent("clock", "offsetForward");
   }, [setOffset]);
 
+  useHotkeys("esc", () => setOffset(0), [setOffset]);
   useHotkeys("left", backward, [backward]);
   useHotkeys("right", forward, [forward]);
 

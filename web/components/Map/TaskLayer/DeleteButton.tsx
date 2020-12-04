@@ -16,7 +16,6 @@ const DeleteButton = ({ task }: { task: Task }) => {
       leftIcon={<Icon as={FaTrash} />}
       onClick={() => {
         setTasks((tasks) => tasks.filter((t) => t.id !== task.id));
-
         trackEvent("map", "taskDelete");
       }}
     >

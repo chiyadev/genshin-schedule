@@ -1,9 +1,9 @@
 import React, { memo } from "react";
-import { FaGithub, FaHeart, FaQuestion } from "react-icons/fa";
+import { FaGithub, FaHeart, FaKeyboard, FaQuestion } from "react-icons/fa";
 import { chakra, DarkMode, HStack, Icon, Link, Tooltip, VStack } from "@chakra-ui/react";
 import NextLink from "next/link";
 
-const Footer = () => {
+const Footer = ({ showShortcuts }: { showShortcuts?: () => void }) => {
   return (
     <DarkMode>
       <VStack align="stretch" spacing={2} p={4} color="gray.500">
@@ -24,16 +24,22 @@ const Footer = () => {
           <p>Data on this website may not always be accurate or up-to-date with in-game changes.</p>
         </chakra.div>
 
-        <HStack as="footer" spacing={4} justify="center" textAlign="center">
-          <Tooltip label="GitHub">
-            <Link href="https://github.com/chiyadev/genshin-schedule" isExternal>
-              <Icon as={FaGithub} />
+        <HStack as="footer" spacing={4} justify="center">
+          <Tooltip label="Shortcuts">
+            <Link as="button" onClick={showShortcuts}>
+              <Icon as={FaKeyboard} />
             </Link>
           </Tooltip>
 
           <Tooltip label="Help">
             <Link href="https://github.com/chiyadev/genshin-schedule/wiki" isExternal>
               <Icon as={FaQuestion} />
+            </Link>
+          </Tooltip>
+
+          <Tooltip label="GitHub">
+            <Link href="https://github.com/chiyadev/genshin-schedule" isExternal>
+              <Icon as={FaGithub} />
             </Link>
           </Tooltip>
 
