@@ -14,13 +14,19 @@ const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<bool
         <ModalCloseButton />
         <ModalBody>
           <VStack align="start" spacing={4}>
-            <Category heading="Clock">
+            <Category heading="Server Clock">
               <KeyHint shortcut="left">Previous day</KeyHint>
               <KeyHint shortcut="right">Next day</KeyHint>
               <KeyHint shortcut="esc">Reset offset</KeyHint>
             </Category>
 
-            <Category heading="Tasks">
+            <Category heading="Resin Calculator">
+              <KeyHint>
+                Subtract 20 <Kbd>2</Kbd>, 40 <Kbd>4</Kbd>, 60 <Kbd>6</Kbd>
+              </KeyHint>
+            </Category>
+
+            <Category heading="Task Scheduler">
               <KeyHint shortcut="n">Focus next task</KeyHint>
               <KeyHint shortcut="shift+n">Focus previous task</KeyHint>
               <KeyHint shortcut="d">Mark as done</KeyHint>
@@ -50,7 +56,13 @@ const KeyHint = ({ children, shortcut }: { children?: ReactNode; shortcut?: Reac
     <ListItem>
       <HStack spacing={2} align="baseline">
         <div>{children}</div>
-        <Kbd>{shortcut}</Kbd>
+
+        {typeof shortcut !== "undefined" &&
+          (Array.isArray(shortcut) ? (
+            shortcut.map((shortcut, i) => <Kbd key={i}>{shortcut}</Kbd>)
+          ) : (
+            <Kbd>{shortcut}</Kbd>
+          ))}
       </HStack>
     </ListItem>
   );

@@ -9,8 +9,9 @@ import EstimatorByResin from "./EstimatorByResin";
 import { Configs, useConfig } from "../../../utils/configs";
 import { useServerDate } from "../../../utils/time";
 import { Resin as ResinIcon } from "../../../assets";
-import { chakra, css, Fade, HStack, Input, Spacer, useTheme } from "@chakra-ui/react";
+import { chakra, css, HStack, Input, Spacer, useTheme } from "@chakra-ui/react";
 import { useMeasuredTextWidth } from "../../../utils/dom";
+import { motion } from "framer-motion";
 
 export function formatDateSimple(date: Date) {
   const hour = date.getHours().toString().padStart(2, "0");
@@ -85,9 +86,9 @@ const Resin = () => {
           </chakra.div>
           <Spacer />
 
-          <Fade in={hover} unmountOnExit>
+          <motion.div animate={{ opacity: hover ? 1 : 0 }}>
             <Subtractor current={current} />
-          </Fade>
+          </motion.div>
         </HStack>
 
         <chakra.div color="gray.500" pl={12} fontSize="sm">
