@@ -26,7 +26,7 @@ const ChangelogModal = () => {
   const changelog = useMemo(buildChangelog, []);
 
   return (
-    <Modal isOpen={version !== changelog.length} onClose={() => setVersion(changelog.length)}>
+    <Modal isOpen={version !== changelog.length} onClose={() => setVersion(changelog.length)} size="lg">
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>Update changelog</ModalHeader>

@@ -39,7 +39,7 @@ const ConfigExportButton = () => {
       </Button>
 
       <LightMode>
-        <Modal isOpen={open} onClose={() => setOpen(false)}>
+        <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
           <ModalOverlay />
           <ModalContent>
             <ModalHeader>Manage data</ModalHeader>
