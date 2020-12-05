@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React, { memo, useEffect, useMemo, useState } from "react";
 import {
   Alert,
   AlertIcon,
@@ -25,9 +25,12 @@ import { useConfigs } from "../../../utils/configs";
 const ConfigExportButton = () => {
   const [open, setOpen] = useState(false);
   const [configs, setConfigs] = useConfigs();
-  const [data, setData] = useState(() => JSON.stringify(configs, null, 2));
-  const toast = useToast();
+  const configsString = useMemo(() => JSON.stringify(configs, null, 2), [configs]);
+  const [data, setData] = useState(configsString);
   const { onCopy, hasCopied } = useClipboard(data);
+  const toast = useToast();
+
+  useEffect(() => setData(configsString), [configsString]);
 
   return (
     <>
