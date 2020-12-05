@@ -88,7 +88,7 @@ const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; 
   const [value, setValue] = useState(() => ({ ...DefaultConfigs, ...initial.data }));
   const [, setSync] = useState(false);
 
-  const lastValue = useRef(value);
+  const lastValue = useRef(initial.data);
   const patchQueue: Patch = useMemo(() => [], []);
   const patchTimeout = useRef<number>();
 
