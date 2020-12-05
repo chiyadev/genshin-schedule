@@ -44,7 +44,7 @@ const TaskListOverlay = () => {
       </div>
 
       {!!tasks.length && (
-        <Collapse in={expanded} unmountOnExit>
+        <Collapse in={expanded}>
           <chakra.div maxH="xs" overflowY="auto" borderRadius="md" mt={1}>
             <TaskListCard />
           </chakra.div>

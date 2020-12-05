@@ -8,7 +8,7 @@ const Background = () => {
   const [background] = useConfig("paimonBg");
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: background ? 1 : 0 }}>
+    <motion.div animate={{ opacity: background ? 1 : 0 }}>
       <chakra.img
         alt="background"
         src={Paimon}

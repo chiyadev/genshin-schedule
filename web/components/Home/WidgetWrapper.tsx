@@ -32,7 +32,7 @@ const WidgetWrapper = ({
         </Button>
       </chakra.div>
 
-      <Collapse in={!hidden[type]} animateOpacity unmountOnExit>
+      <Collapse in={!hidden[type]} unmountOnExit>
         <chakra.div mt={4} onMouseEnter={() => onHover?.(true)} onMouseLeave={() => onHover?.(false)}>
           {children}
         </chakra.div>
