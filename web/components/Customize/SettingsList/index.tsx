@@ -3,6 +3,7 @@ import { DarkMode, HStack, Icon, VStack } from "@chakra-ui/react";
 import { FaCog } from "react-icons/fa";
 import BackgroundToggle from "./BackgroundToggle";
 import SignOutButton from "./SignOutButton";
+import ConfigExportButton from "./ConfigExportButton";
 
 const SettingsList = () => {
   return (
@@ -13,9 +14,13 @@ const SettingsList = () => {
       </HStack>
 
       <DarkMode>
-        <VStack align="start" spacing={2} color="white">
+        <VStack align="start" spacing={4} color="white">
           <BackgroundToggle />
-          <SignOutButton />
+
+          <HStack spacing={2}>
+            <ConfigExportButton />
+            <SignOutButton />
+          </HStack>
         </VStack>
       </DarkMode>
     </VStack>
