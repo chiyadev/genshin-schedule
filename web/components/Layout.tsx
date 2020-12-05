@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Background from "./Background";
 import { motion } from "framer-motion";
 import KeyHelp from "./ShortcutHelp";
+import ChangelogModal from "./ChangelogModal";
 
 const Layout = ({
   children,
@@ -24,6 +25,7 @@ const Layout = ({
         <title>{[...title.map((x) => x?.trim()).filter((x) => x), "Genshin Schedule"].join(" · ")}</title>
       </Head>
 
+      <ChangelogModal />
       <KeyHelp open={shortcuts} setOpen={setShortcuts} />
 
       {layout ? (

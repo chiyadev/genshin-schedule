@@ -42,6 +42,7 @@ export type Configs = {
   hiddenWidgets: {
     [key in "clock" | "info" | "sync" | "resin" | "tasks" | "domains"]?: boolean;
   };
+  lastChangelog: number;
 };
 
 export type Task = {
@@ -94,6 +95,7 @@ export const DefaultConfigs: Configs = {
   mapTaskList: true,
   paimonBg: true,
   hiddenWidgets: {},
+  lastChangelog: 0,
 };
 
 export const ServerList: Configs["server"][] = ["America", "Europe", "Asia"];
