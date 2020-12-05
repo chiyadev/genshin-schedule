@@ -14,6 +14,9 @@ import { MultiMap } from "./multiMap";
 
 type MapLocation = { lat: number; lng: number };
 
+export const MapZoomMin = 4;
+export const MapZoomMax = 8;
+
 export type Configs = {
   server: "America" | "Europe" | "Asia" | "TW, HK, MO";
   offsetDays: number;
@@ -31,6 +34,7 @@ export type Configs = {
   iconQuery: string;
   iconListScroll: number;
   mapState: MapLocation & { zoom: number };
+  mapTaskDefaultZoom: number;
   mapCreateTask: Task;
   mapFocusedTask: string | false;
   mapTaskList: boolean;
@@ -76,6 +80,7 @@ export const DefaultConfigs: Configs = {
     ...defaultMapCenter,
     zoom: 5,
   },
+  mapTaskDefaultZoom: 5.6,
   mapCreateTask: {
     id: "temp",
     name: "Iron Chunk",

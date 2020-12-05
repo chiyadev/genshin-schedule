@@ -1,5 +1,5 @@
 import React, { CSSProperties, memo, ReactNode } from "react";
-import { useConfig } from "../../utils/configs";
+import { MapZoomMax, MapZoomMin, useConfig } from "../../utils/configs";
 import TileLayer from "./TileLayer";
 import TaskLayer from "./TaskLayer";
 import TaskCreateLayer from "./TaskCreateLayer";
@@ -16,8 +16,8 @@ const Map = ({ children, minimal, style }: { children?: ReactNode; minimal?: boo
       center={[lat, lng]}
       zoomDelta={0}
       zoomSnap={0.1}
-      maxZoom={8}
-      minZoom={4}
+      minZoom={MapZoomMin}
+      maxZoom={MapZoomMax}
       zoom={zoom}
       maxBounds={[
         [0, 0],

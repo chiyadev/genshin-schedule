@@ -4,6 +4,7 @@ import { FaCog } from "react-icons/fa";
 import BackgroundToggle from "./BackgroundToggle";
 import SignOutButton from "./SignOutButton";
 import ConfigExportButton from "./ConfigExportButton";
+import TaskDefaultZoomSlider from "./TaskDefaultZoomSlider";
 
 const SettingsList = () => {
   return (
@@ -16,6 +17,7 @@ const SettingsList = () => {
       <DarkMode>
         <VStack align="start" spacing={4} color="white">
           <BackgroundToggle />
+          <TaskDefaultZoomSlider />
 
           <HStack spacing={2}>
             <ConfigExportButton />

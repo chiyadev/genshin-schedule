@@ -24,7 +24,7 @@ const PositionSync = () => {
     timeout.current = window.setTimeout(() => {
       setState({
         ...target.getCenter(),
-        zoom: Math.round(target.getZoom() * 100) / 100,
+        zoom: target.getZoom(),
       });
 
       managed.current = true;
