@@ -14,6 +14,7 @@ import { ConfigKeys, Configs, ConfigsContext, DefaultConfigs, SyncContext } from
 import { MultiMap } from "../utils/multiMap";
 import { PromiseSignal } from "../utils/promiseSignal";
 import { createPatch, Patch } from "rfc6902";
+import { useToast } from "@chakra-ui/react";
 
 const ConfigsProvider = ({ initial, children }: { initial?: WebData | null; children?: ReactNode }) => {
   if (initial) {
@@ -102,6 +103,7 @@ const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; 
     patchTimeout.current = window.setTimeout(pushPatches, 200);
   }, [pushPatches]);
 
+  const toast = useToast();
   const signals: PromiseSignal<void>[] = useMemo(() => [], []);
 
   useEffect(() => {
@@ -140,6 +142,14 @@ const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; 
         } catch (e) {
           console.error(e);
           signals.forEach((signal) => signal.reject(e));
+
+          toast({
+            position: "top-right",
+            status: "error",
+            title: "Synchronization error",
+            description: "Could not synchronize changes at the moment. Please try again later.",
+            isClosable: true,
+          });
         } finally {
           setSync(false);
           signals.length = 0;
