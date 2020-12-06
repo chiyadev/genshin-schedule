@@ -7,19 +7,19 @@ import { useHotkeys } from "react-hotkeys-hook";
 
 const TimeDisplay = () => {
   const date = useServerDate();
-  const [, setOffset] = useConfig("offsetDays");
+  const [offset, setOffset] = useConfig("offsetDays");
 
   const hour = date.getHours().toString().padStart(2, "0");
   const minute = date.getMinutes().toString().padStart(2, "0");
   const second = date.getSeconds().toString().padStart(2, "0");
 
   const backward = useCallback(() => {
-    setOffset((o) => o - 1);
+    setOffset((o) => Math.max(-7, o - 1));
     trackEvent("clock", "offsetBackward");
   }, [setOffset]);
 
   const forward = useCallback(() => {
-    setOffset((o) => o + 1);
+    setOffset((o) => Math.min(7, o + 1));
     trackEvent("clock", "offsetForward");
   }, [setOffset]);
 
@@ -34,7 +34,14 @@ const TimeDisplay = () => {
 
   return (
     <HStack justify="center">
-      <Button variant="link" fontWeight="bold" fontSize="4xl" colorScheme="white" onClick={backward}>
+      <Button
+        variant="link"
+        fontWeight="bold"
+        fontSize="4xl"
+        colorScheme="white"
+        onClick={backward}
+        disabled={offset <= -7}
+      >
         &lt;
       </Button>
 
@@ -44,7 +51,14 @@ const TimeDisplay = () => {
         <span>{second} </span>
       </chakra.div>
 
-      <Button variant="link" fontWeight="bold" fontSize="4xl" colorScheme="white" onClick={forward}>
+      <Button
+        variant="link"
+        fontWeight="bold"
+        fontSize="4xl"
+        colorScheme="white"
+        onClick={forward}
+        disabled={offset >= 7}
+      >
         &gt;
       </Button>
     </HStack>

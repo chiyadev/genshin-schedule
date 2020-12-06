@@ -39,7 +39,7 @@ export function useTaskCreator() {
         name: material.name,
         icon: material.item || material.name,
         description,
-        visible: true,
+        visible: false,
       }));
 
       await synchronize();
