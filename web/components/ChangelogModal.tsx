@@ -1,12 +1,16 @@
 import React, { memo, ReactNode, useMemo } from "react";
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/modal";
 import { useConfig } from "../utils/configs";
-import { Divider, Heading, Link, ListItem, UnorderedList, VStack } from "@chakra-ui/react";
+import { Divider, Heading, HStack, Icon, Link, ListItem, UnorderedList, VStack } from "@chakra-ui/react";
+import { FaBullhorn } from "react-icons/fa";
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={3} date="2020/12/05">
+      <ChangelogItem>Fixed local config not being reflected in data export window.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={2} date="2020/12/04">
-      <ChangelogItem>Implemented changelog window.</ChangelogItem>
+      <ChangelogItem>Implemented a changelog window.</ChangelogItem>
       <ChangelogItem>Fixed a bug that caused new accounts to fail to synchronize.</ChangelogItem>
       <ChangelogItem github={21}>
         Fixed task keyboard shortcuts not working in map page when list is collapsed.
@@ -18,7 +22,7 @@ function buildChangelog() {
     <ChangelogSection key={1} date="2020/12/03">
       <ChangelogItem github={17}>Added keyboard shortcuts for common actions.</ChangelogItem>
     </ChangelogSection>,
-  ];
+  ].slice(0, 5);
 }
 
 const ChangelogModal = () => {
@@ -29,7 +33,12 @@ const ChangelogModal = () => {
     <Modal isOpen={version !== changelog.length} onClose={() => setVersion(changelog.length)} size="lg">
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Update changelog</ModalHeader>
+        <ModalHeader>
+          <HStack>
+            <Icon as={FaBullhorn} />
+            <div>Update changelog</div>
+          </HStack>
+        </ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <VStack align="stretch" spacing={4} pb={2} divider={<Divider />}>
