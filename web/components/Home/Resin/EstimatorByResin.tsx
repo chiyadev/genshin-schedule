@@ -1,28 +1,25 @@
 import React, { memo, useMemo } from "react";
 import { useConfig } from "../../../utils/configs";
-import { useServerDate } from "../../../utils/time";
+import { formatDurationSimple, formatTimeSimple, useServerTime } from "../../../utils/time";
 import { getResinRecharge, ResinCap, ResinsPerMinute } from "../../../db/resins";
-import { formatDateSimple } from "./index";
+import { Duration } from "luxon";
 
 const EstimatorByResin = () => {
   const [resin] = useConfig("resin");
-  const date = useServerDate(60000);
+  const time = useServerTime(60000);
 
   const values = useMemo(() => {
-    const values: { time: string; value: number }[] = [];
+    const result: { time: string; value: number }[] = [];
 
     const addValue = (value: number) => {
-      const remaining = value - (resin.value + getResinRecharge(date.getTime() - resin.time));
+      const remainingResins = value - (resin.value + getResinRecharge(time.valueOf() - resin.time));
+      const remainingTime = Duration.fromObject({ minutes: remainingResins / ResinsPerMinute });
 
-      const hours = Math.floor(remaining / ResinsPerMinute / 60);
-      const minutes = Math.floor((remaining / ResinsPerMinute) % 60);
-
-      if (hours > 0 || minutes > 0) {
-        values.push({
+      if (remainingResins > 0) {
+        result.push({
           time: [
-            hours ? `${hours} hour${hours === 1 ? "" : "s"}` : "",
-            minutes ? `${minutes} minute${minutes === 1 ? "" : "s"}` : "",
-            `(${formatDateSimple(new Date(date.getTime() + (remaining / ResinsPerMinute) * 60000))})`,
+            formatDurationSimple(remainingTime, ["hour", "minute"]),
+            `(${formatTimeSimple(time.plus(remainingTime), ["hour", "minute"])})`,
           ].join(" "),
           value,
         });
@@ -33,8 +30,8 @@ const EstimatorByResin = () => {
       addValue(i);
     }
 
-    return values;
-  }, [resin, date]);
+    return result;
+  }, [resin, time]);
 
   return (
     <div>

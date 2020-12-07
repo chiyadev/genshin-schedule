@@ -6,6 +6,10 @@ import { FaBullhorn } from "react-icons/fa";
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={4} date="2020/12/06">
+      <ChangelogItem github={19}>Fixed icons in the task list sometimes displaying the wrong icon.</ChangelogItem>
+      <ChangelogItem>Fixed many bugs related to server-side rendering and timezone differences.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={3} date="2020/12/05">
       <ChangelogItem>Fixed local config not being reflected in data export window.</ChangelogItem>
     </ChangelogSection>,
@@ -22,7 +26,7 @@ function buildChangelog() {
     <ChangelogSection key={1} date="2020/12/03">
       <ChangelogItem github={17}>Added keyboard shortcuts for common actions.</ChangelogItem>
     </ChangelogSection>,
-  ].slice(0, 5);
+  ].slice(0, 3);
 }
 
 const ChangelogModal = () => {

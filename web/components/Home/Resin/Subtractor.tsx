@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { useConfig } from "../../../utils/configs";
-import { useServerDate } from "../../../utils/time";
+import { useServerTime } from "../../../utils/time";
 import { clampResin, getResinRecharge } from "../../../db/resins";
 import { trackEvent } from "../../../utils/umami";
 import { Button, HStack } from "@chakra-ui/react";
@@ -9,8 +9,8 @@ import { useHotkeys } from "react-hotkeys-hook";
 const resinUsages = [20, 40, 60];
 
 const Subtractor = ({ current }: { current: number }) => {
+  const time = useServerTime(60000);
   const [, setResin] = useConfig("resin");
-  const date = useServerDate(60000);
 
   return (
     <HStack spacing={2}>
@@ -22,8 +22,8 @@ const Subtractor = ({ current }: { current: number }) => {
               value={value}
               onClick={() => {
                 setResin((resin) => ({
-                  value: clampResin(clampResin(resin.value + getResinRecharge(date.getTime() - resin.time)) - value),
-                  time: date.getTime(),
+                  value: clampResin(clampResin(resin.value + getResinRecharge(time.valueOf() - resin.time)) - value),
+                  time: time.valueOf(),
                 }));
 
                 trackEvent("resin", `subtract${value}`);

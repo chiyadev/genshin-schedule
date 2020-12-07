@@ -1,39 +1,33 @@
 import React, { memo } from "react";
-import { getServerDayOfWeek, getServerNextResetDate, useServerDate } from "../../../utils/time";
 import { getResinRecharge, ResinCap, roundResin } from "../../../db/resins";
 import { chakra } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/configs";
+import {
+  formatDurationPartSimple,
+  getLargestUnit,
+  getServerResetTime,
+  useServerTime,
+  Weekdays,
+} from "../../../utils/time";
+import pluralize from "pluralize";
 
 const DateDisplay = () => {
-  const date = useServerDate();
+  const time = useServerTime(60000);
   const [offsetDays] = useConfig("offsetDays");
 
-  const resetDate = getServerNextResetDate(date);
-  const resetTime = resetDate.getTime() - date.getTime();
-  const resetHours = Math.floor(resetTime / 3600000);
-  const resetMinutes = Math.floor(resetTime / 60000);
-  const resetResins = roundResin(getResinRecharge(resetTime));
+  const resetTime = getServerResetTime(time);
+  const resetDue = resetTime.diff(time);
+  const resetResins = roundResin(getResinRecharge(resetDue.valueOf()));
 
   return (
     <chakra.div fontSize="sm" color="gray.500">
-      <span>{getServerDayOfWeek(date)}, </span>
-
-      {resetMinutes > 60 ? (
-        <span>
-          {resetHours} hour{resetHours !== 1 && "s"}
-        </span>
-      ) : (
-        <span>
-          {resetMinutes} minute{resetMinutes !== 1 && "s"}
-        </span>
-      )}
-
-      <span> until reset</span>
+      <span>{Weekdays[(6 + resetTime.weekday) % 7]}, </span>
+      <span>{formatDurationPartSimple(resetDue, getLargestUnit(resetDue))} until reset</span>
 
       {!offsetDays && resetResins < ResinCap && (
         <span>
           {" "}
-          (+{resetResins} resin{resetResins !== 1 && "s"})
+          (+{resetResins} {pluralize("resin", resetResins)})
         </span>
       )}
     </chakra.div>

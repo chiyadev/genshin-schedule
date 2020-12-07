@@ -24,7 +24,7 @@ import {
   TinyMiracle,
   TravelingDoctor,
   ViridescentVenerer,
-  WanderersTroupe
+  WanderersTroupe,
 } from "./artifacts";
 import {
   Aerosiderite,
@@ -33,30 +33,22 @@ import {
   Decarabian,
   Guyun,
   MistVeiledElixir,
-  WeaponMaterial
+  WeaponMaterial,
 } from "./weaponMaterials";
-import {
-  Ballad,
-  Diligence,
-  Freedom,
-  Gold,
-  Prosperity,
-  Resistance,
-  TalentMaterial
-} from "./talentMaterials";
-import { DayOfWeek } from "../utils/time";
+import { Ballad, Diligence, Freedom, Gold, Prosperity, Resistance, TalentMaterial } from "./talentMaterials";
+import { Weekday } from "../utils/time";
 
-const Trounce: DayOfWeek[] = ["Monday"];
-const MonThur: DayOfWeek[] = ["Monday", "Thursday"];
-const TuesFri: DayOfWeek[] = ["Tuesday", "Friday"];
-const WedSat: DayOfWeek[] = ["Wednesday", "Saturday"];
-const Sun: DayOfWeek[] = ["Sunday"];
-const AnyDay: DayOfWeek[] = [...MonThur, ...TuesFri, ...WedSat, ...Sun];
+const Trounce: Weekday[] = ["Monday"];
+const MonThur: Weekday[] = ["Monday", "Thursday"];
+const TuesFri: Weekday[] = ["Tuesday", "Friday"];
+const WedSat: Weekday[] = ["Wednesday", "Saturday"];
+const Sun: Weekday[] = ["Sunday"];
+const AnyDay: Weekday[] = [...MonThur, ...TuesFri, ...WedSat, ...Sun];
 
 export type DomainDropSet = {
   type: "Domain Drop Set";
   name?: string;
-  days: DayOfWeek[];
+  days: Weekday[];
   items: (Artifact | WeaponMaterial | TalentMaterial)[];
 };
 
@@ -64,146 +56,146 @@ export const CityOfReflections: DomainDropSet = {
   type: "Domain Drop Set",
   name: "City of Reflections",
   days: MonThur,
-  items: [Decarabian]
+  items: [Decarabian],
 };
 
 export const SubmergedValley: DomainDropSet = {
   type: "Domain Drop Set",
   name: "Submerged Valley",
   days: TuesFri,
-  items: [BorealWolf]
+  items: [BorealWolf],
 };
 
 export const RuinsOfThirstingCapital: DomainDropSet = {
   type: "Domain Drop Set",
   name: "Ruins of Thirsting Capital",
   days: WedSat,
-  items: [DandelionGladiator]
+  items: [DandelionGladiator],
 };
 
 export const AltarOfTheFalls: DomainDropSet = {
   type: "Domain Drop Set",
   name: "Altar of the Falls",
   days: Sun,
-  items: [Decarabian, BorealWolf, DandelionGladiator]
+  items: [Decarabian, BorealWolf, DandelionGladiator],
 };
 
 export const Thundercloud: DomainDropSet = {
   type: "Domain Drop Set",
   name: "Thundercloud",
   days: MonThur,
-  items: [Guyun]
+  items: [Guyun],
 };
 
 export const ThunderingRuins: DomainDropSet = {
   type: "Domain Drop Set",
   name: "Thundering Ruins",
   days: TuesFri,
-  items: [MistVeiledElixir]
+  items: [MistVeiledElixir],
 };
 
 export const TrailGroundsOfThunder: DomainDropSet = {
   type: "Domain Drop Set",
   name: "Trail Grounds of Thunder",
   days: WedSat,
-  items: [Aerosiderite]
+  items: [Aerosiderite],
 };
 
 export const ElectrostaticField: DomainDropSet = {
   type: "Domain Drop Set",
   name: "Electrostatic Field",
   days: Sun,
-  items: [Guyun, MistVeiledElixir, Aerosiderite]
+  items: [Guyun, MistVeiledElixir, Aerosiderite],
 };
 
 export const ForsakenRiftDrops1: DomainDropSet = {
   type: "Domain Drop Set",
   days: MonThur,
-  items: [Freedom]
+  items: [Freedom],
 };
 
 export const ForsakenRiftDrops2: DomainDropSet = {
   type: "Domain Drop Set",
   days: TuesFri,
-  items: [Resistance]
+  items: [Resistance],
 };
 
 export const ForsakenRiftDrops3: DomainDropSet = {
   type: "Domain Drop Set",
   days: WedSat,
-  items: [Ballad]
+  items: [Ballad],
 };
 
 export const ForsakenRiftDrops4: DomainDropSet = {
   type: "Domain Drop Set",
   days: Sun,
-  items: [Freedom, Resistance, Ballad]
+  items: [Freedom, Resistance, Ballad],
 };
 
 export const TaishanMansionDrops1: DomainDropSet = {
   type: "Domain Drop Set",
   days: MonThur,
-  items: [Prosperity]
+  items: [Prosperity],
 };
 
 export const TaishanMansionDrops2: DomainDropSet = {
   type: "Domain Drop Set",
   days: TuesFri,
-  items: [Diligence]
+  items: [Diligence],
 };
 
 export const TaishanMansionDrops3: DomainDropSet = {
   type: "Domain Drop Set",
   days: WedSat,
-  items: [Gold]
+  items: [Gold],
 };
 
 export const TaishanMansionDrops4: DomainDropSet = {
   type: "Domain Drop Set",
   days: Sun,
-  items: [Prosperity, Diligence, Gold]
+  items: [Prosperity, Diligence, Gold],
 };
 
 export const MidsummerCourtyardDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: AnyDay,
-  items: [Adventurer, ResolutionOfSojourner, ThunderingFury, Thundersoother]
+  items: [Adventurer, ResolutionOfSojourner, ThunderingFury, Thundersoother],
 };
 
 export const DomainOfGuyunDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: AnyDay,
-  items: [LuckyDog, BraveHeart, ArchaicPetra, RetracingBolide]
+  items: [LuckyDog, BraveHeart, ArchaicPetra, RetracingBolide],
 };
 
 export const ValleyOfRemembranceDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: AnyDay,
-  items: [TravelingDoctor, TinyMiracle, ViridescentVenerer, MaidenBeloved]
+  items: [TravelingDoctor, TinyMiracle, ViridescentVenerer, MaidenBeloved],
 };
 
 export const HiddenPalaceOfZhouFormulaDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: AnyDay,
-  items: [DefendersWill, MartialArtist, CrimsonWitchOfFlames, Lavawalker]
+  items: [DefendersWill, MartialArtist, CrimsonWitchOfFlames, Lavawalker],
 };
 
 export const ClearPoolAndMountainCavernDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: AnyDay,
-  items: [BloodstainedChivalry, NoblesseOblige, Gambler, Scholar]
+  items: [BloodstainedChivalry, NoblesseOblige, Gambler, Scholar],
 };
 
 export const ConfrontStormterrorDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Trounce,
-  items: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe]
+  items: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe],
 };
 
 export const WolfOfTheNorthChallengeDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Trounce,
-  items: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe]
+  items: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe],
 };
 
 export const DomainDropSets = [
@@ -229,5 +221,5 @@ export const DomainDropSets = [
   HiddenPalaceOfZhouFormulaDrops,
   ClearPoolAndMountainCavernDrops,
   ConfrontStormterrorDrops,
-  WolfOfTheNorthChallengeDrops
+  WolfOfTheNorthChallengeDrops,
 ];

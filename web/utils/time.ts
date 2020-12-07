@@ -1,39 +1,41 @@
 import { useEffect, useState } from "react";
 import { useConfig } from "./configs";
+import { DateTime, Duration } from "luxon";
+import pluralize from "pluralize";
 
-export type DayOfWeek = "Sunday" | "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday";
-export const DaysOfWeek: DayOfWeek[] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-const rerenderCallbacks = new Set<() => void>();
+const tickCallbacks = new Set<() => void>();
 
 if (typeof window !== "undefined") {
   setInterval(() => {
-    rerenderCallbacks.forEach((callback) => callback());
+    tickCallbacks.forEach((callback) => callback());
   });
 }
 
-export function useServerDate(frequency = 100) {
-  const [count, setCount] = useState(() => Math.floor(Date.now() / frequency));
+export function useRerenderInterval(frequency: number) {
+  const [tick, setTick] = useState(() => Math.floor(Date.now() / frequency));
 
   useEffect(() => {
-    const tick = () => {
+    const handleTick = () => {
       // this allows hooks with the same frequency to rerender at the same time
       const current = Math.floor(Date.now() / frequency);
-      current !== count && setCount(current);
+      current !== tick && setTick(current);
     };
 
-    rerenderCallbacks.add(tick);
+    tickCallbacks.add(handleTick);
 
     return () => {
-      rerenderCallbacks.delete(tick);
+      tickCallbacks.delete(handleTick);
     };
-  }, [count, frequency]);
+  }, [tick, frequency]);
+
+  return tick;
+}
+
+export function useServerTime(updateHz = 100) {
+  useRerenderInterval(updateHz);
 
   const [server] = useConfig("server");
   const [offsetDays] = useConfig("offsetDays");
-
-  const now = new Date();
-  const utc = now.getTime() + now.getTimezoneOffset() * 60000;
 
   let offsetHours: number;
 
@@ -52,59 +54,99 @@ export function useServerDate(frequency = 100) {
       break;
   }
 
-  return new Date(utc + 3600000 * offsetHours + 86400000 * offsetDays);
+  // this is not actually correct, proper implementation should not modify the hour part and instead use setZone
+  // but this behavior must be kept in order to preserve backward compatibility with existing data
+  return DateTime.utc().plus({ hours: offsetHours, days: offsetDays });
+
+  // return DateTime.utc().plus({ days: offsetDays }).setZone(`UTC${offsetHours}`)
 }
 
 export const ServerResetHour = 4;
 
-export function getServerNextResetDate(serverDate: Date) {
-  return new Date(
-    serverDate.getFullYear(),
-    serverDate.getMonth(),
-    serverDate.getDate() + (serverDate.getHours() < ServerResetHour ? 0 : 1),
-    ServerResetHour
-  );
+export function getServerResetTime(time: DateTime) {
+  const utc = time.toUTC();
+
+  return DateTime.utc(utc.year, utc.month, utc.day, utc.hour)
+    .setZone(time.zone)
+    .plus({ days: time.hour < ServerResetHour ? 0 : 1 })
+    .set({ hour: ServerResetHour });
 }
 
-export function getServerDayOfWeek(serverDate: Date) {
-  return DaysOfWeek[(7 + (serverDate.getDay() + (serverDate.getHours() < ServerResetHour ? -1 : 0))) % 7];
-}
+export type Weekday = "Sunday" | "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday";
+export const Weekdays: Weekday[] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-export type TimeUnit = "week" | "day" | "hour" | "minute";
-export const TimeUnits: TimeUnit[] = ["week", "day", "hour", "minute"];
+export type TimeUnit = "year" | "week" | "day" | "hour" | "minute" | "second" | "millisecond";
+export const TimeUnits: TimeUnit[] = ["year", "week", "day", "hour", "minute", "second", "millisecond"];
+export const TimeUnitSizes: number[] = [52, 7, 24, 60, 60, 1000];
 
-export function getTimeUnitMs(unit: TimeUnit) {
-  switch (unit) {
-    case "minute":
-      return 60000;
+export function getUnitMs(unit: TimeUnit) {
+  let value = 1;
 
-    case "hour":
-      return 3600000;
-
-    case "day":
-      return 86400000;
-
-    case "week":
-      return 604800000;
+  for (let i = TimeUnits.indexOf(unit); i < TimeUnitSizes.length; i++) {
+    value *= TimeUnitSizes[i];
   }
+
+  return value;
 }
 
-export function getBestTimeUnit(ms: number) {
+export function getLargestUnit(duration: Duration) {
+  const ms = Math.abs(duration.as("milliseconds"));
+
   for (const unit of TimeUnits) {
-    if (ms % getTimeUnitMs(unit) === 0) {
+    if (ms >= getUnitMs(unit)) {
       return unit;
     }
   }
 
-  return "minute";
+  return "millisecond";
 }
 
-export function getLargestTimeUnit(ms: number) {
+export function getAccuratestUnit(duration: Duration) {
+  const ms = Math.abs(duration.as("milliseconds"));
+
   for (const unit of TimeUnits) {
-    if (ms >= getTimeUnitMs(unit)) {
+    if (!(ms % getUnitMs(unit))) {
       return unit;
     }
   }
 
-  return "minute";
+  return "millisecond";
+}
+
+export function formatTimeSimple(time: DateTime, units: Exclude<TimeUnit, "year" | "week">[]) {
+  const parts: string[] = [];
+
+  for (const unit of units) {
+    parts.push(time.get(unit).toString().padStart(2, "0"));
+  }
+
+  return parts.join(":");
+}
+
+export function formatDurationSimple(duration: Duration, units = TimeUnits) {
+  const parts: string[] = [];
+
+  for (const unit of units) {
+    const unitIndex = TimeUnits.indexOf(unit);
+
+    let value = duration.as(unit);
+
+    if (parts.length && unitIndex >= 1) {
+      value %= TimeUnitSizes[unitIndex - 1];
+    }
+
+    value = Math.floor(value);
+
+    if (value) {
+      parts.push(`${value} ${pluralize(unit, value)}`);
+    }
+  }
+
+  return parts.join(" ");
+}
+
+export function formatDurationPartSimple(duration: Duration, unit: TimeUnit) {
+  const value = Math.floor(duration.as(unit));
+
+  return `${value} ${pluralize(unit, value)}`;
 }

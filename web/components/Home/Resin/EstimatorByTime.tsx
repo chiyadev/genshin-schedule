@@ -1,46 +1,46 @@
 import React, { memo, useMemo } from "react";
 import { useConfig } from "../../../utils/configs";
-import { useServerDate } from "../../../utils/time";
+import { formatDurationPartSimple, formatDurationSimple, formatTimeSimple, useServerTime } from "../../../utils/time";
 import { getResinRecharge, ResinCap, ResinsPerMinute, roundResin } from "../../../db/resins";
-import { formatDateSimple } from "./index";
+import { DateTime, Duration } from "luxon";
 
 const EstimatorByTime = () => {
   const [resin] = useConfig("resin");
-  const date = useServerDate(60000);
+  const time = useServerTime(60000);
 
   const values = useMemo(() => {
-    const values: { time: string; value: number }[] = [];
+    const result: { time: string; value: number }[] = [];
 
     const addValue = (hours: number) => {
-      const value = roundResin(resin.value + getResinRecharge(date.getTime() - resin.time + hours * 3600000));
+      const resins = roundResin(resin.value + getResinRecharge(time.plus({ hours }).valueOf() - resin.time));
 
-      if (value && value < ResinCap) {
-        values.push({ time: `${hours} hours`, value });
+      if (resins < ResinCap) {
+        result.push({
+          time: formatDurationPartSimple(Duration.fromObject({ hours }), "hour"),
+          value: resins,
+        });
+
         return true;
       }
     };
 
     addValue(2);
+    for (let i = 4; addValue(i) && i < 24; i += 4);
 
-    for (let i = 4; addValue(i); i += 4);
+    const capTime = DateTime.fromMillis(resin.time)
+      .plus({ minutes: (ResinCap - resin.value) / ResinsPerMinute })
+      .diff(time);
 
-    const capDate = new Date(resin.time + ((ResinCap - resin.value) / ResinsPerMinute) * 60000);
-
-    const capTime = capDate.getTime() - date.getTime();
-    const capHours = Math.floor(capTime / 3600000);
-    const capMinutes = Math.floor((capTime % 3600000) / 60000);
-    const capHoursText = `${capHours} hour${capHours === 1 ? "" : "s"}`;
-    const capMinutesText = `${capMinutes} minute${capMinutes === 1 ? "" : "s"}`;
-
-    values.push({
-      time: [capHours ? capHoursText : "", capMinutes ? capMinutesText : "", `(${formatDateSimple(capDate)})`].join(
-        " "
-      ),
+    result.push({
+      time: [
+        formatDurationSimple(capTime, ["hour", "minute"]),
+        `(${formatTimeSimple(time.plus(capTime), ["hour", "minute"])})`,
+      ].join(" "),
       value: ResinCap,
     });
 
-    return values;
-  }, [resin, date]);
+    return result;
+  }, [resin, time]);
 
   return (
     <div>

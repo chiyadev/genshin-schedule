@@ -1,23 +1,23 @@
 import { Dispatch, SetStateAction, useCallback, useMemo } from "react";
-import { getServerNextResetDate, useServerDate } from "./time";
 import { DefaultConfigs, Task, useConfig, useSync } from "./configs";
 import { useRouter } from "next/router";
 import { randomStr } from "./index";
+import { getServerResetTime, useServerTime } from "./time";
 
 export function useDueTasks() {
   const [tasks] = useConfig("tasks");
-  const date = useServerDate(60000);
+  const time = useServerTime(60000);
 
   return useMemo(() => {
     return tasks
-      .filter((task) => task.visible && task.dueTime <= date.getTime())
+      .filter((task) => task.visible && task.dueTime <= time.valueOf())
       .sort((a, b) => {
         const icon = a.icon.localeCompare(b.icon);
         if (icon) return icon;
 
         return a.dueTime - b.dueTime;
       });
-  }, [date, tasks]);
+  }, [time, tasks]);
 }
 
 export function useTaskCreator() {
@@ -99,7 +99,7 @@ export function useTaskFocusSetter() {
 }
 
 export function useTaskDoneSetter(setTask: Dispatch<SetStateAction<Task>>) {
-  const date = useServerDate(1000);
+  const time = useServerTime(1000);
 
   return useCallback(
     (done: boolean) => {
@@ -107,15 +107,15 @@ export function useTaskDoneSetter(setTask: Dispatch<SetStateAction<Task>>) {
         setTask((task) => ({
           ...task,
           dueTime:
-            task.refreshTime === "reset" ? getServerNextResetDate(date).getTime() : date.getTime() + task.refreshTime,
+            task.refreshTime === "reset" ? getServerResetTime(time).valueOf() : time.plus(task.refreshTime).valueOf(),
         }));
       } else {
         setTask((task) => ({
           ...task,
-          dueTime: date.getTime(),
+          dueTime: time.valueOf(),
         }));
       }
     },
-    [date, setTask]
+    [time, setTask]
   );
 }

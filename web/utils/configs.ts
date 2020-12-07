@@ -98,7 +98,7 @@ export const DefaultConfigs: Configs = {
   lastChangelog: 0,
 };
 
-export const ServerList: Configs["server"][] = ["America", "Europe", "Asia"];
+export const ServerList: Configs["server"][] = ["America", "Europe", "Asia", "TW, HK, MO"];
 export const ConfigKeys = Object.keys(DefaultConfigs) as (keyof Configs)[];
 
 // migration: if there is a token saved in localStorage, move it to cookies

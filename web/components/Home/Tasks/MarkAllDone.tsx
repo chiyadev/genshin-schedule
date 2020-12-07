@@ -1,13 +1,13 @@
 import React, { memo } from "react";
 import { useConfig } from "../../../utils/configs";
-import { getServerNextResetDate, useServerDate } from "../../../utils/time";
 import { FaCheck } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { Button, Icon } from "@chakra-ui/react";
+import { getServerResetTime, useServerTime } from "../../../utils/time";
 
 const MarkAllDone = () => {
+  const time = useServerTime(1000);
   const [, setTasks] = useConfig("tasks");
-  const date = useServerDate(1000);
 
   return (
     <Button
@@ -19,13 +19,13 @@ const MarkAllDone = () => {
       onClick={() => {
         setTasks((tasks) =>
           tasks.map((task) => {
-            if (task.visible && task.dueTime <= date.getTime()) {
+            if (task.visible && task.dueTime <= time.valueOf()) {
               return {
                 ...task,
                 dueTime:
                   task.refreshTime === "reset"
-                    ? getServerNextResetDate(date).getTime()
-                    : date.getTime() + task.refreshTime,
+                    ? getServerResetTime(time).valueOf()
+                    : time.plus(task.refreshTime).valueOf(),
               };
             } else {
               return task;

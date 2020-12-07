@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useRef, useState } from "react";
+import React, { memo, useRef, useState } from "react";
 import WidgetWrapper from "../WidgetWrapper";
 import WhiteCard from "../../WhiteCard";
 import { trackEvent } from "../../../utils/umami";
@@ -7,18 +7,11 @@ import Subtractor from "./Subtractor";
 import EstimatorByTime from "./EstimatorByTime";
 import EstimatorByResin from "./EstimatorByResin";
 import { Configs, useConfig } from "../../../utils/configs";
-import { useServerDate } from "../../../utils/time";
 import { Resin as ResinIcon } from "../../../assets";
 import { chakra, css, HStack, Input, Spacer, useTheme } from "@chakra-ui/react";
 import { useMeasuredTextWidth } from "../../../utils/dom";
 import { motion } from "framer-motion";
-
-export function formatDateSimple(date: Date) {
-  const hour = date.getHours().toString().padStart(2, "0");
-  const minute = date.getMinutes().toString().padStart(2, "0");
-
-  return `${hour}:${minute}`;
-}
+import { useServerTime } from "../../../utils/time";
 
 const estimateModes: Configs["resinEstimateMode"][] = ["time", "value"];
 
@@ -30,8 +23,8 @@ const Resin = () => {
   const [focus, setFocus] = useState(false);
   const resinInput = useRef<HTMLInputElement>(null);
 
-  const date = useServerDate(60000);
-  const current = useMemo(() => resin.value + getResinRecharge(date.getTime() - resin.time), [resin, date]);
+  const time = useServerTime(60000);
+  const current = resin.value + getResinRecharge(time.valueOf() - resin.time);
 
   const theme = useTheme();
   const inputStyle = css({ fontSize: "xl", fontWeight: "bold" })(theme);
@@ -71,7 +64,7 @@ const Resin = () => {
             onChange={({ currentTarget: { valueAsNumber } }) => {
               setResin({
                 value: roundResin(valueAsNumber || 0),
-                time: date.getTime(),
+                time: time.valueOf(),
               });
             }}
             onFocus={() => setFocus(true)}

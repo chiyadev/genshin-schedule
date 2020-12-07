@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from "react";
 import { Domain, Domains } from "../../../db/domains";
-import { getServerDayOfWeek, useServerDate } from "../../../utils/time";
+import { getServerResetTime, useServerTime, Weekdays } from "../../../utils/time";
 import { useConfig } from "../../../utils/configs";
 import { Character, Characters } from "../../../db/characters";
 import {
@@ -38,8 +38,8 @@ export type ScheduledDomain = {
 };
 
 const DomainView = () => {
-  const date = useServerDate(60000);
-  const dayOfWeek = getServerDayOfWeek(date);
+  const time = useServerTime(60000);
+  const weekday = Weekdays[(6 + getServerResetTime(time).weekday) % 7];
 
   const [characters] = useConfig("characters");
   const [weapons] = useConfig("weapons");
@@ -77,7 +77,7 @@ const DomainView = () => {
       }
     };
 
-    const currentDrops = DomainDropSets.filter((drops) => drops.days.includes(dayOfWeek));
+    const currentDrops = DomainDropSets.filter((drops) => drops.days.includes(weekday));
 
     for (const charName of characters) {
       const character = Characters.find((char) => char.name === charName);
@@ -156,7 +156,7 @@ const DomainView = () => {
 
       return a.domain.name.localeCompare(b.domain.name);
     });
-  }, [characters, weapons, artifacts, dayOfWeek]);
+  }, [characters, weapons, artifacts, weekday]);
 
   const [hidden] = useConfig("hiddenWidgets");
 

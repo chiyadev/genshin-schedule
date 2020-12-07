@@ -2,6 +2,7 @@ import { Button, Flex } from "@chakra-ui/react";
 import React, { memo } from "react";
 import { useConfig } from "../../../utils/configs";
 import { trackEvent } from "../../../utils/umami";
+import pluralize from "pluralize";
 
 const OffsetAlert = () => {
   const [offset, setOffset] = useConfig("offsetDays");
@@ -23,7 +24,7 @@ const OffsetAlert = () => {
         }}
       >
         Showing schedule in {offset >= 0 ? "+" : "-"}
-        {Math.abs(offset)} day{Math.abs(offset) !== 1 && "s"}
+        {Math.abs(offset)} {pluralize("day", offset)}
       </Button>
     </Flex>
   );

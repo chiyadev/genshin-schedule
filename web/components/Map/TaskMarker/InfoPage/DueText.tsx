@@ -1,31 +1,23 @@
 import React, { memo } from "react";
 import { Task } from "../../../../utils/configs";
-import { getLargestTimeUnit, getTimeUnitMs, useServerDate } from "../../../../utils/time";
+import { formatDurationPartSimple, getLargestUnit, useServerTime } from "../../../../utils/time";
 import { FaClock } from "react-icons/fa";
 import { HStack, Icon } from "@chakra-ui/react";
+import { DateTime } from "luxon";
 
 const DueText = ({ task }: { task: Task }) => {
-  const date = useServerDate(60000);
-  const delta = task.dueTime - date.getTime();
-  const unit = getLargestTimeUnit(Math.abs(delta));
-  const displayValue = Math.floor(delta / getTimeUnitMs(unit));
+  const time = useServerTime(1000);
+  const due = time.valueOf() <= task.dueTime;
+  const dueTime = DateTime.fromMillis(task.dueTime).diff(time);
 
   return (
-    <HStack fontSize="sm" color={displayValue <= 0 ? "red.500" : undefined} spacing={2}>
+    <HStack fontSize="sm" color={due ? undefined : "red.500"} spacing={2}>
       <Icon as={FaClock} />
 
-      {displayValue === 0 ? (
-        <div>Due now</div>
-      ) : displayValue > 0 ? (
-        <div>
-          Due in {displayValue} {unit}
-          {displayValue !== 1 && "s"}
-        </div>
+      {due ? (
+        <div>Due in {formatDurationPartSimple(dueTime, getLargestUnit(dueTime))}</div>
       ) : (
-        <div>
-          Due {-displayValue} {unit}
-          {-displayValue !== 1 && "s"} ago
-        </div>
+        <div>Due {formatDurationPartSimple(dueTime.negate(), getLargestUnit(dueTime))} ago</div>
       )}
     </HStack>
   );
