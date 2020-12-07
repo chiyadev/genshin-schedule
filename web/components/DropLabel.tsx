@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { DomainDropSet, DomainDropSets } from "../db/domainDropSets";
 import { Domains } from "../db/domains";
-import { DayOfWeek, DaysOfWeek } from "../utils/time";
+import { Weekday, Weekdays } from "../utils/time";
 import { Domain } from "../assets";
 import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
 
@@ -18,7 +18,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   return (
     <VStack align="start" spacing={0}>
       {domains.map((domain) => {
-        const days = new Set<DayOfWeek>();
+        const days = new Set<Weekday>();
 
         for (const drops of domain.drops) {
           if (drops.items.includes(item)) {
@@ -40,7 +40,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
               {days.size !== 7 && (
                 <span>
                   <span> on </span>
-                  {DaysOfWeek.filter((d) => days.has(d)).join(", ")}
+                  {Weekdays.filter((d) => days.has(d)).join(", ")}
                 </span>
               )}
             </div>
