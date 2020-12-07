@@ -26,7 +26,7 @@ function buildChangelog() {
     <ChangelogSection key={1} date="2020/12/03">
       <ChangelogItem github={17}>Added keyboard shortcuts for common actions.</ChangelogItem>
     </ChangelogSection>,
-  ].slice(0, 3);
+  ];
 }
 
 const ChangelogModal = () => {
@@ -46,7 +46,7 @@ const ChangelogModal = () => {
         <ModalCloseButton />
         <ModalBody>
           <VStack align="stretch" spacing={4} pb={2} divider={<Divider />}>
-            {changelog}
+            {changelog.slice(0, 3)}
           </VStack>
         </ModalBody>
       </ModalContent>
