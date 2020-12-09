@@ -9,6 +9,7 @@ function buildChangelog() {
     <ChangelogSection key={5} date="2020/12/09">
       <ChangelogItem>Implemented task search function.</ChangelogItem>
       <ChangelogItem>Fixed task list not being sorted by icon order.</ChangelogItem>
+      <ChangelogItem>Fixed keyboard shortcuts not calling preventDefault.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={4} date="2020/12/06">
       <ChangelogItem github={19}>Fixed icons in the task list sometimes displaying the wrong icon.</ChangelogItem>

@@ -1,4 +1,4 @@
-import React, { memo, useRef } from "react";
+import React, { memo, useCallback, useRef } from "react";
 import WidgetWrapper from "../WidgetWrapper";
 import { useDueTasks } from "../../../utils/tasks";
 import TaskListCard from "../../TaskListCard";
@@ -8,12 +8,28 @@ import NextLink from "next/link";
 import { chakra, Icon, Link, VStack } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import SearchButton from "./SearchButton";
+import { useHotkeys } from "react-hotkeys-hook";
 
 const MapCore = dynamic(() => import("../../Map"), { ssr: false });
 
 const TaskList = () => {
   const tasks = useDueTasks();
   const mapRef = useRef<HTMLDivElement>(null);
+
+  const scrollToMap = useCallback(() => {
+    mapRef.current?.scrollIntoView({
+      block: "center",
+    });
+  }, []);
+
+  useHotkeys(
+    "n",
+    (e) => {
+      scrollToMap();
+      e.preventDefault();
+    },
+    [scrollToMap]
+  );
 
   return (
     <WidgetWrapper
@@ -24,13 +40,7 @@ const TaskList = () => {
       <VStack align="stretch" spacing={4} color="white">
         {tasks.length ? (
           <VStack align="stretch" spacing={1}>
-            <TaskListCard
-              onItemClick={() => {
-                mapRef.current?.scrollIntoView({
-                  block: "center",
-                });
-              }}
-            />
+            <TaskListCard onItemClick={scrollToMap} />
 
             <chakra.div textAlign="right">
               <MarkAllDone />

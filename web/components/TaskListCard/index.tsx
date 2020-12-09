@@ -60,27 +60,33 @@ const TaskListCard = ({ onItemClick }: { onItemClick?: (task: Task) => void }) =
 
   useHotkeys(
     "n",
-    () => {
+    (e) => {
       focusNext();
       trackEvent("taskList", "taskFocusNext");
+
+      e.preventDefault();
     },
     [focusNext]
   );
 
   useHotkeys(
     "shift+n",
-    () => {
+    (e) => {
       focusPrevious();
       trackEvent("taskList", "taskFocusPrevious");
+
+      e.preventDefault();
     },
     [focusPrevious]
   );
 
   useHotkeys(
     "d",
-    () => {
+    (e) => {
       focusedDone();
       trackEvent("taskList", "taskDoneNext");
+
+      e.preventDefault();
     },
     [focusedDone]
   );

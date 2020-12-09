@@ -36,7 +36,14 @@ const Subtractor = ({ current }: { current: number }) => {
 };
 
 const SubtractButton = ({ value, onClick }: { value: number; onClick: () => void }) => {
-  useHotkeys(value.toString().slice(0, 1), onClick, [onClick]);
+  useHotkeys(
+    value.toString().slice(0, 1),
+    (e) => {
+      onClick();
+      e.preventDefault();
+    },
+    [onClick]
+  );
 
   return (
     <Button variant="link" color="gray.500" size="sm" minW={0} onClick={onClick}>

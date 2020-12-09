@@ -4,7 +4,10 @@ import { useHotkeys } from "react-hotkeys-hook";
 import { Heading, HStack, Kbd, ListItem, UnorderedList, VStack } from "@chakra-ui/layout";
 
 const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<boolean> }) => {
-  useHotkeys("k", () => setOpen(true));
+  useHotkeys("k", (e) => {
+    setOpen(true);
+    e.preventDefault();
+  });
 
   return (
     <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">

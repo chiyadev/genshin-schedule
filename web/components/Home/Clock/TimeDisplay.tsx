@@ -28,9 +28,32 @@ const TimeDisplay = () => {
     trackEvent("clock", "offsetReset");
   }, [setOffset]);
 
-  useHotkeys("left", backward, [backward]);
-  useHotkeys("right", forward, [forward]);
-  useHotkeys("esc", reset, [reset]);
+  useHotkeys(
+    "left",
+    (e) => {
+      backward();
+      e.preventDefault();
+    },
+    [backward]
+  );
+
+  useHotkeys(
+    "right",
+    (e) => {
+      forward();
+      e.preventDefault();
+    },
+    [forward]
+  );
+
+  useHotkeys(
+    "esc",
+    (e) => {
+      reset();
+      e.preventDefault();
+    },
+    [reset]
+  );
 
   return (
     <HStack justify="center">

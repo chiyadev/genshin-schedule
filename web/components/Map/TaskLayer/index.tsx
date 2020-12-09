@@ -16,7 +16,10 @@ const TaskLayer = () => {
     !focused && map.closePopup();
   }, [focused, map]);
 
-  useHotkeys("esc", () => setFocused(false));
+  useHotkeys("esc", (e) => {
+    setFocused(false);
+    e.preventDefault();
+  });
 
   return (
     <>

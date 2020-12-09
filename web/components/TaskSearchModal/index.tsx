@@ -21,7 +21,10 @@ const TaskSearchModal = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<b
   useEffect(() => setValue(query), [query]);
   useEffect(() => setQuery(value), [open]);
 
-  useHotkeys("f", () => setOpen(true));
+  useHotkeys("f", (e) => {
+    setOpen(true);
+    e.preventDefault();
+  });
 
   return (
     <LightMode>
