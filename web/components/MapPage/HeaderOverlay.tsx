@@ -1,6 +1,7 @@
 import React, { memo, useState } from "react";
 import { chakra } from "@chakra-ui/react";
 import Header from "../Header";
+import SearchButton from "./SearchButton";
 
 const HeaderOverlay = () => {
   const [hover, setHover] = useState(false);
@@ -19,7 +20,7 @@ const HeaderOverlay = () => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <Header />
+      <Header menu={<SearchButton />} />
     </chakra.div>
   );
 };

@@ -2,15 +2,15 @@ import React, { memo, useEffect, useMemo } from "react";
 import { useConfig } from "../../../utils/configs";
 import TaskMarker from "../TaskMarker";
 import Footer from "./Footer";
-import { useTaskSetters } from "../../../utils/tasks";
+import { useFilteredTasks, useTaskSetters } from "../../../utils/tasks";
 import { useMap } from "react-leaflet";
 import { useHotkeys } from "react-hotkeys-hook";
 
 const TaskLayer = () => {
   const map = useMap();
   const [focused, setFocused] = useConfig("mapFocusedTask");
-  const [tasks, setTasks] = useConfig("tasks");
-  const taskSetters = useTaskSetters(tasks, setTasks);
+  const tasks = useFilteredTasks();
+  const taskSetters = useTaskSetters(tasks);
 
   useEffect(() => {
     !focused && map.closePopup();

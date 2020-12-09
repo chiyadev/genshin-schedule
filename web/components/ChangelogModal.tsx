@@ -6,6 +6,10 @@ import { FaBullhorn } from "react-icons/fa";
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={5} date="2020/12/09">
+      <ChangelogItem>Implemented task search function.</ChangelogItem>
+      <ChangelogItem>Fixed task list not being sorted by icon order.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={4} date="2020/12/06">
       <ChangelogItem github={19}>Fixed icons in the task list sometimes displaying the wrong icon.</ChangelogItem>
       <ChangelogItem>Fixed many bugs related to server-side rendering and timezone differences.</ChangelogItem>

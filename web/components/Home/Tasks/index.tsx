@@ -7,6 +7,7 @@ import { FaAngleRight, FaTimes } from "react-icons/fa";
 import NextLink from "next/link";
 import { chakra, Icon, Link, VStack } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
+import SearchButton from "./SearchButton";
 
 const MapCore = dynamic(() => import("../../Map"), { ssr: false });
 
@@ -18,6 +19,7 @@ const TaskList = () => {
     <WidgetWrapper
       type="tasks"
       heading={<span>Today&apos;s Tasks{!!tasks.length && <span> ({tasks.length})</span>}</span>}
+      menu={<SearchButton />}
     >
       <VStack align="stretch" spacing={4} color="white">
         {tasks.length ? (

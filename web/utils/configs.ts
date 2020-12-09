@@ -30,6 +30,7 @@ export type Configs = {
   artifacts: string[];
   itemNotes: { [key: string]: string };
   tasks: Task[];
+  taskQuery: string;
   customizeQuery: string;
   iconQuery: string;
   iconListScroll: number;
@@ -74,6 +75,7 @@ export const DefaultConfigs: Configs = {
   artifacts: [],
   itemNotes: {},
   tasks: [],
+  taskQuery: "",
   customizeQuery: "",
   iconQuery: "",
   iconListScroll: 0,

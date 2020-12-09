@@ -18,7 +18,7 @@ const Search = () => {
           bg="white"
           value={value}
           onChange={({ currentTarget: { value } }) => setValue(value)}
-          placeholder="Search characters, weapons and artifacts."
+          placeholder="Search characters, weapons and artifacts..."
         />
       </InputGroup>
 

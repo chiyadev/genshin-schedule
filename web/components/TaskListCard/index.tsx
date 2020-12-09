@@ -9,7 +9,7 @@ import { trackEvent } from "../../utils/umami";
 const TaskListCard = ({ onItemClick }: { onItemClick?: (task: Task) => void }) => {
   const tasks = useDueTasks();
   const [, setTasks] = useConfig("tasks");
-  const taskSetters = useTaskSetters(tasks, setTasks);
+  const taskSetters = useTaskSetters(tasks);
 
   const [focused] = useConfig("mapFocusedTask");
   const setFocused = useTaskFocusSetter();

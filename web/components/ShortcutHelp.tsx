@@ -30,6 +30,7 @@ const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<bool
               <KeyHint shortcut="n">Focus next task</KeyHint>
               <KeyHint shortcut="shift+n">Focus previous task</KeyHint>
               <KeyHint shortcut="d">Mark as done</KeyHint>
+              <KeyHint shortcut="f">Search tasks</KeyHint>
             </Category>
 
             <Category heading="Other">

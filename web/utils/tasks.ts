@@ -4,15 +4,35 @@ import { useRouter } from "next/router";
 import { randomStr } from "./index";
 import { getServerResetTime, useServerTime } from "./time";
 import { IconNames } from "../components/Map/TaskMarker/IconPage/search";
+import { MemorySearch } from "./memorySearch";
 
 const iconIndexes = IconNames.reduce((a, b, i) => {
   a[b] = i;
   return a;
 }, {} as Record<string, number>);
 
-export function useDueTasks() {
+export function useFilteredTasks() {
   const [tasks] = useConfig("tasks");
+  const [query] = useConfig("taskQuery");
+
+  const results = useMemo(() => {
+    const search = new MemorySearch<Task>();
+
+    for (const task of tasks) {
+      search.add(task.name, task);
+      search.add(task.icon, task);
+      task.description && search.add(task.description, task);
+    }
+
+    return search;
+  }, [tasks]);
+
+  return useMemo(() => results.search(query), [results, query]);
+}
+
+export function useDueTasks() {
   const time = useServerTime(60000);
+  const tasks = useFilteredTasks();
 
   return useMemo(() => {
     return tasks
@@ -56,10 +76,9 @@ export function useTaskCreator() {
   );
 }
 
-export function useTaskSetters(
-  tasks: Task[],
-  setTasks: Dispatch<SetStateAction<Task[]>>
-): Dispatch<SetStateAction<Task>>[] {
+export function useTaskSetters(tasks: Task[]): Dispatch<SetStateAction<Task>>[] {
+  const [, setTasks] = useConfig("tasks");
+
   return useMemo(() => {
     return tasks.map((task) => {
       return (newTask) => {
