@@ -1,7 +1,7 @@
 import React, { memo, useCallback } from "react";
 import { useConfig } from "../../../utils/configs";
 import { trackEvent } from "../../../utils/umami";
-import { Button, chakra, HStack } from "@chakra-ui/react";
+import { Button, chakra, HStack, Tooltip } from "@chakra-ui/react";
 import { useHotkeys } from "react-hotkeys-hook";
 import { useServerTime } from "../../../utils/time";
 
@@ -34,16 +34,18 @@ const TimeDisplay = () => {
 
   return (
     <HStack justify="center">
-      <Button
-        variant="link"
-        fontWeight="bold"
-        fontSize="4xl"
-        colorScheme="white"
-        onClick={backward}
-        disabled={offset <= -6}
-      >
-        &lt;
-      </Button>
+      <Tooltip label="Previous day" closeOnClick={false}>
+        <Button
+          variant="link"
+          fontWeight="bold"
+          fontSize="4xl"
+          colorScheme="white"
+          onClick={backward}
+          disabled={offset <= -6}
+        >
+          &lt;
+        </Button>
+      </Tooltip>
 
       <chakra.div fontWeight="bold" fontSize="4xl">
         <span> {hour}</span>
@@ -51,16 +53,18 @@ const TimeDisplay = () => {
         <span>{second} </span>
       </chakra.div>
 
-      <Button
-        variant="link"
-        fontWeight="bold"
-        fontSize="4xl"
-        colorScheme="white"
-        onClick={forward}
-        disabled={offset >= 6}
-      >
-        &gt;
-      </Button>
+      <Tooltip label="Next day" closeOnClick={false}>
+        <Button
+          variant="link"
+          fontWeight="bold"
+          fontSize="4xl"
+          colorScheme="white"
+          onClick={forward}
+          disabled={offset >= 6}
+        >
+          &gt;
+        </Button>
+      </Tooltip>
     </HStack>
   );
 };

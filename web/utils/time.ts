@@ -34,31 +34,30 @@ export function useRerenderInterval(frequency: number) {
 export function useServerTime(updateHz = 100) {
   useRerenderInterval(updateHz);
 
-  const [server] = useConfig("server");
+  const offsetHours = useServerTimeZone();
   const [offsetDays] = useConfig("offsetDays");
 
-  let offsetHours: number;
-
-  switch (server) {
-    case "America":
-      offsetHours = -5;
-      break;
-
-    case "Europe":
-      offsetHours = 1;
-      break;
-
-    case "Asia":
-    case "TW, HK, MO":
-      offsetHours = 8;
-      break;
-  }
-
   // this is not actually correct, proper implementation should not modify the hour part and instead use setZone
-  // but this behavior must be kept in order to preserve backward compatibility with existing data
+  // however, this behavior must be kept in order to preserve backward compatibility with existing timestamps
   return DateTime.utc().plus({ hours: offsetHours, days: offsetDays });
 
   // return DateTime.utc().plus({ days: offsetDays }).setZone(`UTC${offsetHours}`)
+}
+
+export function useServerTimeZone() {
+  const [server] = useConfig("server");
+
+  switch (server) {
+    case "America":
+      return -5;
+
+    case "Europe":
+      return 1;
+
+    case "Asia":
+    case "TW, HK, MO":
+      return 8;
+  }
 }
 
 export const ServerResetHour = 4;
