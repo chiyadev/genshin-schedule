@@ -62,6 +62,7 @@ const InfoPage = ({
         resize="none"
         h={12}
         p={0}
+        borderRadius={0}
         placeholder="Task description"
       />
 

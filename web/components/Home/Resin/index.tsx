@@ -58,6 +58,7 @@ const Resin = () => {
             transition={undefined}
             min={0}
             max={ResinCap}
+            borderRadius={0}
             cursor={focus ? undefined : "pointer"}
             value={roundResin(current).toString()}
             onClick={() => resinInput.current?.select()}

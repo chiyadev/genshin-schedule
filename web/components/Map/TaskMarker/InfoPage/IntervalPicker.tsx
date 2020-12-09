@@ -30,6 +30,7 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch
         h={4}
         p={0}
         textAlign="right"
+        borderRadius={0}
         onClick={() => ref.current?.select()}
       />
 
