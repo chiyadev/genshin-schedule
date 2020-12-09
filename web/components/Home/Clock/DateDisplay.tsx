@@ -12,7 +12,7 @@ import {
 import pluralize from "pluralize";
 
 const DateDisplay = () => {
-  const time = useServerTime(60000);
+  const time = useServerTime(1000);
   const [offsetDays] = useConfig("offsetDays");
 
   const resetTime = getServerResetTime(time);

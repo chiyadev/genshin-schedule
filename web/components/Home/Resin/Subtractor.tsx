@@ -9,7 +9,7 @@ import { useHotkeys } from "react-hotkeys-hook";
 const resinUsages = [20, 40, 60];
 
 const Subtractor = ({ current }: { current: number }) => {
-  const time = useServerTime(60000);
+  const time = useServerTime(1000);
   const [, setResin] = useConfig("resin");
 
   return (
