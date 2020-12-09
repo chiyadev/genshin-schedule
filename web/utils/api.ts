@@ -47,7 +47,7 @@ export function getAuthToken(ctx?: Pick<GetServerSidePropsContext, "req">): stri
 export function setAuthToken(ctx?: Pick<GetServerSidePropsContext, "res">, token?: string) {
   if (token) {
     setCookie(ctx, "token", token, {
-      sameSite: "strict",
+      sameSite: "lax",
       secure: window.location.protocol === "https:",
       expires: new Date(2100, 1, 1),
     });
