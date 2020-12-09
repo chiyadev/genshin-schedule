@@ -3,6 +3,12 @@ import { DefaultConfigs, Task, useConfig, useSync } from "./configs";
 import { useRouter } from "next/router";
 import { randomStr } from "./index";
 import { getServerResetTime, useServerTime } from "./time";
+import { IconNames } from "../components/Map/TaskMarker/IconPage/search";
+
+const iconIndexes = IconNames.reduce((a, b, i) => {
+  a[b] = i;
+  return a;
+}, {} as Record<string, number>);
 
 export function useDueTasks() {
   const [tasks] = useConfig("tasks");
@@ -12,7 +18,7 @@ export function useDueTasks() {
     return tasks
       .filter((task) => task.visible && task.dueTime <= time.valueOf())
       .sort((a, b) => {
-        const icon = a.icon.localeCompare(b.icon);
+        const icon = iconIndexes[a.icon] - iconIndexes[b.icon];
         if (icon) return icon;
 
         return a.dueTime - b.dueTime;

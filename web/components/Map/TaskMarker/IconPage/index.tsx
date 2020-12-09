@@ -1,7 +1,7 @@
 import React, { Dispatch, memo, SetStateAction, useEffect, useMemo, useRef } from "react";
 import { Task, useConfig } from "../../../../utils/configs";
 import { PopupPage } from "../index";
-import { Icons, IconSearch, KnownResourceTimers } from "./search";
+import { IconNames, IconSearch, KnownResourceTimers } from "./search";
 import Item from "./Item";
 import { chakra, Icon, Input, InputGroup, InputLeftElement, SimpleGrid, VStack } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
@@ -20,7 +20,7 @@ const IconPage = ({
     const set = new Set(IconSearch.search(search));
 
     // preserve display order
-    return Icons.filter((icon) => set.has(icon));
+    return IconNames.filter((icon) => set.has(icon));
   }, [search]);
 
   const listRef = useRef<HTMLDivElement>(null);
