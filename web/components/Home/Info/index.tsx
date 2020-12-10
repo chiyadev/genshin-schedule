@@ -29,7 +29,7 @@ const Info = () => {
 
       <VStack align="stretch">
         <div>
-          Genshin Schedule is a website to help you keep track of time-related game activities in Genshin Impact.
+          Genshin Schedule is a website that helps you keep track of time-related game activities in Genshin Impact.
         </div>
 
         <UnorderedList pl={4}>
@@ -47,8 +47,8 @@ const Info = () => {
           </ListItem>
 
           <ListItem>
-            <strong>Domain View</strong> &mdash; Shows which domains can be cleared today for character talent/weapon
-            ascension materials.
+            <strong>Domain View</strong> &mdash; Shows which domains can be cleared today for ascension materials and
+            artifacts for the day.
           </ListItem>
         </UnorderedList>
 

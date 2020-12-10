@@ -8,6 +8,7 @@ function buildChangelog() {
   return [
     <ChangelogSection key={6} date="2020/12/11">
       <ChangelogItem>Added a Klee background option.</ChangelogItem>
+      <ChangelogItem>Added a friendly website tutorial for first time users.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={5} date="2020/12/09">
       <ChangelogItem>Implemented task search function.</ChangelogItem>

@@ -15,7 +15,7 @@ const Content = () => {
     <VStack as="form" align="stretch" spacing={4}>
       <div>
         Signing in allows your Genshin Schedule data including resin, tasks and domains to be synchronized across
-        devices.
+        devices. This step is optional.
       </div>
 
       <FormControl maxW="md">

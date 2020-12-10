@@ -43,6 +43,7 @@ export type Configs = {
   hiddenWidgets: {
     [key in "clock" | "info" | "sync" | "resin" | "tasks" | "domains"]?: boolean;
   };
+  tutorial: boolean;
   lastChangelog: number;
 };
 
@@ -97,6 +98,7 @@ export const DefaultConfigs: Configs = {
   mapTaskList: true,
   background: "paimon",
   hiddenWidgets: {},
+  tutorial: true,
   lastChangelog: 0,
 };
 

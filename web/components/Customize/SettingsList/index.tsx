@@ -5,6 +5,7 @@ import BackgroundSwitch from "./BackgroundSwitch";
 import SignOutButton from "./SignOutButton";
 import ConfigExportButton from "./ConfigExportButton";
 import TaskDefaultZoomSlider from "./TaskDefaultZoomSlider";
+import ViewTutorialButton from "./ViewTutorialButton";
 
 const SettingsList = () => {
   return (
@@ -20,6 +21,7 @@ const SettingsList = () => {
           <TaskDefaultZoomSlider />
 
           <HStack spacing={2}>
+            <ViewTutorialButton />
             <ConfigExportButton />
             <SignOutButton />
           </HStack>

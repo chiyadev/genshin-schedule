@@ -7,6 +7,7 @@ import Background from "./Background";
 import { motion } from "framer-motion";
 import KeyHelp from "./ShortcutHelp";
 import ChangelogModal from "./ChangelogModal";
+import TutorialModal from "./TutorialModal";
 
 const Layout = ({
   children,
@@ -25,8 +26,9 @@ const Layout = ({
         <title>{[...title.map((x) => x?.trim()).filter((x) => x), "Genshin Schedule"].join(" · ")}</title>
       </Head>
 
-      <ChangelogModal />
       <KeyHelp open={shortcuts} setOpen={setShortcuts} />
+      <TutorialModal />
+      <ChangelogModal />
 
       {layout ? (
         <chakra.div overflow="hidden">

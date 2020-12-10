@@ -2,6 +2,8 @@ import React, { Dispatch, memo, ReactNode } from "react";
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/modal";
 import { useHotkeys } from "react-hotkeys-hook";
 import { Heading, HStack, Kbd, ListItem, UnorderedList, VStack } from "@chakra-ui/layout";
+import { Icon } from "@chakra-ui/react";
+import { FaKeyboard } from "react-icons/fa";
 
 const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<boolean> }) => {
   useHotkeys("k", (e) => {
@@ -13,7 +15,12 @@ const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<bool
     <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Keyboard Shortcuts</ModalHeader>
+        <ModalHeader>
+          <HStack>
+            <Icon as={FaKeyboard} />
+            <div>Keyboard Shortcuts</div>
+          </HStack>
+        </ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <VStack align="start" spacing={4}>
@@ -30,10 +37,10 @@ const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<bool
             </Category>
 
             <Category heading="Task Scheduler">
+              <KeyHint shortcut="f">Search tasks</KeyHint>
               <KeyHint shortcut="n">Focus next task</KeyHint>
               <KeyHint shortcut="shift+n">Focus previous task</KeyHint>
               <KeyHint shortcut="d">Mark as done</KeyHint>
-              <KeyHint shortcut="f">Search tasks</KeyHint>
             </Category>
 
             <Category heading="Other">
