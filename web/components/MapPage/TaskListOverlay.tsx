@@ -4,11 +4,17 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import TaskListCard from "../TaskListCard";
 import { useDueTasks } from "../../utils/tasks";
 import { useConfig } from "../../utils/configs";
+import { useHotkeys } from "react-hotkeys-hook";
 
 const TaskListOverlay = () => {
   const tasks = useDueTasks();
   const [hover, setHover] = useState(false);
   const [expanded, setExpanded] = useConfig("mapTaskList");
+
+  useHotkeys("l", (e) => {
+    setExpanded((v) => !v);
+    e.preventDefault();
+  });
 
   return (
     <VStack

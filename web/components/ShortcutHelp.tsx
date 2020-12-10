@@ -38,6 +38,7 @@ const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<bool
 
             <Category heading="Task Scheduler">
               <KeyHint shortcut="f">Search tasks</KeyHint>
+              <KeyHint shortcut="l">Toggle list overlay</KeyHint>
               <KeyHint shortcut="n">Focus next task</KeyHint>
               <KeyHint shortcut="shift+n">Focus previous task</KeyHint>
               <KeyHint shortcut="d">Mark as done</KeyHint>
