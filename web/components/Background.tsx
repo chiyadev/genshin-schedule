@@ -1,25 +1,25 @@
 import React, { memo } from "react";
 import { useConfig } from "../utils/configs";
-import { Paimon } from "../assets";
+import { BackgroundKlee, BackgroundPaimon } from "../assets";
 import { chakra } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 
 const Background = () => {
-  const [background] = useConfig("paimonBg");
+  const [value] = useConfig("background");
 
-  return (
-    <motion.div animate={{ opacity: background ? 1 : 0 }}>
-      <chakra.img
-        alt="background"
-        src={Paimon}
-        position="fixed"
-        zIndex={-10}
-        opacity={0.05}
-        right="-5%"
-        bottom="-20%"
-      />
-    </motion.div>
-  );
+  switch (value) {
+    case "paimon":
+      return (
+        <chakra.img src={BackgroundPaimon} position="fixed" zIndex={-10} opacity={0.05} right="-5%" bottom="-20%" />
+      );
+
+    case "klee":
+      return (
+        <chakra.img src={BackgroundKlee} position="fixed" zIndex={-10} opacity={0.05} right="-12%" bottom="-15%" />
+      );
+
+    case "none":
+      return null;
+  }
 };
 
 export default memo(Background);

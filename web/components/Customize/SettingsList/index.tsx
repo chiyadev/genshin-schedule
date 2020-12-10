@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { DarkMode, HStack, Icon, VStack } from "@chakra-ui/react";
 import { FaCog } from "react-icons/fa";
-import BackgroundToggle from "./BackgroundToggle";
+import BackgroundSwitch from "./BackgroundSwitch";
 import SignOutButton from "./SignOutButton";
 import ConfigExportButton from "./ConfigExportButton";
 import TaskDefaultZoomSlider from "./TaskDefaultZoomSlider";
@@ -16,7 +16,7 @@ const SettingsList = () => {
 
       <DarkMode>
         <VStack align="start" spacing={4} color="white">
-          <BackgroundToggle />
+          <BackgroundSwitch />
           <TaskDefaultZoomSlider />
 
           <HStack spacing={2}>

@@ -39,7 +39,7 @@ export type Configs = {
   mapCreateTask: Task;
   mapFocusedTask: string | false;
   mapTaskList: boolean;
-  paimonBg: boolean;
+  background: "paimon" | "klee" | "none";
   hiddenWidgets: {
     [key in "clock" | "info" | "sync" | "resin" | "tasks" | "domains"]?: boolean;
   };
@@ -95,7 +95,7 @@ export const DefaultConfigs: Configs = {
   },
   mapFocusedTask: false,
   mapTaskList: true,
-  paimonBg: true,
+  background: "paimon",
   hiddenWidgets: {},
   lastChangelog: 0,
 };

@@ -9,6 +9,8 @@ import Anemo from "./game/Anemo.png";
 import Apple from "./game/Apple.png";
 import AquilaFavonia from "./game/Aquila Favonia.png";
 import ArchaicPetra from "./game/Archaic Petra.png";
+import BackgroundKlee from "./game/Background Klee.png";
+import BackgroundPaimon from "./game/Background Paimon.png";
 import Bamboo from "./game/Bamboo.png";
 import Barbara from "./game/Barbara.png";
 import BasaltPillar from "./game/Basalt Pillar.png";
@@ -129,7 +131,6 @@ import NoctilucousJade from "./game/Noctilucous Jade.png";
 import Noelle from "./game/Noelle.png";
 import Onion from "./game/Onion.png";
 import OtherworldlyStory from "./game/Otherworldly Story.png";
-import Paimon from "./game/Paimon.png";
 import PhilanemoMushroom from "./game/Philanemo Mushroom.png";
 import Pinecone from "./game/Pinecone.png";
 import Potato from "./game/Potato.png";
@@ -247,6 +248,8 @@ export {
   Apple,
   AquilaFavonia,
   ArchaicPetra,
+  BackgroundKlee,
+  BackgroundPaimon,
   Bamboo,
   Barbara,
   BasaltPillar,
@@ -367,7 +370,6 @@ export {
   Noelle,
   Onion,
   OtherworldlyStory,
-  Paimon,
   PhilanemoMushroom,
   Pinecone,
   Potato,
@@ -487,6 +489,8 @@ export function getAssetByName(name: string): string | undefined {
     case "Apple": return Apple;
     case "Aquila Favonia": return AquilaFavonia;
     case "Archaic Petra": return ArchaicPetra;
+    case "Background Klee": return BackgroundKlee;
+    case "Background Paimon": return BackgroundPaimon;
     case "Bamboo": return Bamboo;
     case "Barbara": return Barbara;
     case "Basalt Pillar": return BasaltPillar;
@@ -607,7 +611,6 @@ export function getAssetByName(name: string): string | undefined {
     case "Noelle": return Noelle;
     case "Onion": return Onion;
     case "Otherworldly Story": return OtherworldlyStory;
-    case "Paimon": return Paimon;
     case "Philanemo Mushroom": return PhilanemoMushroom;
     case "Pinecone": return Pinecone;
     case "Potato": return Potato;

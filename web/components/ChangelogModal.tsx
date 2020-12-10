@@ -6,6 +6,9 @@ import { FaBullhorn } from "react-icons/fa";
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={6} date="2020/12/11">
+      <ChangelogItem>Added a Klee background option.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={5} date="2020/12/09">
       <ChangelogItem>Implemented task search function.</ChangelogItem>
       <ChangelogItem>Fixed task list not being sorted by icon order.</ChangelogItem>
