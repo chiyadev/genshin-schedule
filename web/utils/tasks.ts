@@ -109,7 +109,7 @@ export function useTaskFocusSetter() {
     (task?: Task) => {
       if (task) {
         setMapState({
-          lat: task.location.lat + 1.6 + DefaultConfigs.mapTaskDefaultZoom - defaultZoom,
+          lat: task.location.lat + 2.2 + DefaultConfigs.mapTaskDefaultZoom - defaultZoom,
           lng: task.location.lng,
           zoom: defaultZoom,
         });

@@ -10,7 +10,7 @@ import {
   useState,
 } from "react";
 import { ResinCap } from "../db/resins";
-import { setAuthToken } from "./api";
+import { createApiClient, Notification, setAuthToken } from "./api";
 import { MultiMap } from "./multiMap";
 
 type MapLocation = { lat: number; lng: number };
@@ -57,6 +57,7 @@ export type Task = {
   location: MapLocation;
   dueTime: number;
   refreshTime: number | "reset";
+  notify?: boolean;
 };
 
 const defaultMapCenter = {
@@ -94,6 +95,7 @@ export const DefaultConfigs: Configs = {
     dueTime: 0,
     refreshTime: 86400000,
     visible: false,
+    notify: false,
   },
   mapFocusedTask: false,
   mapTaskList: true,
@@ -221,4 +223,16 @@ function compareDeps(a: any[], b: any[]) {
   }
 
   return true;
+}
+
+export function useApiNotification(notification: Notification, enabled: boolean) {
+  useSyncEffect(async () => {
+    const client = createApiClient();
+
+    if (enabled) {
+      await client.setNotification(notification);
+    } else {
+      await client.deleteNotification(notification.key);
+    }
+  }, [enabled && notification]);
 }

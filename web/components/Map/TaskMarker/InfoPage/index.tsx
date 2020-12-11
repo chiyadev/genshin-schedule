@@ -1,5 +1,5 @@
 import React, { Dispatch, memo, SetStateAction, useState } from "react";
-import { DefaultConfigs, Task } from "../../../../utils/configs";
+import { DefaultConfigs, Task, useSync } from "../../../../utils/configs";
 import { PopupPage } from "../index";
 import IntervalPicker from "./IntervalPicker";
 import DueText from "./DueText";
@@ -8,6 +8,7 @@ import { chakra, HStack, Input, Textarea, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../../assets";
 import IntervalResetCheck from "./IntervalResetCheck";
 import { KnownResourceTimers } from "../IconPage/search";
+import NotifyToggle from "./NotifyToggle";
 
 const InfoPage = ({
   task,
@@ -21,6 +22,7 @@ const InfoPage = ({
   showDue?: boolean;
 }) => {
   const [nameFocus, setNameFocus] = useState(false);
+  const { enabled: syncEnabled } = useSync();
 
   return (
     <VStack align="stretch" spacing={1}>
@@ -98,6 +100,16 @@ const InfoPage = ({
                 setTask((task) => ({ ...task, visible: !v }));
               }}
             />
+
+            {syncEnabled && (
+              <NotifyToggle
+                task={task}
+                value={task.notify || false}
+                setValue={(value) => {
+                  setTask((task) => ({ ...task, notify: value }));
+                }}
+              />
+            )}
 
             <DueText task={task} />
           </>
