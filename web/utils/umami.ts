@@ -14,31 +14,40 @@ if (typeof window !== "undefined" && connectionStr) {
 
 /** Collects an arbitrary Umami metric. */
 export function collect(type: string, data: Record<string, any>) {
-  if (!connection) return;
+  if (!process.browser) {
+    return;
+  }
+
+  const request = {
+    type,
+    payload: {
+      website: connection?.websiteId,
+      hostname: window.location.hostname,
+      screen: `${window.screen.width}x${window.screen.height}`,
+      language: navigator.language,
+      cache: sessionStorage.getItem("umami.cache") || undefined,
+
+      ...data,
+    },
+  };
+
+  if (process.env.NODE_ENV === "development") {
+    console.log("umami", type, request);
+  }
+
+  if (!connection) {
+    return;
+  }
 
   (async () => {
     try {
       const response = await fetch(connection.collectUrl, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          type,
-
-          payload: {
-            website: connection.websiteId,
-            hostname: window.location.hostname,
-            screen: `${window.screen.width}x${window.screen.height}`,
-            language: navigator.language,
-            cache: localStorage.getItem("umami.cache") || undefined,
-
-            ...data,
-          },
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(request),
       });
 
-      localStorage.setItem("umami.cache", await response.text());
+      sessionStorage.setItem("umami.cache", await response.text());
     } catch {
       // ignored
     }
@@ -57,7 +66,9 @@ export function trackView(path: string, referrer = document.referrer) {
 
 /** Collects an event metric for the current page. */
 export function trackEvent(type: string, value: string) {
-  if (!currentPath) return;
+  if (!currentPath) {
+    return;
+  }
 
   collect("event", {
     url: currentPath,

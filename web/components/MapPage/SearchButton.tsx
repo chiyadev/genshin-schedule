@@ -3,6 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import TaskSearchModal from "../TaskSearchModal";
 import { useConfig } from "../../utils/configs";
 import { Button, HStack } from "@chakra-ui/react";
+import { trackEvent } from "../../utils/umami";
 
 const SearchButton = () => {
   const [open, setOpen] = useState(false);
@@ -20,7 +21,10 @@ const SearchButton = () => {
         p={1}
         borderRadius={0}
         fontWeight="normal"
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setOpen(true);
+          trackEvent("map", "taskSearch");
+        }}
       >
         {query ? `"${query}"` : "Search"}
       </Button>

@@ -21,6 +21,7 @@ import Tasks from "../../assets/tutorial/Tasks.jpg";
 import Map from "../../assets/tutorial/Map.jpg";
 import Domains from "../../assets/tutorial/Domains.jpg";
 import Message from "../../assets/tutorial/Message.jpg";
+import { trackEvent } from "../../utils/umami";
 
 type Page = "start" | "time" | "resin" | "tasks" | "map" | "domains" | "final";
 const Pages: Page[] = ["start", "time", "resin", "tasks", "map", "domains", "final"];
@@ -76,7 +77,10 @@ const TutorialModal = () => {
                 variant="ghost"
                 colorScheme="blue"
                 rightIcon={<Icon as={FaCheck} />}
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setOpen(false);
+                  trackEvent("tutorial", "hide");
+                }}
               >
                 Yes, Paimon
               </Button>
@@ -87,7 +91,7 @@ const TutorialModal = () => {
                 rightIcon={<Icon as={FaChevronRight} />}
                 onClick={() => setPage(Pages[Pages.indexOf(page) + 1])}
               >
-                Next
+                {page === Pages[0] ? "Start" : "Next"}
               </Button>
             )}
           </ModalFooter>

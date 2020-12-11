@@ -61,7 +61,10 @@ const Resin = () => {
             borderRadius={0}
             cursor={focus ? undefined : "pointer"}
             value={roundResin(current).toString()}
-            onClick={() => resinInput.current?.select()}
+            onClick={() => {
+              resinInput.current?.select();
+              trackEvent("resin", "edit");
+            }}
             onChange={({ currentTarget: { valueAsNumber } }) => {
               setResin({
                 value: roundResin(valueAsNumber || 0),

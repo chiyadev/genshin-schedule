@@ -21,6 +21,7 @@ import {
 } from "@chakra-ui/react";
 import { FaCheck, FaCode, FaCopy, FaPencilAlt } from "react-icons/fa";
 import { useConfigs } from "../../../utils/configs";
+import { trackEvent } from "../../../utils/umami";
 
 const ConfigExportButton = () => {
   const [open, setOpen] = useState(false);
@@ -34,7 +35,13 @@ const ConfigExportButton = () => {
 
   return (
     <>
-      <Button leftIcon={<Icon as={FaCode} />} onClick={() => setOpen(true)}>
+      <Button
+        leftIcon={<Icon as={FaCode} />}
+        onClick={() => {
+          setOpen(true);
+          trackEvent("dataManager", "show");
+        }}
+      >
         Manage data
       </Button>
 
@@ -65,7 +72,13 @@ const ConfigExportButton = () => {
 
             <ModalFooter>
               <HStack spacing={2}>
-                <Button leftIcon={<Icon as={hasCopied ? FaCheck : FaCopy} />} onClick={onCopy}>
+                <Button
+                  leftIcon={<Icon as={hasCopied ? FaCheck : FaCopy} />}
+                  onClick={() => {
+                    onCopy();
+                    trackEvent("dataManager", "copy");
+                  }}
+                >
                   {hasCopied ? "Copied" : "Copy"}
                 </Button>
 
@@ -84,6 +97,8 @@ const ConfigExportButton = () => {
                         description: "Input is invalid.",
                         isClosable: true,
                       });
+                    } finally {
+                      trackEvent("dataManager", "overwrite");
                     }
                   }}
                 >

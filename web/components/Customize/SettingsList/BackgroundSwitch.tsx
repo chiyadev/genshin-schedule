@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import { HStack, Icon, Select } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/configs";
 import { FaImage } from "react-icons/fa";
+import { trackEvent } from "../../../utils/umami";
 
 const BackgroundSwitch = () => {
   const [value, setValue] = useConfig("background");
@@ -13,7 +14,13 @@ const BackgroundSwitch = () => {
         <div>Background</div>
       </HStack>
 
-      <Select value={value} onChange={({ currentTarget: { value } }) => setValue(value as any)}>
+      <Select
+        value={value}
+        onChange={({ currentTarget: { value } }) => {
+          setValue(value as any);
+          trackEvent("background", value);
+        }}
+      >
         <option value="paimon">Paimon</option>
         <option value="klee">Klee</option>
         <option value="none">Disabled</option>

@@ -1,20 +1,30 @@
-import React, { memo, useState } from "react";
+import React, { memo, useCallback, useState } from "react";
 import { Button, chakra, Collapse, Icon, VStack } from "@chakra-ui/react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import TaskListCard from "../TaskListCard";
 import { useDueTasks } from "../../utils/tasks";
 import { useConfig } from "../../utils/configs";
 import { useHotkeys } from "react-hotkeys-hook";
+import { trackEvent } from "../../utils/umami";
 
 const TaskListOverlay = () => {
   const tasks = useDueTasks();
   const [hover, setHover] = useState(false);
   const [expanded, setExpanded] = useConfig("mapTaskList");
 
-  useHotkeys("l", (e) => {
+  const toggleExpand = useCallback(() => {
     setExpanded((v) => !v);
-    e.preventDefault();
-  });
+    trackEvent("map", "listToggle");
+  }, []);
+
+  useHotkeys(
+    "l",
+    (e) => {
+      toggleExpand();
+      e.preventDefault();
+    },
+    [toggleExpand]
+  );
 
   return (
     <VStack
@@ -40,7 +50,7 @@ const TaskListOverlay = () => {
           colorScheme="white"
           fontWeight="normal"
           leftIcon={<Icon as={expanded ? FaChevronDown : FaChevronUp} />}
-          onClick={() => setExpanded((v) => !v)}
+          onClick={toggleExpand}
         >
           <span>
             {expanded ? <span>Hide list</span> : <span>Show list</span>}
