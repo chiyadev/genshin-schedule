@@ -89,10 +89,7 @@ namespace GenshinSchedule.SyncServer.Controllers
                 if (notification == null)
                     await _db.Notifications.AddAsync(notification = new DbNotification());
 
-                notification.User = new DbUser
-                {
-                    Id = userId
-                };
+                notification.User = _db.Users.Attach(new DbUser { Id = userId }).Entity;
 
                 notification.Key         = key;
                 notification.Time        = model.Time;
@@ -104,7 +101,7 @@ namespace GenshinSchedule.SyncServer.Controllers
 
                 await _db.SaveChangesAsync();
 
-                _actions.Labels("update").Inc();
+                _actions.Labels("set").Inc();
 
                 return Ok($"Notification '{key}' updated.");
             }
