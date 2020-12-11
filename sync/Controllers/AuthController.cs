@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using GenshinSchedule.SyncServer.Database;
 using GenshinSchedule.SyncServer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -25,11 +26,35 @@ namespace GenshinSchedule.SyncServer.Controllers
             _logger = logger;
         }
 
+        [HttpGet, Authorize]
+        public async Task<ActionResult<User>> GetAsync()
+        {
+            var userId = HttpContext.GetUserId();
+
+            try
+            {
+                var user = await _db.Users.AsNoTracking().Include(u => u.WebData).FirstOrDefaultAsync(u => u.Id == userId);
+
+                if (user == null)
+                    return Forbid(AuthHandler.SchemeName);
+
+                return Models.User.FromDbModel(user);
+            }
+            catch (Exception e)
+            {
+                var message = $"Could not retrieve user {userId}.";
+
+                _logger.LogWarning(e, message);
+
+                return StatusCode(500, message);
+            }
+        }
+
         static readonly Counter _registrations = Metrics.CreateCounter("auth_registrations", "Number of new registrations.");
         static readonly Counter _authorizations = Metrics.CreateCounter("auth_authorizations", "Number of account authorizations.");
 
         [HttpPost]
-        public async Task<ActionResult<AuthResponse>> AuthAsync(AuthRequest request)
+        public async Task<ActionResult<AuthResponse>> PostAsync(AuthRequest request)
         {
             try
             {
