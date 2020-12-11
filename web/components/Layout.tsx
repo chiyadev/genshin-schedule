@@ -10,6 +10,7 @@ import ChangelogModal from "./ChangelogModal";
 import TutorialModal from "./TutorialModal";
 import NextLink from "next/link";
 import { FaBell } from "react-icons/fa";
+import { useSync } from "../utils/configs";
 
 const Layout = ({
   children,
@@ -21,6 +22,7 @@ const Layout = ({
   layout?: boolean;
 }) => {
   const [shortcuts, setShortcuts] = useState(false);
+  const { enabled: syncEnabled } = useSync();
 
   return (
     <>
@@ -39,14 +41,16 @@ const Layout = ({
               <Background />
               <Header
                 menu={
-                  <NextLink href="/customize/notifications" passHref>
-                    <Link>
-                      <HStack spacing={1}>
-                        <Icon as={FaBell} />
-                        <div>Notifications</div>
-                      </HStack>
-                    </Link>
-                  </NextLink>
+                  syncEnabled && (
+                    <NextLink href="/customize/notifications" passHref>
+                      <Link>
+                        <HStack spacing={1}>
+                          <Icon as={FaBell} />
+                          <div>Notifications</div>
+                        </HStack>
+                      </Link>
+                    </NextLink>
+                  )
                 }
               />
               <chakra.div p={4}>{children}</chakra.div>

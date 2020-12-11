@@ -9,7 +9,15 @@ const MessageDisplay = () => {
   const { onCopy, hasCopied } = useClipboard(message);
 
   // don't return token in html, read using js
-  useEffect(() => setMessage(`enable ||${getAuthToken()}||`), []);
+  useEffect(() => {
+    const token = getAuthToken();
+
+    if (token) {
+      setMessage(`enable ||${token}||`);
+    } else {
+      setMessage("You are not signed in yet.");
+    }
+  }, []);
 
   return (
     <InputGroup>
