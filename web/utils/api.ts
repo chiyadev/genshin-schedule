@@ -33,11 +33,13 @@ export type SyncResponse = {
   token: string;
 };
 
-export const PublicApiUrl = process.env.NEXT_PUBLIC_API_PUBLIC || "https://genshin.chiya.dev/api/v1";
-export const InternalApiUrl = process.env.NEXT_PUBLIC_API_INTERNAL || PublicApiUrl;
+export const ApiUrlDefault = "https://genshin.chiya.dev/api/v1";
+export const ApiUrlOverride = localStorage.getItem("api");
+export const ApiUrlPublic = ApiUrlOverride || process.env.NEXT_PUBLIC_API_PUBLIC || ApiUrlDefault;
+export const ApiUrlInternal = process.env.NEXT_PUBLIC_API_INTERNAL || ApiUrlPublic;
 
 export function createApiClient(ctx?: Pick<GetServerSidePropsContext, "req">): ApiClient {
-  return new ApiClient(ctx?.req ? InternalApiUrl : PublicApiUrl, getAuthToken(ctx));
+  return new ApiClient(ctx?.req ? ApiUrlInternal : ApiUrlPublic, getAuthToken(ctx));
 }
 
 export function getAuthToken(ctx?: Pick<GetServerSidePropsContext, "req">): string | undefined {
