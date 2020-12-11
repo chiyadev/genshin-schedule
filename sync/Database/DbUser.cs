@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace GenshinSchedule.SyncServer.Database
 {
@@ -11,5 +12,6 @@ namespace GenshinSchedule.SyncServer.Database
         public DateTime CreatedTime { get; set; }
 
         public DbWebData WebData { get; set; }
+        public List<DbNotification> Notifications { get; set; }
     }
 }
