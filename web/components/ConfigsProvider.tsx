@@ -105,6 +105,7 @@ const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; 
 
   const toast = useToast();
   const signals: PromiseSignal<void>[] = useMemo(() => [], []);
+  const callbacks: Set<() => Promise<void>> = useMemo(() => new Set(), []);
 
   useEffect(() => {
     let mounted = true;
@@ -119,6 +120,9 @@ const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; 
         }
 
         setSync(true);
+
+        const callbackPromise = Promise.all(Array.from(callbacks).map((c) => c()));
+        callbacks.clear();
 
         try {
           const patch = [...patchQueue];
@@ -138,9 +142,12 @@ const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; 
               break;
           }
 
+          await callbackPromise;
+
           signals.forEach((signal) => signal.resolve());
         } catch (e) {
           console.error(e);
+
           signals.forEach((signal) => signal.reject(e));
 
           toast({
@@ -175,8 +182,9 @@ const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; 
               signals.push(signal);
               return signal.promise;
             },
+            callbacks,
           }),
-          [pushPatches, signals]
+          [pushPatches, signals, callbacks]
         )}
       >
         {children}

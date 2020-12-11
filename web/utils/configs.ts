@@ -6,6 +6,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useRef,
   useState,
 } from "react";
 import { ResinCap } from "../db/resins";
@@ -180,11 +181,44 @@ export function useConfig<TKey extends keyof Configs>(
 export const SyncContext = createContext<{
   enabled: boolean;
   synchronize: () => Promise<void>;
+  callbacks: Set<() => Promise<void>>;
 }>({
   enabled: false,
   synchronize: () => Promise.resolve(),
+  callbacks: new Set(),
 });
 
 export function useSync() {
   return useContext(SyncContext);
+}
+
+export function useSyncEffect(callback: () => Promise<void> | void, deps: any[]) {
+  const { callbacks } = useSync();
+  const lastDeps = useRef(deps);
+
+  useEffect(() => {
+    const handler = async () => {
+      if (!compareDeps(deps, lastDeps.current)) {
+        await callback();
+      }
+
+      lastDeps.current = deps;
+    };
+
+    callbacks.add(handler);
+    return () => {
+      callbacks.delete(handler);
+    };
+  }, [callbacks, callback, ...deps]);
+}
+
+function compareDeps(a: any[], b: any[]) {
+  if (a === b) return true;
+  if (a.length !== b.length) return false;
+
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) return false;
+  }
+
+  return true;
 }

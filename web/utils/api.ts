@@ -6,12 +6,22 @@ import node_fetch from "node-fetch";
 
 export type User = {
   username: string;
-  createdTime: string;
+  createdTime: number;
 };
 
 export type WebData = {
   token: string;
   data: Partial<Configs>;
+};
+
+export type Notification = {
+  key: string;
+  time: number;
+  icon: string;
+  title: string;
+  description: string;
+  url: string;
+  color: string;
 };
 
 export type AuthRequest = {
@@ -34,8 +44,7 @@ export type SyncResponse = {
 };
 
 export const ApiUrlDefault = "https://genshin.chiya.dev/api/v1";
-export const ApiUrlOverride = localStorage.getItem("api");
-export const ApiUrlPublic = ApiUrlOverride || process.env.NEXT_PUBLIC_API_PUBLIC || ApiUrlDefault;
+export const ApiUrlPublic = process.env.NEXT_PUBLIC_API_PUBLIC || ApiUrlDefault;
 export const ApiUrlInternal = process.env.NEXT_PUBLIC_API_INTERNAL || ApiUrlPublic;
 
 export function createApiClient(ctx?: Pick<GetServerSidePropsContext, "req">): ApiClient {
@@ -90,10 +99,9 @@ export class ApiClient {
   }
 
   async getSync(): Promise<WebData> {
-    const response = await fetch(`${this.baseUrl}/sync`, {
+    const response = await this.fetch(`${this.baseUrl}/sync`, {
       method: "GET",
       headers: {
-        "content-type": "application/json",
         authorization: `Bearer ${this.token}`,
       },
     });
@@ -108,7 +116,7 @@ export class ApiClient {
   async patchSync(
     request: SyncRequest
   ): Promise<({ type: "success" } & SyncResponse) | ({ type: "failure" } & WebData)> {
-    const response = await fetch(`${this.baseUrl}/sync`, {
+    const response = await this.fetch(`${this.baseUrl}/sync`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json-patch+json",
@@ -128,6 +136,64 @@ export class ApiClient {
         type: "failure",
       };
     } else {
+      throw Error(await response.text());
+    }
+  }
+
+  async listNotifications(): Promise<Notification[]> {
+    const response = await this.fetch(`${this.baseUrl}/notifications`, {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${this.token}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw Error(await response.text());
+    } else {
+      return await response.json();
+    }
+  }
+
+  async getNotification(key: string): Promise<Notification> {
+    const response = await this.fetch(`${this.baseUrl}/notifications/${key}`, {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${this.token}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw Error(await response.text());
+    } else {
+      return await response.json();
+    }
+  }
+
+  async setNotification(notification: Notification) {
+    const response = await this.fetch(`${this.baseUrl}/notifications/${notification.key}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        authorization: `Bearer ${this.token}`,
+      },
+      body: JSON.stringify(notification),
+    });
+
+    if (!response.ok) {
+      throw Error(await response.text());
+    }
+  }
+
+  async deleteNotification(key: string) {
+    const response = await this.fetch(`${this.baseUrl}/notifications/${key}`, {
+      method: "DELETE",
+      headers: {
+        authorization: `Bearer ${this.token}`,
+      },
+    });
+
+    if (!response.ok) {
       throw Error(await response.text());
     }
   }
