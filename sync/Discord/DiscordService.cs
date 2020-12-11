@@ -32,7 +32,8 @@ namespace GenshinSchedule.SyncServer.Discord
 
             var client = new DiscordSocketClient(new DiscordSocketConfig
             {
-                LogLevel = LogSeverity.Debug
+                LogLevel            = LogSeverity.Debug,
+                AlwaysDownloadUsers = true
             });
 
             client.Log += log =>

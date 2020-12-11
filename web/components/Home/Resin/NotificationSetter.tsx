@@ -31,7 +31,7 @@ const NotificationSetter = () => {
         key: "resin",
         time: capTime,
         icon: Resin,
-        title: "Resin Recharged!",
+        title: "Resin recharged!",
         description: "Your resins have been fully recharged, traveler~",
         url: asPath,
         color,
