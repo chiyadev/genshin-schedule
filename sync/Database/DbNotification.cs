@@ -1,3 +1,5 @@
+using System;
+
 namespace GenshinSchedule.SyncServer.Database
 {
     public class DbNotification
@@ -7,7 +9,7 @@ namespace GenshinSchedule.SyncServer.Database
 
         public DbUser User { get; set; }
 
-        public long Time { get; set; }
+        public DateTimeOffset Time { get; set; }
         public string Icon { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }

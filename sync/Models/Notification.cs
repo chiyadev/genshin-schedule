@@ -29,7 +29,7 @@ namespace GenshinSchedule.SyncServer.Models
         public static Notification FromDbModel(DbNotification notification) => new Notification
         {
             Key         = notification.Key,
-            Time        = notification.Time,
+            Time        = notification.Time.ToUnixTimeMilliseconds(),
             Icon        = notification.Icon,
             Title       = notification.Title,
             Description = notification.Description,

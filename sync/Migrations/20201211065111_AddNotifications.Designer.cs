@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GenshinSchedule.SyncServer.Migrations
 {
     [DbContext(typeof(SyncDbContext))]
-    [Migration("20201211054503_AddNotifications")]
+    [Migration("20201211065111_AddNotifications")]
     partial class AddNotifications
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,8 +40,8 @@ namespace GenshinSchedule.SyncServer.Migrations
                     b.Property<string>("Key")
                         .HasColumnType("text");
 
-                    b.Property<long>("Time")
-                        .HasColumnType("bigint");
+                    b.Property<DateTimeOffset>("Time")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Title")
                         .HasColumnType("text");
@@ -70,8 +70,8 @@ namespace GenshinSchedule.SyncServer.Migrations
                         .HasColumnType("integer")
                         .UseIdentityByDefaultColumn();
 
-                    b.Property<DateTime>("CreatedTime")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<DateTimeOffset>("CreatedTime")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<byte[]>("Password")
                         .HasColumnType("bytea");

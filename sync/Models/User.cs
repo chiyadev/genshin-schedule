@@ -1,4 +1,3 @@
-using System;
 using GenshinSchedule.SyncServer.Database;
 using Newtonsoft.Json;
 
@@ -10,12 +9,12 @@ namespace GenshinSchedule.SyncServer.Models
         public string Username { get; set; }
 
         [JsonProperty("createdTime")]
-        public DateTime CreatedTime { get; set; }
+        public long CreatedTime { get; set; }
 
         public static User FromDbModel(DbUser user) => new User
         {
             Username    = user.Username,
-            CreatedTime = user.CreatedTime
+            CreatedTime = user.CreatedTime.ToUnixTimeMilliseconds()
         };
     }
 }

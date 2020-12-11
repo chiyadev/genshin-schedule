@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace GenshinSchedule.SyncServer.Migrations
@@ -7,6 +8,14 @@ namespace GenshinSchedule.SyncServer.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AlterColumn<DateTimeOffset>(
+                name: "CreatedTime",
+                table: "Users",
+                type: "timestamp with time zone",
+                nullable: false,
+                oldClrType: typeof(DateTime),
+                oldType: "timestamp without time zone");
+
             migrationBuilder.CreateTable(
                 name: "Notifications",
                 columns: table => new
@@ -15,7 +24,7 @@ namespace GenshinSchedule.SyncServer.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Key = table.Column<string>(type: "text", nullable: true),
                     UserId = table.Column<int>(type: "integer", nullable: true),
-                    Time = table.Column<long>(type: "bigint", nullable: false),
+                    Time = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
                     Icon = table.Column<string>(type: "text", nullable: true),
                     Title = table.Column<string>(type: "text", nullable: true),
                     Description = table.Column<string>(type: "text", nullable: true),
@@ -53,6 +62,14 @@ namespace GenshinSchedule.SyncServer.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Notifications");
+
+            migrationBuilder.AlterColumn<DateTime>(
+                name: "CreatedTime",
+                table: "Users",
+                type: "timestamp without time zone",
+                nullable: false,
+                oldClrType: typeof(DateTimeOffset),
+                oldType: "timestamp with time zone");
         }
     }
 }

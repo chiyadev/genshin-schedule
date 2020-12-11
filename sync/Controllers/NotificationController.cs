@@ -92,7 +92,7 @@ namespace GenshinSchedule.SyncServer.Controllers
                 notification.User = _db.Users.Attach(new DbUser { Id = userId }).Entity;
 
                 notification.Key         = key;
-                notification.Time        = model.Time;
+                notification.Time        = DateTimeOffset.FromUnixTimeMilliseconds(model.Time);
                 notification.Icon        = model.Icon;
                 notification.Title       = model.Title;
                 notification.Description = model.Description;

@@ -36,8 +36,8 @@ namespace GenshinSchedule.SyncServer.Migrations
                     b.Property<string>("Key")
                         .HasColumnType("text");
 
-                    b.Property<long>("Time")
-                        .HasColumnType("bigint");
+                    b.Property<DateTimeOffset>("Time")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Title")
                         .HasColumnType("text");
@@ -66,8 +66,8 @@ namespace GenshinSchedule.SyncServer.Migrations
                         .HasColumnType("integer")
                         .UseIdentityByDefaultColumn();
 
-                    b.Property<DateTime>("CreatedTime")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<DateTimeOffset>("CreatedTime")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<byte[]>("Password")
                         .HasColumnType("bytea");

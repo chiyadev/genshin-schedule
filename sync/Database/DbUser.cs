@@ -9,7 +9,7 @@ namespace GenshinSchedule.SyncServer.Database
 
         public string Username { get; set; }
         public byte[] Password { get; set; }
-        public DateTime CreatedTime { get; set; }
+        public DateTimeOffset CreatedTime { get; set; }
 
         public DbWebData WebData { get; set; }
         public List<DbNotification> Notifications { get; set; }
