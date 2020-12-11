@@ -6,6 +6,13 @@ import { FaBullhorn } from "react-icons/fa";
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={7} date="2020/12/12">
+      <ChangelogItem>Created an experimental Discord notification bot.</ChangelogItem>
+      <ChangelogItem>
+        Changed timestamp calculation to record absolute time regardless of server timezone. Existing schedule may be
+        desynchronized for a few hours after this update deployment.
+      </ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={6} date="2020/12/11">
       <ChangelogItem>Added a Klee background option.</ChangelogItem>
       <ChangelogItem>Added a friendly website tutorial for first time users.</ChangelogItem>
