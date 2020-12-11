@@ -84,7 +84,7 @@ namespace GenshinSchedule.SyncServer.Controllers
 
             try
             {
-                var notification = await _db.Notifications.FirstOrDefaultAsync(n => n.User.Id == userId && n.Key == key);
+                var notification = await _db.Notifications.AsTracking().FirstOrDefaultAsync(n => n.User.Id == userId && n.Key == key);
 
                 if (notification == null)
                     await _db.Notifications.AddAsync(notification = new DbNotification());
@@ -122,7 +122,7 @@ namespace GenshinSchedule.SyncServer.Controllers
 
             try
             {
-                var notification = await _db.Notifications.FirstOrDefaultAsync(n => n.User.Id == userId && n.Key == key);
+                var notification = await _db.Notifications.AsTracking().FirstOrDefaultAsync(n => n.User.Id == userId && n.Key == key);
 
                 if (notification != null)
                 {

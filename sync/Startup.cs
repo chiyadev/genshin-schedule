@@ -1,4 +1,5 @@
 using GenshinSchedule.SyncServer.Database;
+using GenshinSchedule.SyncServer.Discord;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -36,6 +37,9 @@ namespace GenshinSchedule.SyncServer
                 services.AddSingleton<IMetricsService, MetricsService>()
                         .AddTransient<IHostedService>(s => s.GetService<IMetricsService>());
             }
+
+            services.AddHostedService<DiscordService>()
+                    .AddSingleton<NotificationService>();
         }
 
         public void Configure(IApplicationBuilder app)

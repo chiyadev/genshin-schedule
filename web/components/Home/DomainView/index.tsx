@@ -20,7 +20,7 @@ import { FaTimes } from "react-icons/fa";
 import { Artifact, Artifacts } from "../../../db/artifacts";
 import DomainDisplay from "./DomainDisplay";
 import WidgetWrapper from "../WidgetWrapper";
-import { chakra, Icon, Link, VStack } from "@chakra-ui/react";
+import { HStack, Icon, Link, VStack } from "@chakra-ui/react";
 
 export type ScheduledDomain = {
   domain: Domain;
@@ -173,14 +173,16 @@ const DomainView = () => {
             ))}
           </VStack>
         ) : (
-          <chakra.div color="white">
+          <HStack spacing={2} color="white">
             <Icon as={FaTimes} />
-            <span> No domains for today. Maybe try some </span>
-            <Link href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops" isExternal>
-              Ley Line
-            </Link>
-            <span>s?</span>
-          </chakra.div>
+            <div>
+              <span>No domains for today. Maybe try some </span>
+              <Link href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops" isExternal>
+                Ley Line
+              </Link>
+              <span>s?</span>
+            </div>
+          </HStack>
         )}
       </WidgetWrapper>
     ),
