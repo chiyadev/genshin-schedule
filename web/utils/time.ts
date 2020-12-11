@@ -37,11 +37,9 @@ export function useServerTime(updateHz = 100) {
   const offsetHours = useServerTimeZone();
   const [offsetDays] = useConfig("offsetDays");
 
-  // this is not actually correct, proper implementation should not modify the hour part and instead use setZone
-  // however, this behavior must be kept in order to preserve backward compatibility with existing timestamps
-  return DateTime.utc().plus({ hours: offsetHours, days: offsetDays });
-
-  // return DateTime.utc().plus({ days: offsetDays }).setZone(`UTC${offsetHours}`)
+  return DateTime.utc()
+    .plus({ days: offsetDays })
+    .setZone(offsetHours > 0 ? `UTC+${offsetHours}` : `UTC${offsetHours}`);
 }
 
 export function useServerTimeZone() {
