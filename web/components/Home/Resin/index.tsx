@@ -12,6 +12,7 @@ import { chakra, css, HStack, Input, Spacer, useTheme } from "@chakra-ui/react";
 import { useMeasuredTextWidth } from "../../../utils/dom";
 import { motion } from "framer-motion";
 import { useServerTime } from "../../../utils/time";
+import NotificationSetter from "./NotificationSetter";
 
 const estimateModes: Configs["resinEstimateMode"][] = ["time", "value"];
 
@@ -32,6 +33,8 @@ const Resin = () => {
 
   return (
     <WidgetWrapper type="resin" heading="Resin Calculator" onHover={setHover}>
+      <NotificationSetter />
+
       <WhiteCard>
         <HStack spacing={2}>
           <chakra.img
