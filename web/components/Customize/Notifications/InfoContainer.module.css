@@ -1,0 +1,27 @@
+@media (min-width: 48em) {
+    .container {
+        flex-direction: row;
+    }
+
+    .container > :first-child {
+        margin-right: 1rem;
+    }
+
+    .container > :last-child {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container > :first-child {
+        margin-bottom: 1rem;
+    }
+
+    .container > :last-child {
+        height: 32rem;
+    }
+}

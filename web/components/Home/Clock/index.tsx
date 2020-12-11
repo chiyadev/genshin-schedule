@@ -4,15 +4,18 @@ import ServerText from "./ServerText";
 import TimeDisplay from "./TimeDisplay";
 import DateDisplay from "./DateDisplay";
 import OffsetAlert from "./OffsetAlert";
-import { chakra, DarkMode, Icon } from "@chakra-ui/react";
+import { chakra, DarkMode, HStack, Icon } from "@chakra-ui/react";
 
 const Clock = () => {
   return (
     <DarkMode>
       <chakra.div textAlign="center" color="white">
-        <chakra.div fontSize="lg">
-          <Icon as={FaClock} /> Time in Teyvat (<ServerText />)
-        </chakra.div>
+        <HStack fontSize="lg" spacing={2} justify="center">
+          <Icon as={FaClock} />
+          <div>
+            Time in Teyvat (<ServerText />)
+          </div>
+        </HStack>
 
         <TimeDisplay />
         <DateDisplay />
