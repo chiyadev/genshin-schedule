@@ -12,7 +12,12 @@ namespace GenshinSchedule.SyncServer.Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<DbUser>(user => user.HasIndex(u => u.Username).IsUnique());
+            modelBuilder.Entity<DbUser>(user =>
+            {
+                user.HasIndex(u => u.Username).IsUnique();
+                user.HasIndex(u => u.DiscordUserId);
+            });
+
             modelBuilder.Entity<DbWebData>(data => data.HasIndex(d => d.Token).IsUnique());
 
             modelBuilder.Entity<DbNotification>(notification =>

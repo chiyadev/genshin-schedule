@@ -11,6 +11,8 @@ namespace GenshinSchedule.SyncServer.Database
         public byte[] Password { get; set; }
         public DateTimeOffset CreatedTime { get; set; }
 
+        public ulong? DiscordUserId { get; set; }
+
         public DbWebData WebData { get; set; }
         public List<DbNotification> Notifications { get; set; }
     }

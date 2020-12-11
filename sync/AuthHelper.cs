@@ -47,7 +47,7 @@ namespace GenshinSchedule.SyncServer
         {
             payload = null;
 
-            var parts = token.Split(".");
+            var parts = (token ?? "").Split(".");
 
             if (parts.Length != 2)
                 return false;

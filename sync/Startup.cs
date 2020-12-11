@@ -39,6 +39,7 @@ namespace GenshinSchedule.SyncServer
             }
 
             services.AddHostedService<DiscordService>()
+                    .AddSingleton<CommandHandler>()
                     .AddSingleton<NotificationService>();
         }
 
