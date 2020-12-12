@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { FaGithub, FaHeart, FaKeyboard, FaQuestion } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaHeart, FaKeyboard, FaQuestion } from "react-icons/fa";
 import { chakra, DarkMode, HStack, Icon, Link, Tooltip, VStack } from "@chakra-ui/react";
 import NextLink from "next/link";
 
@@ -34,6 +34,12 @@ const Footer = ({ showShortcuts }: { showShortcuts?: () => void }) => {
           <Tooltip label="Help">
             <Link href="https://github.com/chiyadev/genshin-schedule/wiki" isExternal>
               <Icon as={FaQuestion} />
+            </Link>
+          </Tooltip>
+
+          <Tooltip label="Discord">
+            <Link href="https://discord.gg/XdPQeEaBE7" isExternal>
+              <Icon as={FaDiscord} />
             </Link>
           </Tooltip>
 
