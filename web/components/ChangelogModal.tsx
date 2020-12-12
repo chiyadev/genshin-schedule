@@ -1,8 +1,10 @@
-import React, { memo, ReactNode, useMemo } from "react";
+import React, { memo, ReactNode, useEffect, useMemo } from "react";
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/modal";
 import { useConfig } from "../utils/configs";
 import { Divider, Heading, HStack, Icon, Link, ListItem, UnorderedList, VStack } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
+
+const LatestChangelog = 7;
 
 function buildChangelog() {
   return [
@@ -49,6 +51,17 @@ function buildChangelog() {
 const ChangelogModal = () => {
   const [version, setVersion] = useConfig("lastChangelog");
   const changelog = useMemo(buildChangelog, []);
+
+  useEffect(() => {
+    // on init, set version to latest
+    if (!version) {
+      setVersion(LatestChangelog);
+    }
+  }, [version]);
+
+  if (!version) {
+    return null;
+  }
 
   return (
     <Modal isOpen={version !== changelog.length} onClose={() => setVersion(changelog.length)} size="lg">

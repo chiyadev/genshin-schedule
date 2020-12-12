@@ -85,7 +85,7 @@ const LocalConfigsProvider = ({ children }: { children?: ReactNode }) => {
 };
 
 const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; children?: ReactNode }) => {
-  const [value, setValue] = useState(() => ({ ...DefaultConfigs, ...initial.data }));
+  const [value, setValue] = useState(() => ({ ...DefaultConfigs, tutorial: false, ...initial.data }));
   const [, setSync] = useState(false);
 
   const lastValue = useRef(initial.data);
@@ -203,6 +203,20 @@ const ConfigsContextRoot = ({
   children?: ReactNode;
 }) => {
   const ref = useRef(value);
+
+  const set = useCallback(
+    (newValue: SetStateAction<Configs>) => {
+      setValue((value) => {
+        if (typeof newValue === "function") {
+          newValue = newValue(value);
+        }
+
+        return { ...DefaultConfigs, ...newValue };
+      });
+    },
+    [setValue]
+  );
+
   const events = useMemo(() => new MultiMap<string, () => void>(), []);
 
   useEffect(() => {
@@ -227,10 +241,10 @@ const ConfigsContextRoot = ({
       value={useMemo(
         () => ({
           ref,
-          set: setValue,
+          set,
           events,
         }),
-        [ref, setValue, events]
+        [ref, set, events]
       )}
     >
       {children}

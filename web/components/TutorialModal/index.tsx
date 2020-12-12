@@ -7,6 +7,7 @@ import {
   LightMode,
   Modal,
   ModalBody,
+  ModalCloseButton,
   ModalContent,
   ModalFooter,
   ModalOverlay,
@@ -45,6 +46,8 @@ const TutorialModal = () => {
         <ModalOverlay />
         <ModalContent>
           <ModalBody pt={5} px={8}>
+            <ModalCloseButton />
+
             {(() => {
               switch (page) {
                 case "start":
