@@ -24,8 +24,8 @@ import Domains from "../../assets/tutorial/Domains.jpg";
 import Message from "../../assets/tutorial/Message.jpg";
 import { trackEvent } from "../../utils/umami";
 
-type Page = "start" | "time" | "resin" | "tasks" | "map" | "domains" | "final";
-const Pages: Page[] = ["start", "time", "resin", "tasks", "map", "domains", "final"];
+type Page = "start" | "time" | "resin" | "tasks" | "map" | "domains" | "message";
+const Pages: Page[] = ["start", "time", "resin", "tasks", "map", "domains", "message"];
 
 const TutorialModal = () => {
   const [open, setOpen] = useConfig("tutorial");
@@ -48,30 +48,33 @@ const TutorialModal = () => {
           <ModalBody pt={5} px={8}>
             <ModalCloseButton />
 
-            {(() => {
-              switch (page) {
-                case "start":
-                  return <StartPage />;
+            <PageWrapper visible={page === "start"}>
+              <StartPage />
+            </PageWrapper>
 
-                case "time":
-                  return <TimePage />;
+            <PageWrapper visible={page === "time"}>
+              <TimePage />
+            </PageWrapper>
 
-                case "resin":
-                  return <ResinPage />;
+            <PageWrapper visible={page === "resin"}>
+              <ResinPage />
+            </PageWrapper>
 
-                case "tasks":
-                  return <TasksPage />;
+            <PageWrapper visible={page === "tasks"}>
+              <TasksPage />
+            </PageWrapper>
 
-                case "map":
-                  return <MapPage />;
+            <PageWrapper visible={page === "map"}>
+              <MapPage />
+            </PageWrapper>
 
-                case "domains":
-                  return <DomainsPage />;
+            <PageWrapper visible={page === "domains"}>
+              <DomainsPage />
+            </PageWrapper>
 
-                case "final":
-                  return <FinalPage />;
-              }
-            })()}
+            <PageWrapper visible={page === "message"}>
+              <MessagePage />
+            </PageWrapper>
           </ModalBody>
 
           <ModalFooter>
@@ -102,6 +105,10 @@ const TutorialModal = () => {
       </Modal>
     </LightMode>
   );
+};
+
+const PageWrapper = ({ children, visible = true }: { children?: ReactNode; visible?: boolean }) => {
+  return <chakra.div d={visible ? "block" : "none"}>{children}</chakra.div>;
 };
 
 const PageTemplate = ({
@@ -176,7 +183,7 @@ const DomainsPage = () => {
   );
 };
 
-const FinalPage = () => {
+const MessagePage = () => {
   return (
     <PageTemplate image={<chakra.img src={Message} w="xs" />} heading="Paimon's Message">
       <p>
