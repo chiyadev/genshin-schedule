@@ -24,7 +24,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 const Home = ({ data }: Props) => {
   return (
     <ConfigsProvider initial={data}>
-      <Layout>
+      <Layout title={["Notifications"]}>
         <InfoContainer main={<Info />} sub={<DiscordWidget />} />
       </Layout>
     </ConfigsProvider>

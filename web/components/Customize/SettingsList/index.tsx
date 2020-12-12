@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { DarkMode, HStack, Icon, VStack } from "@chakra-ui/react";
+import { DarkMode, HStack, Icon, VStack, Wrap, WrapItem } from "@chakra-ui/react";
 import { FaCog } from "react-icons/fa";
 import BackgroundSwitch from "./BackgroundSwitch";
 import SignOutButton from "./SignOutButton";
@@ -20,11 +20,17 @@ const SettingsList = () => {
           <BackgroundSwitch />
           <TaskDefaultZoomSlider />
 
-          <HStack spacing={2}>
-            <ViewTutorialButton />
-            <ConfigExportButton />
-            <SignOutButton />
-          </HStack>
+          <Wrap spacing={2}>
+            <WrapItem>
+              <ViewTutorialButton />
+            </WrapItem>
+            <WrapItem>
+              <ConfigExportButton />
+            </WrapItem>
+            <WrapItem>
+              <SignOutButton />
+            </WrapItem>
+          </Wrap>
         </VStack>
       </DarkMode>
     </VStack>
