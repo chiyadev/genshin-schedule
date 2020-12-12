@@ -4,7 +4,7 @@ import TaskList from "../components/Home/Tasks";
 import Info from "../components/Home/Info";
 import Resin from "../components/Home/Resin";
 import Clock from "../components/Home/Clock";
-import Sync from "../components/Home/Sync";
+import SignIn from "../components/Home/SignIn";
 import Layout from "../components/Layout";
 import { GetServerSideProps } from "next";
 import { createApiClient, WebData } from "../utils/api";
@@ -32,7 +32,7 @@ const Home = ({ data }: Props) => {
         <VStack align="stretch" spacing={12}>
           <Clock />
           <Info />
-          <Sync />
+          <SignIn />
           <Resin />
           <TaskList />
           <DomainList />

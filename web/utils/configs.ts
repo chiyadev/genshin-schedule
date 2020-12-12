@@ -42,7 +42,7 @@ export type Configs = {
   mapTaskList: boolean;
   background: "paimon" | "klee" | "none";
   hiddenWidgets: {
-    [key in "clock" | "info" | "sync" | "resin" | "tasks" | "domains"]?: boolean;
+    [key in "signIn" | "clock" | "info" | "sync" | "resin" | "tasks" | "domains"]?: boolean;
   };
   tutorial: boolean;
   lastChangelog: number;
