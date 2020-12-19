@@ -87,6 +87,7 @@ add("Skyward Spine", DandelionGladiator, [ChaosPart, SamachurlScroll]);
 add("Traveler's Handy Sword", DandelionGladiator, [ChaosPart, SamachurlScroll]);
 add("White Iron Greatsword", DandelionGladiator, [ChaosPart, Slime]);
 add("Wolf's Gravestone", DandelionGladiator, [ChaosPart, SamachurlScroll]);
+add("Amos' Bow", DandelionGladiator, [ChaosPart, Slime]);
 
 add("Blackcliff Warbow", Guyun, [FatuiKnife, TreasureHoarderInsignia]);
 add("Crescent Pike", Guyun, [FatuiKnife, TreasureHoarderInsignia]);

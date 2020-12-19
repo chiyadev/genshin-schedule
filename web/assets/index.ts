@@ -5,6 +5,7 @@ import AgnidusAgateSliver from "./game/Agnidus Agate Sliver.png";
 import AlleyHunter from "./game/Alley Hunter.png";
 import Almond from "./game/Almond.png";
 import Amber from "./game/Amber.png";
+import AmosBow from "./game/Amos' Bow.png";
 import Anemo from "./game/Anemo.png";
 import Apple from "./game/Apple.png";
 import AquilaFavonia from "./game/Aquila Favonia.png";
@@ -244,6 +245,7 @@ export {
   AlleyHunter,
   Almond,
   Amber,
+  AmosBow,
   Anemo,
   Apple,
   AquilaFavonia,
@@ -485,6 +487,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Alley Hunter": return AlleyHunter;
     case "Almond": return Almond;
     case "Amber": return Amber;
+    case "Amos' Bow": return AmosBow;
     case "Anemo": return Anemo;
     case "Apple": return Apple;
     case "Aquila Favonia": return AquilaFavonia;
