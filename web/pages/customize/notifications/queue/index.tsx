@@ -27,7 +27,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 const Home = ({ data, queue }: Props) => {
   return (
     <ConfigsProvider initial={data}>
-      <Layout title={["Notification queue"]}>
+      <Layout title={["Notification Queue"]}>
         <VStack align="stretch" spacing={4}>
           <chakra.div color="white">Notification queue:</chakra.div>
 

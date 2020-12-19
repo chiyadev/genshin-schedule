@@ -9,16 +9,18 @@ import { chakra, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import SearchButton from "./SearchButton";
 import { useHotkeys } from "react-hotkeys-hook";
+import { useConfig } from "../../../utils/configs";
 
 const MapCore = dynamic(() => import("../../Map"), { ssr: false });
 
 const TaskList = () => {
-  const tasks = useDueTasks();
+  const [tasks] = useConfig("tasks");
+  const dueTasks = useDueTasks(tasks);
   const mapRef = useRef<HTMLDivElement>(null);
 
   const scrollToMap = useCallback(() => {
     mapRef.current?.scrollIntoView({
-      block: "center",
+      block: "center"
     });
   }, []);
 
@@ -34,11 +36,11 @@ const TaskList = () => {
   return (
     <WidgetWrapper
       type="tasks"
-      heading={<span>Today&apos;s Tasks{!!tasks.length && <span> ({tasks.length})</span>}</span>}
+      heading={<span>Today&apos;s Tasks{!!dueTasks.length && <span> ({dueTasks.length})</span>}</span>}
       menu={<SearchButton />}
     >
       <VStack align="stretch" spacing={4} color="white">
-        {tasks.length ? (
+        {dueTasks.length ? (
           <VStack align="stretch" spacing={1}>
             <TaskListCard onItemClick={scrollToMap} />
 
@@ -59,7 +61,7 @@ const TaskList = () => {
               minimal
               style={{
                 width: "100%",
-                height: "100%",
+                height: "100%"
               }}
             />
           </chakra.div>

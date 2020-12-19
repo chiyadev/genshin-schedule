@@ -11,8 +11,7 @@ const iconIndexes = IconNames.reduce((a, b, i) => {
   return a;
 }, {} as Record<string, number>);
 
-export function useFilteredTasks() {
-  const [tasks] = useConfig("tasks");
+export function useFilteredTasks(tasks: Task[]) {
   const [query] = useConfig("taskQuery");
 
   const results = useMemo(() => {
@@ -30,9 +29,8 @@ export function useFilteredTasks() {
   return useMemo(() => results.search(query), [results, query]);
 }
 
-export function useDueTasks() {
+export function useDueTasks(tasks: Task[]) {
   const time = useServerTime(60000);
-  const tasks = useFilteredTasks();
 
   return useMemo(() => {
     return tasks
@@ -60,12 +58,12 @@ export function useTaskCreator() {
         id: randomStr(6),
         location: {
           lat: center.lat - 1.5,
-          lng: center.lng,
+          lng: center.lng
         },
         name: material.name,
         icon: material.item || material.name,
         description,
-        visible: false,
+        visible: false
       }));
 
       await synchronize();
@@ -74,30 +72,6 @@ export function useTaskCreator() {
     },
     [router, center, setTask, synchronize]
   );
-}
-
-export function useTaskSetters(tasks: Task[]): Dispatch<SetStateAction<Task>>[] {
-  const [, setTasks] = useConfig("tasks");
-
-  return useMemo(() => {
-    return tasks.map((task) => {
-      return (newTask) => {
-        setTasks((tasks) =>
-          tasks.map((oldTask) => {
-            if (oldTask.id === task.id) {
-              if (typeof newTask === "function") {
-                return newTask(oldTask);
-              } else {
-                return newTask;
-              }
-            } else {
-              return oldTask;
-            }
-          })
-        );
-      };
-    });
-  }, [tasks, setTasks]);
 }
 
 export function useTaskFocusSetter() {
@@ -111,7 +85,7 @@ export function useTaskFocusSetter() {
         setMapState({
           lat: task.location.lat + 2.2 + DefaultConfigs.mapTaskDefaultZoom - defaultZoom,
           lng: task.location.lng,
-          zoom: defaultZoom,
+          zoom: defaultZoom
         });
 
         setFocused(task.id);
@@ -132,12 +106,12 @@ export function useTaskDoneSetter(setTask: Dispatch<SetStateAction<Task>>) {
         setTask((task) => ({
           ...task,
           dueTime:
-            task.refreshTime === "reset" ? getServerResetTime(time).valueOf() : time.plus(task.refreshTime).valueOf(),
+            task.refreshTime === "reset" ? getServerResetTime(time).valueOf() : time.plus(task.refreshTime).valueOf()
         }));
       } else {
         setTask((task) => ({
           ...task,
-          dueTime: time.valueOf(),
+          dueTime: time.valueOf()
         }));
       }
     },

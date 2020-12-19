@@ -1,34 +1,35 @@
 import React, { memo, SetStateAction, useCallback, useMemo } from "react";
 import WhiteCard from "../WhiteCard";
-import { useDueTasks, useTaskDoneSetter, useTaskFocusSetter, useTaskSetters } from "../../utils/tasks";
+import { useDueTasks, useTaskDoneSetter, useTaskFocusSetter } from "../../utils/tasks";
 import Item from "./Item";
 import { Task, useConfig } from "../../utils/configs";
 import { useHotkeys } from "react-hotkeys-hook";
 import { trackEvent } from "../../utils/umami";
+import { useListDispatch } from "../../utils/dispatch";
 
 const TaskListCard = ({ onItemClick }: { onItemClick?: (task: Task) => void }) => {
-  const tasks = useDueTasks();
-  const [, setTasks] = useConfig("tasks");
-  const taskSetters = useTaskSetters(tasks);
+  const [tasks, setTasks] = useConfig("tasks");
+  const dueTasks = useDueTasks(tasks);
+  const taskDispatches = useListDispatch(dueTasks, setTasks);
 
   const [focused] = useConfig("mapFocusedTask");
   const setFocused = useTaskFocusSetter();
 
   const focusNext = useCallback(() => {
     if (focused) {
-      setFocused(tasks[(tasks.findIndex((task) => task.id === focused) + 1) % tasks.length]);
+      setFocused(dueTasks[(dueTasks.findIndex((task) => task.id === focused) + 1) % dueTasks.length]);
     } else {
-      setFocused(tasks[0]);
+      setFocused(dueTasks[0]);
     }
-  }, [focused, setFocused, tasks]);
+  }, [focused, setFocused, dueTasks]);
 
   const focusPrevious = useCallback(() => {
     if (focused) {
-      setFocused(tasks[(tasks.length + tasks.findIndex((task) => task.id === focused) - 1) % tasks.length]);
+      setFocused(dueTasks[(dueTasks.length + dueTasks.findIndex((task) => task.id === focused) - 1) % dueTasks.length]);
     } else {
-      setFocused(tasks[0]);
+      setFocused(dueTasks[0]);
     }
-  }, [focused, setFocused, tasks]);
+  }, [focused, setFocused, dueTasks]);
 
   const setFocusedTask = useCallback(
     (newTask: SetStateAction<Task>) => {
@@ -95,8 +96,8 @@ const TaskListCard = ({ onItemClick }: { onItemClick?: (task: Task) => void }) =
     <WhiteCard divide>
       {useMemo(
         () =>
-          tasks.map((task, i) => <Item key={task.id} task={task} setTask={taskSetters[i]} onTaskClick={onItemClick} />),
-        [tasks, taskSetters, onItemClick]
+          taskDispatches.map(([task, setTask]) => <Item key={task.id} task={task} setTask={setTask} onTaskClick={onItemClick} />),
+        [taskDispatches, onItemClick]
       )}
     </WhiteCard>
   );

@@ -8,7 +8,8 @@ import { useHotkeys } from "react-hotkeys-hook";
 import { trackEvent } from "../../utils/umami";
 
 const TaskListOverlay = () => {
-  const tasks = useDueTasks();
+  const [tasks] = useConfig("tasks");
+  const dueTasks = useDueTasks(tasks);
   const [hover, setHover] = useState(false);
   const [expanded, setExpanded] = useConfig("mapTaskList");
 
@@ -54,12 +55,12 @@ const TaskListOverlay = () => {
         >
           <span>
             {expanded ? <span>Hide list</span> : <span>Show list</span>}
-            <span> ({tasks.length})</span>
+            <span> ({dueTasks.length})</span>
           </span>
         </Button>
       </div>
 
-      {!!tasks.length && (
+      {!!dueTasks.length && (
         <Collapse in={expanded}>
           <chakra.div maxH="xs" overflowY="auto" borderRadius="md" mt={1}>
             <TaskListCard />

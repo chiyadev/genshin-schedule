@@ -1,11 +1,12 @@
-import { Button, chakra, HStack, Icon, Link, Tag, VStack } from "@chakra-ui/react";
+import { Button, chakra, HStack, Icon, Link, Spacer, Tag, Tooltip, VStack } from "@chakra-ui/react";
 import React, { memo } from "react";
 import WhiteCard from "../../WhiteCard";
-import { FaBell, FaDiscord } from "react-icons/fa";
+import { FaBell, FaDiscord, FaList } from "react-icons/fa";
 import Bot from "../../../assets/notifications/Bot.jpg";
 import Privacy from "../../../assets/notifications/Privacy.png";
 import PrivacyDM from "../../../assets/notifications/PrivacyDM.png";
 import MessageDisplay from "./MessageDisplay";
+import NextLink from "next/link";
 
 const Info = () => {
   return (
@@ -15,6 +16,17 @@ const Info = () => {
           <Icon as={FaBell} />
           <div>Notifications</div>
           <Tag colorScheme="green">Experimental</Tag>
+
+          <Spacer />
+          <Tooltip label="Queue">
+            <span>
+              <NextLink href="/customize/notifications/queue" passHref>
+                <Link color="blue.500">
+                  <Icon as={FaList} fontSize="sm" />
+                </Link>
+              </NextLink>
+            </span>
+          </Tooltip>
         </HStack>
 
         <VStack align="start" spacing={4}>
