@@ -12,6 +12,7 @@ import {
   ForsakenRiftDrops4,
   HiddenPalaceOfZhouFormulaDrops,
   MidsummerCourtyardDrops,
+  PeakOfVindagnyrDrops,
   RuinsOfThirstingCapital,
   SubmergedValley,
   TaishanMansionDrops1,
@@ -36,25 +37,14 @@ export const CeciliaGarden: Domain = {
   type: "Domain",
   name: "Cecilia Garden",
   wiki: "https://genshin-impact.fandom.com/wiki/Cecilia_Garden",
-  drops: [
-    CityOfReflections,
-    SubmergedValley,
-    RuinsOfThirstingCapital,
-    AltarOfTheFalls,
-  ],
+  drops: [CityOfReflections, SubmergedValley, RuinsOfThirstingCapital, AltarOfTheFalls],
 };
 
 export const HiddenPalaceOfLianshanFormula: Domain = {
   type: "Domain",
   name: "Hidden Palace of Lianshan Formula",
-  wiki:
-    "https://genshin-impact.fandom.com/wiki/Hidden_Palace_of_Lianshan_Formula",
-  drops: [
-    Thundercloud,
-    ThunderingRuins,
-    TrailGroundsOfThunder,
-    ElectrostaticField,
-  ],
+  wiki: "https://genshin-impact.fandom.com/wiki/Hidden_Palace_of_Lianshan_Formula",
+  drops: [Thundercloud, ThunderingRuins, TrailGroundsOfThunder, ElectrostaticField],
 };
 
 export const MidsummerCourtyard: Domain = {
@@ -96,24 +86,14 @@ export const ForsakenRift: Domain = {
   type: "Domain",
   name: "Forsaken Rift",
   wiki: "https://genshin-impact.fandom.com/wiki/Forsaken_Rift",
-  drops: [
-    ForsakenRiftDrops1,
-    ForsakenRiftDrops2,
-    ForsakenRiftDrops3,
-    ForsakenRiftDrops4,
-  ],
+  drops: [ForsakenRiftDrops1, ForsakenRiftDrops2, ForsakenRiftDrops3, ForsakenRiftDrops4],
 };
 
 export const TaishanMansion: Domain = {
   type: "Domain",
   name: "Taishan Mansion",
   wiki: "https://genshin-impact.fandom.com/wiki/Taishan_Mansion",
-  drops: [
-    TaishanMansionDrops1,
-    TaishanMansionDrops2,
-    TaishanMansionDrops3,
-    TaishanMansionDrops4,
-  ],
+  drops: [TaishanMansionDrops1, TaishanMansionDrops2, TaishanMansionDrops3, TaishanMansionDrops4],
 };
 
 export const ConfrontStormterror: Domain = {
@@ -130,6 +110,13 @@ export const WolfOfTheNorthChallenge: Domain = {
   drops: [WolfOfTheNorthChallengeDrops],
 };
 
+export const PeakOfVindagnyr: Domain = {
+  type: "Domain",
+  name: "Peak of Vindagnyr",
+  wiki: "https://genshin-impact.fandom.com/wiki/Peak_of_Vindagnyr",
+  drops: [PeakOfVindagnyrDrops],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -142,4 +129,5 @@ export const Domains = [
   TaishanMansion,
   ConfrontStormterror,
   WolfOfTheNorthChallenge,
+  PeakOfVindagnyr,
 ];

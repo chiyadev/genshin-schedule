@@ -237,19 +237,56 @@ export const Xinyan: Character = {
   commonMaterials: [TreasureHoarderInsignia],
 };
 
+export const Albedo: Character = {
+  type: "Character",
+  name: "Albedo",
+  wiki: "https://genshin-impact.fandom.com/wiki/Albedo",
+  talentMaterials: [Ballad],
+  commonMaterials: [SamachurlScroll],
+};
+
+export const Ganyu: Character = {
+  type: "Character",
+  name: "Ganyu",
+  wiki: "https://genshin-impact.fandom.com/wiki/Ganyu",
+  talentMaterials: [Diligence],
+  commonMaterials: [WhopperflowerNectar],
+};
+
+export const Ayaka: Character = {
+  type: "Character",
+  name: "Ayaka",
+  wiki: "https://genshin-impact.fandom.com/wiki/Ayaka",
+  talentMaterials: [Prosperity],
+  commonMaterials: [WhopperflowerNectar],
+};
+
+export const Xiao: Character = {
+  type: "Character",
+  name: "Xiao",
+  wiki: "https://genshin-impact.fandom.com/wiki/Xiao",
+  talentMaterials: [Prosperity],
+  commonMaterials: [Slime],
+};
+
 export const Characters = [
   //TravelerAnemo,
   //TravelerGeo,
+  Albedo,
   Amber,
+  Ayaka,
   Barbara,
   Beidou,
   Bennett,
   Chongyun,
   Diluc,
+  Diona,
   Fischl,
+  Ganyu,
   Jean,
   Kaeya,
   Keqing,
+  Klee,
   Lisa,
   Mona,
   Ningguang,
@@ -257,12 +294,11 @@ export const Characters = [
   Qiqi,
   Razor,
   Sucrose,
+  Tartaglia,
   Venti,
   Xiangling,
+  Xiao,
   Xingqiu,
-  Klee,
-  Tartaglia,
-  Diona,
-  Zhongli,
   Xinyan,
+  Zhongli,
 ];

@@ -24,6 +24,7 @@ addIcons("ore", [
   { name: "Electro Crystal", timer: 48 },
   { name: "Cor Lapis", timer: 48 },
   { name: "Noctilucous Jade", timer: 48 },
+  { name: "Starsilver", timer: 48 },
 ]);
 
 addIcons("character exp material", [
@@ -94,6 +95,7 @@ addIcons("cooking ingredient", [
   { name: "Potato", timer: 24 },
   { name: "Radish", timer: 24 },
   { name: "Raw Meat", timer: 24 },
+  { name: "Chilled Meat", timer: 24 },
   { name: "Shrimp Meat", timer: 24 },
   { name: "Snapdragon", timer: 24 },
   { name: "Sunsettia", timer: 24 },

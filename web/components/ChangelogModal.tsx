@@ -4,10 +4,14 @@ import { useConfig } from "../utils/configs";
 import { Divider, Heading, HStack, Icon, Link, ListItem, UnorderedList, VStack } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 7;
+const LatestChangelog = 8;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={8} date="2020/12/31">
+      <ChangelogItem>Upgraded all dependencies to latest version.</ChangelogItem>
+      <ChangelogItem>Updated the database with new items from version 1.2.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={7} date="2020/12/12">
       <ChangelogItem>Created an experimental Discord notification bot.</ChangelogItem>
       <ChangelogItem>

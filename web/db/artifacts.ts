@@ -60,6 +60,12 @@ export const GladiatorsFinale: Artifact = {
   wiki: "https://genshin-impact.fandom.com/wiki/Gladiator%27s_Finale",
 };
 
+export const Icebreaker: Artifact = {
+  type: "Artifact",
+  name: "Icebreaker",
+  wiki: "https://genshin-impact.fandom.com/wiki/Icebreaker",
+};
+
 export const Instructor: Artifact = {
   type: "Artifact",
   name: "Instructor",
@@ -94,6 +100,12 @@ export const NoblesseOblige: Artifact = {
   type: "Artifact",
   name: "Noblesse Oblige",
   wiki: "https://genshin-impact.fandom.com/wiki/Noblesse_Oblige",
+};
+
+export const OceanConqueror: Artifact = {
+  type: "Artifact",
+  name: "Ocean Conqueror",
+  wiki: "https://genshin-impact.fandom.com/wiki/Ocean_Conqueror",
 };
 
 export const PrayersForDestiny: Artifact = {
@@ -190,12 +202,14 @@ export const Artifacts = [
   DefendersWill,
   Gambler,
   GladiatorsFinale,
+  Icebreaker,
   Instructor,
   Lavawalker,
   LuckyDog,
   MaidenBeloved,
   MartialArtist,
   NoblesseOblige,
+  OceanConqueror,
   PrayersForDestiny,
   PrayersForIllumination,
   PrayersForWisdom,

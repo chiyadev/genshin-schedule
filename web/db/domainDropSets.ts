@@ -9,12 +9,14 @@ import {
   DefendersWill,
   Gambler,
   GladiatorsFinale,
+  Icebreaker,
   Instructor,
   Lavawalker,
   LuckyDog,
   MaidenBeloved,
   MartialArtist,
   NoblesseOblige,
+  OceanConqueror,
   ResolutionOfSojourner,
   RetracingBolide,
   Scholar,
@@ -198,6 +200,12 @@ export const WolfOfTheNorthChallengeDrops: DomainDropSet = {
   items: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe],
 };
 
+export const PeakOfVindagnyrDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: AnyDay,
+  items: [DefendersWill, Gambler, Icebreaker, OceanConqueror],
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
@@ -222,4 +230,5 @@ export const DomainDropSets = [
   ClearPoolAndMountainCavernDrops,
   ConfrontStormterrorDrops,
   WolfOfTheNorthChallengeDrops,
+  PeakOfVindagnyrDrops,
 ];

@@ -53,12 +53,14 @@ add("Favonius Sword", Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 add("Ferrous Shadow", Decarabian, [HilichurlHorn, WhopperflowerNectar]);
 add("Magic Guide", Decarabian, [HilichurlHorn, Slime]);
 add("Raven Bow", Decarabian, [HilichurlHorn, HilichurlArrowhead]);
+add("Snow-Tombed Starsilver", Decarabian, [HilichurlHorn, Slime]);
 add("The Bell", Decarabian, [HilichurlHorn, WhopperflowerNectar]);
 add("The Stringless", Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 add("The Viridescent Hunt", Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 
 add("Alley Hunter", BorealWolf, [LeyLine, TreasureHoarderInsignia]);
 add("Bloodtainted Greatsword", BorealWolf, [LeyLine, HilichurlArrowhead]);
+add("Dragonspine Spear", BorealWolf, [MistGrass, FatuiInsignia]);
 add("Harbinger of Dawn", BorealWolf, [LeyLine, Slime]);
 add("Sacrificial Bow", BorealWolf, [LeyLine, Slime]);
 add("Sacrificial Greatsword", BorealWolf, [LeyLine, HilichurlArrowhead]);
@@ -74,10 +76,13 @@ add("The Widsith", BorealWolf, [LeyLine, HilichurlMask]);
 add("Thrilling Tales of Dragon Slayers", BorealWolf, [LeyLine, SamachurlScroll]);
 add("Wine and Song", BorealWolf, [LeyLine, SamachurlScroll]);
 
+add("Amos' Bow", DandelionGladiator, [ChaosPart, Slime]);
 add("Beginner's Protector", DandelionGladiator, [ChaosPart, SamachurlScroll]);
 add("Favonius Greatsword", DandelionGladiator, [ChaosPart, FatuiInsignia]);
 add("Favonius Lance", DandelionGladiator, [ChaosPart, Slime]);
 add("Favonius Warbow", DandelionGladiator, [ChaosPart, WhopperflowerNectar]);
+add("Festering Desire", DandelionGladiator, [HilichurlHorn, FatuiInsignia]); // yes, for some reason it's not chaos
+add("Frostbearer", DandelionGladiator, [ChaosPart, WhopperflowerNectar]);
 add("Lost Prayer to the Sacred Winds", DandelionGladiator, [ChaosPart, Slime]);
 add("Otherworldly Story", DandelionGladiator, [ChaosPart, HilichurlMask]);
 add("Recurve Bow", DandelionGladiator, [ChaosPart, SamachurlScroll]);
@@ -87,7 +92,6 @@ add("Skyward Spine", DandelionGladiator, [ChaosPart, SamachurlScroll]);
 add("Traveler's Handy Sword", DandelionGladiator, [ChaosPart, SamachurlScroll]);
 add("White Iron Greatsword", DandelionGladiator, [ChaosPart, Slime]);
 add("Wolf's Gravestone", DandelionGladiator, [ChaosPart, SamachurlScroll]);
-add("Amos' Bow", DandelionGladiator, [ChaosPart, Slime]);
 
 add("Blackcliff Warbow", Guyun, [FatuiKnife, TreasureHoarderInsignia]);
 add("Crescent Pike", Guyun, [FatuiKnife, TreasureHoarderInsignia]);
@@ -98,6 +102,7 @@ add("Primordial Jade Winged-Spear", Guyun, [FatuiKnife, FatuiInsignia]);
 add("Rust", Guyun, [FatuiKnife, HilichurlMask]);
 add("Slingshot", Guyun, [FatuiKnife, HilichurlMask]);
 add("Solar Pearl", Guyun, [FatuiKnife, WhopperflowerNectar]);
+add("Summit Shaper", Guyun, [FatuiKnife, HilichurlMask]);
 add("White Tassel", Guyun, [FatuiKnife, FatuiInsignia]);
 add("Whiteblind", Guyun, [FatuiKnife, TreasureHoarderInsignia]);
 

@@ -8,12 +8,15 @@ import {
   HiddenPalaceOfLianshanFormula,
   HiddenPalaceOfZhouFormula,
   MidsummerCourtyard,
+  PeakOfVindagnyr,
   TaishanMansion,
   ValleyOfRemembrance,
   WolfOfTheNorthChallenge,
 } from "./domains";
 import {
+  Albedo,
   Amber,
+  Ayaka,
   Barbara,
   Beidou,
   Bennett,
@@ -22,6 +25,7 @@ import {
   Diluc,
   Diona,
   Fischl,
+  Ganyu,
   Jean,
   Kaeya,
   Keqing,
@@ -36,7 +40,10 @@ import {
   Tartaglia,
   Venti,
   Xiangling,
+  Xiao,
   Xingqiu,
+  Xinyan,
+  Zhongli,
 } from "./characters";
 
 export type Region = {
@@ -58,23 +65,25 @@ export const Mondstadt: Region = {
     ForsakenRift,
     ConfrontStormterror,
     WolfOfTheNorthChallenge,
+    PeakOfVindagnyr,
   ],
   characters: [
+    Albedo,
     Amber,
     Barbara,
     Bennett,
     Diluc,
+    Diona,
     Fischl,
     Jean,
     Kaeya,
+    Klee,
     Lisa,
     Mona,
     Noelle,
     Razor,
     Sucrose,
     Venti,
-    Klee,
-    Diona,
   ],
 };
 
@@ -89,7 +98,15 @@ export const Liyue: Region = {
     ClearPoolAndMountainCavern,
     TaishanMansion,
   ],
-  characters: [Beidou, Chongyun, Keqing, Ningguang, Qiqi, Xiangling, Xingqiu],
+  characters: [Beidou, Chongyun, Ganyu, Keqing, Ningguang, Qiqi, Xiangling, Xiao, Xingqiu, Xinyan, Zhongli],
+};
+
+export const Inazuma: Region = {
+  type: "Region",
+  name: "Inazuma",
+  wiki: "https://genshin-impact.fandom.com/wiki/Inazuma",
+  domains: [],
+  characters: [Ayaka],
 };
 
 export const Snezhnaya: Region = {
@@ -100,4 +117,4 @@ export const Snezhnaya: Region = {
   characters: [Tartaglia],
 };
 
-export const Regions = [Mondstadt, Liyue, Snezhnaya];
+export const Regions = [Mondstadt, Liyue, Inazuma, Snezhnaya];
