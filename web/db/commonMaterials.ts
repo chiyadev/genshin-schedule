@@ -98,6 +98,118 @@ export const WhopperflowerNectar: CommonMaterial = {
   item: "Whopperflower Nectar",
 };
 
+export const CallaLily: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Calla Lily",
+  wiki: "https://genshin-impact.fandom.com/wiki/Calla_Lily",
+  item: "Calla Lily",
+};
+
+export const Cecilia: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Cecilia",
+  wiki: "https://genshin-impact.fandom.com/wiki/Cecilia",
+  item: "Cecilia",
+};
+
+export const CorLapis: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Cor Lapis",
+  wiki: "https://genshin-impact.fandom.com/wiki/Cor_Lapis",
+  item: "Cor Lapis",
+};
+
+export const DandelionSeed: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Dandelion Seed",
+  wiki: "https://genshin-impact.fandom.com/wiki/Dandelion_Seed",
+  item: "Dandelion Seed",
+};
+
+export const GlazeLily: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Glaze Lily",
+  wiki: "https://genshin-impact.fandom.com/wiki/Glaze_Lily",
+  item: "Glaze Lily",
+};
+
+export const JueyunChili: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Jueyun Chili",
+  wiki: "https://genshin-impact.fandom.com/wiki/Jueyun_Chili",
+  item: "Jueyun Chili",
+};
+
+export const NoctilucousJade: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Noctilucous Jade",
+  wiki: "https://genshin-impact.fandom.com/wiki/Noctilucous_Jade",
+  item: "Noctilucous Jade",
+};
+
+export const PhilanemoMushroom: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Philanemo Mushroom",
+  wiki: "https://genshin-impact.fandom.com/wiki/Philanemo_Mushroom",
+  item: "Philanemo Mushroom",
+};
+
+export const Qingxin: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Qingxin",
+  wiki: "https://genshin-impact.fandom.com/wiki/Qingxin",
+  item: "Qingxin",
+};
+
+export const SilkFlower: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Silk Flower",
+  wiki: "https://genshin-impact.fandom.com/wiki/Silk_Flower",
+  item: "Silk Flower",
+};
+
+export const SmallLampGrass: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Small Lamp Grass",
+  wiki: "https://genshin-impact.fandom.com/wiki/Small_Lamp_Grass",
+  item: "Small Lamp Grass",
+};
+
+export const Starconch: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Starconch",
+  wiki: "https://genshin-impact.fandom.com/wiki/Starconch",
+  item: "Starconch",
+};
+
+export const Valberry: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Valberry",
+  wiki: "https://genshin-impact.fandom.com/wiki/Valberry",
+  item: "Valberry",
+};
+
+export const Violetgrass: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Violetgrass",
+  wiki: "https://genshin-impact.fandom.com/wiki/Violetgrass",
+  item: "Violetgrass",
+};
+
+export const WindwheelAster: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Windwheel Aster",
+  wiki: "https://genshin-impact.fandom.com/wiki/Windwheel_Aster",
+  item: "Windwheel Aster",
+};
+
+export const Wolfhook: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: "Wolfhook",
+  wiki: "https://genshin-impact.fandom.com/wiki/Wolfhook",
+  item: "Wolfhook",
+};
+
 export const CommonMaterials = [
   Slime,
   HilichurlMask,
@@ -112,4 +224,20 @@ export const CommonMaterials = [
   TreasureHoarderInsignia,
   BoneShard,
   WhopperflowerNectar,
+  CallaLily,
+  Cecilia,
+  CorLapis,
+  DandelionSeed,
+  GlazeLily,
+  JueyunChili,
+  NoctilucousJade,
+  PhilanemoMushroom,
+  Qingxin,
+  SilkFlower,
+  SmallLampGrass,
+  Starconch,
+  Valberry,
+  Violetgrass,
+  WindwheelAster,
+  Wolfhook,
 ];
