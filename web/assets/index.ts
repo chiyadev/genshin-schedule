@@ -24,6 +24,10 @@ import Berry from "./game/Berry.png";
 import Berserker from "./game/Berserker.png";
 import BirdEgg from "./game/Bird Egg.png";
 import BlackTassel from "./game/Black Tassel.png";
+import BlackcliffAgate from "./game/Blackcliff Agate.png";
+import BlackcliffLongsword from "./game/Blackcliff Longsword.png";
+import BlackcliffPole from "./game/Blackcliff Pole.png";
+import BlackcliffSlasher from "./game/Blackcliff Slasher.png";
 import BlackcliffWarbow from "./game/Blackcliff Warbow.png";
 import BloodstainedChivalry from "./game/Bloodstained Chivalry.png";
 import BloodtaintedGreatsword from "./game/Bloodtainted Greatsword.png";
@@ -150,11 +154,11 @@ import PrayersforWisdom from "./game/Prayers for Wisdom.png";
 import PrayerstoSpringtime from "./game/Prayers to Springtime.png";
 import PrimordialJadeWingedSpear from "./game/Primordial Jade Winged-Spear.png";
 import PrithivaTopazSliver from "./game/Prithiva Topaz Sliver.png";
+import PrototypeAmber from "./game/Prototype Amber.png";
 import PrototypeArcaic from "./game/Prototype Arcaic.png";
 import PrototypeCrescent from "./game/Prototype Crescent.png";
-import PrototypeGrudge from "./game/Prototype Grudge.png";
-import PrototypeMalice from "./game/Prototype Malice.png";
 import PrototypeRancour from "./game/Prototype Rancour.png";
+import PrototypeStarglitter from "./game/Prototype Starglitter.png";
 import Pyro from "./game/Pyro.png";
 import Qingxin from "./game/Qingxin.png";
 import Qiqi from "./game/Qiqi.png";
@@ -277,6 +281,10 @@ export {
   Berserker,
   BirdEgg,
   BlackTassel,
+  BlackcliffAgate,
+  BlackcliffLongsword,
+  BlackcliffPole,
+  BlackcliffSlasher,
   BlackcliffWarbow,
   BloodstainedChivalry,
   BloodtaintedGreatsword,
@@ -403,11 +411,11 @@ export {
   PrayerstoSpringtime,
   PrimordialJadeWingedSpear,
   PrithivaTopazSliver,
+  PrototypeAmber,
   PrototypeArcaic,
   PrototypeCrescent,
-  PrototypeGrudge,
-  PrototypeMalice,
   PrototypeRancour,
+  PrototypeStarglitter,
   Pyro,
   Qingxin,
   Qiqi,
@@ -532,6 +540,10 @@ export function getAssetByName(name: string): string | undefined {
     case "Berserker": return Berserker;
     case "Bird Egg": return BirdEgg;
     case "Black Tassel": return BlackTassel;
+    case "Blackcliff Agate": return BlackcliffAgate;
+    case "Blackcliff Longsword": return BlackcliffLongsword;
+    case "Blackcliff Pole": return BlackcliffPole;
+    case "Blackcliff Slasher": return BlackcliffSlasher;
     case "Blackcliff Warbow": return BlackcliffWarbow;
     case "Bloodstained Chivalry": return BloodstainedChivalry;
     case "Bloodtainted Greatsword": return BloodtaintedGreatsword;
@@ -658,11 +670,11 @@ export function getAssetByName(name: string): string | undefined {
     case "Prayers to Springtime": return PrayerstoSpringtime;
     case "Primordial Jade Winged-Spear": return PrimordialJadeWingedSpear;
     case "Prithiva Topaz Sliver": return PrithivaTopazSliver;
+    case "Prototype Amber": return PrototypeAmber;
     case "Prototype Arcaic": return PrototypeArcaic;
     case "Prototype Crescent": return PrototypeCrescent;
-    case "Prototype Grudge": return PrototypeGrudge;
-    case "Prototype Malice": return PrototypeMalice;
     case "Prototype Rancour": return PrototypeRancour;
+    case "Prototype Starglitter": return PrototypeStarglitter;
     case "Pyro": return Pyro;
     case "Qingxin": return Qingxin;
     case "Qiqi": return Qiqi;
