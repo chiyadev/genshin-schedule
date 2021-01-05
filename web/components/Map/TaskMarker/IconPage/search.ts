@@ -129,3 +129,49 @@ addIcons(
   "artifact",
   Artifacts.map((artifact) => ({ name: artifact.name, timer: 24 }))
 );
+
+addIcons("npc", [
+  { name: "General Goods" },
+  { name: "Restaurant" },
+  { name: "Blacksmith" },
+  { name: "Souvenir Shop" },
+  { name: "Other Shops" },
+]);
+
+addIcons("sigil", [{ name: "Anemo Sigil" }, { name: "Geo Sigil" }]);
+
+addIcons("currency", [
+  { name: "Mora" },
+  { name: "Resin" },
+  { name: "Primogem" },
+  { name: "Genesis Crystal" },
+  { name: "Intertwined Fate" },
+  { name: "Acquaint Fate" },
+  { name: "Masterless Starglitter" },
+  { name: "Masterless Stardust" },
+]);
+
+addIcons("experience", [
+  { name: "Adventure Experience" },
+  { name: "Companionship Experience" },
+  { name: "Battle Pass Experience" },
+]);
+
+addIcons("bundle", [
+  { name: "Guidance of the Land" },
+  { name: "Philosophies of the Land" },
+  { name: "Battle Pass Bundle" },
+]);
+
+addIcons("circle", [
+  { name: "Gray Circle" },
+  { name: "Red Circle" },
+  { name: "Orange Circle" },
+  { name: "Yellow Circle" },
+  { name: "Green Circle" },
+  { name: "Teal Circle" },
+  { name: "Blue Circle" },
+  { name: "Cyan Circle" },
+  { name: "Purple Circle" },
+  { name: "Pink Circle" },
+]);

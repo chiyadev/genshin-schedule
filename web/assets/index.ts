@@ -1,4 +1,6 @@
 // This file was generated using `yarn genassets`.
+import AcquaintFate from "./game/Acquaint Fate.png";
+import AdventureExperience from "./game/Adventure Experience.png";
 import AdventurersExperience from "./game/Adventurer's Experience.png";
 import Adventurer from "./game/Adventurer.png";
 import AgnidusAgateSliver from "./game/Agnidus Agate Sliver.png";
@@ -7,6 +9,7 @@ import AlleyHunter from "./game/Alley Hunter.png";
 import Almond from "./game/Almond.png";
 import Amber from "./game/Amber.png";
 import AmosBow from "./game/Amos' Bow.png";
+import AnemoSigil from "./game/Anemo Sigil.png";
 import Anemo from "./game/Anemo.png";
 import Apple from "./game/Apple.png";
 import AquilaFavonia from "./game/Aquila Favonia.png";
@@ -17,20 +20,25 @@ import BackgroundPaimon from "./game/Background Paimon.png";
 import Bamboo from "./game/Bamboo.png";
 import Barbara from "./game/Barbara.png";
 import BasaltPillar from "./game/Basalt Pillar.png";
+import BattlePassBundle from "./game/Battle Pass Bundle.png";
+import BattlePassExperience from "./game/Battle Pass Experience.png";
 import BeginnersProtector from "./game/Beginner's Protector.png";
 import Beidou from "./game/Beidou.png";
 import Bennett from "./game/Bennett.png";
 import Berry from "./game/Berry.png";
 import Berserker from "./game/Berserker.png";
 import BirdEgg from "./game/Bird Egg.png";
+import BlackCircle from "./game/Black Circle.png";
 import BlackTassel from "./game/Black Tassel.png";
 import BlackcliffAgate from "./game/Blackcliff Agate.png";
 import BlackcliffLongsword from "./game/Blackcliff Longsword.png";
 import BlackcliffPole from "./game/Blackcliff Pole.png";
 import BlackcliffSlasher from "./game/Blackcliff Slasher.png";
 import BlackcliffWarbow from "./game/Blackcliff Warbow.png";
+import Blacksmith from "./game/Blacksmith.png";
 import BloodstainedChivalry from "./game/Bloodstained Chivalry.png";
 import BloodtaintedGreatsword from "./game/Bloodtainted Greatsword.png";
+import BlueCircle from "./game/Blue Circle.png";
 import BorealWolfsMilkTooth from "./game/Boreal Wolf's Milk Tooth.png";
 import BraveHeart from "./game/Brave Heart.png";
 import BrilliantDiamondSliver from "./game/Brilliant Diamond Sliver.png";
@@ -43,6 +51,7 @@ import ChaosDevice from "./game/Chaos Device.png";
 import ChilledMeat from "./game/Chilled Meat.png";
 import Chongyun from "./game/Chongyun.png";
 import CleansingHeart from "./game/Cleansing Heart.png";
+import CompanionshipExperience from "./game/Companionship Experience.png";
 import CompoundBow from "./game/Compound Bow.png";
 import CoolSteel from "./game/Cool Steel.png";
 import CorLapis from "./game/Cor Lapis.png";
@@ -52,6 +61,7 @@ import CrimsonWitchofFlames from "./game/Crimson Witch of Flames.png";
 import Cryo from "./game/Cryo.png";
 import CrystalChunk from "./game/Crystal Chunk.png";
 import CrystalCore from "./game/Crystal Core.png";
+import CyanCircle from "./game/Cyan Circle.png";
 import DamagedMask from "./game/Damaged Mask.png";
 import DandelionSeed from "./game/Dandelion Seed.png";
 import DarkIronSword from "./game/Dark Iron Sword.png";
@@ -91,10 +101,16 @@ import Frog from "./game/Frog.png";
 import Frostbearer from "./game/Frostbearer.png";
 import Gambler from "./game/Gambler.png";
 import Ganyu from "./game/Ganyu.png";
+import GeneralGoods from "./game/General Goods.png";
+import GenesisCrystal from "./game/Genesis Crystal.png";
+import GeoSigil from "./game/Geo Sigil.png";
 import Geo from "./game/Geo.png";
 import GladiatorsFinale from "./game/Gladiator's Finale.png";
 import GlazeLily from "./game/Glaze Lily.png";
 import GrainofAerosiderite from "./game/Grain of Aerosiderite.png";
+import GrayCircle from "./game/Gray Circle.png";
+import GreenCircle from "./game/Green Circle.png";
+import GuidanceoftheLand from "./game/Guidance of the Land.png";
 import Halberd from "./game/Halberd.png";
 import HarbingerofDawn from "./game/Harbinger of Dawn.png";
 import HeavyHorn from "./game/Heavy Horn.png";
@@ -106,6 +122,7 @@ import HurricaneSeed from "./game/Hurricane Seed.png";
 import Hydro from "./game/Hydro.png";
 import Icebreaker from "./game/Icebreaker.png";
 import Instructor from "./game/Instructor.png";
+import IntertwinedFate from "./game/Intertwined Fate.png";
 import IronChunk from "./game/Iron Chunk.png";
 import IronSting from "./game/Iron Sting.png";
 import Jean from "./game/Jean.png";
@@ -129,6 +146,8 @@ import MagicalCrystalChunk from "./game/Magical Crystal Chunk.png";
 import MaidenBeloved from "./game/Maiden Beloved.png";
 import MappaMare from "./game/Mappa Mare.png";
 import MartialArtist from "./game/Martial Artist.png";
+import MasterlessStardust from "./game/Masterless Stardust.png";
+import MasterlessStarglitter from "./game/Masterless Starglitter.png";
 import Matsutake from "./game/Matsutake.png";
 import Messenger from "./game/Messenger.png";
 import Mint from "./game/Mint.png";
@@ -136,6 +155,7 @@ import MistFlowerCorolla from "./game/Mist Flower Corolla.png";
 import MistGrassPollen from "./game/Mist Grass Pollen.png";
 import MistVeiledLeadElixir from "./game/Mist Veiled Lead Elixir.png";
 import Mona from "./game/Mona.png";
+import Mora from "./game/Mora.png";
 import Mushroom from "./game/Mushroom.png";
 import MysticEnhancementOre from "./game/Mystic Enhancement Ore.png";
 import Ningguang from "./game/Ningguang.png";
@@ -144,14 +164,19 @@ import NoctilucousJade from "./game/Noctilucous Jade.png";
 import Noelle from "./game/Noelle.png";
 import OceanConqueror from "./game/Ocean Conqueror.png";
 import Onion from "./game/Onion.png";
+import OrangeCircle from "./game/Orange Circle.png";
+import OtherShops from "./game/Other Shops.png";
 import OtherworldlyStory from "./game/Otherworldly Story.png";
 import PhilanemoMushroom from "./game/Philanemo Mushroom.png";
+import PhilosophiesoftheLand from "./game/Philosophies of the Land.png";
 import Pinecone from "./game/Pinecone.png";
+import PinkCircle from "./game/Pink Circle.png";
 import Potato from "./game/Potato.png";
 import PrayersforDestiny from "./game/Prayers for Destiny.png";
 import PrayersforIllumination from "./game/Prayers for Illumination.png";
 import PrayersforWisdom from "./game/Prayers for Wisdom.png";
 import PrayerstoSpringtime from "./game/Prayers to Springtime.png";
+import Primogem from "./game/Primogem.png";
 import PrimordialJadeWingedSpear from "./game/Primordial Jade Winged-Spear.png";
 import PrithivaTopazSliver from "./game/Prithiva Topaz Sliver.png";
 import PrototypeAmber from "./game/Prototype Amber.png";
@@ -159,6 +184,7 @@ import PrototypeArchaic from "./game/Prototype Archaic.png";
 import PrototypeCrescent from "./game/Prototype Crescent.png";
 import PrototypeRancour from "./game/Prototype Rancour.png";
 import PrototypeStarglitter from "./game/Prototype Starglitter.png";
+import PurpleCircle from "./game/Purple Circle.png";
 import Pyro from "./game/Pyro.png";
 import Qingxin from "./game/Qingxin.png";
 import Qiqi from "./game/Qiqi.png";
@@ -169,8 +195,10 @@ import RawMeat from "./game/Raw Meat.png";
 import Razor from "./game/Razor.png";
 import RecruitsInsignia from "./game/Recruit's Insignia.png";
 import RecurveBow from "./game/Recurve Bow.png";
+import RedCircle from "./game/Red Circle.png";
 import Resin from "./game/Resin.png";
 import ResolutionofSojourner from "./game/Resolution of Sojourner.png";
+import Restaurant from "./game/Restaurant.png";
 import RetracingBolide from "./game/Retracing Bolide.png";
 import RoyalGrimoire from "./game/Royal Grimoire.png";
 import Rust from "./game/Rust.png";
@@ -197,6 +225,7 @@ import SmallLampGrass from "./game/Small Lamp Grass.png";
 import Snapdragon from "./game/Snapdragon.png";
 import SnowTombedStarsilver from "./game/Snow-Tombed Starsilver.png";
 import SolarPearl from "./game/Solar Pearl.png";
+import SouvenirShop from "./game/Souvenir Shop.png";
 import Starconch from "./game/Starconch.png";
 import Starsilver from "./game/Starsilver.png";
 import Sucrose from "./game/Sucrose.png";
@@ -211,6 +240,7 @@ import TeachingsofFreedom from "./game/Teachings of Freedom.png";
 import TeachingsofGold from "./game/Teachings of Gold.png";
 import TeachingsofProsperity from "./game/Teachings of Prosperity.png";
 import TeachingsofResistance from "./game/Teachings of Resistance.png";
+import TealCircle from "./game/Teal Circle.png";
 import TheBell from "./game/The Bell.png";
 import TheBlackSword from "./game/The Black Sword.png";
 import TheExile from "./game/The Exile.png";
@@ -253,9 +283,12 @@ import Xiangling from "./game/Xiangling.png";
 import Xiao from "./game/Xiao.png";
 import Xingqiu from "./game/Xingqiu.png";
 import Xinyan from "./game/Xinyan.png";
+import YellowCircle from "./game/Yellow Circle.png";
 import Zhongli from "./game/Zhongli.png";
 
 export {
+  AcquaintFate,
+  AdventureExperience,
   AdventurersExperience,
   Adventurer,
   AgnidusAgateSliver,
@@ -264,6 +297,7 @@ export {
   Almond,
   Amber,
   AmosBow,
+  AnemoSigil,
   Anemo,
   Apple,
   AquilaFavonia,
@@ -274,20 +308,25 @@ export {
   Bamboo,
   Barbara,
   BasaltPillar,
+  BattlePassBundle,
+  BattlePassExperience,
   BeginnersProtector,
   Beidou,
   Bennett,
   Berry,
   Berserker,
   BirdEgg,
+  BlackCircle,
   BlackTassel,
   BlackcliffAgate,
   BlackcliffLongsword,
   BlackcliffPole,
   BlackcliffSlasher,
   BlackcliffWarbow,
+  Blacksmith,
   BloodstainedChivalry,
   BloodtaintedGreatsword,
+  BlueCircle,
   BorealWolfsMilkTooth,
   BraveHeart,
   BrilliantDiamondSliver,
@@ -300,6 +339,7 @@ export {
   ChilledMeat,
   Chongyun,
   CleansingHeart,
+  CompanionshipExperience,
   CompoundBow,
   CoolSteel,
   CorLapis,
@@ -309,6 +349,7 @@ export {
   Cryo,
   CrystalChunk,
   CrystalCore,
+  CyanCircle,
   DamagedMask,
   DandelionSeed,
   DarkIronSword,
@@ -348,10 +389,16 @@ export {
   Frostbearer,
   Gambler,
   Ganyu,
+  GeneralGoods,
+  GenesisCrystal,
+  GeoSigil,
   Geo,
   GladiatorsFinale,
   GlazeLily,
   GrainofAerosiderite,
+  GrayCircle,
+  GreenCircle,
+  GuidanceoftheLand,
   Halberd,
   HarbingerofDawn,
   HeavyHorn,
@@ -363,6 +410,7 @@ export {
   Hydro,
   Icebreaker,
   Instructor,
+  IntertwinedFate,
   IronChunk,
   IronSting,
   Jean,
@@ -386,6 +434,8 @@ export {
   MaidenBeloved,
   MappaMare,
   MartialArtist,
+  MasterlessStardust,
+  MasterlessStarglitter,
   Matsutake,
   Messenger,
   Mint,
@@ -393,6 +443,7 @@ export {
   MistGrassPollen,
   MistVeiledLeadElixir,
   Mona,
+  Mora,
   Mushroom,
   MysticEnhancementOre,
   Ningguang,
@@ -401,14 +452,19 @@ export {
   Noelle,
   OceanConqueror,
   Onion,
+  OrangeCircle,
+  OtherShops,
   OtherworldlyStory,
   PhilanemoMushroom,
+  PhilosophiesoftheLand,
   Pinecone,
+  PinkCircle,
   Potato,
   PrayersforDestiny,
   PrayersforIllumination,
   PrayersforWisdom,
   PrayerstoSpringtime,
+  Primogem,
   PrimordialJadeWingedSpear,
   PrithivaTopazSliver,
   PrototypeAmber,
@@ -416,6 +472,7 @@ export {
   PrototypeCrescent,
   PrototypeRancour,
   PrototypeStarglitter,
+  PurpleCircle,
   Pyro,
   Qingxin,
   Qiqi,
@@ -426,8 +483,10 @@ export {
   Razor,
   RecruitsInsignia,
   RecurveBow,
+  RedCircle,
   Resin,
   ResolutionofSojourner,
+  Restaurant,
   RetracingBolide,
   RoyalGrimoire,
   Rust,
@@ -454,6 +513,7 @@ export {
   Snapdragon,
   SnowTombedStarsilver,
   SolarPearl,
+  SouvenirShop,
   Starconch,
   Starsilver,
   Sucrose,
@@ -468,6 +528,7 @@ export {
   TeachingsofGold,
   TeachingsofProsperity,
   TeachingsofResistance,
+  TealCircle,
   TheBell,
   TheBlackSword,
   TheExile,
@@ -510,11 +571,14 @@ export {
   Xiao,
   Xingqiu,
   Xinyan,
+  YellowCircle,
   Zhongli,
 };
 
 export function getAssetByName(name: string): string | undefined {
   switch (name) {
+    case "Acquaint Fate": return AcquaintFate;
+    case "Adventure Experience": return AdventureExperience;
     case "Adventurer's Experience": return AdventurersExperience;
     case "Adventurer": return Adventurer;
     case "Agnidus Agate Sliver": return AgnidusAgateSliver;
@@ -523,6 +587,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Almond": return Almond;
     case "Amber": return Amber;
     case "Amos' Bow": return AmosBow;
+    case "Anemo Sigil": return AnemoSigil;
     case "Anemo": return Anemo;
     case "Apple": return Apple;
     case "Aquila Favonia": return AquilaFavonia;
@@ -533,20 +598,25 @@ export function getAssetByName(name: string): string | undefined {
     case "Bamboo": return Bamboo;
     case "Barbara": return Barbara;
     case "Basalt Pillar": return BasaltPillar;
+    case "Battle Pass Bundle": return BattlePassBundle;
+    case "Battle Pass Experience": return BattlePassExperience;
     case "Beginner's Protector": return BeginnersProtector;
     case "Beidou": return Beidou;
     case "Bennett": return Bennett;
     case "Berry": return Berry;
     case "Berserker": return Berserker;
     case "Bird Egg": return BirdEgg;
+    case "Black Circle": return BlackCircle;
     case "Black Tassel": return BlackTassel;
     case "Blackcliff Agate": return BlackcliffAgate;
     case "Blackcliff Longsword": return BlackcliffLongsword;
     case "Blackcliff Pole": return BlackcliffPole;
     case "Blackcliff Slasher": return BlackcliffSlasher;
     case "Blackcliff Warbow": return BlackcliffWarbow;
+    case "Blacksmith": return Blacksmith;
     case "Bloodstained Chivalry": return BloodstainedChivalry;
     case "Bloodtainted Greatsword": return BloodtaintedGreatsword;
+    case "Blue Circle": return BlueCircle;
     case "Boreal Wolf's Milk Tooth": return BorealWolfsMilkTooth;
     case "Brave Heart": return BraveHeart;
     case "Brilliant Diamond Sliver": return BrilliantDiamondSliver;
@@ -559,6 +629,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Chilled Meat": return ChilledMeat;
     case "Chongyun": return Chongyun;
     case "Cleansing Heart": return CleansingHeart;
+    case "Companionship Experience": return CompanionshipExperience;
     case "Compound Bow": return CompoundBow;
     case "Cool Steel": return CoolSteel;
     case "Cor Lapis": return CorLapis;
@@ -568,6 +639,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Cryo": return Cryo;
     case "Crystal Chunk": return CrystalChunk;
     case "Crystal Core": return CrystalCore;
+    case "Cyan Circle": return CyanCircle;
     case "Damaged Mask": return DamagedMask;
     case "Dandelion Seed": return DandelionSeed;
     case "Dark Iron Sword": return DarkIronSword;
@@ -607,10 +679,16 @@ export function getAssetByName(name: string): string | undefined {
     case "Frostbearer": return Frostbearer;
     case "Gambler": return Gambler;
     case "Ganyu": return Ganyu;
+    case "General Goods": return GeneralGoods;
+    case "Genesis Crystal": return GenesisCrystal;
+    case "Geo Sigil": return GeoSigil;
     case "Geo": return Geo;
     case "Gladiator's Finale": return GladiatorsFinale;
     case "Glaze Lily": return GlazeLily;
     case "Grain of Aerosiderite": return GrainofAerosiderite;
+    case "Gray Circle": return GrayCircle;
+    case "Green Circle": return GreenCircle;
+    case "Guidance of the Land": return GuidanceoftheLand;
     case "Halberd": return Halberd;
     case "Harbinger of Dawn": return HarbingerofDawn;
     case "Heavy Horn": return HeavyHorn;
@@ -622,6 +700,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Hydro": return Hydro;
     case "Icebreaker": return Icebreaker;
     case "Instructor": return Instructor;
+    case "Intertwined Fate": return IntertwinedFate;
     case "Iron Chunk": return IronChunk;
     case "Iron Sting": return IronSting;
     case "Jean": return Jean;
@@ -645,6 +724,8 @@ export function getAssetByName(name: string): string | undefined {
     case "Maiden Beloved": return MaidenBeloved;
     case "Mappa Mare": return MappaMare;
     case "Martial Artist": return MartialArtist;
+    case "Masterless Stardust": return MasterlessStardust;
+    case "Masterless Starglitter": return MasterlessStarglitter;
     case "Matsutake": return Matsutake;
     case "Messenger": return Messenger;
     case "Mint": return Mint;
@@ -652,6 +733,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Mist Grass Pollen": return MistGrassPollen;
     case "Mist Veiled Lead Elixir": return MistVeiledLeadElixir;
     case "Mona": return Mona;
+    case "Mora": return Mora;
     case "Mushroom": return Mushroom;
     case "Mystic Enhancement Ore": return MysticEnhancementOre;
     case "Ningguang": return Ningguang;
@@ -660,14 +742,19 @@ export function getAssetByName(name: string): string | undefined {
     case "Noelle": return Noelle;
     case "Ocean Conqueror": return OceanConqueror;
     case "Onion": return Onion;
+    case "Orange Circle": return OrangeCircle;
+    case "Other Shops": return OtherShops;
     case "Otherworldly Story": return OtherworldlyStory;
     case "Philanemo Mushroom": return PhilanemoMushroom;
+    case "Philosophies of the Land": return PhilosophiesoftheLand;
     case "Pinecone": return Pinecone;
+    case "Pink Circle": return PinkCircle;
     case "Potato": return Potato;
     case "Prayers for Destiny": return PrayersforDestiny;
     case "Prayers for Illumination": return PrayersforIllumination;
     case "Prayers for Wisdom": return PrayersforWisdom;
     case "Prayers to Springtime": return PrayerstoSpringtime;
+    case "Primogem": return Primogem;
     case "Primordial Jade Winged-Spear": return PrimordialJadeWingedSpear;
     case "Prithiva Topaz Sliver": return PrithivaTopazSliver;
     case "Prototype Amber": return PrototypeAmber;
@@ -675,6 +762,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Prototype Crescent": return PrototypeCrescent;
     case "Prototype Rancour": return PrototypeRancour;
     case "Prototype Starglitter": return PrototypeStarglitter;
+    case "Purple Circle": return PurpleCircle;
     case "Pyro": return Pyro;
     case "Qingxin": return Qingxin;
     case "Qiqi": return Qiqi;
@@ -685,8 +773,10 @@ export function getAssetByName(name: string): string | undefined {
     case "Razor": return Razor;
     case "Recruit's Insignia": return RecruitsInsignia;
     case "Recurve Bow": return RecurveBow;
+    case "Red Circle": return RedCircle;
     case "Resin": return Resin;
     case "Resolution of Sojourner": return ResolutionofSojourner;
+    case "Restaurant": return Restaurant;
     case "Retracing Bolide": return RetracingBolide;
     case "Royal Grimoire": return RoyalGrimoire;
     case "Rust": return Rust;
@@ -713,6 +803,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Snapdragon": return Snapdragon;
     case "Snow-Tombed Starsilver": return SnowTombedStarsilver;
     case "Solar Pearl": return SolarPearl;
+    case "Souvenir Shop": return SouvenirShop;
     case "Starconch": return Starconch;
     case "Starsilver": return Starsilver;
     case "Sucrose": return Sucrose;
@@ -727,6 +818,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Teachings of Gold": return TeachingsofGold;
     case "Teachings of Prosperity": return TeachingsofProsperity;
     case "Teachings of Resistance": return TeachingsofResistance;
+    case "Teal Circle": return TealCircle;
     case "The Bell": return TheBell;
     case "The Black Sword": return TheBlackSword;
     case "The Exile": return TheExile;
@@ -769,6 +861,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Xiao": return Xiao;
     case "Xingqiu": return Xingqiu;
     case "Xinyan": return Xinyan;
+    case "Yellow Circle": return YellowCircle;
     case "Zhongli": return Zhongli;
   }
 }

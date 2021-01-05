@@ -8,7 +8,7 @@ const writeFile = util.promisify(fs.writeFile);
 
 (async () => {
   const assetPath = "assets/game";
-  const assetRenamePrefix = /^(Weapon|Item)_/;
+  const assetRenamePrefix = /^(Weapon|Item|UI|Icon)_/;
 
   // rename assets
   for (const file of await readdir(assetPath)) {
