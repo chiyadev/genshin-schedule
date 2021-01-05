@@ -11,7 +11,8 @@ function buildChangelog() {
     <ChangelogSection key={9} date="2021/01/05">
       <ChangelogItem github={25}>Added local specialties to character common ascension materials.</ChangelogItem>
       <ChangelogItem github={25}>Added missing Blackcliff weapons.</ChangelogItem>
-      <ChangelogItem>Added new map icons including NPCs, sigils and currency.</ChangelogItem>
+      <ChangelogItem>Added new task icons including NPCs, sigils and currency.</ChangelogItem>
+      <ChangelogItem>Added a note input to character info page.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={8} date="2020/12/31">
       <ChangelogItem>Upgraded all dependencies to latest version.</ChangelogItem>

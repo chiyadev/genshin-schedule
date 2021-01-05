@@ -9,6 +9,7 @@ import WhiteCard from "../../components/WhiteCard";
 import { getAssetByName } from "../../assets";
 import MaterialDisplay from "../../components/Customize/CharacterInfo/MaterialDisplay";
 import CommonMaterialDisplay from "../../components/Customize/CharacterInfo/CommonMaterialDisplay";
+import NoteInput from "../../components/Customize/CharacterInfo/NoteInput";
 
 type Props = {
   data: WebData | null;
@@ -63,6 +64,8 @@ const CharacterInfo = ({ data, name }: Props) => {
             {character.commonMaterials.map((material) => (
               <CommonMaterialDisplay key={material.name} character={character} material={material} />
             ))}
+
+            <NoteInput character={character} />
           </WhiteCard>
         ) : (
           <chakra.div color="white">No such character.</chakra.div>
