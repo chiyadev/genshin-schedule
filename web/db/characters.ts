@@ -1,27 +1,27 @@
 import { Ballad, Diligence, Freedom, Gold, Prosperity, Resistance, TalentMaterial } from "./talentMaterials";
 import {
-  CommonMaterial,
-  FatuiInsignia,
-  HilichurlArrowhead,
-  HilichurlMask,
-  SamachurlScroll,
-  Slime,
-  TreasureHoarderInsignia,
-  WhopperflowerNectar,
   CallaLily,
   Cecilia,
+  CommonMaterial,
   CorLapis,
   DandelionSeed,
+  FatuiInsignia,
   GlazeLily,
+  HilichurlArrowhead,
+  HilichurlMask,
   JueyunChili,
   NoctilucousJade,
   PhilanemoMushroom,
   Qingxin,
+  SamachurlScroll,
   SilkFlower,
+  Slime,
   SmallLampGrass,
   Starconch,
+  TreasureHoarderInsignia,
   Valberry,
   Violetgrass,
+  WhopperflowerNectar,
   WindwheelAster,
   Wolfhook,
 } from "./commonMaterials";
@@ -41,7 +41,7 @@ export const TravelerAnemo: Character = {
   name: "Traveler (Anemo)",
   wiki: "https://genshin-impact.fandom.com/wiki/Traveler#Anemo",
   talentMaterials: [Resistance, Ballad],
-  commonMaterials: [SamachurlScroll,WindwheelAster],
+  commonMaterials: [SamachurlScroll, WindwheelAster],
 };
 
 export const TravelerGeo: Character = {
@@ -49,7 +49,7 @@ export const TravelerGeo: Character = {
   name: "Traveler (Geo)",
   wiki: "https://genshin-impact.fandom.com/wiki/Traveler#Geo",
   talentMaterials: [Resistance, Diligence],
-  commonMaterials: [SamachurlScroll, HilichurlArrowhead,WindwheelAster],
+  commonMaterials: [SamachurlScroll, HilichurlArrowhead, WindwheelAster],
 };
 
 export const Amber: Character = {
@@ -57,7 +57,7 @@ export const Amber: Character = {
   name: "Amber",
   wiki: "https://genshin-impact.fandom.com/wiki/Amber",
   talentMaterials: [Freedom],
-  commonMaterials: [HilichurlArrowhead,SmallLampGrass],
+  commonMaterials: [HilichurlArrowhead, SmallLampGrass],
 };
 
 export const Barbara: Character = {
@@ -65,7 +65,7 @@ export const Barbara: Character = {
   name: "Barbara",
   wiki: "https://genshin-impact.fandom.com/wiki/Barbara",
   talentMaterials: [Freedom],
-  commonMaterials: [SamachurlScroll,PhilanemoMushroom],
+  commonMaterials: [SamachurlScroll, PhilanemoMushroom],
 };
 
 export const Beidou: Character = {
@@ -73,7 +73,7 @@ export const Beidou: Character = {
   name: "Beidou",
   wiki: "https://genshin-impact.fandom.com/wiki/Beidou",
   talentMaterials: [Gold],
-  commonMaterials: [TreasureHoarderInsignia,NoctilucousJade],
+  commonMaterials: [TreasureHoarderInsignia, NoctilucousJade],
 };
 
 export const Bennett: Character = {
@@ -81,7 +81,7 @@ export const Bennett: Character = {
   name: "Bennett",
   wiki: "https://genshin-impact.fandom.com/wiki/Bennett",
   talentMaterials: [Resistance],
-  commonMaterials: [TreasureHoarderInsignia,WindwheelAster],
+  commonMaterials: [TreasureHoarderInsignia, WindwheelAster],
 };
 
 export const Chongyun: Character = {
@@ -89,7 +89,7 @@ export const Chongyun: Character = {
   name: "Chongyun",
   wiki: "https://genshin-impact.fandom.com/wiki/Chongyun",
   talentMaterials: [Diligence],
-  commonMaterials: [HilichurlMask,CorLapis],
+  commonMaterials: [HilichurlMask, CorLapis],
 };
 
 export const Diluc: Character = {
@@ -97,7 +97,7 @@ export const Diluc: Character = {
   name: "Diluc",
   wiki: "https://genshin-impact.fandom.com/wiki/Diluc",
   talentMaterials: [Resistance],
-  commonMaterials: [FatuiInsignia,SmallLampGrass],
+  commonMaterials: [FatuiInsignia, SmallLampGrass],
 };
 
 export const Fischl: Character = {
@@ -105,7 +105,7 @@ export const Fischl: Character = {
   name: "Fischl",
   wiki: "https://genshin-impact.fandom.com/wiki/Fischl",
   talentMaterials: [Ballad],
-  commonMaterials: [HilichurlArrowhead,SmallLampGrass],
+  commonMaterials: [HilichurlArrowhead, SmallLampGrass],
 };
 
 export const Jean: Character = {
@@ -113,7 +113,7 @@ export const Jean: Character = {
   name: "Jean",
   wiki: "https://genshin-impact.fandom.com/wiki/Jean",
   talentMaterials: [Resistance],
-  commonMaterials: [HilichurlMask,DandelionSeed],
+  commonMaterials: [HilichurlMask, DandelionSeed],
 };
 
 export const Kaeya: Character = {
@@ -121,7 +121,7 @@ export const Kaeya: Character = {
   name: "Kaeya",
   wiki: "https://genshin-impact.fandom.com/wiki/Kaeya",
   talentMaterials: [Ballad],
-  commonMaterials: [TreasureHoarderInsignia,CallaLily],
+  commonMaterials: [TreasureHoarderInsignia, CallaLily],
 };
 
 export const Keqing: Character = {
@@ -129,7 +129,7 @@ export const Keqing: Character = {
   name: "Keqing",
   wiki: "https://genshin-impact.fandom.com/wiki/Keqing",
   talentMaterials: [Prosperity],
-  commonMaterials: [WhopperflowerNectar,CorLapis],
+  commonMaterials: [WhopperflowerNectar, CorLapis],
 };
 
 export const Lisa: Character = {
@@ -137,7 +137,7 @@ export const Lisa: Character = {
   name: "Lisa",
   wiki: "https://genshin-impact.fandom.com/wiki/Lisa",
   talentMaterials: [Ballad],
-  commonMaterials: [Slime,Valberry],
+  commonMaterials: [Slime, Valberry],
 };
 
 export const Mona: Character = {
@@ -145,7 +145,7 @@ export const Mona: Character = {
   name: "Mona",
   wiki: "https://genshin-impact.fandom.com/wiki/Mona",
   talentMaterials: [Resistance],
-  commonMaterials: [WhopperflowerNectar,PhilanemoMushroom],
+  commonMaterials: [WhopperflowerNectar, PhilanemoMushroom],
 };
 
 export const Ningguang: Character = {
@@ -153,7 +153,7 @@ export const Ningguang: Character = {
   name: "Ningguang",
   wiki: "https://genshin-impact.fandom.com/wiki/Ningguang",
   talentMaterials: [Prosperity],
-  commonMaterials: [FatuiInsignia,GlazeLily],
+  commonMaterials: [FatuiInsignia, GlazeLily],
 };
 
 export const Noelle: Character = {
@@ -161,7 +161,7 @@ export const Noelle: Character = {
   name: "Noelle",
   wiki: "https://genshin-impact.fandom.com/wiki/Noelle",
   talentMaterials: [Resistance],
-  commonMaterials: [HilichurlMask,Valberry],
+  commonMaterials: [HilichurlMask, Valberry],
 };
 
 export const Qiqi: Character = {
@@ -169,7 +169,7 @@ export const Qiqi: Character = {
   name: "Qiqi",
   wiki: "https://genshin-impact.fandom.com/wiki/Qiqi",
   talentMaterials: [Prosperity],
-  commonMaterials: [SamachurlScroll,Violetgrass],
+  commonMaterials: [SamachurlScroll, Violetgrass],
 };
 
 export const Razor: Character = {
@@ -177,7 +177,7 @@ export const Razor: Character = {
   name: "Razor",
   wiki: "https://genshin-impact.fandom.com/wiki/Razor",
   talentMaterials: [Resistance],
-  commonMaterials: [HilichurlMask,Wolfhook],
+  commonMaterials: [HilichurlMask, Wolfhook],
 };
 
 export const Sucrose: Character = {
@@ -185,7 +185,7 @@ export const Sucrose: Character = {
   name: "Sucrose",
   wiki: "https://genshin-impact.fandom.com/wiki/Sucrose",
   talentMaterials: [Freedom],
-  commonMaterials: [WhopperflowerNectar,WindwheelAster],
+  commonMaterials: [WhopperflowerNectar, WindwheelAster],
 };
 
 export const Venti: Character = {
@@ -193,7 +193,7 @@ export const Venti: Character = {
   name: "Venti",
   wiki: "https://genshin-impact.fandom.com/wiki/Venti",
   talentMaterials: [Ballad],
-  commonMaterials: [Slime,Cecilia],
+  commonMaterials: [Slime, Cecilia],
 };
 
 export const Xiangling: Character = {
@@ -201,7 +201,7 @@ export const Xiangling: Character = {
   name: "Xiangling",
   wiki: "https://genshin-impact.fandom.com/wiki/Xiangling",
   talentMaterials: [Diligence],
-  commonMaterials: [Slime,JueyunChili],
+  commonMaterials: [Slime, JueyunChili],
 };
 
 export const Xingqiu: Character = {
@@ -209,7 +209,7 @@ export const Xingqiu: Character = {
   name: "Xingqiu",
   wiki: "https://genshin-impact.fandom.com/wiki/Xingqiu",
   talentMaterials: [Gold],
-  commonMaterials: [HilichurlMask,SilkFlower],
+  commonMaterials: [HilichurlMask, SilkFlower],
 };
 
 export const Klee: Character = {
@@ -217,7 +217,7 @@ export const Klee: Character = {
   name: "Klee",
   wiki: "https://genshin-impact.fandom.com/wiki/Klee",
   talentMaterials: [Freedom],
-  commonMaterials: [SamachurlScroll,PhilanemoMushroom],
+  commonMaterials: [SamachurlScroll, PhilanemoMushroom],
 };
 
 export const Tartaglia: Character = {
@@ -225,7 +225,7 @@ export const Tartaglia: Character = {
   name: "Tartaglia",
   wiki: "https://genshin-impact.fandom.com/wiki/Tartaglia",
   talentMaterials: [Freedom],
-  commonMaterials: [FatuiInsignia,Starconch],
+  commonMaterials: [FatuiInsignia, Starconch],
 };
 
 export const Diona: Character = {
@@ -233,7 +233,7 @@ export const Diona: Character = {
   name: "Diona",
   wiki: "https://genshin-impact.fandom.com/wiki/Diona",
   talentMaterials: [Freedom],
-  commonMaterials: [HilichurlArrowhead,CallaLily],
+  commonMaterials: [HilichurlArrowhead, CallaLily],
 };
 
 export const Zhongli: Character = {
@@ -241,7 +241,7 @@ export const Zhongli: Character = {
   name: "Zhongli",
   wiki: "https://genshin-impact.fandom.com/wiki/Zhongli",
   talentMaterials: [Gold],
-  commonMaterials: [Slime,CorLapis],
+  commonMaterials: [Slime, CorLapis],
 };
 
 export const Xinyan: Character = {
@@ -249,7 +249,7 @@ export const Xinyan: Character = {
   name: "Xinyan",
   wiki: "https://genshin-impact.fandom.com/wiki/Xinyan",
   talentMaterials: [Gold],
-  commonMaterials: [TreasureHoarderInsignia,Violetgrass],
+  commonMaterials: [TreasureHoarderInsignia, Violetgrass],
 };
 
 export const Albedo: Character = {
@@ -257,7 +257,7 @@ export const Albedo: Character = {
   name: "Albedo",
   wiki: "https://genshin-impact.fandom.com/wiki/Albedo",
   talentMaterials: [Ballad],
-  commonMaterials: [SamachurlScroll,Cecilia],
+  commonMaterials: [SamachurlScroll, Cecilia],
 };
 
 export const Ganyu: Character = {
@@ -265,7 +265,7 @@ export const Ganyu: Character = {
   name: "Ganyu",
   wiki: "https://genshin-impact.fandom.com/wiki/Ganyu",
   talentMaterials: [Diligence],
-  commonMaterials: [WhopperflowerNectar,Qingxin],
+  commonMaterials: [WhopperflowerNectar, Qingxin],
 };
 
 export const Ayaka: Character = {
@@ -273,7 +273,7 @@ export const Ayaka: Character = {
   name: "Ayaka",
   wiki: "https://genshin-impact.fandom.com/wiki/Ayaka",
   talentMaterials: [Prosperity],
-  commonMaterials: [WhopperflowerNectar,SmallLampGrass],
+  commonMaterials: [WhopperflowerNectar, SmallLampGrass],
 };
 
 export const Xiao: Character = {
@@ -281,7 +281,7 @@ export const Xiao: Character = {
   name: "Xiao",
   wiki: "https://genshin-impact.fandom.com/wiki/Xiao",
   talentMaterials: [Prosperity],
-  commonMaterials: [Slime,Qingxin],
+  commonMaterials: [Slime, Qingxin],
 };
 
 export const Characters = [

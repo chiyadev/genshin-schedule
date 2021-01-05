@@ -126,7 +126,7 @@ add("Black Tassel", Aerosiderite, [BoneShard, HilichurlArrowhead]);
 add("Compound Bow", Aerosiderite, [BoneShard, FatuiInsignia]);
 add("Iron Sting", Aerosiderite, [BoneShard, WhopperflowerNectar]);
 add("Mappa Mare", Aerosiderite, [BoneShard, Slime]);
-add("Prototype Arcaic", Aerosiderite, [BoneShard, HilichurlMask]);
+add("Prototype Archaic", Aerosiderite, [BoneShard, HilichurlMask]);
 add("Prototype Starglitter", Aerosiderite, [BoneShard, HilichurlMask]);
 add("Royal Grimoire", Aerosiderite, [BoneShard, Slime]);
 add("Serpent Spine", Aerosiderite, [BoneShard, WhopperflowerNectar]);

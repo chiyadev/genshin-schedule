@@ -155,7 +155,7 @@ import PrayerstoSpringtime from "./game/Prayers to Springtime.png";
 import PrimordialJadeWingedSpear from "./game/Primordial Jade Winged-Spear.png";
 import PrithivaTopazSliver from "./game/Prithiva Topaz Sliver.png";
 import PrototypeAmber from "./game/Prototype Amber.png";
-import PrototypeArcaic from "./game/Prototype Arcaic.png";
+import PrototypeArchaic from "./game/Prototype Archaic.png";
 import PrototypeCrescent from "./game/Prototype Crescent.png";
 import PrototypeRancour from "./game/Prototype Rancour.png";
 import PrototypeStarglitter from "./game/Prototype Starglitter.png";
@@ -412,7 +412,7 @@ export {
   PrimordialJadeWingedSpear,
   PrithivaTopazSliver,
   PrototypeAmber,
-  PrototypeArcaic,
+  PrototypeArchaic,
   PrototypeCrescent,
   PrototypeRancour,
   PrototypeStarglitter,
@@ -671,7 +671,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Primordial Jade Winged-Spear": return PrimordialJadeWingedSpear;
     case "Prithiva Topaz Sliver": return PrithivaTopazSliver;
     case "Prototype Amber": return PrototypeAmber;
-    case "Prototype Arcaic": return PrototypeArcaic;
+    case "Prototype Archaic": return PrototypeArchaic;
     case "Prototype Crescent": return PrototypeCrescent;
     case "Prototype Rancour": return PrototypeRancour;
     case "Prototype Starglitter": return PrototypeStarglitter;
