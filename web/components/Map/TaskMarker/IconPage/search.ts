@@ -1,5 +1,4 @@
 import { MemorySearch } from "../../../../utils/memorySearch";
-import { CommonMaterials } from "../../../../db/commonMaterials";
 import { Artifacts } from "../../../../db/artifacts";
 import { Task } from "../../../../utils/configs";
 
@@ -49,10 +48,21 @@ addIcons("character ascension material", [
   { name: "Vayuda Turquoise Sliver" },
 ]);
 
-addIcons(
-  "common ascension material",
-  CommonMaterials.map((material) => ({ name: material.item, timer: "reset" }))
-);
+addIcons("common ascension material", [
+  { name: "Slime Condensate", timer: "reset" },
+  { name: "Damaged Mask", timer: "reset" },
+  { name: "Firm Arrowhead", timer: "reset" },
+  { name: "Divining Scroll", timer: "reset" },
+  { name: "Heavy Horn", timer: "reset" },
+  { name: "Dead Ley Line Branch", timer: "reset" },
+  { name: "Chaos Device", timer: "reset" },
+  { name: "Mist Grass Pollen", timer: "reset" },
+  { name: "Hunter's Sacrificial Knife", timer: "reset" },
+  { name: "Recruit's Insignia", timer: "reset" },
+  { name: "Treasure Hoarder Insignia", timer: "reset" },
+  { name: "Fragile Bone Shard", timer: "reset" },
+  { name: "Whopperflower Nectar", timer: "reset" },
+]);
 
 addIcons("local specialty mondstadt", [
   { name: "Calla Lily", timer: 48 },
