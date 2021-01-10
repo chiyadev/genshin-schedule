@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Discord;
-using Discord.Net;
 using GenshinSchedule.SyncServer.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -74,6 +73,8 @@ namespace GenshinSchedule.SyncServer.Discord
                 db.RemoveRange(notifications);
 
                 await db.SaveChangesAsync(cancellationToken);
+
+                _logger.LogInformation($"Removed {notifications.Count} notifications from queue.");
             }
         }
 
@@ -82,34 +83,24 @@ namespace GenshinSchedule.SyncServer.Discord
             var recipient = await client.GetUserAsync(notification.User.DiscordUserId ?? 0);
 
             if (recipient == null)
+            {
+                _logger.LogWarning($"No recipient user {notification.User.DiscordUserId?.ToString() ?? "<null>"} found.");
                 return;
-
-            try
-            {
-                string fixUrl(string url)
-                    => Uri.TryCreate(_defaultBaseUri, url, out var uri) ? uri.AbsoluteUri : null;
-
-                await recipient.SendMessageAsync("", embed: new EmbedBuilder
-                {
-                    ThumbnailUrl = fixUrl(notification.Icon),
-                    Title        = notification.Title,
-                    Description  = notification.Description,
-                    Url          = fixUrl(notification.Url),
-                    Color        = uint.TryParse(notification.Color?.TrimStart('#'), NumberStyles.HexNumber, null, out var c) ? new Color(c) : null as Color?
-                }.Build());
             }
-            catch (HttpException e)
-            {
-                switch (e.DiscordCode)
-                {
-                    case 50007:
-                        // blocked or cannot send
-                        break;
 
-                    default:
-                        throw;
-                }
-            }
+            string fixUrl(string url)
+                => Uri.TryCreate(_defaultBaseUri, url, out var uri) ? uri.AbsoluteUri : null;
+
+            await recipient.SendMessageAsync("", embed: new EmbedBuilder
+            {
+                ThumbnailUrl = fixUrl(notification.Icon),
+                Title        = notification.Title,
+                Description  = notification.Description,
+                Url          = fixUrl(notification.Url),
+                Color        = uint.TryParse(notification.Color?.TrimStart('#'), NumberStyles.HexNumber, null, out var c) ? new Color(c) : null as Color?
+            }.Build());
+
+            _logger.LogInformation($"Successfully sent notification '{notification.Key}' to user {recipient.Id}.");
         }
     }
 }
