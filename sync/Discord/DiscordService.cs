@@ -66,7 +66,10 @@ namespace GenshinSchedule.SyncServer.Discord
 
             try
             {
-                await _notification.RunAsync(client, stoppingToken);
+                if (bool.TryParse(_configuration["Discord:DisableNotifications"], out var disableNotification) && disableNotification)
+                    await Task.Delay(-1, stoppingToken);
+                else
+                    await _notification.RunAsync(client, stoppingToken);
             }
             finally
             {

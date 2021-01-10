@@ -25,9 +25,6 @@ namespace GenshinSchedule.SyncServer.Discord
 
         public async Task RunAsync(IDiscordClient client, CancellationToken cancellationToken = default)
         {
-            // temporarily disable
-            return;
-
             var delay = new AccurateDelay(TimeSpan.FromSeconds(5));
 
             while (!cancellationToken.IsCancellationRequested)
@@ -64,46 +61,54 @@ namespace GenshinSchedule.SyncServer.Discord
 
                 await Task.WhenAll(notifications.Select(async notification =>
                 {
-                    var recipient = await client.GetUserAsync(notification.User.DiscordUserId ?? 0);
-
-                    if (recipient == null)
-                        return;
-
                     try
                     {
-                        string fixUrl(string url)
-                            => Uri.TryCreate(_defaultBaseUri, url, out var uri) ? uri.AbsoluteUri : null;
-
-                        await recipient.SendMessageAsync("", embed: new EmbedBuilder
-                        {
-                            ThumbnailUrl = fixUrl(notification.Icon),
-                            Title        = notification.Title,
-                            Description  = notification.Description,
-                            Url          = fixUrl(notification.Url),
-                            Color        = uint.TryParse(notification.Color?.TrimStart('#'), NumberStyles.HexNumber, null, out var c) ? new Color(c) : null as Color?
-                        }.Build());
-                    }
-                    catch (HttpException e)
-                    {
-                        switch (e.DiscordCode)
-                        {
-                            case 50007:
-                                // blocked or cannot send
-                                break;
-
-                            default:
-                                throw;
-                        }
+                        await SendAsync(client, notification);
                     }
                     catch (Exception e)
                     {
-                        _logger.LogWarning(e, $"Could not send notification '{notification.Key}' to user {recipient.Id}.");
+                        _logger.LogWarning(e, $"Could not send notification '{notification.Key}' to user {notification.User.DiscordUserId}.");
                     }
                 }));
 
                 db.RemoveRange(notifications);
 
                 await db.SaveChangesAsync(cancellationToken);
+            }
+        }
+
+        async Task SendAsync(IDiscordClient client, DbNotification notification)
+        {
+            var recipient = await client.GetUserAsync(notification.User.DiscordUserId ?? 0);
+
+            if (recipient == null)
+                return;
+
+            try
+            {
+                string fixUrl(string url)
+                    => Uri.TryCreate(_defaultBaseUri, url, out var uri) ? uri.AbsoluteUri : null;
+
+                await recipient.SendMessageAsync("", embed: new EmbedBuilder
+                {
+                    ThumbnailUrl = fixUrl(notification.Icon),
+                    Title        = notification.Title,
+                    Description  = notification.Description,
+                    Url          = fixUrl(notification.Url),
+                    Color        = uint.TryParse(notification.Color?.TrimStart('#'), NumberStyles.HexNumber, null, out var c) ? new Color(c) : null as Color?
+                }.Build());
+            }
+            catch (HttpException e)
+            {
+                switch (e.DiscordCode)
+                {
+                    case 50007:
+                        // blocked or cannot send
+                        break;
+
+                    default:
+                        throw;
+                }
             }
         }
     }
