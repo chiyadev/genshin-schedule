@@ -25,6 +25,9 @@ namespace GenshinSchedule.SyncServer.Discord
 
         public async Task RunAsync(IDiscordClient client, CancellationToken cancellationToken = default)
         {
+            // temporarily disable
+            return;
+
             var delay = new AccurateDelay(TimeSpan.FromSeconds(5));
 
             while (!cancellationToken.IsCancellationRequested)
