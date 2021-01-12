@@ -26,6 +26,9 @@ namespace GenshinSchedule.SyncServer.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Retrieves the currently authenticated user information.
+        /// </summary>
         [HttpGet, Authorize]
         public async Task<ActionResult<User>> GetAsync()
         {
@@ -53,6 +56,9 @@ namespace GenshinSchedule.SyncServer.Controllers
         static readonly Counter _registrations = Metrics.CreateCounter("auth_registrations", "Number of new registrations.");
         static readonly Counter _authorizations = Metrics.CreateCounter("auth_authorizations", "Number of account authorizations.");
 
+        /// <summary>
+        /// Authenticates as an existing user, or creates a new user if one does not exist.
+        /// </summary>
         [HttpPost]
         public async Task<ActionResult<AuthResponse>> PostAsync(AuthRequest request)
         {

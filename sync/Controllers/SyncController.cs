@@ -29,6 +29,9 @@ namespace GenshinSchedule.SyncServer.Controllers
             LabelNames = new[] { "type" }
         });
 
+        /// <summary>
+        /// Retrieves the latest synchronization data.
+        /// </summary>
         [HttpGet]
         public async Task<ActionResult<WebData>> GetAsync()
         {
@@ -55,6 +58,9 @@ namespace GenshinSchedule.SyncServer.Controllers
             }
         }
 
+        /// <summary>
+        /// Applies the given patches to synchronization data.
+        /// </summary>
         [HttpPatch]
         public async Task<ActionResult> PatchAsync(SyncRequest request)
         {

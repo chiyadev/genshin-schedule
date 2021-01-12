@@ -28,6 +28,9 @@ namespace GenshinSchedule.SyncServer.Controllers
             LabelNames = new[] { "type" }
         });
 
+        /// <summary>
+        /// Retrieves all notifications in queue.
+        /// </summary>
         [HttpGet]
         public async Task<ActionResult<Notification[]>> GetAsync()
         {
@@ -51,6 +54,9 @@ namespace GenshinSchedule.SyncServer.Controllers
             }
         }
 
+        /// <summary>
+        /// Retrieves a notification in queue given its key.
+        /// </summary>
         [HttpGet("{key}")]
         public async Task<ActionResult<Notification>> GetAsync(string key)
         {
@@ -77,6 +83,9 @@ namespace GenshinSchedule.SyncServer.Controllers
             }
         }
 
+        /// <summary>
+        /// Creates or updates a notification in queue.
+        /// </summary>
         [HttpPut("{key}")]
         public async Task<ActionResult> PutAsync(string key, Notification model)
         {
