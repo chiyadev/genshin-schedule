@@ -8,7 +8,7 @@ executors:
       DOCKER_IMAGE_SYNC: r.chiya.dev/genshin-sync
       NEXT_PUBLIC_UMAMI_URL: https://a.chiya.dev/57a842aa-1d89-4c48-aaea-2b9b98b4e818
       NEXT_PUBLIC_API_PUBLIC: https://genshin.chiya.dev/api/v1
-      NEXT_PUBLIC_API_INTERNAL: http://genshin-sync
+      NEXT_PUBLIC_API_INTERNAL: http://genshin-sync/api/v1
 
 jobs:
   deploy-web:
