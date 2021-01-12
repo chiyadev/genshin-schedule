@@ -21,7 +21,7 @@ const SignOutButton = () => {
         setAuthToken(undefined);
         trackEvent("sync", "disable");
 
-        setTimeout(() => router.reload());
+        setTimeout(() => router.push("/"));
       }}
     >
       Sign out
