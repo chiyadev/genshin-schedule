@@ -11,10 +11,14 @@ namespace GenshinSchedule.SyncServer.Models
         [JsonProperty("createdTime")]
         public long CreatedTime { get; set; }
 
+        [JsonProperty("is_admin")]
+        public bool IsAdmin { get; set; }
+
         public static User FromDbModel(DbUser user) => new User
         {
             Username    = user.Username,
-            CreatedTime = user.CreatedTime.ToUnixTimeMilliseconds()
+            CreatedTime = user.CreatedTime.ToUnixTimeMilliseconds(),
+            IsAdmin     = user.IsAdmin
         };
     }
 }
