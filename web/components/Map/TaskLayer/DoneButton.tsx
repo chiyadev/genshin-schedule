@@ -3,7 +3,7 @@ import { Task } from "../../../utils/configs";
 import { useServerTime } from "../../../utils/time";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
-import { Button, Icon } from "@chakra-ui/react";
+import { HStack, Icon, Link } from "@chakra-ui/react";
 import { useTaskDoneSetter, useTaskFocusSetter } from "../../../utils/tasks";
 
 const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateAction<Task>> }) => {
@@ -13,12 +13,10 @@ const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateA
   const setFocused = useTaskFocusSetter();
 
   return (
-    <Button
-      variant="link"
-      colorScheme={due ? "red" : "green"}
-      size="sm"
-      fontWeight="normal"
-      leftIcon={<Icon as={due ? FaTimes : FaCheck} />}
+    <Link
+      as="button"
+      color={due ? "red.500" : "green.500"}
+      fontSize="sm"
       onClick={() => {
         setDone(!due);
         setFocused();
@@ -26,8 +24,11 @@ const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateA
         trackEvent("map", due ? "taskUndone" : "taskDone");
       }}
     >
-      Mark as {due ? "to-do" : "done"}
-    </Button>
+      <HStack spacing={2}>
+        <Icon as={due ? FaTimes : FaCheck} />
+        <div>Mark as {due ? "to-do" : "done"}</div>
+      </HStack>
+    </Link>
   );
 };
 

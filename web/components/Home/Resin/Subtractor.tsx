@@ -46,7 +46,7 @@ const SubtractButton = ({ value, onClick }: { value: number; onClick: () => void
   );
 
   return (
-    <Button variant="link" color="gray.500" size="sm" onClick={onClick}>
+    <Button variant="ghost" color="gray.500" size="sm" p={0} onClick={onClick}>
       -{value}
     </Button>
   );

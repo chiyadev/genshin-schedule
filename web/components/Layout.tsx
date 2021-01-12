@@ -1,6 +1,6 @@
 import React, { memo, ReactNode, useState } from "react";
 import Head from "next/head";
-import { chakra, Flex, HStack, Icon, Link, Spacer } from "@chakra-ui/react";
+import { chakra, DarkMode, Flex, HStack, Icon, Link, Spacer } from "@chakra-ui/react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Background from "./Background";
@@ -23,7 +23,7 @@ const Layout = ({
   const [shortcuts, setShortcuts] = useState(false);
 
   return (
-    <>
+    <DarkMode>
       <Head>
         <title>{[...title.map((x) => x?.trim()).filter((x) => x), "Genshin Schedule"].join(" · ")}</title>
       </Head>
@@ -41,7 +41,7 @@ const Layout = ({
                 menu={
                   <NextLink href="/customize/notifications" passHref>
                     <Link>
-                      <HStack spacing={1}>
+                      <HStack spacing={2}>
                         <Icon as={FaBell} />
                         <div>Notifications</div>
                       </HStack>
@@ -58,7 +58,7 @@ const Layout = ({
       ) : (
         children
       )}
-    </>
+    </DarkMode>
   );
 };
 

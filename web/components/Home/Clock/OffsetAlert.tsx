@@ -1,4 +1,4 @@
-import { Button, Flex, LightMode } from "@chakra-ui/react";
+import { Flex, Link } from "@chakra-ui/react";
 import React, { memo } from "react";
 import { useConfig } from "../../../utils/configs";
 import { trackEvent } from "../../../utils/umami";
@@ -12,23 +12,21 @@ const OffsetAlert = () => {
   }
 
   return (
-    <LightMode>
-      <Flex justify="center">
-        <Button
-          variant="link"
-          fontSize="sm"
-          fontWeight="bold"
-          colorScheme="red"
-          onClick={() => {
-            setOffset(0);
-            trackEvent("clock", "offsetReset");
-          }}
-        >
-          Showing schedule in {offset >= 0 ? "+" : "-"}
-          {Math.abs(offset)} {pluralize("day", offset)}
-        </Button>
-      </Flex>
-    </LightMode>
+    <Flex justify="center">
+      <Link
+        as="button"
+        color="red.500"
+        fontSize="sm"
+        fontWeight="bold"
+        onClick={() => {
+          setOffset(0);
+          trackEvent("clock", "offsetReset");
+        }}
+      >
+        Showing schedule in {offset >= 0 ? "+" : "-"}
+        {Math.abs(offset)} {pluralize("day", offset)}
+      </Link>
+    </Flex>
   );
 };
 

@@ -1,13 +1,13 @@
 import React, { memo, ReactNode } from "react";
 import Favicon32x32 from "../public/favicon-32x32.png";
-import { chakra, DarkMode, HStack, Icon, Link, Spacer } from "@chakra-ui/react";
+import { chakra, HStack, Icon, Link, Spacer } from "@chakra-ui/react";
 import { FaCog } from "react-icons/fa";
 import NextLink from "next/link";
 import styles from "./Header.module.css";
 
 const Header = ({ menu }: { menu?: ReactNode }) => {
   return (
-    <DarkMode>
+    <>
       <HStack as="nav" p={4} spacing={2} color="white">
         <NextLink href="/" passHref>
           <Link fontWeight="bold" flexShrink={0}>
@@ -19,20 +19,21 @@ const Header = ({ menu }: { menu?: ReactNode }) => {
         </NextLink>
 
         <Spacer />
+
         <HStack className={styles.menu} spacing={4}>
           {menu}
 
           <NextLink href="/customize" passHref>
             <Link flexShrink={0}>
-              <HStack spacing={1}>
+              <HStack spacing={2}>
                 <Icon as={FaCog} />
-                <chakra.span>Customize</chakra.span>
+                <div>Customize</div>
               </HStack>
             </Link>
           </NextLink>
         </HStack>
       </HStack>
-    </DarkMode>
+    </>
   );
 };
 

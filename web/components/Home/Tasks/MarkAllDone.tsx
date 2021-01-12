@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { useConfig } from "../../../utils/configs";
 import { FaCheck } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
-import { Button, Icon } from "@chakra-ui/react";
+import { HStack, Icon, Link } from "@chakra-ui/react";
 import { getServerResetTime, useServerTime } from "../../../utils/time";
 
 const MarkAllDone = () => {
@@ -10,12 +10,10 @@ const MarkAllDone = () => {
   const [, setTasks] = useConfig("tasks");
 
   return (
-    <Button
-      variant="link"
-      colorScheme="white"
-      size="sm"
-      fontWeight="normal"
-      rightIcon={<Icon as={FaCheck} />}
+    <Link
+      as="button"
+      color="white"
+      fontSize="sm"
       onClick={() => {
         setTasks((tasks) =>
           tasks.map((task) => {
@@ -36,8 +34,11 @@ const MarkAllDone = () => {
         trackEvent("taskList", "taskDoneAll");
       }}
     >
-      Mark everything as done
-    </Button>
+      <HStack spacing={2}>
+        <div>Mark everything as done</div>
+        <Icon as={FaCheck} />
+      </HStack>
+    </Link>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Button, chakra, HStack } from "@chakra-ui/react";
+import { chakra, HStack, Link } from "@chakra-ui/react";
 import React, { Dispatch, memo, SetStateAction } from "react";
 import { Task } from "../../utils/configs";
 import { trackEvent } from "../../utils/umami";
@@ -23,11 +23,10 @@ const Item = ({
 
       <chakra.div flex={1}>
         <div>
-          <Button
-            variant="link"
-            size="lg"
-            colorScheme="black"
-            minW={0}
+          <Link
+            as="button"
+            fontSize="lg"
+            fontWeight="bold"
             onClick={() => {
               setFocused(task);
               onTaskClick?.(task);
@@ -36,7 +35,7 @@ const Item = ({
             }}
           >
             {task.name}
-          </Button>
+          </Link>
         </div>
 
         {task.description && (

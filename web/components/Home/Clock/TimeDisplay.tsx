@@ -56,12 +56,13 @@ const TimeDisplay = () => {
   );
 
   return (
-    <HStack justify="center">
+    <HStack spacing={2} justify="center">
       <Tooltip label="Previous day" closeOnClick={false}>
         <Button
-          variant="link"
-          fontWeight="bold"
+          variant="ghost"
           fontSize="4xl"
+          w={12}
+          h={12}
           colorScheme="white"
           onClick={backward}
           disabled={offset <= -6}
@@ -71,16 +72,15 @@ const TimeDisplay = () => {
       </Tooltip>
 
       <chakra.div fontWeight="bold" fontSize="4xl">
-        <span> {hour}</span>
-        <span>:{minute}:</span>
-        <span>{second} </span>
+        {hour}:{minute}:{second}
       </chakra.div>
 
       <Tooltip label="Next day" closeOnClick={false}>
         <Button
-          variant="link"
-          fontWeight="bold"
+          variant="ghost"
           fontSize="4xl"
+          w={12}
+          h={12}
           colorScheme="white"
           onClick={forward}
           disabled={offset >= 6}

@@ -1,7 +1,7 @@
 import React, { memo, ReactNode } from "react";
 import { Configs, useConfig } from "../../utils/configs";
 import { FaCaretDown, FaCaretRight } from "react-icons/fa";
-import { Button, chakra, Collapse, DarkMode, Fade, HStack, Icon, LightMode, Spacer, VStack } from "@chakra-ui/react";
+import { chakra, Collapse, Fade, HStack, Icon, Link, Spacer, VStack } from "@chakra-ui/react";
 
 const WidgetWrapper = ({
   type,
@@ -20,32 +20,31 @@ const WidgetWrapper = ({
 
   return (
     <VStack align="stretch" spacing={0}>
-      <DarkMode>
-        <HStack color={hidden[type] ? "gray.500" : "white"} spacing={0}>
-          <Button
-            variant="link"
-            colorScheme="white"
-            leftIcon={hidden[type] ? <Icon as={FaCaretRight} /> : <Icon as={FaCaretDown} />}
-            size="lg"
-            onClick={() => {
-              setHidden((widgets) => ({ ...widgets, [type]: !widgets[type] }));
-            }}
-          >
-            {heading}
-          </Button>
+      <HStack color={hidden[type] ? "gray.500" : "white"} spacing={0}>
+        <Link
+          as="button"
+          color="white"
+          fontSize="lg"
+          fontWeight="bold"
+          onClick={() => {
+            setHidden((widgets) => ({ ...widgets, [type]: !widgets[type] }));
+          }}
+        >
+          <HStack spacing={2}>
+            {hidden[type] ? <Icon as={FaCaretRight} /> : <Icon as={FaCaretDown} />}
+            <div>{heading}</div>
+          </HStack>
+        </Link>
 
-          <Spacer />
-          <Fade in={!hidden[type]}>{menu}</Fade>
-        </HStack>
-      </DarkMode>
+        <Spacer />
+        <Fade in={!hidden[type]}>{menu}</Fade>
+      </HStack>
 
-      <LightMode>
-        <Collapse in={!hidden[type]} unmountOnExit>
-          <chakra.div mt={4} onMouseEnter={() => onHover?.(true)} onMouseLeave={() => onHover?.(false)}>
-            {children}
-          </chakra.div>
-        </Collapse>
-      </LightMode>
+      <Collapse in={!hidden[type]} unmountOnExit>
+        <chakra.div mt={4} onMouseEnter={() => onHover?.(true)} onMouseLeave={() => onHover?.(false)}>
+          {children}
+        </chakra.div>
+      </Collapse>
     </VStack>
   );
 };

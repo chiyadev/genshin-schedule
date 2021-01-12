@@ -2,7 +2,7 @@ import React, { memo, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import TaskSearchModal from "../TaskSearchModal";
 import { useConfig } from "../../utils/configs";
-import { Button, HStack } from "@chakra-ui/react";
+import { HStack, Link } from "@chakra-ui/react";
 import { trackEvent } from "../../utils/umami";
 
 const SearchButton = () => {
@@ -10,24 +10,22 @@ const SearchButton = () => {
   const [query] = useConfig("taskQuery");
 
   return (
-    <HStack spacin={2}>
+    <HStack spacing={2}>
       <TaskSearchModal open={open} setOpen={setOpen} />
 
-      <Button
-        variant="link"
-        colorScheme="white"
-        leftIcon={<FaSearch />}
-        minW={0}
-        p={1}
-        borderRadius={0}
-        fontWeight="normal"
+      <Link
+        as="button"
+        color="white"
         onClick={() => {
           setOpen(true);
           trackEvent("map", "taskSearch");
         }}
       >
-        {query ? `"${query}"` : "Search"}
-      </Button>
+        <HStack spacing={2}>
+          <FaSearch />
+          <div>{query ? `"${query}"` : "Search"}</div>
+        </HStack>
+      </Link>
     </HStack>
   );
 };

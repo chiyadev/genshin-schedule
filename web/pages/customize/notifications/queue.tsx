@@ -1,10 +1,10 @@
 import React, { memo } from "react";
-import Layout from "../../../../components/Layout";
+import Layout from "../../../components/Layout";
 import { GetServerSideProps } from "next";
-import { createApiClient, Notification, WebData } from "../../../../utils/api";
-import ConfigsProvider from "../../../../components/ConfigsProvider";
+import { createApiClient, Notification, WebData } from "../../../utils/api";
+import ConfigsProvider from "../../../components/ConfigsProvider";
 import { VStack } from "@chakra-ui/layout";
-import WhiteCard from "../../../../components/WhiteCard";
+import WhiteCard from "../../../components/WhiteCard";
 import { Button, chakra, HStack } from "@chakra-ui/react";
 import { DateTime } from "luxon";
 

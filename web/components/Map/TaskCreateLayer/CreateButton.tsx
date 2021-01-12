@@ -3,7 +3,7 @@ import { useConfig } from "../../../utils/configs";
 import { useServerTime } from "../../../utils/time";
 import { FaCheck } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
-import { Button, Icon } from "@chakra-ui/react";
+import { HStack, Icon, Link } from "@chakra-ui/react";
 
 const CreateButton = () => {
   const time = useServerTime(1000);
@@ -12,12 +12,11 @@ const CreateButton = () => {
   const [, setFocused] = useConfig("mapFocusedTask");
 
   return (
-    <Button
-      variant="link"
-      colorScheme="green"
-      size="sm"
+    <Link
+      as="button"
+      color="green.500"
+      fontSize="sm"
       fontWeight="normal"
-      leftIcon={<Icon as={FaCheck} />}
       onClick={() => {
         setTask((task) => ({ ...task, visible: false }));
         setTasks((tasks) => [...tasks, { ...task, dueTime: time.valueOf() }]);
@@ -26,8 +25,11 @@ const CreateButton = () => {
         trackEvent("map", "taskCreate");
       }}
     >
-      Create
-    </Button>
+      <HStack spacing={2}>
+        <Icon as={FaCheck} />
+        <div>Create</div>
+      </HStack>
+    </Link>
   );
 };
 

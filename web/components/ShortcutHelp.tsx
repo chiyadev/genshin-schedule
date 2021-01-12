@@ -2,7 +2,7 @@ import React, { Dispatch, memo, ReactNode } from "react";
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/modal";
 import { useHotkeys } from "react-hotkeys-hook";
 import { Heading, HStack, Kbd, ListItem, UnorderedList, VStack } from "@chakra-ui/layout";
-import { Icon } from "@chakra-ui/react";
+import { Icon, LightMode } from "@chakra-ui/react";
 import { FaKeyboard } from "react-icons/fa";
 
 const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<boolean> }) => {
@@ -12,45 +12,47 @@ const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<bool
   });
 
   return (
-    <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
-      <ModalOverlay />
-      <ModalContent>
-        <ModalHeader>
-          <HStack>
-            <Icon as={FaKeyboard} />
-            <div>Keyboard Shortcuts</div>
-          </HStack>
-        </ModalHeader>
-        <ModalCloseButton />
-        <ModalBody>
-          <VStack align="start" spacing={4}>
-            <Category heading="Server Clock">
-              <KeyHint shortcut="left">Previous day</KeyHint>
-              <KeyHint shortcut="right">Next day</KeyHint>
-              <KeyHint shortcut="esc">Reset offset</KeyHint>
-            </Category>
+    <LightMode>
+      <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>
+            <HStack>
+              <Icon as={FaKeyboard} />
+              <div>Keyboard Shortcuts</div>
+            </HStack>
+          </ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <VStack align="start" spacing={4}>
+              <Category heading="Server Clock">
+                <KeyHint shortcut="left">Previous day</KeyHint>
+                <KeyHint shortcut="right">Next day</KeyHint>
+                <KeyHint shortcut="esc">Reset offset</KeyHint>
+              </Category>
 
-            <Category heading="Resin Calculator">
-              <KeyHint>
-                Subtract 20 <Kbd>2</Kbd>, 40 <Kbd>4</Kbd>, 60 <Kbd>6</Kbd>
-              </KeyHint>
-            </Category>
+              <Category heading="Resin Calculator">
+                <KeyHint>
+                  Subtract 20 <Kbd>2</Kbd>, 40 <Kbd>4</Kbd>, 60 <Kbd>6</Kbd>
+                </KeyHint>
+              </Category>
 
-            <Category heading="Task Scheduler">
-              <KeyHint shortcut="f">Search tasks</KeyHint>
-              <KeyHint shortcut="l">Toggle list overlay</KeyHint>
-              <KeyHint shortcut="n">Focus next task</KeyHint>
-              <KeyHint shortcut="shift+n">Focus previous task</KeyHint>
-              <KeyHint shortcut="d">Mark as done</KeyHint>
-            </Category>
+              <Category heading="Task Scheduler">
+                <KeyHint shortcut="f">Search tasks</KeyHint>
+                <KeyHint shortcut="l">Toggle list overlay</KeyHint>
+                <KeyHint shortcut="n">Focus next task</KeyHint>
+                <KeyHint shortcut="shift+n">Focus previous task</KeyHint>
+                <KeyHint shortcut="d">Mark as done</KeyHint>
+              </Category>
 
-            <Category heading="Other">
-              <KeyHint shortcut="k">Show keyboard shortcuts</KeyHint>
-            </Category>
-          </VStack>
-        </ModalBody>
-      </ModalContent>
-    </Modal>
+              <Category heading="Other">
+                <KeyHint shortcut="k">Show keyboard shortcuts</KeyHint>
+              </Category>
+            </VStack>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+    </LightMode>
   );
 };
 

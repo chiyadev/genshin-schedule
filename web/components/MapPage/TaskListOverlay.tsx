@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useState } from "react";
-import { Button, chakra, Collapse, Icon, VStack } from "@chakra-ui/react";
+import { chakra, Collapse, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import TaskListCard from "../TaskListCard";
 import { useDueTasks } from "../../utils/tasks";
@@ -45,19 +45,15 @@ const TaskListOverlay = () => {
       onMouseLeave={() => setHover(false)}
     >
       <div>
-        <Button
-          variant="link"
-          size="sm"
-          colorScheme="white"
-          fontWeight="normal"
-          leftIcon={<Icon as={expanded ? FaChevronDown : FaChevronUp} />}
-          onClick={toggleExpand}
-        >
-          <span>
-            {expanded ? <span>Hide list</span> : <span>Show list</span>}
-            <span> ({dueTasks.length})</span>
-          </span>
-        </Button>
+        <Link as="button" color="white" fontSize="sm" onClick={toggleExpand}>
+          <HStack spacing={2}>
+            <Icon as={expanded ? FaChevronDown : FaChevronUp} />
+            <div>
+              {expanded ? <span>Hide list</span> : <span>Show list</span>}
+              <span> ({dueTasks.length})</span>
+            </div>
+          </HStack>
+        </Link>
       </div>
 
       {!!dueTasks.length && (

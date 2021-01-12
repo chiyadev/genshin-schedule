@@ -1,7 +1,7 @@
 import React, { memo, ReactNode, useEffect, useMemo } from "react";
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/modal";
 import { useConfig } from "../utils/configs";
-import { Divider, Heading, HStack, Icon, Link, ListItem, UnorderedList, VStack } from "@chakra-ui/react";
+import { Divider, Heading, HStack, Icon, LightMode, Link, ListItem, UnorderedList, VStack } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
 const LatestChangelog = 10;
@@ -10,6 +10,8 @@ function buildChangelog() {
   return [
     <ChangelogSection key={10} date="2021/01/11">
       <ChangelogItem>Added username/password change support.</ChangelogItem>
+      <ChangelogItem>Refactored component theme overrides.</ChangelogItem>
+      <ChangelogItem>Replaced all link-themed buttons with button-themed links.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={9} date="2021/01/05">
       <ChangelogItem github={25}>Added local specialties to character common ascension materials.</ChangelogItem>
@@ -77,23 +79,25 @@ const ChangelogModal = () => {
   }
 
   return (
-    <Modal isOpen={version !== changelog.length} onClose={() => setVersion(changelog.length)} size="lg">
-      <ModalOverlay />
-      <ModalContent>
-        <ModalHeader>
-          <HStack>
-            <Icon as={FaBullhorn} />
-            <div>Update changelog</div>
-          </HStack>
-        </ModalHeader>
-        <ModalCloseButton />
-        <ModalBody>
-          <VStack align="stretch" spacing={4} pb={2} divider={<Divider />}>
-            {changelog.slice(0, 3)}
-          </VStack>
-        </ModalBody>
-      </ModalContent>
-    </Modal>
+    <LightMode>
+      <Modal isOpen={version !== changelog.length} onClose={() => setVersion(changelog.length)} size="lg">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>
+            <HStack>
+              <Icon as={FaBullhorn} />
+              <div>Update changelog</div>
+            </HStack>
+          </ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <VStack align="stretch" spacing={4} pb={2} divider={<Divider />}>
+              {changelog.slice(0, 3)}
+            </VStack>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+    </LightMode>
   );
 };
 

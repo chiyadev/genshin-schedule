@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { Tooltip } from "@chakra-ui/tooltip";
 import TaskSearchModal from "../../TaskSearchModal";
 import { useConfig } from "../../../utils/configs";
-import { Button, HStack } from "@chakra-ui/react";
+import { Button, HStack, Icon } from "@chakra-ui/react";
 import { trackEvent } from "../../../utils/umami";
 
 const SearchButton = () => {
@@ -11,23 +11,25 @@ const SearchButton = () => {
   const [query] = useConfig("taskQuery");
 
   return (
-    <HStack spacin={2}>
+    <HStack spacing={2}>
       <TaskSearchModal open={open} setOpen={setOpen} />
 
       {query && <div>"{query}"</div>}
 
       <Tooltip label="Search">
         <Button
-          variant="link"
-          colorScheme="white"
+          as="button"
+          variant="ghost"
+          color="white"
+          w={6}
+          h={8}
           minW={0}
-          p={1}
           onClick={() => {
             setOpen(true);
             trackEvent("taskList", "taskSearch");
           }}
         >
-          <FaSearch />
+          <Icon as={FaSearch} />
         </Button>
       </Tooltip>
     </HStack>

@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { DarkMode, HStack, Icon, VStack, Wrap, WrapItem } from "@chakra-ui/react";
+import { HStack, Icon, VStack, Wrap, WrapItem } from "@chakra-ui/react";
 import { FaCog } from "react-icons/fa";
 import BackgroundSwitch from "./BackgroundSwitch";
 import SignOutButton from "./SignOutButton";
@@ -11,38 +11,36 @@ import { User } from "../../../utils/api";
 
 const SettingsList = ({ user }: { user?: User }) => {
   return (
-    <VStack align="stretch" spacing={4}>
-      <HStack fontSize="xl" fontWeight="bold" spacing={2} color="white">
+    <VStack align="stretch" spacing={4} color="white">
+      <HStack fontSize="xl" fontWeight="bold" spacing={2}>
         <Icon as={FaCog} w={8} h={8} />
         <div>Settings</div>
       </HStack>
 
-      <DarkMode>
-        <VStack align="start" spacing={4} color="white">
-          <BackgroundSwitch />
-          <TaskDefaultZoomSlider />
+      <VStack align="start" spacing={4}>
+        <BackgroundSwitch />
+        <TaskDefaultZoomSlider />
 
-          <Wrap spacing={2}>
-            <WrapItem>
-              <ViewTutorialButton />
-            </WrapItem>
-            <WrapItem>
-              <ConfigExportButton />
-            </WrapItem>
+        <Wrap spacing={2}>
+          <WrapItem>
+            <ViewTutorialButton />
+          </WrapItem>
+          <WrapItem>
+            <ConfigExportButton />
+          </WrapItem>
 
-            {user && (
-              <>
-                <WrapItem>
-                  <AccountManageButton user={user} />
-                </WrapItem>
-                <WrapItem>
-                  <SignOutButton />
-                </WrapItem>
-              </>
-            )}
-          </Wrap>
-        </VStack>
-      </DarkMode>
+          {user && (
+            <>
+              <WrapItem>
+                <AccountManageButton user={user} />
+              </WrapItem>
+              <WrapItem>
+                <SignOutButton />
+              </WrapItem>
+            </>
+          )}
+        </Wrap>
+      </VStack>
     </VStack>
   );
 };

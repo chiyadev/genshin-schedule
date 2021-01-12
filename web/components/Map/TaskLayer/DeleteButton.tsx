@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { Task, useConfig, useSync } from "../../../utils/configs";
 import { FaTrash } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
-import { Button, Icon } from "@chakra-ui/react";
+import { HStack, Icon, Link } from "@chakra-ui/react";
 import { createApiClient } from "../../../utils/api";
 
 const DeleteButton = ({ task }: { task: Task }) => {
@@ -10,12 +10,9 @@ const DeleteButton = ({ task }: { task: Task }) => {
   const { callbacks: syncCallbacks } = useSync();
 
   return (
-    <Button
-      variant="link"
-      colorScheme="black"
-      size="sm"
-      fontWeight="normal"
-      leftIcon={<Icon as={FaTrash} />}
+    <Link
+      as="button"
+      fontSize="sm"
       onClick={() => {
         setTasks((tasks) => tasks.filter((t) => t.id !== task.id));
         trackEvent("map", "taskDelete");
@@ -27,8 +24,11 @@ const DeleteButton = ({ task }: { task: Task }) => {
         }
       }}
     >
-      Delete
-    </Button>
+      <HStack spacing={2}>
+        <Icon as={FaTrash} />
+        <div>Delete</div>
+      </HStack>
+    </Link>
   );
 };
 

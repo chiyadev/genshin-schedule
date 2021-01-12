@@ -21,8 +21,7 @@ const Submit = ({
     <Button
       type="submit"
       isLoading={load}
-      variant="outline"
-      colorScheme="gray"
+      colorScheme="blue"
       leftIcon={<Icon as={FaSignInAlt} />}
       disabled={load || !username || !password}
       onClick={async (e) => {
