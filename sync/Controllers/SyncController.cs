@@ -42,7 +42,7 @@ namespace GenshinSchedule.SyncServer.Controllers
                 var user = await _db.Users.AsNoTracking().Include(u => u.WebData).FirstOrDefaultAsync(u => u.Id == userId);
 
                 if (user == null)
-                    return Forbid(AuthHandler.SchemeName);
+                    return Unauthorized();
 
                 _actions.Labels("get").Inc();
 
@@ -71,7 +71,7 @@ namespace GenshinSchedule.SyncServer.Controllers
                 var user = await _db.Users.Include(u => u.WebData).FirstOrDefaultAsync(u => u.Id == userId);
 
                 if (user == null)
-                    return Forbid(AuthHandler.SchemeName);
+                    return Unauthorized();
 
                 var data = user.WebData;
 

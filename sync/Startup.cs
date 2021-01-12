@@ -49,6 +49,11 @@ namespace GenshinSchedule.SyncServer
                                     .AllowAnyMethod()
                                     .AllowAnyOrigin());
 
+            app.Map("/api/v1", ConfigureCore);
+        }
+
+        void ConfigureCore(IApplicationBuilder app)
+        {
             app.UseAuthentication();
 
             app.UseRouting();

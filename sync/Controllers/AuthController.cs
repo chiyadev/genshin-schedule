@@ -39,7 +39,7 @@ namespace GenshinSchedule.SyncServer.Controllers
                 var user = await _db.Users.AsNoTracking().Include(u => u.WebData).FirstOrDefaultAsync(u => u.Id == userId);
 
                 if (user == null)
-                    return Forbid(AuthHandler.SchemeName);
+                    return Unauthorized();
 
                 return Models.User.FromDbModel(user);
             }
@@ -88,6 +88,14 @@ namespace GenshinSchedule.SyncServer.Controllers
                     _logger.LogInformation($"Created user '{request.Username}'.");
 
                     _registrations.Inc();
+
+                    // if user id is 1, set as admin
+                    if (user.Id == 1)
+                    {
+                        user.IsAdmin = true;
+
+                        await _db.SaveChangesAsync();
+                    }
                 }
                 else
                 {
@@ -110,6 +118,42 @@ namespace GenshinSchedule.SyncServer.Controllers
                 _logger.LogWarning(e, message);
 
                 return BadRequest(message);
+            }
+        }
+
+        /// <summary>
+        /// Updates the currently authenticated user's credentials.
+        /// </summary>
+        [HttpPut, Authorize]
+        public async Task<ActionResult<AuthResponse>> PutAsync(AuthRequest request)
+        {
+            var userId = HttpContext.GetUserId();
+
+            try
+            {
+                var user = await _db.Users.FirstOrDefaultAsync(u => u.Id == userId);
+
+                if (user == null)
+                    return Unauthorized();
+
+                user.Username = request.Username;
+                user.Password = _hash.Hash(request.Password);
+
+                await _db.SaveChangesAsync();
+
+                return Ok(new AuthResponse
+                {
+                    Token = _auth.CreateToken(user),
+                    User  = Models.User.FromDbModel(user)
+                });
+            }
+            catch (Exception e)
+            {
+                var message = $"Could not update credentials for user {userId}.";
+
+                _logger.LogWarning(e, message);
+
+                return StatusCode(500, message);
             }
         }
     }

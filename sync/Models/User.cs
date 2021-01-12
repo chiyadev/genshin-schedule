@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using GenshinSchedule.SyncServer.Database;
 using Newtonsoft.Json;
 
@@ -20,5 +21,11 @@ namespace GenshinSchedule.SyncServer.Models
             CreatedTime = user.CreatedTime.ToUnixTimeMilliseconds(),
             IsAdmin     = user.IsAdmin
         };
+    }
+
+    public class FindUserRequest
+    {
+        [JsonProperty("username"), Required]
+        public string Username { get; set; }
     }
 }
