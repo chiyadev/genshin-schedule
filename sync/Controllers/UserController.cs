@@ -24,44 +24,11 @@ namespace GenshinSchedule.SyncServer.Controllers
         }
 
         /// <summary>
-        /// Finds a user based on their username.
-        /// This endpoint is restricted to administrators.
-        /// </summary>
-        [HttpPost("find")]
-        public async Task<ActionResult<User>> FindAsync(FindUserRequest request)
-        {
-            var adminId = HttpContext.GetUserId();
-
-            try
-            {
-                var admin = await _db.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == adminId);
-
-                if (admin == null || !admin.IsAdmin)
-                    return Forbid();
-
-                var user = await _db.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Username == request.Username);
-
-                if (user == null)
-                    return NotFound($"Username '{request.Username}' not found.");
-
-                return Models.User.FromDbModel(user);
-            }
-            catch (Exception e)
-            {
-                var message = $"Could not find user by username '{request.Username}'.";
-
-                _logger.LogWarning(e, message);
-
-                return StatusCode(500, message);
-            }
-        }
-
-        /// <summary>
         /// Authenticates as another user bypassing the usual password check.
         /// This endpoint is restricted to administrators.
         /// </summary>
-        [HttpGet("{id}/auth")]
-        public async Task<ActionResult<AuthResponse>> AuthAsync(int id)
+        [HttpGet("{username}/auth")]
+        public async Task<ActionResult<AuthResponse>> AuthAsync(string username)
         {
             var adminId = HttpContext.GetUserId();
 
@@ -72,10 +39,10 @@ namespace GenshinSchedule.SyncServer.Controllers
                 if (admin == null || !admin.IsAdmin)
                     return Forbid();
 
-                var user = await _db.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
+                var user = await _db.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Username == username);
 
                 if (user == null)
-                    return NotFound($"User {id} not found.");
+                    return NotFound($"User '{username}' not found.");
 
                 return Ok(new AuthResponse
                 {
@@ -85,7 +52,7 @@ namespace GenshinSchedule.SyncServer.Controllers
             }
             catch (Exception e)
             {
-                var message = $"Could not authenticate as user by ID {id}.";
+                var message = $"Could not authenticate as user '{username}'.";
 
                 _logger.LogWarning(e, message);
 

@@ -4,10 +4,13 @@ import { useConfig } from "../utils/configs";
 import { Divider, Heading, HStack, Icon, Link, ListItem, UnorderedList, VStack } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 9;
+const LatestChangelog = 10;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={10} date="2021/01/11">
+      <ChangelogItem>Added username/password change support.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={9} date="2021/01/05">
       <ChangelogItem github={25}>Added local specialties to character common ascension materials.</ChangelogItem>
       <ChangelogItem github={25}>Added missing Blackcliff weapons.</ChangelogItem>

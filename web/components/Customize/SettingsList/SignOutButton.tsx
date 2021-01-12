@@ -4,15 +4,9 @@ import { FaSignOutAlt } from "react-icons/fa";
 import { setAuthToken } from "../../../utils/api";
 import { trackEvent } from "../../../utils/umami";
 import { useRouter } from "next/router";
-import { useSync } from "../../../utils/configs";
 
 const SignOutButton = () => {
-  const { enabled } = useSync();
   const router = useRouter();
-
-  if (!enabled) {
-    return null;
-  }
 
   return (
     <Button

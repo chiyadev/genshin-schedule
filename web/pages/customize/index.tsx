@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { createApiClient, WebData } from "../../utils/api";
+import { createApiClient, User, WebData } from "../../utils/api";
 import { GetServerSideProps } from "next";
 import ConfigsProvider from "../../components/ConfigsProvider";
 import Layout from "../../components/Layout";
@@ -11,6 +11,7 @@ import ArtifactList from "../../components/Customize/ArtifactList";
 import SettingsList from "../../components/Customize/SettingsList";
 
 type Props = {
+  user: User | null;
   data: WebData | null;
 };
 
@@ -19,12 +20,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
   return {
     props: {
+      user: client.authenticated ? await client.getSelf() : null,
       data: client.authenticated ? await client.getSync() : null,
     },
   };
 };
 
-const Customize = ({ data }: Props) => {
+const Customize = ({ user, data }: Props) => {
   return (
     <ConfigsProvider initial={data}>
       <Layout title={["Customize"]}>
@@ -33,7 +35,7 @@ const Customize = ({ data }: Props) => {
           <CharacterList />
           <WeaponList />
           <ArtifactList />
-          <SettingsList />
+          <SettingsList user={user || undefined} />
         </VStack>
       </Layout>
     </ConfigsProvider>

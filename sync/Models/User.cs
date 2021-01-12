@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using GenshinSchedule.SyncServer.Database;
 using Newtonsoft.Json;
 
@@ -12,20 +11,18 @@ namespace GenshinSchedule.SyncServer.Models
         [JsonProperty("createdTime")]
         public long CreatedTime { get; set; }
 
-        [JsonProperty("is_admin")]
+        [JsonProperty("isAdmin")]
         public bool IsAdmin { get; set; }
+
+        [JsonProperty("discordUserId")]
+        public ulong? DiscordUserId { get; set; }
 
         public static User FromDbModel(DbUser user) => new User
         {
-            Username    = user.Username,
-            CreatedTime = user.CreatedTime.ToUnixTimeMilliseconds(),
-            IsAdmin     = user.IsAdmin
+            Username      = user.Username,
+            CreatedTime   = user.CreatedTime.ToUnixTimeMilliseconds(),
+            IsAdmin       = user.IsAdmin,
+            DiscordUserId = user.DiscordUserId
         };
-    }
-
-    public class FindUserRequest
-    {
-        [JsonProperty("username"), Required]
-        public string Username { get; set; }
     }
 }

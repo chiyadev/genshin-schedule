@@ -149,7 +149,7 @@ namespace GenshinSchedule.SyncServer.Controllers
             }
             catch (Exception e)
             {
-                var message = $"Could not update credentials for user {userId}.";
+                var message = e is DbUpdateException ? $"Username '{request.Username}' is already taken." : $"Could not update credentials for user {userId}.";
 
                 _logger.LogWarning(e, message);
 

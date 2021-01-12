@@ -6,8 +6,10 @@ import SignOutButton from "./SignOutButton";
 import ConfigExportButton from "./ConfigExportButton";
 import TaskDefaultZoomSlider from "./TaskDefaultZoomSlider";
 import ViewTutorialButton from "./ViewTutorialButton";
+import AccountManageButton from "./AccountManageButton";
+import { User } from "../../../utils/api";
 
-const SettingsList = () => {
+const SettingsList = ({ user }: { user?: User }) => {
   return (
     <VStack align="stretch" spacing={4}>
       <HStack fontSize="xl" fontWeight="bold" spacing={2} color="white">
@@ -27,9 +29,17 @@ const SettingsList = () => {
             <WrapItem>
               <ConfigExportButton />
             </WrapItem>
-            <WrapItem>
-              <SignOutButton />
-            </WrapItem>
+
+            {user && (
+              <>
+                <WrapItem>
+                  <AccountManageButton user={user} />
+                </WrapItem>
+                <WrapItem>
+                  <SignOutButton />
+                </WrapItem>
+              </>
+            )}
           </Wrap>
         </VStack>
       </DarkMode>

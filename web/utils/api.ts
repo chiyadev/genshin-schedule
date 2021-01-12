@@ -7,6 +7,8 @@ import node_fetch from "node-fetch";
 export type User = {
   username: string;
   createdTime: number;
+  isAdmin: boolean;
+  discordUserId?: number;
 };
 
 export type WebData = {
@@ -98,6 +100,53 @@ export class ApiClient {
     }
   }
 
+  async authBypass(request: Pick<AuthRequest, "username">): Promise<AuthResponse> {
+    const response = await this.fetch(`${this.baseUrl}/users/${request.username}/auth`, {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${this.token}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw Error(await response.text());
+    } else {
+      return await response.json();
+    }
+  }
+
+  async updateAuth(request: AuthRequest): Promise<AuthResponse> {
+    const response = await this.fetch(`${this.baseUrl}/auth`, {
+      method: "PUT",
+      headers: {
+        authorization: `Bearer ${this.token}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(request),
+    });
+
+    if (!response.ok) {
+      throw Error(await response.text());
+    } else {
+      return await response.json();
+    }
+  }
+
+  async getSelf(): Promise<User> {
+    const response = await this.fetch(`${this.baseUrl}/auth`, {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${this.token}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw Error(await response.text());
+    } else {
+      return await response.json();
+    }
+  }
+
   async getSync(): Promise<WebData> {
     const response = await this.fetch(`${this.baseUrl}/sync`, {
       method: "GET",
@@ -119,8 +168,8 @@ export class ApiClient {
     const response = await this.fetch(`${this.baseUrl}/sync`, {
       method: "PATCH",
       headers: {
-        "content-type": "application/json-patch+json",
         authorization: `Bearer ${this.token}`,
+        "content-type": "application/json-patch+json",
       },
       body: JSON.stringify(request),
     });
@@ -174,8 +223,8 @@ export class ApiClient {
     const response = await this.fetch(`${this.baseUrl}/notifications/${notification.key}`, {
       method: "PUT",
       headers: {
-        "content-type": "application/json",
         authorization: `Bearer ${this.token}`,
+        "content-type": "application/json",
       },
       body: JSON.stringify(notification),
     });

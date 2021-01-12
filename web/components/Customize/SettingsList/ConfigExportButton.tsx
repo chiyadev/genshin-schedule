@@ -3,8 +3,8 @@ import {
   Alert,
   AlertIcon,
   Button,
+  ButtonGroup,
   chakra,
-  HStack,
   Icon,
   LightMode,
   Modal,
@@ -71,17 +71,7 @@ const ConfigExportButton = () => {
             </ModalBody>
 
             <ModalFooter>
-              <HStack spacing={2}>
-                <Button
-                  leftIcon={<Icon as={hasCopied ? FaCheck : FaCopy} />}
-                  onClick={() => {
-                    onCopy();
-                    trackEvent("dataManager", "copy");
-                  }}
-                >
-                  {hasCopied ? "Copied" : "Copy"}
-                </Button>
-
+              <ButtonGroup>
                 <Button
                   colorScheme="red"
                   leftIcon={<Icon as={FaPencilAlt} />}
@@ -104,7 +94,17 @@ const ConfigExportButton = () => {
                 >
                   Overwrite
                 </Button>
-              </HStack>
+
+                <Button
+                  leftIcon={<Icon as={hasCopied ? FaCheck : FaCopy} />}
+                  onClick={() => {
+                    onCopy();
+                    trackEvent("dataManager", "copy");
+                  }}
+                >
+                  {hasCopied ? "Copied" : "Copy"}
+                </Button>
+              </ButtonGroup>
             </ModalFooter>
           </ModalContent>
         </Modal>
