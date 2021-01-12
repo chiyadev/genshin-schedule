@@ -1,11 +1,14 @@
 import React, { memo } from "react";
 import { TileLayer as TileLayerCore } from "react-leaflet";
+import { supportsWebP } from "../../utils/dom";
 
 const TileLayer = () => {
+  const ext = supportsWebP() ? "webp" : "png";
+
   return (
     <TileLayerCore
-      url="https://s.chiya.dev/genshin/map/{z}/ppp{x}_{y}.jpg"
-      attribution='<a href="https://bbs.mihoyo.com/ys/article/1328298" target="_blank" rel="noreferrer noopener">yuanshen.site</a>'
+      url={`https://s.chiya.dev/genshin/map2/Map_{z}_{x}_{y}.${ext}`}
+      attribution='<a href="https://github.com/GenshinMap/genshinmap.github.io" target="_blank" rel="noreferrer noopener">genshinmap.github.io</a>'
     />
   );
 };

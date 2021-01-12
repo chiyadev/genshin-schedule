@@ -16,7 +16,7 @@ import { MultiMap } from "./multiMap";
 type MapLocation = { lat: number; lng: number };
 
 export const MapZoomMin = 4;
-export const MapZoomMax = 8;
+export const MapZoomMax = 7;
 
 export type Configs = {
   server: "America" | "Europe" | "Asia" | "TW, HK, MO";

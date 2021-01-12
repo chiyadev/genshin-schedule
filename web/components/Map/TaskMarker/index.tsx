@@ -37,6 +37,7 @@ const TaskMarker = ({
     return new Icon({
       iconUrl: getAssetByName(task.icon) || "",
       iconSize: [36, 36],
+      className: "task-marker-icon",
     });
   }, [task.icon]);
 

@@ -5,6 +5,7 @@ import TaskLayer from "./TaskLayer";
 import TaskCreateLayer from "./TaskCreateLayer";
 import PositionSync from "./PositionSync";
 import { MapContainer } from "react-leaflet";
+import RegionLabelLayer from "./RegionLabelLayer";
 
 const Map = ({ children, minimal, style }: { children?: ReactNode; minimal?: boolean; style?: CSSProperties }) => {
   const [{ lat, lng, zoom }] = useConfig("mapState");
@@ -28,6 +29,7 @@ const Map = ({ children, minimal, style }: { children?: ReactNode; minimal?: boo
       style={style}
     >
       <TileLayer />
+      <RegionLabelLayer />
       <TaskLayer />
       <TaskCreateLayer />
       <PositionSync />

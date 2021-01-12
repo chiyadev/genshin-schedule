@@ -34,3 +34,14 @@ export function useMeasuredTextWidth(text: string, style: CSSObject) {
 
   return value;
 }
+
+// https://stackoverflow.com/a/27232658/13160620
+export function supportsWebP() {
+  const canvas = document.createElement("canvas");
+
+  if (canvas.getContext && canvas.getContext("2d")) {
+    return canvas.toDataURL("image/webp").indexOf("data:image/webp") == 0;
+  } else {
+    return false;
+  }
+}

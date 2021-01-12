@@ -17,12 +17,16 @@
     z-index: 1;
 }
 
-.task-map .leaflet-marker-pane .leaflet-marker-icon {
+.task-map .leaflet-marker-pane .leaflet-marker-icon.task-marker-icon {
     background: white;
     padding: 0.25rem;
     border-radius: 9999px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     object-fit: contain;
+}
+
+.task-map .leaflet-marker-pane .leaflet-marker-icon.region-label-icon {
+    width: auto !important;
 }
 
 .task-map .leaflet-popup {
