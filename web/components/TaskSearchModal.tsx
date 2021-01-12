@@ -11,7 +11,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
-import { useConfig } from "../../utils/configs";
+import { useConfig } from "../utils/configs";
 import { useHotkeys } from "react-hotkeys-hook";
 
 const TaskSearchModal = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<boolean> }) => {

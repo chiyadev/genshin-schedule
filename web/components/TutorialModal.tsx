@@ -13,16 +13,16 @@ import {
   ModalOverlay,
   VStack,
 } from "@chakra-ui/react";
-import { useConfig } from "../../utils/configs";
+import { useConfig } from "../utils/configs";
 import { FaCheck, FaChevronRight } from "react-icons/fa";
-import Favicon180x180 from "../../public/favicon-180x180.png";
-import Time from "../../assets/tutorial/Time.jpg";
-import Resin from "../../assets/tutorial/Resin.jpg";
-import Tasks from "../../assets/tutorial/Tasks.jpg";
-import Map from "../../assets/tutorial/Map.jpg";
-import Domains from "../../assets/tutorial/Domains.jpg";
-import Message from "../../assets/tutorial/Message.jpg";
-import { trackEvent } from "../../utils/umami";
+import Favicon180x180 from "../public/favicon-180x180.png";
+import Time from "../assets/tutorial/Time.jpg";
+import Resin from "../assets/tutorial/Resin.jpg";
+import Tasks from "../assets/tutorial/Tasks.jpg";
+import Map from "../assets/tutorial/Map.jpg";
+import Domains from "../assets/tutorial/Domains.jpg";
+import Message from "../assets/tutorial/Message.jpg";
+import { trackEvent } from "../utils/umami";
 
 type Page = "start" | "time" | "resin" | "tasks" | "map" | "domains" | "message";
 const Pages: Page[] = ["start", "time", "resin", "tasks", "map", "domains", "message"];
