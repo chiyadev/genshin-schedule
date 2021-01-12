@@ -15,7 +15,7 @@ const Info = () => {
         <HStack spacing={2} fontSize="xl" fontWeight="bold">
           <Icon as={FaBell} />
           <div>Notifications</div>
-          <Tag colorScheme="green">Experimental</Tag>
+          <Tag colorScheme="green">Beta</Tag>
 
           <Spacer />
           <Tooltip label="Queue">
@@ -31,15 +31,15 @@ const Info = () => {
 
         <VStack align="start" spacing={4}>
           <div>
-            Genshin Schedule has an experimental Discord bot that can send you notifications when your resin recharges
-            or resources respawn.
+            Genshin Schedule has a Discord bot that can send you notifications when your resin recharges or resources
+            respawn.
           </div>
 
           <chakra.img src={Bot} borderRadius="md" boxShadow="md" />
 
           <VStack align="start" spacing={2}>
             <div>
-              1. Join our Discord server!{" "}
+              <span>1. Join our Discord server! </span>
               <Link href="https://discord.gg/XdPQeEaBE7" color="blue.500" isExternal>
                 discord.gg/XdPQeEaBE7
               </Link>

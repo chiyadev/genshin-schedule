@@ -5,7 +5,7 @@ import NextLink from "next/link";
 
 const Footer = ({ showShortcuts }: { showShortcuts?: () => void }) => {
   return (
-    <VStack align="stretch" spacing={2} p={4} color="gray.500">
+    <VStack as="footer" align="stretch" spacing={2} p={4} color="gray.500">
       <chakra.div fontSize="sm" textAlign="center">
         <p>
           <NextLink href="/" passHref>
@@ -23,7 +23,7 @@ const Footer = ({ showShortcuts }: { showShortcuts?: () => void }) => {
         <p>Data on this website may not always be accurate or up-to-date with in-game changes.</p>
       </chakra.div>
 
-      <HStack as="footer" spacing={4} justify="center">
+      <HStack spacing={4} justify="center">
         <Tooltip label="Shortcuts">
           <Link as="button" onClick={showShortcuts}>
             <Icon as={FaKeyboard} />

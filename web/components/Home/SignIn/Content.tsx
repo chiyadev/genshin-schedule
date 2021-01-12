@@ -44,14 +44,23 @@ const Content = () => {
       </FormControl>
 
       <VStack align="start" spacing={2}>
+        <Link
+          fontSize="sm"
+          color="blue.500"
+          href="https://github.com/chiyadev/genshin-schedule/wiki/Recovering-a-lost-account"
+          isExternal
+        >
+          Forgot password?
+        </Link>
+
         <Submit username={username} password={password} setError={setError} />
 
         <chakra.div fontSize="sm">
           {error ? (
-            <chakra.span color="red.500">Error: {error.message}</chakra.span>
+            <chakra.div color="red.500">Error: {error.message}</chakra.div>
           ) : (
-            <chakra.span color="gray.500">
-              * Never reuse your miHoYo password on Genshin-related websites.{" "}
+            <chakra.div color="gray.500">
+              <span>* Never reuse your miHoYo password on Genshin-related websites. </span>
               <Link
                 color="blue.500"
                 href="https://github.com/chiyadev/genshin-schedule/wiki/Regarding-miHoYo-account-security"
@@ -59,7 +68,7 @@ const Content = () => {
               >
                 Read more.
               </Link>
-            </chakra.span>
+            </chakra.div>
           )}
         </chakra.div>
       </VStack>

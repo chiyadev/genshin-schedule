@@ -3,7 +3,6 @@ import {
   Button,
   ButtonGroup,
   chakra,
-  Code,
   FormControl,
   FormLabel,
   Icon,
@@ -19,36 +18,28 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
-import { FaUpload, FaUserEdit } from "react-icons/fa";
-import { trackEvent } from "../../../utils/umami";
+import { FaSignInAlt } from "react-icons/fa";
 import { useRouter } from "next/router";
-import { createApiClient, setAuthToken, User } from "../../../utils/api";
+import { createApiClient, setAuthToken } from "../../utils/api";
 
-const AccountManageButton = ({ user }: { user: User }) => {
+const DirectSignInButton = () => {
   const [open, setOpen] = useState(false);
   const [load, setLoad] = useState(false);
-  const [username, setUsername] = useState(user.username);
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
   const router = useRouter();
   const toast = useToast();
 
   return (
     <>
-      <Button
-        leftIcon={<Icon as={FaUserEdit} />}
-        onClick={() => {
-          setOpen(true);
-          trackEvent("accountManager", "show");
-        }}
-      >
-        Manage account
+      <Button leftIcon={<Icon as={FaSignInAlt} />} onClick={() => setOpen(true)}>
+        Direct sign in
       </Button>
 
       <LightMode>
         <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Manage account</ModalHeader>
+            <ModalHeader>Direct sign in</ModalHeader>
             <ModalCloseButton />
 
             <form
@@ -59,15 +50,12 @@ const AccountManageButton = ({ user }: { user: User }) => {
                 try {
                   const client = createApiClient();
 
-                  const { token } = await client.updateAuth({
+                  const { token } = await client.authBypass({
                     username,
-                    password,
                   });
 
                   setAuthToken(undefined, token);
-                  trackEvent("accountManager", "updateAuth");
-
-                  setTimeout(() => router.reload());
+                  setTimeout(() => router.push("/"));
                 } catch (e) {
                   toast({
                     position: "top-right",
@@ -83,43 +71,26 @@ const AccountManageButton = ({ user }: { user: User }) => {
             >
               <ModalBody>
                 <VStack align="stretch" spacing={4}>
-                  <chakra.div>You can change your account username and password.</chakra.div>
+                  <chakra.div>Sign in as another user, bypassing the usual authentication method.</chakra.div>
 
-                  <FormControl isRequired>
+                  <FormControl>
                     <FormLabel>Username</FormLabel>
 
                     <Input
                       id="username"
-                      placeholder="New username"
+                      placeholder="Username"
                       autoComplete="username"
                       value={username}
                       onChange={({ currentTarget: { value } }) => setUsername(value)}
                     />
                   </FormControl>
-
-                  <FormControl isRequired>
-                    <FormLabel>Password</FormLabel>
-
-                    <Input
-                      id="password"
-                      type="password"
-                      placeholder="New password"
-                      autoComplete="current-password"
-                      value={password}
-                      onChange={({ currentTarget: { value } }) => setPassword(value)}
-                    />
-                  </FormControl>
-
-                  <div>
-                    Linked Discord ID: <Code>{user.discordUserId ?? "<null>"}</Code>
-                  </div>
                 </VStack>
               </ModalBody>
 
               <ModalFooter>
                 <ButtonGroup>
-                  <Button type="submit" colorScheme="red" leftIcon={<Icon as={FaUpload} />} isLoading={load}>
-                    Submit
+                  <Button type="submit" colorScheme="blue" leftIcon={<Icon as={FaSignInAlt} />} isLoading={load}>
+                    Sign in
                   </Button>
 
                   <Button onClick={() => setOpen(false)}>Cancel</Button>
@@ -133,4 +104,4 @@ const AccountManageButton = ({ user }: { user: User }) => {
   );
 };
 
-export default memo(AccountManageButton);
+export default memo(DirectSignInButton);
