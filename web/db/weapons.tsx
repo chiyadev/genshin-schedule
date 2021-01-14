@@ -75,6 +75,7 @@ add("The Flute", BorealWolf, [LeyLine, Slime]);
 add("The Widsith", BorealWolf, [LeyLine, HilichurlMask]);
 add("Thrilling Tales of Dragon Slayers", BorealWolf, [LeyLine, SamachurlScroll]);
 add("Wine and Song", BorealWolf, [LeyLine, SamachurlScroll]);
+add("Deathmatch", BorealWolf, [LeyLine, WhopperflowerNectar]);
 
 add("Amos' Bow", DandelionGladiator, [ChaosPart, Slime]);
 add("Beginner's Protector", DandelionGladiator, [ChaosPart, SamachurlScroll]);

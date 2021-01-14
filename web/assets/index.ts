@@ -66,6 +66,7 @@ import DamagedMask from "./game/Damaged Mask.png";
 import DandelionSeed from "./game/Dandelion Seed.png";
 import DarkIronSword from "./game/Dark Iron Sword.png";
 import DeadLeyLineBranch from "./game/Dead Ley Line Branch.png";
+import Deathmatch from "./game/Deathmatch.png";
 import DebateClub from "./game/Debate Club.png";
 import DefendersWill from "./game/Defender's Will.png";
 import Dendro from "./game/Dendro.png";
@@ -354,6 +355,7 @@ export {
   DandelionSeed,
   DarkIronSword,
   DeadLeyLineBranch,
+  Deathmatch,
   DebateClub,
   DefendersWill,
   Dendro,
@@ -644,6 +646,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Dandelion Seed": return DandelionSeed;
     case "Dark Iron Sword": return DarkIronSword;
     case "Dead Ley Line Branch": return DeadLeyLineBranch;
+    case "Deathmatch": return Deathmatch;
     case "Debate Club": return DebateClub;
     case "Defender's Will": return DefendersWill;
     case "Dendro": return Dendro;
