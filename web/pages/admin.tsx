@@ -25,7 +25,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 const Admin = ({ user, data }: Props) => {
   return (
     <ConfigsProvider initial={data}>
-      <Layout>
+      <Layout title={["Admin Tools"]}>
         <VStack align="stretch" spacing={4} color="white">
           <div>Administrator tools:</div>
 

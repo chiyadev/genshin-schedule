@@ -4,10 +4,13 @@ import { useConfig } from "../utils/configs";
 import { Divider, Heading, HStack, Icon, LightMode, Link, ListItem, UnorderedList, VStack } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 10;
+const LatestChangelog = 11;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={11} date="2021/01/15">
+      <ChangelogItem>Added a basic statistics page.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={10} date="2021/01/11">
       <ChangelogItem>Added username/password change support.</ChangelogItem>
       <ChangelogItem>Refactored component theme overrides.</ChangelogItem>

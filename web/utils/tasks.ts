@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useCallback, useMemo } from "react";
-import { DefaultConfigs, Task, useConfig, useSync } from "./configs";
+import { DefaultConfigs, Task, useConfig, useCurrentStats, useSync } from "./configs";
 import { useRouter } from "next/router";
 import { randomStr } from "./index";
 import { getServerResetTime, useServerTime } from "./time";
@@ -58,12 +58,12 @@ export function useTaskCreator() {
         id: randomStr(6),
         location: {
           lat: center.lat - 1.5,
-          lng: center.lng
+          lng: center.lng,
         },
         name: material.name,
         icon: material.item || material.name,
         description,
-        visible: false
+        visible: false,
       }));
 
       await synchronize();
@@ -85,7 +85,7 @@ export function useTaskFocusSetter() {
         setMapState({
           lat: task.location.lat + 2.2 + DefaultConfigs.mapTaskDefaultZoom - defaultZoom,
           lng: task.location.lng,
-          zoom: defaultZoom
+          zoom: defaultZoom,
         });
 
         setFocused(task.id);
@@ -99,6 +99,7 @@ export function useTaskFocusSetter() {
 
 export function useTaskDoneSetter(setTask: Dispatch<SetStateAction<Task>>) {
   const time = useServerTime(1000);
+  const [, setStats] = useCurrentStats();
 
   return useCallback(
     (done: boolean) => {
@@ -106,15 +107,19 @@ export function useTaskDoneSetter(setTask: Dispatch<SetStateAction<Task>>) {
         setTask((task) => ({
           ...task,
           dueTime:
-            task.refreshTime === "reset" ? getServerResetTime(time).valueOf() : time.plus(task.refreshTime).valueOf()
+            task.refreshTime === "reset" ? getServerResetTime(time).valueOf() : time.plus(task.refreshTime).valueOf(),
         }));
+
+        setStats((stats) => stats && { ...stats, tasksDone: Math.max(0, stats.tasksDone + 1) });
       } else {
         setTask((task) => ({
           ...task,
-          dueTime: time.valueOf()
+          dueTime: time.valueOf(),
         }));
+
+        setStats((stats) => stats && { ...stats, tasksDone: Math.max(0, stats.tasksDone - 1) });
       }
     },
-    [time, setTask]
+    [time, setStats, setTask]
   );
 }

@@ -6,7 +6,7 @@ import { getResinRecharge, ResinCap, roundResin } from "../../../db/resins";
 import Subtractor from "./Subtractor";
 import EstimatorByTime from "./EstimatorByTime";
 import EstimatorByResin from "./EstimatorByResin";
-import { Configs, useConfig } from "../../../utils/configs";
+import { Configs, useConfig, useCurrentStats } from "../../../utils/configs";
 import { Resin as ResinIcon } from "../../../assets";
 import { chakra, css, HStack, Input, Spacer, useTheme } from "@chakra-ui/react";
 import { useMeasuredTextWidth } from "../../../utils/dom";
@@ -18,6 +18,7 @@ const estimateModes: Configs["resinEstimateMode"][] = ["time", "value"];
 
 const Resin = () => {
   const [resin, setResin] = useConfig("resin");
+  const [, setStats] = useCurrentStats();
   const [mode, setMode] = useConfig("resinEstimateMode");
 
   const [hover, setHover] = useState(false);
@@ -69,10 +70,17 @@ const Resin = () => {
               trackEvent("resin", "edit");
             }}
             onChange={({ currentTarget: { valueAsNumber } }) => {
+              const oldValue = roundResin(current);
+              const newValue = roundResin(valueAsNumber || 0);
+
               setResin({
-                value: roundResin(valueAsNumber || 0),
+                value: newValue,
                 time: time.valueOf(),
               });
+
+              setStats(
+                (stats) => stats && { ...stats, resinsSpent: roundResin(stats.resinsSpent - newValue + oldValue) }
+              );
             }}
             onFocus={() => setFocus(true)}
             onBlur={() => setFocus(false)}

@@ -9,7 +9,8 @@ import KeyHelp from "./ShortcutHelp";
 import ChangelogModal from "./ChangelogModal";
 import TutorialModal from "./TutorialModal";
 import NextLink from "next/link";
-import { FaBell } from "react-icons/fa";
+import { FaBell, FaChartBar } from "react-icons/fa";
+import StatisticsUpdater from "./Statistics/StatisticsUpdater";
 
 const Layout = ({
   children,
@@ -28,6 +29,7 @@ const Layout = ({
         <title>{[...title.map((x) => x?.trim()).filter((x) => x), "Genshin Schedule"].join(" · ")}</title>
       </Head>
 
+      <StatisticsUpdater />
       <KeyHelp open={shortcuts} setOpen={setShortcuts} />
       <TutorialModal />
       <ChangelogModal />
@@ -39,14 +41,24 @@ const Layout = ({
               <Background />
               <Header
                 menu={
-                  <NextLink href="/customize/notifications" passHref>
-                    <Link>
-                      <HStack spacing={2}>
-                        <Icon as={FaBell} />
-                        <div>Notifications</div>
-                      </HStack>
-                    </Link>
-                  </NextLink>
+                  <>
+                    <NextLink href="/customize/notifications" passHref>
+                      <Link>
+                        <HStack spacing={2}>
+                          <Icon as={FaBell} />
+                          <div>Notifications</div>
+                        </HStack>
+                      </Link>
+                    </NextLink>
+                    <NextLink href="/statistics" passHref>
+                      <Link>
+                        <HStack spacing={2}>
+                          <Icon as={FaChartBar} />
+                          <div>Statistics</div>
+                        </HStack>
+                      </Link>
+                    </NextLink>
+                  </>
                 }
               />
               <chakra.div p={4}>{children}</chakra.div>

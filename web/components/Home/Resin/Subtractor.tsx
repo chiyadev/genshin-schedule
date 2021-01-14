@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig, useCurrentStats } from "../../../utils/configs";
 import { useServerTime } from "../../../utils/time";
 import { clampResin, getResinRecharge } from "../../../db/resins";
 import { trackEvent } from "../../../utils/umami";
@@ -11,6 +11,7 @@ const resinUsages = [60, 40, 20];
 const Subtractor = ({ current }: { current: number }) => {
   const time = useServerTime(1000);
   const [, setResin] = useConfig("resin");
+  const [, setStats] = useCurrentStats();
 
   return (
     <ButtonGroup isAttached>
@@ -25,6 +26,8 @@ const Subtractor = ({ current }: { current: number }) => {
                   value: clampResin(clampResin(resin.value + getResinRecharge(time.valueOf() - resin.time)) - value),
                   time: time.valueOf(),
                 }));
+
+                setStats((stats) => stats && { ...stats, resinsSpent: stats.resinsSpent + value });
 
                 trackEvent("resin", `subtract${value}`);
               }}

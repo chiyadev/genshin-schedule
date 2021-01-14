@@ -1,4 +1,4 @@
-@media (max-width: 30em) {
+@media (max-width: 36em) {
     .menu > :not(:last-child) {
         display: none;
     }

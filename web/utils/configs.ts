@@ -12,6 +12,9 @@ import {
 import { ResinCap } from "../db/resins";
 import { createApiClient, Notification, setAuthToken } from "./api";
 import { MultiMap } from "./multiMap";
+import { useListItemDispatch } from "./dispatch";
+import { ServerResetHour, useServerTime } from "./time";
+import { DateTime } from "luxon";
 
 type MapLocation = { lat: number; lng: number };
 
@@ -46,6 +49,8 @@ export type Configs = {
   };
   tutorial: boolean;
   lastChangelog: number;
+  stats: StatFrame[];
+  statRetention: number;
 };
 
 export type Task = {
@@ -60,6 +65,13 @@ export type Task = {
   notify?: boolean;
 };
 
+export type StatFrame = {
+  id: string;
+  time: number;
+  resinsSpent: number;
+  tasksDone: number;
+};
+
 const defaultMapCenter = {
   lat: -24.83,
   lng: 54.73,
@@ -70,7 +82,7 @@ export const DefaultConfigs: Configs = {
   offsetDays: 0,
   resin: {
     value: ResinCap,
-    time: 0,
+    time: Date.now(),
   },
   resinEstimateMode: "time",
   characters: [],
@@ -100,9 +112,13 @@ export const DefaultConfigs: Configs = {
   mapFocusedTask: false,
   mapTaskList: true,
   background: "paimon",
-  hiddenWidgets: {},
+  hiddenWidgets: {
+    signIn: true,
+  },
   tutorial: true,
   lastChangelog: 0,
+  stats: [],
+  statRetention: 28,
 };
 
 export const ServerList: Configs["server"][] = ["America", "Europe", "Asia", "TW, HK, MO"];
@@ -235,4 +251,17 @@ export function useApiNotification(notification: Notification, enabled: boolean)
       await client.deleteNotification(notification.key);
     }
   }, [enabled && notification]);
+}
+
+export function getStatFrameTime(time: DateTime) {
+  time = time.minus({ hours: ServerResetHour });
+  return DateTime.fromObject({ year: time.year, month: time.month, day: time.day });
+}
+
+export function useCurrentStats() {
+  const [stats, setStats] = useConfig("stats");
+  const time = useServerTime(60000);
+  const frameId = getStatFrameTime(time).toSQLDate();
+
+  return useListItemDispatch(stats, setStats, frameId);
 }
