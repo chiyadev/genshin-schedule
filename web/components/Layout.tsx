@@ -4,7 +4,6 @@ import { chakra, DarkMode, Flex, HStack, Icon, Link, Spacer } from "@chakra-ui/r
 import Header from "./Header";
 import Footer from "./Footer";
 import Background from "./Background";
-import { motion } from "framer-motion";
 import KeyHelp from "./ShortcutHelp";
 import ChangelogModal from "./ChangelogModal";
 import TutorialModal from "./TutorialModal";
@@ -35,38 +34,34 @@ const Layout = ({
       <ChangelogModal />
 
       {layout ? (
-        <chakra.div overflow="hidden">
-          <motion.div initial={{ y: 16, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
-            <Flex direction="column" minH="100vh" maxW="1200px" mx="auto">
-              <Background />
-              <Header
-                menu={
-                  <>
-                    <NextLink href="/customize/notifications" passHref>
-                      <Link>
-                        <HStack spacing={2}>
-                          <Icon as={FaBell} />
-                          <div>Notifications</div>
-                        </HStack>
-                      </Link>
-                    </NextLink>
-                    <NextLink href="/statistics" passHref>
-                      <Link>
-                        <HStack spacing={2}>
-                          <Icon as={FaChartBar} />
-                          <div>Statistics</div>
-                        </HStack>
-                      </Link>
-                    </NextLink>
-                  </>
-                }
-              />
-              <chakra.div p={4}>{children}</chakra.div>
-              <Spacer />
-              <Footer showShortcuts={() => setShortcuts(true)} />
-            </Flex>
-          </motion.div>
-        </chakra.div>
+        <Flex direction="column" minH="100vh" maxW="1200px" mx="auto">
+          <Background />
+          <Header
+            menu={
+              <>
+                <NextLink href="/customize/notifications" passHref>
+                  <Link>
+                    <HStack spacing={2}>
+                      <Icon as={FaBell} />
+                      <div>Notifications</div>
+                    </HStack>
+                  </Link>
+                </NextLink>
+                <NextLink href="/statistics" passHref>
+                  <Link>
+                    <HStack spacing={2}>
+                      <Icon as={FaChartBar} />
+                      <div>Statistics</div>
+                    </HStack>
+                  </Link>
+                </NextLink>
+              </>
+            }
+          />
+          <chakra.div p={4}>{children}</chakra.div>
+          <Spacer />
+          <Footer showShortcuts={() => setShortcuts(true)} />
+        </Flex>
       ) : (
         children
       )}
