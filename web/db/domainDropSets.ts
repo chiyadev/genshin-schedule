@@ -37,15 +37,34 @@ import {
   MistVeiledElixir,
   WeaponMaterial,
 } from "./weaponMaterials";
-import { Ballad, Diligence, Freedom, Gold, Prosperity, Resistance, TalentMaterial } from "./talentMaterials";
+import {
+  Ballad,
+  Diligence,
+  Freedom,
+  Gold,
+  Prosperity,
+  Resistance,
+  TalentMaterial,
+  DvalinPlume,
+  DvalinSigh,
+  DvalinClaw,
+  RingOfBoreas,
+  SpiritLocketOfBoreas,
+  TailOfBoreas,
+
+  // Unused until issue #35 is resolved.
+  // ShadowOfTheWarrior,
+  // ShardOfAFoulLegacy,
+  // TuskOfMonocerosCaeli,
+} from "./talentMaterials";
 import { Weekday } from "../utils/time";
 
-const Trounce: Weekday[] = ["Monday"];
 const MonThur: Weekday[] = ["Monday", "Thursday"];
 const TuesFri: Weekday[] = ["Tuesday", "Friday"];
 const WedSat: Weekday[] = ["Wednesday", "Saturday"];
 const Sun: Weekday[] = ["Sunday"];
 const AnyDay: Weekday[] = [...MonThur, ...TuesFri, ...WedSat, ...Sun];
+const Trounce: Weekday[] = AnyDay;
 
 export type DomainDropSet = {
   type: "Domain Drop Set";
@@ -191,13 +210,22 @@ export const ClearPoolAndMountainCavernDrops: DomainDropSet = {
 export const ConfrontStormterrorDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Trounce,
-  items: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe],
+  items: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe, DvalinPlume, DvalinSigh, DvalinClaw],
 };
 
 export const WolfOfTheNorthChallengeDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Trounce,
-  items: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe],
+  items: [
+    Berserker,
+    Instructor,
+    TheExile,
+    GladiatorsFinale,
+    WanderersTroupe,
+    RingOfBoreas,
+    SpiritLocketOfBoreas,
+    TailOfBoreas,
+  ],
 };
 
 export const PeakOfVindagnyrDrops: DomainDropSet = {
