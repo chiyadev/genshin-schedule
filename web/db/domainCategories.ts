@@ -8,6 +8,7 @@ import {
   HiddenPalaceOfLianshanFormula,
   HiddenPalaceOfZhouFormula,
   MidsummerCourtyard,
+  PeakOfVindagnyr,
   TaishanMansion,
   ValleyOfRemembrance,
   WolfOfTheNorthChallenge
@@ -36,7 +37,8 @@ export const DomainOfBlessing: DomainCategory = {
     DomainOfGuyun,
     ValleyOfRemembrance,
     HiddenPalaceOfZhouFormula,
-    ClearPoolAndMountainCavern
+    ClearPoolAndMountainCavern,
+    PeakOfVindagnyr
   ]
 };
 
