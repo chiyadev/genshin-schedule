@@ -44,6 +44,7 @@ const DomainView = () => {
   const [characters] = useConfig("characters");
   const [weapons] = useConfig("weapons");
   const [artifacts] = useConfig("artifacts");
+  const [weeklyBosses] = useConfig("charactersWeekly");
 
   // build schedule
   const domains = useMemo(() => {
@@ -78,6 +79,34 @@ const DomainView = () => {
     };
 
     const currentDrops = DomainDropSets.filter((drops) => drops.days.includes(weekday));
+
+    for (const charName of weeklyBosses) {
+      const character = Characters.find((char) => char.name === charName);
+
+      if (character) {
+        for (const material of character.talentMaterialWeekly) {
+          for (const drops of currentDrops) {
+            if (drops.items.includes(material)) {
+              const domain = getDomainFromDrops(drops);
+              const scheduled = domain && getScheduled(domain);
+
+              if (scheduled) {
+                const group = scheduled.talentMaterials.find((x) => x.material === material);
+
+                if (group) {
+                  group.characters.push(character);
+                } else {
+                  scheduled.talentMaterials.push({
+                    material,
+                    characters: [character],
+                  });
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
     for (const charName of characters) {
       const character = Characters.find((char) => char.name === charName);
