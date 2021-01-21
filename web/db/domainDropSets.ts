@@ -51,11 +51,9 @@ import {
   RingOfBoreas,
   SpiritLocketOfBoreas,
   TailOfBoreas,
-
-  // Unused until issue #35 is resolved.
-  // ShadowOfTheWarrior,
-  // ShardOfAFoulLegacy,
-  // TuskOfMonocerosCaeli,
+  ShadowOfTheWarrior,
+  ShardOfAFoulLegacy,
+  TuskOfMonocerosCaeli,
 } from "./talentMaterials";
 import { Weekday } from "../utils/time";
 
@@ -234,6 +232,21 @@ export const PeakOfVindagnyrDrops: DomainDropSet = {
   items: [DefendersWill, Gambler, Icebreaker, OceanConqueror],
 };
 
+export const EnterTheGoldenHouseDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Trounce,
+  items: [
+    Berserker,
+    Instructor,
+    TheExile,
+    GladiatorsFinale,
+    WanderersTroupe,
+    TuskOfMonocerosCaeli,
+    ShadowOfTheWarrior,
+    ShardOfAFoulLegacy,
+  ],
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
@@ -259,4 +272,5 @@ export const DomainDropSets = [
   ConfrontStormterrorDrops,
   WolfOfTheNorthChallengeDrops,
   PeakOfVindagnyrDrops,
+  EnterTheGoldenHouseDrops,
 ];
