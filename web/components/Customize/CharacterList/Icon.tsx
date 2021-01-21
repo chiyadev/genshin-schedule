@@ -7,7 +7,10 @@ import NextLink from "next/link";
 import IconImage from "../IconImage";
 
 const Icon = ({ visible = true, character }: { visible?: boolean; character: Character }) => {
-  const [existing] = useConfig("characters");
+  const [charactersWeekly] = useConfig("charactersWeekly");
+  const [characters] = useConfig("characters");
+  const existing = [...new Set([...charactersWeekly, ...characters])];
+
   const alreadyAdded = useMemo(() => existing.includes(character.name), [existing, character.name]);
 
   return (
