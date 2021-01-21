@@ -51,6 +51,7 @@ export type Configs = {
   lastChangelog: number;
   stats: StatFrame[];
   statRetention: number;
+  charactersWeekly: string[];
 };
 
 export type Task = {
@@ -119,6 +120,7 @@ export const DefaultConfigs: Configs = {
   lastChangelog: 0,
   stats: [],
   statRetention: 28,
+  charactersWeekly: [],
 };
 
 export const ServerList: Configs["server"][] = ["America", "Europe", "Asia", "TW, HK, MO"];
