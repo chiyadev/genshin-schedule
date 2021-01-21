@@ -6,7 +6,15 @@ import Toggle from "./Toggle";
 import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 
-const MaterialDisplay = ({ character, material }: { character: Character; material: TalentMaterial }) => {
+const MaterialDisplay = ({
+  character,
+  material,
+  isWeekly,
+}: {
+  character: Character;
+  material: TalentMaterial;
+  isWeekly: boolean;
+}) => {
   return (
     <VStack align="start" spacing={4}>
       <HStack spacing={2}>
@@ -27,7 +35,7 @@ const MaterialDisplay = ({ character, material }: { character: Character; materi
       </HStack>
 
       <DropLabel item={material} />
-      <Toggle character={character} />
+      <Toggle character={character} isWeekly={isWeekly} />
     </VStack>
   );
 };
