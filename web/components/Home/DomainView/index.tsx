@@ -44,7 +44,7 @@ const DomainView = () => {
   const [characters] = useConfig("characters");
   const [weapons] = useConfig("weapons");
   const [artifacts] = useConfig("artifacts");
-  const [weeklyBosses] = useConfig("charactersWeekly");
+  const [charactersWeekly] = useConfig("charactersWeekly");
 
   // build schedule
   const domains = useMemo(() => {
@@ -80,7 +80,7 @@ const DomainView = () => {
 
     const currentDrops = DomainDropSets.filter((drops) => drops.days.includes(weekday));
 
-    for (const charName of weeklyBosses) {
+    for (const charName of charactersWeekly) {
       const character = Characters.find((char) => char.name === charName);
 
       if (character) {
