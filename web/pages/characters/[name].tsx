@@ -57,9 +57,7 @@ const CharacterInfo = ({ data, name }: Props) => {
               </div>
             </HStack>
 
-            {/* If null, don't do anything. Refer to 'db/characters.tsx' in the Weekly Materials. */}
-            {/* The 'null' value is possible on unreleased characters. We have no idea about their weeklies. */}
-            {character.talentMaterialWeekly?.map((material) => (
+            {character.talentMaterialWeekly.map((material) => (
               <MaterialDisplay key={material.name} character={character} material={material} />
             ))}
 

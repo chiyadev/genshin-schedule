@@ -49,7 +49,7 @@ export type Character = {
   type: "Character";
   name: string;
   wiki: string;
-  talentMaterialWeekly: TalentMaterial[] | null; // Ayaka and Xiao does not have weeklies yet.
+  talentMaterialWeekly: TalentMaterial[];
   talentMaterials: TalentMaterial[];
   commonMaterials: CommonMaterial[];
 };
@@ -319,7 +319,7 @@ export const Ayaka: Character = {
   type: "Character",
   name: "Ayaka",
   wiki: "https://genshin-impact.fandom.com/wiki/Ayaka",
-  talentMaterialWeekly: null,
+  talentMaterialWeekly: [],
   talentMaterials: [Prosperity],
   commonMaterials: [WhopperflowerNectar, SmallLampGrass],
 };
@@ -328,7 +328,7 @@ export const Xiao: Character = {
   type: "Character",
   name: "Xiao",
   wiki: "https://genshin-impact.fandom.com/wiki/Xiao",
-  talentMaterialWeekly: null,
+  talentMaterialWeekly: [],
   talentMaterials: [Prosperity],
   commonMaterials: [Slime, Qingxin],
 };
