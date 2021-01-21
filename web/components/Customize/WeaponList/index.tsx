@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { WeaponSearch } from "./search";
 import Icon from "./Icon";
-import { SkywardPride } from "../../../assets";
+import { WhiteWeapon } from "../../../assets";
 import { chakra, Grid, HStack, VStack } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/configs";
 
@@ -13,7 +13,7 @@ const WeaponList = () => {
   return (
     <VStack align="stretch" spacing={4} d={results.size ? undefined : "none"}>
       <HStack fontSize="xl" fontWeight="bold" spacing={2} color="white">
-        <chakra.img alt="Weapon" src={SkywardPride} w={8} h={8} objectFit="cover" />
+        <chakra.img alt="Weapon" src={WhiteWeapon} w={8} h={8} objectFit="cover" />
         <div>Weapons</div>
       </HStack>
 
