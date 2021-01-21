@@ -21,8 +21,9 @@ const SearchButton = () => {
           as="button"
           variant="ghost"
           color="white"
-          w={6}
+          w={8}
           h={8}
+          p={1}
           minW={0}
           onClick={() => {
             setOpen(true);

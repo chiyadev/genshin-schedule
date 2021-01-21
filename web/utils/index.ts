@@ -8,7 +8,11 @@ export function randomStr(length: number) {
   return chars.join("");
 }
 
-export function arrayToggle<T>(array: T[], value: T, state: boolean) {
+export function arrayToggle<T>(array: T[], value: T, state?: boolean) {
+  if (typeof state === "undefined") {
+    state = !array.includes(value);
+  }
+
   if (state) {
     return [...array, value].filter((v, i, a) => a.indexOf(v) === i);
   } else {
