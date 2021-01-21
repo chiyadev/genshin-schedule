@@ -4,6 +4,7 @@ import {
   ConfrontStormterror,
   Domain,
   DomainOfGuyun,
+  EnterTheGoldenHouse,
   ForsakenRift,
   HiddenPalaceOfLianshanFormula,
   HiddenPalaceOfZhouFormula,
@@ -11,7 +12,7 @@ import {
   PeakOfVindagnyr,
   TaishanMansion,
   ValleyOfRemembrance,
-  WolfOfTheNorthChallenge
+  WolfOfTheNorthChallenge,
 } from "./domains";
 
 export type DomainCategory = {
@@ -25,7 +26,7 @@ export const DomainOfForgery: DomainCategory = {
   name: "Domain of Forgery",
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Domain_of_Forgery",
   dropDescription: "Weapon Ascension Materials",
-  domains: [CeciliaGarden, HiddenPalaceOfLianshanFormula]
+  domains: [CeciliaGarden, HiddenPalaceOfLianshanFormula],
 };
 
 export const DomainOfBlessing: DomainCategory = {
@@ -38,27 +39,22 @@ export const DomainOfBlessing: DomainCategory = {
     ValleyOfRemembrance,
     HiddenPalaceOfZhouFormula,
     ClearPoolAndMountainCavern,
-    PeakOfVindagnyr
-  ]
+    PeakOfVindagnyr,
+  ],
 };
 
 export const DomainOfMastery: DomainCategory = {
   name: "Domain of Mastery",
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Domain_of_Mastery",
   dropDescription: "Talent Level-Up Materials",
-  domains: [ForsakenRift, TaishanMansion]
+  domains: [ForsakenRift, TaishanMansion],
 };
 
 export const Trounce: DomainCategory = {
   name: "Trounce",
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Weekly_Bosses",
   dropDescription: "Weekly Challenge",
-  domains: [ConfrontStormterror, WolfOfTheNorthChallenge]
+  domains: [ConfrontStormterror, WolfOfTheNorthChallenge, EnterTheGoldenHouse],
 };
 
-export const DomainCategories = [
-  DomainOfForgery,
-  DomainOfBlessing,
-  DomainOfMastery,
-  Trounce
-];
+export const DomainCategories = [DomainOfForgery, DomainOfBlessing, DomainOfMastery, Trounce];

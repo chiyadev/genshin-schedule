@@ -4,6 +4,7 @@ import {
   ConfrontStormterror,
   Domain,
   DomainOfGuyun,
+  EnterTheGoldenHouse,
   ForsakenRift,
   HiddenPalaceOfLianshanFormula,
   HiddenPalaceOfZhouFormula,
@@ -97,6 +98,7 @@ export const Liyue: Region = {
     HiddenPalaceOfZhouFormula,
     ClearPoolAndMountainCavern,
     TaishanMansion,
+    EnterTheGoldenHouse,
   ],
   characters: [Beidou, Chongyun, Ganyu, Keqing, Ningguang, Qiqi, Xiangling, Xiao, Xingqiu, Xinyan, Zhongli],
 };

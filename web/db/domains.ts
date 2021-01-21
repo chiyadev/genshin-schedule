@@ -6,6 +6,7 @@ import {
   DomainDropSet,
   DomainOfGuyunDrops,
   ElectrostaticField,
+  EnterTheGoldenHouseDrops,
   ForsakenRiftDrops1,
   ForsakenRiftDrops2,
   ForsakenRiftDrops3,
@@ -117,6 +118,13 @@ export const PeakOfVindagnyr: Domain = {
   drops: [PeakOfVindagnyrDrops],
 };
 
+export const EnterTheGoldenHouse: Domain = {
+  type: "Domain",
+  name: "Enter the Golden House",
+  wiki: "https://genshin-impact.fandom.com/wiki/Enter_the_Golden_House",
+  drops: [EnterTheGoldenHouseDrops],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -130,4 +138,5 @@ export const Domains = [
   ConfrontStormterror,
   WolfOfTheNorthChallenge,
   PeakOfVindagnyr,
+  EnterTheGoldenHouse,
 ];
