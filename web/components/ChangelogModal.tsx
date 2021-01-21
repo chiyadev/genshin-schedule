@@ -9,6 +9,7 @@ const LatestChangelog = 12;
 function buildChangelog() {
   return [
     <ChangelogSection key={12} date="2021/01/21">
+      <ChangelogItem github={37}>Added talent materials dropped from weekly bosses to characters.</ChangelogItem>
       <ChangelogItem github={39}>Added character, weapon and artifact filter buttons to domain list.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={11} date="2021/01/15">

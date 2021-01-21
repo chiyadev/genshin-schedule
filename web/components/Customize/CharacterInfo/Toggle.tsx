@@ -5,8 +5,8 @@ import { useConfig } from "../../../utils/configs";
 import { Character } from "../../../db/characters";
 import { chakra, Checkbox, VStack } from "@chakra-ui/react";
 
-const Toggle = ({ character }: { character: Character }) => {
-  const [list, setList] = useConfig("characters");
+const Toggle = ({ character, isWeekly }: { character: Character; isWeekly: boolean }) => {
+  const [list, setList] = useConfig(isWeekly ? "charactersWeekly" : "characters");
   const exists = useMemo(() => list.includes(character.name), [list, character]);
 
   return (

@@ -76,6 +76,9 @@ import DiviningScroll from "./game/Divining Scroll.png";
 import Domain from "./game/Domain.png";
 import DragonsBane from "./game/Dragon's Bane.png";
 import DragonspineSpear from "./game/Dragonspine Spear.png";
+import DvalinsClaw from "./game/Dvalin's Claw.png";
+import DvalinsPlume from "./game/Dvalin's Plume.png";
+import DvalinsSigh from "./game/Dvalin's Sigh.png";
 import ElectroCrystal from "./game/Electro Crystal.png";
 import Electro from "./game/Electro.png";
 import EmeraldOrb from "./game/Emerald Orb.png";
@@ -201,6 +204,7 @@ import Resin from "./game/Resin.png";
 import ResolutionofSojourner from "./game/Resolution of Sojourner.png";
 import Restaurant from "./game/Restaurant.png";
 import RetracingBolide from "./game/Retracing Bolide.png";
+import RingofBoreas from "./game/Ring of Boreas.png";
 import RoyalGrimoire from "./game/Royal Grimoire.png";
 import Rust from "./game/Rust.png";
 import SacrificialBow from "./game/Sacrificial Bow.png";
@@ -209,6 +213,8 @@ import SacrificialGreatsword from "./game/Sacrificial Greatsword.png";
 import SacrificialSword from "./game/Sacrificial Sword.png";
 import Scholar from "./game/Scholar.png";
 import SerpentSpine from "./game/Serpent Spine.png";
+import ShadowoftheWarrior from "./game/Shadow of the Warrior.png";
+import ShardofaFoulLegacy from "./game/Shard of a Foul Legacy.png";
 import SharpshootersOath from "./game/Sharpshooter's Oath.png";
 import ShivadaJadeSliver from "./game/Shivada Jade Sliver.png";
 import ShrimpMeat from "./game/Shrimp Meat.png";
@@ -227,6 +233,7 @@ import Snapdragon from "./game/Snapdragon.png";
 import SnowTombedStarsilver from "./game/Snow-Tombed Starsilver.png";
 import SolarPearl from "./game/Solar Pearl.png";
 import SouvenirShop from "./game/Souvenir Shop.png";
+import SpiritLocketofBoreas from "./game/Spirit Locket of Boreas.png";
 import Starconch from "./game/Starconch.png";
 import Starsilver from "./game/Starsilver.png";
 import Sucrose from "./game/Sucrose.png";
@@ -234,6 +241,7 @@ import SummitShaper from "./game/Summit Shaper.png";
 import Sunsettia from "./game/Sunsettia.png";
 import SweetFlower from "./game/Sweet Flower.png";
 import SwordofDescension from "./game/Sword of Descension.png";
+import TailofBoreas from "./game/Tail of Boreas.png";
 import Tartaglia from "./game/Tartaglia.png";
 import TeachingsofBallad from "./game/Teachings of Ballad.png";
 import TeachingsofDiligence from "./game/Teachings of Diligence.png";
@@ -260,6 +268,7 @@ import TravelerGeo from "./game/Traveler (Geo).png";
 import TravelersHandySword from "./game/Traveler's Handy Sword.png";
 import TravelingDoctor from "./game/Traveling Doctor.png";
 import TreasureHoarderInsignia from "./game/Treasure Hoarder Insignia.png";
+import TuskofMonocerosCaeli from "./game/Tusk of Monoceros Caeli.png";
 import TwinNephrite from "./game/Twin Nephrite.png";
 import VajradaAmethystSliver from "./game/Vajrada Amethyst Sliver.png";
 import Valberry from "./game/Valberry.png";
@@ -368,6 +377,9 @@ export {
   Domain,
   DragonsBane,
   DragonspineSpear,
+  DvalinsClaw,
+  DvalinsPlume,
+  DvalinsSigh,
   ElectroCrystal,
   Electro,
   EmeraldOrb,
@@ -493,6 +505,7 @@ export {
   ResolutionofSojourner,
   Restaurant,
   RetracingBolide,
+  RingofBoreas,
   RoyalGrimoire,
   Rust,
   SacrificialBow,
@@ -501,6 +514,8 @@ export {
   SacrificialSword,
   Scholar,
   SerpentSpine,
+  ShadowoftheWarrior,
+  ShardofaFoulLegacy,
   SharpshootersOath,
   ShivadaJadeSliver,
   ShrimpMeat,
@@ -519,6 +534,7 @@ export {
   SnowTombedStarsilver,
   SolarPearl,
   SouvenirShop,
+  SpiritLocketofBoreas,
   Starconch,
   Starsilver,
   Sucrose,
@@ -526,6 +542,7 @@ export {
   Sunsettia,
   SweetFlower,
   SwordofDescension,
+  TailofBoreas,
   Tartaglia,
   TeachingsofBallad,
   TeachingsofDiligence,
@@ -552,6 +569,7 @@ export {
   TravelersHandySword,
   TravelingDoctor,
   TreasureHoarderInsignia,
+  TuskofMonocerosCaeli,
   TwinNephrite,
   VajradaAmethystSliver,
   Valberry,
@@ -662,6 +680,9 @@ export function getAssetByName(name: string): string | undefined {
     case "Domain": return Domain;
     case "Dragon's Bane": return DragonsBane;
     case "Dragonspine Spear": return DragonspineSpear;
+    case "Dvalin's Claw": return DvalinsClaw;
+    case "Dvalin's Plume": return DvalinsPlume;
+    case "Dvalin's Sigh": return DvalinsSigh;
     case "Electro Crystal": return ElectroCrystal;
     case "Electro": return Electro;
     case "Emerald Orb": return EmeraldOrb;
@@ -787,6 +808,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Resolution of Sojourner": return ResolutionofSojourner;
     case "Restaurant": return Restaurant;
     case "Retracing Bolide": return RetracingBolide;
+    case "Ring of Boreas": return RingofBoreas;
     case "Royal Grimoire": return RoyalGrimoire;
     case "Rust": return Rust;
     case "Sacrificial Bow": return SacrificialBow;
@@ -795,6 +817,8 @@ export function getAssetByName(name: string): string | undefined {
     case "Sacrificial Sword": return SacrificialSword;
     case "Scholar": return Scholar;
     case "Serpent Spine": return SerpentSpine;
+    case "Shadow of the Warrior": return ShadowoftheWarrior;
+    case "Shard of a Foul Legacy": return ShardofaFoulLegacy;
     case "Sharpshooter's Oath": return SharpshootersOath;
     case "Shivada Jade Sliver": return ShivadaJadeSliver;
     case "Shrimp Meat": return ShrimpMeat;
@@ -813,6 +837,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Snow-Tombed Starsilver": return SnowTombedStarsilver;
     case "Solar Pearl": return SolarPearl;
     case "Souvenir Shop": return SouvenirShop;
+    case "Spirit Locket of Boreas": return SpiritLocketofBoreas;
     case "Starconch": return Starconch;
     case "Starsilver": return Starsilver;
     case "Sucrose": return Sucrose;
@@ -820,6 +845,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Sunsettia": return Sunsettia;
     case "Sweet Flower": return SweetFlower;
     case "Sword of Descension": return SwordofDescension;
+    case "Tail of Boreas": return TailofBoreas;
     case "Tartaglia": return Tartaglia;
     case "Teachings of Ballad": return TeachingsofBallad;
     case "Teachings of Diligence": return TeachingsofDiligence;
@@ -846,6 +872,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Traveler's Handy Sword": return TravelersHandySword;
     case "Traveling Doctor": return TravelingDoctor;
     case "Treasure Hoarder Insignia": return TreasureHoarderInsignia;
+    case "Tusk of Monoceros Caeli": return TuskofMonocerosCaeli;
     case "Twin Nephrite": return TwinNephrite;
     case "Vajrada Amethyst Sliver": return VajradaAmethystSliver;
     case "Valberry": return Valberry;

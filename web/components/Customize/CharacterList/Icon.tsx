@@ -7,8 +7,14 @@ import NextLink from "next/link";
 import IconImage from "../IconImage";
 
 const Icon = ({ visible = true, character }: { visible?: boolean; character: Character }) => {
-  const [existing] = useConfig("characters");
-  const alreadyAdded = useMemo(() => existing.includes(character.name), [existing, character.name]);
+  const [charactersWeekly] = useConfig("charactersWeekly");
+  const [characters] = useConfig("characters");
+
+  const alreadyAdded = useMemo(() => new Set([...charactersWeekly, ...characters]).has(character.name), [
+    charactersWeekly,
+    characters,
+    character.name,
+  ]);
 
   return (
     <NextLink href={`/characters/${character.name}`} passHref>

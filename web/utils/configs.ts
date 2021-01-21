@@ -51,6 +51,7 @@ export type Configs = {
   lastChangelog: number;
   stats: StatFrame[];
   statRetention: number;
+  charactersWeekly: string[];
   domainFilters: ("character" | "weapon" | "artifact")[];
 };
 
@@ -120,6 +121,7 @@ export const DefaultConfigs: Configs = {
   lastChangelog: 0,
   stats: [],
   statRetention: 28,
+  charactersWeekly: [],
   domainFilters: [],
 };
 
