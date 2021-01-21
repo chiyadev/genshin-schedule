@@ -283,7 +283,10 @@ import Wheat from "./game/Wheat.png";
 import WhiteIronChunk from "./game/White Iron Chunk.png";
 import WhiteIronGreatsword from "./game/White Iron Greatsword.png";
 import WhiteTassel from "./game/White Tassel.png";
+import WhiteAnemo from "./game/WhiteAnemo.png";
+import WhiteArtifact from "./game/WhiteArtifact.png";
 import Whiteblind from "./game/Whiteblind.png";
+import WhiteWeapon from "./game/WhiteWeapon.png";
 import WhopperflowerNectar from "./game/Whopperflower Nectar.png";
 import WindwheelAster from "./game/Windwheel Aster.png";
 import WineandSong from "./game/Wine and Song.png";
@@ -581,7 +584,10 @@ export {
   WhiteIronChunk,
   WhiteIronGreatsword,
   WhiteTassel,
+  WhiteAnemo,
+  WhiteArtifact,
   Whiteblind,
+  WhiteWeapon,
   WhopperflowerNectar,
   WindwheelAster,
   WineandSong,
@@ -881,7 +887,10 @@ export function getAssetByName(name: string): string | undefined {
     case "White Iron Chunk": return WhiteIronChunk;
     case "White Iron Greatsword": return WhiteIronGreatsword;
     case "White Tassel": return WhiteTassel;
+    case "WhiteAnemo": return WhiteAnemo;
+    case "WhiteArtifact": return WhiteArtifact;
     case "Whiteblind": return Whiteblind;
+    case "WhiteWeapon": return WhiteWeapon;
     case "Whopperflower Nectar": return WhopperflowerNectar;
     case "Windwheel Aster": return WindwheelAster;
     case "Wine and Song": return WineandSong;

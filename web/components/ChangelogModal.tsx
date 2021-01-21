@@ -4,10 +4,13 @@ import { useConfig } from "../utils/configs";
 import { Divider, Heading, HStack, Icon, LightMode, Link, ListItem, UnorderedList, VStack } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 11;
+const LatestChangelog = 12;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={12} date="2021/01/21">
+      <ChangelogItem github={39}>Added character, weapon and artifact filter buttons to domain list.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={11} date="2021/01/15">
       <ChangelogItem>Added a basic statistics page.</ChangelogItem>
     </ChangelogSection>,
