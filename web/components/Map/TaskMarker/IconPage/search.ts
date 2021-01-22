@@ -15,6 +15,8 @@ function addIcons(type: string, items: { name: string; timer?: Task["refreshTime
   }
 }
 
+addIcons("gadget", [{ name: "Portable Waypoint", timer: 168 }]);
+
 addIcons("ore", [
   { name: "Iron Chunk", timer: 24 },
   { name: "White Iron Chunk", timer: 48 },
