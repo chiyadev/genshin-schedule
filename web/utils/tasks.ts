@@ -31,9 +31,23 @@ export function useFilteredTasks(tasks: Task[]) {
 
 export function useDueTasks(tasks: Task[]) {
   const time = useServerTime(60000);
+  const [query] = useConfig("taskQuery");
+
+  const results = useMemo(() => {
+    const search = new MemorySearch<Task>();
+
+    for (const task of tasks) {
+      search.add(task.name, task);
+      search.add(task.icon, task);
+      task.description && search.add(task.description, task);
+    }
+
+    return search;
+  }, [tasks]);
 
   return useMemo(() => {
-    return tasks
+    return results
+      .search(query)
       .filter((task) => task.visible && task.dueTime <= time.valueOf())
       .sort((a, b) => {
         const icon = iconIndexes[a.icon] - iconIndexes[b.icon];
@@ -41,7 +55,7 @@ export function useDueTasks(tasks: Task[]) {
 
         return a.dueTime - b.dueTime;
       });
-  }, [time, tasks]);
+  }, [results, query, time]);
 }
 
 export function useTaskCreator() {
