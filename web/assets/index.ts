@@ -175,6 +175,7 @@ import PhilanemoMushroom from "./game/Philanemo Mushroom.png";
 import PhilosophiesoftheLand from "./game/Philosophies of the Land.png";
 import Pinecone from "./game/Pinecone.png";
 import PinkCircle from "./game/Pink Circle.png";
+import PortableWaypoint from "./game/Portable Waypoint.png";
 import Potato from "./game/Potato.png";
 import PrayersforDestiny from "./game/Prayers for Destiny.png";
 import PrayersforIllumination from "./game/Prayers for Illumination.png";
@@ -476,6 +477,7 @@ export {
   PhilosophiesoftheLand,
   Pinecone,
   PinkCircle,
+  PortableWaypoint,
   Potato,
   PrayersforDestiny,
   PrayersforIllumination,
@@ -779,6 +781,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Philosophies of the Land": return PhilosophiesoftheLand;
     case "Pinecone": return Pinecone;
     case "Pink Circle": return PinkCircle;
+    case "Portable Waypoint": return PortableWaypoint;
     case "Potato": return Potato;
     case "Prayers for Destiny": return PrayersforDestiny;
     case "Prayers for Illumination": return PrayersforIllumination;
