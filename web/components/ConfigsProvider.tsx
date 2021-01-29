@@ -85,7 +85,7 @@ const LocalConfigsProvider = ({ children }: { children?: ReactNode }) => {
 };
 
 const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; children?: ReactNode }) => {
-  const [value, setValue] = useState(() => ({ ...DefaultConfigs, tutorial: false, ...initial.data }));
+  const [value, setValue] = useState(() => ({ ...DefaultConfigs, ...initial.data }));
   const [, setSync] = useState(false);
 
   const lastValue = useRef(initial.data);
