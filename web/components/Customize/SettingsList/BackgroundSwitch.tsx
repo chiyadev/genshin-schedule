@@ -23,6 +23,7 @@ const BackgroundSwitch = () => {
       >
         <option value="paimon">Paimon</option>
         <option value="klee">Klee</option>
+        <option value="zhongli">Zhongli</option>
         <option value="none">Disabled</option>
       </Select>
     </HStack>

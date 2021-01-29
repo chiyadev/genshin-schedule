@@ -43,7 +43,7 @@ export type Configs = {
   mapCreateTask: Task;
   mapFocusedTask: string | false;
   mapTaskList: boolean;
-  background: "paimon" | "klee" | "none";
+  background: "paimon" | "klee" | "zhongli" | "none";
   hiddenWidgets: {
     [key in "signIn" | "clock" | "info" | "sync" | "resin" | "tasks" | "domains"]?: boolean;
   };

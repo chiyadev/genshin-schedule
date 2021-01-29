@@ -17,6 +17,7 @@ import ArchaicPetra from "./game/Archaic Petra.png";
 import Ayaka from "./game/Ayaka.png";
 import BackgroundKlee from "./game/BackgroundKlee.png";
 import BackgroundPaimon from "./game/BackgroundPaimon.png";
+import BackgroundZhongli from "./game/BackgroundZhongli.png";
 import Bamboo from "./game/Bamboo.png";
 import Barbara from "./game/Barbara.png";
 import BasaltPillar from "./game/Basalt Pillar.png";
@@ -322,6 +323,7 @@ export {
   Ayaka,
   BackgroundKlee,
   BackgroundPaimon,
+  BackgroundZhongli,
   Bamboo,
   Barbara,
   BasaltPillar,
@@ -629,6 +631,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Ayaka": return Ayaka;
     case "BackgroundKlee": return BackgroundKlee;
     case "BackgroundPaimon": return BackgroundPaimon;
+    case "BackgroundZhongli": return BackgroundZhongli;
     case "Bamboo": return Bamboo;
     case "Barbara": return Barbara;
     case "Basalt Pillar": return BasaltPillar;

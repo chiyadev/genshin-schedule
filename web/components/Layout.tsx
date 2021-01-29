@@ -30,6 +30,7 @@ const Layout = ({
       </Head>
 
       <StatisticsUpdater />
+
       <KeyHelp open={shortcuts} setOpen={setShortcuts} />
       <TutorialModal />
       <ChangelogModal />

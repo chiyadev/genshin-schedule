@@ -48,11 +48,12 @@ const DarkModeStyle = () => {
       <style>{`
         :root {
           --nprogress-color: white;
+          --text-color: rgba(255, 255, 255, 0.92);
         }
 
-        body, .white-card {
+        body {
           background-color: ${bg} !important;
-          color: rgba(255, 255, 255, 0.92) !important;
+          color: var(--text-color) !important;
         }
       `}</style>
     </Head>

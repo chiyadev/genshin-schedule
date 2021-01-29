@@ -6,7 +6,6 @@ const WhiteCard = ({ children, divide, padding = 4 }: { children?: ReactNode; di
 
   return (
     <VStack
-      className="white-card"
       align="stretch"
       bg={useColorModeValue("white", "gray.900")}
       borderWidth={1}
