@@ -24,11 +24,13 @@ const Footer = ({ showShortcuts }: { showShortcuts?: () => void }) => {
       </chakra.div>
 
       <HStack spacing={4} justify="center">
-        <Tooltip label="Shortcuts">
-          <Link as="button" onClick={showShortcuts}>
-            <Icon as={FaKeyboard} />
-          </Link>
-        </Tooltip>
+        {showShortcuts && (
+          <Tooltip label="Shortcuts">
+            <Link as="button" onClick={showShortcuts}>
+              <Icon as={FaKeyboard} />
+            </Link>
+          </Tooltip>
+        )}
 
         <Tooltip label="Help">
           <Link href="https://github.com/chiyadev/genshin-schedule/wiki" isExternal>

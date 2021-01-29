@@ -4,7 +4,6 @@ import BackgroundSwitch from "./BackgroundSwitch";
 import SignOutButton from "./SignOutButton";
 import ConfigExportButton from "./ConfigExportButton";
 import TaskDefaultZoomSlider from "./TaskDefaultZoomSlider";
-import ViewTutorialButton from "./ViewTutorialButton";
 import AccountManageButton from "./AccountManageButton";
 import { User } from "../../../utils/api";
 import ThemeSwitch from "./ThemeSwitch";
@@ -21,22 +20,18 @@ const SettingsList = ({ user }: { user?: User }) => {
 
         <Wrap spacing={2}>
           <WrapItem>
-            <ViewTutorialButton />
-          </WrapItem>
-          <WrapItem>
             <ConfigExportButton />
           </WrapItem>
 
           {user && (
-            <>
-              <WrapItem>
-                <AccountManageButton user={user} />
-              </WrapItem>
-              <WrapItem>
-                <SignOutButton />
-              </WrapItem>
-            </>
+            <WrapItem>
+              <AccountManageButton user={user} />
+            </WrapItem>
           )}
+
+          <WrapItem>
+            <SignOutButton />
+          </WrapItem>
         </Wrap>
       </VStack>
     </VStack>

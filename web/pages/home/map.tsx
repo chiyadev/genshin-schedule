@@ -15,6 +15,15 @@ type Props = {
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const client = createApiClient(ctx);
 
+  if (!client.token) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
   return {
     props: {
       data: client.authenticated ? await client.getSync() : null,
@@ -27,7 +36,7 @@ const MapCore = dynamic(() => import("../../components/Map"), { ssr: false });
 const Map = ({ data }: Props) => {
   return (
     <ConfigsProvider initial={data}>
-      <Layout title={["Map"]} layout={false}>
+      <Layout title={["Map"]} header={false} footer={false} background={false}>
         <HeaderOverlay />
         <TaskListOverlay />
 

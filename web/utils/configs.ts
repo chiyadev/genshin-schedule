@@ -10,7 +10,7 @@ import {
   useState,
 } from "react";
 import { ResinCap } from "../db/resins";
-import { createApiClient, Notification, setAuthToken } from "./api";
+import { createApiClient, Notification } from "./api";
 import { MultiMap } from "./multiMap";
 import { useListItemDispatch } from "./dispatch";
 import { ServerResetHour, useServerTime } from "./time";
@@ -45,9 +45,8 @@ export type Configs = {
   mapTaskList: boolean;
   background: "paimon" | "klee" | "zhongli" | "none";
   hiddenWidgets: {
-    [key in "signIn" | "clock" | "info" | "sync" | "resin" | "tasks" | "domains"]?: boolean;
+    [key in "clock" | "sync" | "resin" | "tasks" | "domains"]?: boolean;
   };
-  tutorial: boolean;
   lastChangelog: number;
   stats: StatFrame[];
   statRetention: number;
@@ -115,10 +114,7 @@ export const DefaultConfigs: Configs = {
   mapFocusedTask: false,
   mapTaskList: true,
   background: "paimon",
-  hiddenWidgets: {
-    signIn: true,
-  },
-  tutorial: true,
+  hiddenWidgets: {},
   lastChangelog: 0,
   stats: [],
   statRetention: 28,
@@ -129,18 +125,6 @@ export const DefaultConfigs: Configs = {
 
 export const ServerList: Configs["server"][] = ["America", "Europe", "Asia", "TW, HK, MO"];
 export const ConfigKeys = Object.keys(DefaultConfigs) as (keyof Configs)[];
-
-// migration: if there is a token saved in localStorage, move it to cookies
-if (typeof window !== "undefined") {
-  const auth = localStorage.getItem("auth");
-
-  if (auth) {
-    localStorage.removeItem("auth");
-
-    setAuthToken(undefined, JSON.parse(auth).token);
-    setTimeout(() => window.location.reload());
-  }
-}
 
 export const ConfigsContext = createContext<{
   ref: MutableRefObject<Configs>;

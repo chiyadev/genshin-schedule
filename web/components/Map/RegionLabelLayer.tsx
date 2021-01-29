@@ -37,7 +37,7 @@ const RegionLabel = ({ geoJsonPoint, map }: { geoJsonPoint: Feature<Point, any>;
       position="relative"
       top="-50%"
       left="-50%"
-      fontSize="1.25rem"
+      fontSize="1rem"
       fontFamily="Genshin"
       style={{ transform: `scale(${map.zoom / MapZoomMax})` }}
     >

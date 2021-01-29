@@ -1,7 +1,7 @@
 import { Button, Icon, Input, InputGroup, InputLeftAddon, useClipboard } from "@chakra-ui/react";
 import React, { memo, useEffect, useState } from "react";
 import { FaCheck, FaCopy } from "react-icons/fa";
-import { getAuthToken } from "../../../utils/api";
+import { createApiClient } from "../../../utils/api";
 import { trackEvent } from "../../../utils/umami";
 
 const MessageDisplay = () => {
@@ -10,10 +10,10 @@ const MessageDisplay = () => {
 
   // don't return token in html, read using js
   useEffect(() => {
-    const token = getAuthToken();
+    const client = createApiClient();
 
-    if (token) {
-      setMessage(`enable ||${token}||`);
+    if (client.authenticated) {
+      setMessage(`enable ||${client.token}||`);
     } else {
       setMessage("You are not signed in yet.");
     }

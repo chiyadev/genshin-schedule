@@ -46,9 +46,9 @@ const Info = () => {
             </div>
 
             <Button
-              as={Link}
+              as="a"
               href="https://discord.gg/XdPQeEaBE7"
-              isExternal
+              target="_blank"
               leftIcon={<Icon as={FaDiscord} />}
               color="white"
               bg="#7289da"

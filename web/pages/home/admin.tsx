@@ -14,6 +14,15 @@ type Props = {
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const client = createApiClient(ctx);
 
+  if (!client.token) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
   return {
     props: {
       user: client.authenticated ? await client.getSelf() : null,

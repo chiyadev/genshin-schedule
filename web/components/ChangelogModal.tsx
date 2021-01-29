@@ -18,8 +18,8 @@ const LatestChangelog = 13;
 
 function buildChangelog() {
   return [
-    <ChangelogSection key={13} date="2021/01/21">
-      <ChangelogItem>Improved website theme significantly and added dark mode support.</ChangelogItem>
+    <ChangelogSection key={13} date="2021/01/29">
+      <ChangelogItem>Improved website theme and added dark mode support.</ChangelogItem>
       <ChangelogItem>Refactored page paths.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={12} date="2021/01/21">

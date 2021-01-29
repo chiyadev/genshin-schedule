@@ -1,10 +1,8 @@
 import React, { memo } from "react";
 import DomainList from "../../components/Home/DomainView";
 import TaskList from "../../components/Home/Tasks";
-import Info from "../../components/Home/Info";
 import Resin from "../../components/Home/Resin";
 import Clock from "../../components/Home/Clock";
-import SignIn from "../../components/Home/SignIn";
 import Layout from "../../components/Layout";
 import { GetServerSideProps } from "next";
 import { createApiClient, WebData } from "../../utils/api";
@@ -17,6 +15,15 @@ type Props = {
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const client = createApiClient(ctx);
+
+  if (!client.token) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
 
   return {
     props: {
@@ -31,8 +38,6 @@ const Home = ({ data }: Props) => {
       <Layout>
         <VStack align="stretch" spacing={12}>
           <Clock />
-          <Info />
-          <SignIn />
           <Resin />
           <TaskList />
           <DomainList />

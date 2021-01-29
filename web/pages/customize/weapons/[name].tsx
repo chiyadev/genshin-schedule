@@ -18,6 +18,16 @@ type Props = {
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const client = createApiClient(ctx);
+
+  if (!client.token) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
   const weapon = Weapons.find((weapon) => weapon.name === ctx.query.name);
 
   if (!weapon) {

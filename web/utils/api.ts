@@ -73,7 +73,11 @@ export class ApiClient {
   constructor(public baseUrl: string, public token?: string) {}
 
   get authenticated() {
-    return !!this.token;
+    return typeof this.token === "string" && !this.anonymous;
+  }
+
+  get anonymous() {
+    return this.token === "null";
   }
 
   fetch(input: Request | string, init?: RequestInit): Promise<Response> {
