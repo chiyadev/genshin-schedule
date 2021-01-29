@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 import WhiteCard from "../WhiteCard";
-import { chakra, Heading, HStack, StackDivider, useToken, VStack } from "@chakra-ui/react";
-import { Resin } from "../../assets";
+import { chakra, Heading, HStack, StackDivider, useColorModeValue, useToken, VStack } from "@chakra-ui/react";
 import { StatFrame, useConfig, useCurrentStats } from "../../utils/configs";
 import { DateTime } from "luxon";
 import { ResinsPerMinute } from "../../db/resins";
@@ -11,13 +10,14 @@ import { VictoryAxis, VictoryChart, VictoryLine, VictoryTheme } from "victory";
 const ResinStats = () => {
   return (
     <VStack align="stretch" spacing={4}>
-      <HStack spacing={2} color="white" fontSize="xl" fontWeight="bold">
-        <chakra.img src={Resin} w={8} h={8} />
-        <div>Resins spent</div>
-      </HStack>
+      <Heading size="md">Resins spent</Heading>
 
       <WhiteCard divide>
-        <HStack align="stretch" spacing={0} divider={<StackDivider orientation="vertical" borderColor="gray.200" />}>
+        <HStack
+          align="stretch"
+          spacing={0}
+          divider={<StackDivider orientation="vertical" borderColor={useColorModeValue("gray.200", "gray.700")} />}
+        >
           <TodayPanel />
           <TotalPanel />
           <PeakPanel />

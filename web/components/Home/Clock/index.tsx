@@ -4,11 +4,11 @@ import ServerText from "./ServerText";
 import TimeDisplay from "./TimeDisplay";
 import DateDisplay from "./DateDisplay";
 import OffsetAlert from "./OffsetAlert";
-import { chakra, HStack, Icon } from "@chakra-ui/react";
+import { HStack, Icon, VStack } from "@chakra-ui/react";
 
 const Clock = () => {
   return (
-    <chakra.div textAlign="center" color="white">
+    <VStack spacing={1}>
       <HStack fontSize="lg" spacing={2} justify="center">
         <Icon as={FaClock} />
         <div>
@@ -17,9 +17,12 @@ const Clock = () => {
       </HStack>
 
       <TimeDisplay />
-      <DateDisplay />
-      <OffsetAlert />
-    </chakra.div>
+
+      <VStack spacing={0}>
+        <DateDisplay />
+        <OffsetAlert />
+      </VStack>
+    </VStack>
   );
 };
 

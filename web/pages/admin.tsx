@@ -26,7 +26,7 @@ const Admin = ({ user, data }: Props) => {
   return (
     <ConfigsProvider initial={data}>
       <Layout title={["Admin Tools"]}>
-        <VStack align="stretch" spacing={4} color="white">
+        <VStack align="stretch" spacing={4}>
           <div>Administrator tools:</div>
 
           {user.isAdmin ? (

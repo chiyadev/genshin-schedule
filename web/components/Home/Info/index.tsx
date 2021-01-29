@@ -3,7 +3,7 @@ import WhiteCard from "../../WhiteCard";
 import HideText from "./HideText";
 import { useConfig } from "../../../utils/configs";
 import Favicon180x180 from "../../../public/favicon-180x180.png";
-import { chakra, HStack, Link, ListItem, UnorderedList, VStack } from "@chakra-ui/react";
+import { chakra, HStack, Link, ListItem, UnorderedList, useColorModeValue, VStack } from "@chakra-ui/react";
 
 const Info = () => {
   const [hidden] = useConfig("hiddenWidgets");
@@ -54,7 +54,11 @@ const Info = () => {
 
         <div>
           <span>Please refer to the </span>
-          <Link href="https://github.com/chiyadev/genshin-schedule/wiki" color="blue.500" isExternal>
+          <Link
+            href="https://github.com/chiyadev/genshin-schedule/wiki"
+            color={useColorModeValue("blue.500", "blue.300")}
+            isExternal
+          >
             website guide
           </Link>
           <span> for usage help.</span>

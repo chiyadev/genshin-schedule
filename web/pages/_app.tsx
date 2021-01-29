@@ -5,6 +5,7 @@ import NProgress from "../components/NProgress";
 import Head from "next/head";
 import "./_app.css";
 import "../components/NProgress.css";
+import "inter-ui/inter.css";
 import "leaflet/dist/leaflet.css";
 import { useScrollPreserver } from "../utils/scrollPreserver";
 import { loadPolyfills } from "../utils/polyfills";
@@ -23,8 +24,8 @@ function App({ Component, pageProps, router }: AppProps) {
     <ChakraProvider
       theme={extendTheme({
         fonts: {
-          body: `Bonobo, ${fallbackFonts}`,
-          heading: `Bonobo, ${fallbackFonts}`,
+          body: `Inter, ${fallbackFonts}`,
+          heading: `Genshin, ${fallbackFonts}`,
         },
         fontSizes: {
           xs: "10px",
@@ -36,7 +37,6 @@ function App({ Component, pageProps, router }: AppProps) {
         styles: {
           global: {
             body: {
-              bg: "#2e313d",
               fontSize: "md",
             },
           },

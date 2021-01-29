@@ -9,7 +9,6 @@ import {
   Button,
   ButtonGroup,
   Icon,
-  LightMode,
 } from "@chakra-ui/react";
 import { FaSync } from "react-icons/fa";
 import { useConfig } from "../../utils/configs";
@@ -25,34 +24,32 @@ const ResetButton = () => {
         Reset
       </Button>
 
-      <LightMode>
-        <AlertDialog isOpen={confirm} onClose={() => setConfirm(false)} leastDestructiveRef={cancelRef}>
-          <AlertDialogOverlay />
-          <AlertDialogContent>
-            <AlertDialogHeader>Reset statistics</AlertDialogHeader>
+      <AlertDialog isOpen={confirm} onClose={() => setConfirm(false)} leastDestructiveRef={cancelRef}>
+        <AlertDialogOverlay />
+        <AlertDialogContent>
+          <AlertDialogHeader>Reset statistics</AlertDialogHeader>
 
-            <AlertDialogBody>Are you sure? This action cannot be undone.</AlertDialogBody>
+          <AlertDialogBody>Are you sure? This action cannot be undone.</AlertDialogBody>
 
-            <AlertDialogFooter>
-              <ButtonGroup>
-                <Button
-                  colorScheme="red"
-                  onClick={() => {
-                    setStats([]);
-                    setConfirm(false);
-                  }}
-                >
-                  Proceed
-                </Button>
+          <AlertDialogFooter>
+            <ButtonGroup>
+              <Button
+                colorScheme="red"
+                onClick={() => {
+                  setStats([]);
+                  setConfirm(false);
+                }}
+              >
+                Proceed
+              </Button>
 
-                <Button ref={cancelRef} onClick={() => setConfirm(false)}>
-                  Cancel
-                </Button>
-              </ButtonGroup>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
-      </LightMode>
+              <Button ref={cancelRef} onClick={() => setConfirm(false)}>
+                Cancel
+              </Button>
+            </ButtonGroup>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </>
   );
 };

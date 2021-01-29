@@ -9,32 +9,27 @@ import { useListDispatch } from "../../utils/dispatch";
 
 const TaskListCard = ({ onItemClick }: { onItemClick?: (task: Task) => void }) => {
   const [tasks, setTasks] = useConfig("tasks");
-  const dueTasks = useDueTasks(tasks);
-  const filteredTasks = useFilteredTasks(dueTasks);
-  const taskDispatches = useListDispatch(filteredTasks, setTasks);
+  const dueTasks = useDueTasks(useFilteredTasks(tasks));
+  const taskDispatches = useListDispatch(dueTasks, setTasks);
 
   const [focused] = useConfig("mapFocusedTask");
   const setFocused = useTaskFocusSetter();
 
   const focusNext = useCallback(() => {
     if (focused) {
-      setFocused(filteredTasks[(filteredTasks.findIndex((task) => task.id === focused) + 1) % filteredTasks.length]);
+      setFocused(dueTasks[(dueTasks.findIndex((task) => task.id === focused) + 1) % dueTasks.length]);
     } else {
-      setFocused(filteredTasks[0]);
+      setFocused(dueTasks[0]);
     }
-  }, [focused, setFocused, filteredTasks]);
+  }, [focused, setFocused, dueTasks]);
 
   const focusPrevious = useCallback(() => {
     if (focused) {
-      setFocused(
-        filteredTasks[
-          (filteredTasks.length + filteredTasks.findIndex((task) => task.id === focused) - 1) % filteredTasks.length
-        ]
-      );
+      setFocused(dueTasks[(dueTasks.length + dueTasks.findIndex((task) => task.id === focused) - 1) % dueTasks.length]);
     } else {
-      setFocused(filteredTasks[0]);
+      setFocused(dueTasks[0]);
     }
-  }, [focused, setFocused, filteredTasks]);
+  }, [focused, setFocused, dueTasks]);
 
   const setFocusedTask = useCallback(
     (newTask: SetStateAction<Task>) => {

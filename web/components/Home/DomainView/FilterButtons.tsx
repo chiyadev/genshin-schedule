@@ -1,10 +1,17 @@
 import React, { memo } from "react";
-import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Button, ButtonGroup, useColorModeValue } from "@chakra-ui/react";
 import { Tooltip } from "@chakra-ui/tooltip";
 import { trackEvent } from "../../../utils/umami";
 import { useConfig } from "../../../utils/configs";
 import { arrayToggle } from "../../../utils";
-import { WhiteAnemo, WhiteArtifact, WhiteWeapon } from "../../../assets";
+import {
+  BlackArtifact,
+  BlackCharacter,
+  BlackWeapon,
+  WhiteArtifact,
+  WhiteCharacter,
+  WhiteWeapon,
+} from "../../../assets";
 
 const FilterButtons = () => {
   const [filters, setFilters] = useConfig("domainFilters");
@@ -15,7 +22,6 @@ const FilterButtons = () => {
         <Button
           as="button"
           variant="ghost"
-          color="white"
           w={8}
           h={8}
           p={1}
@@ -26,7 +32,7 @@ const FilterButtons = () => {
             trackEvent("domainView", "filterCharacters");
           }}
         >
-          <img src={WhiteAnemo} />
+          <img src={useColorModeValue(BlackCharacter, WhiteCharacter)} />
         </Button>
       </Tooltip>
 
@@ -34,7 +40,6 @@ const FilterButtons = () => {
         <Button
           as="button"
           variant="ghost"
-          color="white"
           w={8}
           h={8}
           p={1}
@@ -45,7 +50,7 @@ const FilterButtons = () => {
             trackEvent("domainView", "filterWeapons");
           }}
         >
-          <img src={WhiteWeapon} />
+          <img src={useColorModeValue(BlackWeapon, WhiteWeapon)} />
         </Button>
       </Tooltip>
 
@@ -53,7 +58,6 @@ const FilterButtons = () => {
         <Button
           as="button"
           variant="ghost"
-          color="white"
           w={8}
           h={8}
           p={1}
@@ -64,7 +68,7 @@ const FilterButtons = () => {
             trackEvent("domainView", "filterArtifacts");
           }}
         >
-          <img src={WhiteArtifact} />
+          <img src={useColorModeValue(BlackArtifact, WhiteArtifact)} />
         </Button>
       </Tooltip>
     </ButtonGroup>

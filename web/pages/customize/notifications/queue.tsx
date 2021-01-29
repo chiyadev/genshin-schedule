@@ -29,7 +29,7 @@ const Home = ({ data, queue }: Props) => {
     <ConfigsProvider initial={data}>
       <Layout title={["Notification Queue"]}>
         <VStack align="stretch" spacing={4}>
-          <chakra.div color="white">Notification queue:</chakra.div>
+          <div>Notification queue:</div>
 
           {queue?.length ? (
             queue
@@ -79,7 +79,7 @@ const Home = ({ data, queue }: Props) => {
                 </WhiteCard>
               ))
           ) : (
-            <chakra.div color="white">There are no notifications in queue.</chakra.div>
+            <div>There are no notifications in queue.</div>
           )}
         </VStack>
       </Layout>

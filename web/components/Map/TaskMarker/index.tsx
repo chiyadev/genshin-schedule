@@ -17,6 +17,7 @@ const TaskMarker = ({
   task,
   setTask,
   alwaysOpen,
+  autoPan,
   showDue = true,
   onOpen,
   onClose,
@@ -25,6 +26,7 @@ const TaskMarker = ({
   task: Task;
   setTask: Dispatch<SetStateAction<Task>>;
   alwaysOpen?: boolean;
+  autoPan?: boolean;
   showDue?: boolean;
   onOpen?: () => void;
   onClose?: () => void;
@@ -57,6 +59,7 @@ const TaskMarker = ({
     <MarkerWrapper task={task} markerRef={markerRef} position={task.location} icon={icon}>
       <CardPopup
         popupRef={popupRef}
+        autoPan={autoPan}
         divide
         onOpen={() => {
           onOpen?.();

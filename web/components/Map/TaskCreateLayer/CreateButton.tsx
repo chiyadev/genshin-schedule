@@ -3,7 +3,7 @@ import { useConfig } from "../../../utils/configs";
 import { useServerTime } from "../../../utils/time";
 import { FaCheck } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
-import { HStack, Icon, Link } from "@chakra-ui/react";
+import { HStack, Icon, Link, useColorModeValue } from "@chakra-ui/react";
 
 const CreateButton = () => {
   const time = useServerTime(1000);
@@ -14,7 +14,7 @@ const CreateButton = () => {
   return (
     <Link
       as="button"
-      color="green.500"
+      color={useColorModeValue("green.500", "green.300")}
       fontSize="sm"
       fontWeight="normal"
       onClick={() => {

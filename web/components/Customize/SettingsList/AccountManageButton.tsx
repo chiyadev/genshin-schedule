@@ -8,7 +8,6 @@ import {
   FormLabel,
   Icon,
   Input,
-  LightMode,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -44,91 +43,89 @@ const AccountManageButton = ({ user }: { user: User }) => {
         Manage account
       </Button>
 
-      <LightMode>
-        <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Manage account</ModalHeader>
-            <ModalCloseButton />
+      <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Manage account</ModalHeader>
+          <ModalCloseButton />
 
-            <form
-              onSubmit={async (e) => {
-                e.preventDefault();
-                setLoad(true);
+          <form
+            onSubmit={async (e) => {
+              e.preventDefault();
+              setLoad(true);
 
-                try {
-                  const client = createApiClient();
+              try {
+                const client = createApiClient();
 
-                  const { token } = await client.updateAuth({
-                    username,
-                    password,
-                  });
+                const { token } = await client.updateAuth({
+                  username,
+                  password,
+                });
 
-                  setAuthToken(undefined, token);
-                  trackEvent("accountManager", "updateAuth");
+                setAuthToken(undefined, token);
+                trackEvent("accountManager", "updateAuth");
 
-                  setTimeout(() => router.reload());
-                } catch (e) {
-                  toast({
-                    position: "top-right",
-                    status: "error",
-                    title: "Error",
-                    description: e.message,
-                    isClosable: true,
-                  });
-                } finally {
-                  setLoad(false);
-                }
-              }}
-            >
-              <ModalBody>
-                <VStack align="stretch" spacing={4}>
-                  <chakra.div>You can change your account username and password.</chakra.div>
+                setTimeout(() => router.reload());
+              } catch (e) {
+                toast({
+                  position: "top-right",
+                  status: "error",
+                  title: "Error",
+                  description: e.message,
+                  isClosable: true,
+                });
+              } finally {
+                setLoad(false);
+              }
+            }}
+          >
+            <ModalBody>
+              <VStack align="stretch" spacing={4}>
+                <chakra.div>You can change your account username and password.</chakra.div>
 
-                  <FormControl isRequired>
-                    <FormLabel>Username</FormLabel>
+                <FormControl isRequired>
+                  <FormLabel>Username</FormLabel>
 
-                    <Input
-                      id="username"
-                      placeholder="New username"
-                      autoComplete="username"
-                      value={username}
-                      onChange={({ currentTarget: { value } }) => setUsername(value)}
-                    />
-                  </FormControl>
+                  <Input
+                    id="username"
+                    placeholder="New username"
+                    autoComplete="username"
+                    value={username}
+                    onChange={({ currentTarget: { value } }) => setUsername(value)}
+                  />
+                </FormControl>
 
-                  <FormControl isRequired>
-                    <FormLabel>Password</FormLabel>
+                <FormControl isRequired>
+                  <FormLabel>Password</FormLabel>
 
-                    <Input
-                      id="password"
-                      type="password"
-                      placeholder="New password"
-                      autoComplete="current-password"
-                      value={password}
-                      onChange={({ currentTarget: { value } }) => setPassword(value)}
-                    />
-                  </FormControl>
+                  <Input
+                    id="password"
+                    type="password"
+                    placeholder="New password"
+                    autoComplete="current-password"
+                    value={password}
+                    onChange={({ currentTarget: { value } }) => setPassword(value)}
+                  />
+                </FormControl>
 
-                  <div>
-                    Linked Discord ID: <Code>{user.discordUserId ?? "<null>"}</Code>
-                  </div>
-                </VStack>
-              </ModalBody>
+                <div>
+                  Linked Discord ID: <Code>{user.discordUserId ?? "<null>"}</Code>
+                </div>
+              </VStack>
+            </ModalBody>
 
-              <ModalFooter>
-                <ButtonGroup>
-                  <Button type="submit" colorScheme="red" leftIcon={<Icon as={FaUpload} />} isLoading={load}>
-                    Submit
-                  </Button>
+            <ModalFooter>
+              <ButtonGroup>
+                <Button type="submit" colorScheme="red" leftIcon={<Icon as={FaUpload} />} isLoading={load}>
+                  Submit
+                </Button>
 
-                  <Button onClick={() => setOpen(false)}>Cancel</Button>
-                </ButtonGroup>
-              </ModalFooter>
-            </form>
-          </ModalContent>
-        </Modal>
-      </LightMode>
+                <Button onClick={() => setOpen(false)}>Cancel</Button>
+              </ButtonGroup>
+            </ModalFooter>
+          </form>
+        </ModalContent>
+      </Modal>
     </>
   );
 };

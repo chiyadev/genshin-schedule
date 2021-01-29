@@ -1,8 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { WeaponSearch } from "./search";
 import Icon from "./Icon";
-import { WhiteWeapon } from "../../../assets";
-import { chakra, Grid, HStack, VStack } from "@chakra-ui/react";
+import { Grid, Heading, VStack } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/configs";
 
 const WeaponList = () => {
@@ -12,10 +11,7 @@ const WeaponList = () => {
 
   return (
     <VStack align="stretch" spacing={4} d={results.size ? undefined : "none"}>
-      <HStack fontSize="xl" fontWeight="bold" spacing={2} color="white">
-        <chakra.img alt="Weapon" src={WhiteWeapon} w={8} h={8} objectFit="cover" />
-        <div>Weapons</div>
-      </HStack>
+      <Heading size="md">Weapons</Heading>
 
       <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>
         {all.map((weapon) => (

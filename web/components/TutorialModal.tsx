@@ -4,7 +4,6 @@ import {
   chakra,
   Heading,
   Icon,
-  LightMode,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -34,76 +33,74 @@ const TutorialModal = () => {
   useEffect(() => setPage(Pages[0]), [open]);
 
   return (
-    <LightMode>
-      <Modal
-        isOpen={open}
-        onClose={() => setOpen(false)}
-        size="lg"
-        isCentered
-        closeOnEsc={false}
-        closeOnOverlayClick={false}
-      >
-        <ModalOverlay />
-        <ModalContent>
-          <ModalBody pt={5} px={8}>
-            <ModalCloseButton />
+    <Modal
+      isOpen={open}
+      onClose={() => setOpen(false)}
+      size="lg"
+      isCentered
+      closeOnEsc={false}
+      closeOnOverlayClick={false}
+    >
+      <ModalOverlay />
+      <ModalContent>
+        <ModalBody pt={5} px={8}>
+          <ModalCloseButton />
 
-            <PageWrapper visible={page === "start"}>
-              <StartPage />
-            </PageWrapper>
+          <PageWrapper visible={page === "start"}>
+            <StartPage />
+          </PageWrapper>
 
-            <PageWrapper visible={page === "time"}>
-              <TimePage />
-            </PageWrapper>
+          <PageWrapper visible={page === "time"}>
+            <TimePage />
+          </PageWrapper>
 
-            <PageWrapper visible={page === "resin"}>
-              <ResinPage />
-            </PageWrapper>
+          <PageWrapper visible={page === "resin"}>
+            <ResinPage />
+          </PageWrapper>
 
-            <PageWrapper visible={page === "tasks"}>
-              <TasksPage />
-            </PageWrapper>
+          <PageWrapper visible={page === "tasks"}>
+            <TasksPage />
+          </PageWrapper>
 
-            <PageWrapper visible={page === "map"}>
-              <MapPage />
-            </PageWrapper>
+          <PageWrapper visible={page === "map"}>
+            <MapPage />
+          </PageWrapper>
 
-            <PageWrapper visible={page === "domains"}>
-              <DomainsPage />
-            </PageWrapper>
+          <PageWrapper visible={page === "domains"}>
+            <DomainsPage />
+          </PageWrapper>
 
-            <PageWrapper visible={page === "message"}>
-              <MessagePage />
-            </PageWrapper>
-          </ModalBody>
+          <PageWrapper visible={page === "message"}>
+            <MessagePage />
+          </PageWrapper>
+        </ModalBody>
 
-          <ModalFooter>
-            {page === Pages[Pages.length - 1] ? (
-              <Button
-                variant="ghost"
-                colorScheme="blue"
-                rightIcon={<Icon as={FaCheck} />}
-                onClick={() => {
-                  setOpen(false);
-                  trackEvent("tutorial", "hide");
-                }}
-              >
-                Yes, Paimon
-              </Button>
-            ) : (
-              <Button
-                variant="ghost"
-                colorScheme="blue"
-                rightIcon={<Icon as={FaChevronRight} />}
-                onClick={() => setPage(Pages[Pages.indexOf(page) + 1])}
-              >
-                {page === Pages[0] ? "Start" : "Next"}
-              </Button>
-            )}
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
-    </LightMode>
+        <ModalFooter>
+          {page === Pages[Pages.length - 1] ? (
+            <Button
+              variant="ghost"
+              colorScheme="blue"
+              rightIcon={<Icon as={FaCheck} />}
+              onClick={() => {
+                setOpen(false);
+                trackEvent("tutorial", "hide");
+              }}
+            >
+              Yes, Paimon
+            </Button>
+          ) : (
+            <Button
+              variant="ghost"
+              colorScheme="blue"
+              rightIcon={<Icon as={FaChevronRight} />}
+              onClick={() => setPage(Pages[Pages.indexOf(page) + 1])}
+            >
+              {page === Pages[0] ? "Start" : "Next"}
+            </Button>
+          )}
+        </ModalFooter>
+      </ModalContent>
+    </Modal>
   );
 };
 

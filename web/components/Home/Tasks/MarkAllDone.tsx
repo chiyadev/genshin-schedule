@@ -12,7 +12,6 @@ const MarkAllDone = () => {
   return (
     <Link
       as="button"
-      color="white"
       fontSize="sm"
       onClick={() => {
         setTasks((tasks) =>

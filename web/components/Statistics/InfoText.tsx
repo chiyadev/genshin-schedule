@@ -11,7 +11,7 @@ const InfoText = () => {
   const last = stats.length && stats[stats.length - 1];
 
   return (
-    <HStack align="start" spacing={2} color="white">
+    <HStack align="start" spacing={2}>
       <div>
         <p>
           Range: {first && first.id}~{last && last.id}

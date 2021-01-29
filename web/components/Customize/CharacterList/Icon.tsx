@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { Character } from "../../../db/characters";
 import { useConfig } from "../../../utils/configs";
-import { AspectRatio, Center, chakra, HStack, Link, VStack } from "@chakra-ui/react";
+import { AspectRatio, Center, chakra, HStack, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import NextLink from "next/link";
 import IconImage from "../IconImage";
@@ -26,11 +26,11 @@ const Icon = ({ visible = true, character }: { visible?: boolean; character: Cha
             spacing={2}
             borderRadius="md"
             overflow="hidden"
-            bg="white"
-            color="black"
-            boxShadow="lg"
-            opacity={alreadyAdded ? 0.5 : 1}
-            transition=".2s all"
+            bg={useColorModeValue("white", "gray.900")}
+            borderWidth={1}
+            borderColor={useColorModeValue("gray.200", "gray.700")}
+            opacity={alreadyAdded ? 0.25 : 1}
+            transition=".2s"
           >
             <Center minH={0} flex={1}>
               <IconImage name={character.name} h="full" borderRadius="full" />

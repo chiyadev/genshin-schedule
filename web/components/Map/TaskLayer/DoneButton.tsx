@@ -3,7 +3,7 @@ import { Task } from "../../../utils/configs";
 import { useServerTime } from "../../../utils/time";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
-import { HStack, Icon, Link } from "@chakra-ui/react";
+import { HStack, Icon, Link, useColorModeValue } from "@chakra-ui/react";
 import { useTaskDoneSetter, useTaskFocusSetter } from "../../../utils/tasks";
 
 const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateAction<Task>> }) => {
@@ -15,7 +15,7 @@ const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateA
   return (
     <Link
       as="button"
-      color={due ? "red.500" : "green.500"}
+      color={useColorModeValue(due ? "red.500" : "green.500", due ? "red.300" : "green.300")}
       fontSize="sm"
       onClick={() => {
         setDone(!due);

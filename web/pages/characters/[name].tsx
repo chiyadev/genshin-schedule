@@ -72,7 +72,7 @@ const CharacterInfo = ({ data, name }: Props) => {
             <NoteInput character={character} />
           </WhiteCard>
         ) : (
-          <chakra.div color="white">No such character.</chakra.div>
+          <div>No such character.</div>
         )}
       </Layout>
     </ConfigsProvider>

@@ -7,33 +7,31 @@ import styles from "./Header.module.css";
 
 const Header = ({ menu }: { menu?: ReactNode }) => {
   return (
-    <>
-      <HStack as="nav" p={4} spacing={2} color="white">
-        <NextLink href="/" passHref>
-          <Link fontWeight="bold" flexShrink={0}>
+    <HStack as="nav" p={4} spacing={2}>
+      <NextLink href="/" passHref>
+        <Link fontFamily="Genshin" fontWeight="bold" flexShrink={0}>
+          <HStack spacing={2}>
+            <chakra.img alt="logo" src={Favicon32x32} w={6} h={6} borderRadius="md" />
+            <chakra.span fontSize="lg">Genshin Schedule</chakra.span>
+          </HStack>
+        </Link>
+      </NextLink>
+
+      <Spacer />
+
+      <HStack className={styles.menu} spacing={4}>
+        {menu}
+
+        <NextLink href="/customize" passHref>
+          <Link flexShrink={0}>
             <HStack spacing={2}>
-              <chakra.img alt="logo" src={Favicon32x32} w={6} h={6} borderRadius="md" />
-              <chakra.span fontSize="lg">Genshin Schedule</chakra.span>
+              <Icon as={FaCog} />
+              <div>Customize</div>
             </HStack>
           </Link>
         </NextLink>
-
-        <Spacer />
-
-        <HStack className={styles.menu} spacing={4}>
-          {menu}
-
-          <NextLink href="/customize" passHref>
-            <Link flexShrink={0}>
-              <HStack spacing={2}>
-                <Icon as={FaCog} />
-                <div>Customize</div>
-              </HStack>
-            </Link>
-          </NextLink>
-        </HStack>
       </HStack>
-    </>
+    </HStack>
   );
 };
 

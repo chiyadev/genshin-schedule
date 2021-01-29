@@ -65,7 +65,7 @@ const ArtifactInfo = ({ data, name }: Props) => {
             <NoteInput artifact={artifact} />
           </WhiteCard>
         ) : (
-          <chakra.div color="white">No such artifact.</chakra.div>
+          <div>No such artifact.</div>
         )}
       </Layout>
     </ConfigsProvider>

@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useConfig } from "../../utils/configs";
-import { chakra, Icon, Input, InputGroup, InputLeftElement, Link, VStack } from "@chakra-ui/react";
+import { chakra, Icon, Input, InputGroup, InputLeftElement, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 
 const Search = () => {
   const [value, setValue] = useConfig("customizeQuery");
@@ -14,8 +14,6 @@ const Search = () => {
         </InputLeftElement>
 
         <Input
-          autoFocus
-          bg="white"
           value={value}
           onChange={({ currentTarget: { value } }) => setValue(value)}
           placeholder="Search characters, weapons and artifacts..."
@@ -30,7 +28,7 @@ const Search = () => {
             href={`https://github.com/chiyadev/genshin-schedule/issues/new?title=${encodeURIComponent(
               "bug: Missing item in database {insert item name}"
             )}`}
-            fontWeight="bold"
+            color={useColorModeValue("blue.500", "blue.300")}
             isExternal
           >
             create an issue

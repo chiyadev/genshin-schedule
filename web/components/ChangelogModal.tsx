@@ -1,13 +1,26 @@
 import React, { memo, ReactNode, useEffect, useMemo } from "react";
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/modal";
 import { useConfig } from "../utils/configs";
-import { Divider, Heading, HStack, Icon, LightMode, Link, ListItem, UnorderedList, VStack } from "@chakra-ui/react";
+import {
+  Heading,
+  HStack,
+  Icon,
+  Link,
+  ListItem,
+  StackDivider,
+  UnorderedList,
+  useColorModeValue,
+  VStack,
+} from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 12;
+const LatestChangelog = 13;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={13} date="2021/01/21">
+      <ChangelogItem>Improved website theme significantly and added dark mode support.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={12} date="2021/01/21">
       <ChangelogItem github={37}>Added talent materials dropped from weekly bosses to characters.</ChangelogItem>
       <ChangelogItem github={39}>Added character, weapon and artifact filter buttons to domain list.</ChangelogItem>
@@ -86,25 +99,28 @@ const ChangelogModal = () => {
   }
 
   return (
-    <LightMode>
-      <Modal isOpen={version !== changelog.length} onClose={() => setVersion(changelog.length)} size="lg">
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>
-            <HStack>
-              <Icon as={FaBullhorn} />
-              <div>Update changelog</div>
-            </HStack>
-          </ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <VStack align="stretch" spacing={4} pb={2} divider={<Divider />}>
-              {changelog.slice(0, 3)}
-            </VStack>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
-    </LightMode>
+    <Modal isOpen={version !== changelog.length} onClose={() => setVersion(changelog.length)} size="lg">
+      <ModalOverlay />
+      <ModalContent>
+        <ModalHeader>
+          <HStack>
+            <Icon as={FaBullhorn} />
+            <div>Update changelog</div>
+          </HStack>
+        </ModalHeader>
+        <ModalCloseButton />
+        <ModalBody>
+          <VStack
+            align="stretch"
+            spacing={4}
+            pb={2}
+            divider={<StackDivider borderColor={useColorModeValue("gray.200", "gray.600")} />}
+          >
+            {changelog.slice(0, 3)}
+          </VStack>
+        </ModalBody>
+      </ModalContent>
+    </Modal>
   );
 };
 
@@ -124,7 +140,12 @@ const ChangelogItem = ({ github, children }: { github?: number; children?: React
     <ListItem>
       {children}
       {!!github && (
-        <Link ml={1} isExternal color="blue.500" href={`https://github.com/chiyadev/genshin-schedule/issues/${github}`}>
+        <Link
+          ml={1}
+          isExternal
+          color={useColorModeValue("blue.500", "blue.300")}
+          href={`https://github.com/chiyadev/genshin-schedule/issues/${github}`}
+        >
           #{github}
         </Link>
       )}

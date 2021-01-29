@@ -10,7 +10,7 @@ const NotificationSetter = () => {
   const time = useServerTime(60000);
   const [resin] = useConfig("resin");
 
-  const color = useColorHex("blue.500");
+  const color = useColorHex("blue.300");
 
   const capTime = DateTime.fromMillis(resin.time)
     .plus({ minutes: (ResinCap - resin.value) / ResinsPerMinute })

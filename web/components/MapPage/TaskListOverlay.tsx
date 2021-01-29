@@ -2,14 +2,14 @@ import React, { memo, useCallback, useState } from "react";
 import { chakra, Collapse, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import TaskListCard from "../TaskListCard";
-import { useDueTasks } from "../../utils/tasks";
+import { useDueTasks, useFilteredTasks } from "../../utils/tasks";
 import { useConfig } from "../../utils/configs";
 import { useHotkeys } from "react-hotkeys-hook";
 import { trackEvent } from "../../utils/umami";
 
 const TaskListOverlay = () => {
   const [tasks] = useConfig("tasks");
-  const dueTasks = useDueTasks(tasks);
+  const dueTasks = useDueTasks(useFilteredTasks(tasks));
   const [hover, setHover] = useState(false);
   const [expanded, setExpanded] = useConfig("mapTaskList");
 
@@ -38,8 +38,7 @@ const TaskListOverlay = () => {
       m={2}
       maxW="lg"
       zIndex={10}
-      transition=".2s all"
-      color="white"
+      transition=".2s"
       opacity={!expanded || hover ? 1 : 0.25}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}

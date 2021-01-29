@@ -66,7 +66,7 @@ const WeaponInfo = ({ data, name }: Props) => {
             <NoteInput weapon={weapon} />
           </WhiteCard>
         ) : (
-          <chakra.div color="white">No such weapon.</chakra.div>
+          <div>No such weapon.</div>
         )}
       </Layout>
     </ConfigsProvider>

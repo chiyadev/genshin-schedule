@@ -12,7 +12,6 @@ const ServerText = () => {
     <Tooltip label={`Switch server (UTC${timeZone >= 0 ? `+${timeZone}` : `${timeZone}`})`} closeOnClick={false}>
       <Link
         as="button"
-        color="white"
         fontWeight="bold"
         onClick={() => {
           setServer(ServerList[(ServerList.indexOf(server) + 1) % ServerList.length]);

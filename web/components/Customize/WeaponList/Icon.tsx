@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from "react";
 import { useConfig } from "../../../utils/configs";
-import { AspectRatio, Center, chakra, HStack, Link, Text, VStack } from "@chakra-ui/react";
+import { AspectRatio, Center, chakra, HStack, Link, Text, useColorModeValue, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import NextLink from "next/link";
 import { Weapon } from "../../../db/weapons";
@@ -20,11 +20,11 @@ const Icon = ({ visible = true, weapon }: { visible?: boolean; weapon: Weapon })
             spacing={2}
             borderRadius="md"
             overflow="hidden"
-            bg="white"
-            color="black"
-            boxShadow="lg"
-            opacity={alreadyAdded ? 0.5 : 1}
-            transition=".2s all"
+            bg={useColorModeValue("white", "gray.900")}
+            borderWidth={1}
+            borderColor={useColorModeValue("gray.200", "gray.700")}
+            opacity={alreadyAdded ? 0.25 : 1}
+            transition=".2s"
           >
             <Center minH={0} flex={1}>
               <IconImage name={weapon.name} h="full" objectFit="cover" />

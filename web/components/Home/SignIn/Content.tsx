@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from "react";
 import Submit from "./Submit";
-import { chakra, FormControl, FormLabel, Input, Link, VStack } from "@chakra-ui/react";
+import { chakra, FormControl, FormLabel, Input, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 
 const Content = () => {
   const [username, setUsername] = useState("");
@@ -46,7 +46,7 @@ const Content = () => {
       <VStack align="start" spacing={2}>
         <Link
           fontSize="sm"
-          color="blue.500"
+          color={useColorModeValue("blue.500", "blue.300")}
           href="https://github.com/chiyadev/genshin-schedule/wiki/Recovering-a-lost-account"
           isExternal
         >
@@ -57,12 +57,12 @@ const Content = () => {
 
         <chakra.div fontSize="sm">
           {error ? (
-            <chakra.div color="red.500">Error: {error.message}</chakra.div>
+            <chakra.div color={useColorModeValue("red.500", "red.300")}>Error: {error.message}</chakra.div>
           ) : (
             <chakra.div color="gray.500">
               <span>* Never reuse your miHoYo password on Genshin-related websites. </span>
               <Link
-                color="blue.500"
+                color={useColorModeValue("blue.500", "blue.300")}
                 href="https://github.com/chiyadev/genshin-schedule/wiki/Regarding-miHoYo-account-security"
                 isExternal
               >

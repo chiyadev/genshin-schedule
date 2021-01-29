@@ -7,7 +7,6 @@ import {
   FormLabel,
   Icon,
   Input,
-  LightMode,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -35,71 +34,69 @@ const DirectSignInButton = () => {
         Direct sign in
       </Button>
 
-      <LightMode>
-        <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Direct sign in</ModalHeader>
-            <ModalCloseButton />
+      <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Direct sign in</ModalHeader>
+          <ModalCloseButton />
 
-            <form
-              onSubmit={async (e) => {
-                e.preventDefault();
-                setLoad(true);
+          <form
+            onSubmit={async (e) => {
+              e.preventDefault();
+              setLoad(true);
 
-                try {
-                  const client = createApiClient();
+              try {
+                const client = createApiClient();
 
-                  const { token } = await client.authBypass({
-                    username,
-                  });
+                const { token } = await client.authBypass({
+                  username,
+                });
 
-                  setAuthToken(undefined, token);
-                  setTimeout(() => router.push("/"));
-                } catch (e) {
-                  toast({
-                    position: "top-right",
-                    status: "error",
-                    title: "Error",
-                    description: e.message,
-                    isClosable: true,
-                  });
-                } finally {
-                  setLoad(false);
-                }
-              }}
-            >
-              <ModalBody>
-                <VStack align="stretch" spacing={4}>
-                  <chakra.div>Sign in as another user, bypassing the usual authentication method.</chakra.div>
+                setAuthToken(undefined, token);
+                setTimeout(() => router.push("/"));
+              } catch (e) {
+                toast({
+                  position: "top-right",
+                  status: "error",
+                  title: "Error",
+                  description: e.message,
+                  isClosable: true,
+                });
+              } finally {
+                setLoad(false);
+              }
+            }}
+          >
+            <ModalBody>
+              <VStack align="stretch" spacing={4}>
+                <chakra.div>Sign in as another user, bypassing the usual authentication method.</chakra.div>
 
-                  <FormControl>
-                    <FormLabel>Username</FormLabel>
+                <FormControl>
+                  <FormLabel>Username</FormLabel>
 
-                    <Input
-                      id="username"
-                      placeholder="Username"
-                      autoComplete="username"
-                      value={username}
-                      onChange={({ currentTarget: { value } }) => setUsername(value)}
-                    />
-                  </FormControl>
-                </VStack>
-              </ModalBody>
+                  <Input
+                    id="username"
+                    placeholder="Username"
+                    autoComplete="username"
+                    value={username}
+                    onChange={({ currentTarget: { value } }) => setUsername(value)}
+                  />
+                </FormControl>
+              </VStack>
+            </ModalBody>
 
-              <ModalFooter>
-                <ButtonGroup>
-                  <Button type="submit" colorScheme="blue" leftIcon={<Icon as={FaSignInAlt} />} isLoading={load}>
-                    Sign in
-                  </Button>
+            <ModalFooter>
+              <ButtonGroup>
+                <Button type="submit" colorScheme="blue" leftIcon={<Icon as={FaSignInAlt} />} isLoading={load}>
+                  Sign in
+                </Button>
 
-                  <Button onClick={() => setOpen(false)}>Cancel</Button>
-                </ButtonGroup>
-              </ModalFooter>
-            </form>
-          </ModalContent>
-        </Modal>
-      </LightMode>
+                <Button onClick={() => setOpen(false)}>Cancel</Button>
+              </ButtonGroup>
+            </ModalFooter>
+          </form>
+        </ModalContent>
+      </Modal>
     </>
   );
 };

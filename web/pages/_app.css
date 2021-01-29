@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Bonobo";
-    src: URL("../assets/fonts/Bonobo Regular.ttf") format("truetype");
+    font-family: "Genshin";
+    src: URL("../assets/fonts/Genshin.woff") format("truetype");
 }
 
 /* https://github.com/Leaflet/Leaflet/issues/3575#issuecomment-688644225 */
@@ -30,7 +30,7 @@
 }
 
 .task-map .leaflet-popup {
-    font-family: Bonobo;
+    font-family: Inter;
 }
 
 .task-map .leaflet-popup-content-wrapper {

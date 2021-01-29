@@ -1,4 +1,4 @@
-import { Flex, Link } from "@chakra-ui/react";
+import { Link, useColorModeValue } from "@chakra-ui/react";
 import React, { memo } from "react";
 import { useConfig } from "../../../utils/configs";
 import { trackEvent } from "../../../utils/umami";
@@ -12,21 +12,19 @@ const OffsetAlert = () => {
   }
 
   return (
-    <Flex justify="center">
-      <Link
-        as="button"
-        color="red.500"
-        fontSize="sm"
-        fontWeight="bold"
-        onClick={() => {
-          setOffset(0);
-          trackEvent("clock", "offsetReset");
-        }}
-      >
-        Showing schedule in {offset >= 0 ? "+" : "-"}
-        {Math.abs(offset)} {pluralize("day", offset)}
-      </Link>
-    </Flex>
+    <Link
+      as="button"
+      color={useColorModeValue("red.500", "red.300")}
+      fontSize="sm"
+      fontWeight="bold"
+      onClick={() => {
+        setOffset(0);
+        trackEvent("clock", "offsetReset");
+      }}
+    >
+      Showing schedule in {offset >= 0 ? "+" : "-"}
+      {Math.abs(offset)} {pluralize("day", offset)}
+    </Link>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Button, chakra, HStack, Icon, Link, Spacer, Tag, Tooltip, VStack } from "@chakra-ui/react";
+import { Button, chakra, HStack, Icon, Link, Spacer, Tag, Tooltip, useColorModeValue, VStack } from "@chakra-ui/react";
 import React, { memo } from "react";
 import WhiteCard from "../../WhiteCard";
 import { FaBell, FaDiscord, FaList } from "react-icons/fa";
@@ -21,7 +21,7 @@ const Info = () => {
           <Tooltip label="Queue">
             <span>
               <NextLink href="/customize/notifications/queue" passHref>
-                <Link color="blue.500">
+                <Link color={useColorModeValue("blue.500", "blue.300")}>
                   <Icon as={FaList} fontSize="sm" />
                 </Link>
               </NextLink>
@@ -40,7 +40,7 @@ const Info = () => {
           <VStack align="start" spacing={2}>
             <div>
               <span>1. Join our Discord server! </span>
-              <Link href="https://discord.gg/XdPQeEaBE7" color="blue.500" isExternal>
+              <Link href="https://discord.gg/XdPQeEaBE7" color={useColorModeValue("blue.500", "blue.300")} isExternal>
                 discord.gg/XdPQeEaBE7
               </Link>
             </div>

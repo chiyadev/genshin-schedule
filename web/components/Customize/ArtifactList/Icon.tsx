@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from "react";
 import { useConfig } from "../../../utils/configs";
-import { AspectRatio, Center, Link, Text, VStack } from "@chakra-ui/react";
+import { AspectRatio, Center, Link, Text, useColorModeValue, VStack } from "@chakra-ui/react";
 import NextLink from "next/link";
 import IconImage from "../IconImage";
 import { Artifact } from "../../../db/artifacts";
@@ -19,11 +19,11 @@ const Icon = ({ visible = true, artifact }: { visible?: boolean; artifact: Artif
             spacing={2}
             borderRadius="md"
             overflow="hidden"
-            bg="white"
-            color="black"
-            boxShadow="lg"
-            opacity={alreadyAdded ? 0.5 : 1}
-            transition=".2s all"
+            bg={useColorModeValue("white", "gray.900")}
+            borderWidth={1}
+            borderColor={useColorModeValue("gray.200", "gray.700")}
+            opacity={alreadyAdded ? 0.25 : 1}
+            transition=".2s"
           >
             <Center minH={0} flex={1}>
               <IconImage name={artifact.name} h="full" objectFit="contain" />

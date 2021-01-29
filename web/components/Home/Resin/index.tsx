@@ -89,6 +89,7 @@ const Resin = () => {
           <chakra.div flexShrink={0} fontSize="lg">
             / {ResinCap}
           </chakra.div>
+
           <Spacer />
 
           <motion.div animate={{ opacity: hover ? 1 : 0 }}>

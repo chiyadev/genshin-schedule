@@ -6,7 +6,6 @@ import {
   ButtonGroup,
   chakra,
   Icon,
-  LightMode,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -45,70 +44,68 @@ const ConfigExportButton = () => {
         Manage data
       </Button>
 
-      <LightMode>
-        <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Manage data</ModalHeader>
-            <ModalCloseButton />
+      <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Manage data</ModalHeader>
+          <ModalCloseButton />
 
-            <ModalBody>
-              <VStack align="stretch" spacing={4}>
-                <Alert status="warning">
-                  <AlertIcon />
-                  Input is not validated. Corrupted input can make data recovery impossible.
-                </Alert>
+          <ModalBody>
+            <VStack align="stretch" spacing={4}>
+              <Alert status="warning">
+                <AlertIcon />
+                Input is not validated. Corrupted input can make data recovery impossible.
+              </Alert>
 
-                <chakra.div>
-                  You can export your account data for backup and restore.
-                  <strong> This action cannot be undone.</strong>
-                </chakra.div>
+              <chakra.div>
+                You can export your account data for backup and restore.
+                <strong> This action cannot be undone.</strong>
+              </chakra.div>
 
-                <code>
-                  <Textarea value={data} onChange={({ currentTarget: { value } }) => setData(value)} h="lg" />
-                </code>
-              </VStack>
-            </ModalBody>
+              <code>
+                <Textarea value={data} onChange={({ currentTarget: { value } }) => setData(value)} h="lg" />
+              </code>
+            </VStack>
+          </ModalBody>
 
-            <ModalFooter>
-              <ButtonGroup>
-                <Button
-                  colorScheme="red"
-                  leftIcon={<Icon as={FaPencilAlt} />}
-                  onClick={() => {
-                    try {
-                      setConfigs(JSON.parse(data));
-                      setOpen(false);
-                    } catch (e) {
-                      toast({
-                        position: "top-right",
-                        status: "error",
-                        title: "Error",
-                        description: "Input is invalid.",
-                        isClosable: true,
-                      });
-                    } finally {
-                      trackEvent("dataManager", "overwrite");
-                    }
-                  }}
-                >
-                  Overwrite
-                </Button>
+          <ModalFooter>
+            <ButtonGroup>
+              <Button
+                colorScheme="red"
+                leftIcon={<Icon as={FaPencilAlt} />}
+                onClick={() => {
+                  try {
+                    setConfigs(JSON.parse(data));
+                    setOpen(false);
+                  } catch (e) {
+                    toast({
+                      position: "top-right",
+                      status: "error",
+                      title: "Error",
+                      description: "Input is invalid.",
+                      isClosable: true,
+                    });
+                  } finally {
+                    trackEvent("dataManager", "overwrite");
+                  }
+                }}
+              >
+                Overwrite
+              </Button>
 
-                <Button
-                  leftIcon={<Icon as={hasCopied ? FaCheck : FaCopy} />}
-                  onClick={() => {
-                    onCopy();
-                    trackEvent("dataManager", "copy");
-                  }}
-                >
-                  {hasCopied ? "Copied" : "Copy"}
-                </Button>
-              </ButtonGroup>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-      </LightMode>
+              <Button
+                leftIcon={<Icon as={hasCopied ? FaCheck : FaCopy} />}
+                onClick={() => {
+                  onCopy();
+                  trackEvent("dataManager", "copy");
+                }}
+              >
+                {hasCopied ? "Copied" : "Copy"}
+              </Button>
+            </ButtonGroup>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 };

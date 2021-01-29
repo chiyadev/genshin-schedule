@@ -17,7 +17,7 @@ export const NotifyToggle = ({
   setValue: Dispatch<boolean>;
 }) => {
   const time = useServerTime(60000);
-  const color = useColorHex("orange.500");
+  const color = useColorHex("orange.300");
 
   useApiNotification(
     useMemo(

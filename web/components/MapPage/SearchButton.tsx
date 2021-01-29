@@ -15,7 +15,6 @@ const SearchButton = () => {
 
       <Link
         as="button"
-        color="white"
         onClick={() => {
           setOpen(true);
           trackEvent("map", "taskSearch");

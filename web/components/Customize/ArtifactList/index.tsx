@@ -1,8 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { ArtifactSearch } from "./search";
 import Icon from "./Icon";
-import { WhiteArtifact } from "../../../assets";
-import { chakra, Grid, HStack, VStack } from "@chakra-ui/react";
+import { Grid, Heading, VStack } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/configs";
 
 const ArtifactList = () => {
@@ -12,10 +11,7 @@ const ArtifactList = () => {
 
   return (
     <VStack align="stretch" spacing={4} d={results.size ? undefined : "none"}>
-      <HStack fontSize="xl" fontWeight="bold" spacing={2} color="white">
-        <chakra.img alt="Artifact" src={WhiteArtifact} w={8} h={8} objectFit="contain" />
-        <div>Artifacts</div>
-      </HStack>
+      <Heading size="md">Artifacts</Heading>
 
       <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>
         {all.map((artifact) => (

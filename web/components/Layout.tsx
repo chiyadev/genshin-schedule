@@ -1,6 +1,6 @@
 import React, { memo, ReactNode, useState } from "react";
 import Head from "next/head";
-import { chakra, DarkMode, Flex, HStack, Icon, Link, Spacer } from "@chakra-ui/react";
+import { chakra, Flex, HStack, Icon, Link, Spacer } from "@chakra-ui/react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Background from "./Background";
@@ -10,6 +10,7 @@ import TutorialModal from "./TutorialModal";
 import NextLink from "next/link";
 import { FaBell, FaChartBar } from "react-icons/fa";
 import StatisticsUpdater from "./Statistics/StatisticsUpdater";
+import ColorModeOverride from "./ColorModeOverride";
 
 const Layout = ({
   children,
@@ -23,7 +24,7 @@ const Layout = ({
   const [shortcuts, setShortcuts] = useState(false);
 
   return (
-    <DarkMode>
+    <ColorModeOverride>
       <Head>
         <title>{[...title.map((x) => x?.trim()).filter((x) => x), "Genshin Schedule"].join(" · ")}</title>
       </Head>
@@ -65,7 +66,7 @@ const Layout = ({
       ) : (
         children
       )}
-    </DarkMode>
+    </ColorModeOverride>
   );
 };
 

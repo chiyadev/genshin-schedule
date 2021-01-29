@@ -1,10 +1,11 @@
 import React, { memo, useState } from "react";
-import { chakra } from "@chakra-ui/react";
+import { chakra, useToken } from "@chakra-ui/react";
 import Header from "../Header";
 import SearchButton from "./SearchButton";
 
 const HeaderOverlay = () => {
   const [hover, setHover] = useState(false);
+  const [gray] = useToken("colors", ["gray.800"]);
 
   return (
     <chakra.div
@@ -14,8 +15,9 @@ const HeaderOverlay = () => {
       right={0}
       zIndex={10}
       opacity={hover ? 1 : 0.5}
-      transition=".2s all"
-      bg={`linear-gradient(rgba(46, 49, 61, 1) ${hover ? "100" : "0"}%, rgba(255, 255, 255, 0) 100%)`}
+      transition=".2s"
+      bg={`linear-gradient(${gray} ${hover ? `100%` : "0%"}, transparent 100%)`}
+      color="white"
       boxShadow={hover ? "lg" : undefined}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}

@@ -15,8 +15,8 @@ import Apple from "./game/Apple.png";
 import AquilaFavonia from "./game/Aquila Favonia.png";
 import ArchaicPetra from "./game/Archaic Petra.png";
 import Ayaka from "./game/Ayaka.png";
-import BackgroundKlee from "./game/Background Klee.png";
-import BackgroundPaimon from "./game/Background Paimon.png";
+import BackgroundKlee from "./game/BackgroundKlee.png";
+import BackgroundPaimon from "./game/BackgroundPaimon.png";
 import Bamboo from "./game/Bamboo.png";
 import Barbara from "./game/Barbara.png";
 import BasaltPillar from "./game/Basalt Pillar.png";
@@ -30,12 +30,15 @@ import Berserker from "./game/Berserker.png";
 import BirdEgg from "./game/Bird Egg.png";
 import BlackCircle from "./game/Black Circle.png";
 import BlackTassel from "./game/Black Tassel.png";
+import BlackArtifact from "./game/BlackArtifact.png";
+import BlackCharacter from "./game/BlackCharacter.png";
 import BlackcliffAgate from "./game/Blackcliff Agate.png";
 import BlackcliffLongsword from "./game/Blackcliff Longsword.png";
 import BlackcliffPole from "./game/Blackcliff Pole.png";
 import BlackcliffSlasher from "./game/Blackcliff Slasher.png";
 import BlackcliffWarbow from "./game/Blackcliff Warbow.png";
 import Blacksmith from "./game/Blacksmith.png";
+import BlackWeapon from "./game/BlackWeapon.png";
 import BloodstainedChivalry from "./game/Bloodstained Chivalry.png";
 import BloodtaintedGreatsword from "./game/Bloodtainted Greatsword.png";
 import BlueCircle from "./game/Blue Circle.png";
@@ -284,9 +287,9 @@ import Wheat from "./game/Wheat.png";
 import WhiteIronChunk from "./game/White Iron Chunk.png";
 import WhiteIronGreatsword from "./game/White Iron Greatsword.png";
 import WhiteTassel from "./game/White Tassel.png";
-import WhiteAnemo from "./game/WhiteAnemo.png";
 import WhiteArtifact from "./game/WhiteArtifact.png";
 import Whiteblind from "./game/Whiteblind.png";
+import WhiteCharacter from "./game/WhiteCharacter.png";
 import WhiteWeapon from "./game/WhiteWeapon.png";
 import WhopperflowerNectar from "./game/Whopperflower Nectar.png";
 import WindwheelAster from "./game/Windwheel Aster.png";
@@ -332,12 +335,15 @@ export {
   BirdEgg,
   BlackCircle,
   BlackTassel,
+  BlackArtifact,
+  BlackCharacter,
   BlackcliffAgate,
   BlackcliffLongsword,
   BlackcliffPole,
   BlackcliffSlasher,
   BlackcliffWarbow,
   Blacksmith,
+  BlackWeapon,
   BloodstainedChivalry,
   BloodtaintedGreatsword,
   BlueCircle,
@@ -586,9 +592,9 @@ export {
   WhiteIronChunk,
   WhiteIronGreatsword,
   WhiteTassel,
-  WhiteAnemo,
   WhiteArtifact,
   Whiteblind,
+  WhiteCharacter,
   WhiteWeapon,
   WhopperflowerNectar,
   WindwheelAster,
@@ -621,8 +627,8 @@ export function getAssetByName(name: string): string | undefined {
     case "Aquila Favonia": return AquilaFavonia;
     case "Archaic Petra": return ArchaicPetra;
     case "Ayaka": return Ayaka;
-    case "Background Klee": return BackgroundKlee;
-    case "Background Paimon": return BackgroundPaimon;
+    case "BackgroundKlee": return BackgroundKlee;
+    case "BackgroundPaimon": return BackgroundPaimon;
     case "Bamboo": return Bamboo;
     case "Barbara": return Barbara;
     case "Basalt Pillar": return BasaltPillar;
@@ -636,12 +642,15 @@ export function getAssetByName(name: string): string | undefined {
     case "Bird Egg": return BirdEgg;
     case "Black Circle": return BlackCircle;
     case "Black Tassel": return BlackTassel;
+    case "BlackArtifact": return BlackArtifact;
+    case "BlackCharacter": return BlackCharacter;
     case "Blackcliff Agate": return BlackcliffAgate;
     case "Blackcliff Longsword": return BlackcliffLongsword;
     case "Blackcliff Pole": return BlackcliffPole;
     case "Blackcliff Slasher": return BlackcliffSlasher;
     case "Blackcliff Warbow": return BlackcliffWarbow;
     case "Blacksmith": return Blacksmith;
+    case "BlackWeapon": return BlackWeapon;
     case "Bloodstained Chivalry": return BloodstainedChivalry;
     case "Bloodtainted Greatsword": return BloodtaintedGreatsword;
     case "Blue Circle": return BlueCircle;
@@ -890,9 +899,9 @@ export function getAssetByName(name: string): string | undefined {
     case "White Iron Chunk": return WhiteIronChunk;
     case "White Iron Greatsword": return WhiteIronGreatsword;
     case "White Tassel": return WhiteTassel;
-    case "WhiteAnemo": return WhiteAnemo;
     case "WhiteArtifact": return WhiteArtifact;
     case "Whiteblind": return Whiteblind;
+    case "WhiteCharacter": return WhiteCharacter;
     case "WhiteWeapon": return WhiteWeapon;
     case "Whopperflower Nectar": return WhopperflowerNectar;
     case "Windwheel Aster": return WindwheelAster;

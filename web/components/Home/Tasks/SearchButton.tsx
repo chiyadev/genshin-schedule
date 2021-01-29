@@ -20,7 +20,6 @@ const SearchButton = () => {
         <Button
           as="button"
           variant="ghost"
-          color="white"
           w={8}
           h={8}
           p={1}

@@ -1,7 +1,7 @@
 import React, { memo, ReactNode } from "react";
 import { Configs, useConfig } from "../../utils/configs";
-import { FaCaretDown, FaCaretRight } from "react-icons/fa";
-import { chakra, Collapse, Fade, HStack, Icon, Link, Spacer, VStack } from "@chakra-ui/react";
+import { FaCaretRight } from "react-icons/fa";
+import { chakra, Collapse, Fade, HStack, Icon, Link, Spacer, useColorModeValue, VStack } from "@chakra-ui/react";
 
 const WidgetWrapper = ({
   type,
@@ -17,22 +17,27 @@ const WidgetWrapper = ({
   onHover?: (value: boolean) => void;
 }) => {
   const [hidden, setHidden] = useConfig("hiddenWidgets");
+  const disabledColor = useColorModeValue("gray.200", "gray.700");
 
   return (
     <VStack align="stretch" spacing={0}>
-      <HStack color={hidden[type] ? "gray.500" : "white"} spacing={0}>
+      <HStack color={hidden[type] ? disabledColor : undefined} spacing={0}>
         <Link
           as="button"
-          color="white"
-          fontSize="lg"
+          fontSize="xl"
           fontWeight="bold"
+          fontFamily="Genshin"
           onClick={() => {
             setHidden((widgets) => ({ ...widgets, [type]: !widgets[type] }));
           }}
         >
           <HStack spacing={2}>
-            {hidden[type] ? <Icon as={FaCaretRight} /> : <Icon as={FaCaretDown} />}
             <div>{heading}</div>
+            <Icon
+              as={FaCaretRight}
+              transition=".1s cubic-bezier(0.16, 1, 0.3, 1)"
+              transform={hidden[type] ? undefined : "rotate(90deg)"}
+            />
           </HStack>
         </Link>
 

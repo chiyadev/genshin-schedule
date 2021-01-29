@@ -6,6 +6,7 @@ import Layout from "../../components/Layout";
 import dynamic from "next/dynamic";
 import TaskListOverlay from "../../components/MapPage/TaskListOverlay";
 import HeaderOverlay from "../../components/MapPage/HeaderOverlay";
+import { chakra } from "@chakra-ui/react";
 
 type Props = {
   data: WebData | null;
@@ -30,12 +31,14 @@ const Index = ({ data }: Props) => {
         <HeaderOverlay />
         <TaskListOverlay />
 
-        <MapCore
-          style={{
-            width: "100vw",
-            height: "100vh",
-          }}
-        />
+        <chakra.div bg="gray.900">
+          <MapCore
+            style={{
+              width: "100vw",
+              height: "100vh",
+            }}
+          />
+        </chakra.div>
       </Layout>
     </ConfigsProvider>
   );

@@ -53,6 +53,7 @@ export type Configs = {
   statRetention: number;
   charactersWeekly: string[];
   domainFilters: ("character" | "weapon" | "artifact")[];
+  theme: "light" | "dark";
 };
 
 export type Task = {
@@ -123,6 +124,7 @@ export const DefaultConfigs: Configs = {
   statRetention: 28,
   charactersWeekly: [],
   domainFilters: [],
+  theme: "light",
 };
 
 export const ServerList: Configs["server"][] = ["America", "Europe", "Asia", "TW, HK, MO"];

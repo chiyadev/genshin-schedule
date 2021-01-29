@@ -23,6 +23,7 @@ const TaskCreateLayer = () => {
 
   return (
     <TaskMarker
+      autoPan
       task={task}
       setTask={(newTask) => {
         setTask((oldTask) => {
