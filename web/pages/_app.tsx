@@ -7,6 +7,7 @@ import "./_app.css";
 import "../components/NProgress.css";
 import "inter-ui/inter.css";
 import "leaflet/dist/leaflet.css";
+import "focus-visible/dist/focus-visible";
 import { useScrollPreserver } from "../utils/scrollPreserver";
 import { loadPolyfills } from "../utils/polyfills";
 import { trackView } from "../utils/umami";
@@ -22,6 +23,7 @@ function App({ Component, pageProps, router }: AppProps) {
 
   return (
     <ChakraProvider
+      resetCSS
       theme={extendTheme({
         fonts: {
           body: `Inter, ${fallbackFonts}`,
