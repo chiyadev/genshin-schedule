@@ -10,7 +10,7 @@ const Icon = ({ visible = true, artifact }: { visible?: boolean; artifact: Artif
   const alreadyAdded = useMemo(() => existing.includes(artifact.name), [existing, artifact.name]);
 
   return (
-    <NextLink href={`/artifacts/${artifact.name}`} passHref>
+    <NextLink href={`/customize/artifacts/${artifact.name}`} passHref>
       <Link d={visible ? undefined : "none"} borderRadius="md">
         <AspectRatio ratio={5 / 6}>
           <VStack

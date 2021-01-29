@@ -68,7 +68,7 @@ export function useTaskCreator() {
 
       await synchronize();
 
-      openMap && (await router.push("/map"));
+      openMap && (await router.push("/home/map"));
     },
     [router, center, setTask, synchronize]
   );

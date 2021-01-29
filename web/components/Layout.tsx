@@ -41,7 +41,7 @@ const Layout = ({
           <Header
             menu={
               <>
-                <NextLink href="/customize/notifications" passHref>
+                <NextLink href="/home/notifications" passHref>
                   <Link>
                     <HStack spacing={2}>
                       <Icon as={FaBell} />
@@ -49,7 +49,7 @@ const Layout = ({
                     </HStack>
                   </Link>
                 </NextLink>
-                <NextLink href="/statistics" passHref>
+                <NextLink href="/home/statistics" passHref>
                   <Link>
                     <HStack spacing={2}>
                       <Icon as={FaChartBar} />

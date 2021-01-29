@@ -75,7 +75,7 @@ const TaskList = () => {
           </chakra.div>
 
           <chakra.div textAlign="right" fontSize="sm">
-            <NextLink href="/map" passHref>
+            <NextLink href="/home/map" passHref>
               <Link>
                 Open map <Icon as={FaAngleRight} />
               </Link>

@@ -1,12 +1,12 @@
 import React, { memo } from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { GetServerSideProps } from "next";
-import { createApiClient, WebData } from "../utils/api";
-import ConfigsProvider from "../components/ConfigsProvider";
+import { createApiClient, WebData } from "../../utils/api";
+import ConfigsProvider from "../../components/ConfigsProvider";
 import { VStack } from "@chakra-ui/react";
-import ResinStats from "../components/Statistics/ResinStats";
-import TaskStats from "../components/Statistics/TaskStats";
-import InfoText from "../components/Statistics/InfoText";
+import ResinStats from "../../components/Statistics/ResinStats";
+import TaskStats from "../../components/Statistics/TaskStats";
+import InfoText from "../../components/Statistics/InfoText";
 
 type Props = {
   data: WebData | null;

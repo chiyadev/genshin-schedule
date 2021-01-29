@@ -11,7 +11,7 @@ const Icon = ({ visible = true, weapon }: { visible?: boolean; weapon: Weapon })
   const alreadyAdded = useMemo(() => existing.includes(weapon.name), [existing, weapon.name]);
 
   return (
-    <NextLink href={`/weapons/${weapon.name}`} passHref>
+    <NextLink href={`/customize/weapons/${weapon.name}`} passHref>
       <Link d={visible ? undefined : "none"} borderRadius="md">
         <AspectRatio ratio={5 / 6}>
           <VStack

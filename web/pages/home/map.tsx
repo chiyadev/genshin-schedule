@@ -24,7 +24,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
 const MapCore = dynamic(() => import("../../components/Map"), { ssr: false });
 
-const Index = ({ data }: Props) => {
+const Map = ({ data }: Props) => {
   return (
     <ConfigsProvider initial={data}>
       <Layout title={["Map"]} layout={false}>
@@ -44,4 +44,4 @@ const Index = ({ data }: Props) => {
   );
 };
 
-export default memo(Index);
+export default memo(Map);

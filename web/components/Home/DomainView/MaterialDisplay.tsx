@@ -60,7 +60,7 @@ const MaterialDisplay = ({
             />
 
             <div>
-              <NextLink href={`/${path}/${item.name}`} passHref>
+              <NextLink href={`/customize/${path}/${item.name}`} passHref>
                 <Link>{item.name}</Link>
               </NextLink>
 

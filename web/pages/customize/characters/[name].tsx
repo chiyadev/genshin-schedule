@@ -1,15 +1,15 @@
 import React, { memo } from "react";
-import { createApiClient, WebData } from "../../utils/api";
+import { createApiClient, WebData } from "../../../utils/api";
 import { GetServerSideProps } from "next";
-import ConfigsProvider from "../../components/ConfigsProvider";
-import Layout from "../../components/Layout";
-import { Characters, CharacterWiki } from "../../db/characters";
+import ConfigsProvider from "../../../components/ConfigsProvider";
+import Layout from "../../../components/Layout";
+import { Characters, CharacterWiki } from "../../../db/characters";
 import { chakra, HStack, Link } from "@chakra-ui/react";
-import WhiteCard from "../../components/WhiteCard";
-import { getAssetByName } from "../../assets";
-import MaterialDisplay from "../../components/Customize/CharacterInfo/MaterialDisplay";
-import CommonMaterialDisplay from "../../components/Customize/CharacterInfo/CommonMaterialDisplay";
-import NoteInput from "../../components/Customize/CharacterInfo/NoteInput";
+import WhiteCard from "../../../components/WhiteCard";
+import { getAssetByName } from "../../../assets";
+import MaterialDisplay from "../../../components/Customize/CharacterInfo/MaterialDisplay";
+import CommonMaterialDisplay from "../../../components/Customize/CharacterInfo/CommonMaterialDisplay";
+import NoteInput from "../../../components/Customize/CharacterInfo/NoteInput";
 
 type Props = {
   data: WebData | null;

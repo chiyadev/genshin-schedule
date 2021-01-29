@@ -1,15 +1,15 @@
 import React, { memo } from "react";
-import { createApiClient, WebData } from "../../utils/api";
+import { createApiClient, WebData } from "../../../utils/api";
 import { GetServerSideProps } from "next";
-import ConfigsProvider from "../../components/ConfigsProvider";
-import Layout from "../../components/Layout";
+import ConfigsProvider from "../../../components/ConfigsProvider";
+import Layout from "../../../components/Layout";
 import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
-import WhiteCard from "../../components/WhiteCard";
-import { getAssetByName } from "../../assets";
-import { Artifacts, ArtifactWiki } from "../../db/artifacts";
-import NoteInput from "../../components/Customize/ArtifactInfo/NoteInput";
-import Toggle from "../../components/Customize/ArtifactInfo/Toggle";
-import DropLabel from "../../components/DropLabel";
+import WhiteCard from "../../../components/WhiteCard";
+import { getAssetByName } from "../../../assets";
+import { Artifacts, ArtifactWiki } from "../../../db/artifacts";
+import NoteInput from "../../../components/Customize/ArtifactInfo/NoteInput";
+import Toggle from "../../../components/Customize/ArtifactInfo/Toggle";
+import DropLabel from "../../../components/DropLabel";
 
 type Props = {
   data: WebData | null;

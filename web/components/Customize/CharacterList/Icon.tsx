@@ -17,7 +17,7 @@ const Icon = ({ visible = true, character }: { visible?: boolean; character: Cha
   ]);
 
   return (
-    <NextLink href={`/characters/${character.name}`} passHref>
+    <NextLink href={`/customize/characters/${character.name}`} passHref>
       <Link d={visible ? undefined : "none"} borderRadius="md">
         <AspectRatio ratio={5 / 6}>
           <VStack

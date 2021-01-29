@@ -12,7 +12,7 @@ const ArtifactDisplay = ({ artifacts }: { artifacts: Artifact[] }) => {
         <HStack key={item.name} spacing={2}>
           <chakra.img alt={item.name} src={getAssetByName(item.name)} w={6} h={6} />
 
-          <NextLink href={`/artifacts/${item.name}`} passHref>
+          <NextLink href={`/customize/artifacts/${item.name}`} passHref>
             <Link>{item.name}</Link>
           </NextLink>
 

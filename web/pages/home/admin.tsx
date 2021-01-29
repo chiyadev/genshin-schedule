@@ -1,14 +1,14 @@
 import React, { memo } from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { GetServerSideProps } from "next";
-import { createApiClient, User, WebData } from "../utils/api";
-import ConfigsProvider from "../components/ConfigsProvider";
+import { createApiClient, User, WebData } from "../../utils/api";
+import ConfigsProvider from "../../components/ConfigsProvider";
 import { VStack, Wrap, WrapItem } from "@chakra-ui/react";
-import DirectSignInButton from "../components/Admin/DirectSignInButton";
+import DirectSignInButton from "../../components/Admin/DirectSignInButton";
 
 type Props = {
-  user: User;
-  data: WebData;
+  user: User | null;
+  data: WebData | null;
 };
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
@@ -16,8 +16,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
   return {
     props: {
-      user: await client.getSelf(),
-      data: await client.getSync(),
+      user: client.authenticated ? await client.getSelf() : null,
+      data: client.authenticated ? await client.getSync() : null,
     },
   };
 };
@@ -29,7 +29,7 @@ const Admin = ({ user, data }: Props) => {
         <VStack align="stretch" spacing={4}>
           <div>Administrator tools:</div>
 
-          {user.isAdmin ? (
+          {user?.isAdmin ? (
             <Wrap spacing={2}>
               <WrapItem>
                 <DirectSignInButton />

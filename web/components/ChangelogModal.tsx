@@ -20,6 +20,7 @@ function buildChangelog() {
   return [
     <ChangelogSection key={13} date="2021/01/21">
       <ChangelogItem>Improved website theme significantly and added dark mode support.</ChangelogItem>
+      <ChangelogItem>Refactored page paths.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={12} date="2021/01/21">
       <ChangelogItem github={37}>Added talent materials dropped from weekly bosses to characters.</ChangelogItem>

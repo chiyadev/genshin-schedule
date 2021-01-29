@@ -8,7 +8,7 @@ import styles from "./Header.module.css";
 const Header = ({ menu }: { menu?: ReactNode }) => {
   return (
     <HStack as="nav" p={4} spacing={2}>
-      <NextLink href="/" passHref>
+      <NextLink href="/home" passHref>
         <Link fontFamily="Genshin" fontWeight="bold" flexShrink={0}>
           <HStack spacing={2}>
             <chakra.img alt="logo" src={Favicon32x32} w={6} h={6} borderRadius="md" />

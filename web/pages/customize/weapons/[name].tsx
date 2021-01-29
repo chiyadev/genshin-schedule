@@ -1,15 +1,15 @@
 import React, { memo } from "react";
-import { createApiClient, WebData } from "../../utils/api";
+import { createApiClient, WebData } from "../../../utils/api";
 import { GetServerSideProps } from "next";
-import ConfigsProvider from "../../components/ConfigsProvider";
-import Layout from "../../components/Layout";
+import ConfigsProvider from "../../../components/ConfigsProvider";
+import Layout from "../../../components/Layout";
 import { chakra, HStack, Link } from "@chakra-ui/react";
-import WhiteCard from "../../components/WhiteCard";
-import { getAssetByName } from "../../assets";
-import MaterialDisplay from "../../components/Customize/WeaponInfo/MaterialDisplay";
-import CommonMaterialDisplay from "../../components/Customize/WeaponInfo/CommonMaterialDisplay";
-import { Weapons, WeaponWiki } from "../../db/weapons";
-import NoteInput from "../../components/Customize/WeaponInfo/NoteInput";
+import WhiteCard from "../../../components/WhiteCard";
+import { getAssetByName } from "../../../assets";
+import MaterialDisplay from "../../../components/Customize/WeaponInfo/MaterialDisplay";
+import CommonMaterialDisplay from "../../../components/Customize/WeaponInfo/CommonMaterialDisplay";
+import { Weapons, WeaponWiki } from "../../../db/weapons";
+import NoteInput from "../../../components/Customize/WeaponInfo/NoteInput";
 
 type Props = {
   data: WebData | null;

@@ -1,14 +1,14 @@
 import React, { memo } from "react";
-import DomainList from "../components/Home/DomainView";
-import TaskList from "../components/Home/Tasks";
-import Info from "../components/Home/Info";
-import Resin from "../components/Home/Resin";
-import Clock from "../components/Home/Clock";
-import SignIn from "../components/Home/SignIn";
-import Layout from "../components/Layout";
+import DomainList from "../../components/Home/DomainView";
+import TaskList from "../../components/Home/Tasks";
+import Info from "../../components/Home/Info";
+import Resin from "../../components/Home/Resin";
+import Clock from "../../components/Home/Clock";
+import SignIn from "../../components/Home/SignIn";
+import Layout from "../../components/Layout";
 import { GetServerSideProps } from "next";
-import { createApiClient, WebData } from "../utils/api";
-import ConfigsProvider from "../components/ConfigsProvider";
+import { createApiClient, WebData } from "../../utils/api";
+import ConfigsProvider from "../../components/ConfigsProvider";
 import { VStack } from "@chakra-ui/react";
 
 type Props = {

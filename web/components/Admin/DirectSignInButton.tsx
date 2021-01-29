@@ -53,7 +53,7 @@ const DirectSignInButton = () => {
                 });
 
                 setAuthToken(undefined, token);
-                setTimeout(() => router.push("/"));
+                setTimeout(() => router.push("/home"));
               } catch (e) {
                 toast({
                   position: "top-right",

@@ -20,7 +20,7 @@ const Info = () => {
           <Spacer />
           <Tooltip label="Queue">
             <span>
-              <NextLink href="/customize/notifications/queue" passHref>
+              <NextLink href="/home/notifications/queue" passHref>
                 <Link color={useColorModeValue("blue.500", "blue.300")}>
                   <Icon as={FaList} fontSize="sm" />
                 </Link>
