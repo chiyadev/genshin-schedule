@@ -1,26 +1,30 @@
 import React, { memo, useState } from "react";
 import { chakra, HStack, Icon, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Tooltip } from "@chakra-ui/react";
-import { MapZoomMax, MapZoomMin, useConfig } from "../../../utils/configs";
-import { FaSearchPlus } from "react-icons/fa";
+import { useConfig } from "../../../utils/configs";
+import { FaBell } from "react-icons/fa";
+import { ResinCap } from "../../../db/resins";
+import NotificationSetter from "../../Home/Resin/NotificationSetter";
 
-const TaskDefaultZoomSlider = () => {
+const ResinNotifyMarkSlider = () => {
   const [hint, setHint] = useState(false);
-  const [value, setValue] = useConfig("mapTaskDefaultZoom");
+  const [value, setValue] = useConfig("resinNotifyMark");
 
   return (
     <HStack w="full" spacing={4}>
+      <NotificationSetter />
+
       <HStack spacing={2}>
-        <Icon as={FaSearchPlus} />
-        <div>Zoom on task focus</div>
+        <Icon as={FaBell} />
+        <div>Resin notification point</div>
       </HStack>
 
-      <Tooltip label={<span>{value}x</span>} isOpen={hint} placement="top">
+      <Tooltip label={<span>{value} resins</span>} isOpen={hint} placement="top">
         <chakra.div w="full" maxW="xs">
           <Slider
             value={value}
-            step={0.1}
-            min={MapZoomMin}
-            max={MapZoomMax}
+            step={10}
+            min={10}
+            max={ResinCap}
             onChange={setValue}
             onChangeStart={() => setHint(true)}
             onChangeEnd={() => setHint(false)}
@@ -36,4 +40,4 @@ const TaskDefaultZoomSlider = () => {
   );
 };
 
-export default memo(TaskDefaultZoomSlider);
+export default memo(ResinNotifyMarkSlider);

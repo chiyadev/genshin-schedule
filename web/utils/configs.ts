@@ -23,15 +23,24 @@ export const MapZoomMax = 7;
 
 export type Configs = {
   server: "America" | "Europe" | "Asia" | "TW, HK, MO";
+  theme: "light" | "dark";
+  background: "paimon" | "klee" | "zhongli" | "none";
+  lastChangelog: number;
   offsetDays: number;
+  hiddenWidgets: {
+    [key in "clock" | "sync" | "resin" | "tasks" | "domains"]?: boolean;
+  };
   resin: {
     value: number;
     time: number;
   };
   resinEstimateMode: "time" | "value";
+  resinNotifyMark: number;
   characters: string[];
+  charactersWeekly: string[];
   weapons: string[];
   artifacts: string[];
+  domainFilters: ("character" | "weapon" | "artifact")[];
   itemNotes: { [key: string]: string };
   tasks: Task[];
   taskQuery: string;
@@ -43,16 +52,8 @@ export type Configs = {
   mapCreateTask: Task;
   mapFocusedTask: string | false;
   mapTaskList: boolean;
-  background: "paimon" | "klee" | "zhongli" | "none";
-  hiddenWidgets: {
-    [key in "clock" | "sync" | "resin" | "tasks" | "domains"]?: boolean;
-  };
-  lastChangelog: number;
   stats: StatFrame[];
   statRetention: number;
-  charactersWeekly: string[];
-  domainFilters: ("character" | "weapon" | "artifact")[];
-  theme: "light" | "dark";
 };
 
 export type Task = {
@@ -81,15 +82,22 @@ const defaultMapCenter = {
 
 export const DefaultConfigs: Configs = {
   server: "America",
+  theme: "light",
+  background: "paimon",
+  lastChangelog: 0,
   offsetDays: 0,
+  hiddenWidgets: {},
   resin: {
     value: ResinCap,
     time: Date.now(),
   },
   resinEstimateMode: "time",
+  resinNotifyMark: ResinCap,
   characters: [],
+  charactersWeekly: [],
   weapons: [],
   artifacts: [],
+  domainFilters: [],
   itemNotes: {},
   tasks: [],
   taskQuery: "",
@@ -113,14 +121,8 @@ export const DefaultConfigs: Configs = {
   },
   mapFocusedTask: false,
   mapTaskList: true,
-  background: "paimon",
-  hiddenWidgets: {},
-  lastChangelog: 0,
   stats: [],
   statRetention: 28,
-  charactersWeekly: [],
-  domainFilters: [],
-  theme: "light",
 };
 
 export const ServerList: Configs["server"][] = ["America", "Europe", "Asia", "TW, HK, MO"];
@@ -235,10 +237,17 @@ export function useApiNotification(notification: Notification, enabled: boolean)
   useSyncEffect(async () => {
     const client = createApiClient();
 
+    const fixed: Notification = {
+      ...notification,
+
+      url: new URL(notification.url, window.location.href).href,
+      icon: new URL(notification.icon, window.location.href).href,
+    };
+
     if (enabled) {
-      await client.setNotification(notification);
+      await client.setNotification(fixed);
     } else {
-      await client.deleteNotification(notification.key);
+      await client.deleteNotification(fixed.key);
     }
   }, [enabled && notification]);
 }

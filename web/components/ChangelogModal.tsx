@@ -25,6 +25,8 @@ function buildChangelog() {
       <ChangelogItem>
         Graduated the Discord bot from beta testing and made it available for public invite.
       </ChangelogItem>
+      <ChangelogItem github={27}>Added a slider to customize when resin notifications should send.</ChangelogItem>
+      <ChangelogItem>Improved formatting of Discord notification messages.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={13} date="2021/01/29">
       <ChangelogItem>Improved website theme and added dark mode support.</ChangelogItem>

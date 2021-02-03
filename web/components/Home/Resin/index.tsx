@@ -29,7 +29,7 @@ const Resin = () => {
   const current = resin.value + getResinRecharge(time.valueOf() - resin.time);
 
   const theme = useTheme();
-  const inputStyle = css({ fontSize: "xl", fontWeight: "bold" })(theme);
+  const inputStyle: any = css({ fontSize: "xl", fontWeight: "bold" })(theme);
   const inputWidth = useMeasuredTextWidth(roundResin(current).toString(), inputStyle);
 
   return (

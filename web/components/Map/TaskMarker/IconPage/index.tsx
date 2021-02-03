@@ -33,13 +33,21 @@ const IconPage = ({
 
   // save scroll position on scroll
   useEffect(() => {
+    const element = listRef.current;
+
+    if (!element) {
+      return;
+    }
+
+    let timeout = 0;
+
     const handle = () => {
-      listRef.current && setScroll(listRef.current.scrollTop);
+      clearTimeout(timeout);
+      timeout = window.setTimeout(() => setScroll(element.scrollTop), 500);
     };
 
-    const element = listRef.current;
-    element?.addEventListener("scroll", handle);
-    return () => element?.removeEventListener("scroll", handle);
+    element.addEventListener("scroll", handle);
+    return () => element.removeEventListener("scroll", handle);
   }, [setScroll]);
 
   useEffect(() => inputRef.current?.focus(), []);

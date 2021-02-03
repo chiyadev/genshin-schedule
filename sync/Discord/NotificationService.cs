@@ -46,8 +46,6 @@ namespace GenshinSchedule.SyncServer.Discord
             }
         }
 
-        static readonly Uri _defaultBaseUri = new Uri("https://genshin.chiya.dev");
-
         async Task NotifyAsync(DiscordShardedClient client, SyncDbContext db, CancellationToken cancellationToken = default)
         {
             var time = DateTimeOffset.UtcNow;
@@ -95,16 +93,17 @@ namespace GenshinSchedule.SyncServer.Discord
                 return;
             }
 
-            string fixUrl(string url)
-                => Uri.TryCreate(_defaultBaseUri, url, out var uri) ? uri.AbsoluteUri : null;
-
             await recipient.SendMessageAsync("", embed: new EmbedBuilder
             {
-                ThumbnailUrl = fixUrl(notification.Icon),
-                Title        = notification.Title,
-                Description  = notification.Description,
-                Url          = fixUrl(notification.Url),
-                Color        = uint.TryParse(notification.Color?.TrimStart('#'), NumberStyles.HexNumber, null, out var c) ? new Color(c) : null as Color?
+                Author = new EmbedAuthorBuilder
+                {
+                    Name    = notification.Title,
+                    Url     = notification.Url,
+                    IconUrl = notification.Icon
+                },
+                Description = notification.Description,
+
+                Color = uint.TryParse(notification.Color?.TrimStart('#'), NumberStyles.HexNumber, null, out var c) ? new Color(c) : null as Color?
             }.Build());
 
             _logger.LogInformation($"Successfully sent notification '{notification.Key}' to user {recipient.Id}.");

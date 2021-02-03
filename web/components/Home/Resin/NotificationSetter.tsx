@@ -9,11 +9,12 @@ import { useColorHex } from "../../../utils/theme";
 const NotificationSetter = () => {
   const time = useServerTime(60000);
   const [resin] = useConfig("resin");
+  const [notifyMark] = useConfig("resinNotifyMark");
 
   const color = useColorHex("blue.300");
 
   const capTime = DateTime.fromMillis(resin.time)
-    .plus({ minutes: (ResinCap - resin.value) / ResinsPerMinute })
+    .plus({ minutes: (notifyMark - resin.value) / ResinsPerMinute })
     .valueOf();
 
   useApiNotification(
@@ -22,12 +23,13 @@ const NotificationSetter = () => {
         key: "resin",
         time: capTime,
         icon: Resin,
-        title: "Resin recharged!",
-        description: "Your resins have been fully recharged, traveler~",
-        url: "/",
+        title: "Resins recharged!",
+        description:
+          notifyMark === ResinCap ? "Your resins have fully recharged!" : `You have ${notifyMark} resins right now!`,
+        url: "/home",
         color,
       }),
-      [capTime, color]
+      [capTime, color, notifyMark]
     ),
     time.valueOf() < capTime
   );

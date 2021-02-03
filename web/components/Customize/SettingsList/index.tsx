@@ -7,6 +7,7 @@ import TaskDefaultZoomSlider from "./TaskDefaultZoomSlider";
 import AccountManageButton from "./AccountManageButton";
 import { User } from "../../../utils/api";
 import ThemeSwitch from "./ThemeSwitch";
+import ResinNotifyMarkSlider from "./ResinNotifyMarkSlider";
 
 const SettingsList = ({ user }: { user?: User }) => {
   return (
@@ -14,8 +15,9 @@ const SettingsList = ({ user }: { user?: User }) => {
       <Heading size="md">Settings</Heading>
 
       <VStack align="start" spacing={4}>
-        <ThemeSwitch />
         <BackgroundSwitch />
+        <ThemeSwitch />
+        <ResinNotifyMarkSlider />
         <TaskDefaultZoomSlider />
 
         <Wrap spacing={2}>
