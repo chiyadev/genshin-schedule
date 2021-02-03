@@ -1,5 +1,6 @@
 // This file was generated using `yarn genassets`.
 import AcquaintFate from "./game/Acquaint Fate.png";
+import AdeptiSeekersStove from "./game/Adepti Seeker's Stove.png";
 import AdventureExperience from "./game/Adventure Experience.png";
 import AdventurersExperience from "./game/Adventurer's Experience.png";
 import Adventurer from "./game/Adventurer.png";
@@ -57,6 +58,7 @@ import Chongyun from "./game/Chongyun.png";
 import CleansingHeart from "./game/Cleansing Heart.png";
 import CompanionshipExperience from "./game/Companionship Experience.png";
 import CompoundBow from "./game/Compound Bow.png";
+import CondensedResin from "./game/Condensed Resin.png";
 import CoolSteel from "./game/Cool Steel.png";
 import CorLapis from "./game/Cor Lapis.png";
 import Crab from "./game/Crab.png";
@@ -306,6 +308,7 @@ import Zhongli from "./game/Zhongli.png";
 
 export {
   AcquaintFate,
+  AdeptiSeekersStove,
   AdventureExperience,
   AdventurersExperience,
   Adventurer,
@@ -363,6 +366,7 @@ export {
   CleansingHeart,
   CompanionshipExperience,
   CompoundBow,
+  CondensedResin,
   CoolSteel,
   CorLapis,
   Crab,
@@ -614,6 +618,7 @@ export {
 export function getAssetByName(name: string): string | undefined {
   switch (name) {
     case "Acquaint Fate": return AcquaintFate;
+    case "Adepti Seeker's Stove": return AdeptiSeekersStove;
     case "Adventure Experience": return AdventureExperience;
     case "Adventurer's Experience": return AdventurersExperience;
     case "Adventurer": return Adventurer;
@@ -671,6 +676,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Cleansing Heart": return CleansingHeart;
     case "Companionship Experience": return CompanionshipExperience;
     case "Compound Bow": return CompoundBow;
+    case "Condensed Resin": return CondensedResin;
     case "Cool Steel": return CoolSteel;
     case "Cor Lapis": return CorLapis;
     case "Crab": return Crab;

@@ -9,6 +9,7 @@ import IconPage from "./IconPage";
 import { getAssetByName } from "../../../assets";
 import { HStack } from "@chakra-ui/react";
 import OffsetWarning from "./OffsetWarning";
+import TransparentPixel from "../../../assets/TransparentPixel.png";
 
 export type PopupPage = "info" | "icon";
 export const PopupPages: PopupPage[] = ["info", "icon"];
@@ -37,7 +38,7 @@ const TaskMarker = ({
 
   const icon = useMemo(() => {
     return new Icon({
-      iconUrl: getAssetByName(task.icon) || "",
+      iconUrl: getAssetByName(task.icon) || TransparentPixel,
       iconSize: [36, 36],
       className: "task-marker-icon",
     });

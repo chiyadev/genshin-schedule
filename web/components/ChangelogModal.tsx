@@ -2,6 +2,7 @@ import React, { memo, ReactNode, useEffect, useMemo } from "react";
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/modal";
 import { useConfig } from "../utils/configs";
 import {
+  chakra,
   Heading,
   HStack,
   Icon,
@@ -14,10 +15,19 @@ import {
 } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 13;
+const LatestChangelog = 14;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={14} date="2021/01/29">
+      <ChangelogItem>Fixed dark mode theme not being applied at the root level.</ChangelogItem>
+      <ChangelogItem github={46}>
+        <span>Added icons for placeable gadgets. </span>
+        <chakra.span fontSize="sm" color="gray.500">
+          (todo: Parametric Transformer)
+        </chakra.span>
+      </ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={13} date="2021/01/29">
       <ChangelogItem>Improved website theme and added dark mode support.</ChangelogItem>
       <ChangelogItem>Refactored page paths.</ChangelogItem>

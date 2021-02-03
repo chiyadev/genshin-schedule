@@ -1,11 +1,14 @@
-import React, { memo, ReactNode } from "react";
+import React, { memo, ReactNode, useEffect } from "react";
 import { useConfig } from "../utils/configs";
-import { DarkMode } from "@chakra-ui/color-mode";
+import { DarkMode, useColorMode } from "@chakra-ui/color-mode";
 import { useToken } from "@chakra-ui/react";
 import Head from "next/head";
 
 const ColorModeOverride = ({ children }: { children?: ReactNode }) => {
   const [theme] = useConfig("theme");
+  const { setColorMode } = useColorMode();
+
+  useEffect(() => setColorMode(theme), [theme, setColorMode]);
 
   switch (theme) {
     case "light":

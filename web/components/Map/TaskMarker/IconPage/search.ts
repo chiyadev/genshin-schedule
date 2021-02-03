@@ -15,7 +15,11 @@ function addIcons(type: string, items: { name: string; timer?: Task["refreshTime
   }
 }
 
-addIcons("gadget", [{ name: "Portable Waypoint", timer: 168 }]);
+addIcons("gadget", [
+  { name: "Portable Waypoint", timer: 168 },
+  { name: "Adepti Seeker's Stove", timer: 5 / 60 },
+  //{ name: "Parametric Transformer", timer: 168 },
+]);
 
 addIcons("ore", [
   { name: "Iron Chunk", timer: 24 },
@@ -145,6 +149,7 @@ addIcons("sigil", [{ name: "Anemo Sigil" }, { name: "Geo Sigil" }]);
 addIcons("currency", [
   { name: "Mora" },
   { name: "Resin" },
+  { name: "Condensed Resin" },
   { name: "Primogem" },
   { name: "Genesis Crystal" },
   { name: "Intertwined Fate" },
