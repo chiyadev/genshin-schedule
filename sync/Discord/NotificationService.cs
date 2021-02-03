@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Discord;
+using Discord.WebSocket;
 using GenshinSchedule.SyncServer.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,7 +23,7 @@ namespace GenshinSchedule.SyncServer.Discord
             _logger   = logger;
         }
 
-        public async Task RunAsync(IDiscordClient client, CancellationToken cancellationToken = default)
+        public async Task RunAsync(DiscordShardedClient client, CancellationToken cancellationToken = default)
         {
             var delay = new AccurateDelay(TimeSpan.FromSeconds(5));
 
@@ -47,7 +48,7 @@ namespace GenshinSchedule.SyncServer.Discord
 
         static readonly Uri _defaultBaseUri = new Uri("https://genshin.chiya.dev");
 
-        async Task NotifyAsync(IDiscordClient client, SyncDbContext db, CancellationToken cancellationToken = default)
+        async Task NotifyAsync(DiscordShardedClient client, SyncDbContext db, CancellationToken cancellationToken = default)
         {
             var time = DateTimeOffset.UtcNow;
 
@@ -78,13 +79,19 @@ namespace GenshinSchedule.SyncServer.Discord
             }
         }
 
-        async Task SendAsync(IDiscordClient client, DbNotification notification)
+        async Task SendAsync(DiscordShardedClient client, DbNotification notification)
         {
-            var recipient = await client.GetUserAsync(notification.User.DiscordUserId ?? 0);
+            var recipientId = notification.User.DiscordUserId;
+
+            if (recipientId == null)
+                return;
+
+            // use rest to retrieve user because users are not cached in sharded clients
+            var recipient = await client.Rest.GetUserAsync(recipientId.Value);
 
             if (recipient == null)
             {
-                _logger.LogWarning($"No recipient user {notification.User.DiscordUserId?.ToString() ?? "<null>"} found.");
+                _logger.LogWarning($"Recipient user {recipientId} not found.");
                 return;
             }
 

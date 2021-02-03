@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
+using Discord.WebSocket;
 using GenshinSchedule.SyncServer.Discord.Modules;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -37,7 +38,7 @@ namespace GenshinSchedule.SyncServer.Discord
             _commands.AddModuleAsync<ToggleModule>(scope.ServiceProvider);
         }
 
-        public async Task HandleAsync(IDiscordClient client, IUserMessage message)
+        public async Task HandleAsync(DiscordShardedClient client, IUserMessage message)
         {
             if (!(message.Channel is IDMChannel))
                 return;

@@ -2,7 +2,6 @@ import React, { memo, ReactNode, useEffect, useMemo } from "react";
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/modal";
 import { useConfig } from "../utils/configs";
 import {
-  chakra,
   Heading,
   HStack,
   Icon,
@@ -19,13 +18,12 @@ const LatestChangelog = 14;
 
 function buildChangelog() {
   return [
-    <ChangelogSection key={14} date="2021/01/29">
+    <ChangelogSection key={14} date="2021/02/04">
       <ChangelogItem>Fixed dark mode theme not being applied at the root level.</ChangelogItem>
-      <ChangelogItem github={46}>
-        <span>Added icons for placeable gadgets. </span>
-        <chakra.span fontSize="sm" color="gray.500">
-          (todo: Parametric Transformer)
-        </chakra.span>
+      <ChangelogItem github={46}>Added icons for placeable gadgets.</ChangelogItem>
+      <ChangelogItem github={28}>Improved reliability of Discord notification delivery.</ChangelogItem>
+      <ChangelogItem>
+        Graduated the Discord bot from beta testing and made it available for public invite.
       </ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={13} date="2021/01/29">

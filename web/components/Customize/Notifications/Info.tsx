@@ -1,12 +1,29 @@
-import { Button, chakra, HStack, Icon, Link, Spacer, Tag, Tooltip, useColorModeValue, VStack } from "@chakra-ui/react";
+import {
+  Button,
+  chakra,
+  HStack,
+  Icon,
+  Link,
+  Spacer,
+  Tooltip,
+  useColorModeValue,
+  VStack,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
 import React, { memo } from "react";
 import WhiteCard from "../../WhiteCard";
-import { FaBell, FaDiscord, FaList } from "react-icons/fa";
+import { FaBell, FaDiscord, FaLink, FaList } from "react-icons/fa";
 import Bot from "../../../assets/notifications/Bot.jpg";
-import Privacy from "../../../assets/notifications/Privacy.png";
-import PrivacyDM from "../../../assets/notifications/PrivacyDM.png";
+import Privacy from "../../../assets/notifications/Privacy.jpg";
+import PrivacyDM from "../../../assets/notifications/PrivacyDM.jpg";
+import Success from "../../../assets/notifications/Success.jpg";
 import MessageDisplay from "./MessageDisplay";
 import NextLink from "next/link";
+
+export const DiscordServerInvite = "https://discord.gg/XdPQeEaBE7";
+export const DiscordBotInvite =
+  "https://discord.com/oauth2/authorize?client_id=786827003164098610&scope=bot&permissions=379968";
 
 const Info = () => {
   return (
@@ -15,7 +32,6 @@ const Info = () => {
         <HStack spacing={2} fontSize="xl" fontWeight="bold">
           <Icon as={FaBell} />
           <div>Notifications</div>
-          <Tag colorScheme="green">Beta</Tag>
 
           <Spacer />
           <Tooltip label="Queue">
@@ -35,37 +51,60 @@ const Info = () => {
             respawn.
           </div>
 
-          <chakra.img src={Bot} borderRadius="md" boxShadow="md" />
+          <chakra.img src={Bot} borderRadius="md" />
 
           <VStack align="start" spacing={2}>
             <div>
-              <span>1. Join our Discord server! </span>
-              <Link href="https://discord.gg/XdPQeEaBE7" color={useColorModeValue("blue.500", "blue.300")} isExternal>
-                discord.gg/XdPQeEaBE7
-              </Link>
+              <span>
+                1. Join the{" "}
+                <Link href={DiscordServerInvite} color={useColorModeValue("blue.500", "blue.300")}>
+                  Genshin Schedule
+                </Link>{" "}
+                server, or{" "}
+                <Link href={DiscordBotInvite} color={useColorModeValue("blue.500", "blue.300")}>
+                  invite the bot
+                </Link>{" "}
+                to your server. Either method is fine because you can only interact with the bot via DM anyway, but at
+                least one common server is required for the bot to be able to message you.
+              </span>
             </div>
 
-            <Button
-              as="a"
-              href="https://discord.gg/XdPQeEaBE7"
-              target="_blank"
-              leftIcon={<Icon as={FaDiscord} />}
-              color="white"
-              bg="#7289da"
-              colorScheme="none"
-              boxShadow="md"
-            >
-              Join the Discord
-            </Button>
+            <Wrap>
+              <WrapItem>
+                <Button
+                  as="a"
+                  href={DiscordServerInvite}
+                  target="_blank"
+                  leftIcon={<Icon as={FaDiscord} />}
+                  color="white"
+                  bg="#7289da"
+                  colorScheme="none"
+                >
+                  Join the server
+                </Button>
+              </WrapItem>
+
+              <WrapItem>
+                <Button
+                  as="a"
+                  href={DiscordBotInvite}
+                  target="_blank"
+                  leftIcon={<Icon as={FaLink} />}
+                  color="white"
+                  bg="#7289da"
+                  colorScheme="none"
+                >
+                  Invite the bot
+                </Button>
+              </WrapItem>
+            </Wrap>
           </VStack>
 
           <VStack align="start" spacing={2}>
-            <div>
-              2. Make sure DMs from server members are enabled, otherwise the bot will not be able to message you.
-            </div>
+            <div>2. Make sure DMs from server members are enabled, otherwise the bot cannot message you.</div>
 
-            <chakra.img src={Privacy} borderRadius="md" boxShadow="md" />
-            <chakra.img src={PrivacyDM} borderRadius="md" boxShadow="md" />
+            <chakra.img src={Privacy} borderRadius="md" />
+            <chakra.img src={PrivacyDM} borderRadius="md" />
           </VStack>
 
           <VStack align="start" spacing={2}>
@@ -76,7 +115,10 @@ const Info = () => {
             <MessageDisplay />
           </VStack>
 
-          <div>4. Done! Future notifications will be sent to you via DM.</div>
+          <VStack align="start" spacing={2}>
+            <div>4. Done! Future notifications will be sent to you via DM.</div>
+            <chakra.img src={Success} borderRadius="md" />
+          </VStack>
         </VStack>
       </WhiteCard>
     </VStack>

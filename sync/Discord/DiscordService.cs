@@ -30,10 +30,11 @@ namespace GenshinSchedule.SyncServer.Discord
             if (string.IsNullOrEmpty(token))
                 return;
 
-            var client = new DiscordSocketClient(new DiscordSocketConfig
+            var client = new DiscordShardedClient(new DiscordSocketConfig
             {
-                LogLevel            = LogSeverity.Debug,
-                AlwaysDownloadUsers = true
+                LogLevel         = LogSeverity.Debug,
+                LargeThreshold   = 0,
+                MessageCacheSize = 0
             });
 
             client.Log += log =>
@@ -53,15 +54,6 @@ namespace GenshinSchedule.SyncServer.Discord
             await client.LoginAsync(TokenType.Bot, token);
             await client.StartAsync();
 
-            var ready = new TaskCompletionSource();
-
-            client.Ready += () =>
-            {
-                ready.SetResult();
-                return Task.CompletedTask;
-            };
-
-            await ready.Task;
             await client.SetGameAsync("with travelers");
 
             try

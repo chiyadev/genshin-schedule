@@ -36,7 +36,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 const Home = ({ data, queue }: Props) => {
   return (
     <ConfigsProvider initial={data}>
-      <Layout title={["Notification Queue"]}>
+      <Layout title={["Notification queue"]}>
         <VStack align="stretch" spacing={4}>
           <div>Notification queue:</div>
 

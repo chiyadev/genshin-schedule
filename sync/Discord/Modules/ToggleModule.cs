@@ -40,7 +40,7 @@ namespace GenshinSchedule.SyncServer.Discord.Modules
                 }
             }
 
-            await ReplyAsync("Token is invalid. Please refer to <https://genshin.chiya.dev/customize/notifications> for help!");
+            await ReplyAsync("Token is invalid. Please refer to <https://genshin.chiya.dev/home/notifications> for help!");
         }
 
         [Command("disable")]
