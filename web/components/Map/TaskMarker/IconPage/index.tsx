@@ -1,5 +1,5 @@
 import React, { Dispatch, memo, SetStateAction, useEffect, useMemo, useRef } from "react";
-import { Task, useConfig } from "../../../../utils/configs";
+import { Task, useConfig } from "../../../../utils/config";
 import { PopupPage } from "../index";
 import { IconNames, IconSearch, KnownResourceTimers } from "./search";
 import Item from "./Item";

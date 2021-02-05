@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { FaSearch } from "react-icons/fa";
-import { useConfig } from "../../utils/configs";
+import { useConfig } from "../../utils/config";
 import { chakra, Icon, Input, InputGroup, InputLeftElement, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 
 const Search = () => {

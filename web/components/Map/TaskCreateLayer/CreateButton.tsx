@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import { useServerTime } from "../../../utils/time";
 import { FaCheck } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";

@@ -21,7 +21,7 @@ type MapLocation = { lat: number; lng: number };
 export const MapZoomMin = 4;
 export const MapZoomMax = 7;
 
-export type Configs = {
+export type Config = {
   server: "America" | "Europe" | "Asia" | "TW, HK, MO";
   theme: "light" | "dark";
   background: "paimon" | "klee" | "zhongli" | "none";
@@ -80,7 +80,7 @@ const defaultMapCenter = {
   lng: 54.73,
 };
 
-export const DefaultConfigs: Configs = {
+export const DefaultConfig: Config = {
   server: "America",
   theme: "light",
   background: "paimon",
@@ -125,21 +125,21 @@ export const DefaultConfigs: Configs = {
   statRetention: 28,
 };
 
-export const ServerList: Configs["server"][] = ["America", "Europe", "Asia", "TW, HK, MO"];
-export const ConfigKeys = Object.keys(DefaultConfigs) as (keyof Configs)[];
+export const ServerList: Config["server"][] = ["America", "Europe", "Asia", "TW, HK, MO"];
+export const ConfigKeys = Object.keys(DefaultConfig) as (keyof Config)[];
 
-export const ConfigsContext = createContext<{
-  ref: MutableRefObject<Configs>;
-  set: Dispatch<SetStateAction<Configs>>;
+export const ConfigContext = createContext<{
+  ref: MutableRefObject<Config>;
+  set: Dispatch<SetStateAction<Config>>;
   events: MultiMap<string, () => void>;
 }>({
-  ref: { current: DefaultConfigs },
+  ref: { current: DefaultConfig },
   set: () => {},
   events: new MultiMap(),
 });
 
-export function useConfigs(): [Configs, Dispatch<SetStateAction<Configs>>] {
-  const { ref, set, events } = useContext(ConfigsContext);
+export function useConfigs(): [Config, Dispatch<SetStateAction<Config>>] {
+  const { ref, set, events } = useContext(ConfigContext);
   const [, setUpdate] = useState(0);
 
   useEffect(() => {
@@ -159,10 +159,10 @@ export function useConfigs(): [Configs, Dispatch<SetStateAction<Configs>>] {
   return [ref.current, set];
 }
 
-export function useConfig<TKey extends keyof Configs>(
+export function useConfig<TKey extends keyof Config>(
   key: TKey
-): [Configs[TKey], Dispatch<SetStateAction<Configs[TKey]>>] {
-  const { ref, set, events } = useContext(ConfigsContext);
+): [Config[TKey], Dispatch<SetStateAction<Config[TKey]>>] {
+  const { ref, set, events } = useContext(ConfigContext);
   const [, setUpdate] = useState(0);
 
   useEffect(() => {

@@ -6,7 +6,7 @@ import Clock from "../../components/Home/Clock";
 import Layout from "../../components/Layout";
 import { GetServerSideProps } from "next";
 import { createApiClient, WebData } from "../../utils/api";
-import ConfigsProvider from "../../components/ConfigsProvider";
+import ConfigProvider from "../../components/ConfigProvider";
 import { VStack } from "@chakra-ui/react";
 
 type Props = {
@@ -34,7 +34,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
 const Home = ({ data }: Props) => {
   return (
-    <ConfigsProvider initial={data}>
+    <ConfigProvider initial={data}>
       <Layout>
         <VStack align="stretch" spacing={12}>
           <Clock />
@@ -43,7 +43,7 @@ const Home = ({ data }: Props) => {
           <DomainList />
         </VStack>
       </Layout>
-    </ConfigsProvider>
+    </ConfigProvider>
   );
 };
 

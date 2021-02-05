@@ -11,7 +11,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { FaSync } from "react-icons/fa";
-import { useConfig } from "../../utils/configs";
+import { useConfig } from "../../utils/config";
 
 const ResetButton = () => {
   const [, setStats] = useConfig("stats");

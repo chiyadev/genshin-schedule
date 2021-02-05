@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useConfig } from "./configs";
+import { useConfig } from "./config";
 import { DateTime, Duration } from "luxon";
 import pluralize from "pluralize";
 

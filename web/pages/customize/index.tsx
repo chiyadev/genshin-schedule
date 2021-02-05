@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { createApiClient, User, WebData } from "../../utils/api";
 import { GetServerSideProps } from "next";
-import ConfigsProvider from "../../components/ConfigsProvider";
+import ConfigProvider from "../../components/ConfigProvider";
 import Layout from "../../components/Layout";
 import Search from "../../components/Customize/Search";
 import { VStack } from "@chakra-ui/react";
@@ -37,7 +37,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
 const Customize = ({ user, data }: Props) => {
   return (
-    <ConfigsProvider initial={data}>
+    <ConfigProvider initial={data}>
       <Layout title={["Customize"]}>
         <VStack align="stretch" spacing={8}>
           <Search />
@@ -47,7 +47,7 @@ const Customize = ({ user, data }: Props) => {
           <SettingsList user={user || undefined} />
         </VStack>
       </Layout>
-    </ConfigsProvider>
+    </ConfigProvider>
   );
 };
 

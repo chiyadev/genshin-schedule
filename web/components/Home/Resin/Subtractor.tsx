@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { useConfig, useCurrentStats } from "../../../utils/configs";
+import { useConfig, useCurrentStats } from "../../../utils/config";
 import { useServerTime } from "../../../utils/time";
 import { clampResin, getResinRecharge } from "../../../db/resins";
 import { trackEvent } from "../../../utils/umami";

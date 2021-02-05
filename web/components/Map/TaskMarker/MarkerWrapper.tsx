@@ -1,6 +1,6 @@
 import React, { memo, Ref } from "react";
 import { Marker, MarkerProps } from "react-leaflet";
-import { Task } from "../../../utils/configs";
+import { Task } from "../../../utils/config";
 import { useServerTime } from "../../../utils/time";
 
 const MarkerWrapper = ({

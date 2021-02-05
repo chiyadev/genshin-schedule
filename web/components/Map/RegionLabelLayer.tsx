@@ -5,7 +5,7 @@ import { Feature, Point } from "geojson";
 import { DivIcon, LatLng, LatLngTuple, Layer, Marker } from "leaflet";
 import { renderToStaticMarkup } from "react-dom/server";
 import { chakra } from "@chakra-ui/react";
-import { Configs, MapZoomMax, useConfig } from "../../utils/configs";
+import { Config, MapZoomMax, useConfig } from "../../utils/config";
 
 const RegionLabelLayer = () => {
   const [renderId, setRenderId] = useState(0);
@@ -16,7 +16,7 @@ const RegionLabelLayer = () => {
   return <GeoJSON key={renderId} data={data as any} pointToLayer={(...props) => pointToLayer(...props, state)} />;
 };
 
-const pointToLayer = (geoJsonPoint: Feature<Point, any>, latlng: LatLng, map: Configs["mapState"]): Layer => {
+const pointToLayer = (geoJsonPoint: Feature<Point, any>, latlng: LatLng, map: Config["mapState"]): Layer => {
   const markerLatlng: LatLngTuple = [latlng.lng, latlng.lat]; // careful!! latlng swapped
 
   return new Marker(markerLatlng, {
@@ -29,7 +29,7 @@ const pointToLayer = (geoJsonPoint: Feature<Point, any>, latlng: LatLng, map: Co
   });
 };
 
-const RegionLabel = ({ geoJsonPoint, map }: { geoJsonPoint: Feature<Point, any>; map: Configs["mapState"] }) => {
+const RegionLabel = ({ geoJsonPoint, map }: { geoJsonPoint: Feature<Point, any>; map: Config["mapState"] }) => {
   return (
     <chakra.div
       whiteSpace="nowrap"

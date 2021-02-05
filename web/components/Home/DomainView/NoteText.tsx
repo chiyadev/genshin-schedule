@@ -1,6 +1,6 @@
 import { chakra } from "@chakra-ui/react";
 import React, { memo } from "react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 
 const NoteText = ({ name }: { name: string }) => {
   const [notes] = useConfig("itemNotes");

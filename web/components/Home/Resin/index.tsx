@@ -6,7 +6,7 @@ import { getResinRecharge, ResinCap, roundResin } from "../../../db/resins";
 import Subtractor from "./Subtractor";
 import EstimatorByTime from "./EstimatorByTime";
 import EstimatorByResin from "./EstimatorByResin";
-import { Configs, useConfig, useCurrentStats } from "../../../utils/configs";
+import { Config, useConfig, useCurrentStats } from "../../../utils/config";
 import { Resin as ResinIcon } from "../../../assets";
 import { chakra, css, HStack, Input, Spacer, useTheme } from "@chakra-ui/react";
 import { useMeasuredTextWidth } from "../../../utils/dom";
@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 import { useServerTime } from "../../../utils/time";
 import NotificationSetter from "./NotificationSetter";
 
-const estimateModes: Configs["resinEstimateMode"][] = ["time", "value"];
+const estimateModes: Config["resinEstimateMode"][] = ["time", "value"];
 
 const Resin = () => {
   const [resin, setResin] = useConfig("resin");

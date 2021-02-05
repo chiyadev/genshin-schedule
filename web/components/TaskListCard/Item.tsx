@@ -1,6 +1,6 @@
 import { chakra, HStack, Link } from "@chakra-ui/react";
 import React, { Dispatch, memo, SetStateAction } from "react";
-import { Task } from "../../utils/configs";
+import { Task } from "../../utils/config";
 import { trackEvent } from "../../utils/umami";
 import DoneButton from "./DoneButton";
 import { getAssetByName } from "../../assets";

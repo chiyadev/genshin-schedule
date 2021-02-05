@@ -1,6 +1,6 @@
 import { Link, useColorModeValue } from "@chakra-ui/react";
 import React, { memo } from "react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
 import pluralize from "pluralize";
 

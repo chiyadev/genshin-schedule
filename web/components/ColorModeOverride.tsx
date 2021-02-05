@@ -1,5 +1,5 @@
 import React, { memo, ReactNode, useEffect } from "react";
-import { useConfig } from "../utils/configs";
+import { useConfig } from "../utils/config";
 import { DarkMode, useColorMode } from "@chakra-ui/color-mode";
 import { useToken } from "@chakra-ui/react";
 import Head from "next/head";

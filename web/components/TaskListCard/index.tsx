@@ -2,7 +2,7 @@ import React, { memo, SetStateAction, useCallback, useMemo } from "react";
 import WhiteCard from "../WhiteCard";
 import { useDueTasks, useFilteredTasks, useTaskDoneSetter, useTaskFocusSetter } from "../../utils/tasks";
 import Item from "./Item";
-import { Task, useConfig } from "../../utils/configs";
+import { Task, useConfig } from "../../utils/config";
 import { useHotkeys } from "react-hotkeys-hook";
 import { trackEvent } from "../../utils/umami";
 import { useListDispatch } from "../../utils/dispatch";

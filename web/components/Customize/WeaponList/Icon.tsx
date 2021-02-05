@@ -1,5 +1,5 @@
 import React, { memo, useMemo } from "react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import { AspectRatio, Center, chakra, HStack, Link, Text, useColorModeValue, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import NextLink from "next/link";

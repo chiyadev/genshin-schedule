@@ -1,7 +1,7 @@
 import React, { memo, useRef } from "react";
 import { GetServerSideProps } from "next";
 import { Button, ButtonGroup, chakra, Heading, Icon, VStack } from "@chakra-ui/react";
-import ConfigsProvider from "../components/ConfigsProvider";
+import ConfigProvider from "../components/ConfigProvider";
 import { createApiClient } from "../utils/api";
 import Layout from "../components/Layout";
 import ResinCalculator from "../assets/welcome/ResinCalculator.jpg";
@@ -34,7 +34,7 @@ const Welcome = () => {
   const authRef = useRef<HTMLDivElement>(null);
 
   return (
-    <ConfigsProvider>
+    <ConfigProvider>
       <Layout header={false}>
         <VStack align="stretch" spacing={32} py={32} flex={1} maxW="568px" mx="auto">
           <VStack align="stretch" spacing={8}>
@@ -121,7 +121,7 @@ const Welcome = () => {
           </VStack>
         </VStack>
       </Layout>
-    </ConfigsProvider>
+    </ConfigProvider>
   );
 };
 

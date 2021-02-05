@@ -1,6 +1,6 @@
 import React, { memo, ReactNode, useEffect, useMemo } from "react";
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/modal";
-import { useConfig } from "../utils/configs";
+import { useConfig } from "../utils/config";
 import {
   Heading,
   HStack,

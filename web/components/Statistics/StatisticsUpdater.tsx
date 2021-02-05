@@ -1,6 +1,6 @@
 import { memo, useEffect } from "react";
 import { useServerTime } from "../../utils/time";
-import { getStatFrameTime, StatFrame, useConfig } from "../../utils/configs";
+import { getStatFrameTime, StatFrame, useConfig } from "../../utils/config";
 
 const StatisticsUpdater = () => {
   const time = useServerTime(60000);

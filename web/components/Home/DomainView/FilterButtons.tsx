@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { Button, ButtonGroup, useColorModeValue } from "@chakra-ui/react";
 import { Tooltip } from "@chakra-ui/tooltip";
 import { trackEvent } from "../../../utils/umami";
-import { Configs, useConfig } from "../../../utils/configs";
+import { Config, useConfig } from "../../../utils/config";
 import { arrayToggle } from "../../../utils";
 import {
   BlackArtifact,
@@ -23,7 +23,7 @@ const FilterButtons = () => {
   );
 };
 
-const FilterButton = ({ type, name, image }: { type: Configs["domainFilters"][0]; name: string; image: string }) => {
+const FilterButton = ({ type, name, image }: { type: Config["domainFilters"][0]; name: string; image: string }) => {
   const [filters, setFilters] = useConfig("domainFilters");
 
   return (

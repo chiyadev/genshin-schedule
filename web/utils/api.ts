@@ -1,5 +1,5 @@
 import { Patch } from "rfc6902";
-import { Configs } from "./configs";
+import { Config } from "./config";
 import { destroyCookie, parseCookies, setCookie } from "nookies";
 import { GetServerSidePropsContext } from "next";
 import node_fetch from "node-fetch";
@@ -13,7 +13,7 @@ export type User = {
 
 export type WebData = {
   token: string;
-  data: Partial<Configs>;
+  data: Partial<Config>;
 };
 
 export type Notification = {

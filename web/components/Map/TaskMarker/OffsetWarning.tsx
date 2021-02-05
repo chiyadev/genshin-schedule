@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { Alert, AlertIcon } from "@chakra-ui/alert";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import pluralize from "pluralize";
 
 const OffsetWarning = () => {

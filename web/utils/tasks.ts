@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useCallback, useMemo } from "react";
-import { DefaultConfigs, Task, useConfig, useCurrentStats, useSync } from "./configs";
+import { DefaultConfig, Task, useConfig, useCurrentStats, useSync } from "./config";
 import { useRouter } from "next/router";
 import { randomStr } from "./index";
 import { getServerResetTime, useServerTime } from "./time";
@@ -83,7 +83,7 @@ export function useTaskFocusSetter() {
     (task?: Task) => {
       if (task) {
         setMapState({
-          lat: task.location.lat + 2.2 + DefaultConfigs.mapTaskDefaultZoom - defaultZoom,
+          lat: task.location.lat + 2.2 + DefaultConfig.mapTaskDefaultZoom - defaultZoom,
           lng: task.location.lng,
           zoom: defaultZoom,
         });

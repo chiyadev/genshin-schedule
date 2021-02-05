@@ -1,5 +1,5 @@
 import React, { Dispatch, memo, ReactNode, SetStateAction, useEffect, useMemo, useRef, useState } from "react";
-import { Task, useConfig } from "../../../utils/configs";
+import { Task, useConfig } from "../../../utils/config";
 import { Icon } from "leaflet";
 import CardPopup from "../CardPopup";
 import MarkerWrapper from "./MarkerWrapper";

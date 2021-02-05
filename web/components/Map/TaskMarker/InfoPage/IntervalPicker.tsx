@@ -2,7 +2,7 @@ import React, { Dispatch, memo, useRef, useState } from "react";
 import { getAccuratestUnit, getUnitMs, ServerResetHour, TimeUnit } from "../../../../utils/time";
 import { FaSyncAlt } from "react-icons/fa";
 import { chakra, HStack, Icon, Input, Select } from "@chakra-ui/react";
-import { Task } from "../../../../utils/configs";
+import { Task } from "../../../../utils/config";
 import pluralize from "pluralize";
 import { Duration } from "luxon";
 

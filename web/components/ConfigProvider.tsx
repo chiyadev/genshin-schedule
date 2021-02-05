@@ -10,22 +10,22 @@ import React, {
   useState,
 } from "react";
 import { createApiClient, WebData } from "../utils/api";
-import { ConfigKeys, Configs, ConfigsContext, DefaultConfigs, SyncContext } from "../utils/configs";
+import { Config, ConfigContext, ConfigKeys, DefaultConfig, SyncContext } from "../utils/config";
 import { MultiMap } from "../utils/multiMap";
 import { PromiseSignal } from "../utils/promiseSignal";
 import { createPatch, Patch } from "rfc6902";
 import { useToast } from "@chakra-ui/react";
 
-const ConfigsProvider = ({ initial, children }: { initial?: WebData | null; children?: ReactNode }) => {
+const ConfigProvider = ({ initial, children }: { initial?: WebData | null; children?: ReactNode }) => {
   if (initial) {
-    return <SynchronizedConfigsProvider initial={initial}>{children}</SynchronizedConfigsProvider>;
+    return <SynchronizedConfigProvider initial={initial}>{children}</SynchronizedConfigProvider>;
   } else {
-    return <LocalConfigsProvider>{children}</LocalConfigsProvider>;
+    return <LocalConfigProvider>{children}</LocalConfigProvider>;
   }
 };
 
-function getLocalConfigs(): Configs {
-  const result = { ...DefaultConfigs };
+function getLocalConfig(): Config {
+  const result = { ...DefaultConfig };
 
   for (const key of ConfigKeys) {
     try {
@@ -38,10 +38,10 @@ function getLocalConfigs(): Configs {
   return result;
 }
 
-function setLocalConfigs(configs: Configs) {
+function setLocalConfig(config: Config) {
   for (const key of ConfigKeys) {
-    const value = (configs as any)[key];
-    const defaultValue = (DefaultConfigs as any)[key];
+    const value = (config as any)[key];
+    const defaultValue = (DefaultConfig as any)[key];
 
     if (value === defaultValue) {
       localStorage.removeItem(key);
@@ -51,21 +51,21 @@ function setLocalConfigs(configs: Configs) {
   }
 }
 
-const LocalConfigsProvider = ({ children }: { children?: ReactNode }) => {
-  const [value, setValueCore] = useState(DefaultConfigs);
-  const setValue = useCallback((newValue: SetStateAction<Configs>) => {
+const LocalConfigProvider = ({ children }: { children?: ReactNode }) => {
+  const [value, setValueCore] = useState(DefaultConfig);
+  const setValue = useCallback((newValue: SetStateAction<Config>) => {
     if (typeof newValue === "function") {
-      newValue = newValue(getLocalConfigs());
+      newValue = newValue(getLocalConfig());
     }
 
     setValueCore(newValue);
 
     // propagate local changes to other tabs by writing to storage
-    setLocalConfigs(newValue);
+    setLocalConfig(newValue);
   }, []);
 
   useEffect(() => {
-    const updateState = () => setValueCore(getLocalConfigs());
+    const updateState = () => setValueCore(getLocalConfig());
 
     // next.js requires server rendered markup to match the client side,
     // but since local config is stored in localStorage, it is not accessible from the server.
@@ -78,14 +78,14 @@ const LocalConfigsProvider = ({ children }: { children?: ReactNode }) => {
   }, []);
 
   return (
-    <ConfigsContextRoot value={value} setValue={setValue}>
+    <ConfigContextRoot value={value} setValue={setValue}>
       {children}
-    </ConfigsContextRoot>
+    </ConfigContextRoot>
   );
 };
 
-const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; children?: ReactNode }) => {
-  const [value, setValue] = useState(() => ({ ...DefaultConfigs, ...initial.data }));
+const SynchronizedConfigProvider = ({ initial, children }: { initial: WebData; children?: ReactNode }) => {
+  const [value, setValue] = useState(() => ({ ...DefaultConfig, ...initial.data }));
   const [, setSync] = useState(false);
 
   const lastValue = useRef(initial.data);
@@ -138,7 +138,7 @@ const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; 
 
             case "failure":
               token = result.token;
-              setValue((lastValue.current = { ...DefaultConfigs, ...result.data }));
+              setValue((lastValue.current = { ...DefaultConfig, ...result.data }));
               break;
           }
 
@@ -170,7 +170,7 @@ const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; 
   }, [signals, patchQueue]);
 
   return (
-    <ConfigsContextRoot value={value} setValue={setValue}>
+    <ConfigContextRoot value={value} setValue={setValue}>
       <SyncContext.Provider
         value={useMemo(
           () => ({
@@ -189,29 +189,29 @@ const SynchronizedConfigsProvider = ({ initial, children }: { initial: WebData; 
       >
         {children}
       </SyncContext.Provider>
-    </ConfigsContextRoot>
+    </ConfigContextRoot>
   );
 };
 
-const ConfigsContextRoot = ({
+const ConfigContextRoot = ({
   value,
   setValue,
   children,
 }: {
-  value: Configs;
-  setValue: Dispatch<SetStateAction<Configs>>;
+  value: Config;
+  setValue: Dispatch<SetStateAction<Config>>;
   children?: ReactNode;
 }) => {
   const ref = useRef(value);
 
   const set = useCallback(
-    (newValue: SetStateAction<Configs>) => {
+    (newValue: SetStateAction<Config>) => {
       setValue((value) => {
         if (typeof newValue === "function") {
           newValue = newValue(value);
         }
 
-        return { ...DefaultConfigs, ...newValue };
+        return { ...DefaultConfig, ...newValue };
       });
     },
     [setValue]
@@ -237,7 +237,7 @@ const ConfigsContextRoot = ({
   }, [value, events]);
 
   return (
-    <ConfigsContext.Provider
+    <ConfigContext.Provider
       value={useMemo(
         () => ({
           ref,
@@ -248,8 +248,8 @@ const ConfigsContextRoot = ({
       )}
     >
       {children}
-    </ConfigsContext.Provider>
+    </ConfigContext.Provider>
   );
 };
 
-export default memo(ConfigsProvider);
+export default memo(ConfigProvider);

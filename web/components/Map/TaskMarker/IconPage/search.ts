@@ -1,6 +1,6 @@
 import { MemorySearch } from "../../../../utils/memorySearch";
 import { Artifacts } from "../../../../db/artifacts";
-import { Task } from "../../../../utils/configs";
+import { Task } from "../../../../utils/config";
 
 export const KnownResourceTimers: Record<string, Task["refreshTime"]> = {};
 export const IconSearch = new MemorySearch<string>();

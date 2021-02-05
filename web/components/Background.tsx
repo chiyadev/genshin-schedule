@@ -1,9 +1,9 @@
 import React, { memo } from "react";
-import { Configs, useConfig } from "../utils/configs";
+import { Config, useConfig } from "../utils/config";
 import { BackgroundKlee, BackgroundPaimon, BackgroundZhongli } from "../assets";
 import { chakra } from "@chakra-ui/react";
 
-const backgrounds: { [key in Configs["background"]]?: string } = {
+const backgrounds: { [key in Config["background"]]?: string } = {
   paimon: BackgroundPaimon,
   klee: BackgroundKlee,
   zhongli: BackgroundZhongli,

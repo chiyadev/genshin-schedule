@@ -1,5 +1,5 @@
 import React, { memo, ReactNode } from "react";
-import { Configs, useConfig } from "../../utils/configs";
+import { Config, useConfig } from "../../utils/config";
 import { FaCaretRight } from "react-icons/fa";
 import { chakra, Collapse, Fade, HStack, Icon, Link, Spacer, useColorModeValue, VStack } from "@chakra-ui/react";
 
@@ -10,7 +10,7 @@ const WidgetWrapper = ({
   menu,
   onHover,
 }: {
-  type: keyof Configs["hiddenWidgets"];
+  type: keyof Config["hiddenWidgets"];
   heading?: ReactNode;
   children?: ReactNode;
   menu?: ReactNode;

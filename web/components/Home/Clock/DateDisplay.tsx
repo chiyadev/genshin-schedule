@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { getResinRecharge, ResinCap, roundResin } from "../../../db/resins";
 import { chakra } from "@chakra-ui/react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import {
   formatDurationPartSimple,
   getLargestUnit,

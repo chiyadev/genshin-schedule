@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { createApiClient, WebData } from "../../../utils/api";
 import { GetServerSideProps } from "next";
-import ConfigsProvider from "../../../components/ConfigsProvider";
+import ConfigProvider from "../../../components/ConfigProvider";
 import Layout from "../../../components/Layout";
 import { Characters, CharacterWiki } from "../../../db/characters";
 import { chakra, HStack, Link } from "@chakra-ui/react";
@@ -46,7 +46,7 @@ const CharacterInfo = ({ data, name }: Props) => {
   const character = Characters.find((character) => character.name === name);
 
   return (
-    <ConfigsProvider initial={data}>
+    <ConfigProvider initial={data}>
       <Layout title={[character?.name || "Not Found"]}>
         {character ? (
           <WhiteCard divide>
@@ -85,7 +85,7 @@ const CharacterInfo = ({ data, name }: Props) => {
           <div>No such character.</div>
         )}
       </Layout>
-    </ConfigsProvider>
+    </ConfigProvider>
   );
 };
 

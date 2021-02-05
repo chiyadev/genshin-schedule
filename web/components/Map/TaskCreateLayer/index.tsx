@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import TaskMarker from "../TaskMarker";
 import CreateButton from "./CreateButton";
 import { useMapEvent } from "react-leaflet";

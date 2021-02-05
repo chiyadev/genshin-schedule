@@ -1,7 +1,7 @@
 import React, { memo, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import TaskSearchModal from "../TaskSearchModal";
-import { useConfig } from "../../utils/configs";
+import { useConfig } from "../../utils/config";
 import { HStack, Link } from "@chakra-ui/react";
 import { trackEvent } from "../../utils/umami";
 

@@ -2,7 +2,7 @@ import React, { memo, useMemo } from "react";
 import { CharacterSearch } from "./search";
 import Icon from "./Icon";
 import { Grid, Heading, VStack } from "@chakra-ui/react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 
 const CharacterList = () => {
   const [search] = useConfig("customizeQuery");

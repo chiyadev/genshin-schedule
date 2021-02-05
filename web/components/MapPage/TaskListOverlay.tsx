@@ -3,7 +3,7 @@ import { chakra, Collapse, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import TaskListCard from "../TaskListCard";
 import { useDueTasks, useFilteredTasks } from "../../utils/tasks";
-import { useConfig } from "../../utils/configs";
+import { useConfig } from "../../utils/config";
 import { useHotkeys } from "react-hotkeys-hook";
 import { trackEvent } from "../../utils/umami";
 

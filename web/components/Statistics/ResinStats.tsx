@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import WhiteCard from "../WhiteCard";
 import { chakra, Heading, HStack, StackDivider, useColorModeValue, useToken, VStack } from "@chakra-ui/react";
-import { StatFrame, useConfig, useCurrentStats } from "../../utils/configs";
+import { StatFrame, useConfig, useCurrentStats } from "../../utils/config";
 import { DateTime } from "luxon";
 import { ResinsPerMinute } from "../../db/resins";
 import { useEfficiencyColor } from "./color";

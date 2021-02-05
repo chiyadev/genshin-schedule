@@ -1,6 +1,6 @@
 import { memo, useEffect, useRef } from "react";
 import { useMap, useMapEvent } from "react-leaflet";
-import { useConfig } from "../../utils/configs";
+import { useConfig } from "../../utils/config";
 
 const PositionSync = () => {
   const map = useMap();

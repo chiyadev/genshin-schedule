@@ -2,7 +2,7 @@ import React, { Dispatch, memo, useMemo } from "react";
 import { Checkbox, HStack, Icon, Spacer } from "@chakra-ui/react";
 import { FaBell, FaBellSlash } from "react-icons/fa";
 import { trackEvent } from "../../../../utils/umami";
-import { Task, useApiNotification } from "../../../../utils/configs";
+import { Task, useApiNotification } from "../../../../utils/config";
 import { useServerTime } from "../../../../utils/time";
 import { getAssetByName } from "../../../../assets";
 import { useColorHex } from "../../../../utils/theme";

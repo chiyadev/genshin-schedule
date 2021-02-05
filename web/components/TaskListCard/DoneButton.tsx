@@ -1,6 +1,6 @@
 import { FaCheck } from "react-icons/fa";
 import React, { Dispatch, memo, SetStateAction } from "react";
-import { Task } from "../../utils/configs";
+import { Task } from "../../utils/config";
 import { trackEvent } from "../../utils/umami";
 import { Icon, IconButton, Tooltip } from "@chakra-ui/react";
 import { useTaskDoneSetter, useTaskFocusSetter } from "../../utils/tasks";

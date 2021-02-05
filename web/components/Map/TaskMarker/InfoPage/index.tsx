@@ -1,5 +1,5 @@
 import React, { Dispatch, memo, SetStateAction, useState } from "react";
-import { DefaultConfigs, Task, useSync } from "../../../../utils/configs";
+import { DefaultConfig, Task, useSync } from "../../../../utils/config";
 import { PopupPage } from "../index";
 import IntervalPicker from "./IntervalPicker";
 import DueText from "./DueText";
@@ -78,7 +78,7 @@ const InfoPage = ({
 
                 return {
                   ...task,
-                  refreshTime: typeof timer === "number" ? timer : DefaultConfigs.mapCreateTask.refreshTime,
+                  refreshTime: typeof timer === "number" ? timer : DefaultConfig.mapCreateTask.refreshTime,
                 };
               });
             }}

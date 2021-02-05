@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { HStack, Icon, Select } from "@chakra-ui/react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import { FaImage } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 

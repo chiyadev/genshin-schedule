@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { Domain, Domains } from "../../../db/domains";
 import { getServerResetTime, useServerTime, Weekdays } from "../../../utils/time";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import { Character, Characters } from "../../../db/characters";
 import {
   DomainCategories,

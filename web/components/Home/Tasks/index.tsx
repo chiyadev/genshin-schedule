@@ -9,7 +9,7 @@ import { chakra, HStack, Icon, Link, useColorModeValue, VStack } from "@chakra-u
 import dynamic from "next/dynamic";
 import SearchButton from "./SearchButton";
 import { useHotkeys } from "react-hotkeys-hook";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 
 const MapCore = dynamic(() => import("../../Map"), { ssr: false });
 

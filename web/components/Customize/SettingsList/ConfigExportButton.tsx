@@ -19,18 +19,18 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { FaCheck, FaCode, FaCopy, FaPencilAlt } from "react-icons/fa";
-import { useConfigs } from "../../../utils/configs";
+import { useConfigs } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
 
 const ConfigExportButton = () => {
   const [open, setOpen] = useState(false);
   const [configs, setConfigs] = useConfigs();
-  const configsString = useMemo(() => JSON.stringify(configs, null, 2), [configs]);
-  const [data, setData] = useState(configsString);
+  const configString = useMemo(() => JSON.stringify(configs, null, 2), [configs]);
+  const [data, setData] = useState(configString);
   const { onCopy, hasCopied } = useClipboard(data);
   const toast = useToast();
 
-  useEffect(() => setData(configsString), [configsString]);
+  useEffect(() => setData(configString), [configString]);
 
   return (
     <>

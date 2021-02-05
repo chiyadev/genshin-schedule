@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { arrayToggle } from "../../../utils";
 import { trackEvent } from "../../../utils/umami";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import { Character } from "../../../db/characters";
 import { chakra, Checkbox, VStack } from "@chakra-ui/react";
 

@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { createApiClient, WebData } from "../../../utils/api";
 import { GetServerSideProps } from "next";
-import ConfigsProvider from "../../../components/ConfigsProvider";
+import ConfigProvider from "../../../components/ConfigProvider";
 import Layout from "../../../components/Layout";
 import { chakra, HStack, Link } from "@chakra-ui/react";
 import WhiteCard from "../../../components/WhiteCard";
@@ -46,7 +46,7 @@ const WeaponInfo = ({ data, name }: Props) => {
   const weapon = Weapons.find((weapon) => weapon.name === name);
 
   return (
-    <ConfigsProvider initial={data}>
+    <ConfigProvider initial={data}>
       <Layout title={[weapon?.name || "Not Found"]}>
         {weapon ? (
           <WhiteCard divide>
@@ -79,7 +79,7 @@ const WeaponInfo = ({ data, name }: Props) => {
           <div>No such weapon.</div>
         )}
       </Layout>
-    </ConfigsProvider>
+    </ConfigProvider>
   );
 };
 

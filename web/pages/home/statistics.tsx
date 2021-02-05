@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import Layout from "../../components/Layout";
 import { GetServerSideProps } from "next";
 import { createApiClient, WebData } from "../../utils/api";
-import ConfigsProvider from "../../components/ConfigsProvider";
+import ConfigProvider from "../../components/ConfigProvider";
 import { VStack } from "@chakra-ui/react";
 import ResinStats from "../../components/Statistics/ResinStats";
 import TaskStats from "../../components/Statistics/TaskStats";
@@ -33,7 +33,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
 const Statistics = ({ data }: Props) => {
   return (
-    <ConfigsProvider initial={data}>
+    <ConfigProvider initial={data}>
       <Layout title={["Statistics"]}>
         <VStack align="stretch" spacing={12}>
           <InfoText />
@@ -41,7 +41,7 @@ const Statistics = ({ data }: Props) => {
           <TaskStats />
         </VStack>
       </Layout>
-    </ConfigsProvider>
+    </ConfigProvider>
   );
 };
 

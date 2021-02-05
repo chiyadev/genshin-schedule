@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import Layout from "../../components/Layout";
 import { GetServerSideProps } from "next";
 import { createApiClient, User, WebData } from "../../utils/api";
-import ConfigsProvider from "../../components/ConfigsProvider";
+import ConfigProvider from "../../components/ConfigProvider";
 import { VStack, Wrap, WrapItem } from "@chakra-ui/react";
 import DirectSignInButton from "../../components/Admin/DirectSignInButton";
 
@@ -33,7 +33,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
 const Admin = ({ user, data }: Props) => {
   return (
-    <ConfigsProvider initial={data}>
+    <ConfigProvider initial={data}>
       <Layout title={["Admin Tools"]}>
         <VStack align="stretch" spacing={4}>
           <div>Administrator tools:</div>
@@ -49,7 +49,7 @@ const Admin = ({ user, data }: Props) => {
           )}
         </VStack>
       </Layout>
-    </ConfigsProvider>
+    </ConfigProvider>
   );
 };
 

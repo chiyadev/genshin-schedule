@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import { FaRegStickyNote } from "react-icons/fa";
 import { HStack, Icon, Textarea, VStack } from "@chakra-ui/react";
 import { Character } from "../../../db/characters";

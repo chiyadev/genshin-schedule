@@ -1,5 +1,5 @@
 import React, { memo, useCallback } from "react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
 import { Button, Heading, HStack, Tooltip } from "@chakra-ui/react";
 import { useHotkeys } from "react-hotkeys-hook";

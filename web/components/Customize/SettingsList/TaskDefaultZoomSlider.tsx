@@ -1,6 +1,6 @@
 import React, { memo, useState } from "react";
 import { chakra, HStack, Icon, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Tooltip } from "@chakra-ui/react";
-import { MapZoomMax, MapZoomMin, useConfig } from "../../../utils/configs";
+import { MapZoomMax, MapZoomMin, useConfig } from "../../../utils/config";
 import { FaSearchPlus } from "react-icons/fa";
 
 const TaskDefaultZoomSlider = () => {

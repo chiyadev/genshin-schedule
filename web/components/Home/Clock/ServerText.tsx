@@ -1,6 +1,6 @@
 import { Link, Tooltip } from "@chakra-ui/react";
 import React, { memo } from "react";
-import { ServerList, useConfig } from "../../../utils/configs";
+import { ServerList, useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
 import { useServerTimeZone } from "../../../utils/time";
 

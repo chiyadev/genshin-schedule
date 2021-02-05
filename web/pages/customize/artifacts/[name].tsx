@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { createApiClient, WebData } from "../../../utils/api";
 import { GetServerSideProps } from "next";
-import ConfigsProvider from "../../../components/ConfigsProvider";
+import ConfigProvider from "../../../components/ConfigProvider";
 import Layout from "../../../components/Layout";
 import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import WhiteCard from "../../../components/WhiteCard";
@@ -46,7 +46,7 @@ const ArtifactInfo = ({ data, name }: Props) => {
   const artifact = Artifacts.find((artifact) => artifact.name === name);
 
   return (
-    <ConfigsProvider initial={data}>
+    <ConfigProvider initial={data}>
       <Layout title={[artifact?.name || "Not Found"]}>
         {artifact ? (
           <WhiteCard divide>
@@ -78,7 +78,7 @@ const ArtifactInfo = ({ data, name }: Props) => {
           <div>No such artifact.</div>
         )}
       </Layout>
-    </ConfigsProvider>
+    </ConfigProvider>
   );
 };
 

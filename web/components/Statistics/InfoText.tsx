@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { useConfig } from "../../utils/configs";
+import { useConfig } from "../../utils/config";
 import { ButtonGroup, HStack, Spacer } from "@chakra-ui/react";
 import pluralize from "pluralize";
 import ResetButton from "./ResetButton";

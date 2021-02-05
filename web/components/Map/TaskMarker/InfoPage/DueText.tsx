@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { Task } from "../../../../utils/configs";
+import { Task } from "../../../../utils/config";
 import { formatDurationPartSimple, getLargestUnit, useServerTime } from "../../../../utils/time";
 import { FaClock } from "react-icons/fa";
 import { HStack, Icon, useColorModeValue } from "@chakra-ui/react";

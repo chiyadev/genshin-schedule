@@ -1,7 +1,7 @@
 import { memo, useMemo } from "react";
 import { ResinCap, ResinsPerMinute } from "../../../db/resins";
 import { DateTime } from "luxon";
-import { useApiNotification, useConfig } from "../../../utils/configs";
+import { useApiNotification, useConfig } from "../../../utils/config";
 import { Resin } from "../../../assets";
 import { useServerTime } from "../../../utils/time";
 import { useColorHex } from "../../../utils/theme";

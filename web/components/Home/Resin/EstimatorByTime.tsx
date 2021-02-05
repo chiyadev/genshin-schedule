@@ -1,5 +1,5 @@
 import React, { memo, useMemo } from "react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import { formatDurationPartSimple, formatDurationSimple, formatTimeSimple, useServerTime } from "../../../utils/time";
 import { getResinRecharge, ResinCap, ResinsPerMinute, roundResin } from "../../../db/resins";
 import { DateTime, Duration } from "luxon";

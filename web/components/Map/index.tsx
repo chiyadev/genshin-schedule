@@ -1,5 +1,5 @@
 import React, { CSSProperties, memo, ReactNode } from "react";
-import { MapZoomMax, MapZoomMin, useConfig } from "../../utils/configs";
+import { MapZoomMax, MapZoomMin, useConfig } from "../../utils/config";
 import TileLayer from "./TileLayer";
 import TaskLayer from "./TaskLayer";
 import TaskCreateLayer from "./TaskCreateLayer";

@@ -1,6 +1,6 @@
 import React, { memo, useState } from "react";
 import { chakra, HStack, Icon, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Tooltip } from "@chakra-ui/react";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 import { FaBell } from "react-icons/fa";
 import { ResinCap } from "../../../db/resins";
 import NotificationSetter from "../../Home/Resin/NotificationSetter";

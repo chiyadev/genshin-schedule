@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { createApiClient, WebData } from "../../utils/api";
 import { GetServerSideProps } from "next";
-import ConfigsProvider from "../../components/ConfigsProvider";
+import ConfigProvider from "../../components/ConfigProvider";
 import Layout from "../../components/Layout";
 import dynamic from "next/dynamic";
 import TaskListOverlay from "../../components/MapPage/TaskListOverlay";
@@ -35,7 +35,7 @@ const MapCore = dynamic(() => import("../../components/Map"), { ssr: false });
 
 const Map = ({ data }: Props) => {
   return (
-    <ConfigsProvider initial={data}>
+    <ConfigProvider initial={data}>
       <Layout title={["Map"]} header={false} footer={false} background={false}>
         <HeaderOverlay />
         <TaskListOverlay />
@@ -49,7 +49,7 @@ const Map = ({ data }: Props) => {
           />
         </chakra.div>
       </Layout>
-    </ConfigsProvider>
+    </ConfigProvider>
   );
 };
 

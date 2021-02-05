@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { Task, useConfig, useSync } from "../../../utils/configs";
+import { Task, useConfig, useSync } from "../../../utils/config";
 import { FaTrash } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { HStack, Icon, Link } from "@chakra-ui/react";

@@ -1,5 +1,5 @@
 import React, { Dispatch, memo, SetStateAction } from "react";
-import { Task } from "../../../utils/configs";
+import { Task } from "../../../utils/config";
 import { useServerTime } from "../../../utils/time";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";

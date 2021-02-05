@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import Layout from "../../../components/Layout";
 import { GetServerSideProps } from "next";
 import { createApiClient, Notification, WebData } from "../../../utils/api";
-import ConfigsProvider from "../../../components/ConfigsProvider";
+import ConfigProvider from "../../../components/ConfigProvider";
 import { VStack } from "@chakra-ui/layout";
 import WhiteCard from "../../../components/WhiteCard";
 import { Button, chakra, HStack } from "@chakra-ui/react";
@@ -35,7 +35,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
 const Home = ({ data, queue }: Props) => {
   return (
-    <ConfigsProvider initial={data}>
+    <ConfigProvider initial={data}>
       <Layout title={["Notification queue"]}>
         <VStack align="stretch" spacing={4}>
           <div>Notification queue:</div>
@@ -92,7 +92,7 @@ const Home = ({ data, queue }: Props) => {
           )}
         </VStack>
       </Layout>
-    </ConfigsProvider>
+    </ConfigProvider>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { HStack, Icon, Switch } from "@chakra-ui/react";
 import { FaPaintRoller } from "react-icons/fa";
-import { useConfig } from "../../../utils/configs";
+import { useConfig } from "../../../utils/config";
 
 const ThemeSwitch = () => {
   const [value, setValue] = useConfig("theme");
