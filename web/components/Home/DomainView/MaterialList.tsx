@@ -3,21 +3,18 @@ import { TalentMaterial, TalentMaterialWiki } from "../../../db/talentMaterials"
 import { WeaponMaterial, WeaponMaterialWiki } from "../../../db/weaponMaterials";
 import { Character } from "../../../db/characters";
 import { Weapon } from "../../../db/weapons";
-import NoteText from "./NoteText";
-import NextLink from "next/link";
 import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
+import Item from "./Item";
 
-const MaterialDisplay = ({
+const MaterialList = ({
   material,
   items,
   path,
-  roundIcon,
 }: {
   material: TalentMaterial | WeaponMaterial;
   items: (Character | Weapon)[];
   path: "characters" | "weapons";
-  roundIcon?: boolean;
 }) => {
   return (
     <VStack align="stretch" spacing={4}>
@@ -48,29 +45,12 @@ const MaterialDisplay = ({
       </HStack>
 
       <VStack align="start" spacing={2} pl={4}>
-        {items.map((item) => (
-          <HStack key={item.name} spacing={2}>
-            <chakra.img
-              alt={item.name}
-              src={getAssetByName(item.name)}
-              w={6}
-              h={6}
-              objectFit="contain"
-              borderRadius={roundIcon ? "full" : undefined}
-            />
-
-            <div>
-              <NextLink href={`/customize/${path}/${item.name}`} passHref>
-                <Link>{item.name}</Link>
-              </NextLink>
-
-              <NoteText name={item.name} />
-            </div>
-          </HStack>
+        {items.map(({ name }) => (
+          <Item key={name} path={path} name={name} />
         ))}
       </VStack>
     </VStack>
   );
 };
 
-export default memo(MaterialDisplay);
+export default memo(MaterialList);

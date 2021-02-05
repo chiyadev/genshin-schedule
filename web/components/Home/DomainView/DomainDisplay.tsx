@@ -1,8 +1,8 @@
 import React, { memo, useMemo } from "react";
 import WhiteCard from "../../WhiteCard";
 import { ScheduledDomain } from "./index";
-import MaterialDisplay from "./MaterialDisplay";
-import ArtifactDisplay from "./ArtifactDisplay";
+import MaterialList from "./MaterialList";
+import ArtifactList from "./ArtifactList";
 import { chakra, HStack, Link } from "@chakra-ui/react";
 import { Domain } from "../../../assets";
 
@@ -37,7 +37,7 @@ const DomainDisplay = ({ domain, region, category, talentMaterials, weaponMateri
       {useMemo(
         () =>
           talentMaterials.map(({ material, characters }) => (
-            <MaterialDisplay key={material.name} material={material} items={characters} path="characters" roundIcon />
+            <MaterialList key={material.name} material={material} items={characters} path="characters" />
           )),
         [talentMaterials]
       )}
@@ -45,12 +45,12 @@ const DomainDisplay = ({ domain, region, category, talentMaterials, weaponMateri
       {useMemo(
         () =>
           weaponMaterials.map(({ material, weapons }) => (
-            <MaterialDisplay key={material.name} material={material} items={weapons} path="weapons" />
+            <MaterialList key={material.name} material={material} items={weapons} path="weapons" />
           )),
         [weaponMaterials]
       )}
 
-      {useMemo(() => !!artifacts.length && <ArtifactDisplay artifacts={artifacts} />, [artifacts])}
+      {useMemo(() => !!artifacts.length && <ArtifactList artifacts={artifacts} />, [artifacts])}
     </WhiteCard>
   );
 };

@@ -2,7 +2,7 @@ import { chakra } from "@chakra-ui/react";
 import React, { memo } from "react";
 import { useConfig } from "../../../utils/config";
 
-const NoteText = ({ name }: { name: string }) => {
+const ItemNote = ({ name }: { name: string }) => {
   const [notes] = useConfig("itemNotes");
   const note = notes[name];
 
@@ -18,4 +18,4 @@ const NoteText = ({ name }: { name: string }) => {
   );
 };
 
-export default memo(NoteText);
+export default memo(ItemNote);

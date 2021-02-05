@@ -42,6 +42,7 @@ export type Config = {
   artifacts: string[];
   domainFilters: ("character" | "weapon" | "artifact")[];
   itemNotes: { [key: string]: string };
+  itemHighlights: string[];
   tasks: Task[];
   taskQuery: string;
   customizeQuery: string;
@@ -66,6 +67,7 @@ export type Task = {
   dueTime: number;
   refreshTime: number | "reset";
   notify?: boolean;
+  highlight?: boolean;
 };
 
 export type StatFrame = {
@@ -99,6 +101,7 @@ export const DefaultConfig: Config = {
   artifacts: [],
   domainFilters: [],
   itemNotes: {},
+  itemHighlights: [],
   tasks: [],
   taskQuery: "",
   customizeQuery: "",

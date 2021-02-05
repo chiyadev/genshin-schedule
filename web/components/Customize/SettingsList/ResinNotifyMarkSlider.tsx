@@ -15,7 +15,7 @@ const ResinNotifyMarkSlider = () => {
 
       <HStack spacing={2}>
         <Icon as={FaBell} />
-        <div>Resin notification point</div>
+        <div>Send resin notification at</div>
       </HStack>
 
       <Tooltip label={<span>{value} resins</span>} isOpen={hint} placement="top">

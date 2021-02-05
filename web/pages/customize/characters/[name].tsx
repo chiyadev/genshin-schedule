@@ -68,11 +68,11 @@ const CharacterInfo = ({ data, name }: Props) => {
             </HStack>
 
             {character.talentMaterialWeekly.map((material) => (
-              <MaterialDisplay key={material.name} character={character} material={material} isWeekly={true} />
+              <MaterialDisplay key={material.name} character={character} material={material} isWeekly />
             ))}
 
             {character.talentMaterials.map((material) => (
-              <MaterialDisplay key={material.name} character={character} material={material} isWeekly={false} />
+              <MaterialDisplay key={material.name} character={character} material={material} />
             ))}
 
             {character.commonMaterials.map((material) => (

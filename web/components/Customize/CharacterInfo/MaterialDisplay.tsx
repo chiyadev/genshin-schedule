@@ -13,7 +13,7 @@ const MaterialDisplay = ({
 }: {
   character: Character;
   material: TalentMaterial;
-  isWeekly: boolean;
+  isWeekly?: boolean;
 }) => {
   return (
     <VStack align="start" spacing={4}>
