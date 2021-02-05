@@ -10,7 +10,12 @@ const NoteText = ({ name }: { name: string }) => {
     return null;
   }
 
-  return <chakra.span color="gray.500"> &mdash; {note}</chakra.span>;
+  return (
+    <chakra.span color="gray.500" wordBreak="break-word">
+      <span> &mdash; </span>
+      {note}
+    </chakra.span>
+  );
 };
 
 export default memo(NoteText);

@@ -20,8 +20,9 @@ import { FaTimes } from "react-icons/fa";
 import { Artifact, Artifacts } from "../../../db/artifacts";
 import DomainDisplay from "./DomainDisplay";
 import WidgetWrapper from "../WidgetWrapper";
-import { HStack, Icon, Link, useColorModeValue, VStack } from "@chakra-ui/react";
+import { Grid, HStack, Icon, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import FilterButtons from "./FilterButtons";
+import styles from "./index.module.css";
 
 export type ScheduledDomain = {
   domain: Domain;
@@ -76,7 +77,9 @@ const DomainView = () => {
 
     const getDomainFromDrops = (drops: DomainDropSet) => {
       for (const domain of Domains) {
-        if (domain.drops.includes(drops)) return domain;
+        if (domain.drops.includes(drops)) {
+          return domain;
+        }
       }
     };
 
@@ -141,22 +144,20 @@ const DomainView = () => {
         for (const weaponName of weapons) {
           const weapon = Weapons.find((weapon) => weapon.name === weaponName);
 
-          if (weapon) {
-            if (drops.items.includes(weapon.material)) {
-              const domain = getDomainFromDrops(drops);
+          if (weapon && drops.items.includes(weapon.material)) {
+            const domain = getDomainFromDrops(drops);
 
-              if (domain) {
-                const scheduled = getScheduled(domain);
-                const group = scheduled.weaponMaterials.find((x) => x.material === weapon.material);
+            if (domain) {
+              const scheduled = getScheduled(domain);
+              const group = scheduled.weaponMaterials.find((x) => x.material === weapon.material);
 
-                if (group) {
-                  group.weapons.push(weapon);
-                } else {
-                  scheduled.weaponMaterials.push({
-                    material: weapon.material,
-                    weapons: [weapon],
-                  });
-                }
+              if (group) {
+                group.weapons.push(weapon);
+              } else {
+                scheduled.weaponMaterials.push({
+                  material: weapon.material,
+                  weapons: [weapon],
+                });
               }
             }
           }
@@ -167,30 +168,52 @@ const DomainView = () => {
         for (const artifactName of artifacts) {
           const artifact = Artifacts.find((artifact) => artifact.name === artifactName);
 
-          if (artifact) {
-            if (drops.items.includes(artifact)) {
-              const domain = getDomainFromDrops(drops);
+          if (artifact && drops.items.includes(artifact)) {
+            const domain = getDomainFromDrops(drops);
 
-              if (domain) {
-                const scheduled = getScheduled(domain);
+            if (domain) {
+              const scheduled = getScheduled(domain);
 
-                scheduled.artifacts.push(artifact);
-              }
+              scheduled.artifacts.push(artifact);
             }
           }
         }
       }
     }
 
+    for (const result of results) {
+      result.talentMaterials.sort((a, b) => a.material.name.localeCompare(b.material.name));
+
+      for (const group of result.talentMaterials) {
+        group.characters.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      result.weaponMaterials.sort((a, b) => a.material.name.localeCompare(b.material.name));
+
+      for (const group of result.weaponMaterials) {
+        group.weapons.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      result.artifacts.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
     const categoryOrder: (DomainCategory | undefined)[] = [Trounce, DomainOfMastery, DomainOfForgery, DomainOfBlessing];
 
     return results.sort((a, b) => {
       const category = categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category);
-      if (category) return category;
 
-      return a.domain.name.localeCompare(b.domain.name);
+      if (category) {
+        return category;
+      } else {
+        return a.domain.name.localeCompare(b.domain.name);
+      }
     });
   }, [filters, characters, charactersWeekly, weapons, artifacts, today]);
+
+  const domainColumns = [
+    domains.filter(({ category }) => category === Trounce || category === DomainOfMastery),
+    domains.filter(({ category }) => category === DomainOfForgery || category === DomainOfBlessing),
+  ];
 
   const [hidden] = useConfig("hiddenWidgets");
 
@@ -202,11 +225,15 @@ const DomainView = () => {
         menu={<FilterButtons />}
       >
         {domains.length ? (
-          <VStack align="stretch" spacing={4}>
-            {domains.map((domain) => (
-              <DomainDisplay key={domain.domain.name} {...domain} />
+          <Grid className={domainColumns.some((column) => !column.length) ? undefined : styles.grid} gap={4}>
+            {domainColumns.map((domains, i) => (
+              <VStack key={i} align="stretch" spacing={4}>
+                {domains.map((domain) => (
+                  <DomainDisplay key={domain.domain.name} {...domain} />
+                ))}
+              </VStack>
             ))}
-          </VStack>
+          </Grid>
         ) : (
           <HStack spacing={2}>
             <Icon as={FaTimes} />

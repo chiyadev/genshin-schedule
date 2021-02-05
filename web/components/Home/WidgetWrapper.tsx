@@ -42,7 +42,9 @@ const WidgetWrapper = ({
         </Link>
 
         <Spacer />
-        <Fade in={!hidden[type]}>{menu}</Fade>
+        <Fade in={!hidden[type]} unmountOnExit>
+          {menu}
+        </Fade>
       </HStack>
 
       <Collapse in={!hidden[type]} unmountOnExit>

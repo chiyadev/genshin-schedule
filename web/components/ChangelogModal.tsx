@@ -14,11 +14,14 @@ import {
 } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 14;
+const LatestChangelog = 15;
 
 function buildChangelog() {
   return [
-    <ChangelogSection key={14} date="2021/02/04">
+    <ChangelogSection key={15} date="2021/02/05">
+      <ChangelogItem>Split domain view into two columns on large screens.</ChangelogItem>
+    </ChangelogSection>,
+    <ChangelogSection key={14} date="2021/02/03">
       <ChangelogItem>Fixed dark mode theme not being applied at the root level.</ChangelogItem>
       <ChangelogItem github={46}>Added icons for placeable gadgets.</ChangelogItem>
       <ChangelogItem github={28}>Improved reliability of Discord notification delivery.</ChangelogItem>
