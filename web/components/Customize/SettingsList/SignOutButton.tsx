@@ -13,7 +13,7 @@ const SignOutButton = () => {
       leftIcon={<Icon as={FaSignOutAlt} />}
       onClick={() => {
         setAuthToken(undefined);
-        trackEvent("sync", "disable");
+        trackEvent("auth", "signOut");
 
         setTimeout(() => router.push("/"));
       }}

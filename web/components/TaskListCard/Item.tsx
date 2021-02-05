@@ -52,6 +52,8 @@ const Item = ({
               ...task,
               highlight: !task.highlight,
             }));
+
+            trackEvent("taskList", "taskHighlight");
           }}
         />
 

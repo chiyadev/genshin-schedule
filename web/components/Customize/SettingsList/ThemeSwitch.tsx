@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import { HStack, Icon, Switch } from "@chakra-ui/react";
 import { FaPaintRoller } from "react-icons/fa";
 import { useConfig } from "../../../utils/config";
+import { trackEvent } from "../../../utils/umami";
 
 const ThemeSwitch = () => {
   const [value, setValue] = useConfig("theme");
@@ -15,7 +16,10 @@ const ThemeSwitch = () => {
 
       <Switch
         isChecked={value === "dark"}
-        onChange={({ currentTarget: { checked } }) => setValue(checked ? "dark" : "light")}
+        onChange={({ currentTarget: { checked } }) => {
+          setValue(checked ? "dark" : "light");
+          trackEvent("theme", checked ? "dark" : "light");
+        }}
       />
     </HStack>
   );

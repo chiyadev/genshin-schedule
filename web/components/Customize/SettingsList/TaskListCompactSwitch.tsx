@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import { HStack, Icon, Switch } from "@chakra-ui/react";
 import { FaListOl } from "react-icons/fa";
 import { useConfig } from "../../../utils/config";
+import { trackEvent } from "../../../utils/umami";
 
 const TaskListCompactSwitch = () => {
   const [value, setValue] = useConfig("taskListCompact");
@@ -13,7 +14,13 @@ const TaskListCompactSwitch = () => {
         <div>Compact task list</div>
       </HStack>
 
-      <Switch isChecked={value} onChange={({ currentTarget: { checked } }) => setValue(checked)} />
+      <Switch
+        isChecked={value}
+        onChange={({ currentTarget: { checked } }) => {
+          setValue(checked);
+          trackEvent("taskList", `compact${checked ? "Enable" : "Disable"}`);
+        }}
+      />
     </HStack>
   );
 };

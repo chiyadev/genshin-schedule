@@ -111,7 +111,7 @@ const UserSignIn = () => {
               const { token } = await client.auth({ username, password });
 
               setAuthToken(undefined, token);
-              trackEvent("sync", "enable");
+              trackEvent("auth", "signIn");
 
               setTimeout(() => router.push("/home"));
             } catch (e) {
@@ -130,7 +130,7 @@ const UserSignIn = () => {
             leftIcon={<Icon as={FaUser} />}
             onClick={() => {
               setAuthToken(undefined, "null");
-              trackEvent("sync", "auth");
+              trackEvent("auth", "signInAnonymous");
 
               setTimeout(() => router.push("/home"));
             }}

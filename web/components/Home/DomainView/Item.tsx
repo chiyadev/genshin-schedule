@@ -5,6 +5,7 @@ import { arrayToggle } from "../../../utils";
 import NextLink from "next/link";
 import ItemNote from "./ItemNote";
 import { useConfig } from "../../../utils/config";
+import { trackEvent } from "../../../utils/umami";
 
 const Item = ({ path, name }: { path: "characters" | "weapons" | "artifacts"; name: string }) => {
   const [highlights, setHighlights] = useConfig("itemHighlights");
@@ -23,6 +24,7 @@ const Item = ({ path, name }: { path: "characters" | "weapons" | "artifacts"; na
         cursor="pointer"
         onClick={() => {
           setHighlights((highlights) => arrayToggle(highlights, name));
+          trackEvent("domainView", "itemHighlight");
         }}
       />
 
