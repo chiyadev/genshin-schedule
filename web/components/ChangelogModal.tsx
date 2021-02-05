@@ -24,6 +24,7 @@ function buildChangelog() {
       <ChangelogItem>Added compact display mode to task list.</ChangelogItem>
       <ChangelogItem>Improved clock offset warning.</ChangelogItem>
       <ChangelogItem>Added estimated time of notification in resin calculator.</ChangelogItem>
+      <ChangelogItem>Updated Xiao; added Rosaria, Hu Tao (beta testing) and Primordial Jade Cutter.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={14} date="2021/02/03">
       <ChangelogItem>Fixed dark mode theme not being applied at the root level.</ChangelogItem>

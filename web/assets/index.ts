@@ -127,6 +127,7 @@ import HeavyHorn from "./game/Heavy Horn.png";
 import HerosWit from "./game/Hero's Wit.png";
 import HoarfrostCore from "./game/Hoarfrost Core.png";
 import Horsetail from "./game/Horsetail.png";
+import HuTao from "./game/Hu Tao.png";
 import HuntersSacrificialKnife from "./game/Hunter's Sacrificial Knife.png";
 import HurricaneSeed from "./game/Hurricane Seed.png";
 import Hydro from "./game/Hydro.png";
@@ -188,6 +189,7 @@ import PrayersforIllumination from "./game/Prayers for Illumination.png";
 import PrayersforWisdom from "./game/Prayers for Wisdom.png";
 import PrayerstoSpringtime from "./game/Prayers to Springtime.png";
 import Primogem from "./game/Primogem.png";
+import PrimordialJadeCutter from "./game/Primordial Jade Cutter.png";
 import PrimordialJadeWingedSpear from "./game/Primordial Jade Winged-Spear.png";
 import PrithivaTopazSliver from "./game/Prithiva Topaz Sliver.png";
 import PrototypeAmber from "./game/Prototype Amber.png";
@@ -212,6 +214,7 @@ import ResolutionofSojourner from "./game/Resolution of Sojourner.png";
 import Restaurant from "./game/Restaurant.png";
 import RetracingBolide from "./game/Retracing Bolide.png";
 import RingofBoreas from "./game/Ring of Boreas.png";
+import Rosaria from "./game/Rosaria.png";
 import RoyalGrimoire from "./game/Royal Grimoire.png";
 import Rust from "./game/Rust.png";
 import SacrificialBow from "./game/Sacrificial Bow.png";
@@ -435,6 +438,7 @@ export {
   HerosWit,
   HoarfrostCore,
   Horsetail,
+  HuTao,
   HuntersSacrificialKnife,
   HurricaneSeed,
   Hydro,
@@ -496,6 +500,7 @@ export {
   PrayersforWisdom,
   PrayerstoSpringtime,
   Primogem,
+  PrimordialJadeCutter,
   PrimordialJadeWingedSpear,
   PrithivaTopazSliver,
   PrototypeAmber,
@@ -520,6 +525,7 @@ export {
   Restaurant,
   RetracingBolide,
   RingofBoreas,
+  Rosaria,
   RoyalGrimoire,
   Rust,
   SacrificialBow,
@@ -745,6 +751,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Hero's Wit": return HerosWit;
     case "Hoarfrost Core": return HoarfrostCore;
     case "Horsetail": return Horsetail;
+    case "Hu Tao": return HuTao;
     case "Hunter's Sacrificial Knife": return HuntersSacrificialKnife;
     case "Hurricane Seed": return HurricaneSeed;
     case "Hydro": return Hydro;
@@ -806,6 +813,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Prayers for Wisdom": return PrayersforWisdom;
     case "Prayers to Springtime": return PrayerstoSpringtime;
     case "Primogem": return Primogem;
+    case "Primordial Jade Cutter": return PrimordialJadeCutter;
     case "Primordial Jade Winged-Spear": return PrimordialJadeWingedSpear;
     case "Prithiva Topaz Sliver": return PrithivaTopazSliver;
     case "Prototype Amber": return PrototypeAmber;
@@ -830,6 +838,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Restaurant": return Restaurant;
     case "Retracing Bolide": return RetracingBolide;
     case "Ring of Boreas": return RingofBoreas;
+    case "Rosaria": return Rosaria;
     case "Royal Grimoire": return RoyalGrimoire;
     case "Rust": return Rust;
     case "Sacrificial Bow": return SacrificialBow;

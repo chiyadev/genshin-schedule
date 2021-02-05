@@ -318,19 +318,37 @@ export const Ganyu: Character = {
 export const Ayaka: Character = {
   type: "Character",
   name: "Ayaka",
-  wiki: "https://genshin-impact.fandom.com/wiki/Ayaka",
-  talentMaterialWeekly: [],
+  wiki: "https://genshin.honeyhunterworld.com/db/char/ayaka/",
+  talentMaterialWeekly: [RingOfBoreas],
   talentMaterials: [Prosperity],
-  commonMaterials: [WhopperflowerNectar, SmallLampGrass],
+  commonMaterials: [SamachurlScroll, WhopperflowerNectar, SmallLampGrass],
 };
 
 export const Xiao: Character = {
   type: "Character",
   name: "Xiao",
   wiki: "https://genshin-impact.fandom.com/wiki/Xiao",
-  talentMaterialWeekly: [],
+  talentMaterialWeekly: [ShadowOfTheWarrior],
   talentMaterials: [Prosperity],
   commonMaterials: [Slime, Qingxin],
+};
+
+export const Rosaria: Character = {
+  type: "Character",
+  name: "Rosaria",
+  wiki: "https://genshin.honeyhunterworld.com/db/char/rosaria/",
+  talentMaterialWeekly: [ShadowOfTheWarrior],
+  talentMaterials: [Ballad],
+  commonMaterials: [FatuiInsignia, Valberry],
+};
+
+export const HuTao: Character = {
+  type: "Character",
+  name: "Hu Tao",
+  wiki: "https://genshin.honeyhunterworld.com/db/char/hutao/",
+  talentMaterialWeekly: [ShardOfAFoulLegacy],
+  talentMaterials: [Prosperity],
+  commonMaterials: [WhopperflowerNectar, SilkFlower],
 };
 
 export const Characters = [
@@ -347,6 +365,7 @@ export const Characters = [
   Diona,
   Fischl,
   Ganyu,
+  HuTao,
   Jean,
   Kaeya,
   Keqing,
@@ -357,6 +376,7 @@ export const Characters = [
   Noelle,
   Qiqi,
   Razor,
+  Rosaria,
   Sucrose,
   Tartaglia,
   Venti,

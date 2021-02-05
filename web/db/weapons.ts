@@ -60,6 +60,7 @@ add("The Viridescent Hunt", Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 
 add("Alley Hunter", BorealWolf, [LeyLine, TreasureHoarderInsignia]);
 add("Bloodtainted Greatsword", BorealWolf, [LeyLine, HilichurlArrowhead]);
+add("Deathmatch", BorealWolf, [LeyLine, WhopperflowerNectar]);
 add("Dragonspine Spear", BorealWolf, [MistGrass, FatuiInsignia]);
 add("Harbinger of Dawn", BorealWolf, [LeyLine, Slime]);
 add("Sacrificial Bow", BorealWolf, [LeyLine, Slime]);
@@ -75,7 +76,6 @@ add("The Flute", BorealWolf, [LeyLine, Slime]);
 add("The Widsith", BorealWolf, [LeyLine, HilichurlMask]);
 add("Thrilling Tales of Dragon Slayers", BorealWolf, [LeyLine, SamachurlScroll]);
 add("Wine and Song", BorealWolf, [LeyLine, SamachurlScroll]);
-add("Deathmatch", BorealWolf, [LeyLine, WhopperflowerNectar]);
 
 add("Amos' Bow", DandelionGladiator, [ChaosPart, Slime]);
 add("Beginner's Protector", DandelionGladiator, [ChaosPart, SamachurlScroll]);
@@ -94,6 +94,8 @@ add("Traveler's Handy Sword", DandelionGladiator, [ChaosPart, SamachurlScroll]);
 add("White Iron Greatsword", DandelionGladiator, [ChaosPart, Slime]);
 add("Wolf's Gravestone", DandelionGladiator, [ChaosPart, SamachurlScroll]);
 
+add("Blackcliff Agate", Guyun, [FatuiKnife, SamachurlScroll]);
+add("Blackcliff Longsword", Guyun, [FatuiKnife, HilichurlArrowhead]);
 add("Blackcliff Warbow", Guyun, [FatuiKnife, TreasureHoarderInsignia]);
 add("Crescent Pike", Guyun, [FatuiKnife, TreasureHoarderInsignia]);
 add("Dark Iron Sword", Guyun, [FatuiKnife, HilichurlMask]);
@@ -106,22 +108,21 @@ add("Solar Pearl", Guyun, [FatuiKnife, WhopperflowerNectar]);
 add("Summit Shaper", Guyun, [FatuiKnife, HilichurlMask]);
 add("White Tassel", Guyun, [FatuiKnife, FatuiInsignia]);
 add("Whiteblind", Guyun, [FatuiKnife, TreasureHoarderInsignia]);
-add("Blackcliff Longsword", Guyun, [FatuiKnife, HilichurlArrowhead]);
-add("Blackcliff Agate", Guyun, [FatuiKnife, SamachurlScroll]);
 
+add("Blackcliff Pole", MistVeiledElixir, [MistGrass, FatuiInsignia]);
+add("Blackcliff Slasher", MistVeiledElixir, [MistGrass, FatuiInsignia]);
 add("Debate Club", MistVeiledElixir, [MistGrass, HilichurlMask]);
 add("Dragon's Bane", MistVeiledElixir, [MistGrass, SamachurlScroll]);
 add("Eye of Perception", MistVeiledElixir, [MistGrass, HilichurlMask]);
 add("Fillet Blade", MistVeiledElixir, [MistGrass, TreasureHoarderInsignia]);
 add("Halberd", MistVeiledElixir, [MistGrass, WhopperflowerNectar]);
 add("Messenger", MistVeiledElixir, [MistGrass, TreasureHoarderInsignia]);
+add("Primordial Jade Cutter", MistVeiledElixir, [MistGrass, TreasureHoarderInsignia]);
 add("Prototype Crescent", MistVeiledElixir, [MistGrass, TreasureHoarderInsignia]);
 add("Prototype Amber", MistVeiledElixir, [MistGrass, HilichurlArrowhead]);
 add("Prototype Rancour", MistVeiledElixir, [MistGrass, FatuiInsignia]);
 add("Rainslasher", MistVeiledElixir, [MistGrass, SamachurlScroll]);
 add("Twin Nephrite", MistVeiledElixir, [MistGrass, FatuiInsignia]);
-add("Blackcliff Slasher", MistVeiledElixir, [MistGrass, FatuiInsignia]);
-add("Blackcliff Pole", MistVeiledElixir, [MistGrass, FatuiInsignia]);
 
 add("Black Tassel", Aerosiderite, [BoneShard, HilichurlArrowhead]);
 add("Compound Bow", Aerosiderite, [BoneShard, FatuiInsignia]);
