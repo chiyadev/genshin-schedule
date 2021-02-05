@@ -20,7 +20,8 @@ function buildChangelog() {
   return [
     <ChangelogSection key={15} date="2021/02/05">
       <ChangelogItem>Split domain view into two columns on large screens.</ChangelogItem>
-      <ChangelogItem github={29}>Added highlighting feature to the task list and domain view.</ChangelogItem>
+      <ChangelogItem github={29}>Added highlighting feature to task list and domain view.</ChangelogItem>
+      <ChangelogItem>Added compact display mode to task list.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={14} date="2021/02/03">
       <ChangelogItem>Fixed dark mode theme not being applied at the root level.</ChangelogItem>

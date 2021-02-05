@@ -8,6 +8,7 @@ import AccountManageButton from "./AccountManageButton";
 import { User } from "../../../utils/api";
 import ThemeSwitch from "./ThemeSwitch";
 import ResinNotifyMarkSlider from "./ResinNotifyMarkSlider";
+import TaskListCompactSwitch from "./TaskListCompactSwitch";
 
 const SettingsList = ({ user }: { user?: User }) => {
   return (
@@ -17,6 +18,7 @@ const SettingsList = ({ user }: { user?: User }) => {
       <VStack align="start" spacing={4}>
         <BackgroundSwitch />
         <ThemeSwitch />
+        <TaskListCompactSwitch />
         <ResinNotifyMarkSlider />
         <TaskDefaultZoomSlider />
 
