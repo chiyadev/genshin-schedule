@@ -10,6 +10,7 @@ import NextLink from "next/link";
 import { FaBell, FaChartBar } from "react-icons/fa";
 import StatisticsUpdater from "./Statistics/StatisticsUpdater";
 import ColorModeOverride from "./ColorModeOverride";
+import ClockOffsetWarning from "./ClockOffsetWarning";
 
 const Layout = ({
   children,
@@ -33,6 +34,7 @@ const Layout = ({
       </Head>
 
       <KeyHelp open={shortcuts} setOpen={setShortcuts} />
+      <ClockOffsetWarning />
       <ChangelogModal />
       <StatisticsUpdater />
 

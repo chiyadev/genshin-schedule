@@ -22,6 +22,7 @@ function buildChangelog() {
       <ChangelogItem>Split domain view into two columns on large screens.</ChangelogItem>
       <ChangelogItem github={29}>Added highlighting feature to task list and domain view.</ChangelogItem>
       <ChangelogItem>Added compact display mode to task list.</ChangelogItem>
+      <ChangelogItem>Improved clock offset warning.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={14} date="2021/02/03">
       <ChangelogItem>Fixed dark mode theme not being applied at the root level.</ChangelogItem>
