@@ -50,7 +50,7 @@ const ArtifactInfo = ({ data, name }: Props) => {
       <Layout title={[artifact?.name || "Not Found"]}>
         {artifact ? (
           <WhiteCard divide>
-            <HStack spacing={2}>
+            <HStack spacing={4}>
               <chakra.img alt={artifact.name} src={getAssetByName(artifact.name)} w={16} h={16} objectFit="contain" />
 
               <div>

@@ -50,7 +50,7 @@ const WeaponInfo = ({ data, name }: Props) => {
       <Layout title={[weapon?.name || "Not Found"]}>
         {weapon ? (
           <WhiteCard divide>
-            <HStack spacing={2}>
+            <HStack spacing={4}>
               <chakra.img alt={weapon.name} src={getAssetByName(weapon.name)} w={16} h={16} objectFit="cover" />
 
               <div>

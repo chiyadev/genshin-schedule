@@ -50,7 +50,7 @@ const CharacterInfo = ({ data, name }: Props) => {
       <Layout title={[character?.name || "Not Found"]}>
         {character ? (
           <WhiteCard divide>
-            <HStack spacing={2}>
+            <HStack spacing={4}>
               <chakra.img alt={character.name} src={getAssetByName(character.name)} w={16} h={16} borderRadius="full" />
 
               <div>
