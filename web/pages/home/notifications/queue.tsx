@@ -1,12 +1,14 @@
-import React, { memo } from "react";
+import React, { memo, useState } from "react";
 import Layout from "../../../components/Layout";
 import { GetServerSideProps } from "next";
 import { createApiClient, Notification, WebData } from "../../../utils/api";
 import ConfigProvider from "../../../components/ConfigProvider";
 import { VStack } from "@chakra-ui/layout";
 import WhiteCard from "../../../components/WhiteCard";
-import { Button, chakra, HStack } from "@chakra-ui/react";
+import { Button, chakra, Code, HStack, Icon } from "@chakra-ui/react";
 import { DateTime } from "luxon";
+import { FaPaperPlane } from "react-icons/fa";
+import { formatDurationSimple } from "../../../utils/time";
 
 type Props = {
   data: WebData | null;
@@ -43,56 +45,84 @@ const Home = ({ data, queue }: Props) => {
           {queue?.length ? (
             queue
               .sort((a, b) => a.time - b.time)
-              .map((notification) => (
-                <WhiteCard key={notification.key} divide>
-                  <HStack spacing={4}>
-                    <chakra.img src={notification.icon} w={10} h={10} />
-                    <VStack align="start" spacing={0}>
-                      <chakra.div fontSize="lg">{notification.title}</chakra.div>
-                      {notification.description && (
-                        <chakra.div fontSize="sm" color="gray.500">
-                          {notification.description}
-                        </chakra.div>
-                      )}
-                    </VStack>
-                  </HStack>
-
-                  <VStack align="start" spacing={4}>
-                    <chakra.div>
-                      Scheduled at {DateTime.fromMillis(notification.time).toSQL()} (Browser time)
-                    </chakra.div>
-
-                    <HStack spacing={2}>
-                      <Button
-                        size="sm"
-                        onClick={async () => {
-                          await createApiClient().setNotification({
-                            ...notification,
-                            time: DateTime.utc().valueOf(),
-                          });
-                        }}
-                      >
-                        Send now
-                      </Button>
-
-                      <Button
-                        size="sm"
-                        onClick={async () => {
-                          await createApiClient().deleteNotification(notification.key);
-                        }}
-                      >
-                        Delete
-                      </Button>
-                    </HStack>
-                  </VStack>
-                </WhiteCard>
-              ))
+              .map((notification) => <Item key={notification.key} notification={notification} />)
           ) : (
             <div>There are no notifications in queue.</div>
           )}
         </VStack>
       </Layout>
     </ConfigProvider>
+  );
+};
+
+const Item = ({ notification }: { notification: Notification }) => {
+  const [send, setSend] = useState(false);
+  const [dequeue, setDequeue] = useState(false);
+
+  const time = DateTime.fromMillis(notification.time);
+
+  return (
+    <WhiteCard divide>
+      <HStack spacing={2}>
+        <chakra.img src={notification.icon} w={10} h={10} />
+        <VStack align="start" spacing={0}>
+          <chakra.div fontSize="lg">{notification.title}</chakra.div>
+
+          {notification.description && (
+            <chakra.div fontSize="sm" color="gray.500">
+              {notification.description}
+            </chakra.div>
+          )}
+        </VStack>
+      </HStack>
+
+      <VStack align="start" spacing={4}>
+        <VStack align="start">
+          <div>
+            Scheduled at <Code>{time.toSQL()}</Code> / in <Code>{formatDurationSimple(time.diffNow())}</Code>
+          </div>
+        </VStack>
+
+        <HStack spacing={2}>
+          <Button
+            size="sm"
+            colorScheme="blue"
+            leftIcon={<Icon as={FaPaperPlane} />}
+            isLoading={send}
+            onClick={async () => {
+              setSend(true);
+
+              try {
+                await createApiClient().setNotification({
+                  ...notification,
+                  time: DateTime.utc().valueOf(),
+                });
+              } finally {
+                setSend(false);
+              }
+            }}
+          >
+            Send now
+          </Button>
+
+          <Button
+            size="sm"
+            isLoading={dequeue}
+            onClick={async () => {
+              setDequeue(true);
+
+              try {
+                await createApiClient().deleteNotification(notification.key);
+              } finally {
+                setDequeue(false);
+              }
+            }}
+          >
+            Dequeue
+          </Button>
+        </HStack>
+      </VStack>
+    </WhiteCard>
   );
 };
 

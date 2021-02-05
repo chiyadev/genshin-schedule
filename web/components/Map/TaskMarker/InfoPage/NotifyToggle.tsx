@@ -25,7 +25,7 @@ export const NotifyToggle = ({
         key: `task_${task.id}`,
         time: task.dueTime,
         icon: getAssetByName(task.icon) || "",
-        title: `${task.name} respawned!`,
+        title: `${task.name} respawned`,
         description: task.description || "",
         url: "/map",
         color,

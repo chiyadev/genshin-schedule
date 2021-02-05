@@ -23,7 +23,7 @@ const NotificationSetter = () => {
         key: "resin",
         time: capTime,
         icon: Resin,
-        title: "Resins recharged!",
+        title: "Resins recharged",
         description:
           notifyMark === ResinCap ? "Your resins have fully recharged!" : `You have ${notifyMark} resins right now!`,
         url: "/home",

@@ -8,11 +8,26 @@ import EstimatorByTime from "./EstimatorByTime";
 import EstimatorByResin from "./EstimatorByResin";
 import { Config, useConfig, useCurrentStats } from "../../../utils/config";
 import { Resin as ResinIcon } from "../../../assets";
-import { chakra, css, HStack, Input, Spacer, useTheme } from "@chakra-ui/react";
+import {
+  chakra,
+  css,
+  HStack,
+  Input,
+  Spacer,
+  StackDivider,
+  useColorModeValue,
+  useTheme,
+  VStack,
+  Icon,
+  Link,
+} from "@chakra-ui/react";
 import { useMeasuredTextWidth } from "../../../utils/dom";
 import { motion } from "framer-motion";
 import { useServerTime } from "../../../utils/time";
 import NotificationSetter from "./NotificationSetter";
+import EstimatorByNotifyMark from "./EstimatorByNotifyMark";
+import { FaBell } from "react-icons/fa";
+import NextLink from "next/link";
 
 const estimateModes: Config["resinEstimateMode"][] = ["time", "value"];
 
@@ -20,6 +35,7 @@ const Resin = () => {
   const [resin, setResin] = useConfig("resin");
   const [, setStats] = useCurrentStats();
   const [mode, setMode] = useConfig("resinEstimateMode");
+  const [notifyMark] = useConfig("resinNotifyMark");
 
   const [hover, setHover] = useState(false);
   const [focus, setFocus] = useState(false);
@@ -57,7 +73,8 @@ const Resin = () => {
             ref={resinInput}
             type="number"
             variant="unstyled"
-            style={{ width: inputWidth }}
+            textAlign="center"
+            style={{ width: (inputWidth || 0) + (focus ? 5 : 0) }}
             css={inputStyle}
             transition={undefined}
             min={0}
@@ -97,7 +114,14 @@ const Resin = () => {
           </motion.div>
         </HStack>
 
-        <chakra.div color="gray.500" pl={12} fontSize="sm">
+        <VStack
+          align="stretch"
+          spacing={2}
+          color="gray.500"
+          pl={12}
+          fontSize="sm"
+          divider={<StackDivider borderColor={useColorModeValue("gray.200", "gray.700")} />}
+        >
           {current >= ResinCap ? (
             <span>Your resins are full!</span>
           ) : mode === "time" ? (
@@ -105,7 +129,19 @@ const Resin = () => {
           ) : mode === "value" ? (
             <EstimatorByResin />
           ) : null}
-        </chakra.div>
+
+          {notifyMark !== ResinCap && current < notifyMark && (
+            <HStack spacing={1} ml={-4}>
+              <Icon as={FaBell} w={3} fontSize="xs" />
+
+              <NextLink href="/home/notifications/queue" passHref>
+                <Link>
+                  <EstimatorByNotifyMark />
+                </Link>
+              </NextLink>
+            </HStack>
+          )}
+        </VStack>
       </WhiteCard>
     </WidgetWrapper>
   );

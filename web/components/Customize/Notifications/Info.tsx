@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import React, { memo } from "react";
 import WhiteCard from "../../WhiteCard";
-import { FaBell, FaDiscord, FaLink, FaList } from "react-icons/fa";
+import { FaBell, FaDiscord, FaLink, FaListUl } from "react-icons/fa";
 import Bot from "../../../assets/notifications/Bot.jpg";
 import Privacy from "../../../assets/notifications/Privacy.jpg";
 import PrivacyDM from "../../../assets/notifications/PrivacyDM.jpg";
@@ -38,7 +38,7 @@ const Info = () => {
             <span>
               <NextLink href="/home/notifications/queue" passHref>
                 <Link color={useColorModeValue("blue.500", "blue.300")}>
-                  <Icon as={FaList} fontSize="sm" />
+                  <Icon as={FaListUl} fontSize="md" />
                 </Link>
               </NextLink>
             </span>

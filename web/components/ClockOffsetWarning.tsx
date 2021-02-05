@@ -35,6 +35,7 @@ const ClockOffsetWarning = () => {
                 <span>
                   <span>in </span>
                   <strong>
+                    {offset > 0 && "+"}
                     {offset} {pluralize("day", offset)}
                   </strong>
                 </span>
