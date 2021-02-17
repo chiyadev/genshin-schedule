@@ -14,10 +14,13 @@ import {
 } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 15;
+const LatestChangelog = 16;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={16} date="2021/02/16">
+      <ChangelogItem github={46}>Added Parametric Transformer and Vitalized Dragontooth icons.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={15} date="2021/02/05">
       <ChangelogItem>Split domain view into two columns on large screens.</ChangelogItem>
       <ChangelogItem github={29}>Added highlighting feature to task list and domain view.</ChangelogItem>

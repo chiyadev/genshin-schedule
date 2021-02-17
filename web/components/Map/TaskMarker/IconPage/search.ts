@@ -18,7 +18,7 @@ function addIcons(type: string, items: { name: string; timer?: Task["refreshTime
 addIcons("gadget", [
   { name: "Portable Waypoint", timer: 168 },
   { name: "Adepti Seeker's Stove", timer: 5 / 60 },
-  //{ name: "Parametric Transformer", timer: 168 },
+  { name: "Parametric Transformer", timer: 168 },
 ]);
 
 addIcons("ore", [
@@ -129,6 +129,7 @@ addIcons("material", [
   { name: "Loach Pearl", timer: 24 },
   { name: "Luminescent Spine", timer: 24 },
   { name: "Mist Flower Corolla", timer: 24 },
+  { name: "Vitalized Dragontooth", timer: 48 },
 ]);
 
 addIcons(

@@ -178,6 +178,7 @@ import Onion from "./game/Onion.png";
 import OrangeCircle from "./game/Orange Circle.png";
 import OtherShops from "./game/Other Shops.png";
 import OtherworldlyStory from "./game/Otherworldly Story.png";
+import ParametricTransformer from "./game/Parametric Transformer.png";
 import PhilanemoMushroom from "./game/Philanemo Mushroom.png";
 import PhilosophiesoftheLand from "./game/Philosophies of the Land.png";
 import Pinecone from "./game/Pinecone.png";
@@ -287,6 +288,7 @@ import VayudaTurquoiseSliver from "./game/Vayuda Turquoise Sliver.png";
 import Venti from "./game/Venti.png";
 import Violetgrass from "./game/Violetgrass.png";
 import ViridescentVenerer from "./game/Viridescent Venerer.png";
+import VitalizedDragontooth from "./game/Vitalized Dragontooth.png";
 import WanderersAdvice from "./game/Wanderer's Advice.png";
 import WanderersTroupe from "./game/Wanderer's Troupe.png";
 import Wheat from "./game/Wheat.png";
@@ -489,6 +491,7 @@ export {
   OrangeCircle,
   OtherShops,
   OtherworldlyStory,
+  ParametricTransformer,
   PhilanemoMushroom,
   PhilosophiesoftheLand,
   Pinecone,
@@ -598,6 +601,7 @@ export {
   Venti,
   Violetgrass,
   ViridescentVenerer,
+  VitalizedDragontooth,
   WanderersAdvice,
   WanderersTroupe,
   Wheat,
@@ -802,6 +806,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Orange Circle": return OrangeCircle;
     case "Other Shops": return OtherShops;
     case "Otherworldly Story": return OtherworldlyStory;
+    case "Parametric Transformer": return ParametricTransformer;
     case "Philanemo Mushroom": return PhilanemoMushroom;
     case "Philosophies of the Land": return PhilosophiesoftheLand;
     case "Pinecone": return Pinecone;
@@ -911,6 +916,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Venti": return Venti;
     case "Violetgrass": return Violetgrass;
     case "Viridescent Venerer": return ViridescentVenerer;
+    case "Vitalized Dragontooth": return VitalizedDragontooth;
     case "Wanderer's Advice": return WanderersAdvice;
     case "Wanderer's Troupe": return WanderersTroupe;
     case "Wheat": return Wheat;
