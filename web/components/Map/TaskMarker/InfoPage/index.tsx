@@ -68,7 +68,7 @@ const InfoPage = ({
         placeholder="Task description"
       />
 
-      <VStack align="stretch" spacing={1}>
+      <VStack key={task.icon} align="stretch" spacing={1}>
         {task.refreshTime === "reset" ? (
           <IntervalResetCheck
             value

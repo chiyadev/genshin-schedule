@@ -27,6 +27,7 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch
           setValue((valueAsNumber || 1) * getUnitMs(unit));
         }}
         flex={1}
+        minW={0}
         h={4}
         p={0}
         textAlign="right"

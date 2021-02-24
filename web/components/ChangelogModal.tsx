@@ -14,10 +14,14 @@ import {
 } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 16;
+const LatestChangelog = 17;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={17} date="2021/02/24">
+      <ChangelogItem github={49}>Fixed incorrect weapon data for Royal Grimoire.</ChangelogItem>
+      <ChangelogItem github={48}>Fixed respawn unit select being drawn outside bounds on Firefox.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={16} date="2021/02/16">
       <ChangelogItem github={46}>Added Parametric Transformer and Vitalized Dragontooth icons.</ChangelogItem>
     </ChangelogSection>,
