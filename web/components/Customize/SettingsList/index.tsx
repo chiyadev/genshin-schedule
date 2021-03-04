@@ -8,6 +8,7 @@ import AccountManageButton from "./AccountManageButton";
 import { User } from "../../../utils/api";
 import ThemeSwitch from "./ThemeSwitch";
 import ResinNotifyMarkSlider from "./ResinNotifyMarkSlider";
+import ResinEstimateModeSwitch from "./ResinEstimateModeSwitch";
 import TaskListCompactSwitch from "./TaskListCompactSwitch";
 
 const SettingsList = ({ user }: { user?: User }) => {
@@ -20,6 +21,7 @@ const SettingsList = ({ user }: { user?: User }) => {
         <ThemeSwitch />
         <TaskListCompactSwitch />
         <ResinNotifyMarkSlider />
+        <ResinEstimateModeSwitch />
         <TaskDefaultZoomSlider />
 
         <Wrap spacing={2}>
