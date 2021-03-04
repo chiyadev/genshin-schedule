@@ -14,10 +14,13 @@ import {
 } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 17;
+const LatestChangelog = 18;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={18} date="2021/03/04">
+      <ChangelogItem>Updated Hu Tao; added Staff of Homa and Lithic series weapons to the database.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={17} date="2021/02/24">
       <ChangelogItem github={49}>Fixed incorrect weapon data for Royal Grimoire.</ChangelogItem>
       <ChangelogItem github={48}>Fixed respawn unit select being drawn outside bounds on Firefox.</ChangelogItem>

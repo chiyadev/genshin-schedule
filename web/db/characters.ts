@@ -345,9 +345,9 @@ export const Rosaria: Character = {
 export const HuTao: Character = {
   type: "Character",
   name: "Hu Tao",
-  wiki: "https://genshin.honeyhunterworld.com/db/char/hutao/",
+  wiki: "https://genshin-impact.fandom.com/wiki/Hu_Tao",
   talentMaterialWeekly: [ShardOfAFoulLegacy],
-  talentMaterials: [Prosperity],
+  talentMaterials: [Diligence],
   commonMaterials: [WhopperflowerNectar, SilkFlower],
 };
 

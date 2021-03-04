@@ -145,6 +145,8 @@ import Lavawalker from "./game/Lavawalker.png";
 import LightningPrism from "./game/Lightning Prism.png";
 import LionsRoar from "./game/Lion's Roar.png";
 import Lisa from "./game/Lisa.png";
+import LithicBlade from "./game/Lithic Blade.png";
+import LithicSpear from "./game/Lithic Spear.png";
 import LizardTail from "./game/Lizard Tail.png";
 import LoachPearl from "./game/Loach Pearl.png";
 import LostPrayertotheSacredWinds from "./game/Lost Prayer to the Sacred Winds.png";
@@ -245,6 +247,7 @@ import SnowTombedStarsilver from "./game/Snow-Tombed Starsilver.png";
 import SolarPearl from "./game/Solar Pearl.png";
 import SouvenirShop from "./game/Souvenir Shop.png";
 import SpiritLocketofBoreas from "./game/Spirit Locket of Boreas.png";
+import StaffofHoma from "./game/Staff of Homa.png";
 import Starconch from "./game/Starconch.png";
 import Starsilver from "./game/Starsilver.png";
 import Sucrose from "./game/Sucrose.png";
@@ -458,6 +461,8 @@ export {
   LightningPrism,
   LionsRoar,
   Lisa,
+  LithicBlade,
+  LithicSpear,
   LizardTail,
   LoachPearl,
   LostPrayertotheSacredWinds,
@@ -558,6 +563,7 @@ export {
   SolarPearl,
   SouvenirShop,
   SpiritLocketofBoreas,
+  StaffofHoma,
   Starconch,
   Starsilver,
   Sucrose,
@@ -773,6 +779,8 @@ export function getAssetByName(name: string): string | undefined {
     case "Lightning Prism": return LightningPrism;
     case "Lion's Roar": return LionsRoar;
     case "Lisa": return Lisa;
+    case "Lithic Blade": return LithicBlade;
+    case "Lithic Spear": return LithicSpear;
     case "Lizard Tail": return LizardTail;
     case "Loach Pearl": return LoachPearl;
     case "Lost Prayer to the Sacred Winds": return LostPrayertotheSacredWinds;
@@ -873,6 +881,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Solar Pearl": return SolarPearl;
     case "Souvenir Shop": return SouvenirShop;
     case "Spirit Locket of Boreas": return SpiritLocketofBoreas;
+    case "Staff of Homa": return StaffofHoma;
     case "Starconch": return Starconch;
     case "Starsilver": return Starsilver;
     case "Sucrose": return Sucrose;
