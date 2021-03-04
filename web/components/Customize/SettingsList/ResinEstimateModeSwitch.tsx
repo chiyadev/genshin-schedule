@@ -15,10 +15,10 @@ const ResinEstimateModeSwitch = () => {
             </HStack>
 
             <Switch
-                isChecked={value === "time"}
+                isChecked={value === "value"}
                 onChange={({ currentTarget: { checked } }) => {
-                    setValue(checked ? "time" : "value");
-                    trackEvent("resinEstimateMode", checked ? "time" : "value");
+                    setValue(checked ? "value" : "time");
+                    trackEvent("resinEstimateMode", checked ? "value" : "time");
                 }}
             />
         </HStack>
