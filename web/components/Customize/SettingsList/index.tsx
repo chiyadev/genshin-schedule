@@ -20,8 +20,8 @@ const SettingsList = ({ user }: { user?: User }) => {
         <BackgroundSwitch />
         <ThemeSwitch />
         <TaskListCompactSwitch />
-        <ResinNotifyMarkSlider />
         <ResinEstimateModeSwitch />
+        <ResinNotifyMarkSlider />
         <TaskDefaultZoomSlider />
 
         <Wrap spacing={2}>
