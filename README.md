@@ -8,46 +8,11 @@ For more information, visit [genshin.chiya.dev](https://genshin.chiya.dev).
 
 ## Building from source
 
-This website consists of two subprojects: `web` and `sync`
+This website consists of two subprojects: [web](web) and [sync](sync)
 
-You may use the provided Dockerfiles ([web](Dockerfile.web) and [sync](Dockerfile.sync)) to generate production images, or follow the below steps to run the projects for development.
+- `web` frontend serving the website assets
+- `sync` backend handling API requests
 
-### Web Frontend
+Navigate to the respective subprojects for a detailed build procedure.
 
-Frontend was bootstrapped using [next.js](https://github.com/vercel/next.js/).
-
-Prerequisites:
-
-- npm
-- yarn
-
-Steps:
-
-1. Clone repo
-2. `cd web && yarn && yarn dev`
-
-### Sync Backend
-
-Backend is an [ASP.NET 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/) C# project.
-
-Prerequisites:
-
-- .NET 5 SDK
-- PostgreSQL
-
-Steps:
-
-1. Clone repo
-2. `cd sync`
-3. Create `appsettings.Production.json`
-
-```json
-{
-  "Secret": "some long and secure random secret string",
-  "ConnectionStrings": {
-    "SyncDbContext": "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=genshin;"
-  }
-}
-```
-
-4. `dotnet run`
+You may use the provided Dockerfiles ([web](Dockerfile.web) and [sync](Dockerfile.sync)) to generate production images.
