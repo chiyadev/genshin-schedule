@@ -14,10 +14,14 @@ import {
 } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 18;
+const LatestChangelog = 19;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={19} date="2021/03/05">
+      <ChangelogItem github={50}>Added a setting for resin estimation mode by amount instead of time.</ChangelogItem>
+      <ChangelogItem>Added missing weapon Memory of Dust.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={18} date="2021/03/04">
       <ChangelogItem>Updated Hu Tao; added Staff of Homa and Lithic series weapons to the database.</ChangelogItem>
     </ChangelogSection>,

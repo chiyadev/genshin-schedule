@@ -162,6 +162,7 @@ import MartialArtist from "./game/Martial Artist.png";
 import MasterlessStardust from "./game/Masterless Stardust.png";
 import MasterlessStarglitter from "./game/Masterless Starglitter.png";
 import Matsutake from "./game/Matsutake.png";
+import MemoryofDust from "./game/Memory of Dust.png";
 import Messenger from "./game/Messenger.png";
 import Mint from "./game/Mint.png";
 import MistFlowerCorolla from "./game/Mist Flower Corolla.png";
@@ -478,6 +479,7 @@ export {
   MasterlessStardust,
   MasterlessStarglitter,
   Matsutake,
+  MemoryofDust,
   Messenger,
   Mint,
   MistFlowerCorolla,
@@ -796,6 +798,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Masterless Stardust": return MasterlessStardust;
     case "Masterless Starglitter": return MasterlessStarglitter;
     case "Matsutake": return Matsutake;
+    case "Memory of Dust": return MemoryofDust;
     case "Messenger": return Messenger;
     case "Mint": return Mint;
     case "Mist Flower Corolla": return MistFlowerCorolla;
