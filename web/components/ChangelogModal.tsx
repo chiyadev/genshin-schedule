@@ -20,6 +20,7 @@ function buildChangelog() {
   return [
     <ChangelogSection key={20} date="2021/03/21">
       <ChangelogItem>Added new weapons from 1.4: Elegy For The End, The Alley Flash and Windblume Ode.</ChangelogItem>
+      <ChangelogItem github={54}>Fixed daylight savings calculation for America and Europe servers.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={19} date="2021/03/05">
       <ChangelogItem github={50}>Added a setting for resin estimation mode by amount instead of time.</ChangelogItem>

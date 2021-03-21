@@ -34,12 +34,10 @@ export function useRerenderInterval(frequency: number) {
 export function useServerTime(updateHz = 100) {
   useRerenderInterval(updateHz);
 
-  const offsetHours = useServerTimeZone();
+  const timeZone = useServerTimeZone();
   const [offsetDays] = useConfig("offsetDays");
 
-  return DateTime.utc()
-    .plus({ days: offsetDays })
-    .setZone(offsetHours > 0 ? `UTC+${offsetHours}` : `UTC${offsetHours}`);
+  return DateTime.utc().plus({ days: offsetDays }).setZone(timeZone);
 }
 
 export function useServerTimeZone() {
@@ -47,14 +45,16 @@ export function useServerTimeZone() {
 
   switch (server) {
     case "America":
-      return -5;
+      return "America/New_York";
 
     case "Europe":
-      return 1;
+      return "Europe/Berlin";
 
     case "Asia":
+      return "Asia/Tokyo";
+
     case "TW, HK, MO":
-      return 8;
+      return "UTC+8";
   }
 }
 

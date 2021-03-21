@@ -9,7 +9,7 @@ const ServerText = () => {
   const timeZone = useServerTimeZone();
 
   return (
-    <Tooltip label={`Switch server (UTC${timeZone >= 0 ? `+${timeZone}` : `${timeZone}`})`} closeOnClick={false}>
+    <Tooltip label={`Switch server (${timeZone})`} closeOnClick={false}>
       <Link
         as="button"
         fontWeight="bold"
