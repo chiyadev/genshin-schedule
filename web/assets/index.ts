@@ -34,13 +34,13 @@ import BlackCircle from "./game/Black Circle.png";
 import BlackTassel from "./game/Black Tassel.png";
 import BlackArtifact from "./game/BlackArtifact.png";
 import BlackCharacter from "./game/BlackCharacter.png";
+import BlackWeapon from "./game/BlackWeapon.png";
 import BlackcliffAgate from "./game/Blackcliff Agate.png";
 import BlackcliffLongsword from "./game/Blackcliff Longsword.png";
 import BlackcliffPole from "./game/Blackcliff Pole.png";
 import BlackcliffSlasher from "./game/Blackcliff Slasher.png";
 import BlackcliffWarbow from "./game/Blackcliff Warbow.png";
 import Blacksmith from "./game/Blacksmith.png";
-import BlackWeapon from "./game/BlackWeapon.png";
 import BloodstainedChivalry from "./game/Bloodstained Chivalry.png";
 import BloodtaintedGreatsword from "./game/Bloodtainted Greatsword.png";
 import BlueCircle from "./game/Blue Circle.png";
@@ -87,6 +87,7 @@ import DvalinsPlume from "./game/Dvalin's Plume.png";
 import DvalinsSigh from "./game/Dvalin's Sigh.png";
 import ElectroCrystal from "./game/Electro Crystal.png";
 import Electro from "./game/Electro.png";
+import ElegyfortheEnd from "./game/Elegy for the End.png";
 import EmeraldOrb from "./game/Emerald Orb.png";
 import EnhancementOre from "./game/Enhancement Ore.png";
 import EverflameSeed from "./game/Everflame Seed.png";
@@ -265,6 +266,7 @@ import TeachingsofGold from "./game/Teachings of Gold.png";
 import TeachingsofProsperity from "./game/Teachings of Prosperity.png";
 import TeachingsofResistance from "./game/Teachings of Resistance.png";
 import TealCircle from "./game/Teal Circle.png";
+import TheAlleyFlash from "./game/The Alley Flash.png";
 import TheBell from "./game/The Bell.png";
 import TheBlackSword from "./game/The Black Sword.png";
 import TheExile from "./game/The Exile.png";
@@ -300,10 +302,11 @@ import WhiteIronChunk from "./game/White Iron Chunk.png";
 import WhiteIronGreatsword from "./game/White Iron Greatsword.png";
 import WhiteTassel from "./game/White Tassel.png";
 import WhiteArtifact from "./game/WhiteArtifact.png";
-import Whiteblind from "./game/Whiteblind.png";
 import WhiteCharacter from "./game/WhiteCharacter.png";
 import WhiteWeapon from "./game/WhiteWeapon.png";
+import Whiteblind from "./game/Whiteblind.png";
 import WhopperflowerNectar from "./game/Whopperflower Nectar.png";
+import WindblumeOde from "./game/Windblume Ode.png";
 import WindwheelAster from "./game/Windwheel Aster.png";
 import WineandSong from "./game/Wine and Song.png";
 import WolfsGravestone from "./game/Wolf's Gravestone.png";
@@ -351,13 +354,13 @@ export {
   BlackTassel,
   BlackArtifact,
   BlackCharacter,
+  BlackWeapon,
   BlackcliffAgate,
   BlackcliffLongsword,
   BlackcliffPole,
   BlackcliffSlasher,
   BlackcliffWarbow,
   Blacksmith,
-  BlackWeapon,
   BloodstainedChivalry,
   BloodtaintedGreatsword,
   BlueCircle,
@@ -404,6 +407,7 @@ export {
   DvalinsSigh,
   ElectroCrystal,
   Electro,
+  ElegyfortheEnd,
   EmeraldOrb,
   EnhancementOre,
   EverflameSeed,
@@ -582,6 +586,7 @@ export {
   TeachingsofProsperity,
   TeachingsofResistance,
   TealCircle,
+  TheAlleyFlash,
   TheBell,
   TheBlackSword,
   TheExile,
@@ -617,10 +622,11 @@ export {
   WhiteIronGreatsword,
   WhiteTassel,
   WhiteArtifact,
-  Whiteblind,
   WhiteCharacter,
   WhiteWeapon,
+  Whiteblind,
   WhopperflowerNectar,
+  WindblumeOde,
   WindwheelAster,
   WineandSong,
   WolfsGravestone,
@@ -670,13 +676,13 @@ export function getAssetByName(name: string): string | undefined {
     case "Black Tassel": return BlackTassel;
     case "BlackArtifact": return BlackArtifact;
     case "BlackCharacter": return BlackCharacter;
+    case "BlackWeapon": return BlackWeapon;
     case "Blackcliff Agate": return BlackcliffAgate;
     case "Blackcliff Longsword": return BlackcliffLongsword;
     case "Blackcliff Pole": return BlackcliffPole;
     case "Blackcliff Slasher": return BlackcliffSlasher;
     case "Blackcliff Warbow": return BlackcliffWarbow;
     case "Blacksmith": return Blacksmith;
-    case "BlackWeapon": return BlackWeapon;
     case "Bloodstained Chivalry": return BloodstainedChivalry;
     case "Bloodtainted Greatsword": return BloodtaintedGreatsword;
     case "Blue Circle": return BlueCircle;
@@ -723,6 +729,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Dvalin's Sigh": return DvalinsSigh;
     case "Electro Crystal": return ElectroCrystal;
     case "Electro": return Electro;
+    case "Elegy for the End": return ElegyfortheEnd;
     case "Emerald Orb": return EmeraldOrb;
     case "Enhancement Ore": return EnhancementOre;
     case "Everflame Seed": return EverflameSeed;
@@ -901,6 +908,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Teachings of Prosperity": return TeachingsofProsperity;
     case "Teachings of Resistance": return TeachingsofResistance;
     case "Teal Circle": return TealCircle;
+    case "The Alley Flash": return TheAlleyFlash;
     case "The Bell": return TheBell;
     case "The Black Sword": return TheBlackSword;
     case "The Exile": return TheExile;
@@ -936,10 +944,11 @@ export function getAssetByName(name: string): string | undefined {
     case "White Iron Greatsword": return WhiteIronGreatsword;
     case "White Tassel": return WhiteTassel;
     case "WhiteArtifact": return WhiteArtifact;
-    case "Whiteblind": return Whiteblind;
     case "WhiteCharacter": return WhiteCharacter;
     case "WhiteWeapon": return WhiteWeapon;
+    case "Whiteblind": return Whiteblind;
     case "Whopperflower Nectar": return WhopperflowerNectar;
+    case "Windblume Ode": return WindblumeOde;
     case "Windwheel Aster": return WindwheelAster;
     case "Wine and Song": return WineandSong;
     case "Wolf's Gravestone": return WolfsGravestone;

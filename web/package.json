@@ -16,6 +16,7 @@
     "@types/luxon": "^1.26.1",
     "@types/nprogress": "^0.2.0",
     "@types/pluralize": "^0.0.29",
+    "await-exec": "^0.1.2",
     "color-blend": "^3.0.1",
     "focus-visible": "^5.2.0",
     "framer-motion": "^3.10.0",

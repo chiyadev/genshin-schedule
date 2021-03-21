@@ -14,10 +14,13 @@ import {
 } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 19;
+const LatestChangelog = 20;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={20} date="2021/03/21">
+      <ChangelogItem>Added new weapons from 1.4: Elegy For The End, The Alley Flash and Windblume Ode.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={19} date="2021/03/05">
       <ChangelogItem github={50}>Added a setting for resin estimation mode by amount instead of time.</ChangelogItem>
       <ChangelogItem>Added missing weapon Memory of Dust.</ChangelogItem>
@@ -127,6 +130,8 @@ const ChangelogModal = () => {
     }
   }, [version]);
 
+  const dividerColor = useColorModeValue("gray.200", "gray.600");
+
   if (!version) {
     return null;
   }
@@ -143,12 +148,7 @@ const ChangelogModal = () => {
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <VStack
-            align="stretch"
-            spacing={4}
-            pb={2}
-            divider={<StackDivider borderColor={useColorModeValue("gray.200", "gray.600")} />}
-          >
+          <VStack align="stretch" spacing={4} pb={2} divider={<StackDivider borderColor={dividerColor} />}>
             {changelog.slice(0, 3)}
           </VStack>
         </ModalBody>
