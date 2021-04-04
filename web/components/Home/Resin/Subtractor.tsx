@@ -39,8 +39,9 @@ const Subtractor = ({ current }: { current: number }) => {
 };
 
 const SubtractButton = ({ value, onClick }: { value: number; onClick: () => void }) => {
+  const hotkey = value.toString().slice(0, 1);
   useHotkeys(
-    value.toString().slice(0, 1),
+    `${hotkey}, num_${hotkey}`, // support numpad keys for niche cases (e.g. Firefox on macOS)
     (e) => {
       onClick();
       e.preventDefault();
