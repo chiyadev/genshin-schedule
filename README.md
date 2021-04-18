@@ -1,3 +1,7 @@
+[English](README.md) | [简体中文](README_zh_CN.md)
+
+
+
 # Genshin Schedule
 
 Genshin Schedule is a website to help you keep track of time-related game activities in Genshin Impact.
