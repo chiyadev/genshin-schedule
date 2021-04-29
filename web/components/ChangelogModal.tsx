@@ -18,7 +18,7 @@ const LatestChangelog = 21;
 
 function buildChangelog() {
   return [
-    <ChangelogSection key={21} date="2021/03/28">
+    <ChangelogSection key={21} date="2021/04/28">
       <ChangelogItem>Added new character from 1.5: Yanfei</ChangelogItem>
       <ChangelogItem>Added new artifacts from 1.5: Tenacity of the Millelith, Pale Flame</ChangelogItem>
       <ChangelogItem>Added new domains from 1.5: Ridge Watch, Beneath the Dragon-Queller</ChangelogItem>
