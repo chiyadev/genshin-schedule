@@ -1,4 +1,5 @@
 import {
+  BeneathTheDragonQueller,
   CeciliaGarden,
   ClearPoolAndMountainCavern,
   ConfrontStormterror,
@@ -10,6 +11,7 @@ import {
   HiddenPalaceOfZhouFormula,
   MidsummerCourtyard,
   PeakOfVindagnyr,
+  RidgeWatch,
   TaishanMansion,
   ValleyOfRemembrance,
   WolfOfTheNorthChallenge,
@@ -40,6 +42,7 @@ export const DomainOfBlessing: DomainCategory = {
     HiddenPalaceOfZhouFormula,
     ClearPoolAndMountainCavern,
     PeakOfVindagnyr,
+    RidgeWatch,
   ],
 };
 
@@ -54,7 +57,7 @@ export const Trounce: DomainCategory = {
   name: "Trounce",
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Weekly_Bosses",
   dropDescription: "Weekly Challenge",
-  domains: [ConfrontStormterror, WolfOfTheNorthChallenge, EnterTheGoldenHouse],
+  domains: [ConfrontStormterror, WolfOfTheNorthChallenge, EnterTheGoldenHouse, BeneathTheDragonQueller],
 };
 
 export const DomainCategories = [DomainOfForgery, DomainOfBlessing, DomainOfMastery, Trounce];

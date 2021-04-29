@@ -120,6 +120,20 @@ addIcons("cooking ingredient", [
   { name: "Wheat", timer: 24 },
 ]);
 
+addIcons("furnishing", [
+  { name: "Yellow Dye" },
+  { name: "Blue Dye" },
+  { name: "Red Dye" },
+  { name: "Fabric" },
+  { name: "Bamboo Segment", timer: "reset" },
+  { name: "Birch Wood", timer: "reset" },
+  { name: "Fragrant Cedar Wood", timer: "reset" },
+  { name: "Cuihua Wood", timer: "reset" },
+  { name: "Fir Wood", timer: "reset" },
+  { name: "Pine Wood", timer: "reset" },
+  { name: "Sandbearer Wood", timer: "reset" },
+]);
+
 addIcons("material", [
   { name: "Butterfly Wings", timer: 24 },
   { name: "Crystal Core", timer: 24 },
@@ -151,6 +165,7 @@ addIcons("currency", [
   { name: "Mora" },
   { name: "Resin" },
   { name: "Condensed Resin" },
+  { name: "Transient Resin" },
   { name: "Primogem" },
   { name: "Genesis Crystal" },
   { name: "Intertwined Fate" },
