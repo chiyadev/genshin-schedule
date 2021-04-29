@@ -112,6 +112,27 @@ export const ShadowOfTheWarrior: TalentMaterial = {
   item: "Shadow of the Warrior",
 };
 
+export const DragonLordsCrown: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: "Dragon Lord's Crown",
+  wiki: "https://genshin-impact.fandom.com/wiki/Dragon_Lord%27s_Crown",
+  item: "Dragon Lord's Crown",
+};
+
+export const BloodjadeBranch: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: "Bloodjade Branch",
+  wiki: "https://genshin-impact.fandom.com/wiki/Bloodjade_Branch",
+  item: "Bloodjade Branch",
+};
+
+export const GildedScale: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: "Gilded Scale",
+  wiki: "https://genshin-impact.fandom.com/wiki/Gilded_Scale",
+  item: "Gilded Scale",
+};
+
 export const TalentMaterials = [
   Freedom,
   Prosperity,
@@ -128,4 +149,7 @@ export const TalentMaterials = [
   TuskOfMonocerosCaeli,
   ShardOfAFoulLegacy,
   ShadowOfTheWarrior,
+  DragonLordsCrown,
+  BloodjadeBranch,
+  GildedScale,
 ];

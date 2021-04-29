@@ -1,4 +1,5 @@
 import {
+  BeneathTheDragonQueller,
   CeciliaGarden,
   ClearPoolAndMountainCavern,
   ConfrontStormterror,
@@ -10,6 +11,7 @@ import {
   HiddenPalaceOfZhouFormula,
   MidsummerCourtyard,
   PeakOfVindagnyr,
+  RidgeWatch,
   TaishanMansion,
   ValleyOfRemembrance,
   WolfOfTheNorthChallenge,
@@ -25,6 +27,7 @@ import {
   Chongyun,
   Diluc,
   Diona,
+  Eula,
   Fischl,
   Ganyu,
   Jean,
@@ -44,6 +47,7 @@ import {
   Xiao,
   Xingqiu,
   Xinyan,
+  Yanfei,
   Zhongli,
 } from "./characters";
 
@@ -75,6 +79,7 @@ export const Mondstadt: Region = {
     Bennett,
     Diluc,
     Diona,
+    Eula,
     Fischl,
     Jean,
     Kaeya,
@@ -99,8 +104,10 @@ export const Liyue: Region = {
     ClearPoolAndMountainCavern,
     TaishanMansion,
     EnterTheGoldenHouse,
+    BeneathTheDragonQueller,
+    RidgeWatch,
   ],
-  characters: [Beidou, Chongyun, Ganyu, Keqing, Ningguang, Qiqi, Xiangling, Xiao, Xingqiu, Xinyan, Zhongli],
+  characters: [Beidou, Chongyun, Ganyu, Keqing, Ningguang, Qiqi, Xiangling, Xiao, Xingqiu, Xinyan, Yanfei, Zhongli],
 };
 
 export const Inazuma: Region = {

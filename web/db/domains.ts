@@ -1,5 +1,6 @@
 import {
   AltarOfTheFalls,
+  BeneathTheDragonQuellerDrops,
   CityOfReflections,
   ClearPoolAndMountainCavernDrops,
   ConfrontStormterrorDrops,
@@ -14,6 +15,7 @@ import {
   HiddenPalaceOfZhouFormulaDrops,
   MidsummerCourtyardDrops,
   PeakOfVindagnyrDrops,
+  RidgeWatchDrops,
   RuinsOfThirstingCapital,
   SubmergedValley,
   TaishanMansionDrops1,
@@ -125,6 +127,20 @@ export const EnterTheGoldenHouse: Domain = {
   drops: [EnterTheGoldenHouseDrops],
 };
 
+export const BeneathTheDragonQueller: Domain = {
+  type: "Domain",
+  name: "Beneath the Dragon-Queller",
+  wiki: "https://genshin-impact.fandom.com/wiki/Beneath_the_Dragon-Queller",
+  drops: [BeneathTheDragonQuellerDrops],
+};
+
+export const RidgeWatch: Domain = {
+  type: "Domain",
+  name: "Ridge Watch",
+  wiki: "https://genshin-impact.fandom.com/wiki/Ridge_Watch",
+  drops: [RidgeWatchDrops],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -139,4 +155,6 @@ export const Domains = [
   WolfOfTheNorthChallenge,
   PeakOfVindagnyr,
   EnterTheGoldenHouse,
+  BeneathTheDragonQueller,
+  RidgeWatch,
 ];

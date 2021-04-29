@@ -14,10 +14,18 @@ import {
 } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
 
-const LatestChangelog = 20;
+const LatestChangelog = 21;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={21} date="2021/03/28">
+      <ChangelogItem>Added new character from 1.5: Yanfei</ChangelogItem>
+      <ChangelogItem>Added new artifacts from 1.5: Tenacity of the Millelith, Pale Flame</ChangelogItem>
+      <ChangelogItem>Added new domains from 1.5: Ridge Watch, Beneath the Dragon-Queller</ChangelogItem>
+      <ChangelogItem>Added new items from 1.5: various dyes and woods, Transient Resin</ChangelogItem>
+      <ChangelogItem>Added leaked character: Eula</ChangelogItem>
+      <ChangelogItem>Updated Rosaria's old picture.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={20} date="2021/03/21">
       <ChangelogItem>Added new weapons from 1.4: Elegy For The End, The Alley Flash and Windblume Ode.</ChangelogItem>
       <ChangelogItem github={54}>Fixed daylight savings calculation for America and Europe servers.</ChangelogItem>
