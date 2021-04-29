@@ -6,7 +6,7 @@ import { trackEvent } from "../../../utils/umami";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { useHotkeys } from "react-hotkeys-hook";
 
-const resinUsages = [60, 40, 20];
+const resinUsages = [60, 40, 30, 20];
 
 const Subtractor = ({ current }: { current: number }) => {
   const time = useServerTime(1000);
