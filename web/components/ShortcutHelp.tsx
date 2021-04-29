@@ -32,7 +32,7 @@ const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<bool
 
             <Category heading="Resin Calculator">
               <KeyHint>
-                Subtract 20 <Kbd>2</Kbd>, 40 <Kbd>4</Kbd>, 60 <Kbd>6</Kbd>
+                Subtract 20 <Kbd>2</Kbd>, 30 <Kbd>3</Kbd>, 40 <Kbd>4</Kbd>, 60 <Kbd>6</Kbd>
               </KeyHint>
             </Category>
 
