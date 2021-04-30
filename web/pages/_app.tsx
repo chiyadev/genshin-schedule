@@ -20,6 +20,13 @@ const fallbackFonts =
 function App({ Component, pageProps, router }: AppProps) {
   useScrollPreserver();
   useEffect(() => trackView(router.asPath), [router.asPath]);
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  }, []);
 
   return (
     <ChakraProvider
