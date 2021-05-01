@@ -21,6 +21,7 @@ function buildChangelog() {
     <ChangelogSection key={22} date="2021/04/30">
       <ChangelogItem>Removed text from header menu to make it minimal.</ChangelogItem>
       <ChangelogItem>Added button in task list to show hidden tasks.</ChangelogItem>
+      <ChangelogItem>Added categories to icon listing.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={21} date="2021/04/28">
       <ChangelogItem>Added new character from 1.5: Yanfei</ChangelogItem>

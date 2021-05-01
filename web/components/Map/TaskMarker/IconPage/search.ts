@@ -5,10 +5,12 @@ import { Task } from "../../../../utils/config";
 export const KnownResourceTimers: Record<string, Task["refreshTime"]> = {};
 export const IconSearch = new MemorySearch<string>();
 export const IconNames: string[] = [];
+export const IconCategories: Record<string, string[]> = {};
 
 function addIcons(type: string, items: { name: string; timer?: Task["refreshTime"] }[]) {
   for (const { name, timer } of items) {
     IconNames.push(name);
+    (IconCategories[type] || (IconCategories[type] = [])).push(name);
     IconSearch.add(name, name);
     type && IconSearch.add(type, name);
     timer && (KnownResourceTimers[name] = typeof timer === "number" ? timer * 3600000 : timer);

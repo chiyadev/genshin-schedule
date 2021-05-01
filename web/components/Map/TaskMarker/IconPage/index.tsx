@@ -1,7 +1,7 @@
 import React, { Dispatch, memo, SetStateAction, useEffect, useMemo, useRef } from "react";
 import { Task, useConfig } from "../../../../utils/config";
 import { PopupPage } from "../index";
-import { IconNames, IconSearch, KnownResourceTimers } from "./search";
+import { IconCategories, IconSearch, KnownResourceTimers } from "./search";
 import Item from "./Item";
 import { chakra, Icon, Input, InputGroup, InputLeftElement, SimpleGrid, VStack } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
@@ -18,9 +18,17 @@ const IconPage = ({
 
   const results = useMemo(() => {
     const set = new Set(IconSearch.search(search));
+    const obj: Record<string, string[]> = {};
 
-    // preserve display order
-    return IconNames.filter((icon) => set.has(icon));
+    for (const category of Object.keys(IconCategories)) {
+      const icons = IconCategories[category].filter((icon) => set.has(icon));
+
+      if (icons.length) {
+        obj[category] = icons;
+      }
+    }
+
+    return obj;
   }, [search]);
 
   const listRef = useRef<HTMLDivElement>(null);
@@ -69,32 +77,40 @@ const IconPage = ({
         />
       </InputGroup>
 
-      <chakra.div ref={listRef} h={40} overflowY="auto" my={-2}>
-        <SimpleGrid columns={7} spacing={1} py={2}>
-          {useMemo(
-            () =>
-              results.map((icon) => (
-                <Item
-                  key={icon}
-                  name={icon}
-                  onClick={() => {
-                    const timer = KnownResourceTimers[icon];
+      <VStack ref={listRef} align="stretch" spacing={4} h={40} overflowY="auto" my={-2} py={2}>
+        {useMemo(
+          () =>
+            Object.keys(results).map((category) => (
+              <VStack align="stretch" spacing={1}>
+                <chakra.span fontSize="sm" textTransform="capitalize">
+                  {category}
+                </chakra.span>
 
-                    setTask((task) => ({
-                      ...task,
-                      name: icon,
-                      icon,
-                      refreshTime: timer || task.refreshTime,
-                    }));
+                <SimpleGrid columns={7} spacing={1}>
+                  {results[category].map((icon) => (
+                    <Item
+                      key={icon}
+                      name={icon}
+                      onClick={() => {
+                        const timer = KnownResourceTimers[icon];
 
-                    setPage("info");
-                  }}
-                />
-              )),
-            [results, setPage, setTask]
-          )}
-        </SimpleGrid>
-      </chakra.div>
+                        setTask((task) => ({
+                          ...task,
+                          name: icon,
+                          icon,
+                          refreshTime: timer || task.refreshTime,
+                        }));
+
+                        setPage("info");
+                      }}
+                    />
+                  ))}
+                </SimpleGrid>
+              </VStack>
+            )),
+          [results, setPage, setTask]
+        )}
+      </VStack>
     </VStack>
   );
 };
