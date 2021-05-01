@@ -5,6 +5,7 @@ import { IconCategories, IconSearch, KnownResourceTimers } from "./search";
 import Item from "./Item";
 import { chakra, Icon, Input, InputGroup, InputLeftElement, SimpleGrid, VStack } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
+import { FormattedMessage } from "react-intl";
 
 const IconPage = ({
   setTask,
@@ -83,7 +84,7 @@ const IconPage = ({
             Object.keys(results).map((category) => (
               <VStack align="stretch" spacing={1}>
                 <chakra.span fontSize="sm" textTransform="capitalize">
-                  {category}
+                  <FormattedMessage id={category} />
                 </chakra.span>
 
                 <SimpleGrid columns={7} spacing={1}>

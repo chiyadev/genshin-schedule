@@ -12,6 +12,7 @@ import StatisticsUpdater from "./Statistics/StatisticsUpdater";
 import ColorModeOverride from "./ColorModeOverride";
 import ClockOffsetWarning from "./ClockOffsetWarning";
 import { Tooltip } from "@chakra-ui/tooltip";
+import { FormattedMessage } from "react-intl";
 
 const Layout = ({
   children,
@@ -49,7 +50,7 @@ const Layout = ({
                 <>
                   <NextLink href="/home/notifications" passHref>
                     <Link>
-                      <Tooltip label="Notifications">
+                      <Tooltip label={<FormattedMessage id="notifications" />}>
                         <span>
                           <Icon as={FaBell} />
                         </span>
@@ -58,7 +59,7 @@ const Layout = ({
                   </NextLink>
                   <NextLink href="/home/statistics" passHref>
                     <Link>
-                      <Tooltip label="Statistics">
+                      <Tooltip label={<FormattedMessage id="statistics" />}>
                         <span>
                           <Icon as={FaChartBar} />
                         </span>

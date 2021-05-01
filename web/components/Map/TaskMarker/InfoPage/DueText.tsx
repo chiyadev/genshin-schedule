@@ -1,9 +1,10 @@
 import React, { memo } from "react";
 import { Task } from "../../../../utils/config";
-import { formatDurationPartSimple, getLargestUnit, useServerTime } from "../../../../utils/time";
+import { useFormatDurationPart, getLargestUnit, useServerTime } from "../../../../utils/time";
 import { FaClock } from "react-icons/fa";
 import { HStack, Icon, useColorModeValue } from "@chakra-ui/react";
 import { DateTime } from "luxon";
+import { FormattedMessage } from "react-intl";
 
 const DueText = ({ task }: { task: Task }) => {
   const time = useServerTime(1000);
@@ -15,11 +16,16 @@ const DueText = ({ task }: { task: Task }) => {
     <HStack fontSize="sm" color={due ? undefined : dueColor} spacing={2}>
       <Icon as={FaClock} />
 
-      {due ? (
-        <div>Due in {formatDurationPartSimple(dueTime, getLargestUnit(dueTime))}</div>
-      ) : (
-        <div>Due {formatDurationPartSimple(dueTime.negate(), getLargestUnit(dueTime))} ago</div>
-      )}
+      <div>
+        {due ? (
+          <FormattedMessage id="dueInTime" values={{ time: useFormatDurationPart(dueTime, getLargestUnit(dueTime)) }} />
+        ) : (
+          <FormattedMessage
+            id="dueAgoTime"
+            values={{ time: useFormatDurationPart(dueTime.negate(), getLargestUnit(dueTime)) }}
+          />
+        )}
+      </div>
     </HStack>
   );
 };

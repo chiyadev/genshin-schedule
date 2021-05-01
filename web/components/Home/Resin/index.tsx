@@ -28,6 +28,7 @@ import NotificationSetter from "./NotificationSetter";
 import EstimatorByNotifyMark from "./EstimatorByNotifyMark";
 import { FaBell } from "react-icons/fa";
 import NextLink from "next/link";
+import { FormattedMessage } from "react-intl";
 
 const estimateModes: Config["resinEstimateMode"][] = ["time", "value"];
 
@@ -49,7 +50,7 @@ const Resin = () => {
   const inputWidth = useMeasuredTextWidth(roundResin(current).toString(), inputStyle);
 
   return (
-    <WidgetWrapper type="resin" heading="Resin Calculator" onHover={setHover}>
+    <WidgetWrapper type="resin" heading={<FormattedMessage id="resinCalc" />} onHover={setHover}>
       <NotificationSetter />
 
       <WhiteCard>
@@ -124,7 +125,9 @@ const Resin = () => {
           divider={<StackDivider borderColor={useColorModeValue("gray.200", "gray.700")} />}
         >
           {current >= ResinCap ? (
-            <span>Your resins are full!</span>
+            <span>
+              <FormattedMessage id="resinFull" />
+            </span>
           ) : mode === "time" ? (
             <EstimatorByTime />
           ) : mode === "value" ? (

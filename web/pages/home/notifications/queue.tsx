@@ -8,7 +8,8 @@ import WhiteCard from "../../../components/WhiteCard";
 import { Button, chakra, Code, HStack, Icon } from "@chakra-ui/react";
 import { DateTime } from "luxon";
 import { FaPaperPlane } from "react-icons/fa";
-import { formatDurationSimple } from "../../../utils/time";
+import { useFormatDuration } from "../../../utils/time";
+import { FormattedMessage } from "react-intl";
 
 type Props = {
   data: WebData | null;
@@ -40,14 +41,18 @@ const Home = ({ data, queue }: Props) => {
     <ConfigProvider initial={data}>
       <Layout title={["Notification queue"]}>
         <VStack align="stretch" spacing={4}>
-          <div>Notification queue:</div>
+          <div>
+            <FormattedMessage id="notiQueue" />:
+          </div>
 
           {queue?.length ? (
             queue
               .sort((a, b) => a.time - b.time)
               .map((notification) => <Item key={notification.key} notification={notification} />)
           ) : (
-            <div>There are no notifications in queue.</div>
+            <div>
+              <FormattedMessage id="notiQueueEmpty" />
+            </div>
           )}
         </VStack>
       </Layout>
@@ -79,7 +84,10 @@ const Item = ({ notification }: { notification: Notification }) => {
       <VStack align="start" spacing={4}>
         <VStack align="start">
           <div>
-            Scheduled at <Code>{time.toSQL()}</Code> / in <Code>{formatDurationSimple(time.diffNow())}</Code>
+            <FormattedMessage
+              id="notiSchdAt"
+              values={{ time: <Code>{time.toSQL()}</Code>, duration: <Code>{useFormatDuration(time.diffNow())}</Code> }}
+            />
           </div>
         </VStack>
 
@@ -102,7 +110,7 @@ const Item = ({ notification }: { notification: Notification }) => {
               }
             }}
           >
-            Send now
+            <FormattedMessage id="sendNow" />
           </Button>
 
           <Button
@@ -118,7 +126,7 @@ const Item = ({ notification }: { notification: Notification }) => {
               }
             }}
           >
-            Dequeue
+            <FormattedMessage id="dequeue" />
           </Button>
         </HStack>
       </VStack>

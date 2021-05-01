@@ -5,6 +5,7 @@ import TaskSearchModal from "../../TaskSearchModal";
 import { useConfig } from "../../../utils/config";
 import { Button, HStack, Icon } from "@chakra-ui/react";
 import { trackEvent } from "../../../utils/umami";
+import { FormattedMessage } from "react-intl";
 
 const SearchButton = () => {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,7 @@ const SearchButton = () => {
 
       {query && <div>"{query}"</div>}
 
-      <Tooltip label="Search">
+      <Tooltip label={<FormattedMessage id="search" />}>
         <Button
           as="button"
           variant="ghost"

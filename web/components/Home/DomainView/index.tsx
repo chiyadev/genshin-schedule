@@ -23,6 +23,7 @@ import WidgetWrapper from "../WidgetWrapper";
 import { Grid, HStack, Icon, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import FilterButtons from "./FilterButtons";
 import styles from "./index.module.css";
+import { FormattedMessage } from "react-intl";
 
 export type ScheduledDomain = {
   domain: Domain;
@@ -221,7 +222,12 @@ const DomainView = () => {
     () => (
       <WidgetWrapper
         type="domains"
-        heading={<span>Today&apos;s Domains{!!domains.length && <span> ({domains.length})</span>}</span>}
+        heading={
+          <span>
+            <FormattedMessage id="todaysDomains" />
+            {!!domains.length && <span> ({domains.length})</span>}
+          </span>
+        }
         menu={<FilterButtons />}
       >
         {domains.length ? (
@@ -238,15 +244,20 @@ const DomainView = () => {
           <HStack spacing={2}>
             <Icon as={FaTimes} />
             <div>
-              <span>No domains for today. Maybe try some </span>
-              <Link
-                href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops"
-                color={useColorModeValue("blue.500", "blue.300")}
-                isExternal
-              >
-                Ley Lines
-              </Link>
-              <span>?</span>
+              <FormattedMessage
+                id="todaysDomainsNone"
+                values={{
+                  link: (
+                    <Link
+                      href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops"
+                      color={useColorModeValue("blue.500", "blue.300")}
+                      isExternal
+                    >
+                      <FormattedMessage id="todaysDomainsNoneLink" />
+                    </Link>
+                  ),
+                }}
+              />
             </div>
           </HStack>
         )}

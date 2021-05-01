@@ -1,22 +1,23 @@
 import React, { memo, useMemo } from "react";
 import { useConfig } from "../../../utils/config";
-import { formatDurationPartSimple, formatDurationSimple, formatTimeSimple, useServerTime } from "../../../utils/time";
+import { useFormatDurationPart, useFormatDuration, useFormatTime, useServerTime } from "../../../utils/time";
 import { getResinRecharge, ResinCap, ResinsPerMinute, roundResin } from "../../../db/resins";
 import { DateTime, Duration } from "luxon";
+import { FormattedMessage } from "react-intl";
 
 const EstimatorByTime = () => {
   const [resin] = useConfig("resin");
   const time = useServerTime(60000);
 
   const values = useMemo(() => {
-    const result: { time: string; value: number }[] = [];
+    const result: { capTime: Duration; value: number; full?: boolean }[] = [];
 
     const addValue = (hours: number) => {
       const resins = roundResin(resin.value + getResinRecharge(time.plus({ hours }).valueOf() - resin.time));
 
       if (resins < ResinCap) {
         result.push({
-          time: formatDurationPartSimple(Duration.fromObject({ hours }), "hour"),
+          capTime: Duration.fromObject({ hours }),
           value: resins,
         });
 
@@ -32,11 +33,9 @@ const EstimatorByTime = () => {
       .diff(time);
 
     result.push({
-      time: [
-        formatDurationSimple(capTime, ["hour", "minute"]),
-        `(${formatTimeSimple(time.plus(capTime), ["hour", "minute"])})`,
-      ].join(" "),
+      capTime,
       value: ResinCap,
+      full: true,
     });
 
     return result;
@@ -44,9 +43,20 @@ const EstimatorByTime = () => {
 
   return (
     <div>
-      {values.map(({ time, value }) => (
-        <div key={time}>
-          {value} in {time}
+      {values.map(({ capTime, value, full }) => (
+        <div key={value}>
+          <FormattedMessage
+            id="resinEstTimeEntry"
+            values={{
+              value,
+              duration: full
+                ? [
+                    useFormatDuration(capTime, ["hour", "minute"]),
+                    `(${useFormatTime(time.plus(capTime), ["hour", "minute"])})`,
+                  ].join(" ")
+                : useFormatDurationPart(capTime, "hour"),
+            }}
+          />
         </div>
       ))}
     </div>

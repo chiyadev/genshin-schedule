@@ -4,6 +4,7 @@ import { useConfig } from "../../../utils/config";
 import { FaBell } from "react-icons/fa";
 import { ResinCap } from "../../../db/resins";
 import NotificationSetter from "../../Home/Resin/NotificationSetter";
+import { FormattedMessage } from "react-intl";
 
 const ResinNotifyMarkSlider = () => {
   const [hint, setHint] = useState(false);
@@ -15,7 +16,9 @@ const ResinNotifyMarkSlider = () => {
 
       <HStack spacing={2}>
         <Icon as={FaBell} />
-        <div>Send resin notification at</div>
+        <div>
+          <FormattedMessage id="resinNotiMark" />
+        </div>
       </HStack>
 
       <Tooltip label={<span>{value} resins</span>} isOpen={hint} placement="top">

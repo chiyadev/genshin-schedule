@@ -5,6 +5,7 @@ import { AspectRatio, Center, chakra, HStack, Link, useColorModeValue, VStack } 
 import { getAssetByName } from "../../../assets";
 import NextLink from "next/link";
 import IconImage from "../IconImage";
+import { FormattedMessage } from "react-intl";
 
 const Icon = ({ visible = true, character }: { visible?: boolean; character: Character }) => {
   const [charactersWeekly] = useConfig("charactersWeekly");
@@ -37,7 +38,9 @@ const Icon = ({ visible = true, character }: { visible?: boolean; character: Cha
             </Center>
 
             <VStack spacing={0}>
-              <div>{character.name}</div>
+              <div>
+                <FormattedMessage id={character.name} />
+              </div>
 
               <HStack fontSize="sm" color="gray.500" spacing={1}>
                 <chakra.img
@@ -47,7 +50,9 @@ const Icon = ({ visible = true, character }: { visible?: boolean; character: Cha
                   h={3}
                 />
 
-                <div>{character.talentMaterials[0].name}</div>
+                <div>
+                  <FormattedMessage id={character.talentMaterials[0].name} />
+                </div>
               </HStack>
             </VStack>
           </VStack>

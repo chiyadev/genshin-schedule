@@ -9,6 +9,7 @@ import { getAssetByName } from "../../../../assets";
 import IntervalResetCheck from "./IntervalResetCheck";
 import { KnownResourceTimers } from "../IconPage/search";
 import NotifyToggle from "./NotifyToggle";
+import { useIntl } from "react-intl";
 
 const InfoPage = ({
   task,
@@ -21,6 +22,7 @@ const InfoPage = ({
   setPage: Dispatch<SetStateAction<PopupPage>>;
   showDue?: boolean;
 }) => {
+  const { formatMessage } = useIntl();
   const [nameFocus, setNameFocus] = useState(false);
   const { enabled: syncEnabled } = useSync();
 
@@ -65,7 +67,7 @@ const InfoPage = ({
         h={12}
         p={0}
         borderRadius={0}
-        placeholder="Task description"
+        placeholder={formatMessage({ id: "taskDesc" })}
       />
 
       <VStack key={task.icon} align="stretch" spacing={1}>

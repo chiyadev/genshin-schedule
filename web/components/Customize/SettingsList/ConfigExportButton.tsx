@@ -21,6 +21,7 @@ import {
 import { FaCheck, FaCode, FaCopy, FaPencilAlt } from "react-icons/fa";
 import { useConfigs } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
+import { FormattedMessage } from "react-intl";
 
 const ConfigExportButton = () => {
   const [open, setOpen] = useState(false);
@@ -41,25 +42,30 @@ const ConfigExportButton = () => {
           trackEvent("dataManager", "show");
         }}
       >
-        Manage data
+        <FormattedMessage id="manageData" />
       </Button>
 
       <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Manage data</ModalHeader>
+          <ModalHeader>
+            <FormattedMessage id="manageData" />
+          </ModalHeader>
           <ModalCloseButton />
 
           <ModalBody>
             <VStack align="stretch" spacing={4}>
               <Alert status="warning">
                 <AlertIcon />
-                Input is not validated. Corrupted input can make data recovery impossible.
+                <FormattedMessage id="manageDataValidationWarning" />
               </Alert>
 
               <chakra.div>
-                You can export your account data for backup and restore.
-                <strong> This action cannot be undone.</strong>
+                <FormattedMessage id="manageDataHelp" />
+                <strong>
+                  {" "}
+                  <FormattedMessage id="actionPermanent" />
+                </strong>
               </chakra.div>
 
               <code>
@@ -90,7 +96,7 @@ const ConfigExportButton = () => {
                   }
                 }}
               >
-                Overwrite
+                <FormattedMessage id="overwrite" />
               </Button>
 
               <Button
@@ -100,7 +106,7 @@ const ConfigExportButton = () => {
                   trackEvent("dataManager", "copy");
                 }}
               >
-                {hasCopied ? "Copied" : "Copy"}
+                {hasCopied ? <FormattedMessage id="copied" /> : <FormattedMessage id="copy" />}
               </Button>
             </ButtonGroup>
           </ModalFooter>

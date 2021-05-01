@@ -5,8 +5,10 @@ import { useApiNotification, useConfig } from "../../../utils/config";
 import { Resin } from "../../../assets";
 import { useServerTime } from "../../../utils/time";
 import { useColorHex } from "../../../utils/theme";
+import { useIntl } from "react-intl";
 
 const NotificationSetter = () => {
+  const { formatMessage } = useIntl();
   const time = useServerTime(60000);
   const [resin] = useConfig("resin");
   const [notifyMark] = useConfig("resinNotifyMark");
@@ -23,9 +25,11 @@ const NotificationSetter = () => {
         key: "resin",
         time: capTime,
         icon: Resin,
-        title: "Resins recharged",
+        title: formatMessage({ id: "resinRecharged" }),
         description:
-          notifyMark === ResinCap ? "Your resins have fully recharged!" : `You have ${notifyMark} resins right now!`,
+          notifyMark === ResinCap
+            ? formatMessage({ id: "resinRechargedFull" })
+            : formatMessage({ id: "resinRechargedValue" }, { value: notifyMark }),
         url: "/home",
         color,
       }),
