@@ -25,9 +25,7 @@ const Search = () => {
         <div>
           <span>If there are any missing items, please </span>
           <Link
-            href={`https://github.com/chiyadev/genshin-schedule/issues/new?title=${encodeURIComponent(
-              "bug: Missing item in database {insert item name}"
-            )}`}
+            href="https://github.com/chiyadev/genshin-schedule/issues"
             color={useColorModeValue("blue.500", "blue.300")}
             isExternal
           >

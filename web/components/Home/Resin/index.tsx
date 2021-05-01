@@ -60,6 +60,7 @@ const Resin = () => {
             w={10}
             h={10}
             cursor="pointer"
+            transform="scale(1.4)"
             onClick={() => {
               setMode((mode) => {
                 return estimateModes[(estimateModes.indexOf(mode) + 1) % estimateModes.length];

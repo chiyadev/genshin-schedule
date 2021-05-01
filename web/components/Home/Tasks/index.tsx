@@ -5,11 +5,12 @@ import TaskListCard from "../../TaskListCard";
 import MarkAllDone from "./MarkAllDone";
 import { FaAngleRight, FaTimes } from "react-icons/fa";
 import NextLink from "next/link";
-import { chakra, HStack, Icon, Link, useColorModeValue, VStack } from "@chakra-ui/react";
+import { ButtonGroup, chakra, HStack, Icon, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import SearchButton from "./SearchButton";
 import { useHotkeys } from "react-hotkeys-hook";
 import { useConfig } from "../../../utils/config";
+import ShowHiddenButton from "./ShowHiddenButton";
 
 const MapCore = dynamic(() => import("../../Map"), { ssr: false });
 
@@ -37,7 +38,12 @@ const TaskList = () => {
     <WidgetWrapper
       type="tasks"
       heading={<span>Today&apos;s Tasks{!!dueTasks.length && <span> ({dueTasks.length})</span>}</span>}
-      menu={<SearchButton />}
+      menu={
+        <ButtonGroup isAttached>
+          <SearchButton />
+          <ShowHiddenButton />
+        </ButtonGroup>
+      }
     >
       <VStack align="stretch" spacing={4}>
         {dueTasks.length ? (

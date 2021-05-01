@@ -18,6 +18,10 @@ const LatestChangelog = 21;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={22} date="2021/04/30">
+      <ChangelogItem>Removed text from header menu to make it minimal.</ChangelogItem>
+      <ChangelogItem>Added button in task list to show hidden tasks.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={21} date="2021/04/28">
       <ChangelogItem>Added new character from 1.5: Yanfei</ChangelogItem>
       <ChangelogItem>Added new artifacts from 1.5: Tenacity of the Millelith, Pale Flame</ChangelogItem>
