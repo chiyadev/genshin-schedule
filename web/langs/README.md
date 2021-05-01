@@ -8,7 +8,9 @@ When writing a localization file, you should refer to the default [en-US](en-US.
 
 We use [react-intl](https://formatjs.io/docs/react-intl/) as the localization framework, which means there is full support for the [ICU MessageFormat](https://unicode-org.github.io/icu/userguide/format_parse/) syntax. There are many tutorials and examples on Google to help you.
 
-Note that if a field is left unspecified, the website falls back to the `en-US` localization by default.
+### Fallback fields
+
+If a field is left unspecified, the website falls back to the `en-US` localization by default.
 
 For example, if `en-US` contains:
 
@@ -36,7 +38,27 @@ the resulting localization is an object merge of the more specific localization 
 }
 ```
 
-which means if you are writing an `en-GB` localization, there is no need to specify the `anemo` field.
+which means if you are writing an `en-GB` localization, there is no need to specify the `anemo` field. It is automatically taken from `en-US`.
+
+### Item names (unspecified fields)
+
+You can also translate game item names if you are translating to a non-English language.
+
+For example, if you are translating `Klee`, the field for her does not exist in `en-US`. This is because the key `"Klee"` already implies the value `"Klee"` when unspecified.
+
+```json
+{
+  "Klee": "Klee" // implied
+}
+```
+
+You can take advantage of this behavior to translate English item names to non-English names. e.g. `ja-JP`:
+
+```json
+{
+  "Klee": "クレー"
+}
+```
 
 ## Testing a localization
 
