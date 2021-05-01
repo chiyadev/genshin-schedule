@@ -28,7 +28,7 @@ export type Config = {
   lastChangelog: number;
   offsetDays: number;
   hiddenWidgets: {
-    [key in "clock" | "sync" | "resin" | "tasks" | "domains"]?: boolean;
+    [key in "clock" | "sync" | "resin" | "tasks" | "domains" | "realm"]?: boolean;
   };
   resin: {
     value: number;
@@ -36,6 +36,12 @@ export type Config = {
   };
   resinEstimateMode: "time" | "value";
   resinNotifyMark: number;
+  realmEnergy: number;
+  realmRank: number;
+  realmCurrency: {
+    value: number;
+    time: number;
+  };
   characters: string[];
   charactersWeekly: string[];
   weapons: string[];
@@ -97,6 +103,12 @@ export const DefaultConfig: Config = {
   },
   resinEstimateMode: "time",
   resinNotifyMark: ResinCap,
+  realmEnergy: 0,
+  realmRank: 1,
+  realmCurrency: {
+    value: 0,
+    time: Date.now(),
+  },
   characters: [],
   charactersWeekly: [],
   weapons: [],
