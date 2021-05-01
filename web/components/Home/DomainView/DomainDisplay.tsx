@@ -20,17 +20,21 @@ const DomainDisplay = ({ domain, region, category, talentMaterials, weaponMateri
             </Link>
           </chakra.div>
           <chakra.div fontSize="sm" color="gray.500">
-            {category && (
-              <Link href={category.wiki} isExternal>
-                <FormattedMessage id={category.name} />
-              </Link>
-            )}
-            <span>, </span>
-            {region && (
-              <Link href={region.wiki} isExternal>
-                <FormattedMessage id={region.name} />
-              </Link>
-            )}
+            <FormattedMessage
+              id="domainLocation"
+              values={{
+                category: category && (
+                  <Link href={category.wiki} isExternal>
+                    <FormattedMessage id={category.name} />
+                  </Link>
+                ),
+                region: region && (
+                  <Link href={region.wiki} isExternal>
+                    <FormattedMessage id={region.name} />
+                  </Link>
+                ),
+              }}
+            />
           </chakra.div>
         </div>
       </HStack>

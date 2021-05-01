@@ -32,10 +32,12 @@ const Info = () => {
       <WhiteCard divide>
         <HStack spacing={2} fontSize="xl" fontWeight="bold">
           <Icon as={FaBell} />
-          <div>Notifications</div>
+          <div>
+            <FormattedMessage id="notifications" />
+          </div>
 
           <Spacer />
-          <Tooltip label="Queue">
+          <Tooltip label={<FormattedMessage id="notiQueue" />}>
             <span>
               <NextLink href="/home/notifications/queue" passHref>
                 <Link color={useColorModeValue("blue.500", "blue.300")}>
@@ -115,10 +117,7 @@ const Info = () => {
             <MessageDisplay />
           </VStack>
 
-          <VStack align="start" spacing={2}>
-            <div>4. Done! Future notifications will be sent to you via DM.</div>
-            <chakra.img src={Success} borderRadius="md" />
-          </VStack>
+          <chakra.img src={Success} borderRadius="md" />
         </VStack>
       </WhiteCard>
     </VStack>

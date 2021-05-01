@@ -10,7 +10,9 @@ import { FormattedMessage } from "react-intl";
 const TaskStats = () => {
   return (
     <VStack align="stretch" spacing={4}>
-      <Heading size="md">Tasks done</Heading>
+      <Heading size="md">
+        <FormattedMessage id="statTaskDone" />
+      </Heading>
 
       <WhiteCard divide>
         <HStack

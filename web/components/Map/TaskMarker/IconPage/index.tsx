@@ -5,7 +5,7 @@ import { IconCategories, IconSearch, KnownResourceTimers } from "./search";
 import Item from "./Item";
 import { chakra, Icon, Input, InputGroup, InputLeftElement, SimpleGrid, VStack } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const IconPage = ({
   setTask,
@@ -14,6 +14,7 @@ const IconPage = ({
   setTask: Dispatch<SetStateAction<Task>>;
   setPage: Dispatch<SetStateAction<PopupPage>>;
 }) => {
+  const { formatMessage } = useIntl();
   const [search, setSearch] = useConfig("iconQuery");
   const [scroll, setScroll] = useConfig("iconListScroll");
 
@@ -97,7 +98,7 @@ const IconPage = ({
 
                         setTask((task) => ({
                           ...task,
-                          name: icon,
+                          name: formatMessage({ id: icon }),
                           icon,
                           refreshTime: timer || task.refreshTime,
                         }));
