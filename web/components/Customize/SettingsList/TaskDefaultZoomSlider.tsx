@@ -2,6 +2,7 @@ import React, { memo, useState } from "react";
 import { chakra, HStack, Icon, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Tooltip } from "@chakra-ui/react";
 import { MapZoomMax, MapZoomMin, useConfig } from "../../../utils/config";
 import { FaSearchPlus } from "react-icons/fa";
+import { FormattedMessage } from "react-intl";
 
 const TaskDefaultZoomSlider = () => {
   const [hint, setHint] = useState(false);
@@ -11,7 +12,9 @@ const TaskDefaultZoomSlider = () => {
     <HStack w="full" spacing={4}>
       <HStack spacing={2}>
         <Icon as={FaSearchPlus} />
-        <div>Zoom on task focus</div>
+        <div>
+          <FormattedMessage id="taskDefaultZoom" />
+        </div>
       </HStack>
 
       <Tooltip label={<span>{value}x</span>} isOpen={hint} placement="top">

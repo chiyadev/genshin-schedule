@@ -13,11 +13,21 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
+import { FormattedMessage } from "react-intl";
 
-const LatestChangelog = 21;
+const LatestChangelog = 23;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={23} date="2021/05/01">
+      <ChangelogItem github={53}>Implemented full support for localization.</ChangelogItem>
+      <ChangelogItem>Renamed Mt. Aozang to Mt. Aocang.</ChangelogItem>
+    </ChangelogSection>,
+    <ChangelogSection key={22} date="2021/04/30">
+      <ChangelogItem>Removed text from header menu to make it minimal.</ChangelogItem>
+      <ChangelogItem>Added button in task list to show hidden tasks.</ChangelogItem>
+      <ChangelogItem>Added categories to icon listing.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={21} date="2021/04/28">
       <ChangelogItem>Added new character from 1.5: Yanfei</ChangelogItem>
       <ChangelogItem>Added new artifacts from 1.5: Tenacity of the Millelith, Pale Flame</ChangelogItem>
@@ -152,7 +162,9 @@ const ChangelogModal = () => {
         <ModalHeader>
           <HStack>
             <Icon as={FaBullhorn} />
-            <div>Update changelog</div>
+            <div>
+              <FormattedMessage id="changelog" />
+            </div>
           </HStack>
         </ModalHeader>
         <ModalCloseButton />

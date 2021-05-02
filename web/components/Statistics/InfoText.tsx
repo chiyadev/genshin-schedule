@@ -1,8 +1,10 @@
 import React, { memo } from "react";
 import { useConfig } from "../../utils/config";
 import { ButtonGroup, HStack, Spacer } from "@chakra-ui/react";
-import pluralize from "pluralize";
 import ResetButton from "./ResetButton";
+import { FormattedMessage } from "react-intl";
+import { useFormatDurationPart } from "../../utils/time";
+import { Duration } from "luxon";
 
 const InfoText = () => {
   const [stats] = useConfig("stats");
@@ -14,10 +16,11 @@ const InfoText = () => {
     <HStack align="start" spacing={2}>
       <div>
         <p>
-          Range: {first && first.id}~{last && last.id}
+          <FormattedMessage id="statRange" />: {first && first.id}~{last && last.id}
         </p>
         <p>
-          Retention: {retention} {pluralize("day", retention)}
+          <FormattedMessage id="statDuration" />:{" "}
+          {useFormatDurationPart(Duration.fromObject({ days: retention }), "day")}
         </p>
       </div>
       <Spacer />

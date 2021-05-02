@@ -3,6 +3,7 @@ import { HStack, Icon, Switch } from "@chakra-ui/react";
 import { FaListUl } from "react-icons/fa";
 import { useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
+import { FormattedMessage } from "react-intl";
 
 const TaskListCompactSwitch = () => {
   const [value, setValue] = useConfig("taskListCompact");
@@ -11,7 +12,9 @@ const TaskListCompactSwitch = () => {
     <HStack spacing={4}>
       <HStack spacing={2}>
         <Icon as={FaListUl} />
-        <div>Compact task list</div>
+        <div>
+          <FormattedMessage id="taskListCompact" />
+        </div>
       </HStack>
 
       <Switch

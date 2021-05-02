@@ -1,8 +1,8 @@
 import React, { memo } from "react";
 import { Alert, AlertIcon, Center, Link, ScaleFade, useColorModeValue } from "@chakra-ui/react";
 import { useConfig } from "../utils/config";
-import pluralize from "pluralize";
 import { trackEvent } from "../utils/umami";
+import { FormattedMessage } from "react-intl";
 
 const ClockOffsetWarning = () => {
   const [offset, setOffset] = useConfig("offsetDays");
@@ -21,28 +21,7 @@ const ClockOffsetWarning = () => {
           <AlertIcon />
 
           <div>
-            <span>
-              <span>Showing schedule </span>
-              {offset === 1 ? (
-                <span>
-                  for <strong>tomorrow</strong>
-                </span>
-              ) : offset === -1 ? (
-                <span>
-                  for <strong>yesterday</strong>
-                </span>
-              ) : (
-                <span>
-                  <span>in </span>
-                  <strong>
-                    {offset > 0 && "+"}
-                    {offset} {pluralize("day", offset)}
-                  </strong>
-                </span>
-              )}
-              <span>. </span>
-            </span>
-
+            <FormattedMessage id="schdOffsetWarning" values={{ offset }} />{" "}
             <Link
               as="button"
               color={useColorModeValue("blue.500", "blue.300")}
@@ -51,7 +30,7 @@ const ClockOffsetWarning = () => {
                 trackEvent("clock", "offsetReset");
               }}
             >
-              Reset
+              <FormattedMessage id="schdOffsetReset" />
             </Link>
           </div>
         </Alert>

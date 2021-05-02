@@ -3,8 +3,10 @@ import { Icon, Input, InputGroup, InputLeftElement, Modal, ModalContent, ModalOv
 import { FaSearch } from "react-icons/fa";
 import { useConfig } from "../utils/config";
 import { useHotkeys } from "react-hotkeys-hook";
+import { useIntl } from "react-intl";
 
 const TaskSearchModal = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<boolean> }) => {
+  const { formatMessage } = useIntl();
   const [query, setQuery] = useConfig("taskQuery");
   const [value, setValue] = useState(query);
 
@@ -29,7 +31,7 @@ const TaskSearchModal = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<b
             <Input
               value={value}
               onChange={({ currentTarget: { value } }) => setValue(value)}
-              placeholder="Search tasks..."
+              placeholder={formatMessage({ id: "taskSearch" })}
               onKeyDown={(e) => {
                 switch (e.keyCode) {
                   // enter

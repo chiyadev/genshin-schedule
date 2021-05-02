@@ -1,15 +1,15 @@
 import React, { memo } from "react";
-import { getResinRecharge, ResinCap, roundResin } from "../../../db/resins";
+import { getResinRecharge, roundResin } from "../../../db/resins";
 import { chakra } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/config";
 import {
-  formatDurationPartSimple,
+  useFormatDurationPart,
   getLargestUnit,
   getServerResetTime,
   useServerTime,
   Weekdays,
 } from "../../../utils/time";
-import pluralize from "pluralize";
+import { FormattedMessage } from "react-intl";
 
 const DateDisplay = () => {
   const time = useServerTime(1000);
@@ -21,13 +21,16 @@ const DateDisplay = () => {
 
   return (
     <chakra.div fontSize="sm" color="gray.500">
-      <span>{Weekdays[(6 + resetTime.weekday) % 7]}, </span>
-      <span>{formatDurationPartSimple(resetDue, getLargestUnit(resetDue))} until reset</span>
-
-      {!offsetDays && resetResins < ResinCap && (
+      <FormattedMessage id={`day.${Weekdays[(6 + resetTime.weekday) % 7]}`} />,{" "}
+      <FormattedMessage
+        id="clockUntilReset"
+        values={{ duration: useFormatDurationPart(resetDue, getLargestUnit(resetDue)) }}
+      />
+      {!offsetDays && (
         <span>
           {" "}
-          (+{resetResins} {pluralize("resin", resetResins)})
+          (+
+          <FormattedMessage id="clockResins" values={{ value: resetResins }} />)
         </span>
       )}
     </chakra.div>

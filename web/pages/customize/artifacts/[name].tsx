@@ -10,6 +10,7 @@ import { Artifacts, ArtifactWiki } from "../../../db/artifacts";
 import NoteInput from "../../../components/Customize/ArtifactInfo/NoteInput";
 import Toggle from "../../../components/Customize/ArtifactInfo/Toggle";
 import DropLabel from "../../../components/DropLabel";
+import { FormattedMessage } from "react-intl";
 
 type Props = {
   data: WebData | null;
@@ -75,7 +76,7 @@ const ArtifactInfo = ({ data, name }: Props) => {
             <NoteInput artifact={artifact} />
           </WhiteCard>
         ) : (
-          <div>No such artifact.</div>
+          <FormattedMessage id="artifactNotFound" />
         )}
       </Layout>
     </ConfigProvider>

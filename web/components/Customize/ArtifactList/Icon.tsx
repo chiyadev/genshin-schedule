@@ -4,6 +4,7 @@ import { AspectRatio, Center, Link, Text, useColorModeValue, VStack } from "@cha
 import NextLink from "next/link";
 import IconImage from "../IconImage";
 import { Artifact } from "../../../db/artifacts";
+import { FormattedMessage } from "react-intl";
 
 const Icon = ({ visible = true, artifact }: { visible?: boolean; artifact: Artifact }) => {
   const [existing] = useConfig("artifacts");
@@ -30,7 +31,7 @@ const Icon = ({ visible = true, artifact }: { visible?: boolean; artifact: Artif
             </Center>
 
             <Text isTruncated textAlign="center" maxW="100%">
-              {artifact.name}
+              <FormattedMessage id={artifact.name} />
             </Text>
           </VStack>
         </AspectRatio>

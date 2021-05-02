@@ -10,6 +10,7 @@ import MaterialDisplay from "../../../components/Customize/WeaponInfo/MaterialDi
 import CommonMaterialDisplay from "../../../components/Customize/WeaponInfo/CommonMaterialDisplay";
 import { Weapons, WeaponWiki } from "../../../db/weapons";
 import NoteInput from "../../../components/Customize/WeaponInfo/NoteInput";
+import { FormattedMessage } from "react-intl";
 
 type Props = {
   data: WebData | null;
@@ -76,7 +77,7 @@ const WeaponInfo = ({ data, name }: Props) => {
             <NoteInput weapon={weapon} />
           </WhiteCard>
         ) : (
-          <div>No such weapon.</div>
+          <FormattedMessage id="weaponNotFound" />
         )}
       </Layout>
     </ConfigProvider>

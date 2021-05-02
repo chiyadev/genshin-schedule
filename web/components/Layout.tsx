@@ -1,6 +1,6 @@
 import React, { memo, ReactNode, useState } from "react";
 import Head from "next/head";
-import { chakra, Flex, HStack, Icon, Link, Spacer } from "@chakra-ui/react";
+import { chakra, Flex, Icon, Link, Spacer } from "@chakra-ui/react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Background from "./Background";
@@ -11,6 +11,8 @@ import { FaBell, FaChartBar } from "react-icons/fa";
 import StatisticsUpdater from "./Statistics/StatisticsUpdater";
 import ColorModeOverride from "./ColorModeOverride";
 import ClockOffsetWarning from "./ClockOffsetWarning";
+import { Tooltip } from "@chakra-ui/tooltip";
+import { FormattedMessage } from "react-intl";
 
 const Layout = ({
   children,
@@ -48,18 +50,20 @@ const Layout = ({
                 <>
                   <NextLink href="/home/notifications" passHref>
                     <Link>
-                      <HStack spacing={2}>
-                        <Icon as={FaBell} />
-                        <div>Notifications</div>
-                      </HStack>
+                      <Tooltip label={<FormattedMessage id="notifications" />}>
+                        <span>
+                          <Icon as={FaBell} />
+                        </span>
+                      </Tooltip>
                     </Link>
                   </NextLink>
                   <NextLink href="/home/statistics" passHref>
                     <Link>
-                      <HStack spacing={2}>
-                        <Icon as={FaChartBar} />
-                        <div>Statistics</div>
-                      </HStack>
+                      <Tooltip label={<FormattedMessage id="statistics" />}>
+                        <span>
+                          <Icon as={FaChartBar} />
+                        </span>
+                      </Tooltip>
                     </Link>
                   </NextLink>
                 </>

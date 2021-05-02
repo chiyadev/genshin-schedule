@@ -15,6 +15,7 @@ import { MultiMap } from "./multiMap";
 import { useListItemDispatch } from "./dispatch";
 import { ServerResetHour, useServerTime } from "./time";
 import { DateTime } from "luxon";
+import { Language } from "../langs";
 
 type MapLocation = { lat: number; lng: number };
 
@@ -22,6 +23,7 @@ export const MapZoomMin = 4;
 export const MapZoomMax = 7;
 
 export type Config = {
+  language: Language;
   server: "America" | "Europe" | "Asia" | "TW, HK, MO";
   theme: "light" | "dark";
   background: "paimon" | "klee" | "zhongli" | "none";
@@ -46,6 +48,7 @@ export type Config = {
   tasks: Task[];
   taskQuery: string;
   taskListCompact: boolean;
+  taskListShowHidden: boolean;
   customizeQuery: string;
   iconQuery: string;
   iconListScroll: number;
@@ -84,6 +87,7 @@ const defaultMapCenter = {
 };
 
 export const DefaultConfig: Config = {
+  language: "en-US",
   server: "America",
   theme: "light",
   background: "paimon",
@@ -106,6 +110,7 @@ export const DefaultConfig: Config = {
   tasks: [],
   taskQuery: "",
   taskListCompact: false,
+  taskListShowHidden: false,
   customizeQuery: "",
   iconQuery: "",
   iconListScroll: 0,

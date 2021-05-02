@@ -5,11 +5,13 @@ import TaskListCard from "../../TaskListCard";
 import MarkAllDone from "./MarkAllDone";
 import { FaAngleRight, FaTimes } from "react-icons/fa";
 import NextLink from "next/link";
-import { chakra, HStack, Icon, Link, useColorModeValue, VStack } from "@chakra-ui/react";
+import { ButtonGroup, chakra, HStack, Icon, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import SearchButton from "./SearchButton";
 import { useHotkeys } from "react-hotkeys-hook";
 import { useConfig } from "../../../utils/config";
+import ShowHiddenButton from "./ShowHiddenButton";
+import { FormattedMessage } from "react-intl";
 
 const MapCore = dynamic(() => import("../../Map"), { ssr: false });
 
@@ -36,8 +38,18 @@ const TaskList = () => {
   return (
     <WidgetWrapper
       type="tasks"
-      heading={<span>Today&apos;s Tasks{!!dueTasks.length && <span> ({dueTasks.length})</span>}</span>}
-      menu={<SearchButton />}
+      heading={
+        <span>
+          <FormattedMessage id="todaysTasks" />
+          {!!dueTasks.length && <span> ({dueTasks.length})</span>}
+        </span>
+      }
+      menu={
+        <ButtonGroup isAttached>
+          <SearchButton />
+          <ShowHiddenButton />
+        </ButtonGroup>
+      }
     >
       <VStack align="stretch" spacing={4}>
         {dueTasks.length ? (
@@ -51,7 +63,9 @@ const TaskList = () => {
         ) : (
           <HStack spacing={2}>
             <Icon as={FaTimes} />
-            <div>No tasks for now. Create one by clicking on the map.</div>
+            <div>
+              <FormattedMessage id="todaysTasksNone" />
+            </div>
           </HStack>
         )}
 
@@ -77,7 +91,7 @@ const TaskList = () => {
           <chakra.div textAlign="right" fontSize="sm">
             <NextLink href="/home/map" passHref>
               <Link>
-                Open map <Icon as={FaAngleRight} />
+                <FormattedMessage id="openMap" /> <Icon as={FaAngleRight} />
               </Link>
             </NextLink>
           </chakra.div>

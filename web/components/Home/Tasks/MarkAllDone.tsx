@@ -4,6 +4,7 @@ import { FaCheck } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { HStack, Icon, Link } from "@chakra-ui/react";
 import { getServerResetTime, useServerTime } from "../../../utils/time";
+import { FormattedMessage } from "react-intl";
 
 const MarkAllDone = () => {
   const time = useServerTime(1000);
@@ -34,7 +35,9 @@ const MarkAllDone = () => {
       }}
     >
       <HStack spacing={2}>
-        <div>Mark everything as done</div>
+        <div>
+          <FormattedMessage id="markAllDone" />
+        </div>
         <Icon as={FaCheck} />
       </HStack>
     </Link>
