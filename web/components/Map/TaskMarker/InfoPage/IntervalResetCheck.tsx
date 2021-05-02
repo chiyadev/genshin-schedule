@@ -3,6 +3,7 @@ import { FaSyncAlt } from "react-icons/fa";
 import { trackEvent } from "../../../../utils/umami";
 import { Checkbox, HStack, Icon, Spacer } from "@chakra-ui/react";
 import { ServerResetHour } from "../../../../utils/time";
+import { FormattedMessage } from "react-intl";
 
 const IntervalResetCheck = ({ value, setValue }: { value: boolean; setValue: Dispatch<boolean> }) => {
   return (
@@ -10,7 +11,10 @@ const IntervalResetCheck = ({ value, setValue }: { value: boolean; setValue: Dis
       <Icon as={FaSyncAlt} />
 
       <HStack as="label" spacing={2} cursor="pointer" flex={1}>
-        <div>Respawns on server reset ({ServerResetHour}AM)</div>
+        <div>
+          <FormattedMessage id="taskRespawnOnReset" /> (
+          <FormattedMessage id="timeMorning" values={{ time: ServerResetHour }} />)
+        </div>
         <Spacer />
 
         <Checkbox

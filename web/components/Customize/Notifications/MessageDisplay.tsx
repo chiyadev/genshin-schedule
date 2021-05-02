@@ -3,8 +3,10 @@ import React, { memo, useEffect, useState } from "react";
 import { FaCheck, FaCopy } from "react-icons/fa";
 import { createApiClient } from "../../../utils/api";
 import { trackEvent } from "../../../utils/umami";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const MessageDisplay = () => {
+  const { formatMessage } = useIntl();
   const [message, setMessage] = useState("");
   const { onCopy, hasCopied } = useClipboard(message);
 
@@ -15,7 +17,7 @@ const MessageDisplay = () => {
     if (client.authenticated) {
       setMessage(`enable ||${client.token}||`);
     } else {
-      setMessage("You are not signed in yet.");
+      setMessage(formatMessage({ id: "notSignedIn" }));
     }
   }, []);
 
@@ -29,7 +31,7 @@ const MessageDisplay = () => {
           trackEvent("notifications", "tokenCopy");
         }}
       >
-        {hasCopied ? "Copied" : "Copy"}
+        {hasCopied ? <FormattedMessage id="copied" /> : <FormattedMessage id="copy" />}
       </InputLeftAddon>
 
       <Input disabled value={message} />

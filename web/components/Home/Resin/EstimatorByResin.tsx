@@ -1,15 +1,16 @@
 import React, { memo, useMemo } from "react";
 import { useConfig } from "../../../utils/config";
-import { formatDurationSimple, formatTimeSimple, useServerTime } from "../../../utils/time";
+import { useFormatDuration, useFormatTime, useServerTime } from "../../../utils/time";
 import { getResinRecharge, ResinCap, ResinsPerMinute } from "../../../db/resins";
 import { Duration } from "luxon";
+import { FormattedMessage } from "react-intl";
 
 const EstimatorByResin = () => {
   const [resin] = useConfig("resin");
   const time = useServerTime(60000);
 
   const values = useMemo(() => {
-    const result: { time: string; value: number }[] = [];
+    const result: { remainingTime: Duration; value: number }[] = [];
 
     const addValue = (value: number) => {
       const remainingResins = value - (resin.value + getResinRecharge(time.valueOf() - resin.time));
@@ -17,10 +18,7 @@ const EstimatorByResin = () => {
 
       if (remainingResins > 0) {
         result.push({
-          time: [
-            formatDurationSimple(remainingTime, ["hour", "minute"]),
-            `(${formatTimeSimple(time.plus(remainingTime), ["hour", "minute"])})`,
-          ].join(" "),
+          remainingTime,
           value,
         });
       }
@@ -35,9 +33,18 @@ const EstimatorByResin = () => {
 
   return (
     <div>
-      {values.map(({ time, value }) => (
-        <div key={time}>
-          {value} in {time}
+      {values.map(({ remainingTime, value }) => (
+        <div key={value}>
+          <FormattedMessage
+            id="resinEstValueEntry"
+            values={{
+              value,
+              time: [
+                useFormatDuration(remainingTime, ["hour", "minute"]),
+                `(${useFormatTime(time.plus(remainingTime), ["hour", "minute"])})`,
+              ].join(" "),
+            }}
+          />
         </div>
       ))}
     </div>

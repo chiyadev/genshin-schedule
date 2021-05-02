@@ -6,11 +6,14 @@ import { DateTime } from "luxon";
 import { ResinsPerMinute } from "../../db/resins";
 import { useEfficiencyColor } from "./color";
 import { VictoryAxis, VictoryChart, VictoryLine, VictoryTheme } from "victory";
+import { FormattedMessage } from "react-intl";
 
 const ResinStats = () => {
   return (
     <VStack align="stretch" spacing={4}>
-      <Heading size="md">Resins spent</Heading>
+      <Heading size="md">
+        <FormattedMessage id="statResinSpent" />
+      </Heading>
 
       <WhiteCard divide>
         <HStack
@@ -56,7 +59,9 @@ const TodayPanel = () => {
 
   return (
     <VStack flex={1} spacing={2}>
-      <div>Today</div>
+      <div>
+        <FormattedMessage id="today" />
+      </div>
       <Heading color={color}>{value}</Heading>
     </VStack>
   );
@@ -70,11 +75,16 @@ const TotalPanel = () => {
 
   return (
     <VStack flex={1} spacing={2}>
-      <div>Total</div>
+      <div>
+        <FormattedMessage id="total" />
+      </div>
       <Heading color={color}>{value}</Heading>
 
       <chakra.div fontSize="sm" color="gray.500">
-        {Math.round((value / (ResinsPerDay * retention)) * 100)}% efficiency
+        <FormattedMessage
+          id="statEfficiency"
+          values={{ percent: Math.round((value / (ResinsPerDay * retention)) * 100) }}
+        />
       </chakra.div>
     </VStack>
   );
@@ -88,11 +98,13 @@ const PeakPanel = () => {
 
   return (
     <VStack flex={1} spacing={2}>
-      <div>Peak</div>
+      <div>
+        <FormattedMessage id="peak" />
+      </div>
       <Heading color={color}>{value}</Heading>
 
       <chakra.div fontSize="sm" color="gray.500">
-        {peak ? DateTime.fromMillis(peak.time).toLocaleString() : "never"}
+        {peak ? DateTime.fromMillis(peak.time).toLocaleString() : <FormattedMessage id="statNever" />}
       </chakra.div>
     </VStack>
   );

@@ -2,7 +2,6 @@ import React, { memo, useState } from "react";
 import {
   Button,
   ButtonGroup,
-  chakra,
   Code,
   FormControl,
   FormLabel,
@@ -22,8 +21,10 @@ import { FaUpload, FaUserEdit } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { useRouter } from "next/router";
 import { createApiClient, setAuthToken, User } from "../../../utils/api";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const AccountManageButton = ({ user }: { user: User }) => {
+  const { formatMessage } = useIntl();
   const [open, setOpen] = useState(false);
   const [load, setLoad] = useState(false);
   const [username, setUsername] = useState(user.username);
@@ -40,13 +41,15 @@ const AccountManageButton = ({ user }: { user: User }) => {
           trackEvent("accountManager", "show");
         }}
       >
-        Manage account
+        <FormattedMessage id="manageAccount" />
       </Button>
 
       <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Manage account</ModalHeader>
+          <ModalHeader>
+            <FormattedMessage id="manageAccount" />
+          </ModalHeader>
           <ModalCloseButton />
 
           <form
@@ -81,14 +84,18 @@ const AccountManageButton = ({ user }: { user: User }) => {
           >
             <ModalBody>
               <VStack align="stretch" spacing={4}>
-                <chakra.div>You can change your account username and password.</chakra.div>
+                <div>
+                  <FormattedMessage id="manageUsnPwd" />
+                </div>
 
                 <FormControl isRequired>
-                  <FormLabel>Username</FormLabel>
+                  <FormLabel>
+                    <FormattedMessage id="username" />
+                  </FormLabel>
 
                   <Input
                     id="username"
-                    placeholder="New username"
+                    placeholder={formatMessage({ id: "usernameNew" })}
                     autoComplete="username"
                     value={username}
                     onChange={({ currentTarget: { value } }) => setUsername(value)}
@@ -96,12 +103,14 @@ const AccountManageButton = ({ user }: { user: User }) => {
                 </FormControl>
 
                 <FormControl isRequired>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel>
+                    <FormattedMessage id="password" />
+                  </FormLabel>
 
                   <Input
                     id="password"
                     type="password"
-                    placeholder="New password"
+                    placeholder={formatMessage({ id: "passwordNew" })}
                     autoComplete="current-password"
                     value={password}
                     onChange={({ currentTarget: { value } }) => setPassword(value)}
@@ -109,7 +118,7 @@ const AccountManageButton = ({ user }: { user: User }) => {
                 </FormControl>
 
                 <div>
-                  Linked Discord ID: <Code>{user.discordUserId ?? "<null>"}</Code>
+                  <FormattedMessage id="linkedDiscordId" />: <Code>{user.discordUserId ?? "<null>"}</Code>
                 </div>
               </VStack>
             </ModalBody>
@@ -117,10 +126,12 @@ const AccountManageButton = ({ user }: { user: User }) => {
             <ModalFooter>
               <ButtonGroup>
                 <Button type="submit" colorScheme="red" leftIcon={<Icon as={FaUpload} />} isLoading={load}>
-                  Submit
+                  <FormattedMessage id="manageAccountSubmit" />
                 </Button>
 
-                <Button onClick={() => setOpen(false)}>Cancel</Button>
+                <Button onClick={() => setOpen(false)}>
+                  <FormattedMessage id="cancel" />
+                </Button>
               </ButtonGroup>
             </ModalFooter>
           </form>

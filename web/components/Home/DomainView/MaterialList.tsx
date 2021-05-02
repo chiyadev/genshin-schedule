@@ -6,6 +6,7 @@ import { Weapon } from "../../../db/weapons";
 import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import Item from "./Item";
+import { FormattedMessage } from "react-intl";
 
 const MaterialList = ({
   material,
@@ -24,7 +25,7 @@ const MaterialList = ({
         <div>
           <chakra.div fontSize="lg">
             <Link href={material.wiki} isExternal>
-              {material.name}
+              <FormattedMessage id={material.name} />
             </Link>
           </chakra.div>
           <chakra.div fontSize="sm" color="gray.500">
@@ -38,7 +39,7 @@ const MaterialList = ({
               }
               isExternal
             >
-              {material.type}
+              <FormattedMessage id={material.type} />
             </Link>
           </chakra.div>
         </div>

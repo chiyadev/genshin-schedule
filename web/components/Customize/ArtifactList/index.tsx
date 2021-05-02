@@ -3,6 +3,7 @@ import { ArtifactSearch } from "./search";
 import Icon from "./Icon";
 import { Grid, Heading, VStack } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/config";
+import { FormattedMessage } from "react-intl";
 
 const ArtifactList = () => {
   const [search] = useConfig("customizeQuery");
@@ -11,7 +12,9 @@ const ArtifactList = () => {
 
   return (
     <VStack align="stretch" spacing={4} d={results.size ? undefined : "none"}>
-      <Heading size="md">Artifacts</Heading>
+      <Heading size="md">
+        <FormattedMessage id="artifacts" />
+      </Heading>
 
       <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>
         {all.map((artifact) => (

@@ -6,6 +6,7 @@ import { Task, useApiNotification } from "../../../../utils/config";
 import { useServerTime } from "../../../../utils/time";
 import { getAssetByName } from "../../../../assets";
 import { useColorHex } from "../../../../utils/theme";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export const NotifyToggle = ({
   task,
@@ -16,6 +17,7 @@ export const NotifyToggle = ({
   value: boolean;
   setValue: Dispatch<boolean>;
 }) => {
+  const { formatMessage } = useIntl();
   const time = useServerTime(60000);
   const color = useColorHex("orange.300");
 
@@ -25,7 +27,7 @@ export const NotifyToggle = ({
         key: `task_${task.id}`,
         time: task.dueTime,
         icon: getAssetByName(task.icon) || "",
-        title: `${task.name} respawned`,
+        title: formatMessage({ id: "taskRespawned" }, { name: task.name }),
         description: task.description || "",
         url: "/map",
         color,
@@ -40,7 +42,9 @@ export const NotifyToggle = ({
       <Icon as={value ? FaBell : FaBellSlash} />
 
       <HStack as="label" spacing={2} cursor="pointer" flex={1}>
-        <div>Notify respawn</div>
+        <div>
+          <FormattedMessage id="taskNotify" />
+        </div>
         <Spacer />
 
         <Checkbox

@@ -3,6 +3,7 @@ import { HStack, Icon, Switch } from "@chakra-ui/react";
 import { FaPaintRoller } from "react-icons/fa";
 import { useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
+import { FormattedMessage } from "react-intl";
 
 const ThemeSwitch = () => {
   const [value, setValue] = useConfig("theme");
@@ -11,7 +12,9 @@ const ThemeSwitch = () => {
     <HStack spacing={4}>
       <HStack spacing={2}>
         <Icon as={FaPaintRoller} />
-        <div>Dark mode</div>
+        <div>
+          <FormattedMessage id="darkMode" />
+        </div>
       </HStack>
 
       <Switch

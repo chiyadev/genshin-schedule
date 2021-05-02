@@ -4,6 +4,7 @@ import { FaTrash } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { HStack, Icon, Link } from "@chakra-ui/react";
 import { createApiClient } from "../../../utils/api";
+import { FormattedMessage } from "react-intl";
 
 const DeleteButton = ({ task }: { task: Task }) => {
   const [, setTasks] = useConfig("tasks");
@@ -26,7 +27,9 @@ const DeleteButton = ({ task }: { task: Task }) => {
     >
       <HStack spacing={2}>
         <Icon as={FaTrash} />
-        <div>Delete</div>
+        <div>
+          <FormattedMessage id="taskDelete" />
+        </div>
       </HStack>
     </Link>
   );

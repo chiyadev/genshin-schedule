@@ -5,6 +5,7 @@ import MaterialList from "./MaterialList";
 import ArtifactList from "./ArtifactList";
 import { chakra, HStack, Link } from "@chakra-ui/react";
 import { Domain } from "../../../assets";
+import { FormattedMessage } from "react-intl";
 
 const DomainDisplay = ({ domain, region, category, talentMaterials, weaponMaterials, artifacts }: ScheduledDomain) => {
   return (
@@ -15,21 +16,25 @@ const DomainDisplay = ({ domain, region, category, talentMaterials, weaponMateri
         <div>
           <chakra.div fontSize="xl" fontWeight="bold">
             <Link href={domain.wiki} isExternal>
-              {domain.name}
+              <FormattedMessage id={domain.name} />
             </Link>
           </chakra.div>
           <chakra.div fontSize="sm" color="gray.500">
-            {category && (
-              <Link href={category.wiki} isExternal>
-                {category.name}
-              </Link>
-            )}
-            <span>, </span>
-            {region && (
-              <Link href={region.wiki} isExternal>
-                {region.name}
-              </Link>
-            )}
+            <FormattedMessage
+              id="domainLocation"
+              values={{
+                category: category && (
+                  <Link href={category.wiki} isExternal>
+                    <FormattedMessage id={category.name} />
+                  </Link>
+                ),
+                region: region && (
+                  <Link href={region.wiki} isExternal>
+                    <FormattedMessage id={region.name} />
+                  </Link>
+                ),
+              }}
+            />
           </chakra.div>
         </div>
       </HStack>

@@ -4,6 +4,7 @@ import { Domains } from "../db/domains";
 import { Weekday, Weekdays } from "../utils/time";
 import { Domain } from "../assets";
 import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
+import { FormattedMessage } from "react-intl";
 
 const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   const domains = useMemo(() => {
@@ -12,7 +13,11 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   }, [item]);
 
   if (!domains.length) {
-    return <div>This item does not drop from any domains.</div>;
+    return (
+      <div>
+        <FormattedMessage id="dropNone" />
+      </div>
+    );
   }
 
   return (
@@ -33,16 +38,25 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
             <chakra.img alt="Domain" src={Domain} w={4} h={4} />
 
             <div>
-              <Link href={domain.wiki} isExternal>
-                {domain.name}
-              </Link>
-
-              {days.size !== 7 && (
-                <span>
-                  <span> on </span>
-                  {Weekdays.filter((d) => days.has(d)).join(", ")}
-                </span>
-              )}
+              <FormattedMessage
+                id="dropDomain"
+                values={{
+                  domain: (
+                    <Link href={domain.wiki} isExternal>
+                      <FormattedMessage id={domain.name} />
+                    </Link>
+                  ),
+                  days:
+                    days.size === 7
+                      ? undefined
+                      : Weekdays.filter((d) => days.has(d)).map((day, i) => (
+                          <span key={day}>
+                            {!!i && ", "}
+                            <FormattedMessage id={`day.${day}`} />
+                          </span>
+                        )),
+                }}
+              />
             </div>
           </HStack>
         );

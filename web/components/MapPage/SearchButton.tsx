@@ -4,6 +4,7 @@ import TaskSearchModal from "../TaskSearchModal";
 import { useConfig } from "../../utils/config";
 import { HStack, Link } from "@chakra-ui/react";
 import { trackEvent } from "../../utils/umami";
+import { FormattedMessage } from "react-intl";
 
 const SearchButton = () => {
   const [open, setOpen] = useState(false);
@@ -22,7 +23,7 @@ const SearchButton = () => {
       >
         <HStack spacing={2}>
           <FaSearch />
-          <div>{query ? `"${query}"` : "Search"}</div>
+          <div>{query ? `"${query}"` : <FormattedMessage id="search" />}</div>
         </HStack>
       </Link>
     </HStack>

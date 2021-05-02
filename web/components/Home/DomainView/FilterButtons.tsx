@@ -12,22 +12,23 @@ import {
   WhiteCharacter,
   WhiteWeapon,
 } from "../../../assets";
+import { FormattedMessage } from "react-intl";
 
 const FilterButtons = () => {
   return (
     <ButtonGroup isAttached>
-      <FilterButton type="character" name="Characters" image={useColorModeValue(BlackCharacter, WhiteCharacter)} />
-      <FilterButton type="weapon" name="Weapons" image={useColorModeValue(BlackWeapon, WhiteWeapon)} />
-      <FilterButton type="artifact" name="Artifacts" image={useColorModeValue(BlackArtifact, WhiteArtifact)} />
+      <FilterButton type="character" image={useColorModeValue(BlackCharacter, WhiteCharacter)} />
+      <FilterButton type="weapon" image={useColorModeValue(BlackWeapon, WhiteWeapon)} />
+      <FilterButton type="artifact" image={useColorModeValue(BlackArtifact, WhiteArtifact)} />
     </ButtonGroup>
   );
 };
 
-const FilterButton = ({ type, name, image }: { type: Config["domainFilters"][0]; name: string; image: string }) => {
+const FilterButton = ({ type, image }: { type: Config["domainFilters"][0]; image: string }) => {
   const [filters, setFilters] = useConfig("domainFilters");
 
   return (
-    <Tooltip label={name}>
+    <Tooltip label={<FormattedMessage id={type} />}>
       <Button
         as="button"
         variant="ghost"

@@ -6,6 +6,7 @@ import { useDueTasks, useFilteredTasks } from "../../utils/tasks";
 import { useConfig } from "../../utils/config";
 import { useHotkeys } from "react-hotkeys-hook";
 import { trackEvent } from "../../utils/umami";
+import { FormattedMessage } from "react-intl";
 
 const TaskListOverlay = () => {
   const [tasks] = useConfig("tasks");
@@ -48,7 +49,7 @@ const TaskListOverlay = () => {
           <HStack spacing={2}>
             <Icon as={expanded ? FaChevronDown : FaChevronUp} />
             <div>
-              {expanded ? <span>Hide list</span> : <span>Show list</span>}
+              {expanded ? <FormattedMessage id="taskListHide" /> : <FormattedMessage id="taskListShow" />}
               <span> ({dueTasks.length})</span>
             </div>
           </HStack>

@@ -6,6 +6,7 @@ import NextLink from "next/link";
 import ItemNote from "./ItemNote";
 import { useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
+import { FormattedMessage } from "react-intl";
 
 const Item = ({ path, name }: { path: "characters" | "weapons" | "artifacts"; name: string }) => {
   const [highlights, setHighlights] = useConfig("itemHighlights");
@@ -30,7 +31,9 @@ const Item = ({ path, name }: { path: "characters" | "weapons" | "artifacts"; na
 
       <div>
         <NextLink href={`/customize/${path}/${name}`} passHref>
-          <Link>{name}</Link>
+          <Link>
+            <FormattedMessage id={name} />
+          </Link>
         </NextLink>
 
         <ItemNote name={name} />
