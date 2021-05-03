@@ -15,6 +15,7 @@ const AutoSizeInput = forwardRef<HTMLInputElement>(
           textAlign: "center",
           width: (width || 0) + (focus ? 8 : 0),
           cursor: focus ? undefined : "pointer",
+          background: "inherit",
           ...style,
         }}
         value={value}
