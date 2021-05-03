@@ -5,11 +5,14 @@ import { StatFrame, useConfig, useCurrentStats } from "../../utils/config";
 import { DateTime } from "luxon";
 import { useEfficiencyColor } from "./color";
 import { VictoryAxis, VictoryChart, VictoryLine, VictoryTheme } from "victory";
+import { FormattedMessage } from "react-intl";
 
 const TaskStats = () => {
   return (
     <VStack align="stretch" spacing={4}>
-      <Heading size="md">Tasks done</Heading>
+      <Heading size="md">
+        <FormattedMessage id="statTaskDone" />
+      </Heading>
 
       <WhiteCard divide>
         <HStack
@@ -54,7 +57,9 @@ const TodayPanel = () => {
 
   return (
     <VStack flex={1} spacing={2}>
-      <div>Today</div>
+      <div>
+        <FormattedMessage id="today" />
+      </div>
       <Heading color={color}>{value}</Heading>
     </VStack>
   );
@@ -67,7 +72,9 @@ const TotalPanel = () => {
 
   return (
     <VStack flex={1} spacing={2}>
-      <div>Total</div>
+      <div>
+        <FormattedMessage id="total" />
+      </div>
       <Heading color={color}>{value}</Heading>
     </VStack>
   );
@@ -81,11 +88,13 @@ const PeakPanel = () => {
 
   return (
     <VStack flex={1} spacing={2}>
-      <div>Peak</div>
+      <div>
+        <FormattedMessage id="peak" />
+      </div>
       <Heading color={color}>{value}</Heading>
 
       <chakra.div fontSize="sm" color="gray.500">
-        {peak ? DateTime.fromMillis(peak.time).toLocaleString() : "never"}
+        {peak ? DateTime.fromMillis(peak.time).toLocaleString() : <FormattedMessage id="statNever" />}
       </chakra.div>
     </VStack>
   );

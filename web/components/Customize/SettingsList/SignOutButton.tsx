@@ -4,6 +4,7 @@ import { FaSignOutAlt } from "react-icons/fa";
 import { setAuthToken } from "../../../utils/api";
 import { trackEvent } from "../../../utils/umami";
 import { useRouter } from "next/router";
+import { FormattedMessage } from "react-intl";
 
 const SignOutButton = () => {
   const router = useRouter();
@@ -18,7 +19,7 @@ const SignOutButton = () => {
         setTimeout(() => router.push("/"));
       }}
     >
-      Sign out
+      <FormattedMessage id="signOut" />
     </Button>
   );
 };

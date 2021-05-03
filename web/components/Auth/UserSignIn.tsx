@@ -21,8 +21,10 @@ import { FaSignInAlt, FaUser } from "react-icons/fa";
 import { createApiClient, setAuthToken } from "../../utils/api";
 import { trackEvent } from "../../utils/umami";
 import { useRouter } from "next/router";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const UserSignIn = () => {
+  const { formatMessage } = useIntl();
   const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -39,7 +41,9 @@ const UserSignIn = () => {
         <Alert status="error">
           <AlertIcon />
           <HStack spacing={2}>
-            <AlertTitle>Error</AlertTitle>
+            <AlertTitle>
+              <FormattedMessage id="error" />
+            </AlertTitle>
             <AlertDescription>{error.message}</AlertDescription>
           </HStack>
         </Alert>
@@ -50,7 +54,7 @@ const UserSignIn = () => {
 
         <Input
           id="username"
-          placeholder="Username"
+          placeholder={formatMessage({ id: "username" })}
           autoComplete="username"
           value={username}
           onChange={({ currentTarget: { value } }) => setUsername(value)}
@@ -63,7 +67,7 @@ const UserSignIn = () => {
         <Input
           id="password"
           type="password"
-          placeholder="Password"
+          placeholder={formatMessage({ id: "password" })}
           autoComplete="current-password"
           value={password}
           onChange={({ currentTarget: { value } }) => setPassword(value)}
@@ -77,18 +81,20 @@ const UserSignIn = () => {
           href="https://github.com/chiyadev/genshin-schedule/wiki/Recovering-a-lost-account"
           isExternal
         >
-          Forgot password?
+          <FormattedMessage id="passwordForgot" />
         </Link>
 
         <p>
-          <span color="gray.500">Never reuse your miHoYo password on Genshin-related websites.</span>
+          <chakra.span color="gray.500">
+            <FormattedMessage id="securityWarning" />
+          </chakra.span>
           <span> </span>
           <Link
             color={useColorModeValue("blue.500", "blue.300")}
             href="https://github.com/chiyadev/genshin-schedule/wiki/Regarding-miHoYo-account-security"
             isExternal
           >
-            Read more
+            <FormattedMessage id="securityReadMore" />
           </Link>
         </p>
       </chakra.div>
@@ -121,10 +127,10 @@ const UserSignIn = () => {
             }
           }}
         >
-          Submit
+          <FormattedMessage id="loginSubmit" />
         </Button>
 
-        <Tooltip label="All data will be stored locally on the browser.">
+        <Tooltip label={<FormattedMessage id="loginAnonymousTip" />}>
           <Button
             disabled={load}
             leftIcon={<Icon as={FaUser} />}
@@ -135,7 +141,7 @@ const UserSignIn = () => {
               setTimeout(() => router.push("/home"));
             }}
           >
-            Continue as anonymous
+            <FormattedMessage id="loginAnonymous" />
           </Button>
         </Tooltip>
       </ButtonGroup>

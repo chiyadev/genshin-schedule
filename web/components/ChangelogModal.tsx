@@ -13,11 +13,17 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
+import { FormattedMessage } from "react-intl";
 
-const LatestChangelog = 21;
+const LatestChangelog = 23;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={23} date="2021/05/01">
+      <ChangelogItem github={53}>Implemented full support for localization.</ChangelogItem>
+      <ChangelogItem>Renamed Mt. Aozang to Mt. Aocang.</ChangelogItem>
+      <ChangelogItem github={61}>Added a service worker to make the website installable as PWA.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={22} date="2021/04/30">
       <ChangelogItem>Removed text from header menu to make it minimal.</ChangelogItem>
       <ChangelogItem>Added button in task list to show hidden tasks.</ChangelogItem>
@@ -157,7 +163,9 @@ const ChangelogModal = () => {
         <ModalHeader>
           <HStack>
             <Icon as={FaBullhorn} />
-            <div>Update changelog</div>
+            <div>
+              <FormattedMessage id="changelog" />
+            </div>
           </HStack>
         </ModalHeader>
         <ModalCloseButton />

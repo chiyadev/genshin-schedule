@@ -5,6 +5,7 @@ import { getAssetByName } from "../../../assets";
 import NextLink from "next/link";
 import { Weapon } from "../../../db/weapons";
 import IconImage from "../IconImage";
+import { FormattedMessage } from "react-intl";
 
 const Icon = ({ visible = true, weapon }: { visible?: boolean; weapon: Weapon }) => {
   const [existing] = useConfig("weapons");
@@ -32,12 +33,14 @@ const Icon = ({ visible = true, weapon }: { visible?: boolean; weapon: Weapon })
 
             <VStack spacing={0} maxW="100%">
               <Text isTruncated maxW="100%">
-                {weapon.name}
+                <FormattedMessage id={weapon.name} />
               </Text>
 
               <HStack fontSize="sm" color="gray.500" spacing={1} maxW="100%">
                 <chakra.img alt={weapon.material.item} src={getAssetByName(weapon.material.item)} w={3} h={3} />
-                <Text isTruncated>{weapon.material.name}</Text>
+                <Text isTruncated>
+                  <FormattedMessage id={weapon.material.name} />
+                </Text>
               </HStack>
             </VStack>
           </VStack>

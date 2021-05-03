@@ -62,10 +62,10 @@ import {
 } from "./talentMaterials";
 import { Weekday } from "../utils/time";
 
-const MonThur: Weekday[] = ["Monday", "Thursday"];
-const TuesFri: Weekday[] = ["Tuesday", "Friday"];
-const WedSat: Weekday[] = ["Wednesday", "Saturday"];
-const Sun: Weekday[] = ["Sunday"];
+const MonThur: Weekday[] = ["monday", "thursday"];
+const TuesFri: Weekday[] = ["tuesday", "friday"];
+const WedSat: Weekday[] = ["wednesday", "saturday"];
+const Sun: Weekday[] = ["sunday"];
 const AnyDay: Weekday[] = [...MonThur, ...TuesFri, ...WedSat, ...Sun];
 const Trounce: Weekday[] = AnyDay;
 

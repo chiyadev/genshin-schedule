@@ -2,8 +2,10 @@ import React, { memo } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useConfig } from "../../utils/config";
 import { chakra, Icon, Input, InputGroup, InputLeftElement, Link, useColorModeValue, VStack } from "@chakra-ui/react";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const Search = () => {
+  const { formatMessage } = useIntl();
   const [value, setValue] = useConfig("customizeQuery");
 
   return (
@@ -16,22 +18,29 @@ const Search = () => {
         <Input
           value={value}
           onChange={({ currentTarget: { value } }) => setValue(value)}
-          placeholder="Search characters, weapons and artifacts..."
+          placeholder={formatMessage({ id: "dbSearch" })}
         />
       </InputGroup>
 
       <chakra.div fontSize="sm" color="gray.500">
-        <div>Select items to be added to your farming schedule.</div>
         <div>
-          <span>If there are any missing items, please </span>
-          <Link
-            href="https://github.com/chiyadev/genshin-schedule/issues"
-            color={useColorModeValue("blue.500", "blue.300")}
-            isExternal
-          >
-            create an issue
-          </Link>
-          <span> on GitHub.</span>
+          <FormattedMessage id="dbSelect" />
+        </div>
+        <div>
+          <FormattedMessage
+            id="dbMissing"
+            values={{
+              link: (
+                <Link
+                  href="https://github.com/chiyadev/genshin-schedule/issues"
+                  color={useColorModeValue("blue.500", "blue.300")}
+                  isExternal
+                >
+                  <FormattedMessage id="dbMissingLink" />
+                </Link>
+              ),
+            }}
+          />
         </div>
       </chakra.div>
     </VStack>

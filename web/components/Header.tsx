@@ -4,6 +4,7 @@ import { chakra, HStack, Icon, Link, Spacer } from "@chakra-ui/react";
 import { FaCog } from "react-icons/fa";
 import NextLink from "next/link";
 import { Tooltip } from "@chakra-ui/tooltip";
+import { FormattedMessage } from "react-intl";
 
 const Header = ({ menu }: { menu?: ReactNode }) => {
   return (
@@ -12,7 +13,9 @@ const Header = ({ menu }: { menu?: ReactNode }) => {
         <Link fontFamily="Genshin" fontWeight="bold" flexShrink={0}>
           <HStack spacing={2}>
             <chakra.img alt="logo" src={Favicon32x32} w={6} h={6} borderRadius="md" />
-            <chakra.span fontSize="lg">Genshin Schedule</chakra.span>
+            <chakra.span fontSize="lg">
+              <FormattedMessage id="app" />
+            </chakra.span>
           </HStack>
         </Link>
       </NextLink>
@@ -24,7 +27,7 @@ const Header = ({ menu }: { menu?: ReactNode }) => {
 
         <NextLink href="/customize" passHref>
           <Link flexShrink={0}>
-            <Tooltip label="Customize">
+            <Tooltip label={<FormattedMessage id="customize" />}>
               <span>
                 <Icon as={FaCog} />
               </span>

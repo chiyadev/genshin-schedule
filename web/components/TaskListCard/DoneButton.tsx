@@ -4,22 +4,24 @@ import { Task, useConfig } from "../../utils/config";
 import { trackEvent } from "../../utils/umami";
 import { Icon, IconButton, Tooltip } from "@chakra-ui/react";
 import { useTaskDoneSetter, useTaskFocusSetter } from "../../utils/tasks";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateAction<Task>> }) => {
+  const { formatMessage } = useIntl();
   const [compact] = useConfig("taskListCompact");
 
   const setDone = useTaskDoneSetter(setTask);
   const setFocused = useTaskFocusSetter();
 
   return (
-    <Tooltip label="Mark as done">
+    <Tooltip label={<FormattedMessage id="taskDone" />}>
       <IconButton
         variant="outline"
         colorScheme="green"
         size={compact ? "xs" : "sm"}
         borderRadius="full"
         icon={<Icon as={FaCheck} />}
-        aria-label="Mark as done"
+        aria-label={formatMessage({ id: "taskDone" })}
         onClick={() => {
           setDone(true);
           setFocused(task);

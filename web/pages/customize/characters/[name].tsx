@@ -10,6 +10,7 @@ import { getAssetByName } from "../../../assets";
 import MaterialDisplay from "../../../components/Customize/CharacterInfo/MaterialDisplay";
 import CommonMaterialDisplay from "../../../components/Customize/CharacterInfo/CommonMaterialDisplay";
 import NoteInput from "../../../components/Customize/CharacterInfo/NoteInput";
+import { FormattedMessage } from "react-intl";
 
 type Props = {
   data: WebData | null;
@@ -82,7 +83,7 @@ const CharacterInfo = ({ data, name }: Props) => {
             <NoteInput character={character} />
           </WhiteCard>
         ) : (
-          <div>No such character.</div>
+          <FormattedMessage id="characterNotFound" />
         )}
       </Layout>
     </ConfigProvider>

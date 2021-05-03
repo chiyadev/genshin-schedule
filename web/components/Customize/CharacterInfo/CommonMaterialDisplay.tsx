@@ -5,8 +5,10 @@ import { FaPlus } from "react-icons/fa";
 import { Button, chakra, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import { useTaskCreator } from "../../../utils/tasks";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const CommonMaterialDisplay = ({ character, material }: { character: Character; material: CommonMaterial }) => {
+  const { formatMessage } = useIntl();
   const createTask = useTaskCreator();
   const [create, setCreate] = useState(false);
 
@@ -18,12 +20,12 @@ const CommonMaterialDisplay = ({ character, material }: { character: Character; 
         <div>
           <chakra.div fontSize="lg">
             <Link href={material.wiki} isExternal>
-              {material.name}
+              <FormattedMessage id={material.name} />
             </Link>
           </chakra.div>
           <chakra.div fontSize="sm" color="gray.500">
             <Link href={CommonMaterialWiki} isExternal>
-              {material.type}
+              <FormattedMessage id={material.type} />
             </Link>
           </chakra.div>
         </div>
@@ -37,13 +39,16 @@ const CommonMaterialDisplay = ({ character, material }: { character: Character; 
           setCreate(true);
 
           try {
-            await createTask(material, `ascension material for ${character.name}`);
+            await createTask(
+              material,
+              formatMessage({ id: "characterTaskDesc" }, { name: formatMessage({ id: character.name }) })
+            );
           } finally {
             setCreate(false);
           }
         }}
       >
-        Add as task
+        <FormattedMessage id="addAsTask" />
       </Button>
     </VStack>
   );

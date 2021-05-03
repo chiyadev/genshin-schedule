@@ -4,12 +4,13 @@ import { Tooltip } from "@chakra-ui/tooltip";
 import { useConfig } from "../../../utils/config";
 import { Button, Icon } from "@chakra-ui/react";
 import { trackEvent } from "../../../utils/umami";
+import { FormattedMessage } from "react-intl";
 
 const ShowHiddenButton = () => {
   const [value, setValue] = useConfig("taskListShowHidden");
 
   return (
-    <Tooltip label="Show hidden">
+    <Tooltip label={<FormattedMessage id="showHidden" />}>
       <Button
         as="button"
         variant="ghost"
