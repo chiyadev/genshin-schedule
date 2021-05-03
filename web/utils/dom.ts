@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { CSSObject } from "@emotion/react";
 
-export function useMeasuredTextWidth(text: string, style: CSSObject) {
+export function useMeasuredTextWidth(text: string, styleOrClass: any) {
   const [value, setValue] = useState<number>();
   const [update, setUpdate] = useState(0);
 
@@ -21,8 +20,12 @@ export function useMeasuredTextWidth(text: string, style: CSSObject) {
     const span = document.createElement("span");
     span.innerText = text;
 
-    for (const key of Object.keys(style)) {
-      (span.style as any)[key] = (style as any)[key];
+    if (typeof styleOrClass === "string") {
+      span.className = styleOrClass;
+    } else {
+      for (const key of Object.keys(styleOrClass)) {
+        (span.style as any)[key] = styleOrClass[key];
+      }
     }
 
     document.body.appendChild(span);
@@ -30,7 +33,7 @@ export function useMeasuredTextWidth(text: string, style: CSSObject) {
     document.body.removeChild(span);
 
     setValue(width);
-  }, [update, text, style]);
+  }, [update, text, styleOrClass]);
 
   return value;
 }
