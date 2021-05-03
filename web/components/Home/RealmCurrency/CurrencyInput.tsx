@@ -1,13 +1,13 @@
-import { clampCurrency, getCurrencyCap, getCurrencyRecharge } from "../../../db/realms";
+import { getCurrencyCap, getCurrencyRecharge, roundCurrency } from "../../../db/realms";
 import React, { memo, useRef } from "react";
 import AutoSizeInput from "../../AutoSizeInput";
 import { useConfig } from "../../../utils/config";
 import { useServerTime } from "../../../utils/time";
+import { trackEvent } from "../../../utils/umami";
 
 const CurrencyInput = () => {
   const ref = useRef<HTMLInputElement>(null);
   const [currency, setCurrency] = useConfig("realmCurrency");
-
   const [energy] = useConfig("realmEnergy");
   const [rank] = useConfig("realmRank");
 
@@ -22,13 +22,14 @@ const CurrencyInput = () => {
       max={getCurrencyCap(rank)}
       fontSize="lg"
       fontWeight="bold"
-      value={current.toString()}
+      value={roundCurrency(current, rank).toString()}
       onClick={() => {
         ref.current?.select();
+        trackEvent("realmCurrency", "edit");
       }}
       onChange={({ currentTarget: { valueAsNumber } }) => {
         setCurrency({
-          value: clampCurrency(rank, valueAsNumber || 0),
+          value: roundCurrency(valueAsNumber || 0, rank),
           time: time.valueOf(),
         });
       }}

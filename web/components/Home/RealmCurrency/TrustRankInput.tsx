@@ -20,7 +20,7 @@ const TrustRankInput = () => {
         ref.current?.select();
       }}
       onChange={({ currentTarget: { valueAsNumber } }) => {
-        setValue(clampRank(valueAsNumber || 0));
+        setValue(clampRank(valueAsNumber || 1));
       }}
     />
   );

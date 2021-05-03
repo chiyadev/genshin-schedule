@@ -1,36 +1,27 @@
 export function clampEnergy(energy: number) {
-  return Math.max(0, energy);
+  return Math.max(0, Math.min(energy, 1000000)); // sane limit
 }
 
-// 1-10
 export function clampRank(rank: number) {
-  return Math.max(0, Math.min(rank, 10));
+  return Math.max(1, Math.min(rank, 10));
 }
 
-// cap
-const CurrencyCap = [
-  300,
-  600,
-  900,
-  1200,
-  1400,
-  1600,
-  1800,
-  2000,
-  2200,
-  2400,
-];
+export const CurrencyCaps = [300, 600, 900, 1200, 1400, 1600, 1800, 2000, 2200, 2400];
 
 export function getCurrencyCap(rank: number) {
-  return CurrencyCap[rank - 1];
+  return CurrencyCaps[clampRank(rank) - 1];
 }
 
-export function clampCurrency(rank: number, currency: number) {
+export function clampCurrency(currency: number, rank: number) {
   return Math.max(0, Math.min(currency, getCurrencyCap(rank)));
 }
 
+export function roundCurrency(currency: number, rank: number) {
+  return Math.floor(clampCurrency(currency, rank));
+}
+
 // [energy, rate (per hour)]
-const CurrencyRates = [
+export const CurrencyRates: [number, number][] = [
   [0, 4],
   [2000, 8],
   [3000, 12],
@@ -45,12 +36,15 @@ const CurrencyRates = [
 
 export function getCurrencyRate(energy: number) {
   let rate = 0;
+
   for (const [e, r] of CurrencyRates) {
-    if (energy >= e)
+    if (energy >= e) {
       rate = r;
-    else
+    } else {
       break;
+    }
   }
+
   return rate;
 }
 
