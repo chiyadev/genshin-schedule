@@ -25,7 +25,7 @@ const CurrencyInput = () => {
       value={roundCurrency(current, rank).toString()}
       onClick={() => {
         ref.current?.select();
-        trackEvent("realmCurrency", "edit");
+        trackEvent("realmCurrency", "editCurrency");
       }}
       onChange={({ currentTarget: { valueAsNumber } }) => {
         setCurrency({

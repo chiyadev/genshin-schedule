@@ -2,6 +2,7 @@ import { clampRank } from "../../../db/realms";
 import React, { memo, useRef } from "react";
 import { useConfig } from "../../../utils/config";
 import AutoSizeInput from "../../AutoSizeInput";
+import { trackEvent } from "../../../utils/umami";
 
 const TrustRankInput = () => {
   const ref = useRef<HTMLInputElement>(null);
@@ -18,6 +19,7 @@ const TrustRankInput = () => {
       value={value.toString()}
       onClick={() => {
         ref.current?.select();
+        trackEvent("realmCurrency", "editRank");
       }}
       onChange={({ currentTarget: { valueAsNumber } }) => {
         setValue(clampRank(valueAsNumber || 1));
