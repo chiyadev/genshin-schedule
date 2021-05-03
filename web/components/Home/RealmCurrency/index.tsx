@@ -12,6 +12,7 @@ import Estimator from "./Estimator";
 import { motion } from "framer-motion";
 import ClearButton from "./ClearButton";
 import { useServerTime } from "../../../utils/time";
+import { FormattedMessage } from "react-intl";
 
 const RealmCurrency = () => {
   const [currency] = useConfig("realmCurrency");
@@ -24,16 +25,18 @@ const RealmCurrency = () => {
   const current = currency.value + getCurrencyRecharge(energy, time.valueOf() - currency.time);
 
   return (
-    <WidgetWrapper type="realm" heading="Realm currency calculator" onHover={setHover}>
+    <WidgetWrapper type="realm" heading={<FormattedMessage id="realmCurrencyCalc" />} onHover={setHover}>
       <WhiteCard>
         <HStack spacing={2}>
           <chakra.img alt="Realm Currency" src={RealmCurrencyIcon} w={10} h={10} transform="scale(1.2)" />
-          <chakra.div fontSize="md">Adeptal energy:</chakra.div>
+          <chakra.div fontSize="md">
+            <FormattedMessage id="adeptalEnergy" />:
+          </chakra.div>
 
           <EnergyInput />
 
           <chakra.div flexShrink={0} fontSize="sm" color="gray.500">
-            {getCurrencyRate(energy)} / hr
+            {getCurrencyRate(energy)} / <FormattedMessage id="unit.hour" />
           </chakra.div>
 
           <Spacer />
@@ -42,12 +45,16 @@ const RealmCurrency = () => {
 
         <VStack align="stretch" spacing={2} pl={12}>
           <HStack spacing={2}>
-            <chakra.div fontSize="md">Trust rank:</chakra.div>
+            <chakra.div fontSize="md">
+              <FormattedMessage id="trustRank" />:
+            </chakra.div>
             <TrustRankInput />
           </HStack>
 
           <HStack spacing={2}>
-            <chakra.div fontSize="md">Realm currency:</chakra.div>
+            <chakra.div fontSize="md">
+              <FormattedMessage id="realmCurrency" />:
+            </chakra.div>
             <CurrencyInput />
 
             <chakra.div flexShrink={0} fontSize="sm" color="gray.500">
