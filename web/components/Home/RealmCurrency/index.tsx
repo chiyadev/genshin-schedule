@@ -3,7 +3,7 @@ import WidgetWrapper from "../WidgetWrapper";
 import WhiteCard from "../../WhiteCard";
 import { getCurrencyCap, getCurrencyRate } from "../../../db/realms";
 import { useConfig } from "../../../utils/config";
-import { SereniteaPot } from "../../../assets";
+import { RealmCurrency as RealmCurrencyIcon } from "../../../assets";
 import { chakra, VStack, HStack } from "@chakra-ui/react";
 import EnergyInput from "./EnergyInput";
 import TrustRankInput from "./TrustRankInput";
@@ -17,7 +17,7 @@ const RealmCurrency = () => {
     <WidgetWrapper type="realm" heading="Realm currency calculator">
       <WhiteCard>
         <HStack spacing={2}>
-          <chakra.img alt="Serenitea Pot" src={SereniteaPot} w={10} h={10} />
+          <chakra.img alt="Realm Currency" src={RealmCurrencyIcon} w={10} h={10} transform="scale(1.2)" />
           <chakra.div fontSize="md">Adeptal energy:</chakra.div>
           <EnergyInput />
         </HStack>
@@ -27,14 +27,16 @@ const RealmCurrency = () => {
             <chakra.div fontSize="md">Trust rank:</chakra.div>
             <TrustRankInput />
           </HStack>
+
           <HStack spacing={2}>
             <chakra.div fontSize="md">Realm currency:</chakra.div>
             <CurrencyInput />
 
-            <chakra.div flexShrink={0} fontSize="lg">
+            <chakra.div flexShrink={0} fontSize="sm" color="gray.500">
               / {getCurrencyCap(realmRank)}
             </chakra.div>
           </HStack>
+
           <chakra.div color="gray.500" fontSize="sm">
             Accumulation rate: {getCurrencyRate(realmEnergy)}/hr
           </chakra.div>

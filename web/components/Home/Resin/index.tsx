@@ -81,7 +81,7 @@ const Resin = () => {
             }}
           />
 
-          <chakra.div flexShrink={0} fontSize="lg">
+          <chakra.div flexShrink={0} fontSize="sm" color="gray.500">
             / {ResinCap}
           </chakra.div>
 
