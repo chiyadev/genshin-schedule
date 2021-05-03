@@ -21,6 +21,7 @@ addIcons("gadget", [
   { name: "Portable Waypoint", timer: 168 },
   { name: "Adepti Seeker's Stove", timer: 5 / 60 },
   { name: "Parametric Transformer", timer: 168 },
+  { name: "Serenitea Pot" },
 ]);
 
 addIcons("ore", [

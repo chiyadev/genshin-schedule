@@ -8,20 +8,7 @@ import EstimatorByTime from "./EstimatorByTime";
 import EstimatorByResin from "./EstimatorByResin";
 import { Config, useConfig, useCurrentStats } from "../../../utils/config";
 import { Resin as ResinIcon } from "../../../assets";
-import {
-  chakra,
-  css,
-  HStack,
-  Input,
-  Spacer,
-  StackDivider,
-  useColorModeValue,
-  useTheme,
-  VStack,
-  Icon,
-  Link,
-} from "@chakra-ui/react";
-import { useMeasuredTextWidth } from "../../../utils/dom";
+import { chakra, HStack, Spacer, StackDivider, useColorModeValue, VStack, Icon, Link } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useServerTime } from "../../../utils/time";
 import NotificationSetter from "./NotificationSetter";
@@ -29,6 +16,7 @@ import EstimatorByNotifyMark from "./EstimatorByNotifyMark";
 import { FaBell } from "react-icons/fa";
 import NextLink from "next/link";
 import { FormattedMessage } from "react-intl";
+import AutoSizeInput from "../../AutoSizeInput";
 
 const estimateModes: Config["resinEstimateMode"][] = ["time", "value"];
 
@@ -39,15 +27,10 @@ const Resin = () => {
   const [notifyMark] = useConfig("resinNotifyMark");
 
   const [hover, setHover] = useState(false);
-  const [focus, setFocus] = useState(false);
   const resinInput = useRef<HTMLInputElement>(null);
 
   const time = useServerTime(60000);
   const current = resin.value + getResinRecharge(time.valueOf() - resin.time);
-
-  const theme = useTheme();
-  const inputStyle: any = css({ fontSize: "xl", fontWeight: "bold" })(theme);
-  const inputWidth = useMeasuredTextWidth(roundResin(current).toString(), inputStyle);
 
   return (
     <WidgetWrapper type="resin" heading={<FormattedMessage id="resinCalc" />} onHover={setHover}>
@@ -71,18 +54,13 @@ const Resin = () => {
             }}
           />
 
-          <Input
+          <AutoSizeInput
             ref={resinInput}
             type="number"
-            variant="unstyled"
-            textAlign="center"
-            style={{ width: (inputWidth || 0) + (focus ? 5 : 0) }}
-            css={inputStyle}
-            transition={undefined}
             min={0}
             max={ResinCap}
-            borderRadius={0}
-            cursor={focus ? undefined : "pointer"}
+            fontSize="xl"
+            fontWeight="bold"
             value={roundResin(current).toString()}
             onClick={() => {
               resinInput.current?.select();
@@ -101,11 +79,9 @@ const Resin = () => {
                 (stats) => stats && { ...stats, resinsSpent: roundResin(stats.resinsSpent - newValue + oldValue) }
               );
             }}
-            onFocus={() => setFocus(true)}
-            onBlur={() => setFocus(false)}
           />
 
-          <chakra.div flexShrink={0} fontSize="lg">
+          <chakra.div flexShrink={0} fontSize="sm" color="gray.500">
             / {ResinCap}
           </chakra.div>
 

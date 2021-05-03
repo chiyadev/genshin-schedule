@@ -223,6 +223,7 @@ import Rainslasher from "./game/Rainslasher.png";
 import RavenBow from "./game/Raven Bow.png";
 import RawMeat from "./game/Raw Meat.png";
 import Razor from "./game/Razor.png";
+import RealmCurrency from "./game/Realm Currency.png";
 import RecruitsInsignia from "./game/Recruit's Insignia.png";
 import RecurveBow from "./game/Recurve Bow.png";
 import RedCircle from "./game/Red Circle.png";
@@ -563,6 +564,7 @@ export {
   RavenBow,
   RawMeat,
   Razor,
+  RealmCurrency,
   RecruitsInsignia,
   RecurveBow,
   RedCircle,
@@ -905,6 +907,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Raven Bow": return RavenBow;
     case "Raw Meat": return RawMeat;
     case "Razor": return Razor;
+    case "Realm Currency": return RealmCurrency;
     case "Recruit's Insignia": return RecruitsInsignia;
     case "Recurve Bow": return RecurveBow;
     case "Red Circle": return RedCircle;

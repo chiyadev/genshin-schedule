@@ -44,7 +44,7 @@ const EstimatorByTime = () => {
   return (
     <div>
       {values.map(({ capTime, value, full }) => (
-        <div key={value}>
+        <div key={capTime.valueOf()}>
           <FormattedMessage
             id="resinEstTimeEntry"
             values={{

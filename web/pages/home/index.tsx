@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import DomainList from "../../components/Home/DomainView";
 import TaskList from "../../components/Home/Tasks";
 import Resin from "../../components/Home/Resin";
+import RealmCurrency from "../../components/Home/RealmCurrency";
 import Clock from "../../components/Home/Clock";
 import Layout from "../../components/Layout";
 import { GetServerSideProps } from "next";
@@ -39,6 +40,7 @@ const Home = ({ data }: Props) => {
         <VStack align="stretch" spacing={12}>
           <Clock />
           <Resin />
+          <RealmCurrency />
           <TaskList />
           <DomainList />
         </VStack>
