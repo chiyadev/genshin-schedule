@@ -22,12 +22,12 @@ const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateA
         setDone(!due);
         setFocused();
 
-        trackEvent("map", due ? "taskDone" : "taskUndone");
+        trackEvent("map", due ? "taskUndone" : "taskDone");
       }}
     >
       <HStack spacing={2}>
         <Icon as={due ? FaTimes : FaCheck} />
-        <div>{due ? <FormattedMessage id="taskDone" /> : <FormattedMessage id="taskUndone" />}</div>
+        <div>{due ? <FormattedMessage id="taskUndone" /> : <FormattedMessage id="taskDone" />}</div>
       </HStack>
     </Link>
   );
