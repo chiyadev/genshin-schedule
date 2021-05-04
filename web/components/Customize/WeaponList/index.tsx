@@ -13,7 +13,7 @@ const WeaponList = () => {
   return (
     <VStack align="stretch" spacing={4} d={results.size ? undefined : "none"}>
       <Heading size="md">
-        <FormattedMessage id="weapons" />
+        <FormattedMessage defaultMessage="Weapons" />
       </Heading>
 
       <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>

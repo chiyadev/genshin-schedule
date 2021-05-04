@@ -167,7 +167,7 @@ const ChangelogModal = () => {
           <HStack>
             <Icon as={FaBullhorn} />
             <div>
-              <FormattedMessage id="changelog" />
+              <FormattedMessage defaultMessage="Update changelog" />
             </div>
           </HStack>
         </ModalHeader>

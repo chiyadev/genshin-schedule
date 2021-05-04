@@ -16,7 +16,7 @@ const EstimatorByNotifyMark = () => {
   return (
     <div>
       <FormattedMessage
-        id="resinEstValueEntry"
+        defaultMessage="{value} in {time}"
         values={{
           value: notifyMark,
           time: [

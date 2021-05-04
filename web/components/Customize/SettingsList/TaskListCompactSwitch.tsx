@@ -13,7 +13,7 @@ const TaskListCompactSwitch = () => {
       <HStack spacing={2}>
         <Icon as={FaListUl} />
         <div>
-          <FormattedMessage id="taskListCompact" />
+          <FormattedMessage defaultMessage="Compact task list" />
         </div>
       </HStack>
 

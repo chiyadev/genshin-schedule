@@ -5,7 +5,7 @@ import DropLabel from "../../DropLabel";
 import Toggle from "./Toggle";
 import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage as FormattedMessageId } from "react-intl";
 
 const MaterialDisplay = ({
   character,
@@ -24,12 +24,12 @@ const MaterialDisplay = ({
         <div>
           <chakra.div fontSize="lg">
             <Link href={material.wiki} isExternal>
-              <FormattedMessage id={material.name} />
+              <FormattedMessageId id={material.name} />
             </Link>
           </chakra.div>
           <chakra.div fontSize="sm" color="gray.500">
             <Link href={TalentMaterialWiki} isExternal>
-              <FormattedMessage id={material.type} />
+              <FormattedMessageId id={material.type} />
             </Link>
           </chakra.div>
         </div>

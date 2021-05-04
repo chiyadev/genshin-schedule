@@ -1,3 +1,4 @@
+debugger;
 import React, { memo, useState } from "react";
 import { Character } from "../../../db/characters";
 import { CommonMaterial, CommonMaterialWiki } from "../../../db/commonMaterials";
@@ -5,10 +6,10 @@ import { FaPlus } from "react-icons/fa";
 import { Button, chakra, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import { useTaskCreator } from "../../../utils/tasks";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage, FormattedMessage as FormattedMessageId, useIntl } from "react-intl";
 
 const CommonMaterialDisplay = ({ character, material }: { character: Character; material: CommonMaterial }) => {
-  const { formatMessage } = useIntl();
+  const { formatMessage, formatMessage: formatMessageId } = useIntl();
   const createTask = useTaskCreator();
   const [create, setCreate] = useState(false);
 
@@ -20,12 +21,12 @@ const CommonMaterialDisplay = ({ character, material }: { character: Character; 
         <div>
           <chakra.div fontSize="lg">
             <Link href={material.wiki} isExternal>
-              <FormattedMessage id={material.name} />
+              <FormattedMessageId id={material.name} />
             </Link>
           </chakra.div>
           <chakra.div fontSize="sm" color="gray.500">
             <Link href={CommonMaterialWiki} isExternal>
-              <FormattedMessage id={material.type} />
+              <FormattedMessageId id={material.type} />
             </Link>
           </chakra.div>
         </div>
@@ -41,14 +42,14 @@ const CommonMaterialDisplay = ({ character, material }: { character: Character; 
           try {
             await createTask(
               material,
-              formatMessage({ id: "characterTaskDesc" }, { name: formatMessage({ id: character.name }) })
+              formatMessage({ defaultMessage: "ascension material for {name}" }, { name: formatMessageId({ id: character.name }) })
             );
           } finally {
             setCreate(false);
           }
         }}
       >
-        <FormattedMessage id="addAsTask" />
+        <FormattedMessage defaultMessage="Add as task" />
       </Button>
     </VStack>
   );

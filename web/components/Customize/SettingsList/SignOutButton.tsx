@@ -19,7 +19,7 @@ const SignOutButton = () => {
         setTimeout(() => router.push("/"));
       }}
     >
-      <FormattedMessage id="signOut" />
+      <FormattedMessage defaultMessage="Sign out" />
     </Button>
   );
 };

@@ -45,10 +45,10 @@ const Welcome = () => {
 
             <VStack align="stretch" spacing={4}>
               <Heading>
-                <FormattedMessage id="app" />
+                <FormattedMessage defaultMessage="Genshin Schedule" />
               </Heading>
               <div>
-                <FormattedMessage id="appDesc" />
+                <FormattedMessage defaultMessage="Genshin Schedule is a website to help you keep track of time-related game activities in Genshin Impact." />
               </div>
             </VStack>
 
@@ -58,7 +58,7 @@ const Welcome = () => {
                 leftIcon={<Icon as={FaSignInAlt} />}
                 onClick={() => authRef.current?.scrollIntoView({ block: "start" })}
               >
-                <FormattedMessage id="signIn" />
+                <FormattedMessage defaultMessage="Sign in" />
               </Button>
 
               <Button
@@ -67,7 +67,7 @@ const Welcome = () => {
                 href="https://github.com/chiyadev/genshin-schedule"
                 target="_blank"
               >
-                <FormattedMessage id="github" />
+                <FormattedMessage defaultMessage="GitHub" />
               </Button>
             </ButtonGroup>
           </VStack>
@@ -79,10 +79,10 @@ const Welcome = () => {
               <VStack align="stretch" spacing={8}>
                 <VStack align="stretch" spacing={2}>
                   <Heading size="md">
-                    <FormattedMessage id="resinCalc" />
+                    <FormattedMessage defaultMessage="Resin calculator" />
                   </Heading>
                   <chakra.div color="gray.500">
-                    <FormattedMessage id="resinCalcDesc" />
+                    <FormattedMessage defaultMessage="Tracks your resins and estimates when it will recharge without having to open the game." />
                   </chakra.div>
                 </VStack>
 
@@ -92,10 +92,10 @@ const Welcome = () => {
               <VStack align="stretch" spacing={8}>
                 <VStack align="stretch" spacing={2}>
                   <Heading size="md">
-                    <FormattedMessage id="taskSchd" />
+                    <FormattedMessage defaultMessage="Task scheduler" />
                   </Heading>
                   <chakra.div color="gray.500">
-                    <FormattedMessage id="taskSchdDesc" />
+                    <FormattedMessage defaultMessage="Tracks open world resources and reminds you as soon as they respawn. There is no limit to the number of pins." />
                   </chakra.div>
                 </VStack>
 
@@ -105,10 +105,10 @@ const Welcome = () => {
               <VStack align="stretch" spacing={8}>
                 <VStack align="stretch" spacing={2}>
                   <Heading size="md">
-                    <FormattedMessage id="domainView" />
+                    <FormattedMessage defaultMessage="Domain view" />
                   </Heading>
                   <chakra.div color="gray.500">
-                    <FormattedMessage id="domainViewDesc" />
+                    <FormattedMessage defaultMessage="Shows which domains can be cleared for ascension materials and artifacts for the day." />
                   </chakra.div>
                 </VStack>
 
@@ -119,10 +119,10 @@ const Welcome = () => {
 
           <VStack ref={authRef} align="stretch" spacing={4}>
             <Heading size="lg">
-              <FormattedMessage id="signIn" />
+              <FormattedMessage defaultMessage="Sign in" />
             </Heading>
             <div>
-              <FormattedMessage id="signInHelp" />
+              <FormattedMessage defaultMessage="Signing in will enable synchronization across multiple devices. If you do not already have an account, it will be created automatically." />
             </div>
 
             <UserSignIn />

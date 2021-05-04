@@ -13,7 +13,7 @@ const ArtifactList = () => {
   return (
     <VStack align="stretch" spacing={4} d={results.size ? undefined : "none"}>
       <Heading size="md">
-        <FormattedMessage id="artifacts" />
+        <FormattedMessage defaultMessage="Artifacts" />
       </Heading>
 
       <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>

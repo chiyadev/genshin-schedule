@@ -1,0 +1,851 @@
+msgid ""
+msgstr ""
+
+#: components/Customize/Notifications/MessageDisplay.tsx:20
+msgctxt "+/CeVX"
+msgid "You are not signed in."
+msgstr ""
+
+#: pages/customize/artifacts/[name].tsx:78
+msgctxt "+H/Djm"
+msgid "No such artifact."
+msgstr ""
+
+#: components/Home/RealmCurrency/ClearButton.tsx:23
+msgctxt "/GCoTA"
+msgid "Clear"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:40
+msgctxt "/ML8Ew"
+msgid "Reset offset"
+msgstr ""
+
+#: pages/index.tsx:51
+msgctxt "/P+9cy"
+msgid "Genshin Schedule is a website to help you keep track of time-related game activities in Genshin Impact."
+msgstr ""
+
+#: pages/home/notifications/queue.tsx:54
+msgctxt "/PLhsH"
+msgid "There are no notifications in queue."
+msgstr ""
+
+#: components/ShortcutHelp.tsx:77
+msgctxt "/VnDMl"
+msgid "Other"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/HideCheck.tsx:17
+msgctxt "/fWS7T"
+msgid "Hide temporarily"
+msgstr ""
+
+#: components/Home/Clock/DateDisplay.tsx:33
+msgctxt "0YJrSJ"
+msgid "{value, plural, one {# resin} other {# resins}}"
+msgstr ""
+
+#: components/Footer.tsx:12
+msgctxt "1UGvMb"
+msgid "{app} is not affiliated with or endorsed by {mihoyo}."
+msgstr ""
+
+#: components/Home/Tasks/index.tsx:67
+msgctxt "1oYblk"
+msgid "No tasks for now. Create one by clicking on the map."
+msgstr ""
+
+#: components/Home/Resin/NotificationSetter.tsx:28
+msgctxt "24Zz5V"
+msgid "Resin recharged"
+msgstr ""
+
+#: components/Home/Resin/NotificationSetter.tsx:31
+msgctxt "2fRG6H"
+msgid "Your resins have fully recharged!"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/NotifyToggle.tsx:46
+msgctxt "2p5+W4"
+msgid "Notify respawn"
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:52
+msgctxt "3K2ITF"
+msgid "Manage data"
+msgstr ""
+
+#: components/Home/Clock/TimeDisplay.tsx:71
+msgctxt "3XCLrO"
+msgid "Next day"
+msgstr ""
+
+#: components/Home/Clock/DateDisplay.tsx:25
+msgctxt "3iEs/1"
+msgid "{duration} until reset"
+msgstr ""
+
+#: pages/index.tsx:48
+msgctxt "4+Fchx"
+msgid "Genshin Schedule"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:133
+msgctxt "47FYwb"
+msgid "Cancel"
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:109
+msgctxt "4l6vz1"
+msgid "Copy"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:107
+msgctxt "5sg7KC"
+msgid "Password"
+msgstr ""
+
+#: components/MapPage/TaskListOverlay.tsx:52
+msgctxt "6j9+92"
+msgid "Show list"
+msgstr ""
+
+#: components/Customize/Search.tsx:21
+msgctxt "6r1NXS"
+msgid "Search characters, weapons and artifacts..."
+msgstr ""
+
+#: components/ShortcutHelp.tsx:70
+msgctxt "78tuIe"
+msgid "Focus previous task"
+msgstr ""
+
+#: components/Footer.tsx:40
+msgctxt "7FAwwk"
+msgid "Shortcuts"
+msgstr ""
+
+#: components/Home/Tasks/MarkAllDone.tsx:39
+msgctxt "7HBGfL"
+msgid "Mark everything as done"
+msgstr ""
+
+#: components/MapPage/TaskListOverlay.tsx:52
+msgctxt "82xywU"
+msgid "Hide list"
+msgstr ""
+
+#: components/Home/Resin/EstimatorByTime.tsx:48
+msgctxt "8PkyNF"
+msgid "{value} in {duration}"
+msgstr ""
+
+#: components/Home/DomainView/DomainDisplay.tsx:23
+msgctxt "A4i1SB"
+msgid "{category}, {region}"
+msgstr ""
+
+#: pages/index.tsx:98
+msgctxt "C2a6rl"
+msgid "Tracks open world resources and reminds you as soon as they respawn. There is no limit to the number of pins."
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/NotifyToggle.tsx:30
+msgctxt "C2ao8E"
+msgid "{name} respawned"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:67
+msgctxt "C44MEN"
+msgid "Focus next task"
+msgstr ""
+
+#: components/Home/Tasks/index.tsx:43
+msgctxt "C5kxPF"
+msgid "Today's Tasks"
+msgstr ""
+
+#: components/Home/Clock/ServerText.tsx:16
+msgctxt "D+B+yz"
+msgid "Switch server"
+msgstr ""
+
+#: components/Customize/SettingsList/index.tsx:20
+msgctxt "D3idYv"
+msgid "Settings"
+msgstr ""
+
+#: pages/index.tsx:85
+msgctxt "DtGTze"
+msgid "Tracks your resins and estimates when it will recharge without having to open the game."
+msgstr ""
+
+#: components/Statistics/ResinStats.tsx:84
+msgctxt "EButPL"
+msgid "{percent}% efficiency"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:88
+msgctxt "EsP5Pj"
+msgid "You can change your account username and password."
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/DueText.tsx:22
+msgctxt "F1cvgQ"
+msgid "Due {time} ago"
+msgstr ""
+
+#: components/Footer.tsx:53
+msgctxt "FvmV6q"
+msgid "Discord"
+msgstr ""
+
+#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:29
+msgctxt "GtELSR"
+msgid "Time steps (2h, 4h, 8h...)"
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:49
+msgctxt "GwuYim"
+msgid "Trust rank"
+msgstr ""
+
+#: components/Layout.tsx:62
+msgctxt "H3eDAS"
+msgid "Statistics"
+msgstr ""
+
+#: components/Customize/CharacterInfo/NoteInput.tsx:24
+msgctxt "HPoe81"
+msgid "e.g. Anemo traveler"
+msgstr ""
+
+#: components/Customize/Search.tsx:27
+msgctxt "ICenbp"
+msgid "Select items to be added to your farming schedule."
+msgstr ""
+
+#: components/Statistics/InfoText.tsx:22
+msgctxt "IuFETn"
+msgid "Duration"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:93
+msgctxt "JCIgkj"
+msgid "Username"
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:67
+msgctxt "JDJoIZ"
+msgid "This action cannot be undone."
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:56
+msgctxt "JyaO/t"
+msgid "Realm currency"
+msgstr ""
+
+#: components/Map/TaskLayer/DeleteButton.tsx:31
+msgctxt "K3r6DQ"
+msgid "Delete"
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:45
+msgctxt "KN7zKn"
+msgid "Error"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:121
+msgctxt "L4wBab"
+msgid "Linked Discord ID"
+msgstr ""
+
+#: components/Home/Clock/index.tsx:15
+msgctxt "LL8qRv"
+msgid "Time in Teyvat"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:51
+msgctxt "LUD/dh"
+msgid "Manage account"
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:33
+msgctxt "M90tlG"
+msgid "Adeptal energy"
+msgstr ""
+
+#: components/Statistics/TaskStats.tsx:76
+msgctxt "MJ2jZQ"
+msgid "Total"
+msgstr ""
+
+#: pages/index.tsx:125
+msgctxt "N7R6Pc"
+msgid "Signing in will enable synchronization across multiple devices. If you do not already have an account, it will be created automatically."
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:36
+msgctxt "NAidKb"
+msgid "Notifications"
+msgstr ""
+
+#: components/Map/TaskLayer/DoneButton.tsx:30
+msgctxt "OVSQKi"
+msgid "Mark as to-do"
+msgstr ""
+
+#: components/ChangelogModal.tsx:170
+msgctxt "OhXmrT"
+msgid "Update changelog"
+msgstr ""
+
+#: components/Customize/WeaponList/index.tsx:16
+msgctxt "RHehK6"
+msgid "Weapons"
+msgstr ""
+
+#: components/Home/Clock/TimeDisplay.tsx:61
+msgctxt "RMO5xM"
+msgid "Previous day"
+msgstr ""
+
+#: components/Customize/SettingsList/LanguageSwitch.tsx:37
+msgctxt "S3s35A"
+msgid "Add new language"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:15
+msgctxt "S5G5iB"
+msgid "Respawns on server reset"
+msgstr ""
+
+#: components/Footer.tsx:47
+msgctxt "SENRqu"
+msgid "Help"
+msgstr ""
+
+#: pages/index.tsx:122
+msgctxt "SQJto2"
+msgid "Sign in"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:69
+msgctxt "SfT8AV"
+msgid "shift"
+msgstr ""
+
+#: components/Header.tsx:30
+msgctxt "TXpOBi"
+msgid "Customize"
+msgstr ""
+
+#: components/Customize/CharacterList/index.tsx:16
+msgctxt "TjcsAk"
+msgid "Characters"
+msgstr ""
+
+#: components/Home/Resin/index.tsx:105
+msgctxt "UGsMJ8"
+msgid "Your resins are full."
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:16
+msgctxt "Us9Isq"
+msgid "{time}AM"
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:84
+msgctxt "V/JHlm"
+msgid "Forgot password?"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:33
+msgctxt "VFHHgv"
+msgid "left"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:36
+msgctxt "VclyEG"
+msgid "right"
+msgstr ""
+
+#: components/Map/TaskCreateLayer/CreateButton.tsx:32
+msgctxt "VzzYJk"
+msgid "Create"
+msgstr ""
+
+#: components/Home/Resin/EstimatorByResin.tsx:38
+msgctxt "WSGl0J"
+msgid "{value} in {time}"
+msgstr ""
+
+#: components/Customize/SettingsList/BackgroundSwitch.tsx:17
+msgctxt "XQZA8e"
+msgid "Background"
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:53
+msgctxt "Y9F25l"
+msgid "Genshin Schedule has a Discord bot that can send you notifications when your resin recharges or resources respawn."
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:28
+msgctxt "YTz0sT"
+msgid "Realm currency calculator"
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:144
+msgctxt "Ye90Mr"
+msgid "Continue as anonymous"
+msgstr ""
+
+#: pages/home/notifications/queue.tsx:45
+msgctxt "Z2hLLG"
+msgid "Notification queue"
+msgstr ""
+
+#: pages/customize/weapons/[name].tsx:79
+msgctxt "anizI/"
+msgid "No such weapon."
+msgstr ""
+
+#: components/Statistics/TaskStats.tsx:92
+msgctxt "azDTwB"
+msgid "Peak"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:66
+msgctxt "bmzIh4"
+msgid "Server reset"
+msgstr ""
+
+#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:17
+msgctxt "bu+Gu5"
+msgid "Resin estimation mode"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:32
+msgctxt "cjlJAw"
+msgid "Server clock"
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:89
+msgctxt "cknuhN"
+msgid "Never reuse your miHoYo password on Genshin-related websites."
+msgstr ""
+
+#: components/Customize/WeaponInfo/NoteInput.tsx:24
+msgctxt "criR59"
+msgid "e.g. Lumine's weapon"
+msgstr ""
+
+#: components/Map/TaskMarker/BackButton.tsx:12
+msgctxt "cyR7Kh"
+msgid "Back"
+msgstr ""
+
+#: components/Home/Tasks/index.tsx:94
+msgctxt "d48nj3"
+msgid "Open map"
+msgstr ""
+
+#: pages/index.tsx:95
+msgctxt "dVxXvN"
+msgid "Task scheduler"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/DueText.tsx:20
+msgctxt "dn7JIA"
+msgid "Due in {time}"
+msgstr ""
+
+#: pages/home/notifications/queue.tsx:113
+msgctxt "drJdjj"
+msgid "Send now"
+msgstr ""
+
+#: components/Statistics/TaskStats.tsx:97
+msgctxt "du1laW"
+msgid "Never"
+msgstr ""
+
+#: components/Customize/ArtifactList/index.tsx:16
+msgctxt "eW5eoW"
+msgid "Artifacts"
+msgstr ""
+
+#: pages/index.tsx:108
+msgctxt "edycEu"
+msgid "Domain view"
+msgstr ""
+
+#: components/Home/Tasks/ShowHiddenButton.tsx:13
+msgctxt "ekGPDx"
+msgid "Show hidden"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:61
+msgctxt "esuNEd"
+msgid "Search tasks"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:113
+msgctxt "fTHhSB"
+msgid "New password"
+msgstr ""
+
+#: pages/home/notifications/queue.tsx:129
+msgctxt "h/JsPu"
+msgid "Dequeue"
+msgstr ""
+
+#: components/Customize/SettingsList/ThemeSwitch.tsx:16
+msgctxt "hMUQH5"
+msgid "Dark mode"
+msgstr ""
+
+#: components/ClockOffsetWarning.tsx:24
+msgctxt "hf3uUJ"
+msgid "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} other {in # days}}."
+msgstr ""
+
+#: components/Footer.tsx:34
+msgctxt "hlo8EF"
+msgid "Data on this website may not always be accurate or up-to-date with in-game changes."
+msgstr ""
+
+#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:51
+msgctxt "i2wIqP"
+msgid "Add as task"
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:99
+msgctxt "j/LgMv"
+msgid "Overwrite"
+msgstr ""
+
+#: components/Statistics/ResetButton.tsx:46
+msgctxt "jm/spn"
+msgid "Reset"
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:133
+msgctxt "k+tyDd"
+msgid "All data will be stored locally on the browser."
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/index.tsx:70
+msgctxt "kGI46P"
+msgid "Task description"
+msgstr ""
+
+#: components/Map/TaskLayer/DoneButton.tsx:30
+msgctxt "knUjT2"
+msgid "Mark as done"
+msgstr ""
+
+#: components/Home/Resin/NotificationSetter.tsx:32
+msgctxt "lK7dt9"
+msgid "You have {value} resins right now!"
+msgstr ""
+
+#: components/Home/Resin/index.tsx:36
+msgctxt "ltSLUm"
+msgid "Resin calculator"
+msgstr ""
+
+#: pages/customize/characters/[name].tsx:85
+msgctxt "m9gyZk"
+msgid "No such character."
+msgstr ""
+
+#: components/Statistics/ResinStats.tsx:15
+msgctxt "me191T"
+msgid "Resins spent"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:79
+msgctxt "n4BU3X"
+msgid "Show keyboard shortcuts"
+msgstr ""
+
+#: components/DropLabel.tsx:41
+msgctxt "n4higF"
+msgid "{domain}{days, select, undefined {} other { on {days}}}"
+msgstr ""
+
+#: components/Customize/SettingsList/TaskDefaultZoomSlider.tsx:16
+msgctxt "nG0jLG"
+msgid "Zoom on task focus"
+msgstr ""
+
+#: components/Home/DomainView/index.tsx:247
+msgctxt "nbhURd"
+msgid "No domains for today. Maybe try some {link}s?"
+msgstr ""
+
+#: components/Customize/Search.tsx:39
+msgctxt "nnchzs"
+msgid "create an issue"
+msgstr ""
+
+#: components/DropLabel.tsx:18
+msgctxt "nwKqwO"
+msgid "This item does not drop from any domains."
+msgstr ""
+
+#: components/Home/DomainView/index.tsx:256
+msgctxt "nxnnXd"
+msgid "Ley Line"
+msgstr ""
+
+#: components/Footer.tsx:25
+msgctxt "oKnpYv"
+msgid "miHoYo"
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:60
+msgctxt "onhJnt"
+msgid "Input is not validated. Corrupted input can make data recovery impossible."
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:109
+msgctxt "p556q3"
+msgid "Copied"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:98
+msgctxt "pYrga/"
+msgid "New username"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:19
+msgctxt "pzamIu"
+msgid "Respawns every"
+msgstr ""
+
+#: components/Customize/ArtifactInfo/NoteInput.tsx:24
+msgctxt "q1gvwt"
+msgid "e.g. Lumine's artifact"
+msgstr ""
+
+#: components/Customize/SettingsList/TaskListCompactSwitch.tsx:16
+msgctxt "qFKt7n"
+msgid "Compact task list"
+msgstr ""
+
+#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:30
+msgctxt "qFS8nN"
+msgid "Value steps (20, 40, 60)"
+msgstr ""
+
+#: pages/index.tsx:111
+msgctxt "qS2uO2"
+msgid "Shows which domains can be cleared for ascension materials and artifacts for the day."
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:64
+msgctxt "sOX2eQ"
+msgid "You can export your account data for backup and restore."
+msgstr ""
+
+#: components/ShortcutHelp.tsx:46
+msgctxt "sTeVos"
+msgid "Subtract {values}"
+msgstr ""
+
+#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:44
+msgctxt "tLVaIX"
+msgid "ascension material for {name}"
+msgstr ""
+
+#: components/Customize/SettingsList/BackgroundSwitch.tsx:31
+msgctxt "tthToS"
+msgid "Disabled"
+msgstr ""
+
+#: components/Customize/Search.tsx:30
+msgctxt "u1UiIa"
+msgid "If there are any missing items, please {link} on GitHub."
+msgstr ""
+
+#: components/Customize/SettingsList/ResinNotifyMarkSlider.tsx:20
+msgctxt "ufO+FA"
+msgid "Send resin notification at"
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:97
+msgctxt "vH+nE+"
+msgid "Read more."
+msgstr ""
+
+#: components/Statistics/InfoText.tsx:19
+msgctxt "vhQqLj"
+msgid "Range"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:25
+msgctxt "vzYPVX"
+msgid "Keyboard shortcuts"
+msgstr ""
+
+#: components/TaskSearchModal.tsx:34
+msgctxt "w0Ntlm"
+msgid "Search tasks..."
+msgstr ""
+
+#: components/ShortcutHelp.tsx:64
+msgctxt "wD8UUI"
+msgid "Toggle list overlay"
+msgstr ""
+
+#: pages/index.tsx:70
+msgctxt "wO9wb5"
+msgid "GitHub"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:129
+msgctxt "wSZR47"
+msgid "Submit"
+msgstr ""
+
+#: components/Home/DomainView/index.tsx:227
+msgctxt "xJ2fv1"
+msgid "Today's Domains"
+msgstr ""
+
+#: components/Customize/SettingsList/SignOutButton.tsx:22
+msgctxt "xXbJso"
+msgid "Sign out"
+msgstr ""
+
+#: pages/home/notifications/queue.tsx:87
+msgctxt "xbTsBl"
+msgid "Scheduled at {time} in {duration}."
+msgstr ""
+
+#: components/Home/Tasks/SearchButton.tsx:20
+msgctxt "xmcVZ0"
+msgid "Search"
+msgstr ""
+
+#: components/Customize/WeaponInfo/NoteInput.tsx:17
+msgctxt "xqG0ln"
+msgid "Additional notes"
+msgstr ""
+
+#: components/Customize/SettingsList/LanguageSwitch.tsx:18
+msgctxt "y1Z3or"
+msgid "Language"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:39
+msgctxt "yIbnIG"
+msgid "esc"
+msgstr ""
+
+#: components/Statistics/TaskStats.tsx:14
+msgctxt "yQ99BT"
+msgid "Tasks done"
+msgstr ""
+
+#: components/Customize/WeaponInfo/Toggle.tsx:27
+msgctxt "z3f4yK"
+msgid "Scheduled domains will appear on the days they are available."
+msgstr ""
+
+#: components/Customize/WeaponInfo/Toggle.tsx:23
+msgctxt "zOA5+A"
+msgid "Show on schedule"
+msgstr ""
+
+#: components/Statistics/TaskStats.tsx:61
+msgctxt "zWgbGg"
+msgid "Today"
+msgstr ""
+
+msgctxt "duration.year"
+msgid "{value, plural, one {# year} other {# years}}"
+msgstr ""
+
+msgctxt "duration.week"
+msgid "{value, plural, one {# week} other {# weeks}}"
+msgstr ""
+
+msgctxt "duration.day"
+msgid "{value, plural, one {# day} other {# days}}"
+msgstr ""
+
+msgctxt "duration.hour"
+msgid "{value, plural, one {# hour} other {# hours}}"
+msgstr ""
+
+msgctxt "duration.minute"
+msgid "{value, plural, one {# minute} other {# minutes}}"
+msgstr ""
+
+msgctxt "duration.second"
+msgid "{value, plural, one {# second} other {# seconds}}"
+msgstr ""
+
+msgctxt "duration.millisecond"
+msgid "{value, plural, one {# millisecond} other {# milliseconds}}"
+msgstr ""
+
+msgctxt "day.sunday"
+msgid "Sunday"
+msgstr ""
+
+msgctxt "day.monday"
+msgid "Monday"
+msgstr ""
+
+msgctxt "day.tuesday"
+msgid "Tuesday"
+msgstr ""
+
+msgctxt "day.wednesday"
+msgid "Wednesday"
+msgstr ""
+
+msgctxt "day.thursday"
+msgid "Thursday"
+msgstr ""
+
+msgctxt "day.friday"
+msgid "Friday"
+msgstr ""
+
+msgctxt "day.saturday"
+msgid "Saturday"
+msgstr ""
+
+msgctxt "unit.year"
+msgid "Year"
+msgstr ""
+
+msgctxt "unit.week"
+msgid "Week"
+msgstr ""
+
+msgctxt "unit.day"
+msgid "Day"
+msgstr ""
+
+msgctxt "unit.hour"
+msgid "Hour"
+msgstr ""
+
+msgctxt "unit.minute"
+msgid "Minute"
+msgstr ""
+
+msgctxt "unit.second"
+msgid "Second"
+msgstr ""
+
+msgctxt "unit.millisecond"
+msgid "Millisecond"
+msgstr ""

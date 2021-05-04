@@ -29,7 +29,7 @@ const CreateButton = () => {
       <HStack spacing={2}>
         <Icon as={FaCheck} />
         <div>
-          <FormattedMessage id="taskCreate" />
+          <FormattedMessage defaultMessage="Create" />
         </div>
       </HStack>
     </Link>

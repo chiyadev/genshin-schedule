@@ -121,7 +121,7 @@ export function useFormatTime(time: DateTime, units: Exclude<TimeUnit, "year" | 
 }
 
 export function useFormatDuration(duration: Duration, units = TimeUnits) {
-  const { formatMessage } = useIntl();
+  const { formatMessage: formatMessageId } = useIntl();
   const parts: string[] = [];
 
   for (const unit of units) {
@@ -136,7 +136,7 @@ export function useFormatDuration(duration: Duration, units = TimeUnits) {
     value = Math.floor(value);
 
     if (value) {
-      parts.push(formatMessage({ id: `duration.${unit}` }, { value }));
+      parts.push(formatMessageId({ id: `duration.${unit}` }, { value }));
     }
   }
 
@@ -144,8 +144,8 @@ export function useFormatDuration(duration: Duration, units = TimeUnits) {
 }
 
 export function useFormatDurationPart(duration: Duration, unit: TimeUnit) {
-  const { formatMessage } = useIntl();
+  const { formatMessage: formatMessageId } = useIntl();
   const value = Math.floor(duration.as(unit));
 
-  return formatMessage({ id: `duration.${unit}` }, { value });
+  return formatMessageId({ id: `duration.${unit}` }, { value });
 }

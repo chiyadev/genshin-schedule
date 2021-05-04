@@ -13,7 +13,7 @@ const TaskDefaultZoomSlider = () => {
       <HStack spacing={2}>
         <Icon as={FaSearchPlus} />
         <div>
-          <FormattedMessage id="taskDefaultZoom" />
+          <FormattedMessage defaultMessage="Zoom on task focus" />
         </div>
       </HStack>
 

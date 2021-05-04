@@ -1,4 +1,4 @@
-import EnUS from "./en-US.json";
+import EnUS from "./static.json";
 // import ZhCN from "./zh-CN.json";
 
 export type Language = "en-US";

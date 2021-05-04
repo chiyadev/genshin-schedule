@@ -36,7 +36,7 @@ const EstimatorByResin = () => {
       {values.map(({ remainingTime, value }) => (
         <div key={remainingTime.valueOf()}>
           <FormattedMessage
-            id="resinEstValueEntry"
+            defaultMessage="{value} in {time}"
             values={{
               value,
               time: [

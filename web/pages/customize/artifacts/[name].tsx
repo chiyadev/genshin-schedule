@@ -76,7 +76,7 @@ const ArtifactInfo = ({ data, name }: Props) => {
             <NoteInput artifact={artifact} />
           </WhiteCard>
         ) : (
-          <FormattedMessage id="artifactNotFound" />
+          <FormattedMessage defaultMessage="No such artifact." />
         )}
       </Layout>
     </ConfigProvider>

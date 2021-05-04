@@ -77,7 +77,7 @@ const WeaponInfo = ({ data, name }: Props) => {
             <NoteInput weapon={weapon} />
           </WhiteCard>
         ) : (
-          <FormattedMessage id="weaponNotFound" />
+          <FormattedMessage defaultMessage="No such weapon." />
         )}
       </Layout>
     </ConfigProvider>

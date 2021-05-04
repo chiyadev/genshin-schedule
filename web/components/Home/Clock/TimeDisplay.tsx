@@ -58,7 +58,7 @@ const TimeDisplay = () => {
 
   return (
     <HStack spacing={2} fontFamily="Genshin">
-      <Tooltip label={<FormattedMessage id="previousDay" />} closeOnClick={false}>
+      <Tooltip label={<FormattedMessage defaultMessage="Previous day" />} closeOnClick={false}>
         <Button variant="ghost" fontSize="4xl" w={12} h={12} p={0} onClick={backward} disabled={offset <= -6}>
           &lt;
         </Button>
@@ -68,7 +68,7 @@ const TimeDisplay = () => {
         {hour}:{minute}:{second}
       </Heading>
 
-      <Tooltip label={<FormattedMessage id="nextDay" />} closeOnClick={false}>
+      <Tooltip label={<FormattedMessage defaultMessage="Next day" />} closeOnClick={false}>
         <Button variant="ghost" fontSize="4xl" w={12} h={12} p={0} onClick={forward} disabled={offset >= 6}>
           &gt;
         </Button>

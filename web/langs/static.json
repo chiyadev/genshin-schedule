@@ -1,0 +1,23 @@
+{
+  "duration.year": "{value, plural, one {# year} other {# years}}",
+  "duration.week": "{value, plural, one {# week} other {# weeks}}",
+  "duration.day": "{value, plural, one {# day} other {# days}}",
+  "duration.hour": "{value, plural, one {# hour} other {# hours}}",
+  "duration.minute": "{value, plural, one {# minute} other {# minutes}}",
+  "duration.second": "{value, plural, one {# second} other {# seconds}}",
+  "duration.millisecond": "{value, plural, one {# millisecond} other {# milliseconds}}",
+  "day.sunday": "Sunday",
+  "day.monday": "Monday",
+  "day.tuesday": "Tuesday",
+  "day.wednesday": "Wednesday",
+  "day.thursday": "Thursday",
+  "day.friday": "Friday",
+  "day.saturday": "Saturday",
+  "unit.year": "Year",
+  "unit.week": "Week",
+  "unit.day": "Day",
+  "unit.hour": "Hour",
+  "unit.minute": "Minute",
+  "unit.second": "Second",
+  "unit.millisecond": "Millisecond"
+}

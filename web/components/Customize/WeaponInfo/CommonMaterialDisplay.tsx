@@ -5,10 +5,10 @@ import { Button, chakra, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import { useTaskCreator } from "../../../utils/tasks";
 import { Weapon } from "../../../db/weapons";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage, FormattedMessage as FormattedMessageId, useIntl } from "react-intl";
 
 const CommonMaterialDisplay = ({ weapon, material }: { weapon: Weapon; material: CommonMaterial }) => {
-  const { formatMessage } = useIntl();
+  const { formatMessage, formatMessage: formatMessageId } = useIntl();
   const createTask = useTaskCreator();
   const [create, setCreate] = useState(false);
 
@@ -20,12 +20,12 @@ const CommonMaterialDisplay = ({ weapon, material }: { weapon: Weapon; material:
         <div>
           <chakra.div fontSize="lg">
             <Link href={material.wiki} isExternal>
-              <FormattedMessage id={material.name} />
+              <FormattedMessageId id={material.name} />
             </Link>
           </chakra.div>
           <chakra.div fontSize="sm" color="gray.500">
             <Link href={CommonMaterialWiki} isExternal>
-              <FormattedMessage id={material.type} />
+              <FormattedMessageId id={material.type} />
             </Link>
           </chakra.div>
         </div>
@@ -41,14 +41,14 @@ const CommonMaterialDisplay = ({ weapon, material }: { weapon: Weapon; material:
           try {
             await createTask(
               material,
-              formatMessage({ id: "weaponTaskDesc" }, { name: formatMessage({ id: weapon.name }) })
+              formatMessage({ defaultMessage: "ascension material for {name}" }, { name: formatMessageId({ id: weapon.name }) })
             );
           } finally {
             setCreate(false);
           }
         }}
       >
-        <FormattedMessage id="addAsTask" />
+        <FormattedMessage defaultMessage="Add as task" />
       </Button>
     </VStack>
   );

@@ -21,7 +21,7 @@ const ClockOffsetWarning = () => {
           <AlertIcon />
 
           <div>
-            <FormattedMessage id="schdOffsetWarning" values={{ offset }} />{" "}
+            <FormattedMessage defaultMessage="Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} other {in # days}}." values={{ offset }} />{" "}
             <Link
               as="button"
               color={useColorModeValue("blue.500", "blue.300")}
@@ -30,7 +30,7 @@ const ClockOffsetWarning = () => {
                 trackEvent("clock", "offsetReset");
               }}
             >
-              <FormattedMessage id="schdOffsetReset" />
+              <FormattedMessage defaultMessage="Reset" />
             </Link>
           </div>
         </Alert>

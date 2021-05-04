@@ -14,14 +14,14 @@ const NoteInput = ({ character }: { character: Character }) => {
       <HStack fontSize="lg" spacing={2}>
         <Icon as={FaRegStickyNote} />
         <div>
-          <FormattedMessage id="additionalNotes" />
+          <FormattedMessage defaultMessage="Additional notes" />
         </div>
       </HStack>
 
       <Textarea
         variant="filled"
         w="full"
-        placeholder={formatMessage({ id: "characterNoteEg" })}
+        placeholder={formatMessage({ defaultMessage: "e.g. Anemo traveler" })}
         value={notes[character.name] || ""}
         onChange={({ currentTarget: { value } }) => {
           setNotes((notes) => ({

@@ -14,14 +14,14 @@ const NoteInput = ({ weapon }: { weapon: Weapon }) => {
       <HStack fontSize="lg" spacing={2}>
         <Icon as={FaRegStickyNote} />
         <div>
-          <FormattedMessage id="additionalNotes" />
+          <FormattedMessage defaultMessage="Additional notes" />
         </div>
       </HStack>
 
       <Textarea
         variant="filled"
         w="full"
-        placeholder={formatMessage({ id: "weaponNoteEg" })}
+        placeholder={formatMessage({ defaultMessage: "e.g. Lumine's weapon" })}
         value={notes[weapon.name] || ""}
         onChange={({ currentTarget: { value } }) => {
           setNotes((notes) => ({

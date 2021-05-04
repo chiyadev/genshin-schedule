@@ -17,7 +17,7 @@ const SearchButton = () => {
 
       {query && <div>"{query}"</div>}
 
-      <Tooltip label={<FormattedMessage id="search" />}>
+      <Tooltip label={<FormattedMessage defaultMessage="Search" />}>
         <Button
           as="button"
           variant="ghost"

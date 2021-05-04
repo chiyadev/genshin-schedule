@@ -12,7 +12,7 @@ import {
   WhiteCharacter,
   WhiteWeapon,
 } from "../../../assets";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage as FormattedMessageId } from "react-intl";
 
 const FilterButtons = () => {
   return (
@@ -28,7 +28,7 @@ const FilterButton = ({ type, image }: { type: Config["domainFilters"][0]; image
   const [filters, setFilters] = useConfig("domainFilters");
 
   return (
-    <Tooltip label={<FormattedMessage id={type} />}>
+    <Tooltip label={<FormattedMessageId id={type} />}>
       <Button
         as="button"
         variant="ghost"

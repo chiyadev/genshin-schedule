@@ -33,11 +33,11 @@ const Info = () => {
         <HStack spacing={2} fontSize="xl" fontWeight="bold">
           <Icon as={FaBell} />
           <div>
-            <FormattedMessage id="notifications" />
+            <FormattedMessage defaultMessage="Notifications" />
           </div>
 
           <Spacer />
-          <Tooltip label={<FormattedMessage id="notiQueue" />}>
+          <Tooltip label={<FormattedMessage defaultMessage="Notification queue" />}>
             <span>
               <NextLink href="/home/notifications/queue" passHref>
                 <Link color={useColorModeValue("blue.500", "blue.300")}>
@@ -50,7 +50,7 @@ const Info = () => {
 
         <VStack align="start" spacing={4}>
           <div>
-            <FormattedMessage id="notiDesc" />
+            <FormattedMessage defaultMessage="Genshin Schedule has a Discord bot that can send you notifications when your resin recharges or resources respawn." />
           </div>
 
           <chakra.img src={Bot} borderRadius="md" />
