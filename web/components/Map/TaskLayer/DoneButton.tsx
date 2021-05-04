@@ -22,7 +22,7 @@ const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateA
         setDone(!due);
         setFocused();
 
-        trackEvent("map", due ? "taskUndone" : "taskDone");
+        trackEvent("map", due ? "taskDone" : "taskUndone");
       }}
     >
       <HStack spacing={2}>
