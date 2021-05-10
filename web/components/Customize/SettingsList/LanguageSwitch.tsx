@@ -31,7 +31,9 @@ const LanguageSwitch = () => {
         }}
       >
         {Languages.map((lang) => (
-          <option value={lang}>{LanguageNames[lang]}</option>
+          <option key={lang} value={lang}>
+            {LanguageNames[lang]}
+          </option>
         ))}
 
         <option value="contribute">({formatMessage({ id: "languageContrib" })})</option>
