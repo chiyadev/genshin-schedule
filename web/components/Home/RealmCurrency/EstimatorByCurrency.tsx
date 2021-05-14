@@ -1,9 +1,10 @@
 import React, { memo, useMemo } from "react";
+import { FormattedMessage } from "react-intl";
+import { Box } from "@chakra-ui/react";
+import { Duration } from "luxon";
 import { useConfig } from "../../../utils/config";
 import { useFormatDuration, useFormatTime, useServerTime } from "../../../utils/time";
 import { getCurrencyCap, getCurrencyRate, getCurrencyRecharge } from "../../../db/realms";
-import { Duration } from "luxon";
-import { FormattedMessage } from "react-intl";
 
 const EstimatorByResin = () => {
   const [currency] = useConfig("realmCurrency");
@@ -35,7 +36,7 @@ const EstimatorByResin = () => {
   }, [currency, time]);
 
   return (
-    <div>
+    <Box sx={{ columnCount: [1, 2, 3, 4] }}>
       {values.map(({ remainingTime, value }) => (
         <div key={`currency-${remainingTime.valueOf()}`}>
           <FormattedMessage
@@ -50,7 +51,7 @@ const EstimatorByResin = () => {
           />
         </div>
       ))}
-    </div>
+    </Box>
   );
 };
 
