@@ -4,6 +4,7 @@ import { useServerTime } from "../../../utils/time";
 import { FaCheck } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { HStack, Icon, Link, useColorModeValue } from "@chakra-ui/react";
+import { FormattedMessage } from "react-intl";
 
 const CreateButton = () => {
   const time = useServerTime(1000);
@@ -27,7 +28,9 @@ const CreateButton = () => {
     >
       <HStack spacing={2}>
         <Icon as={FaCheck} />
-        <div>Create</div>
+        <div>
+          <FormattedMessage id="taskCreate" />
+        </div>
       </HStack>
     </Link>
   );

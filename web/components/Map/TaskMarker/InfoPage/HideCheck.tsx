@@ -3,6 +3,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { trackEvent } from "../../../../utils/umami";
 import { Checkbox, HStack, Icon, Spacer } from "@chakra-ui/react";
 import { useTaskFocusSetter } from "../../../../utils/tasks";
+import { FormattedMessage } from "react-intl";
 
 const HideCheck = ({ value, setValue }: { value: boolean; setValue: Dispatch<boolean> }) => {
   const setFocused = useTaskFocusSetter();
@@ -12,7 +13,9 @@ const HideCheck = ({ value, setValue }: { value: boolean; setValue: Dispatch<boo
       <Icon as={value ? FaEyeSlash : FaEye} />
 
       <HStack as="label" spacing={2} cursor="pointer" flex={1}>
-        <div>Hide temporarily</div>
+        <div>
+          <FormattedMessage id="taskHide" />
+        </div>
         <Spacer />
 
         <Checkbox

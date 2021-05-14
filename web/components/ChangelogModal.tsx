@@ -13,11 +13,41 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { FaBullhorn } from "react-icons/fa";
+import { FormattedMessage } from "react-intl";
 
-const LatestChangelog = 18;
+const LatestChangelog = 24;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={24}>
+      <ChangelogItem github={63}>Added a calculator for realm currency.</ChangelogItem>
+    </ChangelogSection>,
+    <ChangelogSection key={23} date="2021/05/01">
+      <ChangelogItem github={53}>Implemented full support for localization.</ChangelogItem>
+      <ChangelogItem>Renamed Mt. Aozang to Mt. Aocang.</ChangelogItem>
+      <ChangelogItem github={61}>Added a service worker to make the website installable as PWA.</ChangelogItem>
+    </ChangelogSection>,
+    <ChangelogSection key={22} date="2021/04/30">
+      <ChangelogItem>Removed text from header menu to make it minimal.</ChangelogItem>
+      <ChangelogItem>Added button in task list to show hidden tasks.</ChangelogItem>
+      <ChangelogItem>Added categories to icon listing.</ChangelogItem>
+    </ChangelogSection>,
+    <ChangelogSection key={21} date="2021/04/28">
+      <ChangelogItem>Added new character from 1.5: Yanfei</ChangelogItem>
+      <ChangelogItem>Added new artifacts from 1.5: Tenacity of the Millelith, Pale Flame</ChangelogItem>
+      <ChangelogItem>Added new domains from 1.5: Ridge Watch, Beneath the Dragon-Queller</ChangelogItem>
+      <ChangelogItem>Added new items from 1.5: various dyes and woods, Transient Resin</ChangelogItem>
+      <ChangelogItem>Added leaked character: Eula</ChangelogItem>
+      <ChangelogItem>Updated Rosaria's old picture.</ChangelogItem>
+    </ChangelogSection>,
+    <ChangelogSection key={20} date="2021/03/21">
+      <ChangelogItem>Added new weapons from 1.4: Elegy For The End, The Alley Flash and Windblume Ode.</ChangelogItem>
+      <ChangelogItem github={54}>Fixed daylight savings calculation for America and Europe servers.</ChangelogItem>
+    </ChangelogSection>,
+    <ChangelogSection key={19} date="2021/03/05">
+      <ChangelogItem github={50}>Added a setting for resin estimation mode by amount instead of time.</ChangelogItem>
+      <ChangelogItem>Added missing weapon Memory of Dust.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={18} date="2021/03/04">
       <ChangelogItem>Updated Hu Tao; added Staff of Homa and Lithic series weapons to the database.</ChangelogItem>
     </ChangelogSection>,
@@ -123,6 +153,8 @@ const ChangelogModal = () => {
     }
   }, [version]);
 
+  const dividerColor = useColorModeValue("gray.200", "gray.600");
+
   if (!version) {
     return null;
   }
@@ -134,17 +166,14 @@ const ChangelogModal = () => {
         <ModalHeader>
           <HStack>
             <Icon as={FaBullhorn} />
-            <div>Update changelog</div>
+            <div>
+              <FormattedMessage id="changelog" />
+            </div>
           </HStack>
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <VStack
-            align="stretch"
-            spacing={4}
-            pb={2}
-            divider={<StackDivider borderColor={useColorModeValue("gray.200", "gray.600")} />}
-          >
+          <VStack align="stretch" spacing={4} pb={2} divider={<StackDivider borderColor={dividerColor} />}>
             {changelog.slice(0, 3)}
           </VStack>
         </ModalBody>

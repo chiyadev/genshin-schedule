@@ -15,6 +15,7 @@ import { MultiMap } from "./multiMap";
 import { useListItemDispatch } from "./dispatch";
 import { ServerResetHour, useServerTime } from "./time";
 import { DateTime } from "luxon";
+import { Language } from "../langs";
 
 type MapLocation = { lat: number; lng: number };
 
@@ -22,13 +23,14 @@ export const MapZoomMin = 4;
 export const MapZoomMax = 7;
 
 export type Config = {
+  language: Language;
   server: "America" | "Europe" | "Asia" | "TW, HK, MO";
   theme: "light" | "dark";
   background: "paimon" | "klee" | "zhongli" | "none";
   lastChangelog: number;
   offsetDays: number;
   hiddenWidgets: {
-    [key in "clock" | "sync" | "resin" | "tasks" | "domains"]?: boolean;
+    [key in "clock" | "sync" | "resin" | "tasks" | "domains" | "realm"]?: boolean;
   };
   resin: {
     value: number;
@@ -36,6 +38,12 @@ export type Config = {
   };
   resinEstimateMode: "time" | "value";
   resinNotifyMark: number;
+  realmEnergy: number;
+  realmRank: number;
+  realmCurrency: {
+    value: number;
+    time: number;
+  };
   characters: string[];
   charactersWeekly: string[];
   weapons: string[];
@@ -46,6 +54,7 @@ export type Config = {
   tasks: Task[];
   taskQuery: string;
   taskListCompact: boolean;
+  taskListShowHidden: boolean;
   customizeQuery: string;
   iconQuery: string;
   iconListScroll: number;
@@ -84,6 +93,7 @@ const defaultMapCenter = {
 };
 
 export const DefaultConfig: Config = {
+  language: "en-US",
   server: "America",
   theme: "light",
   background: "paimon",
@@ -96,6 +106,12 @@ export const DefaultConfig: Config = {
   },
   resinEstimateMode: "time",
   resinNotifyMark: ResinCap,
+  realmEnergy: 0,
+  realmRank: 1,
+  realmCurrency: {
+    value: 0,
+    time: Date.now(),
+  },
   characters: [],
   charactersWeekly: [],
   weapons: [],
@@ -106,6 +122,7 @@ export const DefaultConfig: Config = {
   tasks: [],
   taskQuery: "",
   taskListCompact: false,
+  taskListShowHidden: false,
   customizeQuery: "",
   iconQuery: "",
   iconListScroll: 0,

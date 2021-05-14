@@ -192,6 +192,18 @@ export const WanderersTroupe: Artifact = {
   wiki: "https://genshin-impact.fandom.com/wiki/Wanderer%27s_Troupe",
 };
 
+export const TenacityOfTheMillelith: Artifact = {
+  type: "Artifact",
+  name: "Tenacity of the Millelith",
+  wiki: "https://genshin-impact.fandom.com/wiki/Tenacity_of_the_Millelith",
+};
+
+export const PaleFlame: Artifact = {
+  type: "Artifact",
+  name: "Pale Flame",
+  wiki: "https://genshin-impact.fandom.com/wiki/Pale_Flame",
+};
+
 export const Artifacts = [
   Adventurer,
   ArchaicPetra,
@@ -224,4 +236,6 @@ export const Artifacts = [
   TravelingDoctor,
   ViridescentVenerer,
   WanderersTroupe,
+  TenacityOfTheMillelith,
+  PaleFlame,
 ];

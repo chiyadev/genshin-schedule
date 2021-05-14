@@ -1,6 +1,8 @@
 import {
   Ballad,
+  BloodjadeBranch,
   Diligence,
+  DragonLordsCrown,
   DvalinClaw,
   DvalinPlume,
   DvalinSigh,
@@ -297,6 +299,24 @@ export const Xinyan: Character = {
   commonMaterials: [TreasureHoarderInsignia, Violetgrass],
 };
 
+export const Yanfei: Character = {
+  type: "Character",
+  name: "Yanfei",
+  wiki: "https://genshin-impact.fandom.com/wiki/Yanfei",
+  talentMaterialWeekly: [BloodjadeBranch],
+  talentMaterials: [Gold],
+  commonMaterials: [TreasureHoarderInsignia, NoctilucousJade],
+};
+
+export const Eula: Character = {
+  type: "Character",
+  name: "Eula",
+  wiki: "https://genshin.honeyhunterworld.com/db/char/eula/",
+  talentMaterialWeekly: [DragonLordsCrown],
+  talentMaterials: [Resistance],
+  commonMaterials: [HilichurlMask, DandelionSeed],
+};
+
 export const Albedo: Character = {
   type: "Character",
   name: "Albedo",
@@ -336,7 +356,7 @@ export const Xiao: Character = {
 export const Rosaria: Character = {
   type: "Character",
   name: "Rosaria",
-  wiki: "https://genshin.honeyhunterworld.com/db/char/rosaria/",
+  wiki: "https://genshin-impact.fandom.com/wiki/Rosaria",
   talentMaterialWeekly: [ShadowOfTheWarrior],
   talentMaterials: [Ballad],
   commonMaterials: [FatuiInsignia, Valberry],
@@ -363,6 +383,7 @@ export const Characters = [
   Chongyun,
   Diluc,
   Diona,
+  Eula,
   Fischl,
   Ganyu,
   HuTao,
@@ -384,5 +405,6 @@ export const Characters = [
   Xiao,
   Xingqiu,
   Xinyan,
+  Yanfei,
   Zhongli,
 ];

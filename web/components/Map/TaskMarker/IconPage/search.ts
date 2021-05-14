@@ -5,10 +5,12 @@ import { Task } from "../../../../utils/config";
 export const KnownResourceTimers: Record<string, Task["refreshTime"]> = {};
 export const IconSearch = new MemorySearch<string>();
 export const IconNames: string[] = [];
+export const IconCategories: Record<string, string[]> = {};
 
 function addIcons(type: string, items: { name: string; timer?: Task["refreshTime"] }[]) {
   for (const { name, timer } of items) {
     IconNames.push(name);
+    (IconCategories[type] || (IconCategories[type] = [])).push(name);
     IconSearch.add(name, name);
     type && IconSearch.add(type, name);
     timer && (KnownResourceTimers[name] = typeof timer === "number" ? timer * 3600000 : timer);
@@ -19,6 +21,7 @@ addIcons("gadget", [
   { name: "Portable Waypoint", timer: 168 },
   { name: "Adepti Seeker's Stove", timer: 5 / 60 },
   { name: "Parametric Transformer", timer: 168 },
+  { name: "Serenitea Pot" },
 ]);
 
 addIcons("ore", [
@@ -120,6 +123,20 @@ addIcons("cooking ingredient", [
   { name: "Wheat", timer: 24 },
 ]);
 
+addIcons("furnishing", [
+  { name: "Yellow Dye" },
+  { name: "Blue Dye" },
+  { name: "Red Dye" },
+  { name: "Fabric" },
+  { name: "Bamboo Segment", timer: "reset" },
+  { name: "Birch Wood", timer: "reset" },
+  { name: "Fragrant Cedar Wood", timer: "reset" },
+  { name: "Cuihua Wood", timer: "reset" },
+  { name: "Fir Wood", timer: "reset" },
+  { name: "Pine Wood", timer: "reset" },
+  { name: "Sandbearer Wood", timer: "reset" },
+]);
+
 addIcons("material", [
   { name: "Butterfly Wings", timer: 24 },
   { name: "Crystal Core", timer: 24 },
@@ -151,6 +168,7 @@ addIcons("currency", [
   { name: "Mora" },
   { name: "Resin" },
   { name: "Condensed Resin" },
+  { name: "Transient Resin" },
   { name: "Primogem" },
   { name: "Genesis Crystal" },
   { name: "Intertwined Fate" },

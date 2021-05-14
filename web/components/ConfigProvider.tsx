@@ -15,6 +15,8 @@ import { MultiMap } from "../utils/multiMap";
 import { PromiseSignal } from "../utils/promiseSignal";
 import { createPatch, Patch } from "rfc6902";
 import { useToast } from "@chakra-ui/react";
+import { IntlProvider } from "react-intl";
+import { Localizations } from "../langs";
 
 const ConfigProvider = ({ initial, children }: { initial?: WebData | null; children?: ReactNode }) => {
   if (initial) {
@@ -247,7 +249,15 @@ const ConfigContextRoot = ({
         [ref, set, events]
       )}
     >
-      {children}
+      <IntlProvider
+        locale={value.language}
+        messages={Localizations[value.language]}
+        onError={() => {
+          // ignore missing keys (untranslated database entries)
+        }}
+      >
+        {children}
+      </IntlProvider>
     </ConfigContext.Provider>
   );
 };

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useConfig } from "./config";
 import { DateTime, Duration } from "luxon";
-import pluralize from "pluralize";
+import { useIntl } from "react-intl";
 
 const tickCallbacks = new Set<() => void>();
 
@@ -34,12 +34,10 @@ export function useRerenderInterval(frequency: number) {
 export function useServerTime(updateHz = 100) {
   useRerenderInterval(updateHz);
 
-  const offsetHours = useServerTimeZone();
+  const timeZone = useServerTimeZone();
   const [offsetDays] = useConfig("offsetDays");
 
-  return DateTime.utc()
-    .plus({ days: offsetDays })
-    .setZone(offsetHours > 0 ? `UTC+${offsetHours}` : `UTC${offsetHours}`);
+  return DateTime.utc().plus({ days: offsetDays }).setZone(timeZone);
 }
 
 export function useServerTimeZone() {
@@ -47,14 +45,16 @@ export function useServerTimeZone() {
 
   switch (server) {
     case "America":
-      return -5;
+      return "America/New_York";
 
     case "Europe":
-      return 1;
+      return "Europe/Berlin";
 
     case "Asia":
+      return "Asia/Tokyo";
+
     case "TW, HK, MO":
-      return 8;
+      return "UTC+8";
   }
 }
 
@@ -69,8 +69,8 @@ export function getServerResetTime(time: DateTime) {
     .set({ hour: ServerResetHour });
 }
 
-export type Weekday = "Sunday" | "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday";
-export const Weekdays: Weekday[] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+export type Weekday = "sunday" | "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday";
+export const Weekdays: Weekday[] = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
 export type TimeUnit = "year" | "week" | "day" | "hour" | "minute" | "second" | "millisecond";
 export const TimeUnits: TimeUnit[] = ["year", "week", "day", "hour", "minute", "second", "millisecond"];
@@ -110,7 +110,7 @@ export function getAccuratestUnit(duration: Duration) {
   return "millisecond";
 }
 
-export function formatTimeSimple(time: DateTime, units: Exclude<TimeUnit, "year" | "week">[]) {
+export function useFormatTime(time: DateTime, units: Exclude<TimeUnit, "year" | "week">[]) {
   const parts: string[] = [];
 
   for (const unit of units) {
@@ -120,7 +120,8 @@ export function formatTimeSimple(time: DateTime, units: Exclude<TimeUnit, "year"
   return parts.join(":");
 }
 
-export function formatDurationSimple(duration: Duration, units = TimeUnits) {
+export function useFormatDuration(duration: Duration, units = TimeUnits) {
+  const { formatMessage } = useIntl();
   const parts: string[] = [];
 
   for (const unit of units) {
@@ -135,15 +136,16 @@ export function formatDurationSimple(duration: Duration, units = TimeUnits) {
     value = Math.floor(value);
 
     if (value) {
-      parts.push(`${value} ${pluralize(unit, value)}`);
+      parts.push(formatMessage({ id: `duration.${unit}` }, { value }));
     }
   }
 
   return parts.join(" ");
 }
 
-export function formatDurationPartSimple(duration: Duration, unit: TimeUnit) {
+export function useFormatDurationPart(duration: Duration, unit: TimeUnit) {
+  const { formatMessage } = useIntl();
   const value = Math.floor(duration.as(unit));
 
-  return `${value} ${pluralize(unit, value)}`;
+  return formatMessage({ id: `duration.${unit}` }, { value });
 }

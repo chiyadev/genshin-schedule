@@ -37,7 +37,7 @@ const Item = ({
   );
 
   return (
-    <HStack spacing={0} my={compact ? -2 : -1}>
+    <HStack spacing={0} my={compact ? -2 : -1} opacity={task.visible ? 1 : 0.5}>
       <HStack spacing={2} bg={task.highlight ? highlightColor : undefined} borderRadius="sm">
         <chakra.img
           alt={task.icon}

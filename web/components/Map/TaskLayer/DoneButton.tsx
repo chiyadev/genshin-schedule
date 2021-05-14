@@ -5,6 +5,7 @@ import { FaCheck, FaTimes } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { HStack, Icon, Link, useColorModeValue } from "@chakra-ui/react";
 import { useTaskDoneSetter, useTaskFocusSetter } from "../../../utils/tasks";
+import { FormattedMessage } from "react-intl";
 
 const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateAction<Task>> }) => {
   const time = useServerTime(1000);
@@ -26,7 +27,7 @@ const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateA
     >
       <HStack spacing={2}>
         <Icon as={due ? FaTimes : FaCheck} />
-        <div>Mark as {due ? "to-do" : "done"}</div>
+        <div>{due ? <FormattedMessage id="taskUndone" /> : <FormattedMessage id="taskDone" />}</div>
       </HStack>
     </Link>
   );

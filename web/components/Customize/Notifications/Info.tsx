@@ -20,6 +20,7 @@ import PrivacyDM from "../../../assets/notifications/PrivacyDM.jpg";
 import Success from "../../../assets/notifications/Success.jpg";
 import MessageDisplay from "./MessageDisplay";
 import NextLink from "next/link";
+import { FormattedMessage } from "react-intl";
 
 export const DiscordServerInvite = "https://discord.gg/XdPQeEaBE7";
 export const DiscordBotInvite =
@@ -31,10 +32,12 @@ const Info = () => {
       <WhiteCard divide>
         <HStack spacing={2} fontSize="xl" fontWeight="bold">
           <Icon as={FaBell} />
-          <div>Notifications</div>
+          <div>
+            <FormattedMessage id="notifications" />
+          </div>
 
           <Spacer />
-          <Tooltip label="Queue">
+          <Tooltip label={<FormattedMessage id="notiQueue" />}>
             <span>
               <NextLink href="/home/notifications/queue" passHref>
                 <Link color={useColorModeValue("blue.500", "blue.300")}>
@@ -47,8 +50,7 @@ const Info = () => {
 
         <VStack align="start" spacing={4}>
           <div>
-            Genshin Schedule has a Discord bot that can send you notifications when your resin recharges or resources
-            respawn.
+            <FormattedMessage id="notiDesc" />
           </div>
 
           <chakra.img src={Bot} borderRadius="md" />
@@ -115,10 +117,7 @@ const Info = () => {
             <MessageDisplay />
           </VStack>
 
-          <VStack align="start" spacing={2}>
-            <div>4. Done! Future notifications will be sent to you via DM.</div>
-            <chakra.img src={Success} borderRadius="md" />
-          </VStack>
+          <chakra.img src={Success} borderRadius="md" />
         </VStack>
       </WhiteCard>
     </VStack>

@@ -1,10 +1,6 @@
-const fs = require("fs");
+const { readdir, rename, writeFile, unlink } = require("fs/promises");
 const path = require("path");
-const util = require("util");
-
-const readdir = util.promisify(fs.readdir);
-const rename = util.promisify(fs.rename);
-const writeFile = util.promisify(fs.writeFile);
+const exec = require("await-exec");
 
 (async () => {
   const assetPath = "assets/game";
@@ -17,6 +13,14 @@ const writeFile = util.promisify(fs.writeFile);
         path.join(assetPath, file),
         path.join(assetPath, file.replace(assetRenamePrefix, "").replace(/_/g, " "))
       );
+    }
+  }
+
+  // convert webp to png
+  for (const file of await readdir(assetPath)) {
+    if (!file.startsWith(".") && file.endsWith(".webp")) {
+      await exec(`dwebp "${path.join(assetPath, file)}" -o "${path.join(assetPath, path.parse(file).name + ".png")}"`);
+      await unlink(path.join(assetPath, file));
     }
   }
 

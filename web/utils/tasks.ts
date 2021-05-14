@@ -31,17 +31,18 @@ export function useFilteredTasks(tasks: Task[]) {
 
 export function useDueTasks(tasks: Task[]) {
   const time = useServerTime(60000);
+  const [showHidden] = useConfig("taskListShowHidden");
 
   return useMemo(() => {
     return tasks
-      .filter((task) => task.visible && task.dueTime <= time.valueOf())
+      .filter((task) => (showHidden || task.visible) && task.dueTime <= time.valueOf())
       .sort((a, b) => {
         const icon = iconIndexes[a.icon] - iconIndexes[b.icon];
         if (icon) return icon;
 
         return a.dueTime - b.dueTime;
       });
-  }, [time, tasks]);
+  }, [time, tasks, showHidden]);
 }
 
 export function useTaskCreator() {

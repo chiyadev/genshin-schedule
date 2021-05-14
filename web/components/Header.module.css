@@ -1,5 +1,0 @@
-@media (max-width: 36em) {
-    .menu > :not(:last-child) {
-        display: none;
-    }
-}

@@ -1,35 +1,42 @@
 import { data } from "./RegionLabelLayer.json";
-import React, { memo, useEffect, useState } from "react";
+import React, { memo, ReactNode, useEffect, useState } from "react";
 import { GeoJSON } from "react-leaflet";
-import { Feature, Point } from "geojson";
 import { DivIcon, LatLng, LatLngTuple, Layer, Marker } from "leaflet";
 import { renderToStaticMarkup } from "react-dom/server";
 import { chakra } from "@chakra-ui/react";
 import { Config, MapZoomMax, useConfig } from "../../utils/config";
+import { useIntl } from "react-intl";
 
 const RegionLabelLayer = () => {
+  const { formatMessage } = useIntl();
   const [renderId, setRenderId] = useState(0);
   const [state] = useConfig("mapState");
 
   useEffect(() => setRenderId((i) => i + 1), [state]);
 
-  return <GeoJSON key={renderId} data={data as any} pointToLayer={(...props) => pointToLayer(...props, state)} />;
+  return (
+    <GeoJSON
+      key={renderId}
+      data={data as any}
+      pointToLayer={(point, latlng) => pointToLayer(state, formatMessage({ id: point.properties.label?.en }), latlng)}
+    />
+  );
 };
 
-const pointToLayer = (geoJsonPoint: Feature<Point, any>, latlng: LatLng, map: Config["mapState"]): Layer => {
+const pointToLayer = (map: Config["mapState"], name: string, latlng: LatLng): Layer => {
   const markerLatlng: LatLngTuple = [latlng.lng, latlng.lat]; // careful!! latlng swapped
 
   return new Marker(markerLatlng, {
     interactive: false,
     icon: new DivIcon({
-      html: renderToStaticMarkup(<RegionLabel geoJsonPoint={geoJsonPoint} map={map} />),
+      html: renderToStaticMarkup(<RegionLabel map={map} name={name} />),
       className: "region-label-icon",
     }),
     zIndexOffset: -900,
   });
 };
 
-const RegionLabel = ({ geoJsonPoint, map }: { geoJsonPoint: Feature<Point, any>; map: Config["mapState"] }) => {
+const RegionLabel = ({ map, name }: { map: Config["mapState"]; name: ReactNode }) => {
   return (
     <chakra.div
       whiteSpace="nowrap"
@@ -41,7 +48,7 @@ const RegionLabel = ({ geoJsonPoint, map }: { geoJsonPoint: Feature<Point, any>;
       fontFamily="Genshin"
       style={{ transform: `scale(${map.zoom / MapZoomMax})` }}
     >
-      {geoJsonPoint.properties.label?.en}
+      {name}
     </chakra.div>
   );
 };

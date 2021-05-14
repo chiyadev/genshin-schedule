@@ -17,9 +17,11 @@ import {
   MartialArtist,
   NoblesseOblige,
   OceanConqueror,
+  PaleFlame,
   ResolutionOfSojourner,
   RetracingBolide,
   Scholar,
+  TenacityOfTheMillelith,
   TheExile,
   ThunderingFury,
   Thundersoother,
@@ -54,13 +56,16 @@ import {
   ShadowOfTheWarrior,
   ShardOfAFoulLegacy,
   TuskOfMonocerosCaeli,
+  BloodjadeBranch,
+  DragonLordsCrown,
+  GildedScale,
 } from "./talentMaterials";
 import { Weekday } from "../utils/time";
 
-const MonThur: Weekday[] = ["Monday", "Thursday"];
-const TuesFri: Weekday[] = ["Tuesday", "Friday"];
-const WedSat: Weekday[] = ["Wednesday", "Saturday"];
-const Sun: Weekday[] = ["Sunday"];
+const MonThur: Weekday[] = ["monday", "thursday"];
+const TuesFri: Weekday[] = ["tuesday", "friday"];
+const WedSat: Weekday[] = ["wednesday", "saturday"];
+const Sun: Weekday[] = ["sunday"];
 const AnyDay: Weekday[] = [...MonThur, ...TuesFri, ...WedSat, ...Sun];
 const Trounce: Weekday[] = AnyDay;
 
@@ -247,6 +252,27 @@ export const EnterTheGoldenHouseDrops: DomainDropSet = {
   ],
 };
 
+export const BeneathTheDragonQuellerDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Trounce,
+  items: [
+    Berserker,
+    Instructor,
+    TheExile,
+    GladiatorsFinale,
+    WanderersTroupe,
+    DragonLordsCrown,
+    BloodjadeBranch,
+    GildedScale,
+  ],
+};
+
+export const RidgeWatchDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: AnyDay,
+  items: [BraveHeart, MartialArtist, TenacityOfTheMillelith, PaleFlame],
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
@@ -273,4 +299,6 @@ export const DomainDropSets = [
   WolfOfTheNorthChallengeDrops,
   PeakOfVindagnyrDrops,
   EnterTheGoldenHouseDrops,
+  BeneathTheDragonQuellerDrops,
+  RidgeWatchDrops,
 ];

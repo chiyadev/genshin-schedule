@@ -6,7 +6,7 @@ import { trackEvent } from "../../../utils/umami";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { useHotkeys } from "react-hotkeys-hook";
 
-const resinUsages = [60, 40, 20];
+const resinUsages = [60, 40, 30, 20];
 
 const Subtractor = ({ current }: { current: number }) => {
   const time = useServerTime(1000);
@@ -39,8 +39,9 @@ const Subtractor = ({ current }: { current: number }) => {
 };
 
 const SubtractButton = ({ value, onClick }: { value: number; onClick: () => void }) => {
+  const hotkey = value.toString().slice(0, 1);
   useHotkeys(
-    value.toString().slice(0, 1),
+    `${hotkey}, num_${hotkey}`, // support numpad keys for niche cases (e.g. Firefox on macOS)
     (e) => {
       onClick();
       e.preventDefault();

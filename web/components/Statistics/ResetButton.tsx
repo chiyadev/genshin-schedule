@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { FaSync } from "react-icons/fa";
 import { useConfig } from "../../utils/config";
+import { FormattedMessage } from "react-intl";
 
 const ResetButton = () => {
   const [, setStats] = useConfig("stats");
@@ -21,7 +22,7 @@ const ResetButton = () => {
   return (
     <>
       <Button colorScheme="red" leftIcon={<Icon as={FaSync} />} onClick={() => setConfirm(true)}>
-        Reset
+        <FormattedMessage id="statReset" />
       </Button>
 
       <AlertDialog isOpen={confirm} onClose={() => setConfirm(false)} leastDestructiveRef={cancelRef}>
@@ -29,7 +30,9 @@ const ResetButton = () => {
         <AlertDialogContent>
           <AlertDialogHeader>Reset statistics</AlertDialogHeader>
 
-          <AlertDialogBody>Are you sure? This action cannot be undone.</AlertDialogBody>
+          <AlertDialogBody>
+            <FormattedMessage id="actionPermanent" />
+          </AlertDialogBody>
 
           <AlertDialogFooter>
             <ButtonGroup>
@@ -40,11 +43,11 @@ const ResetButton = () => {
                   setConfirm(false);
                 }}
               >
-                Proceed
+                <FormattedMessage id="statReset" />
               </Button>
 
               <Button ref={cancelRef} onClick={() => setConfirm(false)}>
-                Cancel
+                <FormattedMessage id="cancel" />
               </Button>
             </ButtonGroup>
           </AlertDialogFooter>

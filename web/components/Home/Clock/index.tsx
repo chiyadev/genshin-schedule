@@ -4,6 +4,7 @@ import ServerText from "./ServerText";
 import TimeDisplay from "./TimeDisplay";
 import DateDisplay from "./DateDisplay";
 import { HStack, Icon, VStack } from "@chakra-ui/react";
+import { FormattedMessage } from "react-intl";
 
 const Clock = () => {
   return (
@@ -11,7 +12,7 @@ const Clock = () => {
       <HStack fontSize="lg" spacing={2} justify="center">
         <Icon as={FaClock} />
         <div>
-          Time in Teyvat (<ServerText />)
+          <FormattedMessage id="timeInTeyvat" /> (<ServerText />)
         </div>
       </HStack>
 

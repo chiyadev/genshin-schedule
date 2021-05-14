@@ -8,15 +8,22 @@ import AccountManageButton from "./AccountManageButton";
 import { User } from "../../../utils/api";
 import ThemeSwitch from "./ThemeSwitch";
 import ResinNotifyMarkSlider from "./ResinNotifyMarkSlider";
+import ResinEstimateModeSwitch from "./ResinEstimateModeSwitch";
 import TaskListCompactSwitch from "./TaskListCompactSwitch";
+import LanguageSwitch from "./LanguageSwitch";
+import { FormattedMessage } from "react-intl";
 
 const SettingsList = ({ user }: { user?: User }) => {
   return (
     <VStack align="stretch" spacing={4}>
-      <Heading size="md">Settings</Heading>
+      <Heading size="md">
+        <FormattedMessage id="settings" />
+      </Heading>
 
       <VStack align="start" spacing={4}>
+        <LanguageSwitch />
         <BackgroundSwitch />
+        <ResinEstimateModeSwitch />
         <ThemeSwitch />
         <TaskListCompactSwitch />
         <ResinNotifyMarkSlider />
