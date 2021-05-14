@@ -1,5 +1,4 @@
 import React, { memo, useMemo } from "react";
-import { chakra } from "@chakra-ui/react";
 import { getCurrencyCap, getCurrencyRate, getCurrencyRecharge } from "../../../db/realms";
 import { useConfig } from "../../../utils/config";
 import { useFormatDuration, useFormatTime, useServerTime } from "../../../utils/time";
@@ -19,18 +18,17 @@ const Estimator = () => {
     return remainingCurrency > 0 && remainingTime;
   }, [currency, energy, rank, time]);
 
-  return (
-    <chakra.div color="gray.500" fontSize="sm">
-      {remainingTime && (
-        <div>
-          {[
-            useFormatDuration(remainingTime, ["day", "hour", "minute"]),
-            `(${useFormatTime(time.plus(remainingTime), ["hour", "minute"])})`,
-          ].join(" ")}
-        </div>
-      )}
-    </chakra.div>
-  );
+  if (remainingTime) {
+    return (
+      <div>
+        {[
+          useFormatDuration(remainingTime, ["day", "hour", "minute"]),
+          `(${useFormatTime(time.plus(remainingTime), ["hour", "minute"])})`,
+        ].join(" ")}
+      </div>
+    );
+  }
+  return null;
 };
 
 export default memo(Estimator);
