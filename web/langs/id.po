@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2021-05-15 09:02+0200\n"
 "PO-Revision-Date: 2021-05-15 09:14+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/"
-"genshin-schedule/web/id/>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/genshin-"
+"schedule/web/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,14 +61,16 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr "Kata sandi"
 
-#: components/ChangelogModal.tsx:173
+#: components/ChangelogModal.tsx:176
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr "Update changelog"
 
 #: components/ClockOffsetWarning.tsx:24
 msgctxt "components.ClockOffsetWarning.85fdee"
-msgid "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} other {in # days}}."
+msgid ""
+"Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} "
+"other {in # days}}."
 msgstr ""
 "Menunjukkan jadwal {offset, plural, =1 {untuk besok} =-1 {untuk kemarin} "
 "other {untuk # hari}}."
@@ -150,7 +152,9 @@ msgstr "Notifikasi"
 
 #: components/Customize/Notifications/Info.tsx:53
 msgctxt "components.Customize.Notifications.Info.63d176"
-msgid "Genshin Schedule has a Discord bot that can send you notifications when your resin recharges or resources respawn."
+msgid ""
+"Genshin Schedule has a Discord bot that can send you notifications when your "
+"resin recharges or resources respawn."
 msgstr ""
 "Genshin Schedule memiliki bot Discord yang dapat mengirimkan Anda notifikasi "
 "ketika resin Anda sudah penuh atau resources sudah respawn."
@@ -167,12 +171,17 @@ msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:60
 msgctxt "components.Customize.Notifications.Info.9da5a0"
-msgid "1. Join the {server}, or {invite} to your server. Either method is fine because you can only interact with the bot via DM anyway, but at least one common server is required for the bot to be able to message you."
+msgid ""
+"1. Join the {server}, or {invite} to your server. Either method is fine "
+"because you can only interact with the bot via DM anyway, but at least one "
+"common server is required for the bot to be able to message you."
 msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:112
 msgctxt "components.Customize.Notifications.Info.a7c1c8"
-msgid "2. Make sure DMs from server members are enabled, otherwise the bot cannot message you."
+msgid ""
+"2. Make sure DMs from server members are enabled, otherwise the bot cannot "
+"message you."
 msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:90
@@ -182,7 +191,9 @@ msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:121
 msgctxt "components.Customize.Notifications.Info.e159bf"
-msgid "3. Copy the following message and send it to the bot via DM. Don't share this message with anyone else, ever!"
+msgid ""
+"3. Copy the following message and send it to the bot via DM. Don't share "
+"this message with anyone else, ever!"
 msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:40
@@ -292,7 +303,8 @@ msgstr "Timpa"
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:60
 msgctxt "components.Customize.SettingsList.ConfigExportButton.a27849"
-msgid "Input is not validated. Corrupted input can make data recovery impossible."
+msgid ""
+"Input is not validated. Corrupted input can make data recovery impossible."
 msgstr ""
 "Tidak ada validasi input. Input yang korup dapat membuat pengembalian data "
 "mustahil."
@@ -429,7 +441,9 @@ msgstr "Bantuan"
 
 #: components/Footer.tsx:34
 msgctxt "components.Footer.865a3c"
-msgid "Data on this website may not always be accurate or up-to-date with in-game changes."
+msgid ""
+"Data on this website may not always be accurate or up-to-date with in-game "
+"changes."
 msgstr ""
 "Data dalam situs ini mungkin tidak selalu akurat atau up-to-date dengan "
 "realita dalam game."
@@ -550,9 +564,9 @@ msgid "Adeptal energy"
 msgstr "Adeptal energy"
 
 #: components/Home/RealmCurrency/index.tsx:30
-msgctxt "components.Home.RealmCurrency.index.613cf4"
-msgid "Realm currency calculator"
-msgstr "Kalkulator realm currency"
+msgctxt "components.Home.RealmCurrency.index.d43d9b"
+msgid "Realm Currency Calculator"
+msgstr "Kalkulator Realm Currency"
 
 #: components/Home/Resin/EstimatorByNotifyMark.tsx:18
 msgctxt "components.Home.Resin.EstimatorByNotifyMark.5921a5"
@@ -590,9 +604,9 @@ msgid "Your resins are full."
 msgstr "Resin Anda sudah penuh."
 
 #: components/Home/Resin/index.tsx:36
-msgctxt "components.Home.Resin.index.96d48b"
-msgid "Resin calculator"
-msgstr "Kalkulator resin"
+msgctxt "components.Home.Resin.index.fe85b2"
+msgid "Resin Calculator"
+msgstr "Kalkulator Resin"
 
 #: components/Home/Tasks/MarkAllDone.tsx:39
 msgctxt "components.Home.Tasks.MarkAllDone.ec7046"
@@ -3052,21 +3066,27 @@ msgstr "Tidak ada notifikasi di antrian notifikasi."
 
 #: pages/index.tsx:100
 msgctxt "pages.index.0b66ba"
-msgid "Tracks open world resources and reminds you as soon as they respawn. There is no limit to the number of pins."
+msgid ""
+"Tracks open world resources and reminds you as soon as they respawn. There "
+"is no limit to the number of pins."
 msgstr ""
 "Melacak resource open-world dan mengingatkan Anda ketika mereka sudah "
 "respawn. Tidak ada batasan dari jumlah tanda."
 
 #: pages/index.tsx:87
 msgctxt "pages.index.0ed193"
-msgid "Tracks your resins and estimates when it will recharge without having to open the game."
+msgid ""
+"Tracks your resins and estimates when it will recharge without having to "
+"open the game."
 msgstr ""
 "Melacak resin dan mengestimasi kapan resin akan penuh tanpa harus membuka "
 "game."
 
 #: pages/index.tsx:127
 msgctxt "pages.index.37b47a"
-msgid "Signing in will enable synchronization across multiple devices. If you do not already have an account, it will be created automatically."
+msgid ""
+"Signing in will enable synchronization across multiple devices. If you do "
+"not already have an account, it will be created automatically."
 msgstr ""
 "Masuk atau membuat akun akan mengaktifkan sinkronisasi dalam gawai yang "
 "berbeda. Apabila Anda tidak memiliki akun, akan dibuat secara otomatis."
@@ -3098,7 +3118,9 @@ msgstr "Kalkulator resin"
 
 #: pages/index.tsx:113
 msgctxt "pages.index.a92dae"
-msgid "Shows which domains can be cleared for ascension materials and artifacts for the day."
+msgid ""
+"Shows which domains can be cleared for ascension materials and artifacts for "
+"the day."
 msgstr ""
 "Menunjukkan domain mana yang dapat dilaksanakan untuk mendapatkan ascension "
 "material dan artefak untuk hari ini."
@@ -3115,7 +3137,9 @@ msgstr "Genshin Schedule"
 
 #: pages/index.tsx:51
 msgctxt "pages.index.fcffbd"
-msgid "Genshin Schedule is a website to help you keep track of time-related game activities in Genshin Impact."
+msgid ""
+"Genshin Schedule is a website to help you keep track of time-related game "
+"activities in Genshin Impact."
 msgstr ""
 "Genshin Schedule adalah sebuah aplikasi web yang digunakan untuk membantu "
 "Anda melacak aktifitas yang berkaitan dengan waktu di Genshin Impact."
@@ -3225,10 +3249,10 @@ msgctxt "utils.time.ee95eb"
 msgid "Day"
 msgstr "Hari"
 
-msgctxt "components.Home.RealmCurrency.index.d43d9b"
-msgid "Realm Currency Calculator"
-msgstr "Kalkulator Realm Currency"
+#~ msgctxt "components.Home.RealmCurrency.index.613cf4"
+#~ msgid "Realm currency calculator"
+#~ msgstr "Kalkulator realm currency"
 
-msgctxt "components.Home.Resin.index.fe85b2"
-msgid "Resin Calculator"
-msgstr "Kalkulator Resin"
+#~ msgctxt "components.Home.Resin.index.96d48b"
+#~ msgid "Resin calculator"
+#~ msgstr "Kalkulator resin"

@@ -59,15 +59,19 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr "密码"
 
-#: components/ChangelogModal.tsx:173
+#: components/ChangelogModal.tsx:176
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr "更新日志"
 
 #: components/ClockOffsetWarning.tsx:24
 msgctxt "components.ClockOffsetWarning.85fdee"
-msgid "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} other {in # days}}."
-msgstr "正在显示 {offset, plural, =1 {明天的计划} =-1 {昨天的计划} other { # 天后的计划}}."
+msgid ""
+"Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} "
+"other {in # days}}."
+msgstr ""
+"正在显示 {offset, plural, =1 {明天的计划} =-1 {昨天的计划} other { # 天后的计"
+"划}}."
 
 #: components/ClockOffsetWarning.tsx:36
 msgctxt "components.ClockOffsetWarning.8e6fec"
@@ -146,7 +150,9 @@ msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:53
 msgctxt "components.Customize.Notifications.Info.63d176"
-msgid "Genshin Schedule has a Discord bot that can send you notifications when your resin recharges or resources respawn."
+msgid ""
+"Genshin Schedule has a Discord bot that can send you notifications when your "
+"resin recharges or resources respawn."
 msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:67
@@ -161,12 +167,17 @@ msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:60
 msgctxt "components.Customize.Notifications.Info.9da5a0"
-msgid "1. Join the {server}, or {invite} to your server. Either method is fine because you can only interact with the bot via DM anyway, but at least one common server is required for the bot to be able to message you."
+msgid ""
+"1. Join the {server}, or {invite} to your server. Either method is fine "
+"because you can only interact with the bot via DM anyway, but at least one "
+"common server is required for the bot to be able to message you."
 msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:112
 msgctxt "components.Customize.Notifications.Info.a7c1c8"
-msgid "2. Make sure DMs from server members are enabled, otherwise the bot cannot message you."
+msgid ""
+"2. Make sure DMs from server members are enabled, otherwise the bot cannot "
+"message you."
 msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:90
@@ -176,7 +187,9 @@ msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:121
 msgctxt "components.Customize.Notifications.Info.e159bf"
-msgid "3. Copy the following message and send it to the bot via DM. Don't share this message with anyone else, ever!"
+msgid ""
+"3. Copy the following message and send it to the bot via DM. Don't share "
+"this message with anyone else, ever!"
 msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:40
@@ -286,7 +299,8 @@ msgstr ""
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:60
 msgctxt "components.Customize.SettingsList.ConfigExportButton.a27849"
-msgid "Input is not validated. Corrupted input can make data recovery impossible."
+msgid ""
+"Input is not validated. Corrupted input can make data recovery impossible."
 msgstr ""
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:109
@@ -421,7 +435,9 @@ msgstr ""
 
 #: components/Footer.tsx:34
 msgctxt "components.Footer.865a3c"
-msgid "Data on this website may not always be accurate or up-to-date with in-game changes."
+msgid ""
+"Data on this website may not always be accurate or up-to-date with in-game "
+"changes."
 msgstr ""
 
 #: components/Footer.tsx:25
@@ -3041,17 +3057,23 @@ msgstr ""
 
 #: pages/index.tsx:100
 msgctxt "pages.index.0b66ba"
-msgid "Tracks open world resources and reminds you as soon as they respawn. There is no limit to the number of pins."
+msgid ""
+"Tracks open world resources and reminds you as soon as they respawn. There "
+"is no limit to the number of pins."
 msgstr ""
 
 #: pages/index.tsx:87
 msgctxt "pages.index.0ed193"
-msgid "Tracks your resins and estimates when it will recharge without having to open the game."
+msgid ""
+"Tracks your resins and estimates when it will recharge without having to "
+"open the game."
 msgstr ""
 
 #: pages/index.tsx:127
 msgctxt "pages.index.37b47a"
-msgid "Signing in will enable synchronization across multiple devices. If you do not already have an account, it will be created automatically."
+msgid ""
+"Signing in will enable synchronization across multiple devices. If you do "
+"not already have an account, it will be created automatically."
 msgstr ""
 
 #: pages/index.tsx:124
@@ -3081,7 +3103,9 @@ msgstr ""
 
 #: pages/index.tsx:113
 msgctxt "pages.index.a92dae"
-msgid "Shows which domains can be cleared for ascension materials and artifacts for the day."
+msgid ""
+"Shows which domains can be cleared for ascension materials and artifacts for "
+"the day."
 msgstr ""
 
 #: pages/index.tsx:70
@@ -3096,7 +3120,9 @@ msgstr ""
 
 #: pages/index.tsx:51
 msgctxt "pages.index.fcffbd"
-msgid "Genshin Schedule is a website to help you keep track of time-related game activities in Genshin Impact."
+msgid ""
+"Genshin Schedule is a website to help you keep track of time-related game "
+"activities in Genshin Impact."
 msgstr ""
 
 #: utils/time.tsx:202
