@@ -47,3 +47,7 @@ function idInterpolationPattern(path) {
 
   await writeFile("langs/en_US.pot", po.toString());
 })();
+
+module.exports = {
+  idInterpolationPattern,
+};
