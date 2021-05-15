@@ -15,10 +15,13 @@ import {
 import { FaBullhorn } from "react-icons/fa";
 import { FormattedMessage } from "react-intl";
 
-const LatestChangelog = 25;
+const LatestChangelog = 26;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={26} date="2021/05/15">
+      <ChangelogItem github={69}>Added Indonesian localization. Menambahkan terjemahan bahasa Indonesia.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={25} date="2021/05/15">
       <ChangelogItem github={64}>Improved translation workflow based on GNU gettext tools.</ChangelogItem>
     </ChangelogSection>,
