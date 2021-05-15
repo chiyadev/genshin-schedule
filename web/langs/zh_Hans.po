@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
-"PO-Revision-Date: 2021-05-15 09:57+0000\n"
+"PO-Revision-Date: 2021-05-15 10:41+0000\n"
 "Last-Translator: Golden_Water <2439577268@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
@@ -42,67 +42,67 @@ msgstr "切勿在与原神有关的网站上使用你的米哈游账号密码."
 #: components/Auth/UserSignIn.tsx:133
 msgctxt "components.Auth.UserSignIn.93eb72"
 msgid "All data will be stored locally on the browser."
-msgstr ""
+msgstr "所有数据都将本地的存储在浏览器中."
 
 #: components/Auth/UserSignIn.tsx:97
 msgctxt "components.Auth.UserSignIn.bc7fa7"
 msgid "Read more."
-msgstr ""
+msgstr "了解更多."
 
 #: components/Auth/UserSignIn.tsx:130
 msgctxt "components.Auth.UserSignIn.c12651"
 msgid "Submit"
-msgstr ""
+msgstr "确定"
 
 #: components/Auth/UserSignIn.tsx:70
 msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
-msgstr ""
+msgstr "密码"
 
 #: components/ChangelogModal.tsx:173
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
-msgstr ""
+msgstr "更新日志"
 
 #: components/ClockOffsetWarning.tsx:24
 msgctxt "components.ClockOffsetWarning.85fdee"
 msgid "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} other {in # days}}."
-msgstr ""
+msgstr "正在显示 {offset, plural, =1 {明天的计划} =-1 {昨天的计划} other { # 天后的计划}}."
 
 #: components/ClockOffsetWarning.tsx:36
 msgctxt "components.ClockOffsetWarning.8e6fec"
 msgid "Reset"
-msgstr ""
+msgstr "重置"
 
 #: components/Customize/ArtifactInfo/NoteInput.tsx:24
 msgctxt "components.Customize.ArtifactInfo.NoteInput.ab582f"
 msgid "e.g. Lumine's artifact"
-msgstr ""
+msgstr "例: 莹的圣遗物"
 
 #: components/Customize/ArtifactInfo/NoteInput.tsx:17
 msgctxt "components.Customize.ArtifactInfo.NoteInput.c6a1b4"
 msgid "Additional notes"
-msgstr ""
+msgstr "补充说明"
 
 #: components/Customize/ArtifactInfo/Toggle.tsx:23
 msgctxt "components.Customize.ArtifactInfo.Toggle.cce039"
 msgid "Show on schedule"
-msgstr ""
+msgstr "在计划中显示"
 
 #: components/Customize/ArtifactInfo/Toggle.tsx:27
 msgctxt "components.Customize.ArtifactInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
-msgstr ""
+msgstr "计划中的秘境将会在能获取指定物品时显示."
 
 #: components/Customize/ArtifactList/index.tsx:16
 msgctxt "components.Customize.ArtifactList.index.796e5e"
 msgid "Artifacts"
-msgstr ""
+msgstr "圣遗物"
 
 #: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:55
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
-msgstr ""
+msgstr "添加至任务"
 
 #: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:45
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.b4b55a"
