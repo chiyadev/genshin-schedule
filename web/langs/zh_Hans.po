@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
-"PO-Revision-Date: 2021-05-15 16:18+0000\n"
-"Last-Translator: Golden_Water <2439577268@qq.com>\n"
+"PO-Revision-Date: 2021-05-15 23:45+0000\n"
+"Last-Translator: Richard Yu <yurichard3839@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -813,6 +813,7 @@ msgid "Toggle list overlay"
 msgstr "切换列表显示"
 
 #: components/ShortcutHelp.tsx:39
+#, fuzzy
 msgctxt "components.ShortcutHelp.c886e7"
 msgid "esc"
 msgstr "ESC"
@@ -1143,9 +1144,10 @@ msgid "Eula"
 msgstr "优菈"
 
 #: db/characters.ts:341
+#, fuzzy
 msgctxt "db.characters.579564"
 msgid "Ayaka"
-msgstr ""
+msgstr "神里绫华"
 
 #: db/characters.ts:71
 msgctxt "db.characters.584d1b"
@@ -1550,7 +1552,7 @@ msgstr ""
 #: db/domains.ts:49
 msgctxt "db.domains.011253"
 msgid "Hidden Palace of Lianshan Formula"
-msgstr ""
+msgstr "震雷连山密宫"
 
 #: db/domains.ts:91
 msgctxt "db.domains.0cfa31"
@@ -2375,22 +2377,23 @@ msgstr ""
 #: db/regions.ts:116
 msgctxt "db.regions.06cea1"
 msgid "Inazuma"
-msgstr ""
+msgstr "稻妻"
 
 #: db/regions.ts:124
+#, fuzzy
 msgctxt "db.regions.38ab8d"
 msgid "Snezhnaya"
-msgstr ""
+msgstr "至冬"
 
 #: db/regions.ts:65
 msgctxt "db.regions.5a37ea"
 msgid "Mondstadt"
-msgstr ""
+msgstr "蒙德"
 
 #: db/regions.ts:99
 msgctxt "db.regions.691c58"
 msgid "Liyue"
-msgstr ""
+msgstr "璃月"
 
 #: db/talentMaterials.ts:106
 msgctxt "db.talentMaterials.03c76b"
@@ -3060,7 +3063,7 @@ msgstr ""
 #: pages/home/notifications/queue.tsx:54
 msgctxt "pages.home.notifications.queue.fcf2e1"
 msgid "There are no notifications in queue."
-msgstr ""
+msgstr "通知队列为空"
 
 #: pages/index.tsx:100
 msgctxt "pages.index.0b66ba"
@@ -3081,7 +3084,7 @@ msgctxt "pages.index.37b47a"
 msgid ""
 "Signing in will enable synchronization across multiple devices. If you do "
 "not already have an account, it will be created automatically."
-msgstr ""
+msgstr "登录后能在多个设备间同步数据. 如果你还没有账号，将会自动注册."
 
 #: pages/index.tsx:124
 msgctxt "pages.index.49026d"
@@ -3128,11 +3131,12 @@ msgid "Genshin Schedule"
 msgstr ""
 
 #: pages/index.tsx:51
+#, fuzzy
 msgctxt "pages.index.fcffbd"
 msgid ""
 "Genshin Schedule is a website to help you keep track of time-related game "
 "activities in Genshin Impact."
-msgstr ""
+msgstr "Genshin Schedule 是一个帮你跟踪原神中时间相关的游戏活动的网站"
 
 #: utils/time.tsx:202
 msgctxt "utils.time.19685b"
