@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
-"PO-Revision-Date: 2021-05-15 13:49+0000\n"
-"Last-Translator: phos <phosphene47@chiya.dev>\n"
+"PO-Revision-Date: 2021-05-15 16:18+0000\n"
+"Last-Translator: Richard Yu <yurichard3839@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -40,6 +40,7 @@ msgid "Never reuse your miHoYo password on Genshin-related websites."
 msgstr "切勿在与原神有关的网站上使用你的 米哈游 账号密码."
 
 #: components/Auth/UserSignIn.tsx:133
+#, fuzzy
 msgctxt "components.Auth.UserSignIn.93eb72"
 msgid "All data will be stored locally on the browser."
 msgstr "所有数据都将本地的存储在浏览器中."
@@ -50,6 +51,7 @@ msgid "Read more."
 msgstr "了解更多."
 
 #: components/Auth/UserSignIn.tsx:130
+#, fuzzy
 msgctxt "components.Auth.UserSignIn.c12651"
 msgid "Submit"
 msgstr "确定"
@@ -65,6 +67,7 @@ msgid "Update changelog"
 msgstr "更新日志"
 
 #: components/ClockOffsetWarning.tsx:24
+#, fuzzy
 msgctxt "components.ClockOffsetWarning.85fdee"
 msgid ""
 "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} "
@@ -112,6 +115,7 @@ msgid "ascension material for {name}"
 msgstr "{name} 的突破素材"
 
 #: components/Customize/CharacterInfo/NoteInput.tsx:24
+#, fuzzy
 msgctxt "components.Customize.CharacterInfo.NoteInput.1cfa1e"
 msgid "e.g. Anemo traveler"
 msgstr "例: 旅行者"
@@ -349,6 +353,7 @@ msgid "Time steps (2h, 4h, 8h…)"
 msgstr "以时间分段 (2h, 4h, 8h…)"
 
 #: components/Customize/SettingsList/ResinNotifyMarkSlider.tsx:20
+#, fuzzy
 msgctxt "components.Customize.SettingsList.ResinNotifyMarkSlider.b9f3be"
 msgid "Send resin notification at"
 msgstr "需要发送树脂通知的数量"
@@ -451,6 +456,7 @@ msgid "GitHub"
 msgstr "GitHub"
 
 #: components/Footer.tsx:12
+#, fuzzy
 msgctxt "components.Footer.d541af"
 msgid "{app} is not affiliated with or endorsed by {mihoyo}."
 msgstr "{app} 不是 {mihoyo} 的附属, 也没有被 {mihoyo} 认可."
@@ -1089,47 +1095,47 @@ msgstr ""
 #: db/characters.ts:287
 msgctxt "db.characters.07f6ca"
 msgid "Zhongli"
-msgstr ""
+msgstr "钟离"
 
 #: db/characters.ts:134
 msgctxt "db.characters.0e89af"
 msgid "Fischl"
-msgstr ""
+msgstr "菲谢尔"
 
 #: db/characters.ts:296
 msgctxt "db.characters.17ba95"
 msgid "Xinyan"
-msgstr ""
+msgstr "辛焱"
 
 #: db/characters.ts:350
 msgctxt "db.characters.18d80a"
 msgid "Xiao"
-msgstr ""
+msgstr "魈"
 
 #: db/characters.ts:233
 msgctxt "db.characters.1c8781"
 msgid "Venti"
-msgstr ""
+msgstr "温迪"
 
 #: db/characters.ts:305
 msgctxt "db.characters.2fbbd1"
 msgid "Yanfei"
-msgstr ""
+msgstr "烟绯"
 
 #: db/characters.ts:242
 msgctxt "db.characters.35f4f4"
 msgid "Xiangling"
-msgstr ""
+msgstr "香菱"
 
 #: db/characters.ts:224
 msgctxt "db.characters.3988a8"
 msgid "Sucrose"
-msgstr ""
+msgstr "砂糖"
 
 #: db/characters.ts:170
 msgctxt "db.characters.42ddab"
 msgid "Lisa"
-msgstr ""
+msgstr "丽莎"
 
 #: db/characters.ts:314
 msgctxt "db.characters.47f14e"
@@ -1144,32 +1150,32 @@ msgstr ""
 #: db/characters.ts:71
 msgctxt "db.characters.584d1b"
 msgid "Traveler (Geo)"
-msgstr ""
+msgstr "旅行者 (岩)"
 
 #: db/characters.ts:215
 msgctxt "db.characters.5934e2"
 msgid "Razor"
-msgstr ""
+msgstr "雷泽"
 
 #: db/characters.ts:188
 msgctxt "db.characters.5e045b"
 msgid "Ningguang"
-msgstr ""
+msgstr "凝光"
 
 #: db/characters.ts:98
 msgctxt "db.characters.653885"
 msgid "Beidou"
-msgstr ""
+msgstr "北斗"
 
 #: db/characters.ts:116
 msgctxt "db.characters.7267c2"
 msgid "Chongyun"
-msgstr ""
+msgstr "重云"
 
 #: db/characters.ts:197
 msgctxt "db.characters.7ce9c6"
 msgid "Noelle"
-msgstr ""
+msgstr "诺艾尔"
 
 #: db/characters.ts:143
 msgctxt "db.characters.7f3adf"
@@ -1239,7 +1245,7 @@ msgstr ""
 #: db/characters.ts:62
 msgctxt "db.characters.d09c64"
 msgid "Traveler (Anemo)"
-msgstr ""
+msgstr "旅行者 (风)"
 
 #: db/characters.ts:161
 msgctxt "db.characters.d9c480"
@@ -3034,12 +3040,12 @@ msgstr ""
 #: pages/home/notifications/queue.tsx:45
 msgctxt "pages.home.notifications.queue.67684b"
 msgid "Notification queue"
-msgstr ""
+msgstr "通知队列"
 
 #: pages/home/notifications/queue.tsx:113
 msgctxt "pages.home.notifications.queue.76b25d"
 msgid "Send now"
-msgstr ""
+msgstr "立即发送"
 
 #: pages/home/notifications/queue.tsx:129
 msgctxt "pages.home.notifications.queue.87f26c"
@@ -3080,27 +3086,29 @@ msgstr ""
 #: pages/index.tsx:124
 msgctxt "pages.index.49026d"
 msgid "Sign in"
-msgstr ""
+msgstr "登录"
 
 #: pages/index.tsx:77
 msgctxt "pages.index.657a74"
 msgid "Features"
-msgstr ""
+msgstr "功能"
 
 #: pages/index.tsx:97
+#, fuzzy
 msgctxt "pages.index.755c57"
 msgid "Task scheduler"
-msgstr ""
+msgstr "任务计划"
 
 #: pages/index.tsx:110
+#, fuzzy
 msgctxt "pages.index.79dc9c"
 msgid "Domain view"
-msgstr ""
+msgstr "副本信息"
 
 #: pages/index.tsx:84
 msgctxt "pages.index.96d48b"
 msgid "Resin calculator"
-msgstr ""
+msgstr "树脂计算器"
 
 #: pages/index.tsx:113
 msgctxt "pages.index.a92dae"
@@ -3129,104 +3137,104 @@ msgstr ""
 #: utils/time.tsx:202
 msgctxt "utils.time.19685b"
 msgid "Millisecond"
-msgstr ""
+msgstr "毫秒"
 
 #: utils/time.tsx:169
 msgctxt "utils.time.1eb30e"
 msgid "{value, plural, one {# millisecond} other {# milliseconds}}"
-msgstr ""
+msgstr "{value} 毫秒"
 
 #: utils/time.tsx:190
 msgctxt "utils.time.205a35"
 msgid "Year"
-msgstr ""
+msgstr "年"
 
 #: utils/time.tsx:185
 msgctxt "utils.time.42b8a1"
 msgid "Friday"
-msgstr ""
+msgstr "星期五"
 
 #: utils/time.tsx:159
 msgctxt "utils.time.4ee319"
 msgid "{value, plural, one {# week} other {# weeks}}"
-msgstr ""
+msgstr "{value} 周"
 
 #: utils/time.tsx:157
 msgctxt "utils.time.577d30"
 msgid "{value, plural, one {# year} other {# years}}"
-msgstr ""
+msgstr "{value} 年"
 
 #: utils/time.tsx:187
 msgctxt "utils.time.58c347"
 msgid "Saturday"
-msgstr ""
+msgstr "星期六"
 
 #: utils/time.tsx:179
 msgctxt "utils.time.600818"
 msgid "Tuesday"
-msgstr ""
+msgstr "星期二"
 
 #: utils/time.tsx:177
 msgctxt "utils.time.6b332c"
 msgid "Monday"
-msgstr ""
+msgstr "星期一"
 
 #: utils/time.tsx:163
 msgctxt "utils.time.6c080b"
 msgid "{value, plural, one {# hour} other {# hours}}"
-msgstr ""
+msgstr "{value} 小时"
 
 #: utils/time.tsx:196
 msgctxt "utils.time.6f5d56"
 msgid "Hour"
-msgstr ""
+msgstr "小时"
 
 #: utils/time.tsx:181
 msgctxt "utils.time.9716e5"
 msgid "Wednesday"
-msgstr ""
+msgstr "星期三"
 
 #: utils/time.tsx:175
 msgctxt "utils.time.989474"
 msgid "Sunday"
-msgstr ""
+msgstr "星期天"
 
 #: utils/time.tsx:161
 msgctxt "utils.time.9febbe"
 msgid "{value, plural, one {# day} other {# days}}"
-msgstr ""
+msgstr "{value} 天"
 
 #: utils/time.tsx:183
 msgctxt "utils.time.a80854"
 msgid "Thursday"
-msgstr ""
+msgstr "星期四"
 
 #: utils/time.tsx:192
 msgctxt "utils.time.b1dda2"
 msgid "Week"
-msgstr ""
+msgstr "周"
 
 #: utils/time.tsx:200
 msgctxt "utils.time.b71604"
 msgid "Second"
-msgstr ""
+msgstr "秒"
 
 #: utils/time.tsx:165
 msgctxt "utils.time.c32d7f"
 msgid "{value, plural, one {# minute} other {# minutes}}"
-msgstr ""
+msgstr "{value} 分钟"
 
 #: utils/time.tsx:167
 msgctxt "utils.time.c67dcc"
 msgid "{value, plural, one {# second} other {# seconds}}"
-msgstr ""
+msgstr "{value} 秒"
 
 #: utils/time.tsx:198
 msgctxt "utils.time.c743e7"
 msgid "Minute"
-msgstr ""
+msgstr "分钟"
 
 #: utils/time.tsx:194
 msgctxt "utils.time.ee95eb"
 msgid "Day"
-msgstr ""
+msgstr "天"
