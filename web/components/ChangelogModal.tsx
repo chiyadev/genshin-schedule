@@ -19,7 +19,7 @@ const LatestChangelog = 24;
 
 function buildChangelog() {
   return [
-    <ChangelogSection key={24}>
+    <ChangelogSection key={24} date="2021/05/04">
       <ChangelogItem github={63}>Added a calculator for realm currency.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={23} date="2021/05/01">

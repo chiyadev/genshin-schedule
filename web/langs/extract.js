@@ -36,12 +36,5 @@ const IGNORE = ["node_modules/**/*", ".next/**/*", "*.d.ts"];
     po.items.push(item);
   }
 
-  for (const [id, string] of Object.entries(require("./static.json"))) {
-    const item = new PO.Item();
-    item.msgid = string;
-    item.msgctxt = id;
-    po.items.push(item);
-  }
-
   await writeFile("langs/en-US.pot", po.toString());
 })();

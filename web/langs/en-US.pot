@@ -132,8 +132,8 @@ msgid "Genshin Schedule has a Discord bot that can send you notifications when y
 msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:40
-msgctxt "components.Customize.Notifications.Info.67684b"
-msgid "Notification queue"
+msgctxt "components.Customize.Notifications.Info.e180cd"
+msgid "Queue"
 msgstr ""
 
 #: components/Customize/Notifications/MessageDisplay.tsx:34
@@ -406,12 +406,12 @@ msgctxt "components.Header.e3e15c"
 msgid "Genshin Schedule"
 msgstr ""
 
-#: components/Home/Clock/DateDisplay.tsx:33
+#: components/Home/Clock/DateDisplay.tsx:34
 msgctxt "components.Home.Clock.DateDisplay.d1826b"
 msgid "{value, plural, one {# resin} other {# resins}}"
 msgstr ""
 
-#: components/Home/Clock/DateDisplay.tsx:25
+#: components/Home/Clock/DateDisplay.tsx:26
 msgctxt "components.Home.Clock.DateDisplay.de212c"
 msgid "{duration} until reset"
 msgstr ""
@@ -441,6 +441,21 @@ msgctxt "components.Home.DomainView.DomainDisplay.0388b5"
 msgid "{category}, {region}"
 msgstr ""
 
+#: components/Home/DomainView/FilterButtons.tsx:28
+msgctxt "components.Home.DomainView.FilterButtons.4477a1"
+msgid "Weapons"
+msgstr ""
+
+#: components/Home/DomainView/FilterButtons.tsx:22
+msgctxt "components.Home.DomainView.FilterButtons.4e372c"
+msgid "Characters"
+msgstr ""
+
+#: components/Home/DomainView/FilterButtons.tsx:34
+msgctxt "components.Home.DomainView.FilterButtons.796e5e"
+msgid "Artifacts"
+msgstr ""
+
 #: components/Home/DomainView/index.tsx:247
 msgctxt "components.Home.DomainView.index.41dc3d"
 msgid "No domains for today. Maybe try some {link}?"
@@ -461,22 +476,22 @@ msgctxt "components.Home.RealmCurrency.ClearButton.fc60a8"
 msgid "Clear"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:49
+#: components/Home/RealmCurrency/index.tsx:53
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
 msgid "Trust rank"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:56
+#: components/Home/RealmCurrency/index.tsx:60
 msgctxt "components.Home.RealmCurrency.index.27268e"
 msgid "Realm currency"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:33
+#: components/Home/RealmCurrency/index.tsx:37
 msgctxt "components.Home.RealmCurrency.index.33dd2d"
 msgid "Adeptal energy"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:28
+#: components/Home/RealmCurrency/index.tsx:30
 msgctxt "components.Home.RealmCurrency.index.613cf4"
 msgid "Realm currency calculator"
 msgstr ""
@@ -601,7 +616,7 @@ msgctxt "components.Map.TaskMarker.InfoPage.HideCheck.fdf592"
 msgid "Hide temporarily"
 msgstr ""
 
-#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:66
+#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:67
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.52cf48"
 msgid "{time}AM"
 msgstr ""
@@ -936,86 +951,107 @@ msgctxt "pages.index.fcffbd"
 msgid "Genshin Schedule is a website to help you keep track of time-related game activities in Genshin Impact."
 msgstr ""
 
-msgctxt "duration.year"
-msgid "{value, plural, one {# year} other {# years}}"
+#: utils/time.tsx:202
+msgctxt "utils.time.19685b"
+msgid "Millisecond"
 msgstr ""
 
-msgctxt "duration.week"
-msgid "{value, plural, one {# week} other {# weeks}}"
-msgstr ""
-
-msgctxt "duration.day"
-msgid "{value, plural, one {# day} other {# days}}"
-msgstr ""
-
-msgctxt "duration.hour"
-msgid "{value, plural, one {# hour} other {# hours}}"
-msgstr ""
-
-msgctxt "duration.minute"
-msgid "{value, plural, one {# minute} other {# minutes}}"
-msgstr ""
-
-msgctxt "duration.second"
-msgid "{value, plural, one {# second} other {# seconds}}"
-msgstr ""
-
-msgctxt "duration.millisecond"
+#: utils/time.tsx:169
+msgctxt "utils.time.1eb30e"
 msgid "{value, plural, one {# millisecond} other {# milliseconds}}"
 msgstr ""
 
-msgctxt "day.sunday"
-msgid "Sunday"
-msgstr ""
-
-msgctxt "day.monday"
-msgid "Monday"
-msgstr ""
-
-msgctxt "day.tuesday"
-msgid "Tuesday"
-msgstr ""
-
-msgctxt "day.wednesday"
-msgid "Wednesday"
-msgstr ""
-
-msgctxt "day.thursday"
-msgid "Thursday"
-msgstr ""
-
-msgctxt "day.friday"
-msgid "Friday"
-msgstr ""
-
-msgctxt "day.saturday"
-msgid "Saturday"
-msgstr ""
-
-msgctxt "unit.year"
+#: utils/time.tsx:190
+msgctxt "utils.time.205a35"
 msgid "Year"
 msgstr ""
 
-msgctxt "unit.week"
-msgid "Week"
+#: utils/time.tsx:185
+msgctxt "utils.time.42b8a1"
+msgid "Friday"
 msgstr ""
 
-msgctxt "unit.day"
-msgid "Day"
+#: utils/time.tsx:159
+msgctxt "utils.time.4ee319"
+msgid "{value, plural, one {# week} other {# weeks}}"
 msgstr ""
 
-msgctxt "unit.hour"
+#: utils/time.tsx:157
+msgctxt "utils.time.577d30"
+msgid "{value, plural, one {# year} other {# years}}"
+msgstr ""
+
+#: utils/time.tsx:187
+msgctxt "utils.time.58c347"
+msgid "Saturday"
+msgstr ""
+
+#: utils/time.tsx:179
+msgctxt "utils.time.600818"
+msgid "Tuesday"
+msgstr ""
+
+#: utils/time.tsx:177
+msgctxt "utils.time.6b332c"
+msgid "Monday"
+msgstr ""
+
+#: utils/time.tsx:163
+msgctxt "utils.time.6c080b"
+msgid "{value, plural, one {# hour} other {# hours}}"
+msgstr ""
+
+#: utils/time.tsx:196
+msgctxt "utils.time.6f5d56"
 msgid "Hour"
 msgstr ""
 
-msgctxt "unit.minute"
-msgid "Minute"
+#: utils/time.tsx:181
+msgctxt "utils.time.9716e5"
+msgid "Wednesday"
 msgstr ""
 
-msgctxt "unit.second"
+#: utils/time.tsx:175
+msgctxt "utils.time.989474"
+msgid "Sunday"
+msgstr ""
+
+#: utils/time.tsx:161
+msgctxt "utils.time.9febbe"
+msgid "{value, plural, one {# day} other {# days}}"
+msgstr ""
+
+#: utils/time.tsx:183
+msgctxt "utils.time.a80854"
+msgid "Thursday"
+msgstr ""
+
+#: utils/time.tsx:192
+msgctxt "utils.time.b1dda2"
+msgid "Week"
+msgstr ""
+
+#: utils/time.tsx:200
+msgctxt "utils.time.b71604"
 msgid "Second"
 msgstr ""
 
-msgctxt "unit.millisecond"
-msgid "Millisecond"
+#: utils/time.tsx:165
+msgctxt "utils.time.c32d7f"
+msgid "{value, plural, one {# minute} other {# minutes}}"
+msgstr ""
+
+#: utils/time.tsx:167
+msgctxt "utils.time.c67dcc"
+msgid "{value, plural, one {# second} other {# seconds}}"
+msgstr ""
+
+#: utils/time.tsx:198
+msgctxt "utils.time.c743e7"
+msgid "Minute"
+msgstr ""
+
+#: utils/time.tsx:194
+msgctxt "utils.time.ee95eb"
+msgid "Day"
 msgstr ""

@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, ReactNode } from "react";
 import { Button, ButtonGroup, useColorModeValue } from "@chakra-ui/react";
 import { Tooltip } from "@chakra-ui/tooltip";
 import { trackEvent } from "../../../utils/umami";
@@ -12,23 +12,45 @@ import {
   WhiteCharacter,
   WhiteWeapon,
 } from "../../../assets";
-import { FormattedMessage as FormattedMessageId } from "react-intl";
+import { FormattedMessage } from "react-intl";
 
 const FilterButtons = () => {
   return (
     <ButtonGroup isAttached>
-      <FilterButton type="character" image={useColorModeValue(BlackCharacter, WhiteCharacter)} />
-      <FilterButton type="weapon" image={useColorModeValue(BlackWeapon, WhiteWeapon)} />
-      <FilterButton type="artifact" image={useColorModeValue(BlackArtifact, WhiteArtifact)} />
+      <FilterButton
+        type="character"
+        label={<FormattedMessage defaultMessage="Characters" />}
+        image={useColorModeValue(BlackCharacter, WhiteCharacter)}
+      />
+
+      <FilterButton
+        type="weapon"
+        label={<FormattedMessage defaultMessage="Weapons" />}
+        image={useColorModeValue(BlackWeapon, WhiteWeapon)}
+      />
+
+      <FilterButton
+        type="artifact"
+        label={<FormattedMessage defaultMessage="Artifacts" />}
+        image={useColorModeValue(BlackArtifact, WhiteArtifact)}
+      />
     </ButtonGroup>
   );
 };
 
-const FilterButton = ({ type, image }: { type: Config["domainFilters"][0]; image: string }) => {
+const FilterButton = ({
+  type,
+  label,
+  image,
+}: {
+  type: Config["domainFilters"][0];
+  label: ReactNode;
+  image: string;
+}) => {
   const [filters, setFilters] = useConfig("domainFilters");
 
   return (
-    <Tooltip label={<FormattedMessageId id={type} />}>
+    <Tooltip label={label}>
       <Button
         as="button"
         variant="ghost"

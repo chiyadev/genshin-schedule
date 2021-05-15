@@ -1,5 +1,5 @@
 import React, { Dispatch, memo, useRef, useState } from "react";
-import { getAccuratestUnit, getUnitMs, ServerResetHour, TimeUnit } from "../../../../utils/time";
+import { getAccuratestUnit, getUnitMs, ServerResetHour, TimeUnit, useFormatUnit } from "../../../../utils/time";
 import { FaSyncAlt } from "react-icons/fa";
 import { chakra, HStack, Icon, Input, Select } from "@chakra-ui/react";
 import { Task } from "../../../../utils/config";
@@ -7,7 +7,7 @@ import { Duration } from "luxon";
 import { FormattedMessage, useIntl } from "react-intl";
 
 const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch<Task["refreshTime"]> }) => {
-  const { formatMessage, formatMessage: formatMessageId } = useIntl();
+  const { formatMessage } = useIntl();
   const ref = useRef<HTMLInputElement>(null);
   const [unit, setUnit] = useState<TimeUnit>(() => getAccuratestUnit(Duration.fromMillis(value)));
   const displayValue = Math.floor(value / getUnitMs(unit));
@@ -58,12 +58,13 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch
       >
         {["week", "day", "hour", "minute"].map((unit) => (
           <option key={unit} value={unit}>
-            {formatMessageId({ id: `unit.${unit}` }, { value: displayValue })}
+            {useFormatUnit(`unit.${unit}`)}
           </option>
         ))}
 
         <option value="reset">
-          {formatMessage({ defaultMessage: "Server reset" })} ({formatMessage({ defaultMessage: "{time}AM" }, { time: ServerResetHour })})
+          {formatMessage({ defaultMessage: "Server reset" })} (
+          {formatMessage({ defaultMessage: "{time}AM" }, { time: ServerResetHour })})
         </option>
       </Select>
     </HStack>

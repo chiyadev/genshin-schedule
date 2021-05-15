@@ -121,7 +121,6 @@ export function useFormatTime(time: DateTime, units: Exclude<TimeUnit, "year" | 
 }
 
 export function useFormatDuration(duration: Duration, units = TimeUnits) {
-  const { formatMessage: formatMessageId } = useIntl();
   const parts: string[] = [];
 
   for (const unit of units) {
@@ -135,17 +134,71 @@ export function useFormatDuration(duration: Duration, units = TimeUnits) {
 
     value = Math.floor(value);
 
-    if (value) {
-      parts.push(formatMessageId({ id: `duration.${unit}` }, { value }));
-    }
+    const str = useFormatUnit(`duration.${unit}`, value);
+    value && str && parts.push(str);
   }
 
   return parts.join(" ");
 }
 
 export function useFormatDurationPart(duration: Duration, unit: TimeUnit) {
-  const { formatMessage: formatMessageId } = useIntl();
-  const value = Math.floor(duration.as(unit));
+  return useFormatUnit(`duration.${unit}`, Math.floor(duration.as(unit)));
+}
 
-  return formatMessageId({ id: `duration.${unit}` }, { value });
+export const FormattedUnit = ({ id, value }: { id: string; value?: number }) => {
+  return <>{useFormatUnit(id, value)}</>;
+};
+
+export function useFormatUnit(name: string, value = 1) {
+  const { formatMessage } = useIntl();
+
+  switch (name) {
+    case "duration.year":
+      return formatMessage({ defaultMessage: "{value, plural, one {# year} other {# years}}" }, { value });
+    case "duration.week":
+      return formatMessage({ defaultMessage: "{value, plural, one {# week} other {# weeks}}" }, { value });
+    case "duration.day":
+      return formatMessage({ defaultMessage: "{value, plural, one {# day} other {# days}}" }, { value });
+    case "duration.hour":
+      return formatMessage({ defaultMessage: "{value, plural, one {# hour} other {# hours}}" }, { value });
+    case "duration.minute":
+      return formatMessage({ defaultMessage: "{value, plural, one {# minute} other {# minutes}}" }, { value });
+    case "duration.second":
+      return formatMessage({ defaultMessage: "{value, plural, one {# second} other {# seconds}}" }, { value });
+    case "duration.millisecond":
+      return formatMessage(
+        { defaultMessage: "{value, plural, one {# millisecond} other {# milliseconds}}" },
+        { value }
+      );
+
+    case "day.sunday":
+      return formatMessage({ defaultMessage: "Sunday" });
+    case "day.monday":
+      return formatMessage({ defaultMessage: "Monday" });
+    case "day.tuesday":
+      return formatMessage({ defaultMessage: "Tuesday" });
+    case "day.wednesday":
+      return formatMessage({ defaultMessage: "Wednesday" });
+    case "day.thursday":
+      return formatMessage({ defaultMessage: "Thursday" });
+    case "day.friday":
+      return formatMessage({ defaultMessage: "Friday" });
+    case "day.saturday":
+      return formatMessage({ defaultMessage: "Saturday" });
+
+    case "unit.year":
+      return formatMessage({ defaultMessage: "Year" });
+    case "unit.week":
+      return formatMessage({ defaultMessage: "Week" });
+    case "unit.day":
+      return formatMessage({ defaultMessage: "Day" });
+    case "unit.hour":
+      return formatMessage({ defaultMessage: "Hour" });
+    case "unit.minute":
+      return formatMessage({ defaultMessage: "Minute" });
+    case "unit.second":
+      return formatMessage({ defaultMessage: "Second" });
+    case "unit.millisecond":
+      return formatMessage({ defaultMessage: "Millisecond" });
+  }
 }

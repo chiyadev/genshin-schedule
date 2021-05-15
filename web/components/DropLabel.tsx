@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { DomainDropSet, DomainDropSets } from "../db/domainDropSets";
 import { Domains } from "../db/domains";
-import { Weekday, Weekdays } from "../utils/time";
+import { FormattedUnit, Weekday, Weekdays } from "../utils/time";
 import { Domain } from "../assets";
 import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
@@ -52,7 +52,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
                       : Weekdays.filter((d) => days.has(d)).map((day, i) => (
                           <span key={day}>
                             {!!i && ", "}
-                            <FormattedMessageId id={`day.${day}`} />
+                            <FormattedUnit id={`day.${day}`} />
                           </span>
                         )),
                 }}
