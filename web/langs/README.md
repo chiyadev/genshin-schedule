@@ -1,3 +1,9 @@
+# NOTE
+
+> This document is outdated; we now use [GNU gettext](https://www.gnu.org/software/gettext/manual/gettext.html) `.po` and `.pot`-based translation workflow instead of editing raw JSON files. (PR [#64](https://github.com/chiyadev/genshin-schedule/pull/64))
+>
+> Todo: update this tutorial
+
 # Localization
 
 This folder contains localization files that dictate how text is displayed on the website for a specific language.
@@ -48,7 +54,8 @@ For example, if you are translating `Klee`, the field for her does not exist in 
 
 ```json
 {
-  "Klee": "Klee" // implied
+  "Klee": "Klee"
+  // implied
 }
 ```
 
@@ -64,4 +71,4 @@ You can take advantage of this behavior to translate English item names to non-E
 
 Before [submitting](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) a localization, you should ensure that all fields have been translated and that they are both syntactically and semantically correct in the context of their usage.
 
-You should follow the [development guide](../README.md#Local development) to start the website in your local environment.  Don't forget to update [index.ts](index.ts) file to include your new localization in the listing.
+You should follow the [development guide](../README.md#Local development) to start the website in your local environment. Don't forget to update [index.ts](index.ts) file to include your new localization in the listing.
