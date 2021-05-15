@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
 "PO-Revision-Date: 2021-05-15 13:49+0000\n"
-"Last-Translator: Golden_Water <2439577268@qq.com>\n"
+"Last-Translator: Richard Yu <yurichard3839@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -528,7 +528,7 @@ msgstr "今天没有需要挑战的秘境. 也许可以试试 {link}?"
 #: components/Home/DomainView/index.tsx:256
 msgctxt "components.Home.DomainView.index.4af108"
 msgid "Ley Lines"
-msgstr ""
+msgstr "地脉之花"
 
 #: components/Home/DomainView/index.tsx:227
 msgctxt "components.Home.DomainView.index.c49d9f"
@@ -543,17 +543,18 @@ msgstr ""
 #: components/Home/RealmCurrency/index.tsx:53
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
 msgid "Trust rank"
-msgstr ""
+msgstr "信任等阶"
 
 #: components/Home/RealmCurrency/index.tsx:60
 msgctxt "components.Home.RealmCurrency.index.27268e"
 msgid "Realm currency"
-msgstr ""
+msgstr "洞天宝钱"
 
 #: components/Home/RealmCurrency/index.tsx:37
+#, fuzzy
 msgctxt "components.Home.RealmCurrency.index.33dd2d"
 msgid "Adeptal energy"
-msgstr ""
+msgstr "洞天仙力"
 
 #: components/Home/RealmCurrency/index.tsx:30
 msgctxt "components.Home.RealmCurrency.index.d43d9b"
