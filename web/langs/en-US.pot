@@ -121,6 +121,11 @@ msgctxt "components.Customize.CharacterList.index.4e372c"
 msgid "Characters"
 msgstr ""
 
+#: components/Customize/Notifications/Info.tsx:104
+msgctxt "components.Customize.Notifications.Info.049a4d"
+msgid "Invite the bot"
+msgstr ""
+
 #: components/Customize/Notifications/Info.tsx:36
 msgctxt "components.Customize.Notifications.Info.34089d"
 msgid "Notifications"
@@ -129,6 +134,36 @@ msgstr ""
 #: components/Customize/Notifications/Info.tsx:53
 msgctxt "components.Customize.Notifications.Info.63d176"
 msgid "Genshin Schedule has a Discord bot that can send you notifications when your resin recharges or resources respawn."
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:67
+msgctxt "components.Customize.Notifications.Info.70feee"
+msgid "Genshin Schedule server"
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:72
+msgctxt "components.Customize.Notifications.Info.8f57ce"
+msgid "invite the bot"
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:60
+msgctxt "components.Customize.Notifications.Info.9da5a0"
+msgid "1. Join the {server}, or {invite} to your server. Either method is fine because you can only interact with the bot via DM anyway, but at least one common server is required for the bot to be able to message you."
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:112
+msgctxt "components.Customize.Notifications.Info.a7c1c8"
+msgid "2. Make sure DMs from server members are enabled, otherwise the bot cannot message you."
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:90
+msgctxt "components.Customize.Notifications.Info.aebf2a"
+msgid "Join the server"
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:121
+msgctxt "components.Customize.Notifications.Info.e159bf"
+msgid "3. Copy the following message and send it to the bot via DM. Don't share this message with anyone else, ever!"
 msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:40
@@ -896,42 +931,47 @@ msgctxt "pages.home.notifications.queue.fcf2e1"
 msgid "There are no notifications in queue."
 msgstr ""
 
-#: pages/index.tsx:98
+#: pages/index.tsx:100
 msgctxt "pages.index.0b66ba"
 msgid "Tracks open world resources and reminds you as soon as they respawn. There is no limit to the number of pins."
 msgstr ""
 
-#: pages/index.tsx:85
+#: pages/index.tsx:87
 msgctxt "pages.index.0ed193"
 msgid "Tracks your resins and estimates when it will recharge without having to open the game."
 msgstr ""
 
-#: pages/index.tsx:125
+#: pages/index.tsx:127
 msgctxt "pages.index.37b47a"
 msgid "Signing in will enable synchronization across multiple devices. If you do not already have an account, it will be created automatically."
 msgstr ""
 
-#: pages/index.tsx:122
+#: pages/index.tsx:124
 msgctxt "pages.index.49026d"
 msgid "Sign in"
 msgstr ""
 
-#: pages/index.tsx:95
+#: pages/index.tsx:77
+msgctxt "pages.index.657a74"
+msgid "Features"
+msgstr ""
+
+#: pages/index.tsx:97
 msgctxt "pages.index.755c57"
 msgid "Task scheduler"
 msgstr ""
 
-#: pages/index.tsx:108
+#: pages/index.tsx:110
 msgctxt "pages.index.79dc9c"
 msgid "Domain view"
 msgstr ""
 
-#: pages/index.tsx:82
+#: pages/index.tsx:84
 msgctxt "pages.index.96d48b"
 msgid "Resin calculator"
 msgstr ""
 
-#: pages/index.tsx:111
+#: pages/index.tsx:113
 msgctxt "pages.index.a92dae"
 msgid "Shows which domains can be cleared for ascension materials and artifacts for the day."
 msgstr ""

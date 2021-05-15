@@ -73,7 +73,9 @@ const Welcome = () => {
           </VStack>
 
           <VStack align="stretch" spacing={4}>
-            <Heading size="lg">Features</Heading>
+            <Heading size="lg">
+              <FormattedMessage defaultMessage="Features" />
+            </Heading>
 
             <VStack align="stretch" spacing={16}>
               <VStack align="stretch" spacing={8}>
