@@ -245,7 +245,7 @@ const DomainView = () => {
             <Icon as={FaTimes} />
             <div>
               <FormattedMessage
-                defaultMessage="No domains for today. Maybe try some {link}s?"
+                defaultMessage="No domains for today. Maybe try some {link}?"
                 values={{
                   link: (
                     <Link
@@ -253,7 +253,7 @@ const DomainView = () => {
                       color={useColorModeValue("blue.500", "blue.300")}
                       isExternal
                     >
-                      <FormattedMessage defaultMessage="Ley Line" />
+                      <FormattedMessage defaultMessage="Ley Lines" />
                     </Link>
                   ),
                 }}
