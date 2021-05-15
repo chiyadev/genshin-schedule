@@ -46,7 +46,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:170
+#: components/ChangelogModal.tsx:173
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -56,7 +56,7 @@ msgctxt "components.ClockOffsetWarning.85fdee"
 msgid "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} other {in # days}}."
 msgstr ""
 
-#: components/ClockOffsetWarning.tsx:33
+#: components/ClockOffsetWarning.tsx:36
 msgctxt "components.ClockOffsetWarning.8e6fec"
 msgid "Reset"
 msgstr ""
@@ -86,7 +86,7 @@ msgctxt "components.Customize.ArtifactList.index.796e5e"
 msgid "Artifacts"
 msgstr ""
 
-#: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:52
+#: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:55
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
 msgstr ""
@@ -191,6 +191,11 @@ msgctxt "components.Customize.Search.2027a7"
 msgid "Select items to be added to your farming schedule."
 msgstr ""
 
+#: components/Customize/Search.tsx:21
+msgctxt "components.Customize.Search.7c993e"
+msgid "Search characters, weapons and artifacts…"
+msgstr ""
+
 #: components/Customize/Search.tsx:39
 msgctxt "components.Customize.Search.9e7721"
 msgid "create an issue"
@@ -199,11 +204,6 @@ msgstr ""
 #: components/Customize/Search.tsx:30
 msgctxt "components.Customize.Search.bb5522"
 msgid "If there are any missing items, please {link} on GitHub."
-msgstr ""
-
-#: components/Customize/Search.tsx:21
-msgctxt "components.Customize.Search.eabd4d"
-msgid "Search characters, weapons and artifacts..."
 msgstr ""
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:88
@@ -306,11 +306,6 @@ msgctxt "components.Customize.SettingsList.LanguageSwitch.cb5677"
 msgid "Language"
 msgstr ""
 
-#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:29
-msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.1ad10b"
-msgid "Time steps (2h, 4h, 8h...)"
-msgstr ""
-
 #: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:17
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.6eef86"
 msgid "Resin estimation mode"
@@ -319,6 +314,11 @@ msgstr ""
 #: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:30
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.a854bc"
 msgid "Value steps (20, 40, 60)"
+msgstr ""
+
+#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:29
+msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.e2e5d9"
+msgid "Time steps (2h, 4h, 8h…)"
 msgstr ""
 
 #: components/Customize/SettingsList/ResinNotifyMarkSlider.tsx:20
@@ -351,7 +351,7 @@ msgctxt "components.Customize.SettingsList.index.0f789d"
 msgid "Settings"
 msgstr ""
 
-#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:51
+#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:54
 msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
 msgstr ""
@@ -621,12 +621,12 @@ msgctxt "components.Map.TaskLayer.DeleteButton.2b7afa"
 msgid "Delete"
 msgstr ""
 
-#: components/Map/TaskLayer/DoneButton.tsx:30
+#: components/Map/TaskLayer/DoneButton.tsx:31
 msgctxt "components.Map.TaskLayer.DoneButton.395490"
 msgid "Mark as to-do"
 msgstr ""
 
-#: components/Map/TaskLayer/DoneButton.tsx:30
+#: components/Map/TaskLayer/DoneButton.tsx:33
 msgctxt "components.Map.TaskLayer.DoneButton.927523"
 msgid "Mark as done"
 msgstr ""
@@ -636,7 +636,7 @@ msgctxt "components.Map.TaskMarker.BackButton.73247b"
 msgid "Back"
 msgstr ""
 
-#: components/Map/TaskMarker/InfoPage/DueText.tsx:22
+#: components/Map/TaskMarker/InfoPage/DueText.tsx:25
 msgctxt "components.Map.TaskMarker.InfoPage.DueText.17572f"
 msgid "Due {time} ago"
 msgstr ""
@@ -696,7 +696,7 @@ msgctxt "components.MapPage.SearchButton.c66715"
 msgid "Search"
 msgstr ""
 
-#: components/MapPage/TaskListOverlay.tsx:52
+#: components/MapPage/TaskListOverlay.tsx:54
 msgctxt "components.MapPage.TaskListOverlay.ea3f7e"
 msgid "Show list"
 msgstr ""
@@ -887,8 +887,8 @@ msgid "Mark as done"
 msgstr ""
 
 #: components/TaskSearchModal.tsx:34
-msgctxt "components.TaskSearchModal.c3436d"
-msgid "Search tasks..."
+msgctxt "components.TaskSearchModal.4ae60b"
+msgid "Search tasks…"
 msgstr ""
 
 #: pages/customize/artifacts/[name].tsx:78

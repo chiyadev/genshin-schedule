@@ -26,7 +26,7 @@ const ResinEstimateModeSwitch = () => {
             trackEvent("resinEstimateMode", value);
           }}
         >
-          <option value="time">{formatMessage({ defaultMessage: "Time steps (2h, 4h, 8h...)" })}</option>
+          <option value="time">{formatMessage({ defaultMessage: "Time steps (2h, 4h, 8h…)" })}</option>
           <option value="value">{formatMessage({ defaultMessage: "Value steps (20, 40, 60)" })}</option>
         </Select>
       </chakra.div>

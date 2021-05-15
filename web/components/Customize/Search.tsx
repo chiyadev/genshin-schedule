@@ -18,7 +18,7 @@ const Search = () => {
         <Input
           value={value}
           onChange={({ currentTarget: { value } }) => setValue(value)}
-          placeholder={formatMessage({ defaultMessage: "Search characters, weapons and artifacts..." })}
+          placeholder={formatMessage({ defaultMessage: "Search characters, weapons and artifacts…" })}
         />
       </InputGroup>
 
