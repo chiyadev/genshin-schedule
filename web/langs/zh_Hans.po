@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
 "PO-Revision-Date: 2021-05-15 16:18+0000\n"
-"Last-Translator: Richard Yu <yurichard3839@gmail.com>\n"
+"Last-Translator: Golden_Water <2439577268@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -539,12 +539,12 @@ msgstr "地脉之花"
 #: components/Home/DomainView/index.tsx:227
 msgctxt "components.Home.DomainView.index.c49d9f"
 msgid "Today's Domains"
-msgstr ""
+msgstr "今日秘境"
 
 #: components/Home/RealmCurrency/ClearButton.tsx:23
 msgctxt "components.Home.RealmCurrency.ClearButton.fc60a8"
 msgid "Clear"
-msgstr ""
+msgstr "清空"
 
 #: components/Home/RealmCurrency/index.tsx:53
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
@@ -565,7 +565,7 @@ msgstr "洞天仙力"
 #: components/Home/RealmCurrency/index.tsx:30
 msgctxt "components.Home.RealmCurrency.index.d43d9b"
 msgid "Realm Currency Calculator"
-msgstr ""
+msgstr "洞天宝钱计算器"
 
 #: components/Home/Resin/EstimatorByNotifyMark.tsx:18
 msgctxt "components.Home.Resin.EstimatorByNotifyMark.5921a5"
@@ -585,282 +585,282 @@ msgstr ""
 #: components/Home/Resin/NotificationSetter.tsx:32
 msgctxt "components.Home.Resin.NotificationSetter.94aedd"
 msgid "You have {value} resins right now!"
-msgstr ""
+msgstr "你现在有 {value} 树脂!"
 
 #: components/Home/Resin/NotificationSetter.tsx:31
 msgctxt "components.Home.Resin.NotificationSetter.d9f446"
 msgid "Your resins have fully recharged!"
-msgstr ""
+msgstr "你的树脂完全恢复了!"
 
 #: components/Home/Resin/NotificationSetter.tsx:28
 msgctxt "components.Home.Resin.NotificationSetter.db8673"
 msgid "Resin recharged"
-msgstr ""
+msgstr "树脂恢复"
 
 #: components/Home/Resin/index.tsx:105
 msgctxt "components.Home.Resin.index.506b0c"
 msgid "Your resins are full."
-msgstr ""
+msgstr "你的树脂满了."
 
 #: components/Home/Resin/index.tsx:36
 msgctxt "components.Home.Resin.index.fe85b2"
 msgid "Resin Calculator"
-msgstr ""
+msgstr "树脂计算器"
 
 #: components/Home/Tasks/MarkAllDone.tsx:39
 msgctxt "components.Home.Tasks.MarkAllDone.ec7046"
 msgid "Mark everything as done"
-msgstr ""
+msgstr "标记所有任务为已完成"
 
 #: components/Home/Tasks/SearchButton.tsx:20
 msgctxt "components.Home.Tasks.SearchButton.c66715"
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 #: components/Home/Tasks/ShowHiddenButton.tsx:13
 msgctxt "components.Home.Tasks.ShowHiddenButton.7a418f"
 msgid "Show hidden"
-msgstr ""
+msgstr "显示隐藏任务"
 
 #: components/Home/Tasks/index.tsx:43
 msgctxt "components.Home.Tasks.index.0b9931"
 msgid "Today's Tasks"
-msgstr ""
+msgstr "今日任务"
 
 #: components/Home/Tasks/index.tsx:94
 msgctxt "components.Home.Tasks.index.778f27"
 msgid "Open map"
-msgstr ""
+msgstr "打开地图"
 
 #: components/Home/Tasks/index.tsx:67
 msgctxt "components.Home.Tasks.index.d6861b"
 msgid "No tasks for now. Create one by clicking on the map."
-msgstr ""
+msgstr "现在没有任务. 在地图上点击以创建任务."
 
 #: components/Layout.tsx:62
 msgctxt "components.Layout.1f7783"
 msgid "Statistics"
-msgstr ""
+msgstr "统计"
 
 #: components/Layout.tsx:53
 msgctxt "components.Layout.34089d"
 msgid "Notifications"
-msgstr ""
+msgstr "通知"
 
 #: components/Map/TaskCreateLayer/CreateButton.tsx:32
 msgctxt "components.Map.TaskCreateLayer.CreateButton.573cd8"
 msgid "Create"
-msgstr ""
+msgstr "创建"
 
 #: components/Map/TaskLayer/DeleteButton.tsx:31
 msgctxt "components.Map.TaskLayer.DeleteButton.2b7afa"
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: components/Map/TaskLayer/DoneButton.tsx:31
 msgctxt "components.Map.TaskLayer.DoneButton.395490"
 msgid "Mark as to-do"
-msgstr ""
+msgstr "标记为未完成"
 
 #: components/Map/TaskLayer/DoneButton.tsx:33
 msgctxt "components.Map.TaskLayer.DoneButton.927523"
 msgid "Mark as done"
-msgstr ""
+msgstr "标记为已完成"
 
 #: components/Map/TaskMarker/BackButton.tsx:12
 msgctxt "components.Map.TaskMarker.BackButton.73247b"
 msgid "Back"
-msgstr ""
+msgstr "返回"
 
 #: components/Map/TaskMarker/InfoPage/DueText.tsx:25
 msgctxt "components.Map.TaskMarker.InfoPage.DueText.17572f"
 msgid "Due {time} ago"
-msgstr ""
+msgstr "刷新了 {time}"
 
 #: components/Map/TaskMarker/InfoPage/DueText.tsx:20
 msgctxt "components.Map.TaskMarker.InfoPage.DueText.767ec9"
 msgid "Due in {time}"
-msgstr ""
+msgstr "{time} 后刷新"
 
 #: components/Map/TaskMarker/InfoPage/HideCheck.tsx:17
 msgctxt "components.Map.TaskMarker.InfoPage.HideCheck.fdf592"
 msgid "Hide temporarily"
-msgstr ""
+msgstr "临时隐藏"
 
 #: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:67
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.52cf48"
 msgid "{time}AM"
-msgstr ""
+msgstr "{time}AM"
 
 #: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:66
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.6e6cc8"
 msgid "Server reset"
-msgstr ""
+msgstr "服务器重置"
 
 #: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:19
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.a736a6"
 msgid "Respawns every"
-msgstr ""
+msgstr "刷新间隔"
 
 #: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:15
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalResetCheck.4b91b9"
 msgid "Respawns on server reset"
-msgstr ""
+msgstr "在服务器重置时刷新"
 
 #: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:16
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalResetCheck.52cf48"
 msgid "{time}AM"
-msgstr ""
+msgstr "{time}AM"
 
 #: components/Map/TaskMarker/InfoPage/NotifyToggle.tsx:30
 msgctxt "components.Map.TaskMarker.InfoPage.NotifyToggle.0b66a8"
 msgid "{name} respawned"
-msgstr ""
+msgstr "{name} 已刷新"
 
 #: components/Map/TaskMarker/InfoPage/NotifyToggle.tsx:46
 msgctxt "components.Map.TaskMarker.InfoPage.NotifyToggle.da9e7e"
 msgid "Notify respawn"
-msgstr ""
+msgstr "刷新提醒"
 
 #: components/Map/TaskMarker/InfoPage/index.tsx:70
 msgctxt "components.Map.TaskMarker.InfoPage.index.906238"
 msgid "Task description"
-msgstr ""
+msgstr "任务简介"
 
 #: components/MapPage/SearchButton.tsx:26
 msgctxt "components.MapPage.SearchButton.c66715"
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 #: components/MapPage/TaskListOverlay.tsx:54
 msgctxt "components.MapPage.TaskListOverlay.ea3f7e"
 msgid "Show list"
-msgstr ""
+msgstr "展开列表"
 
 #: components/MapPage/TaskListOverlay.tsx:52
 msgctxt "components.MapPage.TaskListOverlay.f36c72"
 msgid "Hide list"
-msgstr ""
+msgstr "收起列表"
 
 #: components/ShortcutHelp.tsx:67
 msgctxt "components.ShortcutHelp.0b8e0c"
 msgid "Focus next task"
-msgstr ""
+msgstr "选择下一个任务"
 
 #: components/ShortcutHelp.tsx:34
 msgctxt "components.ShortcutHelp.44c3b9"
 msgid "Previous day"
-msgstr ""
+msgstr "上一天"
 
 #: components/ShortcutHelp.tsx:69
 msgctxt "components.ShortcutHelp.49f4fc"
 msgid "shift"
-msgstr ""
+msgstr "Shift"
 
 #: components/ShortcutHelp.tsx:33
 msgctxt "components.ShortcutHelp.5451c7"
 msgid "left"
-msgstr ""
+msgstr "←"
 
 #: components/ShortcutHelp.tsx:36
 msgctxt "components.ShortcutHelp.55c972"
 msgid "right"
-msgstr ""
+msgstr "→"
 
 #: components/ShortcutHelp.tsx:32
 msgctxt "components.ShortcutHelp.723949"
 msgid "Server clock"
-msgstr ""
+msgstr "服务器时钟"
 
 #: components/ShortcutHelp.tsx:59
 msgctxt "components.ShortcutHelp.755c57"
 msgid "Task scheduler"
-msgstr ""
+msgstr "任务计划"
 
 #: components/ShortcutHelp.tsx:61
 msgctxt "components.ShortcutHelp.7acb8d"
 msgid "Search tasks"
-msgstr ""
+msgstr "搜索任务"
 
 #: components/ShortcutHelp.tsx:73
 msgctxt "components.ShortcutHelp.927523"
 msgid "Mark as done"
-msgstr ""
+msgstr "标记为已完成"
 
 #: components/ShortcutHelp.tsx:44
 msgctxt "components.ShortcutHelp.96d48b"
 msgid "Resin calculator"
-msgstr ""
+msgstr "树脂计算器"
 
 #: components/ShortcutHelp.tsx:79
 msgctxt "components.ShortcutHelp.9f8054"
 msgid "Show keyboard shortcuts"
-msgstr ""
+msgstr "显示快捷键"
 
 #: components/ShortcutHelp.tsx:46
 msgctxt "components.ShortcutHelp.b13795"
 msgid "Subtract {values}"
-msgstr ""
+msgstr "减去 {values}"
 
 #: components/ShortcutHelp.tsx:25
 msgctxt "components.ShortcutHelp.bf360f"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "快捷键"
 
 #: components/ShortcutHelp.tsx:64
 msgctxt "components.ShortcutHelp.c03f14"
 msgid "Toggle list overlay"
-msgstr ""
+msgstr "切换列表显示"
 
 #: components/ShortcutHelp.tsx:39
 msgctxt "components.ShortcutHelp.c886e7"
 msgid "esc"
-msgstr ""
+msgstr "ESC"
 
 #: components/ShortcutHelp.tsx:37
 msgctxt "components.ShortcutHelp.dd708b"
 msgid "Next day"
-msgstr ""
+msgstr "下一天"
 
 #: components/ShortcutHelp.tsx:70
 msgctxt "components.ShortcutHelp.efcb6e"
 msgid "Focus previous task"
-msgstr ""
+msgstr "选择上一个任务"
 
 #: components/ShortcutHelp.tsx:40
 msgctxt "components.ShortcutHelp.fcc2fc"
 msgid "Reset offset"
-msgstr ""
+msgstr "重置偏移"
 
 #: components/ShortcutHelp.tsx:77
 msgctxt "components.ShortcutHelp.fd59c3"
 msgid "Other"
-msgstr ""
+msgstr "其他"
 
 #: components/Statistics/InfoText.tsx:22
 msgctxt "components.Statistics.InfoText.22e144"
 msgid "Duration"
-msgstr ""
+msgstr "持续时间"
 
 #: components/Statistics/InfoText.tsx:19
 msgctxt "components.Statistics.InfoText.be142a"
 msgid "Range"
-msgstr ""
+msgstr "范围"
 
 #: components/Statistics/ResetButton.tsx:34
 msgctxt "components.Statistics.ResetButton.243268"
 msgid "This action cannot be undone."
-msgstr ""
+msgstr "此操作不可撤销."
 
 #: components/Statistics/ResetButton.tsx:46
 msgctxt "components.Statistics.ResetButton.8e6fec"
 msgid "Reset"
-msgstr ""
+msgstr "重置"
 
 #: components/Statistics/ResetButton.tsx:50
 msgctxt "components.Statistics.ResetButton.e3b158"
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: components/Statistics/ResinStats.tsx:84
 msgctxt "components.Statistics.ResinStats.101bad"
@@ -870,227 +870,227 @@ msgstr ""
 #: components/Statistics/ResinStats.tsx:79
 msgctxt "components.Statistics.ResinStats.309da3"
 msgid "Total"
-msgstr ""
+msgstr "总数"
 
 #: components/Statistics/ResinStats.tsx:102
 msgctxt "components.Statistics.ResinStats.6b30d3"
 msgid "Peak"
-msgstr ""
+msgstr "最高"
 
 #: components/Statistics/ResinStats.tsx:107
 msgctxt "components.Statistics.ResinStats.76ed65"
 msgid "Never"
-msgstr ""
+msgstr "从来没有"
 
 #: components/Statistics/ResinStats.tsx:15
 msgctxt "components.Statistics.ResinStats.99ed7d"
 msgid "Resins spent"
-msgstr ""
+msgstr "树脂消耗"
 
 #: components/Statistics/ResinStats.tsx:63
 msgctxt "components.Statistics.ResinStats.cd681b"
 msgid "Today"
-msgstr ""
+msgstr "今日"
 
 #: components/Statistics/TaskStats.tsx:76
 msgctxt "components.Statistics.TaskStats.309da3"
 msgid "Total"
-msgstr ""
+msgstr "总数"
 
 #: components/Statistics/TaskStats.tsx:92
 msgctxt "components.Statistics.TaskStats.6b30d3"
 msgid "Peak"
-msgstr ""
+msgstr "最高"
 
 #: components/Statistics/TaskStats.tsx:97
 msgctxt "components.Statistics.TaskStats.76ed65"
 msgid "Never"
-msgstr ""
+msgstr "从来没有"
 
 #: components/Statistics/TaskStats.tsx:14
 msgctxt "components.Statistics.TaskStats.c90f7d"
 msgid "Tasks done"
-msgstr ""
+msgstr "已完成的任务"
 
 #: components/Statistics/TaskStats.tsx:61
 msgctxt "components.Statistics.TaskStats.cd681b"
 msgid "Today"
-msgstr ""
+msgstr "今日"
 
 #: components/TaskListCard/DoneButton.tsx:24
 msgctxt "components.TaskListCard.DoneButton.927523"
 msgid "Mark as done"
-msgstr ""
+msgstr "标记为已完成"
 
 #: components/TaskSearchModal.tsx:34
 msgctxt "components.TaskSearchModal.4ae60b"
 msgid "Search tasks…"
-msgstr ""
+msgstr "搜索任务…"
 
 #: db/artifacts.ts:25
 msgctxt "db.artifacts.05500a"
 msgid "Berserker"
-msgstr ""
+msgstr "战狂"
 
 #: db/artifacts.ts:91
 msgctxt "db.artifacts.069da3"
 msgid "Maiden Beloved"
-msgstr ""
+msgstr "被怜爱的少女"
 
 #: db/artifacts.ts:115
 msgctxt "db.artifacts.1c37ab"
 msgid "Prayers for Destiny"
-msgstr ""
+msgstr "祭水礼冠"
 
 #: db/artifacts.ts:73
 msgctxt "db.artifacts.214709"
 msgid "Instructor"
-msgstr ""
+msgstr "教官"
 
 #: db/artifacts.ts:49
 msgctxt "db.artifacts.21612b"
 msgid "Defender's Will"
-msgstr ""
+msgstr "守护之心"
 
 #: db/artifacts.ts:205
 msgctxt "db.artifacts.21a80b"
 msgid "Pale Flame"
-msgstr ""
+msgstr "苍白之火"
 
 #: db/artifacts.ts:103
 msgctxt "db.artifacts.280c08"
 msgid "Noblesse Oblige"
-msgstr ""
+msgstr "昔日宗室之仪"
 
 #: db/artifacts.ts:13
 msgctxt "db.artifacts.2ff052"
 msgid "Adventurer"
-msgstr ""
+msgstr "冒险家"
 
 #: db/artifacts.ts:181
 msgctxt "db.artifacts.38bb7d"
 msgid "Traveling Doctor"
-msgstr ""
+msgstr "游医"
 
 #: db/artifacts.ts:169
 msgctxt "db.artifacts.485473"
 msgid "Thundersoother"
-msgstr ""
+msgstr "平息鸣雷的尊者"
 
 #: db/artifacts.ts:97
 msgctxt "db.artifacts.4f913f"
 msgid "Martial Artist"
-msgstr ""
+msgstr "武人"
 
 #: db/artifacts.ts:133
 msgctxt "db.artifacts.51460e"
 msgid "Prayers to Springtime"
-msgstr ""
+msgstr "祭冰之人"
 
 #: db/artifacts.ts:37
 msgctxt "db.artifacts.5681e8"
 msgid "Brave Heart"
-msgstr ""
+msgstr "勇士之心"
 
 #: db/artifacts.ts:79
 msgctxt "db.artifacts.5bcd27"
 msgid "Lavawalker"
-msgstr ""
+msgstr "渡过烈火的贤人"
 
 #: db/artifacts.ts:109
 msgctxt "db.artifacts.6d7eb3"
 msgid "Ocean Conqueror"
-msgstr ""
+msgstr "沉沦之心"
 
 #: db/artifacts.ts:85
 msgctxt "db.artifacts.730401"
 msgid "Lucky Dog"
-msgstr ""
+msgstr "幸运儿"
 
 #: db/artifacts.ts:175
 msgctxt "db.artifacts.7e4369"
 msgid "Tiny Miracle"
-msgstr ""
+msgstr "奇迹"
 
 #: db/artifacts.ts:157
 msgctxt "db.artifacts.7e7a67"
 msgid "The Exile"
-msgstr ""
+msgstr "流放者"
 
 #: db/artifacts.ts:199
 msgctxt "db.artifacts.8003f4"
 msgid "Tenacity of the Millelith"
-msgstr ""
+msgstr "千岩牢固"
 
 #: db/artifacts.ts:43
 msgctxt "db.artifacts.851f90"
 msgid "Crimson Witch of Flames"
-msgstr ""
+msgstr "炽烈的炎之魔女"
 
 #: db/artifacts.ts:187
 msgctxt "db.artifacts.95e53b"
 msgid "Viridescent Venerer"
-msgstr ""
+msgstr "翠绿之影"
 
 #: db/artifacts.ts:163
 msgctxt "db.artifacts.9f336e"
 msgid "Thundering Fury"
-msgstr ""
+msgstr "如雷的盛怒"
 
 #: db/artifacts.ts:55
 msgctxt "db.artifacts.a5f405"
 msgid "Gambler"
-msgstr ""
+msgstr "赌徒"
 
 #: db/artifacts.ts:67
 msgctxt "db.artifacts.b45e3e"
 msgid "Icebreaker"
-msgstr ""
+msgstr "冰风迷途的勇士"
 
 #: db/artifacts.ts:151
 msgctxt "db.artifacts.bf3cde"
 msgid "Scholar"
-msgstr ""
+msgstr "学士"
 
 #: db/artifacts.ts:19
 msgctxt "db.artifacts.c4de81"
 msgid "Archaic Petra"
-msgstr ""
+msgstr "悠古的磐岩"
 
 #: db/artifacts.ts:31
 msgctxt "db.artifacts.c4ee4e"
 msgid "Bloodstained Chivalry"
-msgstr ""
+msgstr "染血的骑士道"
 
 #: db/artifacts.ts:139
 msgctxt "db.artifacts.d086de"
 msgid "Resolution of Sojourner"
-msgstr ""
+msgstr "行者之心"
 
 #: db/artifacts.ts:145
 msgctxt "db.artifacts.e2996a"
 msgid "Retracing Bolide"
-msgstr ""
+msgstr "逆飞的流星"
 
 #: db/artifacts.ts:193
 msgctxt "db.artifacts.e34cca"
 msgid "Wanderer's Troupe"
-msgstr ""
+msgstr "流浪大地的乐团"
 
 #: db/artifacts.ts:127
 msgctxt "db.artifacts.e52b68"
 msgid "Prayers for Wisdom"
-msgstr ""
+msgstr "祭雷之人"
 
 #: db/artifacts.ts:61
 msgctxt "db.artifacts.efac76"
 msgid "Gladiator's Finale"
-msgstr ""
+msgstr "角斗士的终幕礼"
 
 #: db/artifacts.ts:121
 msgctxt "db.artifacts.fa86c6"
 msgid "Prayers for Illumination"
-msgstr ""
+msgstr "祭火之人"
 
 #: db/characters.ts:287
 msgctxt "db.characters.07f6ca"
@@ -1140,7 +1140,7 @@ msgstr "丽莎"
 #: db/characters.ts:314
 msgctxt "db.characters.47f14e"
 msgid "Eula"
-msgstr ""
+msgstr "优菈"
 
 #: db/characters.ts:341
 msgctxt "db.characters.579564"
@@ -1180,67 +1180,67 @@ msgstr "诺艾尔"
 #: db/characters.ts:143
 msgctxt "db.characters.7f3adf"
 msgid "Jean"
-msgstr ""
+msgstr "琴"
 
 #: db/characters.ts:278
 msgctxt "db.characters.89304e"
 msgid "Diona"
-msgstr ""
+msgstr "迪奥娜"
 
 #: db/characters.ts:152
 msgctxt "db.characters.921292"
 msgid "Kaeya"
-msgstr ""
+msgstr "凯亚"
 
 #: db/characters.ts:206
 msgctxt "db.characters.9de495"
 msgid "Qiqi"
-msgstr ""
+msgstr "七七"
 
 #: db/characters.ts:251
 msgctxt "db.characters.9e37b6"
 msgid "Xingqiu"
-msgstr ""
+msgstr "行秋"
 
 #: db/characters.ts:125
 msgctxt "db.characters.a1bb56"
 msgid "Diluc"
-msgstr ""
+msgstr "迪卢克"
 
 #: db/characters.ts:89
 msgctxt "db.characters.a808c9"
 msgid "Barbara"
-msgstr ""
+msgstr "芭芭拉"
 
 #: db/characters.ts:179
 msgctxt "db.characters.af88fa"
 msgid "Mona"
-msgstr ""
+msgstr "莫娜"
 
 #: db/characters.ts:323
 msgctxt "db.characters.b60444"
 msgid "Albedo"
-msgstr ""
+msgstr "阿贝多"
 
 #: db/characters.ts:107
 msgctxt "db.characters.b96249"
 msgid "Bennett"
-msgstr ""
+msgstr "班尼特"
 
 #: db/characters.ts:332
 msgctxt "db.characters.bc58dc"
 msgid "Ganyu"
-msgstr ""
+msgstr "甘雨"
 
 #: db/characters.ts:269
 msgctxt "db.characters.bdaeb2"
 msgid "Tartaglia"
-msgstr ""
+msgstr "达达利亚"
 
 #: db/characters.ts:260
 msgctxt "db.characters.ce2cb0"
 msgid "Klee"
-msgstr ""
+msgstr "可莉"
 
 #: db/characters.ts:62
 msgctxt "db.characters.d09c64"
@@ -1250,162 +1250,162 @@ msgstr "旅行者 (风)"
 #: db/characters.ts:161
 msgctxt "db.characters.d9c480"
 msgid "Keqing"
-msgstr ""
+msgstr "刻晴"
 
 #: db/characters.ts:359
 msgctxt "db.characters.dd7597"
 msgid "Rosaria"
-msgstr ""
+msgstr "罗莎莉亚"
 
 #: db/characters.ts:368
 msgctxt "db.characters.de01da"
 msgid "Hu Tao"
-msgstr ""
+msgstr "胡桃"
 
 #: db/characters.ts:80
 msgctxt "db.characters.fdb676"
 msgid "Amber"
-msgstr ""
+msgstr "安柏"
 
 #: db/commonMaterials.ts:50
 msgctxt "db.commonMaterials.02b6af"
 msgid "Dead Ley Line Branch"
-msgstr ""
+msgstr "地脉的旧枝"
 
 #: db/commonMaterials.ts:141
 msgctxt "db.commonMaterials.16740f"
 msgid "Jueyun Chili"
-msgstr ""
+msgstr "绝云椒椒"
 
 #: db/commonMaterials.ts:190
 msgctxt "db.commonMaterials.19c45b"
 msgid "Valberry"
-msgstr ""
+msgstr "落落莓"
 
 #: db/commonMaterials.ts:162
 msgctxt "db.commonMaterials.248863"
 msgid "Qingxin"
-msgstr ""
+msgstr "清心"
 
 #: db/commonMaterials.ts:43
 msgctxt "db.commonMaterials.3ef728"
 msgid "Heavy Horn"
-msgstr ""
+msgstr "沉重号角"
 
 #: db/commonMaterials.ts:36
 msgctxt "db.commonMaterials.42027c"
 msgid "Divining Scroll"
-msgstr ""
+msgstr "导能绘卷"
 
 #: db/commonMaterials.ts:29
 msgctxt "db.commonMaterials.574218"
 msgid "Firm Arrowhead"
-msgstr ""
+msgstr "牢固的箭簇"
 
 #: db/commonMaterials.ts:21
 msgctxt "db.commonMaterials.5e010a"
 msgid "Hilichurl Mask"
-msgstr ""
+msgstr "破损的面具"
 
 #: db/commonMaterials.ts:99
 msgctxt "db.commonMaterials.6405d0"
 msgid "Whopperflower Nectar"
-msgstr ""
+msgstr "骗骗花蜜"
 
 #: db/commonMaterials.ts:127
 msgctxt "db.commonMaterials.6f7fb1"
 msgid "Dandelion Seed"
-msgstr ""
+msgstr "蒲公英籽"
 
 #: db/commonMaterials.ts:14
 msgctxt "db.commonMaterials.76ab19"
 msgid "Slime"
-msgstr ""
+msgstr "史莱姆"
 
 #: db/commonMaterials.ts:57
 msgctxt "db.commonMaterials.7ccd68"
 msgid "Chaos Device"
-msgstr ""
+msgstr "混沌装置"
 
 #: db/commonMaterials.ts:176
 msgctxt "db.commonMaterials.7ce6fd"
 msgid "Small Lamp Grass"
-msgstr ""
+msgstr "小灯草"
 
 #: db/commonMaterials.ts:15
 msgctxt "db.commonMaterials.866176"
 msgid "Slime Condensate"
-msgstr ""
+msgstr "史莱姆凝液"
 
 #: db/commonMaterials.ts:106
 msgctxt "db.commonMaterials.8d1274"
 msgid "Calla Lily"
-msgstr ""
+msgstr "嘟嘟莲"
 
 #: db/commonMaterials.ts:183
 msgctxt "db.commonMaterials.9653ee"
 msgid "Starconch"
-msgstr ""
+msgstr "星螺"
 
 #: db/commonMaterials.ts:49
 msgctxt "db.commonMaterials.9f19e7"
 msgid "Ley Line"
-msgstr ""
+msgstr "地脉"
 
 #: db/commonMaterials.ts:197
 msgctxt "db.commonMaterials.ace079"
 msgid "Violetgrass"
-msgstr ""
+msgstr "琉璃袋"
 
 #: db/commonMaterials.ts:77
 msgctxt "db.commonMaterials.b1e166"
 msgid "Fatui Insignia"
-msgstr ""
+msgstr "愚人众徽章"
 
 #: db/commonMaterials.ts:169
 msgctxt "db.commonMaterials.bc0224"
 msgid "Silk Flower"
-msgstr ""
+msgstr "霓裳花"
 
 #: db/commonMaterials.ts:92
 msgctxt "db.commonMaterials.be8c87"
 msgid "Fragile Bone Shard"
-msgstr ""
+msgstr "脆弱的骨片"
 
 #: db/commonMaterials.ts:35
 msgctxt "db.commonMaterials.bf08d6"
 msgid "Samachurl Scroll"
-msgstr ""
+msgstr "萨满卷轴"
 
 #: db/commonMaterials.ts:85
 msgctxt "db.commonMaterials.c5a9ac"
 msgid "Treasure Hoarder Insignia"
-msgstr ""
+msgstr "寻宝鸦印"
 
 #: db/commonMaterials.ts:42
 msgctxt "db.commonMaterials.c631e3"
 msgid "Hilichurl Horn"
-msgstr ""
+msgstr "丘丘号角"
 
 #: db/commonMaterials.ts:71
 msgctxt "db.commonMaterials.c6cff7"
 msgid "Hunter's Sacrificial Knife"
-msgstr ""
+msgstr "猎兵祭刀"
 
 #: db/commonMaterials.ts:64
 msgctxt "db.commonMaterials.cd7e10"
 msgid "Mist Grass Pollen"
-msgstr ""
+msgstr "雾虚花粉"
 
 #: db/commonMaterials.ts:211
 msgctxt "db.commonMaterials.ce7fa6"
 msgid "Wolfhook"
-msgstr ""
+msgstr "钩钩果"
 
 #: db/commonMaterials.ts:63
 msgctxt "db.commonMaterials.d47bda"
 msgid "Mist Grass"
-msgstr ""
+msgstr "雾虚草囊"
 
 #: db/commonMaterials.ts:148
 msgctxt "db.commonMaterials.d8877a"
@@ -1975,7 +1975,7 @@ msgstr ""
 #: db/icons.ts:62
 msgctxt "db.icons.866176"
 msgid "Slime Condensate"
-msgstr ""
+msgstr "史莱姆凝液"
 
 #: db/icons.ts:206
 msgctxt "db.icons.89d95a"
