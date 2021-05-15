@@ -527,8 +527,8 @@ msgid "Adeptal energy"
 msgstr ""
 
 #: components/Home/RealmCurrency/index.tsx:30
-msgctxt "components.Home.RealmCurrency.index.613cf4"
-msgid "Realm currency calculator"
+msgctxt "components.Home.RealmCurrency.index.d43d9b"
+msgid "Realm Currency Calculator"
 msgstr ""
 
 #: components/Home/Resin/EstimatorByNotifyMark.tsx:18
@@ -567,8 +567,8 @@ msgid "Your resins are full."
 msgstr ""
 
 #: components/Home/Resin/index.tsx:36
-msgctxt "components.Home.Resin.index.96d48b"
-msgid "Resin calculator"
+msgctxt "components.Home.Resin.index.fe85b2"
+msgid "Resin Calculator"
 msgstr ""
 
 #: components/Home/Tasks/MarkAllDone.tsx:39
