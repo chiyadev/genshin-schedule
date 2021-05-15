@@ -33,7 +33,7 @@ const Resin = () => {
   const current = resin.value + getResinRecharge(time.valueOf() - resin.time);
 
   return (
-    <WidgetWrapper type="resin" heading={<FormattedMessage id="resinCalc" />} onHover={setHover}>
+    <WidgetWrapper type="resin" heading={<FormattedMessage defaultMessage="Resin calculator" />} onHover={setHover}>
       <NotificationSetter />
 
       <WhiteCard>
@@ -102,7 +102,7 @@ const Resin = () => {
         >
           {current >= ResinCap ? (
             <span>
-              <FormattedMessage id="resinFull" />
+              <FormattedMessage defaultMessage="Your resins are full." />
             </span>
           ) : mode === "time" ? (
             <EstimatorByTime />

@@ -28,7 +28,7 @@ const DeleteButton = ({ task }: { task: Task }) => {
       <HStack spacing={2}>
         <Icon as={FaTrash} />
         <div>
-          <FormattedMessage id="taskDelete" />
+          <FormattedMessage defaultMessage="Delete" />
         </div>
       </HStack>
     </Link>

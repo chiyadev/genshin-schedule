@@ -17,7 +17,7 @@ const MessageDisplay = () => {
     if (client.authenticated) {
       setMessage(`enable ||${client.token}||`);
     } else {
-      setMessage(formatMessage({ id: "notSignedIn" }));
+      setMessage(formatMessage({ defaultMessage: "You are not signed in." }));
     }
   }, []);
 
@@ -31,7 +31,7 @@ const MessageDisplay = () => {
           trackEvent("notifications", "tokenCopy");
         }}
       >
-        {hasCopied ? <FormattedMessage id="copied" /> : <FormattedMessage id="copy" />}
+        {hasCopied ? <FormattedMessage defaultMessage="Copied" /> : <FormattedMessage defaultMessage="Copy" />}
       </InputLeftAddon>
 
       <Input disabled value={message} />

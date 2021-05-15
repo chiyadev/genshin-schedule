@@ -40,7 +40,7 @@ const TaskList = () => {
       type="tasks"
       heading={
         <span>
-          <FormattedMessage id="todaysTasks" />
+          <FormattedMessage defaultMessage="Today's Tasks" />
           {!!dueTasks.length && <span> ({dueTasks.length})</span>}
         </span>
       }
@@ -64,7 +64,7 @@ const TaskList = () => {
           <HStack spacing={2}>
             <Icon as={FaTimes} />
             <div>
-              <FormattedMessage id="todaysTasksNone" />
+              <FormattedMessage defaultMessage="No tasks for now. Create one by clicking on the map." />
             </div>
           </HStack>
         )}
@@ -91,7 +91,7 @@ const TaskList = () => {
           <chakra.div textAlign="right" fontSize="sm">
             <NextLink href="/home/map" passHref>
               <Link>
-                <FormattedMessage id="openMap" /> <Icon as={FaAngleRight} />
+                <FormattedMessage defaultMessage="Open map" /> <Icon as={FaAngleRight} />
               </Link>
             </NextLink>
           </chakra.div>

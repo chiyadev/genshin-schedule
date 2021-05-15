@@ -83,7 +83,7 @@ const CharacterInfo = ({ data, name }: Props) => {
             <NoteInput character={character} />
           </WhiteCard>
         ) : (
-          <FormattedMessage id="characterNotFound" />
+          <FormattedMessage defaultMessage="No such character." />
         )}
       </Layout>
     </ConfigProvider>

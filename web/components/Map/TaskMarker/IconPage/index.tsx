@@ -5,7 +5,7 @@ import { IconCategories, IconSearch, KnownResourceTimers } from "./search";
 import Item from "./Item";
 import { chakra, Icon, Input, InputGroup, InputLeftElement, SimpleGrid, VStack } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage as FormattedMessageId, useIntl } from "react-intl";
 
 const IconPage = ({
   setTask,
@@ -14,7 +14,7 @@ const IconPage = ({
   setTask: Dispatch<SetStateAction<Task>>;
   setPage: Dispatch<SetStateAction<PopupPage>>;
 }) => {
-  const { formatMessage } = useIntl();
+  const { formatMessage: formatMessageId } = useIntl();
   const [search, setSearch] = useConfig("iconQuery");
   const [scroll, setScroll] = useConfig("iconListScroll");
 
@@ -85,7 +85,7 @@ const IconPage = ({
             Object.keys(results).map((category) => (
               <VStack align="stretch" spacing={1}>
                 <chakra.span fontSize="sm" textTransform="capitalize">
-                  <FormattedMessage id={category} />
+                  <FormattedMessageId id={category} />
                 </chakra.span>
 
                 <SimpleGrid columns={7} spacing={1}>
@@ -98,7 +98,7 @@ const IconPage = ({
 
                         setTask((task) => ({
                           ...task,
-                          name: formatMessage({ id: icon }),
+                          name: formatMessageId({ id: icon }),
                           icon,
                           refreshTime: timer || task.refreshTime,
                         }));

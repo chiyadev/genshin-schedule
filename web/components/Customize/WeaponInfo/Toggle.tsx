@@ -20,11 +20,11 @@ const Toggle = ({ weapon }: { weapon: Weapon }) => {
     >
       <VStack align="start" spacing={0}>
         <div>
-          <FormattedMessage id="schdAdd" />
+          <FormattedMessage defaultMessage="Show on schedule" />
         </div>
 
         <chakra.div fontSize="sm" color="gray.500">
-          <FormattedMessage id="schdAddHint" />
+          <FormattedMessage defaultMessage="Scheduled domains will appear on the days they are available." />
         </chakra.div>
       </VStack>
     </Checkbox>

@@ -42,7 +42,7 @@ const UserSignIn = () => {
           <AlertIcon />
           <HStack spacing={2}>
             <AlertTitle>
-              <FormattedMessage id="error" />
+              <FormattedMessage defaultMessage="Error" />
             </AlertTitle>
             <AlertDescription>{error.message}</AlertDescription>
           </HStack>
@@ -54,7 +54,7 @@ const UserSignIn = () => {
 
         <Input
           id="username"
-          placeholder={formatMessage({ id: "username" })}
+          placeholder={formatMessage({ defaultMessage: "Username" })}
           autoComplete="username"
           value={username}
           onChange={({ currentTarget: { value } }) => setUsername(value)}
@@ -67,7 +67,7 @@ const UserSignIn = () => {
         <Input
           id="password"
           type="password"
-          placeholder={formatMessage({ id: "password" })}
+          placeholder={formatMessage({ defaultMessage: "Password" })}
           autoComplete="current-password"
           value={password}
           onChange={({ currentTarget: { value } }) => setPassword(value)}
@@ -81,12 +81,12 @@ const UserSignIn = () => {
           href="https://github.com/chiyadev/genshin-schedule/wiki/Recovering-a-lost-account"
           isExternal
         >
-          <FormattedMessage id="passwordForgot" />
+          <FormattedMessage defaultMessage="Forgot password?" />
         </Link>
 
         <p>
           <chakra.span color="gray.500">
-            <FormattedMessage id="securityWarning" />
+            <FormattedMessage defaultMessage="Never reuse your miHoYo password on Genshin-related websites." />
           </chakra.span>
           <span> </span>
           <Link
@@ -94,7 +94,7 @@ const UserSignIn = () => {
             href="https://github.com/chiyadev/genshin-schedule/wiki/Regarding-miHoYo-account-security"
             isExternal
           >
-            <FormattedMessage id="securityReadMore" />
+            <FormattedMessage defaultMessage="Read more." />
           </Link>
         </p>
       </chakra.div>
@@ -127,10 +127,10 @@ const UserSignIn = () => {
             }
           }}
         >
-          <FormattedMessage id="loginSubmit" />
+          <FormattedMessage defaultMessage="Submit" />
         </Button>
 
-        <Tooltip label={<FormattedMessage id="loginAnonymousTip" />}>
+        <Tooltip label={<FormattedMessage defaultMessage="All data will be stored locally on the browser." />}>
           <Button
             disabled={load}
             leftIcon={<Icon as={FaUser} />}
@@ -141,7 +141,7 @@ const UserSignIn = () => {
               setTimeout(() => router.push("/home"));
             }}
           >
-            <FormattedMessage id="loginAnonymous" />
+            <FormattedMessage defaultMessage="Continue as anonymous" />
           </Button>
         </Tooltip>
       </ButtonGroup>

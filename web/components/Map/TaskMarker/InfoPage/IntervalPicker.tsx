@@ -1,5 +1,5 @@
 import React, { Dispatch, memo, useRef, useState } from "react";
-import { getAccuratestUnit, getUnitMs, ServerResetHour, TimeUnit } from "../../../../utils/time";
+import { getAccuratestUnit, getUnitMs, ServerResetHour, TimeUnit, useFormatUnit } from "../../../../utils/time";
 import { FaSyncAlt } from "react-icons/fa";
 import { chakra, HStack, Icon, Input, Select } from "@chakra-ui/react";
 import { Task } from "../../../../utils/config";
@@ -16,7 +16,7 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch
     <HStack fontSize="sm" spacing={2}>
       <Icon as={FaSyncAlt} />
       <chakra.div flexShrink={0}>
-        <FormattedMessage id="taskRespawn" />:
+        <FormattedMessage defaultMessage="Respawns every" />:
       </chakra.div>
 
       <Input
@@ -58,12 +58,13 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch
       >
         {["week", "day", "hour", "minute"].map((unit) => (
           <option key={unit} value={unit}>
-            {formatMessage({ id: `unit.${unit}` }, { value: displayValue })}
+            {useFormatUnit(`unit.${unit}`)}
           </option>
         ))}
 
         <option value="reset">
-          {formatMessage({ id: "serverReset" })} ({formatMessage({ id: "timeMorning" }, { time: ServerResetHour })})
+          {formatMessage({ defaultMessage: "Server reset" })} (
+          {formatMessage({ defaultMessage: "{time}AM" }, { time: ServerResetHour })})
         </option>
       </Select>
     </HStack>

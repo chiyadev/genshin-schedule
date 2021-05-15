@@ -20,7 +20,7 @@ const ClearButton = () => {
         });
       }}
     >
-      <FormattedMessage id="realmCurrencyClear" />
+      <FormattedMessage defaultMessage="Clear" />
     </Button>
   );
 };

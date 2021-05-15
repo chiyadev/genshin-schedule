@@ -11,7 +11,7 @@ const TaskStats = () => {
   return (
     <VStack align="stretch" spacing={4}>
       <Heading size="md">
-        <FormattedMessage id="statTaskDone" />
+        <FormattedMessage defaultMessage="Tasks done" />
       </Heading>
 
       <WhiteCard divide>
@@ -58,7 +58,7 @@ const TodayPanel = () => {
   return (
     <VStack flex={1} spacing={2}>
       <div>
-        <FormattedMessage id="today" />
+        <FormattedMessage defaultMessage="Today" />
       </div>
       <Heading color={color}>{value}</Heading>
     </VStack>
@@ -73,7 +73,7 @@ const TotalPanel = () => {
   return (
     <VStack flex={1} spacing={2}>
       <div>
-        <FormattedMessage id="total" />
+        <FormattedMessage defaultMessage="Total" />
       </div>
       <Heading color={color}>{value}</Heading>
     </VStack>
@@ -89,12 +89,12 @@ const PeakPanel = () => {
   return (
     <VStack flex={1} spacing={2}>
       <div>
-        <FormattedMessage id="peak" />
+        <FormattedMessage defaultMessage="Peak" />
       </div>
       <Heading color={color}>{value}</Heading>
 
       <chakra.div fontSize="sm" color="gray.500">
-        {peak ? DateTime.fromMillis(peak.time).toLocaleString() : <FormattedMessage id="statNever" />}
+        {peak ? DateTime.fromMillis(peak.time).toLocaleString() : <FormattedMessage defaultMessage="Never" />}
       </chakra.div>
     </VStack>
   );

@@ -3,7 +3,7 @@ import React, { memo } from "react";
 import { ServerList, useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
 import { useServerTimeZone } from "../../../utils/time";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
 
 const ServerText = () => {
   const [server, setServer] = useConfig("server");
@@ -13,7 +13,7 @@ const ServerText = () => {
     <Tooltip
       label={
         <>
-          <FormattedMessage id="switchServer" /> (<code>{timeZone}</code>)
+          <FormattedMessage defaultMessage="Switch server" /> (<code>{timeZone}</code>)
         </>
       }
       closeOnClick={false}
@@ -26,7 +26,7 @@ const ServerText = () => {
           trackEvent("clock", "serverSwitch");
         }}
       >
-        <FormattedMessage id={server} />
+        <FormattedMessageId id={server} />
       </Link>
     </Tooltip>
   );

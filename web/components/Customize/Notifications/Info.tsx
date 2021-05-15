@@ -33,11 +33,11 @@ const Info = () => {
         <HStack spacing={2} fontSize="xl" fontWeight="bold">
           <Icon as={FaBell} />
           <div>
-            <FormattedMessage id="notifications" />
+            <FormattedMessage defaultMessage="Notifications" />
           </div>
 
           <Spacer />
-          <Tooltip label={<FormattedMessage id="notiQueue" />}>
+          <Tooltip label={<FormattedMessage defaultMessage="Queue" />}>
             <span>
               <NextLink href="/home/notifications/queue" passHref>
                 <Link color={useColorModeValue("blue.500", "blue.300")}>
@@ -50,25 +50,30 @@ const Info = () => {
 
         <VStack align="start" spacing={4}>
           <div>
-            <FormattedMessage id="notiDesc" />
+            <FormattedMessage defaultMessage="Genshin Schedule has a Discord bot that can send you notifications when your resin recharges or resources respawn." />
           </div>
 
           <chakra.img src={Bot} borderRadius="md" />
 
           <VStack align="start" spacing={2}>
             <div>
-              <span>
-                1. Join the{" "}
-                <Link href={DiscordServerInvite} color={useColorModeValue("blue.500", "blue.300")}>
-                  Genshin Schedule
-                </Link>{" "}
-                server, or{" "}
-                <Link href={DiscordBotInvite} color={useColorModeValue("blue.500", "blue.300")}>
-                  invite the bot
-                </Link>{" "}
-                to your server. Either method is fine because you can only interact with the bot via DM anyway, but at
-                least one common server is required for the bot to be able to message you.
-              </span>
+              <FormattedMessage
+                defaultMessage={
+                  "1. Join the {server}, or {invite} to your server. Either method is fine because you can only interact with the bot via DM anyway, but at least one common server is required for the bot to be able to message you."
+                }
+                values={{
+                  server: (
+                    <Link href={DiscordServerInvite} color={useColorModeValue("blue.500", "blue.300")} isExternal>
+                      <FormattedMessage defaultMessage="Genshin Schedule server" />
+                    </Link>
+                  ),
+                  invite: (
+                    <Link href={DiscordBotInvite} color={useColorModeValue("blue.500", "blue.300")} isExternal>
+                      <FormattedMessage defaultMessage="invite the bot" />
+                    </Link>
+                  ),
+                }}
+              />
             </div>
 
             <Wrap>
@@ -82,7 +87,7 @@ const Info = () => {
                   bg="#7289da"
                   colorScheme="none"
                 >
-                  Join the server
+                  <FormattedMessage defaultMessage="Join the server" />
                 </Button>
               </WrapItem>
 
@@ -96,14 +101,16 @@ const Info = () => {
                   bg="#7289da"
                   colorScheme="none"
                 >
-                  Invite the bot
+                  <FormattedMessage defaultMessage="Invite the bot" />
                 </Button>
               </WrapItem>
             </Wrap>
           </VStack>
 
           <VStack align="start" spacing={2}>
-            <div>2. Make sure DMs from server members are enabled, otherwise the bot cannot message you.</div>
+            <div>
+              <FormattedMessage defaultMessage="2. Make sure DMs from server members are enabled, otherwise the bot cannot message you." />
+            </div>
 
             <chakra.img src={Privacy} borderRadius="md" />
             <chakra.img src={PrivacyDM} borderRadius="md" />
@@ -111,9 +118,9 @@ const Info = () => {
 
           <VStack align="start" spacing={2}>
             <div>
-              3. Copy the following message and send it to the bot via DM. Don't share this message with anyone else,
-              ever!
+              <FormattedMessage defaultMessage="3. Copy the following message and send it to the bot via DM. Don't share this message with anyone else, ever!" />
             </div>
+
             <MessageDisplay />
           </VStack>
 

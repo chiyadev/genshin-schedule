@@ -14,7 +14,7 @@ const Header = ({ menu }: { menu?: ReactNode }) => {
           <HStack spacing={2}>
             <chakra.img alt="logo" src={Favicon32x32} w={6} h={6} borderRadius="md" />
             <chakra.span fontSize="lg">
-              <FormattedMessage id="app" />
+              <FormattedMessage defaultMessage="Genshin Schedule" />
             </chakra.span>
           </HStack>
         </Link>
@@ -27,7 +27,7 @@ const Header = ({ menu }: { menu?: ReactNode }) => {
 
         <NextLink href="/customize" passHref>
           <Link flexShrink={0}>
-            <Tooltip label={<FormattedMessage id="customize" />}>
+            <Tooltip label={<FormattedMessage defaultMessage="Customize" />}>
               <span>
                 <Icon as={FaCog} />
               </span>

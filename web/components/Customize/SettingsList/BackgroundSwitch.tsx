@@ -6,7 +6,7 @@ import { trackEvent } from "../../../utils/umami";
 import { FormattedMessage, useIntl } from "react-intl";
 
 const BackgroundSwitch = () => {
-  const { formatMessage } = useIntl();
+  const { formatMessage, formatMessage: formatMessageId } = useIntl();
   const [value, setValue] = useConfig("background");
 
   return (
@@ -14,7 +14,7 @@ const BackgroundSwitch = () => {
       <HStack spacing={2}>
         <Icon as={FaImage} />
         <div>
-          <FormattedMessage id="background" />
+          <FormattedMessage defaultMessage="Background" />
         </div>
       </HStack>
 
@@ -25,10 +25,10 @@ const BackgroundSwitch = () => {
           trackEvent("background", value);
         }}
       >
-        <option value="paimon">{formatMessage({ id: "Paimon" })}</option>
-        <option value="klee">{formatMessage({ id: "Klee" })}</option>
-        <option value="zhongli">{formatMessage({ id: "Zhongli" })}</option>
-        <option value="none">{formatMessage({ id: "disabled" })}</option>
+        <option value="paimon">{formatMessageId({ id: "Paimon" })}</option>
+        <option value="klee">{formatMessageId({ id: "Klee" })}</option>
+        <option value="zhongli">{formatMessageId({ id: "Zhongli" })}</option>
+        <option value="none">{formatMessage({ defaultMessage: "Disabled" })}</option>
       </Select>
     </HStack>
   );

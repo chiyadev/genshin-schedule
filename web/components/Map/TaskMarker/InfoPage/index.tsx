@@ -67,7 +67,7 @@ const InfoPage = ({
         h={12}
         p={0}
         borderRadius={0}
-        placeholder={formatMessage({ id: "taskDesc" })}
+        placeholder={formatMessage({ defaultMessage: "Task description" })}
       />
 
       <VStack key={task.icon} align="stretch" spacing={1}>

@@ -17,7 +17,7 @@ const SettingsList = ({ user }: { user?: User }) => {
   return (
     <VStack align="stretch" spacing={4}>
       <Heading size="md">
-        <FormattedMessage id="settings" />
+        <FormattedMessage defaultMessage="Settings" />
       </Heading>
 
       <VStack align="start" spacing={4}>

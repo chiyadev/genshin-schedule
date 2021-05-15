@@ -8,6 +8,7 @@ import {
   getServerResetTime,
   useServerTime,
   Weekdays,
+  FormattedUnit,
 } from "../../../utils/time";
 import { FormattedMessage } from "react-intl";
 
@@ -21,16 +22,20 @@ const DateDisplay = () => {
 
   return (
     <chakra.div fontSize="sm" color="gray.500">
-      <FormattedMessage id={`day.${Weekdays[(6 + resetTime.weekday) % 7]}`} />,{" "}
+      <FormattedUnit id={`day.${Weekdays[(6 + resetTime.weekday) % 7]}`} />,{" "}
       <FormattedMessage
-        id="clockUntilReset"
+        defaultMessage="{duration} until reset"
         values={{ duration: useFormatDurationPart(resetDue, getLargestUnit(resetDue)) }}
       />
       {!offsetDays && (
         <span>
           {" "}
           (+
-          <FormattedMessage id="clockResins" values={{ value: resetResins }} />)
+          <FormattedMessage
+            defaultMessage="{value, plural, one {# resin} other {# resins}}"
+            values={{ value: resetResins }}
+          />
+          )
         </span>
       )}
     </chakra.div>

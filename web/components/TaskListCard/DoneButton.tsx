@@ -14,14 +14,14 @@ const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateA
   const setFocused = useTaskFocusSetter();
 
   return (
-    <Tooltip label={<FormattedMessage id="taskDone" />}>
+    <Tooltip label={<FormattedMessage defaultMessage="Mark as done" />}>
       <IconButton
         variant="outline"
         colorScheme="green"
         size={compact ? "xs" : "sm"}
         borderRadius="full"
         icon={<Icon as={FaCheck} />}
-        aria-label={formatMessage({ id: "taskDone" })}
+        aria-label={formatMessage({ defaultMessage: "Mark as done" })}
         onClick={() => {
           setDone(true);
           setFocused(task);

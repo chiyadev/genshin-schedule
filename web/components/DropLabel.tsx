@@ -1,10 +1,10 @@
 import React, { memo, useMemo } from "react";
 import { DomainDropSet, DomainDropSets } from "../db/domainDropSets";
 import { Domains } from "../db/domains";
-import { Weekday, Weekdays } from "../utils/time";
+import { FormattedUnit, Weekday, Weekdays } from "../utils/time";
 import { Domain } from "../assets";
 import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
 
 const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   const domains = useMemo(() => {
@@ -15,7 +15,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   if (!domains.length) {
     return (
       <div>
-        <FormattedMessage id="dropNone" />
+        <FormattedMessage defaultMessage="This item does not drop from any domains." />
       </div>
     );
   }
@@ -39,11 +39,11 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
 
             <div>
               <FormattedMessage
-                id="dropDomain"
+                defaultMessage="{domain}{days, select, undefined {} other { on {days}}}"
                 values={{
                   domain: (
                     <Link href={domain.wiki} isExternal>
-                      <FormattedMessage id={domain.name} />
+                      <FormattedMessageId id={domain.name} />
                     </Link>
                   ),
                   days:
@@ -52,7 +52,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
                       : Weekdays.filter((d) => days.has(d)).map((day, i) => (
                           <span key={day}>
                             {!!i && ", "}
-                            <FormattedMessage id={`day.${day}`} />
+                            <FormattedUnit id={`day.${day}`} />
                           </span>
                         )),
                 }}

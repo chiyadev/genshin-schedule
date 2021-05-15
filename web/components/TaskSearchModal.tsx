@@ -31,7 +31,7 @@ const TaskSearchModal = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<b
             <Input
               value={value}
               onChange={({ currentTarget: { value } }) => setValue(value)}
-              placeholder={formatMessage({ id: "taskSearch" })}
+              placeholder={formatMessage({ defaultMessage: "Search tasks..." })}
               onKeyDown={(e) => {
                 switch (e.keyCode) {
                   // enter

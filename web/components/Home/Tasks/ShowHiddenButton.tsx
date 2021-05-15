@@ -10,7 +10,7 @@ const ShowHiddenButton = () => {
   const [value, setValue] = useConfig("taskListShowHidden");
 
   return (
-    <Tooltip label={<FormattedMessage id="showHidden" />}>
+    <Tooltip label={<FormattedMessage defaultMessage="Show hidden" />}>
       <Button
         as="button"
         variant="ghost"

@@ -14,14 +14,14 @@ const NoteInput = ({ artifact }: { artifact: Artifact }) => {
       <HStack fontSize="lg" spacing={2}>
         <Icon as={FaRegStickyNote} />
         <div>
-          <FormattedMessage id="additionalNotes" />
+          <FormattedMessage defaultMessage="Additional notes" />
         </div>
       </HStack>
 
       <Textarea
         variant="filled"
         w="full"
-        placeholder={formatMessage({ id: "artifactNoteEg" })}
+        placeholder={formatMessage({ defaultMessage: "e.g. Lumine's artifact" })}
         value={notes[artifact.name] || ""}
         onChange={({ currentTarget: { value } }) => {
           setNotes((notes) => ({

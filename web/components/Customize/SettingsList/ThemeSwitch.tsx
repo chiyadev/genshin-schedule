@@ -13,7 +13,7 @@ const ThemeSwitch = () => {
       <HStack spacing={2}>
         <Icon as={FaPaintRoller} />
         <div>
-          <FormattedMessage id="darkMode" />
+          <FormattedMessage defaultMessage="Dark mode" />
         </div>
       </HStack>
 
