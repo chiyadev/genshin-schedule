@@ -3,7 +3,7 @@ import { DefaultConfig, Task, useConfig, useCurrentStats, useSync } from "./conf
 import { useRouter } from "next/router";
 import { randomStr } from "./index";
 import { getServerResetTime, useServerTime } from "./time";
-import { IconNames } from "../components/Map/TaskMarker/IconPage/search";
+import { IconNames } from "../db/icons";
 import { MemorySearch } from "./memorySearch";
 
 const iconIndexes = IconNames.reduce((a, b, i) => {

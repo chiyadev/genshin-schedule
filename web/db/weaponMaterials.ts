@@ -1,52 +1,54 @@
+import { registerMessage } from "../utils";
+
 export const WeaponMaterialWiki = "https://genshin-impact.fandom.com/wiki/Weapon_Ascension_Material";
 
 export type WeaponMaterial = {
   type: "Weapon Ascension Material";
   name: string;
-  wiki: string;
   item: string;
+  wiki: string;
 };
 
 export const Decarabian: WeaponMaterial = {
   type: "Weapon Ascension Material",
-  name: "Decarabian",
+  name: registerMessage({ defaultMessage: "Decarabian" }),
+  item: registerMessage({ defaultMessage: "Tile of Decarabian's Tower" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Tile_of_Decarabian%27s_Tower",
-  item: "Tile of Decarabian's Tower",
 };
 
 export const Guyun: WeaponMaterial = {
   type: "Weapon Ascension Material",
-  name: "Guyun",
+  name: registerMessage({ defaultMessage: "Guyun" }),
+  item: registerMessage({ defaultMessage: "Luminous Sands from Guyun" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Luminous_Sands_from_Guyun",
-  item: "Luminous Sands from Guyun",
 };
 
 export const BorealWolf: WeaponMaterial = {
   type: "Weapon Ascension Material",
-  name: "Boreal Wolf",
+  name: registerMessage({ defaultMessage: "Boreal Wolf" }),
+  item: registerMessage({ defaultMessage: "Boreal Wolf's Milk Tooth" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Boreal_Wolf%27s_Milk_Tooth",
-  item: "Boreal Wolf's Milk Tooth",
 };
 
 export const MistVeiledElixir: WeaponMaterial = {
   type: "Weapon Ascension Material",
-  name: "Mist Veiled Elixir",
+  name: registerMessage({ defaultMessage: "Mist Veiled Elixir" }),
+  item: registerMessage({ defaultMessage: "Mist Veiled Lead Elixir" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Mist_Veiled_Lead_Elixir",
-  item: "Mist Veiled Lead Elixir",
 };
 
 export const DandelionGladiator: WeaponMaterial = {
   type: "Weapon Ascension Material",
-  name: "Dandelion Gladiator",
+  name: registerMessage({ defaultMessage: "Dandelion Gladiator" }),
+  item: registerMessage({ defaultMessage: "Fetters of the Dandelion Gladiator" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Fetters_of_the_Dandelion_Gladiator",
-  item: "Fetters of the Dandelion Gladiator",
 };
 
 export const Aerosiderite: WeaponMaterial = {
   type: "Weapon Ascension Material",
-  name: "Aerosiderite",
+  name: registerMessage({ defaultMessage: "Aerosiderite" }),
+  item: registerMessage({ defaultMessage: "Grain of Aerosiderite" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Grain_of_Aerosiderite",
-  item: "Grain of Aerosiderite",
 };
 
 export const WeaponMaterials = [Decarabian, Guyun, BorealWolf, MistVeiledElixir, DandelionGladiator, Aerosiderite];

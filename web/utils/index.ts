@@ -33,3 +33,10 @@ export function hexToRgb(hex: string) {
 export function rgbToHex({ r, g, b }: { r: number; g: number; b: number }) {
   return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
+
+// Adds the given default message to the translation file without translating it immediately when called.
+// Used in database files to register entity names.
+// Also see: ../langs/extract.js
+export function registerMessage(message: { defaultMessage: string }) {
+  return message.defaultMessage;
+}

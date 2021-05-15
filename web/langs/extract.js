@@ -12,6 +12,8 @@ const IGNORE = ["node_modules/**/*", ".next/**/*", "*.d.ts"];
   const extracted = JSON.parse(
     await extract(files, {
       extractSourceLocation: true,
+      additionalFunctionNames: ["registerMessage"],
+
       idInterpolationPattern: (path) => {
         const { ext } = parse(path);
         path = path.substr(0, path.length - ext.length).replace(/\//g, ".");
@@ -25,6 +27,7 @@ const IGNORE = ["node_modules/**/*", ".next/**/*", "*.d.ts"];
 
   for (const [id, info] of Object.entries(extracted)) {
     const item = new PO.Item();
+
     item.msgid = info.defaultMessage;
     item.msgctxt = id;
     item.references = [`${info.file}:${info.line}`];
@@ -36,5 +39,5 @@ const IGNORE = ["node_modules/**/*", ".next/**/*", "*.d.ts"];
     po.items.push(item);
   }
 
-  await writeFile("langs/en-US.pot", po.toString());
+  await writeFile("langs/en_US.pot", po.toString());
 })();

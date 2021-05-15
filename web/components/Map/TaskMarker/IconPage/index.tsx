@@ -1,7 +1,7 @@
 import React, { Dispatch, memo, SetStateAction, useEffect, useMemo, useRef } from "react";
 import { Task, useConfig } from "../../../../utils/config";
 import { PopupPage } from "../index";
-import { IconCategories, IconSearch, KnownResourceTimers } from "./search";
+import { IconCategories, IconSearch, KnownResourceTimers } from "../../../../db/icons";
 import Item from "./Item";
 import { chakra, Icon, Input, InputGroup, InputLeftElement, SimpleGrid, VStack } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
@@ -83,8 +83,8 @@ const IconPage = ({
         {useMemo(
           () =>
             Object.keys(results).map((category) => (
-              <VStack align="stretch" spacing={1}>
-                <chakra.span fontSize="sm" textTransform="capitalize">
+              <VStack key={category} align="stretch" spacing={1}>
+                <chakra.span fontSize="sm">
                   <FormattedMessageId id={category} />
                 </chakra.span>
 

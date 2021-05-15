@@ -10,15 +10,15 @@ This folder contains localization files that dictate how text is displayed on th
 
 ## Adding a localization
 
-When writing a localization file, you should refer to the default [en-US](en-US.json) localization file as an example of how certain fields should be localized.
+When writing a localization file, you should refer to the default [en_US](en_US.json) localization file as an example of how certain fields should be localized.
 
 We use [react-intl](https://formatjs.io/docs/react-intl/) as the localization framework, which means there is full support for the [ICU MessageFormat](https://unicode-org.github.io/icu/userguide/format_parse/) syntax. There are many tutorials and examples on Google to help you.
 
 ### Fallback fields
 
-If a field is left unspecified, the website falls back to the `en-US` localization by default.
+If a field is left unspecified, the website falls back to the `en_US` localization by default.
 
-For example, if `en-US` contains:
+For example, if `en_US` contains:
 
 ```json
 {
@@ -44,13 +44,13 @@ the resulting localization is an object merge of the more specific localization 
 }
 ```
 
-which means if you are writing an `en-GB` localization, there is no need to specify the `anemo` field. It is automatically taken from `en-US`.
+which means if you are writing an `en-GB` localization, there is no need to specify the `anemo` field. It is automatically taken from `en_US`.
 
 ### Item names (unspecified fields)
 
 You can also translate game item names if you are translating to a non-English language.
 
-For example, if you are translating `Klee`, the field for her does not exist in `en-US`. This is because the key `"Klee"` already implies the value `"Klee"` when unspecified.
+For example, if you are translating `Klee`, the field for her does not exist in `en_US`. This is because the key `"Klee"` already implies the value `"Klee"` when unspecified.
 
 ```json
 {

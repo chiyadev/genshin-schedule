@@ -1,213 +1,215 @@
+import { registerMessage } from "../utils";
+
 export const CommonMaterialWiki = "https://genshin-impact.fandom.com/wiki/Common_Ascension_Material";
 
 export type CommonMaterial = {
   type: "Common Ascension Material";
   name: string;
-  wiki: string;
   item: string;
+  wiki: string;
 };
 
 export const Slime: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Slime",
+  name: registerMessage({ defaultMessage: "Slime" }),
+  item: registerMessage({ defaultMessage: "Slime Condensate" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Slime_Condensate",
-  item: "Slime Condensate",
 };
 
 export const HilichurlMask: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Hilichurl Mask",
+  name: registerMessage({ defaultMessage: "Hilichurl Mask" }),
+  item: registerMessage({ defaultMessage: "Damaged Mask" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Damaged_Mask",
-  item: "Damaged Mask",
 };
 
 export const HilichurlArrowhead: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Hilichurl Arrowhead",
+  name: registerMessage({ defaultMessage: "Hilichurl Arrowhead" }),
+  item: registerMessage({ defaultMessage: "Firm Arrowhead" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Firm_Arrowhead",
-  item: "Firm Arrowhead",
 };
 
 export const SamachurlScroll: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Samachurl Scroll",
+  name: registerMessage({ defaultMessage: "Samachurl Scroll" }),
+  item: registerMessage({ defaultMessage: "Divining Scroll" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Divining_Scroll",
-  item: "Divining Scroll",
 };
 
 export const HilichurlHorn: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Hilichurl Horn",
+  name: registerMessage({ defaultMessage: "Hilichurl Horn" }),
+  item: registerMessage({ defaultMessage: "Heavy Horn" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Heavy_Horn",
-  item: "Heavy Horn",
 };
 
 export const LeyLine: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Ley Line",
+  name: registerMessage({ defaultMessage: "Ley Line" }),
+  item: registerMessage({ defaultMessage: "Dead Ley Line Branch" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Dead_Ley_Line_Branch",
-  item: "Dead Ley Line Branch",
 };
 
 export const ChaosPart: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Chaos Part",
+  name: registerMessage({ defaultMessage: "Chaos Part" }),
+  item: registerMessage({ defaultMessage: "Chaos Device" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Chaos_Device",
-  item: "Chaos Device",
 };
 
 export const MistGrass: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Mist Grass",
+  name: registerMessage({ defaultMessage: "Mist Grass" }),
+  item: registerMessage({ defaultMessage: "Mist Grass Pollen" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Mist_Grass_Pollen",
-  item: "Mist Grass Pollen",
 };
 
 export const FatuiKnife: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Fatui Knife",
+  name: registerMessage({ defaultMessage: "Fatui Knife" }),
+  item: registerMessage({ defaultMessage: "Hunter's Sacrificial Knife" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Hunter%27s_Sacrificial_Knife",
-  item: "Hunter's Sacrificial Knife",
 };
 
 export const FatuiInsignia: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Fatui Insignia",
+  name: registerMessage({ defaultMessage: "Fatui Insignia" }),
+  item: registerMessage({ defaultMessage: "Recruit's Insignia" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Recruit%27s_Insignia",
-  item: "Recruit's Insignia",
 };
 
 export const TreasureHoarderInsignia: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Treasure Hoarder Insignia",
+  name: registerMessage({ defaultMessage: "Treasure Hoarder Insignia" }),
+  item: registerMessage({ defaultMessage: "Treasure Hoarder Insignia" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Treasure_Hoarder_Insignia",
-  item: "Treasure Hoarder Insignia",
 };
 
 export const BoneShard: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Bone Shard",
+  name: registerMessage({ defaultMessage: "Bone Shard" }),
+  item: registerMessage({ defaultMessage: "Fragile Bone Shard" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Fragile_Bone_Shard",
-  item: "Fragile Bone Shard",
 };
 
 export const WhopperflowerNectar: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Whopperflower Nectar",
+  name: registerMessage({ defaultMessage: "Whopperflower Nectar" }),
+  item: registerMessage({ defaultMessage: "Whopperflower Nectar" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Whopperflower_Nectar",
-  item: "Whopperflower Nectar",
 };
 
 export const CallaLily: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Calla Lily",
+  name: registerMessage({ defaultMessage: "Calla Lily" }),
+  item: registerMessage({ defaultMessage: "Calla Lily" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Calla_Lily",
-  item: "Calla Lily",
 };
 
 export const Cecilia: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Cecilia",
+  name: registerMessage({ defaultMessage: "Cecilia" }),
+  item: registerMessage({ defaultMessage: "Cecilia" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Cecilia",
-  item: "Cecilia",
 };
 
 export const CorLapis: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Cor Lapis",
+  name: registerMessage({ defaultMessage: "Cor Lapis" }),
+  item: registerMessage({ defaultMessage: "Cor Lapis" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Cor_Lapis",
-  item: "Cor Lapis",
 };
 
 export const DandelionSeed: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Dandelion Seed",
+  name: registerMessage({ defaultMessage: "Dandelion Seed" }),
+  item: registerMessage({ defaultMessage: "Dandelion Seed" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Dandelion_Seed",
-  item: "Dandelion Seed",
 };
 
 export const GlazeLily: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Glaze Lily",
+  name: registerMessage({ defaultMessage: "Glaze Lily" }),
+  item: registerMessage({ defaultMessage: "Glaze Lily" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Glaze_Lily",
-  item: "Glaze Lily",
 };
 
 export const JueyunChili: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Jueyun Chili",
+  name: registerMessage({ defaultMessage: "Jueyun Chili" }),
+  item: registerMessage({ defaultMessage: "Jueyun Chili" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Jueyun_Chili",
-  item: "Jueyun Chili",
 };
 
 export const NoctilucousJade: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Noctilucous Jade",
+  name: registerMessage({ defaultMessage: "Noctilucous Jade" }),
+  item: registerMessage({ defaultMessage: "Noctilucous Jade" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Noctilucous_Jade",
-  item: "Noctilucous Jade",
 };
 
 export const PhilanemoMushroom: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Philanemo Mushroom",
+  name: registerMessage({ defaultMessage: "Philanemo Mushroom" }),
+  item: registerMessage({ defaultMessage: "Philanemo Mushroom" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Philanemo_Mushroom",
-  item: "Philanemo Mushroom",
 };
 
 export const Qingxin: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Qingxin",
+  name: registerMessage({ defaultMessage: "Qingxin" }),
+  item: registerMessage({ defaultMessage: "Qingxin" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Qingxin",
-  item: "Qingxin",
 };
 
 export const SilkFlower: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Silk Flower",
+  name: registerMessage({ defaultMessage: "Silk Flower" }),
+  item: registerMessage({ defaultMessage: "Silk Flower" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Silk_Flower",
-  item: "Silk Flower",
 };
 
 export const SmallLampGrass: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Small Lamp Grass",
+  name: registerMessage({ defaultMessage: "Small Lamp Grass" }),
+  item: registerMessage({ defaultMessage: "Small Lamp Grass" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Small_Lamp_Grass",
-  item: "Small Lamp Grass",
 };
 
 export const Starconch: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Starconch",
+  name: registerMessage({ defaultMessage: "Starconch" }),
+  item: registerMessage({ defaultMessage: "Starconch" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Starconch",
-  item: "Starconch",
 };
 
 export const Valberry: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Valberry",
+  name: registerMessage({ defaultMessage: "Valberry" }),
+  item: registerMessage({ defaultMessage: "Valberry" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Valberry",
-  item: "Valberry",
 };
 
 export const Violetgrass: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Violetgrass",
+  name: registerMessage({ defaultMessage: "Violetgrass" }),
+  item: registerMessage({ defaultMessage: "Violetgrass" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Violetgrass",
-  item: "Violetgrass",
 };
 
 export const WindwheelAster: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Windwheel Aster",
+  name: registerMessage({ defaultMessage: "Windwheel Aster" }),
+  item: registerMessage({ defaultMessage: "Windwheel Aster" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Windwheel_Aster",
-  item: "Windwheel Aster",
 };
 
 export const Wolfhook: CommonMaterial = {
   type: "Common Ascension Material",
-  name: "Wolfhook",
+  name: registerMessage({ defaultMessage: "Wolfhook" }),
+  item: registerMessage({ defaultMessage: "Wolfhook" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Wolfhook",
-  item: "Wolfhook",
 };
 
 export const CommonMaterials = [

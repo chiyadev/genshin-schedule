@@ -18,9 +18,15 @@ const SKIP_EMPTY = true;
 
     for (const item of po.items) {
       if (SKIP_FUZZY && item.flags.fuzzy === true) continue;
-      if (SKIP_EMPTY && (item.msgstr.length === 0 || !item.msgstr[0])) continue;
+      if (SKIP_EMPTY && !item.msgstr[0]) continue;
 
-      map.set(item.msgctxt, item.msgstr[0]);
+      let id = item.msgctxt;
+
+      if (id.startsWith("db.")) {
+        id = item.msgstr[0];
+      }
+
+      map.set(id, item.msgstr[0]);
     }
 
     await writeFile(`langs/${path.parse(file).name}.json`, JSON.stringify(Object.fromEntries(map), null, 2));
