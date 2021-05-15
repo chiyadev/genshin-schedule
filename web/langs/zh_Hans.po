@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
 "PO-Revision-Date: 2021-05-15 13:49+0000\n"
-"Last-Translator: Richard Yu <yurichard3839@gmail.com>\n"
+"Last-Translator: phos <phosphene47@chiya.dev>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -473,7 +473,7 @@ msgstr "Genshin Schedule"
 #: components/Home/Clock/DateDisplay.tsx:34
 msgctxt "components.Home.Clock.DateDisplay.d1826b"
 msgid "{value, plural, one {# resin} other {# resins}}"
-msgstr "{value, plural, one {# 树脂} other {# 树脂}}"
+msgstr "{value} 树脂"
 
 #: components/Home/Clock/DateDisplay.tsx:26
 msgctxt "components.Home.Clock.DateDisplay.de212c"
