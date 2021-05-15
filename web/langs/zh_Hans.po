@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
-"PO-Revision-Date: 2021-05-15 13:35+0000\n"
+"PO-Revision-Date: 2021-05-15 13:49+0000\n"
 "Last-Translator: Golden_Water <2439577268@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
@@ -69,9 +69,7 @@ msgctxt "components.ClockOffsetWarning.85fdee"
 msgid ""
 "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} "
 "other {in # days}}."
-msgstr ""
-"正在显示 {offset, plural, =1 {明天的计划} =-1 {昨天的计划} other { # 天后的计"
-"划}}."
+msgstr "正在显示 {offset, plural, =1 {明天的计划} =-1 {昨天的计划} other {# 天后的计划}}."
 
 #: components/ClockOffsetWarning.tsx:36
 msgctxt "components.ClockOffsetWarning.8e6fec"
@@ -525,7 +523,7 @@ msgstr "圣遗物"
 #: components/Home/DomainView/index.tsx:247
 msgctxt "components.Home.DomainView.index.41dc3d"
 msgid "No domains for today. Maybe try some {link}?"
-msgstr ""
+msgstr "今天没有需要挑战的秘境. 也许可以试试 {link}?"
 
 #: components/Home/DomainView/index.tsx:256
 msgctxt "components.Home.DomainView.index.4af108"
