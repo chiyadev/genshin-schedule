@@ -18,7 +18,10 @@ const DueText = ({ task }: { task: Task }) => {
 
       <div>
         {due ? (
-          <FormattedMessage defaultMessage="Due in {time}" values={{ time: useFormatDurationPart(dueTime, getLargestUnit(dueTime)) }} />
+          <FormattedMessage
+            defaultMessage="Due in {time}"
+            values={{ time: useFormatDurationPart(dueTime, getLargestUnit(dueTime)) }}
+          />
         ) : (
           <FormattedMessage
             defaultMessage="Due {time} ago"

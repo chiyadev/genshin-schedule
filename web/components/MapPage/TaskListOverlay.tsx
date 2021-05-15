@@ -49,7 +49,11 @@ const TaskListOverlay = () => {
           <HStack spacing={2}>
             <Icon as={expanded ? FaChevronDown : FaChevronUp} />
             <div>
-              {expanded ? <FormattedMessage defaultMessage="Hide list" /> : <FormattedMessage defaultMessage="Show list" />}
+              {expanded ? (
+                <FormattedMessage defaultMessage="Hide list" />
+              ) : (
+                <FormattedMessage defaultMessage="Show list" />
+              )}
               <span> ({dueTasks.length})</span>
             </div>
           </HStack>

@@ -42,7 +42,10 @@ const CommonMaterialDisplay = ({ character, material }: { character: Character; 
           try {
             await createTask(
               material,
-              formatMessage({ defaultMessage: "ascension material for {name}" }, { name: formatMessageId({ id: character.name }) })
+              formatMessage(
+                { defaultMessage: "ascension material for {name}" },
+                { name: formatMessageId({ id: character.name }) }
+              )
             );
           } finally {
             setCreate(false);

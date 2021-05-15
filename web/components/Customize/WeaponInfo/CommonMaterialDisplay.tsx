@@ -41,7 +41,10 @@ const CommonMaterialDisplay = ({ weapon, material }: { weapon: Weapon; material:
           try {
             await createTask(
               material,
-              formatMessage({ defaultMessage: "ascension material for {name}" }, { name: formatMessageId({ id: weapon.name }) })
+              formatMessage(
+                { defaultMessage: "ascension material for {name}" },
+                { name: formatMessageId({ id: weapon.name }) }
+              )
             );
           } finally {
             setCreate(false);

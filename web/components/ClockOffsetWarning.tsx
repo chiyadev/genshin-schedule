@@ -21,7 +21,10 @@ const ClockOffsetWarning = () => {
           <AlertIcon />
 
           <div>
-            <FormattedMessage defaultMessage="Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} other {in # days}}." values={{ offset }} />{" "}
+            <FormattedMessage
+              defaultMessage="Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} other {in # days}}."
+              values={{ offset }}
+            />{" "}
             <Link
               as="button"
               color={useColorModeValue("blue.500", "blue.300")}
