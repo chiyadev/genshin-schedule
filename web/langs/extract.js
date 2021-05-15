@@ -2,10 +2,22 @@ const { extract } = require("@formatjs/cli");
 const glob = require("fast-glob");
 const PO = require("pofile");
 const { writeFile } = require("fs/promises");
-const { parse } = require("path");
+const { parse, relative } = require("path");
 
 const FILE = "**/*.{ts,tsx}";
 const IGNORE = ["node_modules/**/*", ".next/**/*", "*.d.ts"];
+
+function idInterpolationPattern(path) {
+  const { ext } = parse(path);
+
+  if (path.startsWith(process.cwd())) {
+    path = relative(process.cwd(), path);
+  }
+
+  path = path.substr(0, path.length - ext.length).replace(/\//g, ".");
+
+  return `${path}.[sha512:contenthash:hex:6]`;
+}
 
 (async () => {
   const files = await glob(FILE, { ignore: IGNORE });
@@ -13,13 +25,7 @@ const IGNORE = ["node_modules/**/*", ".next/**/*", "*.d.ts"];
     await extract(files, {
       extractSourceLocation: true,
       additionalFunctionNames: ["registerMessage"],
-
-      idInterpolationPattern: (path) => {
-        const { ext } = parse(path);
-        path = path.substr(0, path.length - ext.length).replace(/\//g, ".");
-
-        return `${path}.[sha512:contenthash:hex:6]`;
-      },
+      idInterpolationPattern,
     })
   );
 

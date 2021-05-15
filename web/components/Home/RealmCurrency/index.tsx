@@ -27,7 +27,7 @@ const RealmCurrency = () => {
   return (
     <WidgetWrapper
       type="realm"
-      heading={<FormattedMessage defaultMessage="Realm currency calculator" />}
+      heading={<FormattedMessage defaultMessage="Realm Currency Calculator" />}
       onHover={setHover}
     >
       <WhiteCard>

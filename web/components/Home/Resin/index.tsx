@@ -33,7 +33,7 @@ const Resin = () => {
   const current = resin.value + getResinRecharge(time.valueOf() - resin.time);
 
   return (
-    <WidgetWrapper type="resin" heading={<FormattedMessage defaultMessage="Resin calculator" />} onHover={setHover}>
+    <WidgetWrapper type="resin" heading={<FormattedMessage defaultMessage="Resin Calculator" />} onHover={setHover}>
       <NotificationSetter />
 
       <WhiteCard>
