@@ -27,7 +27,7 @@ const IGNORE = ["node_modules/**/*", ".next/**/*", "*.d.ts"];
     const item = new PO.Item();
     item.msgid = info.defaultMessage;
     item.msgctxt = id;
-    item.references = [`${info.file}:${info.line}`];
+    item.references = [`../${info.file}:${info.line}`];
 
     if (info.description) {
       item.extractedComments = [info.description];
