@@ -3,60 +3,62 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-16 11:56+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-05-17 10:33+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"genshin-schedule/web/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.3.6\n"
-
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: components/Auth/UserSignIn.tsx:57
 msgctxt "components.Auth.UserSignIn.242220"
 msgid "Username"
-msgstr ""
+msgstr "Brukernavn"
 
 #: components/Auth/UserSignIn.tsx:45
 msgctxt "components.Auth.UserSignIn.28def3"
 msgid "Error"
-msgstr ""
+msgstr "Feil"
 
 #: components/Auth/UserSignIn.tsx:84
 msgctxt "components.Auth.UserSignIn.57f247"
 msgid "Forgot password?"
-msgstr ""
+msgstr "Glemt passordet?"
 
 #: components/Auth/UserSignIn.tsx:144
 msgctxt "components.Auth.UserSignIn.61ef74"
 msgid "Continue as anonymous"
-msgstr ""
+msgstr "Fortsett som anonym"
 
 #: components/Auth/UserSignIn.tsx:89
 msgctxt "components.Auth.UserSignIn.7249ee"
 msgid "Never reuse your miHoYo password on Genshin-related websites."
-msgstr ""
+msgstr "Aldri gjenbruk ditt miHoYo-passord på Genshin-relaterte nettsider."
 
 #: components/Auth/UserSignIn.tsx:133
+#, fuzzy
 msgctxt "components.Auth.UserSignIn.93eb72"
 msgid "All data will be stored locally on the browser."
-msgstr ""
+msgstr "All data vil lagres lokalt i nettleseren."
 
 #: components/Auth/UserSignIn.tsx:97
 msgctxt "components.Auth.UserSignIn.bc7fa7"
 msgid "Read more."
-msgstr ""
+msgstr "Les mer."
 
 #: components/Auth/UserSignIn.tsx:130
 msgctxt "components.Auth.UserSignIn.c12651"
 msgid "Submit"
-msgstr ""
+msgstr "Send inn"
 
 #: components/Auth/UserSignIn.tsx:70
 msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
-msgstr ""
+msgstr "Passord"
 
 #: components/ChangelogModal.tsx:176
 msgctxt "components.ChangelogModal.3a15e6"
@@ -81,7 +83,7 @@ msgstr ""
 #: components/Customize/ArtifactInfo/NoteInput.tsx:17
 msgctxt "components.Customize.ArtifactInfo.NoteInput.c6a1b4"
 msgid "Additional notes"
-msgstr ""
+msgstr "Ytterligere merknader"
 
 #: components/Customize/ArtifactInfo/Toggle.tsx:23
 msgctxt "components.Customize.ArtifactInfo.Toggle.cce039"
@@ -101,7 +103,7 @@ msgstr ""
 #: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:55
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
-msgstr ""
+msgstr "Legg til som gjøremål"
 
 #: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:45
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.b4b55a"
@@ -141,7 +143,7 @@ msgstr ""
 #: components/Customize/Notifications/Info.tsx:36
 msgctxt "components.Customize.Notifications.Info.34089d"
 msgid "Notifications"
-msgstr ""
+msgstr "Merknader"
 
 #: components/Customize/Notifications/Info.tsx:53
 msgctxt "components.Customize.Notifications.Info.63d176"
@@ -186,7 +188,7 @@ msgstr ""
 #: components/Customize/Notifications/MessageDisplay.tsx:34
 msgctxt "components.Customize.Notifications.MessageDisplay.a79e7a"
 msgid "Copied"
-msgstr ""
+msgstr "Kopiert"
 
 #: components/Customize/Notifications/MessageDisplay.tsx:34
 msgctxt "components.Customize.Notifications.MessageDisplay.e25eaf"
@@ -196,7 +198,7 @@ msgstr ""
 #: components/Customize/Notifications/MessageDisplay.tsx:20
 msgctxt "components.Customize.Notifications.MessageDisplay.fbf09e"
 msgid "You are not signed in."
-msgstr ""
+msgstr "Du er ikke innlogget."
 
 #: components/Customize/Search.tsx:27
 msgctxt "components.Customize.Search.2027a7"
@@ -226,12 +228,12 @@ msgstr ""
 #: components/Customize/SettingsList/AccountManageButton.tsx:93
 msgctxt "components.Customize.SettingsList.AccountManageButton.242220"
 msgid "Username"
-msgstr ""
+msgstr "Brukernavn"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:51
 msgctxt "components.Customize.SettingsList.AccountManageButton.2d40ff"
 msgid "Manage account"
-msgstr ""
+msgstr "Håndter konto"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:121
 msgctxt "components.Customize.SettingsList.AccountManageButton.2f8c01"
@@ -241,47 +243,47 @@ msgstr ""
 #: components/Customize/SettingsList/AccountManageButton.tsx:113
 msgctxt "components.Customize.SettingsList.AccountManageButton.7d31e1"
 msgid "New password"
-msgstr ""
+msgstr "Nytt passord"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:98
 msgctxt "components.Customize.SettingsList.AccountManageButton.a58ae0"
 msgid "New username"
-msgstr ""
+msgstr "Nytt brukernavn"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:129
 msgctxt "components.Customize.SettingsList.AccountManageButton.c12651"
 msgid "Submit"
-msgstr ""
+msgstr "Send inn"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:133
 msgctxt "components.Customize.SettingsList.AccountManageButton.e3b158"
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:107
 msgctxt "components.Customize.SettingsList.AccountManageButton.e6c83b"
 msgid "Password"
-msgstr ""
+msgstr "Passord"
 
 #: components/Customize/SettingsList/BackgroundSwitch.tsx:17
 msgctxt "components.Customize.SettingsList.BackgroundSwitch.5d0640"
 msgid "Background"
-msgstr ""
+msgstr "Bakgrunn"
 
 #: components/Customize/SettingsList/BackgroundSwitch.tsx:31
 msgctxt "components.Customize.SettingsList.BackgroundSwitch.b6d853"
 msgid "Disabled"
-msgstr ""
+msgstr "Avskrudd"
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:67
 msgctxt "components.Customize.SettingsList.ConfigExportButton.243268"
 msgid "This action cannot be undone."
-msgstr ""
+msgstr "Denne handlingen kan ikke angres"
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:99
 msgctxt "components.Customize.SettingsList.ConfigExportButton.8ff2e0"
 msgid "Overwrite"
-msgstr ""
+msgstr "Overskriv"
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:60
 msgctxt "components.Customize.SettingsList.ConfigExportButton.a27849"
@@ -301,22 +303,22 @@ msgstr ""
 #: components/Customize/SettingsList/ConfigExportButton.tsx:52
 msgctxt "components.Customize.SettingsList.ConfigExportButton.dcad88"
 msgid "Manage data"
-msgstr ""
+msgstr "Håndter data"
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:109
 msgctxt "components.Customize.SettingsList.ConfigExportButton.e25eaf"
 msgid "Copy"
-msgstr ""
+msgstr "Kopier"
 
 #: components/Customize/SettingsList/LanguageSwitch.tsx:37
 msgctxt "components.Customize.SettingsList.LanguageSwitch.4b7b37"
 msgid "Add new language"
-msgstr ""
+msgstr "Legg til nytt språk"
 
 #: components/Customize/SettingsList/LanguageSwitch.tsx:18
 msgctxt "components.Customize.SettingsList.LanguageSwitch.cb5677"
 msgid "Language"
-msgstr ""
+msgstr "Språk"
 
 #: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:17
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.6eef86"
@@ -341,7 +343,7 @@ msgstr ""
 #: components/Customize/SettingsList/SignOutButton.tsx:22
 msgctxt "components.Customize.SettingsList.SignOutButton.c576c9"
 msgid "Sign out"
-msgstr ""
+msgstr "Logg ut"
 
 #: components/Customize/SettingsList/TaskDefaultZoomSlider.tsx:16
 msgctxt "components.Customize.SettingsList.TaskDefaultZoomSlider.9c6d23"
@@ -366,7 +368,7 @@ msgstr ""
 #: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:54
 msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
-msgstr ""
+msgstr "Legg til som gjøremål"
 
 #: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:44
 msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.b4b55a"
@@ -396,7 +398,7 @@ msgstr ""
 #: components/Customize/WeaponList/index.tsx:16
 msgctxt "components.Customize.WeaponList.index.4477a1"
 msgid "Weapons"
-msgstr ""
+msgstr "Våpen"
 
 #: components/DropLabel.tsx:18
 msgctxt "components.DropLabel.9f02aa"
@@ -416,7 +418,7 @@ msgstr ""
 #: components/Footer.tsx:47
 msgctxt "components.Footer.484351"
 msgid "Help"
-msgstr ""
+msgstr "Hjelp"
 
 #: components/Footer.tsx:34
 msgctxt "components.Footer.865a3c"
@@ -431,7 +433,7 @@ msgstr ""
 #: components/Footer.tsx:59
 msgctxt "components.Footer.c0ef70"
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: components/Footer.tsx:12
 msgctxt "components.Footer.d541af"
@@ -466,17 +468,17 @@ msgstr ""
 #: components/Home/Clock/ServerText.tsx:16
 msgctxt "components.Home.Clock.ServerText.0fe07e"
 msgid "Switch server"
-msgstr ""
+msgstr "Bytt tjener"
 
 #: components/Home/Clock/TimeDisplay.tsx:61
 msgctxt "components.Home.Clock.TimeDisplay.44c3b9"
 msgid "Previous day"
-msgstr ""
+msgstr "Forrige dag"
 
 #: components/Home/Clock/TimeDisplay.tsx:71
 msgctxt "components.Home.Clock.TimeDisplay.dd708b"
 msgid "Next day"
-msgstr ""
+msgstr "Neste dag"
 
 #: components/Home/Clock/index.tsx:15
 msgctxt "components.Home.Clock.index.2cbf2a"
@@ -491,7 +493,7 @@ msgstr ""
 #: components/Home/DomainView/FilterButtons.tsx:28
 msgctxt "components.Home.DomainView.FilterButtons.4477a1"
 msgid "Weapons"
-msgstr ""
+msgstr "Våpen"
 
 #: components/Home/DomainView/FilterButtons.tsx:22
 msgctxt "components.Home.DomainView.FilterButtons.4e372c"
@@ -521,12 +523,12 @@ msgstr ""
 #: components/Home/RealmCurrency/ClearButton.tsx:23
 msgctxt "components.Home.RealmCurrency.ClearButton.fc60a8"
 msgid "Clear"
-msgstr ""
+msgstr "Tøm"
 
 #: components/Home/RealmCurrency/index.tsx:53
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
 msgid "Trust rank"
-msgstr ""
+msgstr "Tillitsrangering"
 
 #: components/Home/RealmCurrency/index.tsx:60
 msgctxt "components.Home.RealmCurrency.index.27268e"
@@ -544,19 +546,22 @@ msgid "Realm Currency Calculator"
 msgstr ""
 
 #: components/Home/Resin/EstimatorByNotifyMark.tsx:18
+#, fuzzy
 msgctxt "components.Home.Resin.EstimatorByNotifyMark.5921a5"
 msgid "{value} in {time}"
-msgstr ""
+msgstr "{value} i {time}"
 
 #: components/Home/Resin/EstimatorByResin.tsx:38
+#, fuzzy
 msgctxt "components.Home.Resin.EstimatorByResin.5921a5"
 msgid "{value} in {time}"
-msgstr ""
+msgstr "{value} i {time}"
 
 #: components/Home/Resin/EstimatorByTime.tsx:48
+#, fuzzy
 msgctxt "components.Home.Resin.EstimatorByTime.f0f932"
 msgid "{value} in {duration}"
-msgstr ""
+msgstr "{value} i {duration}"
 
 #: components/Home/Resin/NotificationSetter.tsx:32
 msgctxt "components.Home.Resin.NotificationSetter.94aedd"
@@ -591,22 +596,22 @@ msgstr ""
 #: components/Home/Tasks/SearchButton.tsx:20
 msgctxt "components.Home.Tasks.SearchButton.c66715"
 msgid "Search"
-msgstr ""
+msgstr "Søk"
 
 #: components/Home/Tasks/ShowHiddenButton.tsx:13
 msgctxt "components.Home.Tasks.ShowHiddenButton.7a418f"
 msgid "Show hidden"
-msgstr ""
+msgstr "Vis skjulte"
 
 #: components/Home/Tasks/index.tsx:43
 msgctxt "components.Home.Tasks.index.0b9931"
 msgid "Today's Tasks"
-msgstr ""
+msgstr "Dagens gjøremål"
 
 #: components/Home/Tasks/index.tsx:94
 msgctxt "components.Home.Tasks.index.778f27"
 msgid "Open map"
-msgstr ""
+msgstr "Åpne kart"
 
 #: components/Home/Tasks/index.tsx:67
 msgctxt "components.Home.Tasks.index.d6861b"
@@ -616,37 +621,37 @@ msgstr ""
 #: components/Layout.tsx:62
 msgctxt "components.Layout.1f7783"
 msgid "Statistics"
-msgstr ""
+msgstr "Statistikk"
 
 #: components/Layout.tsx:53
 msgctxt "components.Layout.34089d"
 msgid "Notifications"
-msgstr ""
+msgstr "Merknader"
 
 #: components/Map/TaskCreateLayer/CreateButton.tsx:32
 msgctxt "components.Map.TaskCreateLayer.CreateButton.573cd8"
 msgid "Create"
-msgstr ""
+msgstr "Opprett"
 
 #: components/Map/TaskLayer/DeleteButton.tsx:31
 msgctxt "components.Map.TaskLayer.DeleteButton.2b7afa"
 msgid "Delete"
-msgstr ""
+msgstr "Slett"
 
 #: components/Map/TaskLayer/DoneButton.tsx:31
 msgctxt "components.Map.TaskLayer.DoneButton.395490"
 msgid "Mark as to-do"
-msgstr ""
+msgstr "Marker som løst"
 
 #: components/Map/TaskLayer/DoneButton.tsx:33
 msgctxt "components.Map.TaskLayer.DoneButton.927523"
 msgid "Mark as done"
-msgstr ""
+msgstr "Marker som gjort"
 
 #: components/Map/TaskMarker/BackButton.tsx:12
 msgctxt "components.Map.TaskMarker.BackButton.73247b"
 msgid "Back"
-msgstr ""
+msgstr "Tilbake"
 
 #: components/Map/TaskMarker/InfoPage/DueText.tsx:25
 msgctxt "components.Map.TaskMarker.InfoPage.DueText.17572f"
@@ -661,7 +666,7 @@ msgstr ""
 #: components/Map/TaskMarker/InfoPage/HideCheck.tsx:17
 msgctxt "components.Map.TaskMarker.InfoPage.HideCheck.fdf592"
 msgid "Hide temporarily"
-msgstr ""
+msgstr "Skjul midlertidig"
 
 #: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:67
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.52cf48"
@@ -706,17 +711,17 @@ msgstr ""
 #: components/MapPage/SearchButton.tsx:26
 msgctxt "components.MapPage.SearchButton.c66715"
 msgid "Search"
-msgstr ""
+msgstr "Søk"
 
 #: components/MapPage/TaskListOverlay.tsx:54
 msgctxt "components.MapPage.TaskListOverlay.ea3f7e"
 msgid "Show list"
-msgstr ""
+msgstr "Vis liste"
 
 #: components/MapPage/TaskListOverlay.tsx:52
 msgctxt "components.MapPage.TaskListOverlay.f36c72"
 msgid "Hide list"
-msgstr ""
+msgstr "Skjul liste"
 
 #: components/ShortcutHelp.tsx:67
 msgctxt "components.ShortcutHelp.0b8e0c"
@@ -726,7 +731,7 @@ msgstr ""
 #: components/ShortcutHelp.tsx:34
 msgctxt "components.ShortcutHelp.44c3b9"
 msgid "Previous day"
-msgstr ""
+msgstr "Forrige dag"
 
 #: components/ShortcutHelp.tsx:69
 msgctxt "components.ShortcutHelp.49f4fc"
@@ -746,7 +751,7 @@ msgstr ""
 #: components/ShortcutHelp.tsx:32
 msgctxt "components.ShortcutHelp.723949"
 msgid "Server clock"
-msgstr ""
+msgstr "Tjenerklokke"
 
 #: components/ShortcutHelp.tsx:59
 msgctxt "components.ShortcutHelp.755c57"
@@ -761,7 +766,7 @@ msgstr ""
 #: components/ShortcutHelp.tsx:73
 msgctxt "components.ShortcutHelp.927523"
 msgid "Mark as done"
-msgstr ""
+msgstr "Marker som gjort"
 
 #: components/ShortcutHelp.tsx:44
 msgctxt "components.ShortcutHelp.96d48b"
@@ -771,17 +776,17 @@ msgstr ""
 #: components/ShortcutHelp.tsx:79
 msgctxt "components.ShortcutHelp.9f8054"
 msgid "Show keyboard shortcuts"
-msgstr ""
+msgstr "Vis tastatursnarveier"
 
 #: components/ShortcutHelp.tsx:46
 msgctxt "components.ShortcutHelp.b13795"
 msgid "Subtract {values}"
-msgstr ""
+msgstr "Trekk fra {values}"
 
 #: components/ShortcutHelp.tsx:25
 msgctxt "components.ShortcutHelp.bf360f"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Tastatursnarveier"
 
 #: components/ShortcutHelp.tsx:64
 msgctxt "components.ShortcutHelp.c03f14"
@@ -796,7 +801,7 @@ msgstr ""
 #: components/ShortcutHelp.tsx:37
 msgctxt "components.ShortcutHelp.dd708b"
 msgid "Next day"
-msgstr ""
+msgstr "Neste dag"
 
 #: components/ShortcutHelp.tsx:70
 msgctxt "components.ShortcutHelp.efcb6e"
@@ -831,12 +836,12 @@ msgstr ""
 #: components/Statistics/ResetButton.tsx:46
 msgctxt "components.Statistics.ResetButton.8e6fec"
 msgid "Reset"
-msgstr ""
+msgstr "Tilbakestill"
 
 #: components/Statistics/ResetButton.tsx:50
 msgctxt "components.Statistics.ResetButton.e3b158"
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: components/Statistics/ResinStats.tsx:84
 msgctxt "components.Statistics.ResinStats.101bad"
@@ -856,7 +861,7 @@ msgstr ""
 #: components/Statistics/ResinStats.tsx:107
 msgctxt "components.Statistics.ResinStats.76ed65"
 msgid "Never"
-msgstr ""
+msgstr "Aldri"
 
 #: components/Statistics/ResinStats.tsx:15
 msgctxt "components.Statistics.ResinStats.99ed7d"
@@ -866,7 +871,7 @@ msgstr ""
 #: components/Statistics/ResinStats.tsx:63
 msgctxt "components.Statistics.ResinStats.cd681b"
 msgid "Today"
-msgstr ""
+msgstr "I dag"
 
 #: components/Statistics/TaskStats.tsx:76
 msgctxt "components.Statistics.TaskStats.309da3"
@@ -881,7 +886,7 @@ msgstr ""
 #: components/Statistics/TaskStats.tsx:97
 msgctxt "components.Statistics.TaskStats.76ed65"
 msgid "Never"
-msgstr ""
+msgstr "Aldri"
 
 #: components/Statistics/TaskStats.tsx:14
 msgctxt "components.Statistics.TaskStats.c90f7d"
@@ -891,12 +896,12 @@ msgstr ""
 #: components/Statistics/TaskStats.tsx:61
 msgctxt "components.Statistics.TaskStats.cd681b"
 msgid "Today"
-msgstr ""
+msgstr "I dag"
 
 #: components/TaskListCard/DoneButton.tsx:24
 msgctxt "components.TaskListCard.DoneButton.927523"
 msgid "Mark as done"
-msgstr ""
+msgstr "Marker som gjort"
 
 #: components/TaskSearchModal.tsx:34
 msgctxt "components.TaskSearchModal.4ae60b"
@@ -1401,7 +1406,7 @@ msgstr ""
 #: db/commonMaterials.ts:22
 msgctxt "db.commonMaterials.e1a50a"
 msgid "Damaged Mask"
-msgstr ""
+msgstr "Skadet maske"
 
 #: db/commonMaterials.ts:113
 msgctxt "db.commonMaterials.e513cc"
@@ -1491,7 +1496,7 @@ msgstr ""
 #: db/domainDropSets.ts:110
 msgctxt "db.domainDropSets.6db45f"
 msgid "Thundercloud"
-msgstr ""
+msgstr "Tordensky"
 
 #: db/domainDropSets.ts:82
 msgctxt "db.domainDropSets.727bc7"
@@ -1616,12 +1621,12 @@ msgstr ""
 #: db/icons.ts:123
 msgctxt "db.icons.03bcc1"
 msgid "Tomato"
-msgstr ""
+msgstr "Tomat"
 
 #: db/icons.ts:163
 msgctxt "db.icons.07244e"
 msgid "Other Shops"
-msgstr ""
+msgstr "Andre butikker"
 
 #: db/icons.ts:177
 msgctxt "db.icons.087659"
