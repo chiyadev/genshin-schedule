@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import ClearButton from "./ClearButton";
 import CurrencyInput from "./CurrencyInput";
 import EnergyInput from "./EnergyInput";
-import Estimator from "./Estimator";
+import EstimatorByTime from "./EstimatorByTime";
 import EstimatorByCurrency from "./EstimatorByCurrency";
 import TrustRankInput from "./TrustRankInput";
 import { FormattedUnit, useServerTime } from "../../../utils/time";
@@ -86,9 +86,9 @@ const RealmCurrency = () => {
 
           <chakra.div color="gray.500" fontSize="sm">
             {current >= getCurrencyCap(rank) ? (
-              <span>FULL</span>
+              <FormattedMessage id="realmCurrencyFull" />
             ) : mode === "time" ? (
-              <Estimator />
+              <EstimatorByTime />
             ) : mode === "value" ? (
               <EstimatorByCurrency />
             ) : null}

@@ -1,11 +1,11 @@
 import React, { memo, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
-import { Duration } from "luxon";
+import { DateTime, Duration } from "luxon";
 import { useConfig } from "../../../utils/config";
 import { useFormatDuration, useFormatTime, useServerTime } from "../../../utils/time";
 import { getCurrencyCap, getCurrencyRate, getCurrencyRecharge } from "../../../db/realms";
 
-const EstimatorByResin = () => {
+const EstimatorByCurrency = () => {
   const [currency] = useConfig("realmCurrency");
   const [energy] = useConfig("realmEnergy");
   const [rank] = useConfig("realmRank");
@@ -30,28 +30,33 @@ const EstimatorByResin = () => {
     for (let i = 60; i <= cap; i *= 2) {
       addValue(i);
     }
+    addValue(cap);
 
     return result;
   }, [currency, time]);
 
   return (
     <>
-      {values.map(({ remainingTime, value }) => (
-        <div key={`currency-${remainingTime.valueOf()}`}>
-          <FormattedMessage
-            id="resinEstValueEntry"
-            values={{
-              value,
-              time: [
-                useFormatDuration(remainingTime, ["hour", "minute"]),
-                `(${useFormatTime(time.plus(remainingTime), ["hour", "minute"])})`,
-              ].join(" "),
-            }}
-          />
-        </div>
-      ))}
+      {values.map(({ remainingTime, value }) => {
+        const tomorrow = time.plus(86400000);
+        const estimatedDate =
+          time.plus(remainingTime).toMillis() > tomorrow.toMillis()
+            ? time.plus(remainingTime).toLocaleString(DateTime.DATETIME_SHORT)
+            : useFormatTime(time.plus(remainingTime), ["hour", "minute"]);
+        return (
+          <div key={`currency-${remainingTime.valueOf()}`}>
+            <FormattedMessage
+              id="realmCurrencyEstValueEntry"
+              values={{
+                value,
+                time: [useFormatDuration(remainingTime, ["day", "hour", "minute"]), `(${estimatedDate})`].join(" "),
+              }}
+            />
+          </div>
+        );
+      })}
     </>
   );
 };
 
-export default memo(EstimatorByResin);
+export default memo(EstimatorByCurrency);
