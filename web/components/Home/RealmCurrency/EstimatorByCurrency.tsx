@@ -1,6 +1,5 @@
 import React, { memo, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
-import { Box } from "@chakra-ui/react";
 import { Duration } from "luxon";
 import { useConfig } from "../../../utils/config";
 import { useFormatDuration, useFormatTime, useServerTime } from "../../../utils/time";
@@ -28,7 +27,7 @@ const EstimatorByResin = () => {
       }
     };
 
-    for (let i = 60; i <= cap; i += 60) {
+    for (let i = 60; i <= cap; i *= 2) {
       addValue(i);
     }
 
@@ -36,7 +35,7 @@ const EstimatorByResin = () => {
   }, [currency, time]);
 
   return (
-    <Box sx={{ columnCount: [1, 2, 3, 4] }}>
+    <>
       {values.map(({ remainingTime, value }) => (
         <div key={`currency-${remainingTime.valueOf()}`}>
           <FormattedMessage
@@ -51,7 +50,7 @@ const EstimatorByResin = () => {
           />
         </div>
       ))}
-    </Box>
+    </>
   );
 };
 
