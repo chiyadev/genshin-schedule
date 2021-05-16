@@ -49,7 +49,7 @@ const EstimatorByTime = () => {
   return (
     <>
       {values.map(({ capTime, value, full }) => (
-        <div key={capTime.valueOf()}>
+        <div key={`currency-${capTime.valueOf()}`}>
           <FormattedMessage
             id="realmCurrencyEstTimeEntry"
             values={{
