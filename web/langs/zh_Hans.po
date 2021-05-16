@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
-"PO-Revision-Date: 2021-05-15 23:45+0000\n"
-"Last-Translator: Richard Yu <yurichard3839@gmail.com>\n"
+"PO-Revision-Date: 2021-05-17 10:33+0000\n"
+"Last-Translator: Golden_Water <2439577268@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -1412,87 +1412,87 @@ msgstr "雾虚草囊"
 #: db/commonMaterials.ts:148
 msgctxt "db.commonMaterials.d8877a"
 msgid "Noctilucous Jade"
-msgstr ""
+msgstr "夜泊石"
 
 #: db/commonMaterials.ts:91
 msgctxt "db.commonMaterials.d88f11"
 msgid "Bone Shard"
-msgstr ""
+msgstr "龙蜥骨片"
 
 #: db/commonMaterials.ts:56
 msgctxt "db.commonMaterials.db3ec4"
 msgid "Chaos Part"
-msgstr ""
+msgstr "混沌部件"
 
 #: db/commonMaterials.ts:22
 msgctxt "db.commonMaterials.e1a50a"
 msgid "Damaged Mask"
-msgstr ""
+msgstr "破损的面具"
 
 #: db/commonMaterials.ts:113
 msgctxt "db.commonMaterials.e513cc"
 msgid "Cecilia"
-msgstr ""
+msgstr "塞西莉亚花"
 
 #: db/commonMaterials.ts:155
 msgctxt "db.commonMaterials.e78aed"
 msgid "Philanemo Mushroom"
-msgstr ""
+msgstr "慕风蘑菇"
 
 #: db/commonMaterials.ts:134
 msgctxt "db.commonMaterials.ee85bc"
 msgid "Glaze Lily"
-msgstr ""
+msgstr "琉璃百合"
 
 #: db/commonMaterials.ts:28
 msgctxt "db.commonMaterials.f31a91"
 msgid "Hilichurl Arrowhead"
-msgstr ""
+msgstr "丘丘箭簇"
 
 #: db/commonMaterials.ts:70
 msgctxt "db.commonMaterials.f55bde"
 msgid "Fatui Knife"
-msgstr ""
+msgstr "讨债人的祭刀"
 
 #: db/commonMaterials.ts:204
 msgctxt "db.commonMaterials.fb66ad"
 msgid "Windwheel Aster"
-msgstr ""
+msgstr "风车菊"
 
 #: db/commonMaterials.ts:78
 msgctxt "db.commonMaterials.fd54ff"
 msgid "Recruit's Insignia"
-msgstr ""
+msgstr "新兵的徽记"
 
 #: db/commonMaterials.ts:120
 msgctxt "db.commonMaterials.fe06d4"
 msgid "Cor Lapis"
-msgstr ""
+msgstr "石珀"
 
 #: db/domainCategories.ts:29
 msgctxt "db.domainCategories.1ffb59"
 msgid "Domain of Forgery"
-msgstr ""
+msgstr "练武秘境"
 
 #: db/domainCategories.ts:36
 msgctxt "db.domainCategories.4e509f"
 msgid "Domain of Blessing"
-msgstr ""
+msgstr "祝圣秘境"
 
 #: db/domainCategories.ts:52
 msgctxt "db.domainCategories.6a94a1"
 msgid "Talent Level-Up Materials"
-msgstr ""
+msgstr "天赋培养素材"
 
 #: db/domainCategories.ts:37
 msgctxt "db.domainCategories.796e5e"
 msgid "Artifacts"
-msgstr ""
+msgstr "圣遗物"
 
 #: db/domainCategories.ts:30
 msgctxt "db.domainCategories.a4758a"
 msgid "Weapon Ascension Materials"
-msgstr ""
+msgstr "武器突破素材"
 
 #: db/domainCategories.ts:58
 msgctxt "db.domainCategories.a6ee01"
@@ -1507,37 +1507,37 @@ msgstr ""
 #: db/domainCategories.ts:59
 msgctxt "db.domainCategories.f98247"
 msgid "Weekly Challenge"
-msgstr ""
+msgstr "每周挑战"
 
 #: db/domainDropSets.ts:124
 msgctxt "db.domainDropSets.617252"
 msgid "Trail Grounds of Thunder"
-msgstr ""
+msgstr "古雷试炼场"
 
 #: db/domainDropSets.ts:110
 msgctxt "db.domainDropSets.6db45f"
 msgid "Thundercloud"
-msgstr ""
+msgstr "雷云祭坛"
 
 #: db/domainDropSets.ts:82
 msgctxt "db.domainDropSets.727bc7"
 msgid "City of Reflections"
-msgstr ""
+msgstr "水光之城"
 
 #: db/domainDropSets.ts:89
 msgctxt "db.domainDropSets.b61667"
 msgid "Submerged Valley"
-msgstr ""
+msgstr "深没之谷"
 
 #: db/domainDropSets.ts:103
 msgctxt "db.domainDropSets.c07625"
 msgid "Altar of the Falls"
-msgstr ""
+msgstr "深瀑祭坛"
 
 #: db/domainDropSets.ts:96
 msgctxt "db.domainDropSets.dfec8a"
 msgid "Ruins of Thirsting Capital"
-msgstr ""
+msgstr "渴水的废都"
 
 #: db/domainDropSets.ts:131
 msgctxt "db.domainDropSets.f12070"
@@ -1547,7 +1547,7 @@ msgstr ""
 #: db/domainDropSets.ts:117
 msgctxt "db.domainDropSets.ffe184"
 msgid "Thundering Ruins"
-msgstr ""
+msgstr "鸣雷城墟"
 
 #: db/domains.ts:49
 msgctxt "db.domains.011253"
@@ -1557,27 +1557,27 @@ msgstr "震雷连山密宫"
 #: db/domains.ts:91
 msgctxt "db.domains.0cfa31"
 msgid "Forsaken Rift"
-msgstr ""
+msgstr "忘却之峡"
 
 #: db/domains.ts:140
 msgctxt "db.domains.1c6c7d"
 msgid "Ridge Watch"
-msgstr ""
+msgstr "山脊守望"
 
 #: db/domains.ts:56
 msgctxt "db.domains.24e0e0"
 msgid "Midsummer Courtyard"
-msgstr ""
+msgstr "仲夏庭园"
 
 #: db/domains.ts:98
 msgctxt "db.domains.2bbe8b"
 msgid "Taishan Mansion"
-msgstr ""
+msgstr "太山府"
 
 #: db/domains.ts:77
 msgctxt "db.domains.5d9d5d"
 msgid "Hidden Palace of Zhou Formula"
-msgstr ""
+msgstr "无妄引咎密宫"
 
 #: db/domains.ts:112
 msgctxt "db.domains.70d1b9"
