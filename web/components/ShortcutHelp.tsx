@@ -22,29 +22,29 @@ const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<bool
           <HStack>
             <Icon as={FaKeyboard} />
             <div>
-              <FormattedMessage id="shortcuts" />
+              <FormattedMessage defaultMessage="Keyboard shortcuts" />
             </div>
           </HStack>
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <VStack align="start" spacing={4}>
-            <Category heading={<FormattedMessage id="serverClock" />}>
-              <KeyHint shortcut={<FormattedMessage id="key.left" />}>
-                <FormattedMessage id="previousDay" />
+            <Category heading={<FormattedMessage defaultMessage="Server clock" />}>
+              <KeyHint shortcut={<FormattedMessage defaultMessage="left" />}>
+                <FormattedMessage defaultMessage="Previous day" />
               </KeyHint>
-              <KeyHint shortcut={<FormattedMessage id="key.right" />}>
-                <FormattedMessage id="nextDay" />
+              <KeyHint shortcut={<FormattedMessage defaultMessage="right" />}>
+                <FormattedMessage defaultMessage="Next day" />
               </KeyHint>
-              <KeyHint shortcut={<FormattedMessage id="key.esc" />}>
-                <FormattedMessage id="shortcutResetOffset" />
+              <KeyHint shortcut={<FormattedMessage defaultMessage="esc" />}>
+                <FormattedMessage defaultMessage="Reset offset" />
               </KeyHint>
             </Category>
 
-            <Category heading={<FormattedMessage id="resinCalc" />}>
+            <Category heading={<FormattedMessage defaultMessage="Resin calculator" />}>
               <KeyHint>
                 <FormattedMessage
-                  id="shortcutSubtract"
+                  defaultMessage="Subtract {values}"
                   values={{
                     values: (
                       <>
@@ -56,27 +56,27 @@ const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<bool
               </KeyHint>
             </Category>
 
-            <Category heading={<FormattedMessage id="taskSchd" />}>
+            <Category heading={<FormattedMessage defaultMessage="Task scheduler" />}>
               <KeyHint shortcut="f">
-                <FormattedMessage id="shortcutSearchTask" />
+                <FormattedMessage defaultMessage="Search tasks" />
               </KeyHint>
               <KeyHint shortcut="l">
-                <FormattedMessage id="shortcutToggleList" />
+                <FormattedMessage defaultMessage="Toggle list overlay" />
               </KeyHint>
               <KeyHint shortcut="n">
-                <FormattedMessage id="shortcutFocusNextTask" />
+                <FormattedMessage defaultMessage="Focus next task" />
               </KeyHint>
-              <KeyHint shortcut={`${formatMessage({ id: "key.shift" })}+n`}>
-                <FormattedMessage id="shortcutFocusPrevTask" />
+              <KeyHint shortcut={`${formatMessage({ defaultMessage: "shift" })}+n`}>
+                <FormattedMessage defaultMessage="Focus previous task" />
               </KeyHint>
               <KeyHint shortcut="d">
-                <FormattedMessage id="taskDone" />
+                <FormattedMessage defaultMessage="Mark as done" />
               </KeyHint>
             </Category>
 
-            <Category heading={<FormattedMessage id="other" />}>
+            <Category heading={<FormattedMessage defaultMessage="Other" />}>
               <KeyHint shortcut="k">
-                <FormattedMessage id="shortcutShow" />
+                <FormattedMessage defaultMessage="Show keyboard shortcuts" />
               </KeyHint>
             </Category>
           </VStack>

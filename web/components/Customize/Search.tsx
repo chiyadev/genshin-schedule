@@ -18,17 +18,17 @@ const Search = () => {
         <Input
           value={value}
           onChange={({ currentTarget: { value } }) => setValue(value)}
-          placeholder={formatMessage({ id: "dbSearch" })}
+          placeholder={formatMessage({ defaultMessage: "Search characters, weapons and artifacts…" })}
         />
       </InputGroup>
 
       <chakra.div fontSize="sm" color="gray.500">
         <div>
-          <FormattedMessage id="dbSelect" />
+          <FormattedMessage defaultMessage="Select items to be added to your farming schedule." />
         </div>
         <div>
           <FormattedMessage
-            id="dbMissing"
+            defaultMessage="If there are any missing items, please {link} on GitHub."
             values={{
               link: (
                 <Link
@@ -36,7 +36,7 @@ const Search = () => {
                   color={useColorModeValue("blue.500", "blue.300")}
                   isExternal
                 >
-                  <FormattedMessage id="dbMissingLink" />
+                  <FormattedMessage defaultMessage="create an issue" />
                 </Link>
               ),
             }}

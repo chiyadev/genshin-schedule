@@ -27,7 +27,13 @@ const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateA
     >
       <HStack spacing={2}>
         <Icon as={due ? FaTimes : FaCheck} />
-        <div>{due ? <FormattedMessage id="taskUndone" /> : <FormattedMessage id="taskDone" />}</div>
+        <div>
+          {due ? (
+            <FormattedMessage defaultMessage="Mark as to-do" />
+          ) : (
+            <FormattedMessage defaultMessage="Mark as done" />
+          )}
+        </div>
       </HStack>
     </Link>
   );

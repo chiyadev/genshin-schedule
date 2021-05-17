@@ -36,7 +36,7 @@ const MarkAllDone = () => {
     >
       <HStack spacing={2}>
         <div>
-          <FormattedMessage id="markAllDone" />
+          <FormattedMessage defaultMessage="Mark everything as done" />
         </div>
         <Icon as={FaCheck} />
       </HStack>

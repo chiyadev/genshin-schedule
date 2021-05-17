@@ -1,136 +1,138 @@
+import { registerMessage } from "../utils";
+
 export const TalentMaterialWiki = "https://genshin-impact.fandom.com/wiki/Talent_Level-Up_Material";
 
 export type TalentMaterial = {
   type: "Talent Level-Up Material";
   name: string;
-  wiki: string;
   item: string;
+  wiki: string;
 };
 
 export const Freedom: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Freedom",
+  name: registerMessage({ defaultMessage: "Freedom" }),
+  item: registerMessage({ defaultMessage: "Teachings of Freedom" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Freedom%22",
-  item: "Teachings of Freedom",
 };
 
 export const Prosperity: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Prosperity",
+  name: registerMessage({ defaultMessage: "Prosperity" }),
+  item: registerMessage({ defaultMessage: "Teachings of Prosperity" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Prosperity%22",
-  item: "Teachings of Prosperity",
 };
 
 export const Resistance: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Resistance",
+  name: registerMessage({ defaultMessage: "Resistance" }),
+  item: registerMessage({ defaultMessage: "Teachings of Resistance" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Resistance%22",
-  item: "Teachings of Resistance",
 };
 
 export const Diligence: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Diligence",
+  name: registerMessage({ defaultMessage: "Diligence" }),
+  item: registerMessage({ defaultMessage: "Teachings of Diligence" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Diligence%22",
-  item: "Teachings of Diligence",
 };
 
 export const Ballad: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Ballad",
+  name: registerMessage({ defaultMessage: "Ballad" }),
+  item: registerMessage({ defaultMessage: "Teachings of Ballad" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Ballad%22",
-  item: "Teachings of Ballad",
 };
 
 export const Gold: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Gold",
+  name: registerMessage({ defaultMessage: "Gold" }),
+  item: registerMessage({ defaultMessage: "Teachings of Gold" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Gold%22",
-  item: "Teachings of Gold",
 };
 
 export const DvalinPlume: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Dvalin's Plume",
+  name: registerMessage({ defaultMessage: "Dvalin's Plume" }),
+  item: registerMessage({ defaultMessage: "Dvalin's Plume" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Dvalin%27s_Plume",
-  item: "Dvalin's Plume",
 };
 
 export const DvalinSigh: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Dvalin's Sigh",
+  name: registerMessage({ defaultMessage: "Dvalin's Sigh" }),
+  item: registerMessage({ defaultMessage: "Dvalin's Sigh" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Dvalin%27s_Sigh",
-  item: "Dvalin's Sigh",
 };
 
 export const DvalinClaw: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Dvalin's Claw",
+  name: registerMessage({ defaultMessage: "Dvalin's Claw" }),
+  item: registerMessage({ defaultMessage: "Dvalin's Claw" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Dvalin%27s_Claw",
-  item: "Dvalin's Claw",
 };
 
 export const TailOfBoreas: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Tail of Boreas",
+  name: registerMessage({ defaultMessage: "Tail of Boreas" }),
+  item: registerMessage({ defaultMessage: "Tail of Boreas" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Tail_of_Boreas",
-  item: "Tail of Boreas",
 };
 
 export const RingOfBoreas: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Ring of Boreas",
+  name: registerMessage({ defaultMessage: "Ring of Boreas" }),
+  item: registerMessage({ defaultMessage: "Ring of Boreas" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Ring_of_Boreas",
-  item: "Ring of Boreas",
 };
 
 export const SpiritLocketOfBoreas: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Spirit Locket of Boreas",
+  name: registerMessage({ defaultMessage: "Spirit Locket of Boreas" }),
+  item: registerMessage({ defaultMessage: "Spirit Locket of Boreas" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Spirit_Locket_of_Boreas",
-  item: "Spirit Locket of Boreas",
 };
 
 export const TuskOfMonocerosCaeli: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Tusk of Monoceros Caeli",
+  name: registerMessage({ defaultMessage: "Tusk of Monoceros Caeli" }),
+  item: registerMessage({ defaultMessage: "Tusk of Monoceros Caeli" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Tusk_of_Monoceros_Caeli",
-  item: "Tusk of Monoceros Caeli",
 };
 
 export const ShardOfAFoulLegacy: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Shard of a Foul Legacy",
+  name: registerMessage({ defaultMessage: "Shard of a Foul Legacy" }),
+  item: registerMessage({ defaultMessage: "Shard of a Foul Legacy" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Shard_of_a_Foul_Legacy",
-  item: "Shard of a Foul Legacy",
 };
 
 export const ShadowOfTheWarrior: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Shadow of the Warrior",
+  name: registerMessage({ defaultMessage: "Shadow of the Warrior" }),
+  item: registerMessage({ defaultMessage: "Shadow of the Warrior" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Shadow_of_the_Warrior",
-  item: "Shadow of the Warrior",
 };
 
 export const DragonLordsCrown: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Dragon Lord's Crown",
+  name: registerMessage({ defaultMessage: "Dragon Lord's Crown" }),
+  item: registerMessage({ defaultMessage: "Dragon Lord's Crown" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Dragon_Lord%27s_Crown",
-  item: "Dragon Lord's Crown",
 };
 
 export const BloodjadeBranch: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Bloodjade Branch",
+  name: registerMessage({ defaultMessage: "Bloodjade Branch" }),
+  item: registerMessage({ defaultMessage: "Bloodjade Branch" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Bloodjade_Branch",
-  item: "Bloodjade Branch",
 };
 
 export const GildedScale: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: "Gilded Scale",
+  name: registerMessage({ defaultMessage: "Gilded Scale" }),
+  item: registerMessage({ defaultMessage: "Gilded Scale" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Gilded_Scale",
-  item: "Gilded Scale",
 };
 
 export const TalentMaterials = [

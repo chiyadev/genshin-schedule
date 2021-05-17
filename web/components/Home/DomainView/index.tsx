@@ -224,7 +224,7 @@ const DomainView = () => {
         type="domains"
         heading={
           <span>
-            <FormattedMessage id="todaysDomains" />
+            <FormattedMessage defaultMessage="Today's Domains" />
             {!!domains.length && <span> ({domains.length})</span>}
           </span>
         }
@@ -245,7 +245,7 @@ const DomainView = () => {
             <Icon as={FaTimes} />
             <div>
               <FormattedMessage
-                id="todaysDomainsNone"
+                defaultMessage="No domains for today. Maybe try some {link}?"
                 values={{
                   link: (
                     <Link
@@ -253,7 +253,7 @@ const DomainView = () => {
                       color={useColorModeValue("blue.500", "blue.300")}
                       isExternal
                     >
-                      <FormattedMessage id="todaysDomainsNoneLink" />
+                      <FormattedMessage defaultMessage="Ley Lines" />
                     </Link>
                   ),
                 }}

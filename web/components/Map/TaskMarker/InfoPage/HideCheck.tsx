@@ -14,7 +14,7 @@ const HideCheck = ({ value, setValue }: { value: boolean; setValue: Dispatch<boo
 
       <HStack as="label" spacing={2} cursor="pointer" flex={1}>
         <div>
-          <FormattedMessage id="taskHide" />
+          <FormattedMessage defaultMessage="Hide temporarily" />
         </div>
         <Spacer />
 

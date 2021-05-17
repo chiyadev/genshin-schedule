@@ -1,3 +1,5 @@
+import { registerMessage } from "../utils";
+
 export const ArtifactWiki = "https://genshin-impact.fandom.com/wiki/Artifacts";
 
 export type Artifact = {
@@ -8,199 +10,199 @@ export type Artifact = {
 
 export const Adventurer: Artifact = {
   type: "Artifact",
-  name: "Adventurer",
+  name: registerMessage({ defaultMessage: "Adventurer" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Adventurer",
 };
 
 export const ArchaicPetra: Artifact = {
   type: "Artifact",
-  name: "Archaic Petra",
+  name: registerMessage({ defaultMessage: "Archaic Petra" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Archaic_Petra",
 };
 
 export const Berserker: Artifact = {
   type: "Artifact",
-  name: "Berserker",
+  name: registerMessage({ defaultMessage: "Berserker" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Berserker",
 };
 
 export const BloodstainedChivalry: Artifact = {
   type: "Artifact",
-  name: "Bloodstained Chivalry",
+  name: registerMessage({ defaultMessage: "Bloodstained Chivalry" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Bloodstained_Chivalry",
 };
 
 export const BraveHeart: Artifact = {
   type: "Artifact",
-  name: "Brave Heart",
+  name: registerMessage({ defaultMessage: "Brave Heart" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Brave_Heart",
 };
 
 export const CrimsonWitchOfFlames: Artifact = {
   type: "Artifact",
-  name: "Crimson Witch of Flames",
+  name: registerMessage({ defaultMessage: "Crimson Witch of Flames" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Crimson_Witch_of_Flames",
 };
 
 export const DefendersWill: Artifact = {
   type: "Artifact",
-  name: "Defender's Will",
+  name: registerMessage({ defaultMessage: "Defender's Will" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Defender%27s_Will",
 };
 
 export const Gambler: Artifact = {
   type: "Artifact",
-  name: "Gambler",
+  name: registerMessage({ defaultMessage: "Gambler" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Gambler",
 };
 
 export const GladiatorsFinale: Artifact = {
   type: "Artifact",
-  name: "Gladiator's Finale",
+  name: registerMessage({ defaultMessage: "Gladiator's Finale" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Gladiator%27s_Finale",
 };
 
 export const Icebreaker: Artifact = {
   type: "Artifact",
-  name: "Icebreaker",
+  name: registerMessage({ defaultMessage: "Icebreaker" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Icebreaker",
 };
 
 export const Instructor: Artifact = {
   type: "Artifact",
-  name: "Instructor",
+  name: registerMessage({ defaultMessage: "Instructor" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Instructor",
 };
 
 export const Lavawalker: Artifact = {
   type: "Artifact",
-  name: "Lavawalker",
+  name: registerMessage({ defaultMessage: "Lavawalker" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Lavawalker",
 };
 
 export const LuckyDog: Artifact = {
   type: "Artifact",
-  name: "Lucky Dog",
+  name: registerMessage({ defaultMessage: "Lucky Dog" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Lucky_Dog",
 };
 
 export const MaidenBeloved: Artifact = {
   type: "Artifact",
-  name: "Maiden Beloved",
+  name: registerMessage({ defaultMessage: "Maiden Beloved" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Maiden_Beloved",
 };
 
 export const MartialArtist: Artifact = {
   type: "Artifact",
-  name: "Martial Artist",
+  name: registerMessage({ defaultMessage: "Martial Artist" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Martial_Artist",
 };
 
 export const NoblesseOblige: Artifact = {
   type: "Artifact",
-  name: "Noblesse Oblige",
+  name: registerMessage({ defaultMessage: "Noblesse Oblige" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Noblesse_Oblige",
 };
 
 export const OceanConqueror: Artifact = {
   type: "Artifact",
-  name: "Ocean Conqueror",
+  name: registerMessage({ defaultMessage: "Ocean Conqueror" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Ocean_Conqueror",
 };
 
 export const PrayersForDestiny: Artifact = {
   type: "Artifact",
-  name: "Prayers for Destiny",
+  name: registerMessage({ defaultMessage: "Prayers for Destiny" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Prayers_for_Destiny",
 };
 
 export const PrayersForIllumination: Artifact = {
   type: "Artifact",
-  name: "Prayers for Illumination",
+  name: registerMessage({ defaultMessage: "Prayers for Illumination" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Prayers_for_Illumination",
 };
 
 export const PrayersForWisdom: Artifact = {
   type: "Artifact",
-  name: "Prayers for Wisdom",
+  name: registerMessage({ defaultMessage: "Prayers for Wisdom" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Prayers_for_Wisdom",
 };
 
 export const PrayersToSpringtime: Artifact = {
   type: "Artifact",
-  name: "Prayers to Springtime",
+  name: registerMessage({ defaultMessage: "Prayers to Springtime" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Prayers_to_Springtime",
 };
 
 export const ResolutionOfSojourner: Artifact = {
   type: "Artifact",
-  name: "Resolution of Sojourner",
+  name: registerMessage({ defaultMessage: "Resolution of Sojourner" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Resolution_of_Sojourner",
 };
 
 export const RetracingBolide: Artifact = {
   type: "Artifact",
-  name: "Retracing Bolide",
+  name: registerMessage({ defaultMessage: "Retracing Bolide" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Retracing_Bolide",
 };
 
 export const Scholar: Artifact = {
   type: "Artifact",
-  name: "Scholar",
+  name: registerMessage({ defaultMessage: "Scholar" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Scholar",
 };
 
 export const TheExile: Artifact = {
   type: "Artifact",
-  name: "The Exile",
+  name: registerMessage({ defaultMessage: "The Exile" }),
   wiki: "https://genshin-impact.fandom.com/wiki/The_Exile",
 };
 
 export const ThunderingFury: Artifact = {
   type: "Artifact",
-  name: "Thundering Fury",
+  name: registerMessage({ defaultMessage: "Thundering Fury" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Thundering_Fury",
 };
 
 export const Thundersoother: Artifact = {
   type: "Artifact",
-  name: "Thundersoother",
+  name: registerMessage({ defaultMessage: "Thundersoother" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Thundersoother",
 };
 
 export const TinyMiracle: Artifact = {
   type: "Artifact",
-  name: "Tiny Miracle",
+  name: registerMessage({ defaultMessage: "Tiny Miracle" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Tiny_Miracle",
 };
 
 export const TravelingDoctor: Artifact = {
   type: "Artifact",
-  name: "Traveling Doctor",
+  name: registerMessage({ defaultMessage: "Traveling Doctor" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Traveling_Doctor",
 };
 
 export const ViridescentVenerer: Artifact = {
   type: "Artifact",
-  name: "Viridescent Venerer",
+  name: registerMessage({ defaultMessage: "Viridescent Venerer" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Viridescent_Venerer",
 };
 
 export const WanderersTroupe: Artifact = {
   type: "Artifact",
-  name: "Wanderer's Troupe",
+  name: registerMessage({ defaultMessage: "Wanderer's Troupe" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Wanderer%27s_Troupe",
 };
 
 export const TenacityOfTheMillelith: Artifact = {
   type: "Artifact",
-  name: "Tenacity of the Millelith",
+  name: registerMessage({ defaultMessage: "Tenacity of the Millelith" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Tenacity_of_the_Millelith",
 };
 
 export const PaleFlame: Artifact = {
   type: "Artifact",
-  name: "Pale Flame",
+  name: registerMessage({ defaultMessage: "Pale Flame" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Pale_Flame",
 };
 

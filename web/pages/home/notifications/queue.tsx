@@ -42,7 +42,7 @@ const Home = ({ data, queue }: Props) => {
       <Layout title={["Notification queue"]}>
         <VStack align="stretch" spacing={4}>
           <div>
-            <FormattedMessage id="notiQueue" />:
+            <FormattedMessage defaultMessage="Notification queue" />:
           </div>
 
           {queue?.length ? (
@@ -51,7 +51,7 @@ const Home = ({ data, queue }: Props) => {
               .map((notification) => <Item key={notification.key} notification={notification} />)
           ) : (
             <div>
-              <FormattedMessage id="notiQueueEmpty" />
+              <FormattedMessage defaultMessage="There are no notifications in queue." />
             </div>
           )}
         </VStack>
@@ -85,7 +85,7 @@ const Item = ({ notification }: { notification: Notification }) => {
         <VStack align="start">
           <div>
             <FormattedMessage
-              id="notiSchdAt"
+              defaultMessage="Scheduled at {time} in {duration}."
               values={{ time: <Code>{time.toSQL()}</Code>, duration: <Code>{useFormatDuration(time.diffNow())}</Code> }}
             />
           </div>
@@ -110,7 +110,7 @@ const Item = ({ notification }: { notification: Notification }) => {
               }
             }}
           >
-            <FormattedMessage id="sendNow" />
+            <FormattedMessage defaultMessage="Send now" />
           </Button>
 
           <Button
@@ -126,7 +126,7 @@ const Item = ({ notification }: { notification: Notification }) => {
               }
             }}
           >
-            <FormattedMessage id="dequeue" />
+            <FormattedMessage defaultMessage="Dequeue" />
           </Button>
         </HStack>
       </VStack>

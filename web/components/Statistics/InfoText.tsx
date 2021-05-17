@@ -16,10 +16,10 @@ const InfoText = () => {
     <HStack align="start" spacing={2}>
       <div>
         <p>
-          <FormattedMessage id="statRange" />: {first && first.id}~{last && last.id}
+          <FormattedMessage defaultMessage="Range" />: {first && first.id}~{last && last.id}
         </p>
         <p>
-          <FormattedMessage id="statDuration" />:{" "}
+          <FormattedMessage defaultMessage="Duration" />:{" "}
           {useFormatDurationPart(Duration.fromObject({ days: retention }), "day")}
         </p>
       </div>

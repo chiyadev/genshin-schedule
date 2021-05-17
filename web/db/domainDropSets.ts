@@ -61,6 +61,7 @@ import {
   GildedScale,
 } from "./talentMaterials";
 import { Weekday } from "../utils/time";
+import { registerMessage } from "../utils";
 
 const MonThur: Weekday[] = ["monday", "thursday"];
 const TuesFri: Weekday[] = ["tuesday", "friday"];
@@ -78,56 +79,56 @@ export type DomainDropSet = {
 
 export const CityOfReflections: DomainDropSet = {
   type: "Domain Drop Set",
-  name: "City of Reflections",
+  name: registerMessage({ defaultMessage: "City of Reflections" }),
   days: MonThur,
   items: [Decarabian],
 };
 
 export const SubmergedValley: DomainDropSet = {
   type: "Domain Drop Set",
-  name: "Submerged Valley",
+  name: registerMessage({ defaultMessage: "Submerged Valley" }),
   days: TuesFri,
   items: [BorealWolf],
 };
 
 export const RuinsOfThirstingCapital: DomainDropSet = {
   type: "Domain Drop Set",
-  name: "Ruins of Thirsting Capital",
+  name: registerMessage({ defaultMessage: "Ruins of Thirsting Capital" }),
   days: WedSat,
   items: [DandelionGladiator],
 };
 
 export const AltarOfTheFalls: DomainDropSet = {
   type: "Domain Drop Set",
-  name: "Altar of the Falls",
+  name: registerMessage({ defaultMessage: "Altar of the Falls" }),
   days: Sun,
   items: [Decarabian, BorealWolf, DandelionGladiator],
 };
 
 export const Thundercloud: DomainDropSet = {
   type: "Domain Drop Set",
-  name: "Thundercloud",
+  name: registerMessage({ defaultMessage: "Thundercloud" }),
   days: MonThur,
   items: [Guyun],
 };
 
 export const ThunderingRuins: DomainDropSet = {
   type: "Domain Drop Set",
-  name: "Thundering Ruins",
+  name: registerMessage({ defaultMessage: "Thundering Ruins" }),
   days: TuesFri,
   items: [MistVeiledElixir],
 };
 
 export const TrailGroundsOfThunder: DomainDropSet = {
   type: "Domain Drop Set",
-  name: "Trail Grounds of Thunder",
+  name: registerMessage({ defaultMessage: "Trail Grounds of Thunder" }),
   days: WedSat,
   items: [Aerosiderite],
 };
 
 export const ElectrostaticField: DomainDropSet = {
   type: "Domain Drop Set",
-  name: "Electrostatic Field",
+  name: registerMessage({ defaultMessage: "Electrostatic Field" }),
   days: Sun,
   items: [Guyun, MistVeiledElixir, Aerosiderite],
 };

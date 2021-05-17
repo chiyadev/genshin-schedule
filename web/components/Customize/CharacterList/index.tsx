@@ -13,7 +13,7 @@ const CharacterList = () => {
   return (
     <VStack align="stretch" spacing={4} d={results.size ? undefined : "none"}>
       <Heading size="md">
-        <FormattedMessage id="characters" />
+        <FormattedMessage defaultMessage="Characters" />
       </Heading>
 
       <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>

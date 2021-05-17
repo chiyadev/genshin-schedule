@@ -42,14 +42,14 @@ const ConfigExportButton = () => {
           trackEvent("dataManager", "show");
         }}
       >
-        <FormattedMessage id="manageData" />
+        <FormattedMessage defaultMessage="Manage data" />
       </Button>
 
       <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
-            <FormattedMessage id="manageData" />
+            <FormattedMessage defaultMessage="Manage data" />
           </ModalHeader>
           <ModalCloseButton />
 
@@ -57,14 +57,14 @@ const ConfigExportButton = () => {
             <VStack align="stretch" spacing={4}>
               <Alert status="warning">
                 <AlertIcon />
-                <FormattedMessage id="manageDataValidationWarning" />
+                <FormattedMessage defaultMessage="Input is not validated. Corrupted input can make data recovery impossible." />
               </Alert>
 
               <chakra.div>
-                <FormattedMessage id="manageDataHelp" />
+                <FormattedMessage defaultMessage="You can export your account data for backup and restore." />
                 <strong>
                   {" "}
-                  <FormattedMessage id="actionPermanent" />
+                  <FormattedMessage defaultMessage="This action cannot be undone." />
                 </strong>
               </chakra.div>
 
@@ -96,7 +96,7 @@ const ConfigExportButton = () => {
                   }
                 }}
               >
-                <FormattedMessage id="overwrite" />
+                <FormattedMessage defaultMessage="Overwrite" />
               </Button>
 
               <Button
@@ -106,7 +106,7 @@ const ConfigExportButton = () => {
                   trackEvent("dataManager", "copy");
                 }}
               >
-                {hasCopied ? <FormattedMessage id="copied" /> : <FormattedMessage id="copy" />}
+                {hasCopied ? <FormattedMessage defaultMessage="Copied" /> : <FormattedMessage defaultMessage="Copy" />}
               </Button>
             </ButtonGroup>
           </ModalFooter>

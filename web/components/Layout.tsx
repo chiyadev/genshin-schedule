@@ -50,7 +50,7 @@ const Layout = ({
                 <>
                   <NextLink href="/home/notifications" passHref>
                     <Link>
-                      <Tooltip label={<FormattedMessage id="notifications" />}>
+                      <Tooltip label={<FormattedMessage defaultMessage="Notifications" />}>
                         <span>
                           <Icon as={FaBell} />
                         </span>
@@ -59,7 +59,7 @@ const Layout = ({
                   </NextLink>
                   <NextLink href="/home/statistics" passHref>
                     <Link>
-                      <Tooltip label={<FormattedMessage id="statistics" />}>
+                      <Tooltip label={<FormattedMessage defaultMessage="Statistics" />}>
                         <span>
                           <Icon as={FaChartBar} />
                         </span>

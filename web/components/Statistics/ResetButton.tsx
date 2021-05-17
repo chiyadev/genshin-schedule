@@ -22,7 +22,7 @@ const ResetButton = () => {
   return (
     <>
       <Button colorScheme="red" leftIcon={<Icon as={FaSync} />} onClick={() => setConfirm(true)}>
-        <FormattedMessage id="statReset" />
+        <FormattedMessage defaultMessage="Reset" />
       </Button>
 
       <AlertDialog isOpen={confirm} onClose={() => setConfirm(false)} leastDestructiveRef={cancelRef}>
@@ -31,7 +31,7 @@ const ResetButton = () => {
           <AlertDialogHeader>Reset statistics</AlertDialogHeader>
 
           <AlertDialogBody>
-            <FormattedMessage id="actionPermanent" />
+            <FormattedMessage defaultMessage="This action cannot be undone." />
           </AlertDialogBody>
 
           <AlertDialogFooter>
@@ -43,11 +43,11 @@ const ResetButton = () => {
                   setConfirm(false);
                 }}
               >
-                <FormattedMessage id="statReset" />
+                <FormattedMessage defaultMessage="Reset" />
               </Button>
 
               <Button ref={cancelRef} onClick={() => setConfirm(false)}>
-                <FormattedMessage id="cancel" />
+                <FormattedMessage defaultMessage="Cancel" />
               </Button>
             </ButtonGroup>
           </AlertDialogFooter>

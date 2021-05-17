@@ -44,6 +44,7 @@ import {
   WindwheelAster,
   Wolfhook,
 } from "./commonMaterials";
+import { registerMessage } from "../utils";
 
 export const CharacterWiki = "https://genshin-impact.fandom.com/wiki/Characters";
 
@@ -58,7 +59,7 @@ export type Character = {
 
 export const TravelerAnemo: Character = {
   type: "Character",
-  name: "Traveler (Anemo)",
+  name: registerMessage({ defaultMessage: "Traveler (Anemo)" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Traveler#Anemo",
   talentMaterialWeekly: [DvalinSigh],
   talentMaterials: [Resistance, Ballad],
@@ -67,7 +68,7 @@ export const TravelerAnemo: Character = {
 
 export const TravelerGeo: Character = {
   type: "Character",
-  name: "Traveler (Geo)",
+  name: registerMessage({ defaultMessage: "Traveler (Geo)" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Traveler#Geo",
   talentMaterialWeekly: [DvalinSigh],
   talentMaterials: [Resistance, Diligence],
@@ -76,7 +77,7 @@ export const TravelerGeo: Character = {
 
 export const Amber: Character = {
   type: "Character",
-  name: "Amber",
+  name: registerMessage({ defaultMessage: "Amber" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Amber",
   talentMaterialWeekly: [DvalinSigh],
   talentMaterials: [Freedom],
@@ -85,7 +86,7 @@ export const Amber: Character = {
 
 export const Barbara: Character = {
   type: "Character",
-  name: "Barbara",
+  name: registerMessage({ defaultMessage: "Barbara" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Barbara",
   talentMaterialWeekly: [RingOfBoreas],
   talentMaterials: [Freedom],
@@ -94,7 +95,7 @@ export const Barbara: Character = {
 
 export const Beidou: Character = {
   type: "Character",
-  name: "Beidou",
+  name: registerMessage({ defaultMessage: "Beidou" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Beidou",
   talentMaterialWeekly: [DvalinSigh],
   talentMaterials: [Gold],
@@ -103,7 +104,7 @@ export const Beidou: Character = {
 
 export const Bennett: Character = {
   type: "Character",
-  name: "Bennett",
+  name: registerMessage({ defaultMessage: "Bennett" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Bennett",
   talentMaterialWeekly: [DvalinPlume],
   talentMaterials: [Resistance],
@@ -112,7 +113,7 @@ export const Bennett: Character = {
 
 export const Chongyun: Character = {
   type: "Character",
-  name: "Chongyun",
+  name: registerMessage({ defaultMessage: "Chongyun" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Chongyun",
   talentMaterialWeekly: [DvalinSigh],
   talentMaterials: [Diligence],
@@ -121,7 +122,7 @@ export const Chongyun: Character = {
 
 export const Diluc: Character = {
   type: "Character",
-  name: "Diluc",
+  name: registerMessage({ defaultMessage: "Diluc" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Diluc",
   talentMaterialWeekly: [DvalinPlume],
   talentMaterials: [Resistance],
@@ -130,7 +131,7 @@ export const Diluc: Character = {
 
 export const Fischl: Character = {
   type: "Character",
-  name: "Fischl",
+  name: registerMessage({ defaultMessage: "Fischl" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Fischl",
   talentMaterialWeekly: [SpiritLocketOfBoreas],
   talentMaterials: [Ballad],
@@ -139,7 +140,7 @@ export const Fischl: Character = {
 
 export const Jean: Character = {
   type: "Character",
-  name: "Jean",
+  name: registerMessage({ defaultMessage: "Jean" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Jean",
   talentMaterialWeekly: [DvalinPlume],
   talentMaterials: [Resistance],
@@ -148,7 +149,7 @@ export const Jean: Character = {
 
 export const Kaeya: Character = {
   type: "Character",
-  name: "Kaeya",
+  name: registerMessage({ defaultMessage: "Kaeya" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Kaeya",
   talentMaterialWeekly: [SpiritLocketOfBoreas],
   talentMaterials: [Ballad],
@@ -157,7 +158,7 @@ export const Kaeya: Character = {
 
 export const Keqing: Character = {
   type: "Character",
-  name: "Keqing",
+  name: registerMessage({ defaultMessage: "Keqing" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Keqing",
   talentMaterialWeekly: [RingOfBoreas],
   talentMaterials: [Prosperity],
@@ -166,7 +167,7 @@ export const Keqing: Character = {
 
 export const Lisa: Character = {
   type: "Character",
-  name: "Lisa",
+  name: registerMessage({ defaultMessage: "Lisa" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Lisa",
   talentMaterialWeekly: [DvalinClaw],
   talentMaterials: [Ballad],
@@ -175,7 +176,7 @@ export const Lisa: Character = {
 
 export const Mona: Character = {
   type: "Character",
-  name: "Mona",
+  name: registerMessage({ defaultMessage: "Mona" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Mona",
   talentMaterialWeekly: [RingOfBoreas],
   talentMaterials: [Resistance],
@@ -184,7 +185,7 @@ export const Mona: Character = {
 
 export const Ningguang: Character = {
   type: "Character",
-  name: "Ningguang",
+  name: registerMessage({ defaultMessage: "Ningguang" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Ningguang",
   talentMaterialWeekly: [SpiritLocketOfBoreas],
   talentMaterials: [Prosperity],
@@ -193,7 +194,7 @@ export const Ningguang: Character = {
 
 export const Noelle: Character = {
   type: "Character",
-  name: "Noelle",
+  name: registerMessage({ defaultMessage: "Noelle" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Noelle",
   talentMaterialWeekly: [DvalinClaw],
   talentMaterials: [Resistance],
@@ -202,7 +203,7 @@ export const Noelle: Character = {
 
 export const Qiqi: Character = {
   type: "Character",
-  name: "Qiqi",
+  name: registerMessage({ defaultMessage: "Qiqi" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Qiqi",
   talentMaterialWeekly: [TailOfBoreas],
   talentMaterials: [Prosperity],
@@ -211,7 +212,7 @@ export const Qiqi: Character = {
 
 export const Razor: Character = {
   type: "Character",
-  name: "Razor",
+  name: registerMessage({ defaultMessage: "Razor" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Razor",
   talentMaterialWeekly: [DvalinClaw],
   talentMaterials: [Resistance],
@@ -220,7 +221,7 @@ export const Razor: Character = {
 
 export const Sucrose: Character = {
   type: "Character",
-  name: "Sucrose",
+  name: registerMessage({ defaultMessage: "Sucrose" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Sucrose",
   talentMaterialWeekly: [SpiritLocketOfBoreas],
   talentMaterials: [Freedom],
@@ -229,7 +230,7 @@ export const Sucrose: Character = {
 
 export const Venti: Character = {
   type: "Character",
-  name: "Venti",
+  name: registerMessage({ defaultMessage: "Venti" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Venti",
   talentMaterialWeekly: [TailOfBoreas],
   talentMaterials: [Ballad],
@@ -238,7 +239,7 @@ export const Venti: Character = {
 
 export const Xiangling: Character = {
   type: "Character",
-  name: "Xiangling",
+  name: registerMessage({ defaultMessage: "Xiangling" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Xiangling",
   talentMaterialWeekly: [DvalinClaw],
   talentMaterials: [Diligence],
@@ -247,7 +248,7 @@ export const Xiangling: Character = {
 
 export const Xingqiu: Character = {
   type: "Character",
-  name: "Xingqiu",
+  name: registerMessage({ defaultMessage: "Xingqiu" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Xingqiu",
   talentMaterialWeekly: [TailOfBoreas],
   talentMaterials: [Gold],
@@ -256,7 +257,7 @@ export const Xingqiu: Character = {
 
 export const Klee: Character = {
   type: "Character",
-  name: "Klee",
+  name: registerMessage({ defaultMessage: "Klee" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Klee",
   talentMaterialWeekly: [RingOfBoreas],
   talentMaterials: [Freedom],
@@ -265,7 +266,7 @@ export const Klee: Character = {
 
 export const Tartaglia: Character = {
   type: "Character",
-  name: "Tartaglia",
+  name: registerMessage({ defaultMessage: "Tartaglia" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Tartaglia",
   talentMaterialWeekly: [ShardOfAFoulLegacy],
   talentMaterials: [Freedom],
@@ -274,7 +275,7 @@ export const Tartaglia: Character = {
 
 export const Diona: Character = {
   type: "Character",
-  name: "Diona",
+  name: registerMessage({ defaultMessage: "Diona" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Diona",
   talentMaterialWeekly: [ShardOfAFoulLegacy],
   talentMaterials: [Freedom],
@@ -283,7 +284,7 @@ export const Diona: Character = {
 
 export const Zhongli: Character = {
   type: "Character",
-  name: "Zhongli",
+  name: registerMessage({ defaultMessage: "Zhongli" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Zhongli",
   talentMaterialWeekly: [TuskOfMonocerosCaeli],
   talentMaterials: [Gold],
@@ -292,7 +293,7 @@ export const Zhongli: Character = {
 
 export const Xinyan: Character = {
   type: "Character",
-  name: "Xinyan",
+  name: registerMessage({ defaultMessage: "Xinyan" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Xinyan",
   talentMaterialWeekly: [TuskOfMonocerosCaeli],
   talentMaterials: [Gold],
@@ -301,7 +302,7 @@ export const Xinyan: Character = {
 
 export const Yanfei: Character = {
   type: "Character",
-  name: "Yanfei",
+  name: registerMessage({ defaultMessage: "Yanfei" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Yanfei",
   talentMaterialWeekly: [BloodjadeBranch],
   talentMaterials: [Gold],
@@ -310,7 +311,7 @@ export const Yanfei: Character = {
 
 export const Eula: Character = {
   type: "Character",
-  name: "Eula",
+  name: registerMessage({ defaultMessage: "Eula" }),
   wiki: "https://genshin.honeyhunterworld.com/db/char/eula/",
   talentMaterialWeekly: [DragonLordsCrown],
   talentMaterials: [Resistance],
@@ -319,7 +320,7 @@ export const Eula: Character = {
 
 export const Albedo: Character = {
   type: "Character",
-  name: "Albedo",
+  name: registerMessage({ defaultMessage: "Albedo" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Albedo",
   talentMaterialWeekly: [TuskOfMonocerosCaeli],
   talentMaterials: [Ballad],
@@ -328,7 +329,7 @@ export const Albedo: Character = {
 
 export const Ganyu: Character = {
   type: "Character",
-  name: "Ganyu",
+  name: registerMessage({ defaultMessage: "Ganyu" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Ganyu",
   talentMaterialWeekly: [ShadowOfTheWarrior],
   talentMaterials: [Diligence],
@@ -337,7 +338,7 @@ export const Ganyu: Character = {
 
 export const Ayaka: Character = {
   type: "Character",
-  name: "Ayaka",
+  name: registerMessage({ defaultMessage: "Ayaka" }),
   wiki: "https://genshin.honeyhunterworld.com/db/char/ayaka/",
   talentMaterialWeekly: [RingOfBoreas],
   talentMaterials: [Prosperity],
@@ -346,7 +347,7 @@ export const Ayaka: Character = {
 
 export const Xiao: Character = {
   type: "Character",
-  name: "Xiao",
+  name: registerMessage({ defaultMessage: "Xiao" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Xiao",
   talentMaterialWeekly: [ShadowOfTheWarrior],
   talentMaterials: [Prosperity],
@@ -355,7 +356,7 @@ export const Xiao: Character = {
 
 export const Rosaria: Character = {
   type: "Character",
-  name: "Rosaria",
+  name: registerMessage({ defaultMessage: "Rosaria" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Rosaria",
   talentMaterialWeekly: [ShadowOfTheWarrior],
   talentMaterials: [Ballad],
@@ -364,7 +365,7 @@ export const Rosaria: Character = {
 
 export const HuTao: Character = {
   type: "Character",
-  name: "Hu Tao",
+  name: registerMessage({ defaultMessage: "Hu Tao" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Hu_Tao",
   talentMaterialWeekly: [ShardOfAFoulLegacy],
   talentMaterials: [Diligence],

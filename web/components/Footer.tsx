@@ -10,7 +10,7 @@ const Footer = ({ showShortcuts }: { showShortcuts?: () => void }) => {
       <chakra.div fontSize="sm" textAlign="center">
         <p>
           <FormattedMessage
-            id="footerMihoyo"
+            defaultMessage="{app} is not affiliated with or endorsed by {mihoyo}."
             values={{
               app: (
                 <NextLink href="/" passHref>
@@ -22,7 +22,7 @@ const Footer = ({ showShortcuts }: { showShortcuts?: () => void }) => {
               mihoyo: (
                 <Link href="https://mihoyo.com/" isExternal>
                   <em>
-                    <FormattedMessage id="mihoyo" />
+                    <FormattedMessage defaultMessage="miHoYo" />
                   </em>
                 </Link>
               ),
@@ -31,32 +31,32 @@ const Footer = ({ showShortcuts }: { showShortcuts?: () => void }) => {
         </p>
 
         <p>
-          <FormattedMessage id="footerData" />
+          <FormattedMessage defaultMessage="Data on this website may not always be accurate or up-to-date with in-game changes." />
         </p>
       </chakra.div>
 
       <HStack spacing={4} justify="center">
         {showShortcuts && (
-          <Tooltip label={<FormattedMessage id="footerShortcuts" />}>
+          <Tooltip label={<FormattedMessage defaultMessage="Shortcuts" />}>
             <Link as="button" onClick={showShortcuts}>
               <Icon as={FaKeyboard} />
             </Link>
           </Tooltip>
         )}
 
-        <Tooltip label={<FormattedMessage id="footerHelp" />}>
+        <Tooltip label={<FormattedMessage defaultMessage="Help" />}>
           <Link href="https://github.com/chiyadev/genshin-schedule/wiki" isExternal>
             <Icon as={FaQuestion} />
           </Link>
         </Tooltip>
 
-        <Tooltip label={<FormattedMessage id="footerDiscord" />}>
+        <Tooltip label={<FormattedMessage defaultMessage="Discord" />}>
           <Link href="https://discord.gg/XdPQeEaBE7" isExternal>
             <Icon as={FaDiscord} />
           </Link>
         </Tooltip>
 
-        <Tooltip label={<FormattedMessage id="footerGitHub" />}>
+        <Tooltip label={<FormattedMessage defaultMessage="GitHub" />}>
           <Link href="https://github.com/chiyadev/genshin-schedule" isExternal>
             <Icon as={FaGithub} />
           </Link>

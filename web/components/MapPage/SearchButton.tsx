@@ -23,7 +23,7 @@ const SearchButton = () => {
       >
         <HStack spacing={2}>
           <FaSearch />
-          <div>{query ? `"${query}"` : <FormattedMessage id="search" />}</div>
+          <div>{query ? `"${query}"` : <FormattedMessage defaultMessage="Search" />}</div>
         </HStack>
       </Link>
     </HStack>

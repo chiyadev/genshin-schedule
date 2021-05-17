@@ -9,7 +9,7 @@ const BackButton = ({ onClick }: { onClick?: () => void }) => {
       <HStack spacing={2}>
         <Icon as={FaAngleLeft} />
         <div>
-          <FormattedMessage id="taskBack" />
+          <FormattedMessage defaultMessage="Back" />
         </div>
       </HStack>
     </Link>

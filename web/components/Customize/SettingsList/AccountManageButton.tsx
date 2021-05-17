@@ -41,14 +41,14 @@ const AccountManageButton = ({ user }: { user: User }) => {
           trackEvent("accountManager", "show");
         }}
       >
-        <FormattedMessage id="manageAccount" />
+        <FormattedMessage defaultMessage="Manage account" />
       </Button>
 
       <Modal isOpen={open} onClose={() => setOpen(false)} size="lg">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
-            <FormattedMessage id="manageAccount" />
+            <FormattedMessage defaultMessage="Manage account" />
           </ModalHeader>
           <ModalCloseButton />
 
@@ -85,17 +85,17 @@ const AccountManageButton = ({ user }: { user: User }) => {
             <ModalBody>
               <VStack align="stretch" spacing={4}>
                 <div>
-                  <FormattedMessage id="manageUsnPwd" />
+                  <FormattedMessage defaultMessage="You can change your account username and password." />
                 </div>
 
                 <FormControl isRequired>
                   <FormLabel>
-                    <FormattedMessage id="username" />
+                    <FormattedMessage defaultMessage="Username" />
                   </FormLabel>
 
                   <Input
                     id="username"
-                    placeholder={formatMessage({ id: "usernameNew" })}
+                    placeholder={formatMessage({ defaultMessage: "New username" })}
                     autoComplete="username"
                     value={username}
                     onChange={({ currentTarget: { value } }) => setUsername(value)}
@@ -104,13 +104,13 @@ const AccountManageButton = ({ user }: { user: User }) => {
 
                 <FormControl isRequired>
                   <FormLabel>
-                    <FormattedMessage id="password" />
+                    <FormattedMessage defaultMessage="Password" />
                   </FormLabel>
 
                   <Input
                     id="password"
                     type="password"
-                    placeholder={formatMessage({ id: "passwordNew" })}
+                    placeholder={formatMessage({ defaultMessage: "New password" })}
                     autoComplete="current-password"
                     value={password}
                     onChange={({ currentTarget: { value } }) => setPassword(value)}
@@ -118,7 +118,7 @@ const AccountManageButton = ({ user }: { user: User }) => {
                 </FormControl>
 
                 <div>
-                  <FormattedMessage id="linkedDiscordId" />: <Code>{user.discordUserId ?? "<null>"}</Code>
+                  <FormattedMessage defaultMessage="Linked Discord ID" />: <Code>{user.discordUserId ?? "<null>"}</Code>
                 </div>
               </VStack>
             </ModalBody>
@@ -126,11 +126,11 @@ const AccountManageButton = ({ user }: { user: User }) => {
             <ModalFooter>
               <ButtonGroup>
                 <Button type="submit" colorScheme="red" leftIcon={<Icon as={FaUpload} />} isLoading={load}>
-                  <FormattedMessage id="manageAccountSubmit" />
+                  <FormattedMessage defaultMessage="Submit" />
                 </Button>
 
                 <Button onClick={() => setOpen(false)}>
-                  <FormattedMessage id="cancel" />
+                  <FormattedMessage defaultMessage="Cancel" />
                 </Button>
               </ButtonGroup>
             </ModalFooter>

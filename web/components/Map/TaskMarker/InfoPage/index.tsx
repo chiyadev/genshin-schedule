@@ -7,7 +7,7 @@ import HideCheck from "./HideCheck";
 import { chakra, HStack, Input, Textarea, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../../assets";
 import IntervalResetCheck from "./IntervalResetCheck";
-import { KnownResourceTimers } from "../IconPage/search";
+import { KnownResourceTimers } from "../../../../db/icons";
 import NotifyToggle from "./NotifyToggle";
 import { useIntl } from "react-intl";
 
@@ -67,7 +67,7 @@ const InfoPage = ({
         h={12}
         p={0}
         borderRadius={0}
-        placeholder={formatMessage({ id: "taskDesc" })}
+        placeholder={formatMessage({ defaultMessage: "Task description" })}
       />
 
       <VStack key={task.icon} align="stretch" spacing={1}>

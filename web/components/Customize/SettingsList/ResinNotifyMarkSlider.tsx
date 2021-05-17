@@ -17,7 +17,7 @@ const ResinNotifyMarkSlider = () => {
       <HStack spacing={2}>
         <Icon as={FaBell} />
         <div>
-          <FormattedMessage id="resinNotiMark" />
+          <FormattedMessage defaultMessage="Send resin notification at" />
         </div>
       </HStack>
 

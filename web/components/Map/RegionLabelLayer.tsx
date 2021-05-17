@@ -8,7 +8,7 @@ import { Config, MapZoomMax, useConfig } from "../../utils/config";
 import { useIntl } from "react-intl";
 
 const RegionLabelLayer = () => {
-  const { formatMessage } = useIntl();
+  const { formatMessage: formatMessageId } = useIntl();
   const [renderId, setRenderId] = useState(0);
   const [state] = useConfig("mapState");
 
@@ -18,7 +18,7 @@ const RegionLabelLayer = () => {
     <GeoJSON
       key={renderId}
       data={data as any}
-      pointToLayer={(point, latlng) => pointToLayer(state, formatMessage({ id: point.properties.label?.en }), latlng)}
+      pointToLayer={(point, latlng) => pointToLayer(state, formatMessageId({ id: point.properties.label?.en }), latlng)}
     />
   );
 };

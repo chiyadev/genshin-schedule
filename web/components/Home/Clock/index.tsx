@@ -12,7 +12,7 @@ const Clock = () => {
       <HStack fontSize="lg" spacing={2} justify="center">
         <Icon as={FaClock} />
         <div>
-          <FormattedMessage id="timeInTeyvat" /> (<ServerText />)
+          <FormattedMessage defaultMessage="Time in Teyvat" /> (<ServerText />)
         </div>
       </HStack>
 

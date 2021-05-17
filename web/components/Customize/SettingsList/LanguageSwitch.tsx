@@ -15,7 +15,7 @@ const LanguageSwitch = () => {
       <HStack spacing={2}>
         <Icon as={FaGlobeAsia} />
         <div>
-          <FormattedMessage id="language" />
+          <FormattedMessage defaultMessage="Language" />
         </div>
       </HStack>
 
@@ -31,10 +31,12 @@ const LanguageSwitch = () => {
         }}
       >
         {Languages.map((lang) => (
-          <option value={lang}>{LanguageNames[lang]}</option>
+          <option key={lang} value={lang}>
+            {LanguageNames[lang]}
+          </option>
         ))}
 
-        <option value="contribute">({formatMessage({ id: "languageContrib" })})</option>
+        <option value="contribute">({formatMessage({ defaultMessage: "Add new language" })})</option>
       </Select>
     </HStack>
   );

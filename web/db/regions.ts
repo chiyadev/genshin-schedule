@@ -50,6 +50,7 @@ import {
   Yanfei,
   Zhongli,
 } from "./characters";
+import { registerMessage } from "../utils";
 
 export type Region = {
   type: "Region";
@@ -61,7 +62,7 @@ export type Region = {
 
 export const Mondstadt: Region = {
   type: "Region",
-  name: "Mondstadt",
+  name: registerMessage({ defaultMessage: "Mondstadt" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Mondstadt",
   domains: [
     CeciliaGarden,
@@ -95,7 +96,7 @@ export const Mondstadt: Region = {
 
 export const Liyue: Region = {
   type: "Region",
-  name: "Liyue",
+  name: registerMessage({ defaultMessage: "Liyue" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Liyue",
   domains: [
     HiddenPalaceOfLianshanFormula,
@@ -112,7 +113,7 @@ export const Liyue: Region = {
 
 export const Inazuma: Region = {
   type: "Region",
-  name: "Inazuma",
+  name: registerMessage({ defaultMessage: "Inazuma" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Inazuma",
   domains: [],
   characters: [Ayaka],
@@ -120,7 +121,7 @@ export const Inazuma: Region = {
 
 export const Snezhnaya: Region = {
   type: "Region",
-  name: "Snezhnaya",
+  name: registerMessage({ defaultMessage: "Snezhnaya" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Snezhnaya",
   domains: [],
   characters: [Tartaglia],

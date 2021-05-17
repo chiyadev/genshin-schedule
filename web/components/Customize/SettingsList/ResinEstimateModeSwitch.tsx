@@ -14,7 +14,7 @@ const ResinEstimateModeSwitch = () => {
       <HStack spacing={2}>
         <Icon as={FaCalculator} />
         <div>
-          <FormattedMessage id="resinEstMode" />
+          <FormattedMessage defaultMessage="Resin estimation mode" />
         </div>
       </HStack>
 
@@ -26,8 +26,8 @@ const ResinEstimateModeSwitch = () => {
             trackEvent("resinEstimateMode", value);
           }}
         >
-          <option value="time">{formatMessage({ id: "resinEstTime" })}</option>
-          <option value="value">{formatMessage({ id: "resinEstValue" })}</option>
+          <option value="time">{formatMessage({ defaultMessage: "Time steps (2h, 4h, 8h…)" })}</option>
+          <option value="value">{formatMessage({ defaultMessage: "Value steps (20, 40, 60)" })}</option>
         </Select>
       </chakra.div>
     </HStack>

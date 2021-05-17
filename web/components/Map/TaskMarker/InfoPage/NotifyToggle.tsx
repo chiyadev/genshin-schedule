@@ -27,7 +27,7 @@ export const NotifyToggle = ({
         key: `task_${task.id}`,
         time: task.dueTime,
         icon: getAssetByName(task.icon) || "",
-        title: formatMessage({ id: "taskRespawned" }, { name: task.name }),
+        title: formatMessage({ defaultMessage: "{name} respawned" }, { name: task.name }),
         description: task.description || "",
         url: "/map",
         color,
@@ -43,7 +43,7 @@ export const NotifyToggle = ({
 
       <HStack as="label" spacing={2} cursor="pointer" flex={1}>
         <div>
-          <FormattedMessage id="taskNotify" />
+          <FormattedMessage defaultMessage="Notify respawn" />
         </div>
         <Spacer />
 

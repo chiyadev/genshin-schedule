@@ -12,8 +12,8 @@ const IntervalResetCheck = ({ value, setValue }: { value: boolean; setValue: Dis
 
       <HStack as="label" spacing={2} cursor="pointer" flex={1}>
         <div>
-          <FormattedMessage id="taskRespawnOnReset" /> (
-          <FormattedMessage id="timeMorning" values={{ time: ServerResetHour }} />)
+          <FormattedMessage defaultMessage="Respawns on server reset" /> (
+          <FormattedMessage defaultMessage="{time}AM" values={{ time: ServerResetHour }} />)
         </div>
         <Spacer />
 

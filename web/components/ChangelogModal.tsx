@@ -15,11 +15,17 @@ import {
 import { FaBullhorn } from "react-icons/fa";
 import { FormattedMessage } from "react-intl";
 
-const LatestChangelog = 24;
+const LatestChangelog = 26;
 
 function buildChangelog() {
   return [
-    <ChangelogSection key={24}>
+    <ChangelogSection key={26} date="2021/05/15">
+      <ChangelogItem github={69}>Added Indonesian localization. Menambahkan terjemahan bahasa Indonesia.</ChangelogItem>
+    </ChangelogSection>,
+    <ChangelogSection key={25} date="2021/05/15">
+      <ChangelogItem github={64}>Improved translation workflow based on GNU gettext tools.</ChangelogItem>
+    </ChangelogSection>,
+    <ChangelogSection key={24} date="2021/05/04">
       <ChangelogItem github={63}>Added a calculator for realm currency.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={23} date="2021/05/01">
@@ -167,7 +173,7 @@ const ChangelogModal = () => {
           <HStack>
             <Icon as={FaBullhorn} />
             <div>
-              <FormattedMessage id="changelog" />
+              <FormattedMessage defaultMessage="Update changelog" />
             </div>
           </HStack>
         </ModalHeader>

@@ -46,7 +46,7 @@ const EstimatorByTime = () => {
       {values.map(({ capTime, value, full }) => (
         <div key={capTime.valueOf()}>
           <FormattedMessage
-            id="resinEstTimeEntry"
+            defaultMessage="{value} in {duration}"
             values={{
               value,
               duration: full

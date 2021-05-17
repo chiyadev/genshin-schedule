@@ -1,0 +1,3192 @@
+msgid ""
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:57
+msgctxt "components.Auth.UserSignIn.242220"
+msgid "Username"
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:45
+msgctxt "components.Auth.UserSignIn.28def3"
+msgid "Error"
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:84
+msgctxt "components.Auth.UserSignIn.57f247"
+msgid "Forgot password?"
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:144
+msgctxt "components.Auth.UserSignIn.61ef74"
+msgid "Continue as anonymous"
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:89
+msgctxt "components.Auth.UserSignIn.7249ee"
+msgid "Never reuse your miHoYo password on Genshin-related websites."
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:133
+msgctxt "components.Auth.UserSignIn.93eb72"
+msgid "All data will be stored locally on the browser."
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:97
+msgctxt "components.Auth.UserSignIn.bc7fa7"
+msgid "Read more."
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:130
+msgctxt "components.Auth.UserSignIn.c12651"
+msgid "Submit"
+msgstr ""
+
+#: components/Auth/UserSignIn.tsx:70
+msgctxt "components.Auth.UserSignIn.e6c83b"
+msgid "Password"
+msgstr ""
+
+#: components/ChangelogModal.tsx:176
+msgctxt "components.ChangelogModal.3a15e6"
+msgid "Update changelog"
+msgstr ""
+
+#: components/ClockOffsetWarning.tsx:24
+msgctxt "components.ClockOffsetWarning.85fdee"
+msgid "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} other {in # days}}."
+msgstr ""
+
+#: components/ClockOffsetWarning.tsx:36
+msgctxt "components.ClockOffsetWarning.8e6fec"
+msgid "Reset"
+msgstr ""
+
+#: components/Customize/ArtifactInfo/NoteInput.tsx:24
+msgctxt "components.Customize.ArtifactInfo.NoteInput.ab582f"
+msgid "e.g. Lumine's artifact"
+msgstr ""
+
+#: components/Customize/ArtifactInfo/NoteInput.tsx:17
+msgctxt "components.Customize.ArtifactInfo.NoteInput.c6a1b4"
+msgid "Additional notes"
+msgstr ""
+
+#: components/Customize/ArtifactInfo/Toggle.tsx:23
+msgctxt "components.Customize.ArtifactInfo.Toggle.cce039"
+msgid "Show on schedule"
+msgstr ""
+
+#: components/Customize/ArtifactInfo/Toggle.tsx:27
+msgctxt "components.Customize.ArtifactInfo.Toggle.cf77f8"
+msgid "Scheduled domains will appear on the days they are available."
+msgstr ""
+
+#: components/Customize/ArtifactList/index.tsx:16
+msgctxt "components.Customize.ArtifactList.index.796e5e"
+msgid "Artifacts"
+msgstr ""
+
+#: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:55
+msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.8b6c08"
+msgid "Add as task"
+msgstr ""
+
+#: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:45
+msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.b4b55a"
+msgid "ascension material for {name}"
+msgstr ""
+
+#: components/Customize/CharacterInfo/NoteInput.tsx:24
+msgctxt "components.Customize.CharacterInfo.NoteInput.1cfa1e"
+msgid "e.g. Anemo traveler"
+msgstr ""
+
+#: components/Customize/CharacterInfo/NoteInput.tsx:17
+msgctxt "components.Customize.CharacterInfo.NoteInput.c6a1b4"
+msgid "Additional notes"
+msgstr ""
+
+#: components/Customize/CharacterInfo/Toggle.tsx:23
+msgctxt "components.Customize.CharacterInfo.Toggle.cce039"
+msgid "Show on schedule"
+msgstr ""
+
+#: components/Customize/CharacterInfo/Toggle.tsx:27
+msgctxt "components.Customize.CharacterInfo.Toggle.cf77f8"
+msgid "Scheduled domains will appear on the days they are available."
+msgstr ""
+
+#: components/Customize/CharacterList/index.tsx:16
+msgctxt "components.Customize.CharacterList.index.4e372c"
+msgid "Characters"
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:104
+msgctxt "components.Customize.Notifications.Info.049a4d"
+msgid "Invite the bot"
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:36
+msgctxt "components.Customize.Notifications.Info.34089d"
+msgid "Notifications"
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:53
+msgctxt "components.Customize.Notifications.Info.63d176"
+msgid "Genshin Schedule has a Discord bot that can send you notifications when your resin recharges or resources respawn."
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:67
+msgctxt "components.Customize.Notifications.Info.70feee"
+msgid "Genshin Schedule server"
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:72
+msgctxt "components.Customize.Notifications.Info.8f57ce"
+msgid "invite the bot"
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:60
+msgctxt "components.Customize.Notifications.Info.9da5a0"
+msgid "1. Join the {server}, or {invite} to your server. Either method is fine because you can only interact with the bot via DM anyway, but at least one common server is required for the bot to be able to message you."
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:112
+msgctxt "components.Customize.Notifications.Info.a7c1c8"
+msgid "2. Make sure DMs from server members are enabled, otherwise the bot cannot message you."
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:90
+msgctxt "components.Customize.Notifications.Info.aebf2a"
+msgid "Join the server"
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:121
+msgctxt "components.Customize.Notifications.Info.e159bf"
+msgid "3. Copy the following message and send it to the bot via DM. Don't share this message with anyone else, ever!"
+msgstr ""
+
+#: components/Customize/Notifications/Info.tsx:40
+msgctxt "components.Customize.Notifications.Info.e180cd"
+msgid "Queue"
+msgstr ""
+
+#: components/Customize/Notifications/MessageDisplay.tsx:34
+msgctxt "components.Customize.Notifications.MessageDisplay.a79e7a"
+msgid "Copied"
+msgstr ""
+
+#: components/Customize/Notifications/MessageDisplay.tsx:34
+msgctxt "components.Customize.Notifications.MessageDisplay.e25eaf"
+msgid "Copy"
+msgstr ""
+
+#: components/Customize/Notifications/MessageDisplay.tsx:20
+msgctxt "components.Customize.Notifications.MessageDisplay.fbf09e"
+msgid "You are not signed in."
+msgstr ""
+
+#: components/Customize/Search.tsx:27
+msgctxt "components.Customize.Search.2027a7"
+msgid "Select items to be added to your farming schedule."
+msgstr ""
+
+#: components/Customize/Search.tsx:21
+msgctxt "components.Customize.Search.7c993e"
+msgid "Search characters, weapons and artifacts…"
+msgstr ""
+
+#: components/Customize/Search.tsx:39
+msgctxt "components.Customize.Search.9e7721"
+msgid "create an issue"
+msgstr ""
+
+#: components/Customize/Search.tsx:30
+msgctxt "components.Customize.Search.bb5522"
+msgid "If there are any missing items, please {link} on GitHub."
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:88
+msgctxt "components.Customize.SettingsList.AccountManageButton.12c3f9"
+msgid "You can change your account username and password."
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:93
+msgctxt "components.Customize.SettingsList.AccountManageButton.242220"
+msgid "Username"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:51
+msgctxt "components.Customize.SettingsList.AccountManageButton.2d40ff"
+msgid "Manage account"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:121
+msgctxt "components.Customize.SettingsList.AccountManageButton.2f8c01"
+msgid "Linked Discord ID"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:113
+msgctxt "components.Customize.SettingsList.AccountManageButton.7d31e1"
+msgid "New password"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:98
+msgctxt "components.Customize.SettingsList.AccountManageButton.a58ae0"
+msgid "New username"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:129
+msgctxt "components.Customize.SettingsList.AccountManageButton.c12651"
+msgid "Submit"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:133
+msgctxt "components.Customize.SettingsList.AccountManageButton.e3b158"
+msgid "Cancel"
+msgstr ""
+
+#: components/Customize/SettingsList/AccountManageButton.tsx:107
+msgctxt "components.Customize.SettingsList.AccountManageButton.e6c83b"
+msgid "Password"
+msgstr ""
+
+#: components/Customize/SettingsList/BackgroundSwitch.tsx:17
+msgctxt "components.Customize.SettingsList.BackgroundSwitch.5d0640"
+msgid "Background"
+msgstr ""
+
+#: components/Customize/SettingsList/BackgroundSwitch.tsx:31
+msgctxt "components.Customize.SettingsList.BackgroundSwitch.b6d853"
+msgid "Disabled"
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:67
+msgctxt "components.Customize.SettingsList.ConfigExportButton.243268"
+msgid "This action cannot be undone."
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:99
+msgctxt "components.Customize.SettingsList.ConfigExportButton.8ff2e0"
+msgid "Overwrite"
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:60
+msgctxt "components.Customize.SettingsList.ConfigExportButton.a27849"
+msgid "Input is not validated. Corrupted input can make data recovery impossible."
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:109
+msgctxt "components.Customize.SettingsList.ConfigExportButton.a79e7a"
+msgid "Copied"
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:64
+msgctxt "components.Customize.SettingsList.ConfigExportButton.b0e5f6"
+msgid "You can export your account data for backup and restore."
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:52
+msgctxt "components.Customize.SettingsList.ConfigExportButton.dcad88"
+msgid "Manage data"
+msgstr ""
+
+#: components/Customize/SettingsList/ConfigExportButton.tsx:109
+msgctxt "components.Customize.SettingsList.ConfigExportButton.e25eaf"
+msgid "Copy"
+msgstr ""
+
+#: components/Customize/SettingsList/LanguageSwitch.tsx:37
+msgctxt "components.Customize.SettingsList.LanguageSwitch.4b7b37"
+msgid "Add new language"
+msgstr ""
+
+#: components/Customize/SettingsList/LanguageSwitch.tsx:18
+msgctxt "components.Customize.SettingsList.LanguageSwitch.cb5677"
+msgid "Language"
+msgstr ""
+
+#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:17
+msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.6eef86"
+msgid "Resin estimation mode"
+msgstr ""
+
+#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:30
+msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.a854bc"
+msgid "Value steps (20, 40, 60)"
+msgstr ""
+
+#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:29
+msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.e2e5d9"
+msgid "Time steps (2h, 4h, 8h…)"
+msgstr ""
+
+#: components/Customize/SettingsList/ResinNotifyMarkSlider.tsx:20
+msgctxt "components.Customize.SettingsList.ResinNotifyMarkSlider.b9f3be"
+msgid "Send resin notification at"
+msgstr ""
+
+#: components/Customize/SettingsList/SignOutButton.tsx:22
+msgctxt "components.Customize.SettingsList.SignOutButton.c576c9"
+msgid "Sign out"
+msgstr ""
+
+#: components/Customize/SettingsList/TaskDefaultZoomSlider.tsx:16
+msgctxt "components.Customize.SettingsList.TaskDefaultZoomSlider.9c6d23"
+msgid "Zoom on task focus"
+msgstr ""
+
+#: components/Customize/SettingsList/TaskListCompactSwitch.tsx:16
+msgctxt "components.Customize.SettingsList.TaskListCompactSwitch.a852ad"
+msgid "Compact task list"
+msgstr ""
+
+#: components/Customize/SettingsList/ThemeSwitch.tsx:16
+msgctxt "components.Customize.SettingsList.ThemeSwitch.84c510"
+msgid "Dark mode"
+msgstr ""
+
+#: components/Customize/SettingsList/index.tsx:20
+msgctxt "components.Customize.SettingsList.index.0f789d"
+msgid "Settings"
+msgstr ""
+
+#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:54
+msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.8b6c08"
+msgid "Add as task"
+msgstr ""
+
+#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:44
+msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.b4b55a"
+msgid "ascension material for {name}"
+msgstr ""
+
+#: components/Customize/WeaponInfo/NoteInput.tsx:24
+msgctxt "components.Customize.WeaponInfo.NoteInput.72b891"
+msgid "e.g. Lumine's weapon"
+msgstr ""
+
+#: components/Customize/WeaponInfo/NoteInput.tsx:17
+msgctxt "components.Customize.WeaponInfo.NoteInput.c6a1b4"
+msgid "Additional notes"
+msgstr ""
+
+#: components/Customize/WeaponInfo/Toggle.tsx:23
+msgctxt "components.Customize.WeaponInfo.Toggle.cce039"
+msgid "Show on schedule"
+msgstr ""
+
+#: components/Customize/WeaponInfo/Toggle.tsx:27
+msgctxt "components.Customize.WeaponInfo.Toggle.cf77f8"
+msgid "Scheduled domains will appear on the days they are available."
+msgstr ""
+
+#: components/Customize/WeaponList/index.tsx:16
+msgctxt "components.Customize.WeaponList.index.4477a1"
+msgid "Weapons"
+msgstr ""
+
+#: components/DropLabel.tsx:18
+msgctxt "components.DropLabel.9f02aa"
+msgid "This item does not drop from any domains."
+msgstr ""
+
+#: components/DropLabel.tsx:41
+msgctxt "components.DropLabel.9f8862"
+msgid "{domain}{days, select, undefined {} other { on {days}}}"
+msgstr ""
+
+#: components/Footer.tsx:53
+msgctxt "components.Footer.16f995"
+msgid "Discord"
+msgstr ""
+
+#: components/Footer.tsx:47
+msgctxt "components.Footer.484351"
+msgid "Help"
+msgstr ""
+
+#: components/Footer.tsx:34
+msgctxt "components.Footer.865a3c"
+msgid "Data on this website may not always be accurate or up-to-date with in-game changes."
+msgstr ""
+
+#: components/Footer.tsx:25
+msgctxt "components.Footer.a0a9e9"
+msgid "miHoYo"
+msgstr ""
+
+#: components/Footer.tsx:59
+msgctxt "components.Footer.c0ef70"
+msgid "GitHub"
+msgstr ""
+
+#: components/Footer.tsx:12
+msgctxt "components.Footer.d541af"
+msgid "{app} is not affiliated with or endorsed by {mihoyo}."
+msgstr ""
+
+#: components/Footer.tsx:40
+msgctxt "components.Footer.ec5030"
+msgid "Shortcuts"
+msgstr ""
+
+#: components/Header.tsx:30
+msgctxt "components.Header.4d7a4e"
+msgid "Customize"
+msgstr ""
+
+#: components/Header.tsx:17
+msgctxt "components.Header.e3e15c"
+msgid "Genshin Schedule"
+msgstr ""
+
+#: components/Home/Clock/DateDisplay.tsx:34
+msgctxt "components.Home.Clock.DateDisplay.d1826b"
+msgid "{value, plural, one {# resin} other {# resins}}"
+msgstr ""
+
+#: components/Home/Clock/DateDisplay.tsx:26
+msgctxt "components.Home.Clock.DateDisplay.de212c"
+msgid "{duration} until reset"
+msgstr ""
+
+#: components/Home/Clock/ServerText.tsx:16
+msgctxt "components.Home.Clock.ServerText.0fe07e"
+msgid "Switch server"
+msgstr ""
+
+#: components/Home/Clock/TimeDisplay.tsx:61
+msgctxt "components.Home.Clock.TimeDisplay.44c3b9"
+msgid "Previous day"
+msgstr ""
+
+#: components/Home/Clock/TimeDisplay.tsx:71
+msgctxt "components.Home.Clock.TimeDisplay.dd708b"
+msgid "Next day"
+msgstr ""
+
+#: components/Home/Clock/index.tsx:15
+msgctxt "components.Home.Clock.index.2cbf2a"
+msgid "Time in Teyvat"
+msgstr ""
+
+#: components/Home/DomainView/DomainDisplay.tsx:23
+msgctxt "components.Home.DomainView.DomainDisplay.0388b5"
+msgid "{category}, {region}"
+msgstr ""
+
+#: components/Home/DomainView/FilterButtons.tsx:28
+msgctxt "components.Home.DomainView.FilterButtons.4477a1"
+msgid "Weapons"
+msgstr ""
+
+#: components/Home/DomainView/FilterButtons.tsx:22
+msgctxt "components.Home.DomainView.FilterButtons.4e372c"
+msgid "Characters"
+msgstr ""
+
+#: components/Home/DomainView/FilterButtons.tsx:34
+msgctxt "components.Home.DomainView.FilterButtons.796e5e"
+msgid "Artifacts"
+msgstr ""
+
+#: components/Home/DomainView/index.tsx:247
+msgctxt "components.Home.DomainView.index.41dc3d"
+msgid "No domains for today. Maybe try some {link}?"
+msgstr ""
+
+#: components/Home/DomainView/index.tsx:256
+msgctxt "components.Home.DomainView.index.4af108"
+msgid "Ley Lines"
+msgstr ""
+
+#: components/Home/DomainView/index.tsx:227
+msgctxt "components.Home.DomainView.index.c49d9f"
+msgid "Today's Domains"
+msgstr ""
+
+#: components/Home/RealmCurrency/ClearButton.tsx:23
+msgctxt "components.Home.RealmCurrency.ClearButton.fc60a8"
+msgid "Clear"
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:53
+msgctxt "components.Home.RealmCurrency.index.1b0b98"
+msgid "Trust rank"
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:60
+msgctxt "components.Home.RealmCurrency.index.27268e"
+msgid "Realm currency"
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:37
+msgctxt "components.Home.RealmCurrency.index.33dd2d"
+msgid "Adeptal energy"
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:30
+msgctxt "components.Home.RealmCurrency.index.d43d9b"
+msgid "Realm Currency Calculator"
+msgstr ""
+
+#: components/Home/Resin/EstimatorByNotifyMark.tsx:18
+msgctxt "components.Home.Resin.EstimatorByNotifyMark.5921a5"
+msgid "{value} in {time}"
+msgstr ""
+
+#: components/Home/Resin/EstimatorByResin.tsx:38
+msgctxt "components.Home.Resin.EstimatorByResin.5921a5"
+msgid "{value} in {time}"
+msgstr ""
+
+#: components/Home/Resin/EstimatorByTime.tsx:48
+msgctxt "components.Home.Resin.EstimatorByTime.f0f932"
+msgid "{value} in {duration}"
+msgstr ""
+
+#: components/Home/Resin/NotificationSetter.tsx:32
+msgctxt "components.Home.Resin.NotificationSetter.94aedd"
+msgid "You have {value} resins right now!"
+msgstr ""
+
+#: components/Home/Resin/NotificationSetter.tsx:31
+msgctxt "components.Home.Resin.NotificationSetter.d9f446"
+msgid "Your resins have fully recharged!"
+msgstr ""
+
+#: components/Home/Resin/NotificationSetter.tsx:28
+msgctxt "components.Home.Resin.NotificationSetter.db8673"
+msgid "Resin recharged"
+msgstr ""
+
+#: components/Home/Resin/index.tsx:105
+msgctxt "components.Home.Resin.index.506b0c"
+msgid "Your resins are full."
+msgstr ""
+
+#: components/Home/Resin/index.tsx:36
+msgctxt "components.Home.Resin.index.fe85b2"
+msgid "Resin Calculator"
+msgstr ""
+
+#: components/Home/Tasks/MarkAllDone.tsx:39
+msgctxt "components.Home.Tasks.MarkAllDone.ec7046"
+msgid "Mark everything as done"
+msgstr ""
+
+#: components/Home/Tasks/SearchButton.tsx:20
+msgctxt "components.Home.Tasks.SearchButton.c66715"
+msgid "Search"
+msgstr ""
+
+#: components/Home/Tasks/ShowHiddenButton.tsx:13
+msgctxt "components.Home.Tasks.ShowHiddenButton.7a418f"
+msgid "Show hidden"
+msgstr ""
+
+#: components/Home/Tasks/index.tsx:43
+msgctxt "components.Home.Tasks.index.0b9931"
+msgid "Today's Tasks"
+msgstr ""
+
+#: components/Home/Tasks/index.tsx:94
+msgctxt "components.Home.Tasks.index.778f27"
+msgid "Open map"
+msgstr ""
+
+#: components/Home/Tasks/index.tsx:67
+msgctxt "components.Home.Tasks.index.d6861b"
+msgid "No tasks for now. Create one by clicking on the map."
+msgstr ""
+
+#: components/Layout.tsx:62
+msgctxt "components.Layout.1f7783"
+msgid "Statistics"
+msgstr ""
+
+#: components/Layout.tsx:53
+msgctxt "components.Layout.34089d"
+msgid "Notifications"
+msgstr ""
+
+#: components/Map/TaskCreateLayer/CreateButton.tsx:32
+msgctxt "components.Map.TaskCreateLayer.CreateButton.573cd8"
+msgid "Create"
+msgstr ""
+
+#: components/Map/TaskLayer/DeleteButton.tsx:31
+msgctxt "components.Map.TaskLayer.DeleteButton.2b7afa"
+msgid "Delete"
+msgstr ""
+
+#: components/Map/TaskLayer/DoneButton.tsx:31
+msgctxt "components.Map.TaskLayer.DoneButton.395490"
+msgid "Mark as to-do"
+msgstr ""
+
+#: components/Map/TaskLayer/DoneButton.tsx:33
+msgctxt "components.Map.TaskLayer.DoneButton.927523"
+msgid "Mark as done"
+msgstr ""
+
+#: components/Map/TaskMarker/BackButton.tsx:12
+msgctxt "components.Map.TaskMarker.BackButton.73247b"
+msgid "Back"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/DueText.tsx:25
+msgctxt "components.Map.TaskMarker.InfoPage.DueText.17572f"
+msgid "Due {time} ago"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/DueText.tsx:20
+msgctxt "components.Map.TaskMarker.InfoPage.DueText.767ec9"
+msgid "Due in {time}"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/HideCheck.tsx:17
+msgctxt "components.Map.TaskMarker.InfoPage.HideCheck.fdf592"
+msgid "Hide temporarily"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:67
+msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.52cf48"
+msgid "{time}AM"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:66
+msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.6e6cc8"
+msgid "Server reset"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:19
+msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.a736a6"
+msgid "Respawns every"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:15
+msgctxt "components.Map.TaskMarker.InfoPage.IntervalResetCheck.4b91b9"
+msgid "Respawns on server reset"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:16
+msgctxt "components.Map.TaskMarker.InfoPage.IntervalResetCheck.52cf48"
+msgid "{time}AM"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/NotifyToggle.tsx:30
+msgctxt "components.Map.TaskMarker.InfoPage.NotifyToggle.0b66a8"
+msgid "{name} respawned"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/NotifyToggle.tsx:46
+msgctxt "components.Map.TaskMarker.InfoPage.NotifyToggle.da9e7e"
+msgid "Notify respawn"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/index.tsx:70
+msgctxt "components.Map.TaskMarker.InfoPage.index.906238"
+msgid "Task description"
+msgstr ""
+
+#: components/MapPage/SearchButton.tsx:26
+msgctxt "components.MapPage.SearchButton.c66715"
+msgid "Search"
+msgstr ""
+
+#: components/MapPage/TaskListOverlay.tsx:54
+msgctxt "components.MapPage.TaskListOverlay.ea3f7e"
+msgid "Show list"
+msgstr ""
+
+#: components/MapPage/TaskListOverlay.tsx:52
+msgctxt "components.MapPage.TaskListOverlay.f36c72"
+msgid "Hide list"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:67
+msgctxt "components.ShortcutHelp.0b8e0c"
+msgid "Focus next task"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:34
+msgctxt "components.ShortcutHelp.44c3b9"
+msgid "Previous day"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:69
+msgctxt "components.ShortcutHelp.49f4fc"
+msgid "shift"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:33
+msgctxt "components.ShortcutHelp.5451c7"
+msgid "left"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:36
+msgctxt "components.ShortcutHelp.55c972"
+msgid "right"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:32
+msgctxt "components.ShortcutHelp.723949"
+msgid "Server clock"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:59
+msgctxt "components.ShortcutHelp.755c57"
+msgid "Task scheduler"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:61
+msgctxt "components.ShortcutHelp.7acb8d"
+msgid "Search tasks"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:73
+msgctxt "components.ShortcutHelp.927523"
+msgid "Mark as done"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:44
+msgctxt "components.ShortcutHelp.96d48b"
+msgid "Resin calculator"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:79
+msgctxt "components.ShortcutHelp.9f8054"
+msgid "Show keyboard shortcuts"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:46
+msgctxt "components.ShortcutHelp.b13795"
+msgid "Subtract {values}"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:25
+msgctxt "components.ShortcutHelp.bf360f"
+msgid "Keyboard shortcuts"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:64
+msgctxt "components.ShortcutHelp.c03f14"
+msgid "Toggle list overlay"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:39
+msgctxt "components.ShortcutHelp.c886e7"
+msgid "esc"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:37
+msgctxt "components.ShortcutHelp.dd708b"
+msgid "Next day"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:70
+msgctxt "components.ShortcutHelp.efcb6e"
+msgid "Focus previous task"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:40
+msgctxt "components.ShortcutHelp.fcc2fc"
+msgid "Reset offset"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:77
+msgctxt "components.ShortcutHelp.fd59c3"
+msgid "Other"
+msgstr ""
+
+#: components/Statistics/InfoText.tsx:22
+msgctxt "components.Statistics.InfoText.22e144"
+msgid "Duration"
+msgstr ""
+
+#: components/Statistics/InfoText.tsx:19
+msgctxt "components.Statistics.InfoText.be142a"
+msgid "Range"
+msgstr ""
+
+#: components/Statistics/ResetButton.tsx:34
+msgctxt "components.Statistics.ResetButton.243268"
+msgid "This action cannot be undone."
+msgstr ""
+
+#: components/Statistics/ResetButton.tsx:46
+msgctxt "components.Statistics.ResetButton.8e6fec"
+msgid "Reset"
+msgstr ""
+
+#: components/Statistics/ResetButton.tsx:50
+msgctxt "components.Statistics.ResetButton.e3b158"
+msgid "Cancel"
+msgstr ""
+
+#: components/Statistics/ResinStats.tsx:84
+msgctxt "components.Statistics.ResinStats.101bad"
+msgid "{percent}% efficiency"
+msgstr ""
+
+#: components/Statistics/ResinStats.tsx:79
+msgctxt "components.Statistics.ResinStats.309da3"
+msgid "Total"
+msgstr ""
+
+#: components/Statistics/ResinStats.tsx:102
+msgctxt "components.Statistics.ResinStats.6b30d3"
+msgid "Peak"
+msgstr ""
+
+#: components/Statistics/ResinStats.tsx:107
+msgctxt "components.Statistics.ResinStats.76ed65"
+msgid "Never"
+msgstr ""
+
+#: components/Statistics/ResinStats.tsx:15
+msgctxt "components.Statistics.ResinStats.99ed7d"
+msgid "Resins spent"
+msgstr ""
+
+#: components/Statistics/ResinStats.tsx:63
+msgctxt "components.Statistics.ResinStats.cd681b"
+msgid "Today"
+msgstr ""
+
+#: components/Statistics/TaskStats.tsx:76
+msgctxt "components.Statistics.TaskStats.309da3"
+msgid "Total"
+msgstr ""
+
+#: components/Statistics/TaskStats.tsx:92
+msgctxt "components.Statistics.TaskStats.6b30d3"
+msgid "Peak"
+msgstr ""
+
+#: components/Statistics/TaskStats.tsx:97
+msgctxt "components.Statistics.TaskStats.76ed65"
+msgid "Never"
+msgstr ""
+
+#: components/Statistics/TaskStats.tsx:14
+msgctxt "components.Statistics.TaskStats.c90f7d"
+msgid "Tasks done"
+msgstr ""
+
+#: components/Statistics/TaskStats.tsx:61
+msgctxt "components.Statistics.TaskStats.cd681b"
+msgid "Today"
+msgstr ""
+
+#: components/TaskListCard/DoneButton.tsx:24
+msgctxt "components.TaskListCard.DoneButton.927523"
+msgid "Mark as done"
+msgstr ""
+
+#: components/TaskSearchModal.tsx:34
+msgctxt "components.TaskSearchModal.4ae60b"
+msgid "Search tasks…"
+msgstr ""
+
+#: db/artifacts.ts:25
+msgctxt "db.artifacts.05500a"
+msgid "Berserker"
+msgstr ""
+
+#: db/artifacts.ts:91
+msgctxt "db.artifacts.069da3"
+msgid "Maiden Beloved"
+msgstr ""
+
+#: db/artifacts.ts:115
+msgctxt "db.artifacts.1c37ab"
+msgid "Prayers for Destiny"
+msgstr ""
+
+#: db/artifacts.ts:73
+msgctxt "db.artifacts.214709"
+msgid "Instructor"
+msgstr ""
+
+#: db/artifacts.ts:49
+msgctxt "db.artifacts.21612b"
+msgid "Defender's Will"
+msgstr ""
+
+#: db/artifacts.ts:205
+msgctxt "db.artifacts.21a80b"
+msgid "Pale Flame"
+msgstr ""
+
+#: db/artifacts.ts:103
+msgctxt "db.artifacts.280c08"
+msgid "Noblesse Oblige"
+msgstr ""
+
+#: db/artifacts.ts:13
+msgctxt "db.artifacts.2ff052"
+msgid "Adventurer"
+msgstr ""
+
+#: db/artifacts.ts:181
+msgctxt "db.artifacts.38bb7d"
+msgid "Traveling Doctor"
+msgstr ""
+
+#: db/artifacts.ts:169
+msgctxt "db.artifacts.485473"
+msgid "Thundersoother"
+msgstr ""
+
+#: db/artifacts.ts:97
+msgctxt "db.artifacts.4f913f"
+msgid "Martial Artist"
+msgstr ""
+
+#: db/artifacts.ts:133
+msgctxt "db.artifacts.51460e"
+msgid "Prayers to Springtime"
+msgstr ""
+
+#: db/artifacts.ts:37
+msgctxt "db.artifacts.5681e8"
+msgid "Brave Heart"
+msgstr ""
+
+#: db/artifacts.ts:79
+msgctxt "db.artifacts.5bcd27"
+msgid "Lavawalker"
+msgstr ""
+
+#: db/artifacts.ts:109
+msgctxt "db.artifacts.6d7eb3"
+msgid "Ocean Conqueror"
+msgstr ""
+
+#: db/artifacts.ts:85
+msgctxt "db.artifacts.730401"
+msgid "Lucky Dog"
+msgstr ""
+
+#: db/artifacts.ts:175
+msgctxt "db.artifacts.7e4369"
+msgid "Tiny Miracle"
+msgstr ""
+
+#: db/artifacts.ts:157
+msgctxt "db.artifacts.7e7a67"
+msgid "The Exile"
+msgstr ""
+
+#: db/artifacts.ts:199
+msgctxt "db.artifacts.8003f4"
+msgid "Tenacity of the Millelith"
+msgstr ""
+
+#: db/artifacts.ts:43
+msgctxt "db.artifacts.851f90"
+msgid "Crimson Witch of Flames"
+msgstr ""
+
+#: db/artifacts.ts:187
+msgctxt "db.artifacts.95e53b"
+msgid "Viridescent Venerer"
+msgstr ""
+
+#: db/artifacts.ts:163
+msgctxt "db.artifacts.9f336e"
+msgid "Thundering Fury"
+msgstr ""
+
+#: db/artifacts.ts:55
+msgctxt "db.artifacts.a5f405"
+msgid "Gambler"
+msgstr ""
+
+#: db/artifacts.ts:67
+msgctxt "db.artifacts.b45e3e"
+msgid "Icebreaker"
+msgstr ""
+
+#: db/artifacts.ts:151
+msgctxt "db.artifacts.bf3cde"
+msgid "Scholar"
+msgstr ""
+
+#: db/artifacts.ts:19
+msgctxt "db.artifacts.c4de81"
+msgid "Archaic Petra"
+msgstr ""
+
+#: db/artifacts.ts:31
+msgctxt "db.artifacts.c4ee4e"
+msgid "Bloodstained Chivalry"
+msgstr ""
+
+#: db/artifacts.ts:139
+msgctxt "db.artifacts.d086de"
+msgid "Resolution of Sojourner"
+msgstr ""
+
+#: db/artifacts.ts:145
+msgctxt "db.artifacts.e2996a"
+msgid "Retracing Bolide"
+msgstr ""
+
+#: db/artifacts.ts:193
+msgctxt "db.artifacts.e34cca"
+msgid "Wanderer's Troupe"
+msgstr ""
+
+#: db/artifacts.ts:127
+msgctxt "db.artifacts.e52b68"
+msgid "Prayers for Wisdom"
+msgstr ""
+
+#: db/artifacts.ts:61
+msgctxt "db.artifacts.efac76"
+msgid "Gladiator's Finale"
+msgstr ""
+
+#: db/artifacts.ts:121
+msgctxt "db.artifacts.fa86c6"
+msgid "Prayers for Illumination"
+msgstr ""
+
+#: db/characters.ts:287
+msgctxt "db.characters.07f6ca"
+msgid "Zhongli"
+msgstr ""
+
+#: db/characters.ts:134
+msgctxt "db.characters.0e89af"
+msgid "Fischl"
+msgstr ""
+
+#: db/characters.ts:296
+msgctxt "db.characters.17ba95"
+msgid "Xinyan"
+msgstr ""
+
+#: db/characters.ts:350
+msgctxt "db.characters.18d80a"
+msgid "Xiao"
+msgstr ""
+
+#: db/characters.ts:233
+msgctxt "db.characters.1c8781"
+msgid "Venti"
+msgstr ""
+
+#: db/characters.ts:305
+msgctxt "db.characters.2fbbd1"
+msgid "Yanfei"
+msgstr ""
+
+#: db/characters.ts:242
+msgctxt "db.characters.35f4f4"
+msgid "Xiangling"
+msgstr ""
+
+#: db/characters.ts:224
+msgctxt "db.characters.3988a8"
+msgid "Sucrose"
+msgstr ""
+
+#: db/characters.ts:170
+msgctxt "db.characters.42ddab"
+msgid "Lisa"
+msgstr ""
+
+#: db/characters.ts:314
+msgctxt "db.characters.47f14e"
+msgid "Eula"
+msgstr ""
+
+#: db/characters.ts:341
+msgctxt "db.characters.579564"
+msgid "Ayaka"
+msgstr ""
+
+#: db/characters.ts:71
+msgctxt "db.characters.584d1b"
+msgid "Traveler (Geo)"
+msgstr ""
+
+#: db/characters.ts:215
+msgctxt "db.characters.5934e2"
+msgid "Razor"
+msgstr ""
+
+#: db/characters.ts:188
+msgctxt "db.characters.5e045b"
+msgid "Ningguang"
+msgstr ""
+
+#: db/characters.ts:98
+msgctxt "db.characters.653885"
+msgid "Beidou"
+msgstr ""
+
+#: db/characters.ts:116
+msgctxt "db.characters.7267c2"
+msgid "Chongyun"
+msgstr ""
+
+#: db/characters.ts:197
+msgctxt "db.characters.7ce9c6"
+msgid "Noelle"
+msgstr ""
+
+#: db/characters.ts:143
+msgctxt "db.characters.7f3adf"
+msgid "Jean"
+msgstr ""
+
+#: db/characters.ts:278
+msgctxt "db.characters.89304e"
+msgid "Diona"
+msgstr ""
+
+#: db/characters.ts:152
+msgctxt "db.characters.921292"
+msgid "Kaeya"
+msgstr ""
+
+#: db/characters.ts:206
+msgctxt "db.characters.9de495"
+msgid "Qiqi"
+msgstr ""
+
+#: db/characters.ts:251
+msgctxt "db.characters.9e37b6"
+msgid "Xingqiu"
+msgstr ""
+
+#: db/characters.ts:125
+msgctxt "db.characters.a1bb56"
+msgid "Diluc"
+msgstr ""
+
+#: db/characters.ts:89
+msgctxt "db.characters.a808c9"
+msgid "Barbara"
+msgstr ""
+
+#: db/characters.ts:179
+msgctxt "db.characters.af88fa"
+msgid "Mona"
+msgstr ""
+
+#: db/characters.ts:323
+msgctxt "db.characters.b60444"
+msgid "Albedo"
+msgstr ""
+
+#: db/characters.ts:107
+msgctxt "db.characters.b96249"
+msgid "Bennett"
+msgstr ""
+
+#: db/characters.ts:332
+msgctxt "db.characters.bc58dc"
+msgid "Ganyu"
+msgstr ""
+
+#: db/characters.ts:269
+msgctxt "db.characters.bdaeb2"
+msgid "Tartaglia"
+msgstr ""
+
+#: db/characters.ts:260
+msgctxt "db.characters.ce2cb0"
+msgid "Klee"
+msgstr ""
+
+#: db/characters.ts:62
+msgctxt "db.characters.d09c64"
+msgid "Traveler (Anemo)"
+msgstr ""
+
+#: db/characters.ts:161
+msgctxt "db.characters.d9c480"
+msgid "Keqing"
+msgstr ""
+
+#: db/characters.ts:359
+msgctxt "db.characters.dd7597"
+msgid "Rosaria"
+msgstr ""
+
+#: db/characters.ts:368
+msgctxt "db.characters.de01da"
+msgid "Hu Tao"
+msgstr ""
+
+#: db/characters.ts:80
+msgctxt "db.characters.fdb676"
+msgid "Amber"
+msgstr ""
+
+#: db/commonMaterials.ts:50
+msgctxt "db.commonMaterials.02b6af"
+msgid "Dead Ley Line Branch"
+msgstr ""
+
+#: db/commonMaterials.ts:141
+msgctxt "db.commonMaterials.16740f"
+msgid "Jueyun Chili"
+msgstr ""
+
+#: db/commonMaterials.ts:190
+msgctxt "db.commonMaterials.19c45b"
+msgid "Valberry"
+msgstr ""
+
+#: db/commonMaterials.ts:162
+msgctxt "db.commonMaterials.248863"
+msgid "Qingxin"
+msgstr ""
+
+#: db/commonMaterials.ts:43
+msgctxt "db.commonMaterials.3ef728"
+msgid "Heavy Horn"
+msgstr ""
+
+#: db/commonMaterials.ts:36
+msgctxt "db.commonMaterials.42027c"
+msgid "Divining Scroll"
+msgstr ""
+
+#: db/commonMaterials.ts:29
+msgctxt "db.commonMaterials.574218"
+msgid "Firm Arrowhead"
+msgstr ""
+
+#: db/commonMaterials.ts:21
+msgctxt "db.commonMaterials.5e010a"
+msgid "Hilichurl Mask"
+msgstr ""
+
+#: db/commonMaterials.ts:99
+msgctxt "db.commonMaterials.6405d0"
+msgid "Whopperflower Nectar"
+msgstr ""
+
+#: db/commonMaterials.ts:127
+msgctxt "db.commonMaterials.6f7fb1"
+msgid "Dandelion Seed"
+msgstr ""
+
+#: db/commonMaterials.ts:14
+msgctxt "db.commonMaterials.76ab19"
+msgid "Slime"
+msgstr ""
+
+#: db/commonMaterials.ts:57
+msgctxt "db.commonMaterials.7ccd68"
+msgid "Chaos Device"
+msgstr ""
+
+#: db/commonMaterials.ts:176
+msgctxt "db.commonMaterials.7ce6fd"
+msgid "Small Lamp Grass"
+msgstr ""
+
+#: db/commonMaterials.ts:15
+msgctxt "db.commonMaterials.866176"
+msgid "Slime Condensate"
+msgstr ""
+
+#: db/commonMaterials.ts:106
+msgctxt "db.commonMaterials.8d1274"
+msgid "Calla Lily"
+msgstr ""
+
+#: db/commonMaterials.ts:183
+msgctxt "db.commonMaterials.9653ee"
+msgid "Starconch"
+msgstr ""
+
+#: db/commonMaterials.ts:49
+msgctxt "db.commonMaterials.9f19e7"
+msgid "Ley Line"
+msgstr ""
+
+#: db/commonMaterials.ts:197
+msgctxt "db.commonMaterials.ace079"
+msgid "Violetgrass"
+msgstr ""
+
+#: db/commonMaterials.ts:77
+msgctxt "db.commonMaterials.b1e166"
+msgid "Fatui Insignia"
+msgstr ""
+
+#: db/commonMaterials.ts:169
+msgctxt "db.commonMaterials.bc0224"
+msgid "Silk Flower"
+msgstr ""
+
+#: db/commonMaterials.ts:92
+msgctxt "db.commonMaterials.be8c87"
+msgid "Fragile Bone Shard"
+msgstr ""
+
+#: db/commonMaterials.ts:35
+msgctxt "db.commonMaterials.bf08d6"
+msgid "Samachurl Scroll"
+msgstr ""
+
+#: db/commonMaterials.ts:85
+msgctxt "db.commonMaterials.c5a9ac"
+msgid "Treasure Hoarder Insignia"
+msgstr ""
+
+#: db/commonMaterials.ts:42
+msgctxt "db.commonMaterials.c631e3"
+msgid "Hilichurl Horn"
+msgstr ""
+
+#: db/commonMaterials.ts:71
+msgctxt "db.commonMaterials.c6cff7"
+msgid "Hunter's Sacrificial Knife"
+msgstr ""
+
+#: db/commonMaterials.ts:64
+msgctxt "db.commonMaterials.cd7e10"
+msgid "Mist Grass Pollen"
+msgstr ""
+
+#: db/commonMaterials.ts:211
+msgctxt "db.commonMaterials.ce7fa6"
+msgid "Wolfhook"
+msgstr ""
+
+#: db/commonMaterials.ts:63
+msgctxt "db.commonMaterials.d47bda"
+msgid "Mist Grass"
+msgstr ""
+
+#: db/commonMaterials.ts:148
+msgctxt "db.commonMaterials.d8877a"
+msgid "Noctilucous Jade"
+msgstr ""
+
+#: db/commonMaterials.ts:91
+msgctxt "db.commonMaterials.d88f11"
+msgid "Bone Shard"
+msgstr ""
+
+#: db/commonMaterials.ts:56
+msgctxt "db.commonMaterials.db3ec4"
+msgid "Chaos Part"
+msgstr ""
+
+#: db/commonMaterials.ts:22
+msgctxt "db.commonMaterials.e1a50a"
+msgid "Damaged Mask"
+msgstr ""
+
+#: db/commonMaterials.ts:113
+msgctxt "db.commonMaterials.e513cc"
+msgid "Cecilia"
+msgstr ""
+
+#: db/commonMaterials.ts:155
+msgctxt "db.commonMaterials.e78aed"
+msgid "Philanemo Mushroom"
+msgstr ""
+
+#: db/commonMaterials.ts:134
+msgctxt "db.commonMaterials.ee85bc"
+msgid "Glaze Lily"
+msgstr ""
+
+#: db/commonMaterials.ts:28
+msgctxt "db.commonMaterials.f31a91"
+msgid "Hilichurl Arrowhead"
+msgstr ""
+
+#: db/commonMaterials.ts:70
+msgctxt "db.commonMaterials.f55bde"
+msgid "Fatui Knife"
+msgstr ""
+
+#: db/commonMaterials.ts:204
+msgctxt "db.commonMaterials.fb66ad"
+msgid "Windwheel Aster"
+msgstr ""
+
+#: db/commonMaterials.ts:78
+msgctxt "db.commonMaterials.fd54ff"
+msgid "Recruit's Insignia"
+msgstr ""
+
+#: db/commonMaterials.ts:120
+msgctxt "db.commonMaterials.fe06d4"
+msgid "Cor Lapis"
+msgstr ""
+
+#: db/domainCategories.ts:29
+msgctxt "db.domainCategories.1ffb59"
+msgid "Domain of Forgery"
+msgstr ""
+
+#: db/domainCategories.ts:36
+msgctxt "db.domainCategories.4e509f"
+msgid "Domain of Blessing"
+msgstr ""
+
+#: db/domainCategories.ts:52
+msgctxt "db.domainCategories.6a94a1"
+msgid "Talent Level-Up Materials"
+msgstr ""
+
+#: db/domainCategories.ts:37
+msgctxt "db.domainCategories.796e5e"
+msgid "Artifacts"
+msgstr ""
+
+#: db/domainCategories.ts:30
+msgctxt "db.domainCategories.a4758a"
+msgid "Weapon Ascension Materials"
+msgstr ""
+
+#: db/domainCategories.ts:58
+msgctxt "db.domainCategories.a6ee01"
+msgid "Trounce"
+msgstr ""
+
+#: db/domainCategories.ts:51
+msgctxt "db.domainCategories.bb5cb2"
+msgid "Domain of Mastery"
+msgstr ""
+
+#: db/domainCategories.ts:59
+msgctxt "db.domainCategories.f98247"
+msgid "Weekly Challenge"
+msgstr ""
+
+#: db/domainDropSets.ts:124
+msgctxt "db.domainDropSets.617252"
+msgid "Trail Grounds of Thunder"
+msgstr ""
+
+#: db/domainDropSets.ts:110
+msgctxt "db.domainDropSets.6db45f"
+msgid "Thundercloud"
+msgstr ""
+
+#: db/domainDropSets.ts:82
+msgctxt "db.domainDropSets.727bc7"
+msgid "City of Reflections"
+msgstr ""
+
+#: db/domainDropSets.ts:89
+msgctxt "db.domainDropSets.b61667"
+msgid "Submerged Valley"
+msgstr ""
+
+#: db/domainDropSets.ts:103
+msgctxt "db.domainDropSets.c07625"
+msgid "Altar of the Falls"
+msgstr ""
+
+#: db/domainDropSets.ts:96
+msgctxt "db.domainDropSets.dfec8a"
+msgid "Ruins of Thirsting Capital"
+msgstr ""
+
+#: db/domainDropSets.ts:131
+msgctxt "db.domainDropSets.f12070"
+msgid "Electrostatic Field"
+msgstr ""
+
+#: db/domainDropSets.ts:117
+msgctxt "db.domainDropSets.ffe184"
+msgid "Thundering Ruins"
+msgstr ""
+
+#: db/domains.ts:49
+msgctxt "db.domains.011253"
+msgid "Hidden Palace of Lianshan Formula"
+msgstr ""
+
+#: db/domains.ts:91
+msgctxt "db.domains.0cfa31"
+msgid "Forsaken Rift"
+msgstr ""
+
+#: db/domains.ts:140
+msgctxt "db.domains.1c6c7d"
+msgid "Ridge Watch"
+msgstr ""
+
+#: db/domains.ts:56
+msgctxt "db.domains.24e0e0"
+msgid "Midsummer Courtyard"
+msgstr ""
+
+#: db/domains.ts:98
+msgctxt "db.domains.2bbe8b"
+msgid "Taishan Mansion"
+msgstr ""
+
+#: db/domains.ts:77
+msgctxt "db.domains.5d9d5d"
+msgid "Hidden Palace of Zhou Formula"
+msgstr ""
+
+#: db/domains.ts:112
+msgctxt "db.domains.70d1b9"
+msgid "Wolf of the North Challenge"
+msgstr ""
+
+#: db/domains.ts:70
+msgctxt "db.domains.85e44a"
+msgid "Valley of Remembrance"
+msgstr ""
+
+#: db/domains.ts:126
+msgctxt "db.domains.8e6257"
+msgid "Enter the Golden House"
+msgstr ""
+
+#: db/domains.ts:119
+msgctxt "db.domains.c4c6cc"
+msgid "Peak of Vindagnyr"
+msgstr ""
+
+#: db/domains.ts:133
+msgctxt "db.domains.dbf3b5"
+msgid "Beneath the Dragon-Queller"
+msgstr ""
+
+#: db/domains.ts:105
+msgctxt "db.domains.f93fee"
+msgid "Confront Stormterror"
+msgstr ""
+
+#: db/domains.ts:63
+msgctxt "db.domains.fc295a"
+msgid "Domain of Guyun"
+msgstr ""
+
+#: db/domains.ts:84
+msgctxt "db.domains.fc83f4"
+msgid "Clear Pool and Mountain Cavern"
+msgstr ""
+
+#: db/domains.ts:42
+msgctxt "db.domains.fe4688"
+msgid "Cecilia Garden"
+msgstr ""
+
+#: db/icons.ts:191
+msgctxt "db.icons.0026fa"
+msgid "Guidance of the Land"
+msgstr ""
+
+#: db/icons.ts:130
+msgctxt "db.icons.013c82"
+msgid "Red Dye"
+msgstr ""
+
+#: db/icons.ts:67
+msgctxt "db.icons.02b6af"
+msgid "Dead Ley Line Branch"
+msgstr ""
+
+#: db/icons.ts:123
+msgctxt "db.icons.03bcc1"
+msgid "Tomato"
+msgstr ""
+
+#: db/icons.ts:163
+msgctxt "db.icons.07244e"
+msgid "Other Shops"
+msgstr ""
+
+#: db/icons.ts:177
+msgctxt "db.icons.087659"
+msgid "Genesis Crystal"
+msgstr ""
+
+#: db/icons.ts:143
+msgctxt "db.icons.0b2b2d"
+msgid "Crystal Core"
+msgstr ""
+
+#: db/icons.ts:89
+msgctxt "db.icons.0dc52d"
+msgid "Bamboo"
+msgstr ""
+
+#: db/icons.ts:36
+msgctxt "db.icons.0e7ca0"
+msgid "Starsilver"
+msgstr ""
+
+#: db/icons.ts:146
+msgctxt "db.icons.0e95d3"
+msgid "Lizard Tail"
+msgstr ""
+
+#: db/icons.ts:110
+msgctxt "db.icons.0f0eeb"
+msgid "Matsutake"
+msgstr ""
+
+#: db/icons.ts:51
+msgctxt "db.icons.10fe45"
+msgid "Character ascension material"
+msgstr ""
+
+#: db/icons.ts:47
+msgctxt "db.icons.13fe0a"
+msgid "Fine Enhancement Ore"
+msgstr ""
+
+#: db/icons.ts:29
+msgctxt "db.icons.15e7d8"
+msgid "Iron Chunk"
+msgstr ""
+
+#: db/icons.ts:92
+msgctxt "db.icons.16740f"
+msgid "Jueyun Chili"
+msgstr ""
+
+#: db/icons.ts:173
+msgctxt "db.icons.16b73a"
+msgid "Resin"
+msgstr ""
+
+#: db/icons.ts:83
+msgctxt "db.icons.19c45b"
+msgid "Valberry"
+msgstr ""
+
+#: db/icons.ts:149
+msgctxt "db.icons.1a2bb9"
+msgid "Mist Flower Corolla"
+msgstr ""
+
+#: db/icons.ts:116
+msgctxt "db.icons.1e3dc1"
+msgid "Radish"
+msgstr ""
+
+#: db/icons.ts:22
+msgctxt "db.icons.22457b"
+msgid "Portable Waypoint"
+msgstr ""
+
+#: db/icons.ts:52
+msgctxt "db.icons.22e651"
+msgid "Agnidus Agate Sliver"
+msgstr ""
+
+#: db/icons.ts:28
+msgctxt "db.icons.23dfdf"
+msgid "Ore"
+msgstr ""
+
+#: db/icons.ts:129
+msgctxt "db.icons.2456aa"
+msgid "Blue Dye"
+msgstr ""
+
+#: db/icons.ts:93
+msgctxt "db.icons.248863"
+msgid "Qingxin"
+msgstr ""
+
+#: db/icons.ts:200
+msgctxt "db.icons.2532a7"
+msgid "Yellow Circle"
+msgstr ""
+
+#: db/icons.ts:119
+msgctxt "db.icons.29514d"
+msgid "Shrimp Meat"
+msgstr ""
+
+#: db/icons.ts:186
+msgctxt "db.icons.2d0e3a"
+msgid "Companionship Experience"
+msgstr ""
+
+#: db/icons.ts:127
+msgctxt "db.icons.2ecbee"
+msgid "Furnishing"
+msgstr ""
+
+#: db/icons.ts:193
+msgctxt "db.icons.33c8b8"
+msgid "Battle Pass Bundle"
+msgstr ""
+
+#: db/icons.ts:115
+msgctxt "db.icons.38f5ee"
+msgid "Potato"
+msgstr ""
+
+#: db/icons.ts:101
+msgctxt "db.icons.393374"
+msgid "Apple"
+msgstr ""
+
+#: db/icons.ts:45
+msgctxt "db.icons.3a604c"
+msgid "Weapon enhancement material"
+msgstr ""
+
+#: db/icons.ts:111
+msgctxt "db.icons.3b03be"
+msgid "Mint"
+msgstr ""
+
+#: db/icons.ts:124
+msgctxt "db.icons.3e81e3"
+msgid "Wheat"
+msgstr ""
+
+#: db/icons.ts:154
+msgctxt "db.icons.3e9210"
+msgid "Artifact"
+msgstr ""
+
+#: db/icons.ts:66
+msgctxt "db.icons.3ef728"
+msgid "Heavy Horn"
+msgstr ""
+
+#: db/icons.ts:108
+msgctxt "db.icons.40be2a"
+msgid "Fowl"
+msgstr ""
+
+#: db/icons.ts:159
+msgctxt "db.icons.4129ff"
+msgid "General Goods"
+msgstr ""
+
+#: db/icons.ts:107
+msgctxt "db.icons.41cfca"
+msgid "Fish"
+msgstr ""
+
+#: db/icons.ts:31
+msgctxt "db.icons.41d4a2"
+msgid "Crystal Chunk"
+msgstr ""
+
+#: db/icons.ts:158
+msgctxt "db.icons.41f111"
+msgid "NPC"
+msgstr ""
+
+#: db/icons.ts:65
+msgctxt "db.icons.42027c"
+msgid "Divining Scroll"
+msgstr ""
+
+#: db/icons.ts:142
+msgctxt "db.icons.4a3007"
+msgid "Butterfly Wings"
+msgstr ""
+
+#: db/icons.ts:136
+msgctxt "db.icons.4ae142"
+msgid "Fir Wood"
+msgstr ""
+
+#: db/icons.ts:174
+msgctxt "db.icons.4c9716"
+msgid "Condensed Resin"
+msgstr ""
+
+#: db/icons.ts:187
+msgctxt "db.icons.4d4e7c"
+msgid "Battle Pass Experience"
+msgstr ""
+
+#: db/icons.ts:39
+msgctxt "db.icons.4dbe55"
+msgid "Character EXP material"
+msgstr ""
+
+#: db/icons.ts:148
+msgctxt "db.icons.525124"
+msgid "Luminescent Spine"
+msgstr ""
+
+#: db/icons.ts:114
+msgctxt "db.icons.53f73c"
+msgid "Pinecone"
+msgstr ""
+
+#: db/icons.ts:53
+msgctxt "db.icons.541f0a"
+msgid "Brilliant Diamond Sliver"
+msgstr ""
+
+#: db/icons.ts:64
+msgctxt "db.icons.574218"
+msgid "Firm Arrowhead"
+msgstr ""
+
+#: db/icons.ts:181
+msgctxt "db.icons.57fb2f"
+msgid "Masterless Stardust"
+msgstr ""
+
+#: db/icons.ts:168
+msgctxt "db.icons.58f564"
+msgid "Geo Sigil"
+msgstr ""
+
+#: db/icons.ts:88
+msgctxt "db.icons.5bdc86"
+msgid "Local specialty of Liyue"
+msgstr ""
+
+#: db/icons.ts:99
+msgctxt "db.icons.6232ee"
+msgid "Cooking ingredient"
+msgstr ""
+
+#: db/icons.ts:74
+msgctxt "db.icons.6405d0"
+msgid "Whopperflower Nectar"
+msgstr ""
+
+#: db/icons.ts:91
+msgctxt "db.icons.6453b7"
+msgid "Horsetail"
+msgstr ""
+
+#: db/icons.ts:166
+msgctxt "db.icons.66d12a"
+msgid "Sigil"
+msgstr ""
+
+#: db/icons.ts:138
+msgctxt "db.icons.698018"
+msgid "Sandbearer Wood"
+msgstr ""
+
+#: db/icons.ts:80
+msgctxt "db.icons.6f7fb1"
+msgid "Dandelion Seed"
+msgstr ""
+
+#: db/icons.ts:30
+msgctxt "db.icons.7486de"
+msgid "White Iron Chunk"
+msgstr ""
+
+#: db/icons.ts:40
+msgctxt "db.icons.74bf77"
+msgid "Wanderer's Advice"
+msgstr ""
+
+#: db/icons.ts:103
+msgctxt "db.icons.767429"
+msgid "Bird Egg"
+msgstr ""
+
+#: db/icons.ts:179
+msgctxt "db.icons.7c09ca"
+msgid "Acquaint Fate"
+msgstr ""
+
+#: db/icons.ts:141
+msgctxt "db.icons.7cc8a0"
+msgid "Material"
+msgstr ""
+
+#: db/icons.ts:68
+msgctxt "db.icons.7ccd68"
+msgid "Chaos Device"
+msgstr ""
+
+#: db/icons.ts:82
+msgctxt "db.icons.7ce6fd"
+msgid "Small Lamp Grass"
+msgstr ""
+
+#: db/icons.ts:42
+msgctxt "db.icons.7ef6f5"
+msgid "Hero's Wit"
+msgstr ""
+
+#: db/icons.ts:112
+msgctxt "db.icons.7fa082"
+msgid "Mushroom"
+msgstr ""
+
+#: db/icons.ts:118
+msgctxt "db.icons.7fd8e5"
+msgid "Chilled Meat"
+msgstr ""
+
+#: db/icons.ts:62
+msgctxt "db.icons.866176"
+msgid "Slime Condensate"
+msgstr ""
+
+#: db/icons.ts:206
+msgctxt "db.icons.89d95a"
+msgid "Pink Circle"
+msgstr ""
+
+#: db/icons.ts:25
+msgctxt "db.icons.8c9a21"
+msgid "Serenitea Pot"
+msgstr ""
+
+#: db/icons.ts:78
+msgctxt "db.icons.8d1274"
+msgid "Calla Lily"
+msgstr ""
+
+#: db/icons.ts:102
+msgctxt "db.icons.8d722e"
+msgid "Berry"
+msgstr ""
+
+#: db/icons.ts:55
+msgctxt "db.icons.90064a"
+msgid "Shivada Jade Sliver"
+msgstr ""
+
+#: db/icons.ts:205
+msgctxt "db.icons.901e12"
+msgid "Purple Circle"
+msgstr ""
+
+#: db/icons.ts:113
+msgctxt "db.icons.90c287"
+msgid "Onion"
+msgstr ""
+
+#: db/icons.ts:24
+msgctxt "db.icons.9410ec"
+msgid "Parametric Transformer"
+msgstr ""
+
+#: db/icons.ts:95
+msgctxt "db.icons.9653ee"
+msgid "Starconch"
+msgstr ""
+
+#: db/icons.ts:161
+msgctxt "db.icons.9edf8f"
+msgid "Blacksmith"
+msgstr ""
+
+#: db/icons.ts:137
+msgctxt "db.icons.9ef200"
+msgid "Pine Wood"
+msgstr ""
+
+#: db/icons.ts:77
+msgctxt "db.icons.a01a12"
+msgid "Local specialty of Mondstadt"
+msgstr ""
+
+#: db/icons.ts:135
+msgctxt "db.icons.a5adc2"
+msgid "Cuihua Wood"
+msgstr ""
+
+#: db/icons.ts:33
+msgctxt "db.icons.a5b195"
+msgid "Electro Crystal"
+msgstr ""
+
+#: db/icons.ts:46
+msgctxt "db.icons.a5dfca"
+msgid "Enhancement Ore"
+msgstr ""
+
+#: db/icons.ts:184
+msgctxt "db.icons.aa6277"
+msgid "Experience"
+msgstr ""
+
+#: db/icons.ts:162
+msgctxt "db.icons.abfa4a"
+msgid "Souvenir Shop"
+msgstr ""
+
+#: db/icons.ts:96
+msgctxt "db.icons.ace079"
+msgid "Violetgrass"
+msgstr ""
+
+#: db/icons.ts:178
+msgctxt "db.icons.ae75da"
+msgid "Intertwined Fate"
+msgstr ""
+
+#: db/icons.ts:204
+msgctxt "db.icons.b11983"
+msgid "Cyan Circle"
+msgstr ""
+
+#: db/icons.ts:175
+msgctxt "db.icons.b324da"
+msgid "Transient Resin"
+msgstr ""
+
+#: db/icons.ts:199
+msgctxt "db.icons.b35f1b"
+msgid "Orange Circle"
+msgstr ""
+
+#: db/icons.ts:134
+msgctxt "db.icons.b38d81"
+msgid "Fragrant Cedar Wood"
+msgstr ""
+
+#: db/icons.ts:41
+msgctxt "db.icons.b42c8b"
+msgid "Adventurer's Experience"
+msgstr ""
+
+#: db/icons.ts:150
+msgctxt "db.icons.b9fa1d"
+msgid "Vitalized Dragontooth"
+msgstr ""
+
+#: db/icons.ts:94
+msgctxt "db.icons.bc0224"
+msgid "Silk Flower"
+msgstr ""
+
+#: db/icons.ts:196
+msgctxt "db.icons.bc7f2c"
+msgid "Circle"
+msgstr ""
+
+#: db/icons.ts:198
+msgctxt "db.icons.bd5cf8"
+msgid "Red Circle"
+msgstr ""
+
+#: db/icons.ts:73
+msgctxt "db.icons.be8c87"
+msgid "Fragile Bone Shard"
+msgstr ""
+
+#: db/icons.ts:197
+msgctxt "db.icons.c138a3"
+msgid "Gray Circle"
+msgstr ""
+
+#: db/icons.ts:117
+msgctxt "db.icons.c331fe"
+msgid "Raw Meat"
+msgstr ""
+
+#: db/icons.ts:72
+msgctxt "db.icons.c5a9ac"
+msgid "Treasure Hoarder Insignia"
+msgstr ""
+
+#: db/icons.ts:70
+msgctxt "db.icons.c6cff7"
+msgid "Hunter's Sacrificial Knife"
+msgstr ""
+
+#: db/icons.ts:109
+msgctxt "db.icons.c7c1c1"
+msgid "Lotus Head"
+msgstr ""
+
+#: db/icons.ts:147
+msgctxt "db.icons.ca10ad"
+msgid "Loach Pearl"
+msgstr ""
+
+#: db/icons.ts:201
+msgctxt "db.icons.caa480"
+msgid "Green Circle"
+msgstr ""
+
+#: db/icons.ts:56
+msgctxt "db.icons.cad7f8"
+msgid "Vajrada Amethyst Sliver"
+msgstr ""
+
+#: db/icons.ts:48
+msgctxt "db.icons.cc7a59"
+msgid "Mystic Enhancement Ore"
+msgstr ""
+
+#: db/icons.ts:105
+msgctxt "db.icons.ccba58"
+msgid "Carrot"
+msgstr ""
+
+#: db/icons.ts:131
+msgctxt "db.icons.cd14cb"
+msgid "Fabric"
+msgstr ""
+
+#: db/icons.ts:69
+msgctxt "db.icons.cd7e10"
+msgid "Mist Grass Pollen"
+msgstr ""
+
+#: db/icons.ts:54
+msgctxt "db.icons.cd8c65"
+msgid "Prithiva Topaz Sliver"
+msgstr ""
+
+#: db/icons.ts:85
+msgctxt "db.icons.ce7fa6"
+msgid "Wolfhook"
+msgstr ""
+
+#: db/icons.ts:172
+msgctxt "db.icons.cf9bf2"
+msgid "Mora"
+msgstr ""
+
+#: db/icons.ts:180
+msgctxt "db.icons.d53c75"
+msgid "Masterless Starglitter"
+msgstr ""
+
+#: db/icons.ts:61
+msgctxt "db.icons.d8468e"
+msgid "Common ascension material"
+msgstr ""
+
+#: db/icons.ts:35
+msgctxt "db.icons.d8877a"
+msgid "Noctilucous Jade"
+msgstr ""
+
+#: db/icons.ts:21
+msgctxt "db.icons.ddc40f"
+msgid "Gadget"
+msgstr ""
+
+#: db/icons.ts:121
+msgctxt "db.icons.dee07a"
+msgid "Sunsettia"
+msgstr ""
+
+#: db/icons.ts:23
+msgctxt "db.icons.e0e475"
+msgid "Adepti Seeker's Stove"
+msgstr ""
+
+#: db/icons.ts:63
+msgctxt "db.icons.e1a50a"
+msgid "Damaged Mask"
+msgstr ""
+
+#: db/icons.ts:100
+msgctxt "db.icons.e1c624"
+msgid "Almond"
+msgstr ""
+
+#: db/icons.ts:79
+msgctxt "db.icons.e513cc"
+msgid "Cecilia"
+msgstr ""
+
+#: db/icons.ts:192
+msgctxt "db.icons.e770a4"
+msgid "Philosophies of the Land"
+msgstr ""
+
+#: db/icons.ts:81
+msgctxt "db.icons.e78aed"
+msgid "Philanemo Mushroom"
+msgstr ""
+
+#: db/icons.ts:171
+msgctxt "db.icons.e7985d"
+msgid "Currency"
+msgstr ""
+
+#: db/icons.ts:176
+msgctxt "db.icons.e91a4f"
+msgid "Primogem"
+msgstr ""
+
+#: db/icons.ts:57
+msgctxt "db.icons.ea244d"
+msgid "Varunada Lazurite Sliver"
+msgstr ""
+
+#: db/icons.ts:202
+msgctxt "db.icons.eabb1d"
+msgid "Teal Circle"
+msgstr ""
+
+#: db/icons.ts:90
+msgctxt "db.icons.ee85bc"
+msgid "Glaze Lily"
+msgstr ""
+
+#: db/icons.ts:190
+msgctxt "db.icons.effb8d"
+msgid "Bundle"
+msgstr ""
+
+#: db/icons.ts:145
+msgctxt "db.icons.f01710"
+msgid "Frog"
+msgstr ""
+
+#: db/icons.ts:167
+msgctxt "db.icons.f03b85"
+msgid "Anemo Sigil"
+msgstr ""
+
+#: db/icons.ts:203
+msgctxt "db.icons.f0480a"
+msgid "Blue Circle"
+msgstr ""
+
+#: db/icons.ts:128
+msgctxt "db.icons.f089f5"
+msgid "Yellow Dye"
+msgstr ""
+
+#: db/icons.ts:144
+msgctxt "db.icons.f0996a"
+msgid "Flaming Flower Stamen"
+msgstr ""
+
+#: db/icons.ts:58
+msgctxt "db.icons.f0af2a"
+msgid "Vayuda Turquoise Sliver"
+msgstr ""
+
+#: db/icons.ts:160
+msgctxt "db.icons.f28595"
+msgid "Restaurant"
+msgstr ""
+
+#: db/icons.ts:32
+msgctxt "db.icons.f462d2"
+msgid "Magical Crystal Chunk"
+msgstr ""
+
+#: db/icons.ts:133
+msgctxt "db.icons.f493cf"
+msgid "Birch Wood"
+msgstr ""
+
+#: db/icons.ts:185
+msgctxt "db.icons.f4d3f2"
+msgid "Adventure Experience"
+msgstr ""
+
+#: db/icons.ts:132
+msgctxt "db.icons.f4f3bd"
+msgid "Bamboo Segment"
+msgstr ""
+
+#: db/icons.ts:104
+msgctxt "db.icons.f5cea5"
+msgid "Cabbage"
+msgstr ""
+
+#: db/icons.ts:120
+msgctxt "db.icons.f9a862"
+msgid "Snapdragon"
+msgstr ""
+
+#: db/icons.ts:122
+msgctxt "db.icons.fa7985"
+msgid "Sweet Flower"
+msgstr ""
+
+#: db/icons.ts:84
+msgctxt "db.icons.fb66ad"
+msgid "Windwheel Aster"
+msgstr ""
+
+#: db/icons.ts:71
+msgctxt "db.icons.fd54ff"
+msgid "Recruit's Insignia"
+msgstr ""
+
+#: db/icons.ts:34
+msgctxt "db.icons.fe06d4"
+msgid "Cor Lapis"
+msgstr ""
+
+#: db/icons.ts:106
+msgctxt "db.icons.fe8ed6"
+msgid "Crab"
+msgstr ""
+
+#: db/regions.ts:116
+msgctxt "db.regions.06cea1"
+msgid "Inazuma"
+msgstr ""
+
+#: db/regions.ts:124
+msgctxt "db.regions.38ab8d"
+msgid "Snezhnaya"
+msgstr ""
+
+#: db/regions.ts:65
+msgctxt "db.regions.5a37ea"
+msgid "Mondstadt"
+msgstr ""
+
+#: db/regions.ts:99
+msgctxt "db.regions.691c58"
+msgid "Liyue"
+msgstr ""
+
+#: db/talentMaterials.ts:106
+msgctxt "db.talentMaterials.03c76b"
+msgid "Shard of a Foul Legacy"
+msgstr ""
+
+#: db/talentMaterials.ts:92
+msgctxt "db.talentMaterials.08f385"
+msgid "Spirit Locket of Boreas"
+msgstr ""
+
+#: db/talentMaterials.ts:49
+msgctxt "db.talentMaterials.1b0aa2"
+msgid "Gold"
+msgstr ""
+
+#: db/talentMaterials.ts:57
+msgctxt "db.talentMaterials.2238ed"
+msgid "Dvalin's Plume"
+msgstr ""
+
+#: db/talentMaterials.ts:113
+msgctxt "db.talentMaterials.2276fe"
+msgid "Shadow of the Warrior"
+msgstr ""
+
+#: db/talentMaterials.ts:127
+msgctxt "db.talentMaterials.24721e"
+msgid "Bloodjade Branch"
+msgstr ""
+
+#: db/talentMaterials.ts:134
+msgctxt "db.talentMaterials.248351"
+msgid "Gilded Scale"
+msgstr ""
+
+#: db/talentMaterials.ts:36
+msgctxt "db.talentMaterials.2d7841"
+msgid "Teachings of Diligence"
+msgstr ""
+
+#: db/talentMaterials.ts:78
+msgctxt "db.talentMaterials.33d5e3"
+msgid "Tail of Boreas"
+msgstr ""
+
+#: db/talentMaterials.ts:42
+msgctxt "db.talentMaterials.476508"
+msgid "Ballad"
+msgstr ""
+
+#: db/talentMaterials.ts:85
+msgctxt "db.talentMaterials.5a4b80"
+msgid "Ring of Boreas"
+msgstr ""
+
+#: db/talentMaterials.ts:43
+msgctxt "db.talentMaterials.5b3857"
+msgid "Teachings of Ballad"
+msgstr ""
+
+#: db/talentMaterials.ts:71
+msgctxt "db.talentMaterials.6955de"
+msgid "Dvalin's Claw"
+msgstr ""
+
+#: db/talentMaterials.ts:64
+msgctxt "db.talentMaterials.7d035f"
+msgid "Dvalin's Sigh"
+msgstr ""
+
+#: db/talentMaterials.ts:15
+msgctxt "db.talentMaterials.90c99f"
+msgid "Teachings of Freedom"
+msgstr ""
+
+#: db/talentMaterials.ts:22
+msgctxt "db.talentMaterials.969122"
+msgid "Teachings of Prosperity"
+msgstr ""
+
+#: db/talentMaterials.ts:21
+msgctxt "db.talentMaterials.997cd8"
+msgid "Prosperity"
+msgstr ""
+
+#: db/talentMaterials.ts:99
+msgctxt "db.talentMaterials.a0af03"
+msgid "Tusk of Monoceros Caeli"
+msgstr ""
+
+#: db/talentMaterials.ts:29
+msgctxt "db.talentMaterials.a5ac2e"
+msgid "Teachings of Resistance"
+msgstr ""
+
+#: db/talentMaterials.ts:28
+msgctxt "db.talentMaterials.c6a0f7"
+msgid "Resistance"
+msgstr ""
+
+#: db/talentMaterials.ts:120
+msgctxt "db.talentMaterials.cbd4e8"
+msgid "Dragon Lord's Crown"
+msgstr ""
+
+#: db/talentMaterials.ts:14
+msgctxt "db.talentMaterials.ce07c6"
+msgid "Freedom"
+msgstr ""
+
+#: db/talentMaterials.ts:50
+msgctxt "db.talentMaterials.fc587a"
+msgid "Teachings of Gold"
+msgstr ""
+
+#: db/talentMaterials.ts:35
+msgctxt "db.talentMaterials.ffd8d6"
+msgid "Diligence"
+msgstr ""
+
+#: db/weaponMaterials.ts:50
+msgctxt "db.weaponMaterials.009f9a"
+msgid "Grain of Aerosiderite"
+msgstr ""
+
+#: db/weaponMaterials.ts:15
+msgctxt "db.weaponMaterials.040efa"
+msgid "Tile of Decarabian's Tower"
+msgstr ""
+
+#: db/weaponMaterials.ts:43
+msgctxt "db.weaponMaterials.12045a"
+msgid "Fetters of the Dandelion Gladiator"
+msgstr ""
+
+#: db/weaponMaterials.ts:21
+msgctxt "db.weaponMaterials.2140ff"
+msgid "Guyun"
+msgstr ""
+
+#: db/weaponMaterials.ts:29
+msgctxt "db.weaponMaterials.33389c"
+msgid "Boreal Wolf's Milk Tooth"
+msgstr ""
+
+#: db/weaponMaterials.ts:14
+msgctxt "db.weaponMaterials.4d0c6f"
+msgid "Decarabian"
+msgstr ""
+
+#: db/weaponMaterials.ts:49
+msgctxt "db.weaponMaterials.580f83"
+msgid "Aerosiderite"
+msgstr ""
+
+#: db/weaponMaterials.ts:22
+msgctxt "db.weaponMaterials.5c6a21"
+msgid "Luminous Sands from Guyun"
+msgstr ""
+
+#: db/weaponMaterials.ts:28
+msgctxt "db.weaponMaterials.735b94"
+msgid "Boreal Wolf"
+msgstr ""
+
+#: db/weaponMaterials.ts:42
+msgctxt "db.weaponMaterials.cf0c7e"
+msgid "Dandelion Gladiator"
+msgstr ""
+
+#: db/weaponMaterials.ts:35
+msgctxt "db.weaponMaterials.f51889"
+msgid "Mist Veiled Elixir"
+msgstr ""
+
+#: db/weaponMaterials.ts:36
+msgctxt "db.weaponMaterials.f94a84"
+msgid "Mist Veiled Lead Elixir"
+msgstr ""
+
+#: db/weapons.ts:101
+msgctxt "db.weapons.02470f"
+msgid "White Iron Greatsword"
+msgstr ""
+
+#: db/weapons.ts:84
+msgctxt "db.weapons.025ed2"
+msgid "Amos' Bow"
+msgstr ""
+
+#: db/weapons.ts:67
+msgctxt "db.weapons.03f248"
+msgid "Dragonspine Spear"
+msgstr ""
+
+#: db/weapons.ts:75
+msgctxt "db.weapons.0c4b78"
+msgid "Skyward Harp"
+msgstr ""
+
+#: db/weapons.ts:55
+msgctxt "db.weapons.0c570b"
+msgid "Magic Guide"
+msgstr ""
+
+#: db/weapons.ts:106
+msgctxt "db.weapons.0c59e2"
+msgid "Blackcliff Longsword"
+msgstr ""
+
+#: db/weapons.ts:71
+msgctxt "db.weapons.119465"
+msgid "Sacrificial Greatsword"
+msgstr ""
+
+#: db/weapons.ts:122
+msgctxt "db.weapons.138035"
+msgid "Blackcliff Slasher"
+msgstr ""
+
+#: db/weapons.ts:92
+msgctxt "db.weapons.13b285"
+msgid "Otherworldly Story"
+msgstr ""
+
+#: db/weapons.ts:51
+msgctxt "db.weapons.15dfab"
+msgid "Cool Steel"
+msgstr ""
+
+#: db/weapons.ts:57
+msgctxt "db.weapons.16cefd"
+msgid "Royal Grimoire"
+msgstr ""
+
+#: db/weapons.ts:126
+msgctxt "db.weapons.180e9e"
+msgid "Fillet Blade"
+msgstr ""
+
+#: db/weapons.ts:89
+msgctxt "db.weapons.188019"
+msgid "Festering Desire"
+msgstr ""
+
+#: db/weapons.ts:114
+msgctxt "db.weapons.1ac9a9"
+msgid "Rust"
+msgstr ""
+
+#: db/weapons.ts:135
+msgctxt "db.weapons.28794d"
+msgid "Prototype Rancour"
+msgstr ""
+
+#: db/weapons.ts:148
+msgctxt "db.weapons.313d62"
+msgid "Skyrider Greatsword"
+msgstr ""
+
+#: db/weapons.ts:59
+msgctxt "db.weapons.3801e6"
+msgid "The Alley Flash"
+msgstr ""
+
+#: db/weapons.ts:121
+msgctxt "db.weapons.3ba383"
+msgid "Blackcliff Pole"
+msgstr ""
+
+#: db/weapons.ts:70
+msgctxt "db.weapons.3bc913"
+msgid "Sacrificial Bow"
+msgstr ""
+
+#: db/weapons.ts:90
+msgctxt "db.weapons.3e536f"
+msgid "Frostbearer"
+msgstr ""
+
+#: db/weapons.ts:66
+msgctxt "db.weapons.4488ef"
+msgid "Deathmatch"
+msgstr ""
+
+#: db/weapons.ts:144
+msgctxt "db.weapons.46ab3b"
+msgid "Memory of Dust"
+msgstr ""
+
+#: db/weapons.ts:109
+msgctxt "db.weapons.471e2a"
+msgid "Dark Iron Sword"
+msgstr ""
+
+#: db/weapons.ts:81
+msgctxt "db.weapons.48bcb2"
+msgid "Thrilling Tales of Dragon Slayers"
+msgstr ""
+
+#: db/weapons.ts:94
+msgctxt "db.weapons.48dcf8"
+msgid "Sacrificial Fragments"
+msgstr ""
+
+#: db/weapons.ts:123
+msgctxt "db.weapons.4da5a4"
+msgid "Debate Club"
+msgstr ""
+
+#: db/weapons.ts:149
+msgctxt "db.weapons.4df4c4"
+msgid "Skyrider Sword"
+msgstr ""
+
+#: db/weapons.ts:111
+msgctxt "db.weapons.4f92ed"
+msgid "Lithic Blade"
+msgstr ""
+
+#: db/weapons.ts:141
+msgctxt "db.weapons.500132"
+msgid "Iron Sting"
+msgstr ""
+
+#: db/weapons.ts:124
+msgctxt "db.weapons.5553fb"
+msgid "Dragon's Bane"
+msgstr ""
+
+#: db/weapons.ts:68
+msgctxt "db.weapons.587ae5"
+msgid "Elegy for the End"
+msgstr ""
+
+#: db/weapons.ts:140
+msgctxt "db.weapons.59adc6"
+msgid "Compound Bow"
+msgstr ""
+
+#: db/weapons.ts:142
+msgctxt "db.weapons.59b38a"
+msgid "Lithic Spear"
+msgstr ""
+
+#: db/weapons.ts:116
+msgctxt "db.weapons.5e235d"
+msgid "Solar Pearl"
+msgstr ""
+
+#: db/weapons.ts:127
+msgctxt "db.weapons.623be3"
+msgid "Halberd"
+msgstr ""
+
+#: db/weapons.ts:137
+msgctxt "db.weapons.630c0f"
+msgid "Twin Nephrite"
+msgstr ""
+
+#: db/weapons.ts:78
+msgctxt "db.weapons.6a706f"
+msgid "The Black Sword"
+msgstr ""
+
+#: db/weapons.ts:113
+msgctxt "db.weapons.737d80"
+msgid "Primordial Jade Winged-Spear"
+msgstr ""
+
+#: db/weapons.ts:103
+msgctxt "db.weapons.7443eb"
+msgid "Wolf's Gravestone"
+msgstr ""
+
+#: db/weapons.ts:134
+msgctxt "db.weapons.748ca0"
+msgid "Prototype Amber"
+msgstr ""
+
+#: db/weapons.ts:77
+msgctxt "db.weapons.78c45f"
+msgid "Sword of Descension"
+msgstr ""
+
+#: db/weapons.ts:60
+msgctxt "db.weapons.7b69b8"
+msgid "The Bell"
+msgstr ""
+
+#: db/weapons.ts:82
+msgctxt "db.weapons.867c82"
+msgid "Wine and Song"
+msgstr ""
+
+#: db/weapons.ts:125
+msgctxt "db.weapons.874a83"
+msgid "Eye of Perception"
+msgstr ""
+
+#: db/weapons.ts:146
+msgctxt "db.weapons.88b507"
+msgid "Prototype Starglitter"
+msgstr ""
+
+#: db/weapons.ts:133
+msgctxt "db.weapons.8990d6"
+msgid "Prototype Crescent"
+msgstr ""
+
+#: db/weapons.ts:98
+msgctxt "db.weapons.8de396"
+msgid "Sacrificial Sword"
+msgstr ""
+
+#: db/weapons.ts:88
+msgctxt "db.weapons.8e76e6"
+msgid "Favonius Warbow"
+msgstr ""
+
+#: db/weapons.ts:102
+msgctxt "db.weapons.8f3c08"
+msgid "Windblume Ode"
+msgstr ""
+
+#: db/weapons.ts:110
+msgctxt "db.weapons.932810"
+msgid "Emerald Orb"
+msgstr ""
+
+#: db/weapons.ts:145
+msgctxt "db.weapons.9d7f69"
+msgid "Prototype Archaic"
+msgstr ""
+
+#: db/weapons.ts:117
+msgctxt "db.weapons.9fe22c"
+msgid "Summit Shaper"
+msgstr ""
+
+#: db/weapons.ts:128
+msgctxt "db.weapons.a0205e"
+msgid "Messenger"
+msgstr ""
+
+#: db/weapons.ts:136
+msgctxt "db.weapons.a1a162"
+msgid "Rainslasher"
+msgstr ""
+
+#: db/weapons.ts:100
+msgctxt "db.weapons.a66256"
+msgid "Traveler's Handy Sword"
+msgstr ""
+
+#: db/weapons.ts:61
+msgctxt "db.weapons.a77ea9"
+msgid "The Stringless"
+msgstr ""
+
+#: db/weapons.ts:105
+msgctxt "db.weapons.a794cd"
+msgid "Blackcliff Agate"
+msgstr ""
+
+#: db/weapons.ts:52
+msgctxt "db.weapons.af9dce"
+msgid "Favonius Codex"
+msgstr ""
+
+#: db/weapons.ts:74
+msgctxt "db.weapons.b1b853"
+msgid "Skyward Blade"
+msgstr ""
+
+#: db/weapons.ts:91
+msgctxt "db.weapons.b2d661"
+msgid "Lost Prayer to the Sacred Winds"
+msgstr ""
+
+#: db/weapons.ts:56
+msgctxt "db.weapons.bde733"
+msgid "Raven Bow"
+msgstr ""
+
+#: db/weapons.ts:87
+msgctxt "db.weapons.bffca8"
+msgid "Favonius Lance"
+msgstr ""
+
+#: db/weapons.ts:112
+msgctxt "db.weapons.ca27da"
+msgid "Lion's Roar"
+msgstr ""
+
+#: db/weapons.ts:93
+msgctxt "db.weapons.cb0fdc"
+msgid "Recurve Bow"
+msgstr ""
+
+#: db/weapons.ts:69
+msgctxt "db.weapons.cd6a74"
+msgid "Harbinger of Dawn"
+msgstr ""
+
+#: db/weapons.ts:143
+msgctxt "db.weapons.cd75c9"
+msgid "Mappa Mare"
+msgstr ""
+
+#: db/weapons.ts:108
+msgctxt "db.weapons.ce3943"
+msgid "Crescent Pike"
+msgstr ""
+
+#: db/weapons.ts:65
+msgctxt "db.weapons.ced704"
+msgid "Bloodtainted Greatsword"
+msgstr ""
+
+#: db/weapons.ts:129
+msgctxt "db.weapons.d21193"
+msgid "Primordial Jade Cutter"
+msgstr ""
+
+#: db/weapons.ts:86
+msgctxt "db.weapons.d6fdb8"
+msgid "Favonius Greatsword"
+msgstr ""
+
+#: db/weapons.ts:64
+msgctxt "db.weapons.d8a782"
+msgid "Alley Hunter"
+msgstr ""
+
+#: db/weapons.ts:79
+msgctxt "db.weapons.da3955"
+msgid "The Flute"
+msgstr ""
+
+#: db/weapons.ts:119
+msgctxt "db.weapons.de23c9"
+msgid "Whiteblind"
+msgstr ""
+
+#: db/weapons.ts:62
+msgctxt "db.weapons.df6bad"
+msgid "The Viridescent Hunt"
+msgstr ""
+
+#: db/weapons.ts:150
+msgctxt "db.weapons.e43450"
+msgid "Staff of Homa"
+msgstr ""
+
+#: db/weapons.ts:76
+msgctxt "db.weapons.e53a5e"
+msgid "Skyward Pride"
+msgstr ""
+
+#: db/weapons.ts:107
+msgctxt "db.weapons.e6fc75"
+msgid "Blackcliff Warbow"
+msgstr ""
+
+#: db/weapons.ts:72
+msgctxt "db.weapons.e87597"
+msgid "Sharpshooter's Oath"
+msgstr ""
+
+#: db/weapons.ts:53
+msgctxt "db.weapons.e95d91"
+msgid "Favonius Sword"
+msgstr ""
+
+#: db/weapons.ts:99
+msgctxt "db.weapons.e9f646"
+msgid "Skyward Spine"
+msgstr ""
+
+#: db/weapons.ts:50
+msgctxt "db.weapons.ebc3d0"
+msgid "Aquila Favonia"
+msgstr ""
+
+#: db/weapons.ts:54
+msgctxt "db.weapons.ece880"
+msgid "Ferrous Shadow"
+msgstr ""
+
+#: db/weapons.ts:147
+msgctxt "db.weapons.ed05a0"
+msgid "Serpent Spine"
+msgstr ""
+
+#: db/weapons.ts:118
+msgctxt "db.weapons.f20081"
+msgid "White Tassel"
+msgstr ""
+
+#: db/weapons.ts:80
+msgctxt "db.weapons.f531f1"
+msgid "The Widsith"
+msgstr ""
+
+#: db/weapons.ts:139
+msgctxt "db.weapons.f67ae4"
+msgid "Black Tassel"
+msgstr ""
+
+#: db/weapons.ts:115
+msgctxt "db.weapons.f7393e"
+msgid "Slingshot"
+msgstr ""
+
+#: db/weapons.ts:58
+msgctxt "db.weapons.f7afc0"
+msgid "Snow-Tombed Starsilver"
+msgstr ""
+
+#: db/weapons.ts:73
+msgctxt "db.weapons.fda75f"
+msgid "Skyward Atlas"
+msgstr ""
+
+#: db/weapons.ts:85
+msgctxt "db.weapons.ffe36a"
+msgid "Beginner's Protector"
+msgstr ""
+
+#: pages/customize/artifacts/[name].tsx:78
+msgctxt "pages.customize.artifacts.[name].f87fc3"
+msgid "No such artifact."
+msgstr ""
+
+#: pages/customize/characters/[name].tsx:85
+msgctxt "pages.customize.characters.[name].9bd832"
+msgid "No such character."
+msgstr ""
+
+#: pages/customize/weapons/[name].tsx:79
+msgctxt "pages.customize.weapons.[name].6a78b3"
+msgid "No such weapon."
+msgstr ""
+
+#: pages/home/notifications/queue.tsx:45
+msgctxt "pages.home.notifications.queue.67684b"
+msgid "Notification queue"
+msgstr ""
+
+#: pages/home/notifications/queue.tsx:113
+msgctxt "pages.home.notifications.queue.76b25d"
+msgid "Send now"
+msgstr ""
+
+#: pages/home/notifications/queue.tsx:129
+msgctxt "pages.home.notifications.queue.87f26c"
+msgid "Dequeue"
+msgstr ""
+
+#: pages/home/notifications/queue.tsx:87
+msgctxt "pages.home.notifications.queue.c5b4ec"
+msgid "Scheduled at {time} in {duration}."
+msgstr ""
+
+#: pages/home/notifications/queue.tsx:54
+msgctxt "pages.home.notifications.queue.fcf2e1"
+msgid "There are no notifications in queue."
+msgstr ""
+
+#: pages/index.tsx:100
+msgctxt "pages.index.0b66ba"
+msgid "Tracks open world resources and reminds you as soon as they respawn. There is no limit to the number of pins."
+msgstr ""
+
+#: pages/index.tsx:87
+msgctxt "pages.index.0ed193"
+msgid "Tracks your resins and estimates when it will recharge without having to open the game."
+msgstr ""
+
+#: pages/index.tsx:127
+msgctxt "pages.index.37b47a"
+msgid "Signing in will enable synchronization across multiple devices. If you do not already have an account, it will be created automatically."
+msgstr ""
+
+#: pages/index.tsx:124
+msgctxt "pages.index.49026d"
+msgid "Sign in"
+msgstr ""
+
+#: pages/index.tsx:77
+msgctxt "pages.index.657a74"
+msgid "Features"
+msgstr ""
+
+#: pages/index.tsx:97
+msgctxt "pages.index.755c57"
+msgid "Task scheduler"
+msgstr ""
+
+#: pages/index.tsx:110
+msgctxt "pages.index.79dc9c"
+msgid "Domain view"
+msgstr ""
+
+#: pages/index.tsx:84
+msgctxt "pages.index.96d48b"
+msgid "Resin calculator"
+msgstr ""
+
+#: pages/index.tsx:113
+msgctxt "pages.index.a92dae"
+msgid "Shows which domains can be cleared for ascension materials and artifacts for the day."
+msgstr ""
+
+#: pages/index.tsx:70
+msgctxt "pages.index.c0ef70"
+msgid "GitHub"
+msgstr ""
+
+#: pages/index.tsx:48
+msgctxt "pages.index.e3e15c"
+msgid "Genshin Schedule"
+msgstr ""
+
+#: pages/index.tsx:51
+msgctxt "pages.index.fcffbd"
+msgid "Genshin Schedule is a website to help you keep track of time-related game activities in Genshin Impact."
+msgstr ""
+
+#: utils/time.tsx:202
+msgctxt "utils.time.19685b"
+msgid "Millisecond"
+msgstr ""
+
+#: utils/time.tsx:169
+msgctxt "utils.time.1eb30e"
+msgid "{value, plural, one {# millisecond} other {# milliseconds}}"
+msgstr ""
+
+#: utils/time.tsx:190
+msgctxt "utils.time.205a35"
+msgid "Year"
+msgstr ""
+
+#: utils/time.tsx:185
+msgctxt "utils.time.42b8a1"
+msgid "Friday"
+msgstr ""
+
+#: utils/time.tsx:159
+msgctxt "utils.time.4ee319"
+msgid "{value, plural, one {# week} other {# weeks}}"
+msgstr ""
+
+#: utils/time.tsx:157
+msgctxt "utils.time.577d30"
+msgid "{value, plural, one {# year} other {# years}}"
+msgstr ""
+
+#: utils/time.tsx:187
+msgctxt "utils.time.58c347"
+msgid "Saturday"
+msgstr ""
+
+#: utils/time.tsx:179
+msgctxt "utils.time.600818"
+msgid "Tuesday"
+msgstr ""
+
+#: utils/time.tsx:177
+msgctxt "utils.time.6b332c"
+msgid "Monday"
+msgstr ""
+
+#: utils/time.tsx:163
+msgctxt "utils.time.6c080b"
+msgid "{value, plural, one {# hour} other {# hours}}"
+msgstr ""
+
+#: utils/time.tsx:196
+msgctxt "utils.time.6f5d56"
+msgid "Hour"
+msgstr ""
+
+#: utils/time.tsx:181
+msgctxt "utils.time.9716e5"
+msgid "Wednesday"
+msgstr ""
+
+#: utils/time.tsx:175
+msgctxt "utils.time.989474"
+msgid "Sunday"
+msgstr ""
+
+#: utils/time.tsx:161
+msgctxt "utils.time.9febbe"
+msgid "{value, plural, one {# day} other {# days}}"
+msgstr ""
+
+#: utils/time.tsx:183
+msgctxt "utils.time.a80854"
+msgid "Thursday"
+msgstr ""
+
+#: utils/time.tsx:192
+msgctxt "utils.time.b1dda2"
+msgid "Week"
+msgstr ""
+
+#: utils/time.tsx:200
+msgctxt "utils.time.b71604"
+msgid "Second"
+msgstr ""
+
+#: utils/time.tsx:165
+msgctxt "utils.time.c32d7f"
+msgid "{value, plural, one {# minute} other {# minutes}}"
+msgstr ""
+
+#: utils/time.tsx:167
+msgctxt "utils.time.c67dcc"
+msgid "{value, plural, one {# second} other {# seconds}}"
+msgstr ""
+
+#: utils/time.tsx:198
+msgctxt "utils.time.c743e7"
+msgid "Minute"
+msgstr ""
+
+#: utils/time.tsx:194
+msgctxt "utils.time.ee95eb"
+msgid "Day"
+msgstr ""
