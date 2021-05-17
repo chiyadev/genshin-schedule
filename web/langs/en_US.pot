@@ -296,7 +296,7 @@ msgctxt "components.Customize.SettingsList.ConfigExportButton.e25eaf"
 msgid "Copy"
 msgstr ""
 
-#: components/Customize/SettingsList/LanguageSwitch.tsx:37
+#: components/Customize/SettingsList/LanguageSwitch.tsx:39
 msgctxt "components.Customize.SettingsList.LanguageSwitch.4b7b37"
 msgid "Add new language"
 msgstr ""
@@ -511,22 +511,37 @@ msgctxt "components.Home.RealmCurrency.ClearButton.fc60a8"
 msgid "Clear"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:53
+#: components/Home/RealmCurrency/EstimatorByCurrency.tsx:48
+msgctxt "components.Home.RealmCurrency.EstimatorByCurrency.5921a5"
+msgid "{value} in {time}"
+msgstr ""
+
+#: components/Home/RealmCurrency/EstimatorByTime.tsx:53
+msgctxt "components.Home.RealmCurrency.EstimatorByTime.f0f932"
+msgid "{value} in {duration}"
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:88
+msgctxt "components.Home.RealmCurrency.index.0f4dba"
+msgid "Your currency is full."
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:71
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
 msgid "Trust rank"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:60
+#: components/Home/RealmCurrency/index.tsx:78
 msgctxt "components.Home.RealmCurrency.index.27268e"
 msgid "Realm currency"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:37
+#: components/Home/RealmCurrency/index.tsx:55
 msgctxt "components.Home.RealmCurrency.index.33dd2d"
 msgid "Adeptal energy"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:30
+#: components/Home/RealmCurrency/index.tsx:35
 msgctxt "components.Home.RealmCurrency.index.d43d9b"
 msgid "Realm Currency Calculator"
 msgstr ""
