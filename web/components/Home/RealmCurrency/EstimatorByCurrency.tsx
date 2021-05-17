@@ -46,7 +46,7 @@ const EstimatorByCurrency = () => {
         return (
           <div key={`currency-${remainingTime.valueOf()}`}>
             <FormattedMessage
-              id="realmCurrencyEstValueEntry"
+              defaultMessage="{value} in {time}"
               values={{
                 value,
                 time: [useFormatDuration(remainingTime, ["day", "hour", "minute"]), `(${estimatedDate})`].join(" "),

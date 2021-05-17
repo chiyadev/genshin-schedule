@@ -86,7 +86,7 @@ const RealmCurrency = () => {
 
           <chakra.div color="gray.500" fontSize="sm">
             {current >= getCurrencyCap(rank) ? (
-              <FormattedMessage id="realmCurrencyFull" />
+              <FormattedMessage defaultMessage="Your currency is full." />
             ) : mode === "time" ? (
               <EstimatorByTime />
             ) : mode === "value" ? (
