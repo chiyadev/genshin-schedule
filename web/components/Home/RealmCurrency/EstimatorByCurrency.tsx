@@ -27,7 +27,7 @@ const EstimatorByCurrency = () => {
       }
     };
 
-    for (let i = 60; i <= cap; i *= 2) {
+    for (let i = 80; i <= cap; i *= 2) {
       addValue(i);
     }
     addValue(cap);
