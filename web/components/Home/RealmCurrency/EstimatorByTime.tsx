@@ -56,10 +56,10 @@ const EstimatorByTime = () => {
               value,
               duration: full
                 ? [
-                    useFormatDuration(capTime, ["day", "hour", "minute"]),
+                    useFormatDuration(capTime, ["day", "hour"]),
                     `(${time.plus(capTime).toLocaleString(DateTime.DATETIME_SHORT)})`,
                   ].join(" ")
-                : useFormatDuration(capTime, ["day", "hour", "minute"]),
+                : useFormatDuration(capTime, ["day", "hour"]),
             }}
           />
         </div>
