@@ -234,7 +234,11 @@ import Restaurant from "./game/Restaurant.png";
 import RetracingBolide from "./game/Retracing Bolide.png";
 import RingofBoreas from "./game/Ring of Boreas.png";
 import Rosaria from "./game/Rosaria.png";
+import RoyalBow from "./game/Royal Bow.png";
+import RoyalGreatsword from "./game/Royal Greatsword.png";
 import RoyalGrimoire from "./game/Royal Grimoire.png";
+import RoyalLongsword from "./game/Royal Longsword.png";
+import RoyalSpear from "./game/Royal Spear.png";
 import Rust from "./game/Rust.png";
 import SacrificialBow from "./game/Sacrificial Bow.png";
 import SacrificialFragments from "./game/Sacrificial Fragments.png";
@@ -289,6 +293,7 @@ import TheBlackSword from "./game/The Black Sword.png";
 import TheExile from "./game/The Exile.png";
 import TheFlute from "./game/The Flute.png";
 import TheStringless from "./game/The Stringless.png";
+import TheUnforged from "./game/The Unforged.png";
 import TheViridescentHunt from "./game/The Viridescent Hunt.png";
 import TheWidsith from "./game/The Widsith.png";
 import ThrillingTalesofDragonSlayers from "./game/Thrilling Tales of Dragon Slayers.png";
@@ -313,6 +318,7 @@ import Venti from "./game/Venti.png";
 import Violetgrass from "./game/Violetgrass.png";
 import ViridescentVenerer from "./game/Viridescent Venerer.png";
 import VitalizedDragontooth from "./game/Vitalized Dragontooth.png";
+import VortexVanquisher from "./game/Vortex Vanquisher.png";
 import WanderersAdvice from "./game/Wanderer's Advice.png";
 import WanderersTroupe from "./game/Wanderer's Troupe.png";
 import WarmingBottle from "./game/Warming Bottle.png";
@@ -575,7 +581,11 @@ export {
   RetracingBolide,
   RingofBoreas,
   Rosaria,
+  RoyalBow,
+  RoyalGreatsword,
   RoyalGrimoire,
+  RoyalLongsword,
+  RoyalSpear,
   Rust,
   SacrificialBow,
   SacrificialFragments,
@@ -630,6 +640,7 @@ export {
   TheExile,
   TheFlute,
   TheStringless,
+  TheUnforged,
   TheViridescentHunt,
   TheWidsith,
   ThrillingTalesofDragonSlayers,
@@ -654,6 +665,7 @@ export {
   Violetgrass,
   ViridescentVenerer,
   VitalizedDragontooth,
+  VortexVanquisher,
   WanderersAdvice,
   WanderersTroupe,
   WarmingBottle,
@@ -918,7 +930,11 @@ export function getAssetByName(name: string): string | undefined {
     case "Retracing Bolide": return RetracingBolide;
     case "Ring of Boreas": return RingofBoreas;
     case "Rosaria": return Rosaria;
+    case "Royal Bow": return RoyalBow;
+    case "Royal Greatsword": return RoyalGreatsword;
     case "Royal Grimoire": return RoyalGrimoire;
+    case "Royal Longsword": return RoyalLongsword;
+    case "Royal Spear": return RoyalSpear;
     case "Rust": return Rust;
     case "Sacrificial Bow": return SacrificialBow;
     case "Sacrificial Fragments": return SacrificialFragments;
@@ -973,6 +989,7 @@ export function getAssetByName(name: string): string | undefined {
     case "The Exile": return TheExile;
     case "The Flute": return TheFlute;
     case "The Stringless": return TheStringless;
+    case "The Unforged": return TheUnforged;
     case "The Viridescent Hunt": return TheViridescentHunt;
     case "The Widsith": return TheWidsith;
     case "Thrilling Tales of Dragon Slayers": return ThrillingTalesofDragonSlayers;
@@ -997,6 +1014,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Violetgrass": return Violetgrass;
     case "Viridescent Venerer": return ViridescentVenerer;
     case "Vitalized Dragontooth": return VitalizedDragontooth;
+    case "Vortex Vanquisher": return VortexVanquisher;
     case "Wanderer's Advice": return WanderersAdvice;
     case "Wanderer's Troupe": return WanderersTroupe;
     case "Warming Bottle": return WarmingBottle;
