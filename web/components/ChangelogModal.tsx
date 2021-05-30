@@ -22,6 +22,9 @@ function buildChangelog() {
     <ChangelogSection key={27} date="2021/05/30">
       <ChangelogItem github={71}>Added more detailed estimation modes for realm currency calculator.</ChangelogItem>
       <ChangelogItem github={85}>Updated several incorrect weapon entries and added missing weapons.</ChangelogItem>
+      <ChangelogItem github={83}>
+        Use next.js scrollRestoration experimental flag instead of sessionStorage hack.
+      </ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={26} date="2021/05/15">
       <ChangelogItem github={69}>Added Indonesian localization. Menambahkan terjemahan bahasa Indonesia.</ChangelogItem>
