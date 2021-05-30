@@ -72,7 +72,9 @@ msgctxt "components.ClockOffsetWarning.85fdee"
 msgid ""
 "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} "
 "other {in # days}}."
-msgstr "正在显示 {offset, plural, =1 {明天的计划} =-1 {昨天的计划} other {# 天后的计划}}."
+msgstr ""
+"正在显示 {offset, plural, =1 {明天的计划} =-1 {昨天的计划} other {# 天后的计"
+"划}}."
 
 #: components/ClockOffsetWarning.tsx:36
 msgctxt "components.ClockOffsetWarning.8e6fec"
@@ -155,7 +157,9 @@ msgctxt "components.Customize.Notifications.Info.63d176"
 msgid ""
 "Genshin Schedule has a Discord bot that can send you notifications when your "
 "resin recharges or resources respawn."
-msgstr "Genshin Schedule 有一个Discord机器人, 可以在你的树脂恢复或资源刷新时向你发送通知."
+msgstr ""
+"Genshin Schedule 有一个Discord机器人, 可以在你的树脂恢复或资源刷新时向你发送"
+"通知."
 
 #: components/Customize/Notifications/Info.tsx:67
 msgctxt "components.Customize.Notifications.Info.70feee"
@@ -174,8 +178,8 @@ msgid ""
 "because you can only interact with the bot via DM anyway, but at least one "
 "common server is required for the bot to be able to message you."
 msgstr ""
-"1.加入{server}, 或{invite}到你的服务器. 两种方法都可以. 但因为你只能通过私聊与机器人互动, "
-"所以至少需要有一个你们都在里面的服务器, 机器人才能给你发送消息."
+"1.加入{server}, 或{invite}到你的服务器. 两种方法都可以. 但因为你只能通过私聊"
+"与机器人互动, 所以至少需要有一个你们都在里面的服务器, 机器人才能给你发送消息."
 
 #: components/Customize/Notifications/Info.tsx:112
 msgctxt "components.Customize.Notifications.Info.a7c1c8"
@@ -194,7 +198,8 @@ msgctxt "components.Customize.Notifications.Info.e159bf"
 msgid ""
 "3. Copy the following message and send it to the bot via DM. Don't share "
 "this message with anyone else, ever!"
-msgstr "3.复制以下信息并通过私聊发送给机器人. 不要给其他任何人发送这条信息, 千万不要!"
+msgstr ""
+"3.复制以下信息并通过私聊发送给机器人. 不要给其他任何人发送这条信息, 千万不要!"
 
 #: components/Customize/Notifications/Info.tsx:40
 msgctxt "components.Customize.Notifications.Info.e180cd"
@@ -327,7 +332,7 @@ msgctxt "components.Customize.SettingsList.ConfigExportButton.e25eaf"
 msgid "Copy"
 msgstr "复制"
 
-#: components/Customize/SettingsList/LanguageSwitch.tsx:37
+#: components/Customize/SettingsList/LanguageSwitch.tsx:39
 msgctxt "components.Customize.SettingsList.LanguageSwitch.4b7b37"
 msgid "Add new language"
 msgstr "添加新语言"
@@ -546,23 +551,38 @@ msgctxt "components.Home.RealmCurrency.ClearButton.fc60a8"
 msgid "Clear"
 msgstr "清空"
 
-#: components/Home/RealmCurrency/index.tsx:53
+#: components/Home/RealmCurrency/EstimatorByCurrency.tsx:48
+msgctxt "components.Home.RealmCurrency.EstimatorByCurrency.5921a5"
+msgid "{value} in {time}"
+msgstr ""
+
+#: components/Home/RealmCurrency/EstimatorByTime.tsx:53
+msgctxt "components.Home.RealmCurrency.EstimatorByTime.f0f932"
+msgid "{value} in {duration}"
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:71
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
 msgid "Trust rank"
 msgstr "信任等阶"
 
-#: components/Home/RealmCurrency/index.tsx:60
+#: components/Home/RealmCurrency/index.tsx:78
 msgctxt "components.Home.RealmCurrency.index.27268e"
 msgid "Realm currency"
 msgstr "洞天宝钱"
 
-#: components/Home/RealmCurrency/index.tsx:37
+#: components/Home/RealmCurrency/index.tsx:55
 #, fuzzy
 msgctxt "components.Home.RealmCurrency.index.33dd2d"
 msgid "Adeptal energy"
 msgstr "洞天仙力"
 
-#: components/Home/RealmCurrency/index.tsx:30
+#: components/Home/RealmCurrency/index.tsx:88
+msgctxt "components.Home.RealmCurrency.index.9ca85f"
+msgid "Your realm currency is full."
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:35
 msgctxt "components.Home.RealmCurrency.index.d43d9b"
 msgid "Realm Currency Calculator"
 msgstr "洞天宝钱计算器"
