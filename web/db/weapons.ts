@@ -61,7 +61,6 @@ add(registerMessage({ defaultMessage: "The Bell" }), Decarabian, [HilichurlHorn,
 add(registerMessage({ defaultMessage: "The Stringless" }), Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "The Viridescent Hunt" }), Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 
-add(registerMessage({ defaultMessage: "Alley Hunter" }), BorealWolf, [LeyLine, TreasureHoarderInsignia]);
 add(registerMessage({ defaultMessage: "Bloodtainted Greatsword" }), BorealWolf, [LeyLine, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "Deathmatch" }), BorealWolf, [LeyLine, WhopperflowerNectar]);
 add(registerMessage({ defaultMessage: "Dragonspine Spear" }), BorealWolf, [MistGrass, FatuiInsignia]);
@@ -81,6 +80,7 @@ add(registerMessage({ defaultMessage: "The Widsith" }), BorealWolf, [LeyLine, Hi
 add(registerMessage({ defaultMessage: "Thrilling Tales of Dragon Slayers" }), BorealWolf, [LeyLine, SamachurlScroll]);
 add(registerMessage({ defaultMessage: "Wine and Song" }), BorealWolf, [LeyLine, SamachurlScroll]);
 
+add(registerMessage({ defaultMessage: "Alley Hunter" }), DandelionGladiator, [ChaosPart, Slime]);
 add(registerMessage({ defaultMessage: "Amos' Bow" }), DandelionGladiator, [ChaosPart, Slime]);
 add(registerMessage({ defaultMessage: "Beginner's Protector" }), DandelionGladiator, [ChaosPart, SamachurlScroll]);
 add(registerMessage({ defaultMessage: "Favonius Greatsword" }), DandelionGladiator, [ChaosPart, FatuiInsignia]);
@@ -104,7 +104,7 @@ add(registerMessage({ defaultMessage: "Wolf's Gravestone" }), DandelionGladiator
 
 add(registerMessage({ defaultMessage: "Blackcliff Agate" }), Guyun, [FatuiKnife, SamachurlScroll]);
 add(registerMessage({ defaultMessage: "Blackcliff Longsword" }), Guyun, [FatuiKnife, HilichurlArrowhead]);
-add(registerMessage({ defaultMessage: "Blackcliff Warbow" }), Guyun, [FatuiKnife, TreasureHoarderInsignia]);
+add(registerMessage({ defaultMessage: "Blackcliff Warbow" }), Guyun, [FatuiKnife, WhopperflowerNectar]);
 add(registerMessage({ defaultMessage: "Crescent Pike" }), Guyun, [FatuiKnife, TreasureHoarderInsignia]);
 add(registerMessage({ defaultMessage: "Dark Iron Sword" }), Guyun, [FatuiKnife, HilichurlMask]);
 add(registerMessage({ defaultMessage: "Emerald Orb" }), Guyun, [FatuiKnife, TreasureHoarderInsignia]);
