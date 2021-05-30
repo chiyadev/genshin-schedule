@@ -55,13 +55,13 @@ add(registerMessage({ defaultMessage: "Ferrous Shadow" }), Decarabian, [Hilichur
 add(registerMessage({ defaultMessage: "Magic Guide" }), Decarabian, [HilichurlHorn, Slime]);
 add(registerMessage({ defaultMessage: "Raven Bow" }), Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "Royal Grimoire" }), Decarabian, [HilichurlHorn, FatuiInsignia]);
+add(registerMessage({ defaultMessage: "Royal Longsword" }), Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "Snow-Tombed Starsilver" }), Decarabian, [HilichurlHorn, Slime]);
 add(registerMessage({ defaultMessage: "The Alley Flash" }), Decarabian, [HilichurlHorn, SamachurlScroll]);
 add(registerMessage({ defaultMessage: "The Bell" }), Decarabian, [HilichurlHorn, WhopperflowerNectar]);
 add(registerMessage({ defaultMessage: "The Stringless" }), Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "The Viridescent Hunt" }), Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 
-add(registerMessage({ defaultMessage: "Alley Hunter" }), BorealWolf, [LeyLine, TreasureHoarderInsignia]);
 add(registerMessage({ defaultMessage: "Bloodtainted Greatsword" }), BorealWolf, [LeyLine, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "Deathmatch" }), BorealWolf, [LeyLine, WhopperflowerNectar]);
 add(registerMessage({ defaultMessage: "Dragonspine Spear" }), BorealWolf, [MistGrass, FatuiInsignia]);
@@ -81,6 +81,7 @@ add(registerMessage({ defaultMessage: "The Widsith" }), BorealWolf, [LeyLine, Hi
 add(registerMessage({ defaultMessage: "Thrilling Tales of Dragon Slayers" }), BorealWolf, [LeyLine, SamachurlScroll]);
 add(registerMessage({ defaultMessage: "Wine and Song" }), BorealWolf, [LeyLine, SamachurlScroll]);
 
+add(registerMessage({ defaultMessage: "Alley Hunter" }), DandelionGladiator, [ChaosPart, Slime]);
 add(registerMessage({ defaultMessage: "Amos' Bow" }), DandelionGladiator, [ChaosPart, Slime]);
 add(registerMessage({ defaultMessage: "Beginner's Protector" }), DandelionGladiator, [ChaosPart, SamachurlScroll]);
 add(registerMessage({ defaultMessage: "Favonius Greatsword" }), DandelionGladiator, [ChaosPart, FatuiInsignia]);
@@ -91,6 +92,8 @@ add(registerMessage({ defaultMessage: "Frostbearer" }), DandelionGladiator, [Cha
 add(registerMessage({ defaultMessage: "Lost Prayer to the Sacred Winds" }), DandelionGladiator, [ChaosPart, Slime]);
 add(registerMessage({ defaultMessage: "Otherworldly Story" }), DandelionGladiator, [ChaosPart, HilichurlMask]);
 add(registerMessage({ defaultMessage: "Recurve Bow" }), DandelionGladiator, [ChaosPart, SamachurlScroll]);
+add(registerMessage({ defaultMessage: "Royal Bow" }), DandelionGladiator, [ChaosPart, Slime]);
+add(registerMessage({ defaultMessage: "Royal Greatsword" }), DandelionGladiator, [ChaosPart, Slime]);
 add(registerMessage({ defaultMessage: "Sacrificial Fragments" }), DandelionGladiator, [
   ChaosPart,
   TreasureHoarderInsignia,
@@ -104,7 +107,7 @@ add(registerMessage({ defaultMessage: "Wolf's Gravestone" }), DandelionGladiator
 
 add(registerMessage({ defaultMessage: "Blackcliff Agate" }), Guyun, [FatuiKnife, SamachurlScroll]);
 add(registerMessage({ defaultMessage: "Blackcliff Longsword" }), Guyun, [FatuiKnife, HilichurlArrowhead]);
-add(registerMessage({ defaultMessage: "Blackcliff Warbow" }), Guyun, [FatuiKnife, TreasureHoarderInsignia]);
+add(registerMessage({ defaultMessage: "Blackcliff Warbow" }), Guyun, [FatuiKnife, WhopperflowerNectar]);
 add(registerMessage({ defaultMessage: "Crescent Pike" }), Guyun, [FatuiKnife, TreasureHoarderInsignia]);
 add(registerMessage({ defaultMessage: "Dark Iron Sword" }), Guyun, [FatuiKnife, HilichurlMask]);
 add(registerMessage({ defaultMessage: "Emerald Orb" }), Guyun, [FatuiKnife, TreasureHoarderInsignia]);
@@ -134,6 +137,8 @@ add(registerMessage({ defaultMessage: "Prototype Crescent" }), MistVeiledElixir,
 add(registerMessage({ defaultMessage: "Prototype Amber" }), MistVeiledElixir, [MistGrass, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "Prototype Rancour" }), MistVeiledElixir, [MistGrass, FatuiInsignia]);
 add(registerMessage({ defaultMessage: "Rainslasher" }), MistVeiledElixir, [MistGrass, SamachurlScroll]);
+add(registerMessage({ defaultMessage: "Royal Spear" }), MistVeiledElixir, [MistGrass, FatuiInsignia]);
+add(registerMessage({ defaultMessage: "The Unforged" }), MistVeiledElixir, [MistGrass, TreasureHoarderInsignia]);
 add(registerMessage({ defaultMessage: "Twin Nephrite" }), MistVeiledElixir, [MistGrass, FatuiInsignia]);
 
 add(registerMessage({ defaultMessage: "Black Tassel" }), Aerosiderite, [BoneShard, HilichurlArrowhead]);
@@ -148,3 +153,4 @@ add(registerMessage({ defaultMessage: "Serpent Spine" }), Aerosiderite, [BoneSha
 add(registerMessage({ defaultMessage: "Skyrider Greatsword" }), Aerosiderite, [BoneShard, TreasureHoarderInsignia]);
 add(registerMessage({ defaultMessage: "Skyrider Sword" }), Aerosiderite, [BoneShard, FatuiInsignia]);
 add(registerMessage({ defaultMessage: "Staff of Homa" }), Aerosiderite, [LeyLine, Slime]);
+add(registerMessage({ defaultMessage: "Vortex Vanquisher" }), Aerosiderite, [BoneShard, TreasureHoarderInsignia]);
