@@ -521,11 +521,6 @@ msgctxt "components.Home.RealmCurrency.EstimatorByTime.f0f932"
 msgid "{value} in {duration}"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:88
-msgctxt "components.Home.RealmCurrency.index.0f4dba"
-msgid "Your currency is full."
-msgstr ""
-
 #: components/Home/RealmCurrency/index.tsx:71
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
 msgid "Trust rank"
@@ -539,6 +534,11 @@ msgstr ""
 #: components/Home/RealmCurrency/index.tsx:55
 msgctxt "components.Home.RealmCurrency.index.33dd2d"
 msgid "Adeptal energy"
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:88
+msgctxt "components.Home.RealmCurrency.index.9ca85f"
+msgid "Your realm currency is full."
 msgstr ""
 
 #: components/Home/RealmCurrency/index.tsx:35

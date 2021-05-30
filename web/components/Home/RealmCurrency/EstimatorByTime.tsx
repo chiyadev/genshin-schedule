@@ -31,8 +31,7 @@ const EstimatorByTime = () => {
       }
     };
 
-    addValue(1);
-    for (let i = 4; addValue(i) && i < cap; i *= 2);
+    for (let i = 2; addValue(i); i *= 2);
 
     const remainingCurrency = cap - (currency.value + getCurrencyRecharge(energy, time.valueOf() - currency.time));
     const remainingTime = Duration.fromObject({ hours: remainingCurrency / getCurrencyRate(energy) });

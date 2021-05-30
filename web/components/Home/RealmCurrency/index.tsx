@@ -40,6 +40,7 @@ const RealmCurrency = () => {
           <chakra.img
             alt="Realm Currency"
             src={RealmCurrencyIcon}
+            cursor="pointer"
             onClick={() => {
               setMode((mode) => {
                 return estimateModes[(estimateModes.indexOf(mode) + 1) % estimateModes.length];
@@ -51,6 +52,7 @@ const RealmCurrency = () => {
             h={10}
             transform="scale(1.2)"
           />
+
           <chakra.div fontSize="md">
             <FormattedMessage defaultMessage="Adeptal energy" />:
           </chakra.div>
@@ -86,7 +88,7 @@ const RealmCurrency = () => {
 
           <chakra.div color="gray.500" fontSize="sm">
             {current >= getCurrencyCap(rank) ? (
-              <FormattedMessage defaultMessage="Your currency is full." />
+              <FormattedMessage defaultMessage="Your realm currency is full." />
             ) : mode === "time" ? (
               <EstimatorByTime />
             ) : mode === "value" ? (
