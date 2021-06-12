@@ -212,6 +212,13 @@ export const Wolfhook: CommonMaterial = {
   wiki: "https://genshin-impact.fandom.com/wiki/Wolfhook",
 };
 
+export const SeaGanoderma: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Sea Ganoderma" }),
+  item: registerMessage({ defaultMessage: "Sea Ganoderma" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Sea_Ganoderma",
+};
+
 export const CommonMaterials = [
   BoneShard,
   CallaLily,
@@ -242,4 +249,5 @@ export const CommonMaterials = [
   WhopperflowerNectar,
   WindwheelAster,
   Wolfhook,
+  SeaGanoderma,
 ];

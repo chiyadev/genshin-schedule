@@ -32,6 +32,7 @@ import {
   Ganyu,
   Jean,
   Kaeya,
+  Kazuha,
   Keqing,
   Klee,
   Lisa,
@@ -40,6 +41,7 @@ import {
   Noelle,
   Qiqi,
   Razor,
+  Sayu,
   Sucrose,
   Tartaglia,
   Venti,
@@ -48,6 +50,7 @@ import {
   Xingqiu,
   Xinyan,
   Yanfei,
+  Yoimiya,
   Zhongli,
 } from "./characters";
 import { registerMessage } from "../utils";
@@ -116,7 +119,7 @@ export const Inazuma: Region = {
   name: registerMessage({ defaultMessage: "Inazuma" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Inazuma",
   domains: [],
-  characters: [Ayaka],
+  characters: [Ayaka, Kazuha, Sayu, Yoimiya],
 };
 
 export const Snezhnaya: Region = {

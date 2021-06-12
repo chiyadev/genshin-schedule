@@ -116,6 +116,11 @@ msgctxt "components.Customize.CharacterInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
 msgstr ""
 
+#: components/Customize/CharacterList/Icon.tsx:60
+msgctxt "components.Customize.CharacterList.Icon.e637aa"
+msgid "Unknown"
+msgstr ""
+
 #: components/Customize/CharacterList/index.tsx:16
 msgctxt "components.Customize.CharacterList.index.4e372c"
 msgid "Characters"
@@ -1071,177 +1076,192 @@ msgctxt "db.artifacts.fa86c6"
 msgid "Prayers for Illumination"
 msgstr ""
 
-#: db/characters.ts:287
+#: db/characters.ts:289
 msgctxt "db.characters.07f6ca"
 msgid "Zhongli"
 msgstr ""
 
-#: db/characters.ts:134
+#: db/characters.ts:136
 msgctxt "db.characters.0e89af"
 msgid "Fischl"
 msgstr ""
 
-#: db/characters.ts:296
+#: db/characters.ts:298
 msgctxt "db.characters.17ba95"
 msgid "Xinyan"
 msgstr ""
 
-#: db/characters.ts:350
+#: db/characters.ts:352
 msgctxt "db.characters.18d80a"
 msgid "Xiao"
 msgstr ""
 
-#: db/characters.ts:233
+#: db/characters.ts:235
 msgctxt "db.characters.1c8781"
 msgid "Venti"
 msgstr ""
 
-#: db/characters.ts:305
+#: db/characters.ts:307
 msgctxt "db.characters.2fbbd1"
 msgid "Yanfei"
 msgstr ""
 
-#: db/characters.ts:242
+#: db/characters.ts:244
 msgctxt "db.characters.35f4f4"
 msgid "Xiangling"
 msgstr ""
 
-#: db/characters.ts:224
+#: db/characters.ts:226
 msgctxt "db.characters.3988a8"
 msgid "Sucrose"
 msgstr ""
 
-#: db/characters.ts:170
+#: db/characters.ts:172
 msgctxt "db.characters.42ddab"
 msgid "Lisa"
 msgstr ""
 
-#: db/characters.ts:314
+#: db/characters.ts:316
 msgctxt "db.characters.47f14e"
 msgid "Eula"
 msgstr ""
 
-#: db/characters.ts:341
+#: db/characters.ts:343
 msgctxt "db.characters.579564"
 msgid "Ayaka"
 msgstr ""
 
-#: db/characters.ts:71
+#: db/characters.ts:73
 msgctxt "db.characters.584d1b"
 msgid "Traveler (Geo)"
 msgstr ""
 
-#: db/characters.ts:215
+#: db/characters.ts:217
 msgctxt "db.characters.5934e2"
 msgid "Razor"
 msgstr ""
 
-#: db/characters.ts:188
+#: db/characters.ts:190
 msgctxt "db.characters.5e045b"
 msgid "Ningguang"
 msgstr ""
 
-#: db/characters.ts:98
+#: db/characters.ts:100
 msgctxt "db.characters.653885"
 msgid "Beidou"
 msgstr ""
 
-#: db/characters.ts:116
+#: db/characters.ts:118
 msgctxt "db.characters.7267c2"
 msgid "Chongyun"
 msgstr ""
 
-#: db/characters.ts:197
+#: db/characters.ts:199
 msgctxt "db.characters.7ce9c6"
 msgid "Noelle"
 msgstr ""
 
-#: db/characters.ts:143
+#: db/characters.ts:145
 msgctxt "db.characters.7f3adf"
 msgid "Jean"
 msgstr ""
 
-#: db/characters.ts:278
+#: db/characters.ts:280
 msgctxt "db.characters.89304e"
 msgid "Diona"
 msgstr ""
 
-#: db/characters.ts:152
+#: db/characters.ts:388
+msgctxt "db.characters.89d67c"
+msgid "Sayu"
+msgstr ""
+
+#: db/characters.ts:154
 msgctxt "db.characters.921292"
 msgid "Kaeya"
 msgstr ""
 
-#: db/characters.ts:206
+#: db/characters.ts:399
+msgctxt "db.characters.9d0c00"
+msgid "Yoimiya"
+msgstr ""
+
+#: db/characters.ts:208
 msgctxt "db.characters.9de495"
 msgid "Qiqi"
 msgstr ""
 
-#: db/characters.ts:251
+#: db/characters.ts:253
 msgctxt "db.characters.9e37b6"
 msgid "Xingqiu"
 msgstr ""
 
-#: db/characters.ts:125
+#: db/characters.ts:127
 msgctxt "db.characters.a1bb56"
 msgid "Diluc"
 msgstr ""
 
-#: db/characters.ts:89
+#: db/characters.ts:91
 msgctxt "db.characters.a808c9"
 msgid "Barbara"
 msgstr ""
 
-#: db/characters.ts:179
+#: db/characters.ts:181
 msgctxt "db.characters.af88fa"
 msgid "Mona"
 msgstr ""
 
-#: db/characters.ts:323
+#: db/characters.ts:325
 msgctxt "db.characters.b60444"
 msgid "Albedo"
 msgstr ""
 
-#: db/characters.ts:107
+#: db/characters.ts:109
 msgctxt "db.characters.b96249"
 msgid "Bennett"
 msgstr ""
 
-#: db/characters.ts:332
+#: db/characters.ts:334
 msgctxt "db.characters.bc58dc"
 msgid "Ganyu"
 msgstr ""
 
-#: db/characters.ts:269
+#: db/characters.ts:271
 msgctxt "db.characters.bdaeb2"
 msgid "Tartaglia"
 msgstr ""
 
-#: db/characters.ts:260
+#: db/characters.ts:262
 msgctxt "db.characters.ce2cb0"
 msgid "Klee"
 msgstr ""
 
-#: db/characters.ts:62
+#: db/characters.ts:64
 msgctxt "db.characters.d09c64"
 msgid "Traveler (Anemo)"
 msgstr ""
 
-#: db/characters.ts:161
+#: db/characters.ts:163
 msgctxt "db.characters.d9c480"
 msgid "Keqing"
 msgstr ""
 
-#: db/characters.ts:359
+#: db/characters.ts:361
 msgctxt "db.characters.dd7597"
 msgid "Rosaria"
 msgstr ""
 
-#: db/characters.ts:368
+#: db/characters.ts:370
 msgctxt "db.characters.de01da"
 msgid "Hu Tao"
 msgstr ""
 
-#: db/characters.ts:80
+#: db/characters.ts:379
+msgctxt "db.characters.e9f35f"
+msgid "Kazuha"
+msgstr ""
+
+#: db/characters.ts:82
 msgctxt "db.characters.fdb676"
 msgid "Amber"
 msgstr ""
@@ -1354,6 +1374,11 @@ msgstr ""
 #: db/commonMaterials.ts:35
 msgctxt "db.commonMaterials.bf08d6"
 msgid "Samachurl Scroll"
+msgstr ""
+
+#: db/commonMaterials.ts:218
+msgctxt "db.commonMaterials.c15ca5"
+msgid "Sea Ganoderma"
 msgstr ""
 
 #: db/commonMaterials.ts:85

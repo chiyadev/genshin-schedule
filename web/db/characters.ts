@@ -7,6 +7,7 @@ import {
   DvalinPlume,
   DvalinSigh,
   Freedom,
+  GildedScale,
   Gold,
   Prosperity,
   Resistance,
@@ -33,6 +34,7 @@ import {
   PhilanemoMushroom,
   Qingxin,
   SamachurlScroll,
+  SeaGanoderma,
   SilkFlower,
   Slime,
   SmallLampGrass,
@@ -372,6 +374,37 @@ export const HuTao: Character = {
   commonMaterials: [WhopperflowerNectar, SilkFlower],
 };
 
+export const Kazuha: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Kazuha" }),
+  wiki: "https://genshin.honeyhunterworld.com/db/char/kazuha/",
+  talentMaterialWeekly: [GildedScale],
+  talentMaterials: [Diligence],
+  commonMaterials: [TreasureHoarderInsignia, SeaGanoderma],
+};
+
+export const Sayu: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Sayu" }),
+  wiki: "https://genshin.honeyhunterworld.com/db/char/sayu/",
+  talentMaterialWeekly: [GildedScale],
+  talentMaterials: [
+    /*unknown*/
+  ],
+  commonMaterials: [WhopperflowerNectar /*unknown*/],
+};
+
+export const Yoimiya: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Yoimiya" }),
+  wiki: "https://genshin.honeyhunterworld.com/db/char/yoimiya/",
+  talentMaterialWeekly: [DragonLordsCrown],
+  talentMaterials: [
+    /*unknown*/
+  ],
+  commonMaterials: [SamachurlScroll /*unknown*/],
+};
+
 export const Characters = [
   //TravelerAnemo,
   //TravelerGeo,
@@ -408,4 +441,7 @@ export const Characters = [
   Xinyan,
   Yanfei,
   Zhongli,
+  Kazuha,
+  Sayu,
+  Yoimiya,
 ];
