@@ -1,4 +1,4 @@
-import { data } from "./RegionLabelLayer.json";
+import labels from "./RegionLabelLayer.json";
 import React, { memo, ReactNode, useEffect, useState } from "react";
 import { GeoJSON } from "react-leaflet";
 import { DivIcon, LatLng, LatLngTuple, Layer, Marker } from "leaflet";
@@ -17,7 +17,7 @@ const RegionLabelLayer = () => {
   return (
     <GeoJSON
       key={renderId}
-      data={data as any}
+      data={labels.data as any}
       pointToLayer={(point, latlng) => pointToLayer(state, formatMessageId({ id: point.properties.label?.en }), latlng)}
     />
   );
