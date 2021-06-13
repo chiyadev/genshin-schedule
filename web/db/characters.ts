@@ -7,6 +7,7 @@ import {
   DvalinPlume,
   DvalinSigh,
   Freedom,
+  GildedScale,
   Gold,
   Prosperity,
   Resistance,
@@ -33,6 +34,7 @@ import {
   PhilanemoMushroom,
   Qingxin,
   SamachurlScroll,
+  SeaGanoderma,
   SilkFlower,
   Slime,
   SmallLampGrass,
@@ -55,6 +57,7 @@ export type Character = {
   talentMaterialWeekly: TalentMaterial[];
   talentMaterials: TalentMaterial[];
   commonMaterials: CommonMaterial[];
+  leaked?: boolean;
 };
 
 export const TravelerAnemo: Character = {
@@ -312,7 +315,7 @@ export const Yanfei: Character = {
 export const Eula: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Eula" }),
-  wiki: "https://genshin.honeyhunterworld.com/db/char/eula/",
+  wiki: "https://genshin-impact.fandom.com/wiki/Eula",
   talentMaterialWeekly: [DragonLordsCrown],
   talentMaterials: [Resistance],
   commonMaterials: [HilichurlMask, DandelionSeed],
@@ -343,6 +346,7 @@ export const Ayaka: Character = {
   talentMaterialWeekly: [RingOfBoreas],
   talentMaterials: [Prosperity],
   commonMaterials: [SamachurlScroll, WhopperflowerNectar, SmallLampGrass],
+  leaked: true,
 };
 
 export const Xiao: Character = {
@@ -370,6 +374,40 @@ export const HuTao: Character = {
   talentMaterialWeekly: [ShardOfAFoulLegacy],
   talentMaterials: [Diligence],
   commonMaterials: [WhopperflowerNectar, SilkFlower],
+};
+
+export const Kazuha: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Kazuha" }),
+  wiki: "https://genshin.honeyhunterworld.com/db/char/kazuha/",
+  talentMaterialWeekly: [GildedScale],
+  talentMaterials: [Diligence],
+  commonMaterials: [TreasureHoarderInsignia, SeaGanoderma],
+  leaked: true,
+};
+
+export const Sayu: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Sayu" }),
+  wiki: "https://genshin.honeyhunterworld.com/db/char/sayu/",
+  talentMaterialWeekly: [GildedScale],
+  talentMaterials: [
+    /*unknown*/
+  ],
+  commonMaterials: [WhopperflowerNectar /*unknown*/],
+  leaked: true,
+};
+
+export const Yoimiya: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Yoimiya" }),
+  wiki: "https://genshin.honeyhunterworld.com/db/char/yoimiya/",
+  talentMaterialWeekly: [DragonLordsCrown],
+  talentMaterials: [
+    /*unknown*/
+  ],
+  commonMaterials: [SamachurlScroll /*unknown*/],
+  leaked: true,
 };
 
 export const Characters = [
@@ -408,4 +446,7 @@ export const Characters = [
   Xinyan,
   Yanfei,
   Zhongli,
+  Kazuha,
+  Sayu,
+  Yoimiya,
 ];

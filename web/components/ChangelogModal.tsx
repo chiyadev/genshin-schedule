@@ -15,15 +15,20 @@ import {
 import { FaBullhorn } from "react-icons/fa";
 import { FormattedMessage } from "react-intl";
 
-const LatestChangelog = 27;
+const LatestChangelog = 28;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={28} date="2021/06/13">
+      <ChangelogItem github={90}>Added 1.6 characters: Kazuha, Sayu and Yoimiya.</ChangelogItem>
+      <ChangelogItem github={90}>Added 1.6 weapons: Dodoco Tales, Freedom-Sworn and Mitternachts Waltz.</ChangelogItem>
+      <ChangelogItem github={90}>Added accuracy warning to leaked character pages.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={27} date="2021/05/30">
       <ChangelogItem github={71}>Added more detailed estimation modes for realm currency calculator.</ChangelogItem>
       <ChangelogItem github={85}>Updated several incorrect weapon entries and added missing weapons.</ChangelogItem>
       <ChangelogItem github={83}>
-        Use next.js scrollRestoration experimental flag instead of sessionStorage hack.
+        Used next.js scrollRestoration experimental flag instead of sessionStorage hack.
       </ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={26} date="2021/05/15">

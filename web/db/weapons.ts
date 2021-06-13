@@ -53,6 +53,7 @@ add(registerMessage({ defaultMessage: "Favonius Codex" }), Decarabian, [Hilichur
 add(registerMessage({ defaultMessage: "Favonius Sword" }), Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "Ferrous Shadow" }), Decarabian, [HilichurlHorn, WhopperflowerNectar]);
 add(registerMessage({ defaultMessage: "Magic Guide" }), Decarabian, [HilichurlHorn, Slime]);
+add(registerMessage({ defaultMessage: "Mitternachts Waltz" }), Decarabian, [HilichurlHorn, TreasureHoarderInsignia]);
 add(registerMessage({ defaultMessage: "Raven Bow" }), Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "Royal Grimoire" }), Decarabian, [HilichurlHorn, FatuiInsignia]);
 add(registerMessage({ defaultMessage: "Royal Longsword" }), Decarabian, [HilichurlHorn, HilichurlArrowhead]);
@@ -64,6 +65,7 @@ add(registerMessage({ defaultMessage: "The Viridescent Hunt" }), Decarabian, [Hi
 
 add(registerMessage({ defaultMessage: "Bloodtainted Greatsword" }), BorealWolf, [LeyLine, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "Deathmatch" }), BorealWolf, [LeyLine, WhopperflowerNectar]);
+add(registerMessage({ defaultMessage: "Dodoco Tales" }), BorealWolf, [LeyLine, HilichurlMask]);
 add(registerMessage({ defaultMessage: "Dragonspine Spear" }), BorealWolf, [MistGrass, FatuiInsignia]);
 add(registerMessage({ defaultMessage: "Elegy for the End" }), BorealWolf, [HilichurlHorn, FatuiInsignia]);
 add(registerMessage({ defaultMessage: "Harbinger of Dawn" }), BorealWolf, [LeyLine, Slime]);
@@ -88,6 +90,7 @@ add(registerMessage({ defaultMessage: "Favonius Greatsword" }), DandelionGladiat
 add(registerMessage({ defaultMessage: "Favonius Lance" }), DandelionGladiator, [ChaosPart, Slime]);
 add(registerMessage({ defaultMessage: "Favonius Warbow" }), DandelionGladiator, [ChaosPart, WhopperflowerNectar]);
 add(registerMessage({ defaultMessage: "Festering Desire" }), DandelionGladiator, [HilichurlHorn, FatuiInsignia]); // yes, for some reason it's not chaos
+add(registerMessage({ defaultMessage: "Freedom-Sworn" }), DandelionGladiator, [ChaosPart, SamachurlScroll]);
 add(registerMessage({ defaultMessage: "Frostbearer" }), DandelionGladiator, [ChaosPart, WhopperflowerNectar]);
 add(registerMessage({ defaultMessage: "Lost Prayer to the Sacred Winds" }), DandelionGladiator, [ChaosPart, Slime]);
 add(registerMessage({ defaultMessage: "Otherworldly Story" }), DandelionGladiator, [ChaosPart, HilichurlMask]);

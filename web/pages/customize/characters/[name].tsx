@@ -4,7 +4,7 @@ import { GetServerSideProps } from "next";
 import ConfigProvider from "../../../components/ConfigProvider";
 import Layout from "../../../components/Layout";
 import { Characters, CharacterWiki } from "../../../db/characters";
-import { chakra, HStack, Link } from "@chakra-ui/react";
+import { Alert, AlertIcon, AlertTitle, chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import WhiteCard from "../../../components/WhiteCard";
 import { getAssetByName } from "../../../assets";
 import MaterialDisplay from "../../../components/Customize/CharacterInfo/MaterialDisplay";
@@ -50,38 +50,60 @@ const CharacterInfo = ({ data, name }: Props) => {
     <ConfigProvider initial={data}>
       <Layout title={[character?.name || "Not Found"]}>
         {character ? (
-          <WhiteCard divide>
-            <HStack spacing={4}>
-              <chakra.img alt={character.name} src={getAssetByName(character.name)} w={16} h={16} borderRadius="full" />
+          <VStack align="stretch" spacing={4}>
+            {!character.leaked ? null : (
+              <Alert status="warning">
+                <AlertIcon />
+                <VStack align="stretch" spacing={0}>
+                  <AlertTitle>
+                    <FormattedMessage defaultMessage="This page may be inaccurate." />
+                  </AlertTitle>
+                  <div>
+                    <FormattedMessage defaultMessage="The following information is based on leaked data from beta versions of the game. Take it with a grain of salt." />
+                  </div>
+                </VStack>
+              </Alert>
+            )}
 
-              <div>
-                <chakra.div fontSize="xl" fontWeight="bold">
-                  <Link href={character.wiki} isExternal>
-                    {character.name}
-                  </Link>
-                </chakra.div>
-                <chakra.div fontSize="sm" color="gray.500">
-                  <Link href={CharacterWiki} isExternal>
-                    {character.type}
-                  </Link>
-                </chakra.div>
-              </div>
-            </HStack>
+            <WhiteCard divide>
+              <HStack spacing={4}>
+                <chakra.img
+                  alt={character.name}
+                  src={getAssetByName(character.name)}
+                  w={16}
+                  h={16}
+                  borderRadius="full"
+                />
 
-            {character.talentMaterialWeekly.map((material) => (
-              <MaterialDisplay key={material.name} character={character} material={material} isWeekly />
-            ))}
+                <div>
+                  <chakra.div fontSize="xl" fontWeight="bold">
+                    <Link href={character.wiki} isExternal>
+                      {character.name}
+                    </Link>
+                  </chakra.div>
+                  <chakra.div fontSize="sm" color="gray.500">
+                    <Link href={CharacterWiki} isExternal>
+                      {character.type}
+                    </Link>
+                  </chakra.div>
+                </div>
+              </HStack>
 
-            {character.talentMaterials.map((material) => (
-              <MaterialDisplay key={material.name} character={character} material={material} />
-            ))}
+              {character.talentMaterialWeekly.map((material) => (
+                <MaterialDisplay key={material.name} character={character} material={material} isWeekly />
+              ))}
 
-            {character.commonMaterials.map((material) => (
-              <CommonMaterialDisplay key={material.name} character={character} material={material} />
-            ))}
+              {character.talentMaterials.map((material) => (
+                <MaterialDisplay key={material.name} character={character} material={material} />
+              ))}
 
-            <NoteInput character={character} />
-          </WhiteCard>
+              {character.commonMaterials.map((material) => (
+                <CommonMaterialDisplay key={material.name} character={character} material={material} />
+              ))}
+
+              <NoteInput character={character} />
+            </WhiteCard>
+          </VStack>
         ) : (
           <FormattedMessage defaultMessage="No such character." />
         )}

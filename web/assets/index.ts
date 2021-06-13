@@ -84,6 +84,7 @@ import Dendro from "./game/Dendro.png";
 import Diluc from "./game/Diluc.png";
 import Diona from "./game/Diona.png";
 import DiviningScroll from "./game/Divining Scroll.png";
+import DodocoTales from "./game/Dodoco Tales.png";
 import Domain from "./game/Domain.png";
 import DragonLordsCrown from "./game/Dragon Lord's Crown.png";
 import DragonsBane from "./game/Dragon's Bane.png";
@@ -118,6 +119,7 @@ import FlamingFlowerStamen from "./game/Flaming Flower Stamen.png";
 import Fowl from "./game/Fowl.png";
 import FragileBoneShard from "./game/Fragile Bone Shard.png";
 import FragrantCedarWood from "./game/Fragrant Cedar Wood.png";
+import FreedomSworn from "./game/Freedom-Sworn.png";
 import Frog from "./game/Frog.png";
 import Frostbearer from "./game/Frostbearer.png";
 import Gambler from "./game/Gambler.png";
@@ -126,6 +128,7 @@ import GeneralGoods from "./game/General Goods.png";
 import GenesisCrystal from "./game/Genesis Crystal.png";
 import GeoSigil from "./game/Geo Sigil.png";
 import Geo from "./game/Geo.png";
+import GildedScale from "./game/Gilded Scale.png";
 import GladiatorsFinale from "./game/Gladiator's Finale.png";
 import GlazeLily from "./game/Glaze Lily.png";
 import GrainofAerosiderite from "./game/Grain of Aerosiderite.png";
@@ -150,6 +153,7 @@ import IronSting from "./game/Iron Sting.png";
 import Jean from "./game/Jean.png";
 import JueyunChili from "./game/Jueyun Chili.png";
 import Kaeya from "./game/Kaeya.png";
+import Kazuha from "./game/Kazuha.png";
 import Keqing from "./game/Keqing.png";
 import Klee from "./game/Klee.png";
 import Lavawalker from "./game/Lavawalker.png";
@@ -179,6 +183,7 @@ import Mint from "./game/Mint.png";
 import MistFlowerCorolla from "./game/Mist Flower Corolla.png";
 import MistGrassPollen from "./game/Mist Grass Pollen.png";
 import MistVeiledLeadElixir from "./game/Mist Veiled Lead Elixir.png";
+import MitternachtsWaltz from "./game/Mitternachts Waltz.png";
 import Mona from "./game/Mona.png";
 import Mora from "./game/Mora.png";
 import Mushroom from "./game/Mushroom.png";
@@ -245,7 +250,9 @@ import SacrificialFragments from "./game/Sacrificial Fragments.png";
 import SacrificialGreatsword from "./game/Sacrificial Greatsword.png";
 import SacrificialSword from "./game/Sacrificial Sword.png";
 import SandbearerWood from "./game/Sandbearer Wood.png";
+import Sayu from "./game/Sayu.png";
 import Scholar from "./game/Scholar.png";
+import SeaGanoderma from "./game/Sea Ganoderma.png";
 import SereniteaPot from "./game/Serenitea Pot.png";
 import SerpentSpine from "./game/Serpent Spine.png";
 import ShadowoftheWarrior from "./game/Shadow of the Warrior.png";
@@ -343,6 +350,7 @@ import Xinyan from "./game/Xinyan.png";
 import Yanfei from "./game/Yanfei.png";
 import YellowCircle from "./game/Yellow Circle.png";
 import YellowDye from "./game/Yellow Dye.png";
+import Yoimiya from "./game/Yoimiya.png";
 import Zhongli from "./game/Zhongli.png";
 
 export {
@@ -431,6 +439,7 @@ export {
   Diluc,
   Diona,
   DiviningScroll,
+  DodocoTales,
   Domain,
   DragonLordsCrown,
   DragonsBane,
@@ -465,6 +474,7 @@ export {
   Fowl,
   FragileBoneShard,
   FragrantCedarWood,
+  FreedomSworn,
   Frog,
   Frostbearer,
   Gambler,
@@ -473,6 +483,7 @@ export {
   GenesisCrystal,
   GeoSigil,
   Geo,
+  GildedScale,
   GladiatorsFinale,
   GlazeLily,
   GrainofAerosiderite,
@@ -497,6 +508,7 @@ export {
   Jean,
   JueyunChili,
   Kaeya,
+  Kazuha,
   Keqing,
   Klee,
   Lavawalker,
@@ -526,6 +538,7 @@ export {
   MistFlowerCorolla,
   MistGrassPollen,
   MistVeiledLeadElixir,
+  MitternachtsWaltz,
   Mona,
   Mora,
   Mushroom,
@@ -592,7 +605,9 @@ export {
   SacrificialGreatsword,
   SacrificialSword,
   SandbearerWood,
+  Sayu,
   Scholar,
+  SeaGanoderma,
   SereniteaPot,
   SerpentSpine,
   ShadowoftheWarrior,
@@ -690,6 +705,7 @@ export {
   Yanfei,
   YellowCircle,
   YellowDye,
+  Yoimiya,
   Zhongli,
 };
 
@@ -780,6 +796,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Diluc": return Diluc;
     case "Diona": return Diona;
     case "Divining Scroll": return DiviningScroll;
+    case "Dodoco Tales": return DodocoTales;
     case "Domain": return Domain;
     case "Dragon Lord's Crown": return DragonLordsCrown;
     case "Dragon's Bane": return DragonsBane;
@@ -814,6 +831,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Fowl": return Fowl;
     case "Fragile Bone Shard": return FragileBoneShard;
     case "Fragrant Cedar Wood": return FragrantCedarWood;
+    case "Freedom-Sworn": return FreedomSworn;
     case "Frog": return Frog;
     case "Frostbearer": return Frostbearer;
     case "Gambler": return Gambler;
@@ -822,6 +840,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Genesis Crystal": return GenesisCrystal;
     case "Geo Sigil": return GeoSigil;
     case "Geo": return Geo;
+    case "Gilded Scale": return GildedScale;
     case "Gladiator's Finale": return GladiatorsFinale;
     case "Glaze Lily": return GlazeLily;
     case "Grain of Aerosiderite": return GrainofAerosiderite;
@@ -846,6 +865,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Jean": return Jean;
     case "Jueyun Chili": return JueyunChili;
     case "Kaeya": return Kaeya;
+    case "Kazuha": return Kazuha;
     case "Keqing": return Keqing;
     case "Klee": return Klee;
     case "Lavawalker": return Lavawalker;
@@ -875,6 +895,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Mist Flower Corolla": return MistFlowerCorolla;
     case "Mist Grass Pollen": return MistGrassPollen;
     case "Mist Veiled Lead Elixir": return MistVeiledLeadElixir;
+    case "Mitternachts Waltz": return MitternachtsWaltz;
     case "Mona": return Mona;
     case "Mora": return Mora;
     case "Mushroom": return Mushroom;
@@ -941,7 +962,9 @@ export function getAssetByName(name: string): string | undefined {
     case "Sacrificial Greatsword": return SacrificialGreatsword;
     case "Sacrificial Sword": return SacrificialSword;
     case "Sandbearer Wood": return SandbearerWood;
+    case "Sayu": return Sayu;
     case "Scholar": return Scholar;
+    case "Sea Ganoderma": return SeaGanoderma;
     case "Serenitea Pot": return SereniteaPot;
     case "Serpent Spine": return SerpentSpine;
     case "Shadow of the Warrior": return ShadowoftheWarrior;
@@ -1039,6 +1062,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Yanfei": return Yanfei;
     case "Yellow Circle": return YellowCircle;
     case "Yellow Dye": return YellowDye;
+    case "Yoimiya": return Yoimiya;
     case "Zhongli": return Zhongli;
   }
 }
