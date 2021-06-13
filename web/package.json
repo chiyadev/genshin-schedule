@@ -39,7 +39,7 @@
     "react-icons": "^4.2.0",
     "react-intersection-observer": "^8.32.0",
     "react-intl": "^5.20.2",
-    "react-leaflet": "^3.2.0",
+    "react-leaflet": "3.1.0",
     "rfc6902": "^4.0.2",
     "victory": "^35.8.6"
   },
