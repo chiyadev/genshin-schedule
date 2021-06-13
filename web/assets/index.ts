@@ -274,6 +274,7 @@ import SmallLampGrass from "./game/Small Lamp Grass.png";
 import Snapdragon from "./game/Snapdragon.png";
 import SnowTombedStarsilver from "./game/Snow-Tombed Starsilver.png";
 import SolarPearl from "./game/Solar Pearl.png";
+import SongofBrokenPines from "./game/Song of Broken Pines.png";
 import SouvenirShop from "./game/Souvenir Shop.png";
 import SpiritLocketofBoreas from "./game/Spirit Locket of Boreas.png";
 import StaffofHoma from "./game/Staff of Homa.png";
@@ -629,6 +630,7 @@ export {
   Snapdragon,
   SnowTombedStarsilver,
   SolarPearl,
+  SongofBrokenPines,
   SouvenirShop,
   SpiritLocketofBoreas,
   StaffofHoma,
@@ -986,6 +988,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Snapdragon": return Snapdragon;
     case "Snow-Tombed Starsilver": return SnowTombedStarsilver;
     case "Solar Pearl": return SolarPearl;
+    case "Song of Broken Pines": return SongofBrokenPines;
     case "Souvenir Shop": return SouvenirShop;
     case "Spirit Locket of Boreas": return SpiritLocketofBoreas;
     case "Staff of Homa": return StaffofHoma;

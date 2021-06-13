@@ -23,6 +23,7 @@ function buildChangelog() {
       <ChangelogItem github={90}>Added 1.6 characters: Kazuha, Sayu and Yoimiya.</ChangelogItem>
       <ChangelogItem github={90}>Added 1.6 weapons: Dodoco Tales, Freedom-Sworn and Mitternachts Waltz.</ChangelogItem>
       <ChangelogItem github={90}>Added accuracy warning to leaked character pages.</ChangelogItem>
+      <ChangelogItem github={89}>Added missing weapon: Song of Broken Pines</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={27} date="2021/05/30">
       <ChangelogItem github={71}>Added more detailed estimation modes for realm currency calculator.</ChangelogItem>

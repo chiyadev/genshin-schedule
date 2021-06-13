@@ -57,6 +57,7 @@ add(registerMessage({ defaultMessage: "Mitternachts Waltz" }), Decarabian, [Hili
 add(registerMessage({ defaultMessage: "Raven Bow" }), Decarabian, [HilichurlHorn, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "Royal Grimoire" }), Decarabian, [HilichurlHorn, FatuiInsignia]);
 add(registerMessage({ defaultMessage: "Royal Longsword" }), Decarabian, [HilichurlHorn, HilichurlArrowhead]);
+add(registerMessage({ defaultMessage: "Song of Broken Pines" }), Decarabian, [HilichurlHorn, HilichurlMask]);
 add(registerMessage({ defaultMessage: "Snow-Tombed Starsilver" }), Decarabian, [HilichurlHorn, Slime]);
 add(registerMessage({ defaultMessage: "The Alley Flash" }), Decarabian, [HilichurlHorn, SamachurlScroll]);
 add(registerMessage({ defaultMessage: "The Bell" }), Decarabian, [HilichurlHorn, WhopperflowerNectar]);
