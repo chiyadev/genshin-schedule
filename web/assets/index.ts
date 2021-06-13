@@ -84,6 +84,7 @@ import Dendro from "./game/Dendro.png";
 import Diluc from "./game/Diluc.png";
 import Diona from "./game/Diona.png";
 import DiviningScroll from "./game/Divining Scroll.png";
+import DodocoTales from "./game/Dodoco Tales.png";
 import Domain from "./game/Domain.png";
 import DragonLordsCrown from "./game/Dragon Lord's Crown.png";
 import DragonsBane from "./game/Dragon's Bane.png";
@@ -118,6 +119,7 @@ import FlamingFlowerStamen from "./game/Flaming Flower Stamen.png";
 import Fowl from "./game/Fowl.png";
 import FragileBoneShard from "./game/Fragile Bone Shard.png";
 import FragrantCedarWood from "./game/Fragrant Cedar Wood.png";
+import FreedomSworn from "./game/Freedom-Sworn.png";
 import Frog from "./game/Frog.png";
 import Frostbearer from "./game/Frostbearer.png";
 import Gambler from "./game/Gambler.png";
@@ -181,6 +183,7 @@ import Mint from "./game/Mint.png";
 import MistFlowerCorolla from "./game/Mist Flower Corolla.png";
 import MistGrassPollen from "./game/Mist Grass Pollen.png";
 import MistVeiledLeadElixir from "./game/Mist Veiled Lead Elixir.png";
+import MitternachtsWaltz from "./game/Mitternachts Waltz.png";
 import Mona from "./game/Mona.png";
 import Mora from "./game/Mora.png";
 import Mushroom from "./game/Mushroom.png";
@@ -436,6 +439,7 @@ export {
   Diluc,
   Diona,
   DiviningScroll,
+  DodocoTales,
   Domain,
   DragonLordsCrown,
   DragonsBane,
@@ -470,6 +474,7 @@ export {
   Fowl,
   FragileBoneShard,
   FragrantCedarWood,
+  FreedomSworn,
   Frog,
   Frostbearer,
   Gambler,
@@ -533,6 +538,7 @@ export {
   MistFlowerCorolla,
   MistGrassPollen,
   MistVeiledLeadElixir,
+  MitternachtsWaltz,
   Mona,
   Mora,
   Mushroom,
@@ -790,6 +796,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Diluc": return Diluc;
     case "Diona": return Diona;
     case "Divining Scroll": return DiviningScroll;
+    case "Dodoco Tales": return DodocoTales;
     case "Domain": return Domain;
     case "Dragon Lord's Crown": return DragonLordsCrown;
     case "Dragon's Bane": return DragonsBane;
@@ -824,6 +831,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Fowl": return Fowl;
     case "Fragile Bone Shard": return FragileBoneShard;
     case "Fragrant Cedar Wood": return FragrantCedarWood;
+    case "Freedom-Sworn": return FreedomSworn;
     case "Frog": return Frog;
     case "Frostbearer": return Frostbearer;
     case "Gambler": return Gambler;
@@ -887,6 +895,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Mist Flower Corolla": return MistFlowerCorolla;
     case "Mist Grass Pollen": return MistGrassPollen;
     case "Mist Veiled Lead Elixir": return MistVeiledLeadElixir;
+    case "Mitternachts Waltz": return MitternachtsWaltz;
     case "Mona": return Mona;
     case "Mora": return Mora;
     case "Mushroom": return Mushroom;
