@@ -63,9 +63,12 @@ export function setAuthToken(ctx?: Pick<GetServerSidePropsContext, "res">, token
       sameSite: "lax",
       secure: window.location.protocol === "https:",
       expires: new Date(2100, 1, 1),
+      path: "/",
     });
   } else {
-    destroyCookie(ctx, "token");
+    destroyCookie(ctx, "token", {
+      path: "/",
+    });
   }
 }
 
