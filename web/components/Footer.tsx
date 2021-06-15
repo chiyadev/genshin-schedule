@@ -1,12 +1,14 @@
 import React, { memo } from "react";
 import { FaDiscord, FaGithub, FaHeart, FaKeyboard, FaQuestion } from "react-icons/fa";
-import { chakra, HStack, Icon, Link, Tooltip, VStack } from "@chakra-ui/react";
+import { chakra, HStack, Icon, Link, Divider, Tooltip, VStack } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { FormattedMessage } from "react-intl";
 
 const Footer = ({ showShortcuts }: { showShortcuts?: () => void }) => {
   return (
-    <VStack as="footer" align="stretch" spacing={2} p={4} color="gray.500">
+    <VStack as="footer" align="stretch" spacing={4} p={4} color="gray.500">
+      <Divider />
+
       <chakra.div fontSize="sm" textAlign="center">
         <p>
           <FormattedMessage

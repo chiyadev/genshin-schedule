@@ -3,9 +3,19 @@ import WidgetWrapper from "../WidgetWrapper";
 import { useDueTasks, useFilteredTasks } from "../../../utils/tasks";
 import TaskListCard from "../../TaskListCard";
 import MarkAllDone from "./MarkAllDone";
-import { FaAngleRight, FaTimes } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
 import NextLink from "next/link";
-import { ButtonGroup, chakra, HStack, Icon, Link, useColorModeValue, VStack } from "@chakra-ui/react";
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  ButtonGroup,
+  chakra,
+  Icon,
+  Link,
+  useColorModeValue,
+  VStack,
+} from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import SearchButton from "./SearchButton";
 import { useHotkeys } from "react-hotkeys-hook";
@@ -61,12 +71,17 @@ const TaskList = () => {
             </chakra.div>
           </VStack>
         ) : (
-          <HStack spacing={2}>
-            <Icon as={FaTimes} />
-            <div>
-              <FormattedMessage defaultMessage="No tasks for now. Create one by clicking on the map." />
-            </div>
-          </HStack>
+          <Alert status="info">
+            <AlertIcon />
+            <VStack align="start" spacing={0}>
+              <AlertTitle>
+                <FormattedMessage defaultMessage="No tasks for now." />
+              </AlertTitle>
+              <div>
+                <FormattedMessage defaultMessage="Create one by clicking on the map." />
+              </div>
+            </VStack>
+          </Alert>
         )}
 
         <VStack align="stretch" spacing={2}>

@@ -37,7 +37,7 @@ const Home = ({ data }: Props) => {
   return (
     <ConfigProvider initial={data}>
       <Layout>
-        <VStack align="stretch" spacing={12}>
+        <VStack align="stretch" spacing={16}>
           <Clock />
           <Resin />
           <RealmCurrency />

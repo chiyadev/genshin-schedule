@@ -16,14 +16,14 @@ import { TalentMaterial } from "../../../db/talentMaterials";
 import { WeaponMaterial } from "../../../db/weaponMaterials";
 import { Weapon, Weapons } from "../../../db/weapons";
 import { Region, Regions } from "../../../db/regions";
-import { FaTimes } from "react-icons/fa";
 import { Artifact, Artifacts } from "../../../db/artifacts";
 import DomainDisplay from "./DomainDisplay";
 import WidgetWrapper from "../WidgetWrapper";
-import { Grid, HStack, Icon, Link, useColorModeValue, VStack } from "@chakra-ui/react";
+import { Alert, AlertIcon, AlertTitle, Grid, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import FilterButtons from "./FilterButtons";
 import styles from "./index.module.css";
 import { FormattedMessage } from "react-intl";
+import NextLink from "next/link";
 
 export type ScheduledDomain = {
   domain: Domain;
@@ -241,25 +241,37 @@ const DomainView = () => {
             ))}
           </Grid>
         ) : (
-          <HStack spacing={2}>
-            <Icon as={FaTimes} />
-            <div>
-              <FormattedMessage
-                defaultMessage="No domains for today. Maybe try some {link}?"
-                values={{
-                  link: (
-                    <Link
-                      href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops"
-                      color={useColorModeValue("blue.500", "blue.300")}
-                      isExternal
-                    >
-                      <FormattedMessage defaultMessage="Ley Lines" />
-                    </Link>
-                  ),
-                }}
-              />
-            </div>
-          </HStack>
+          <Alert status="info">
+            <AlertIcon />
+            <VStack align="start" spacing={0}>
+              <AlertTitle>
+                <FormattedMessage defaultMessage="No domains for today." />
+              </AlertTitle>
+              <div>
+                <FormattedMessage
+                  defaultMessage="Go to {customize} to add domains, or maybe try some {link}?"
+                  values={{
+                    customize: (
+                      <NextLink href="/customize" passHref>
+                        <Link color={useColorModeValue("blue.500", "blue.300")}>
+                          <FormattedMessage defaultMessage="Customize" />
+                        </Link>
+                      </NextLink>
+                    ),
+                    link: (
+                      <Link
+                        href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops"
+                        color={useColorModeValue("blue.500", "blue.300")}
+                        isExternal
+                      >
+                        <FormattedMessage defaultMessage="Ley Lines" />
+                      </Link>
+                    ),
+                  }}
+                />
+              </div>
+            </VStack>
+          </Alert>
         )}
       </WidgetWrapper>
     ),

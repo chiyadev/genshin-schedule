@@ -46,7 +46,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:190
+#: components/ChangelogModal.tsx:193
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -191,22 +191,22 @@ msgctxt "components.Customize.Notifications.MessageDisplay.fbf09e"
 msgid "You are not signed in."
 msgstr ""
 
-#: components/Customize/Search.tsx:27
+#: components/Customize/Search.tsx:28
 msgctxt "components.Customize.Search.2027a7"
 msgid "Select items to be added to your farming schedule."
 msgstr ""
 
-#: components/Customize/Search.tsx:21
+#: components/Customize/Search.tsx:22
 msgctxt "components.Customize.Search.7c993e"
 msgid "Search characters, weapons and artifacts…"
 msgstr ""
 
-#: components/Customize/Search.tsx:39
+#: components/Customize/Search.tsx:40
 msgctxt "components.Customize.Search.9e7721"
 msgid "create an issue"
 msgstr ""
 
-#: components/Customize/Search.tsx:30
+#: components/Customize/Search.tsx:31
 msgctxt "components.Customize.Search.bb5522"
 msgid "If there are any missing items, please {link} on GitHub."
 msgstr ""
@@ -401,37 +401,37 @@ msgctxt "components.DropLabel.9f8862"
 msgid "{domain}{days, select, undefined {} other { on {days}}}"
 msgstr ""
 
-#: components/Footer.tsx:53
+#: components/Footer.tsx:55
 msgctxt "components.Footer.16f995"
 msgid "Discord"
 msgstr ""
 
-#: components/Footer.tsx:47
+#: components/Footer.tsx:49
 msgctxt "components.Footer.484351"
 msgid "Help"
 msgstr ""
 
-#: components/Footer.tsx:34
+#: components/Footer.tsx:36
 msgctxt "components.Footer.865a3c"
 msgid "Data on this website may not always be accurate or up-to-date with in-game changes."
 msgstr ""
 
-#: components/Footer.tsx:25
+#: components/Footer.tsx:27
 msgctxt "components.Footer.a0a9e9"
 msgid "miHoYo"
 msgstr ""
 
-#: components/Footer.tsx:59
+#: components/Footer.tsx:61
 msgctxt "components.Footer.c0ef70"
 msgid "GitHub"
 msgstr ""
 
-#: components/Footer.tsx:12
+#: components/Footer.tsx:14
 msgctxt "components.Footer.d541af"
 msgid "{app} is not affiliated with or endorsed by {mihoyo}."
 msgstr ""
 
-#: components/Footer.tsx:40
+#: components/Footer.tsx:42
 msgctxt "components.Footer.ec5030"
 msgid "Shortcuts"
 msgstr ""
@@ -496,19 +496,29 @@ msgctxt "components.Home.DomainView.FilterButtons.796e5e"
 msgid "Artifacts"
 msgstr ""
 
-#: components/Home/DomainView/index.tsx:247
-msgctxt "components.Home.DomainView.index.41dc3d"
-msgid "No domains for today. Maybe try some {link}?"
-msgstr ""
-
-#: components/Home/DomainView/index.tsx:256
+#: components/Home/DomainView/index.tsx:267
 msgctxt "components.Home.DomainView.index.4af108"
 msgid "Ley Lines"
+msgstr ""
+
+#: components/Home/DomainView/index.tsx:257
+msgctxt "components.Home.DomainView.index.4d7a4e"
+msgid "Customize"
 msgstr ""
 
 #: components/Home/DomainView/index.tsx:227
 msgctxt "components.Home.DomainView.index.c49d9f"
 msgid "Today's Domains"
+msgstr ""
+
+#: components/Home/DomainView/index.tsx:248
+msgctxt "components.Home.DomainView.index.e73ff2"
+msgid "No domains for today."
+msgstr ""
+
+#: components/Home/DomainView/index.tsx:251
+msgctxt "components.Home.DomainView.index.f52777"
+msgid "Go to {customize} to add domains, or maybe try some {link}?"
 msgstr ""
 
 #: components/Home/RealmCurrency/ClearButton.tsx:23
@@ -606,19 +616,24 @@ msgctxt "components.Home.Tasks.ShowHiddenButton.7a418f"
 msgid "Show hidden"
 msgstr ""
 
-#: components/Home/Tasks/index.tsx:43
+#: components/Home/Tasks/index.tsx:53
 msgctxt "components.Home.Tasks.index.0b9931"
 msgid "Today's Tasks"
 msgstr ""
 
-#: components/Home/Tasks/index.tsx:94
-msgctxt "components.Home.Tasks.index.778f27"
-msgid "Open map"
+#: components/Home/Tasks/index.tsx:81
+msgctxt "components.Home.Tasks.index.4ab261"
+msgid "Create one by clicking on the map."
 msgstr ""
 
-#: components/Home/Tasks/index.tsx:67
-msgctxt "components.Home.Tasks.index.d6861b"
-msgid "No tasks for now. Create one by clicking on the map."
+#: components/Home/Tasks/index.tsx:78
+msgctxt "components.Home.Tasks.index.5c6f2d"
+msgid "No tasks for now."
+msgstr ""
+
+#: components/Home/Tasks/index.tsx:109
+msgctxt "components.Home.Tasks.index.778f27"
+msgid "Open map"
 msgstr ""
 
 #: components/Layout.tsx:62

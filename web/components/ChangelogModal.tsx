@@ -15,10 +15,13 @@ import {
 import { FaBullhorn } from "react-icons/fa";
 import { FormattedMessage } from "react-intl";
 
-const LatestChangelog = 28;
+const LatestChangelog = 29;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={29} date="2021/06/15">
+      <ChangelogItem>Improved some parts of the website UI.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={28} date="2021/06/13">
       <ChangelogItem github={90}>Added 1.6 characters: Kazuha, Sayu and Yoimiya.</ChangelogItem>
       <ChangelogItem github={90}>Added 1.6 weapons: Dodoco Tales, Freedom-Sworn and Mitternachts Waltz.</ChangelogItem>

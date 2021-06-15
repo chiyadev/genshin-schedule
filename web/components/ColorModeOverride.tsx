@@ -1,7 +1,6 @@
 import React, { memo, ReactNode, useEffect } from "react";
 import { useConfig } from "../utils/config";
 import { DarkMode, useColorMode } from "@chakra-ui/color-mode";
-import { useToken } from "@chakra-ui/react";
 import Head from "next/head";
 
 const ColorModeOverride = ({ children }: { children?: ReactNode }) => {
@@ -30,13 +29,11 @@ const ColorModeOverride = ({ children }: { children?: ReactNode }) => {
 };
 
 const LightModeStyle = () => {
-  const [progress] = useToken("colors", ["blue.300"]);
-
   return (
     <Head>
       <style>{`
         :root {
-          --nprogress-color: ${progress};
+          --nprogress-color: var(--chakra-colors-blue-300);
         }
       `}</style>
     </Head>
@@ -44,8 +41,6 @@ const LightModeStyle = () => {
 };
 
 const DarkModeStyle = () => {
-  const [bg] = useToken("colors", ["gray.900"]);
-
   return (
     <Head>
       <style>{`
@@ -55,7 +50,7 @@ const DarkModeStyle = () => {
         }
 
         body {
-          background-color: ${bg} !important;
+          background-color: var(--chakra-colors-gray-900) !important;
           color: var(--text-color) !important;
         }
       `}</style>

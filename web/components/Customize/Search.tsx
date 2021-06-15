@@ -16,6 +16,7 @@ const Search = () => {
         </InputLeftElement>
 
         <Input
+          variant="filled"
           value={value}
           onChange={({ currentTarget: { value } }) => setValue(value)}
           placeholder={formatMessage({ defaultMessage: "Search characters, weapons and artifacts…" })}

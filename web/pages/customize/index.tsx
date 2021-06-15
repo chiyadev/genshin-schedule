@@ -39,7 +39,7 @@ const Customize = ({ user, data }: Props) => {
   return (
     <ConfigProvider initial={data}>
       <Layout title={["Customize"]}>
-        <VStack align="stretch" spacing={8}>
+        <VStack align="stretch" spacing={16}>
           <Search />
           <CharacterList />
           <WeaponList />
