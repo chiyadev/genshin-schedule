@@ -4,9 +4,9 @@ executors:
   default:
     machine: true
     environment:
-      DOCKER_IMAGE_WEB: r.chiya.dev/genshin-web
-      DOCKER_IMAGE_SYNC: r.chiya.dev/genshin-sync
-      NEXT_PUBLIC_UMAMI_URL: https://a.chiya.dev/57a842aa-1d89-4c48-aaea-2b9b98b4e818
+      DOCKER_IMAGE_WEB: registry.chiya.dev/genshin-web
+      DOCKER_IMAGE_SYNC: registry.chiya.dev/genshin-sync
+      NEXT_PUBLIC_UMAMI_URL: https://analytics.chiya.dev/57a842aa-1d89-4c48-aaea-2b9b98b4e818
       NEXT_PUBLIC_API_PUBLIC: https://genshin.chiya.dev/api/v1
       NEXT_PUBLIC_API_INTERNAL: http://genshin-sync/api/v1
 
@@ -15,17 +15,17 @@ jobs:
     executor: default
     steps:
       - checkout
-      - run: docker build -t $DOCKER_IMAGE_WEB -f Dockerfile.web --build-arg NEXT_PUBLIC_UMAMI_URL --build-arg NEXT_PUBLIC_API_PUBLIC --build-arg NEXT_PUBLIC_API_INTERNAL .
-      - run: echo "$DOCKER_PASSWORD" | docker login $DOCKER_REGISTRY -u "$DOCKER_USERNAME" --password-stdin
-      - run: docker push $DOCKER_IMAGE_WEB
+      - run: docker build -t "$DOCKER_IMAGE_WEB" -f Dockerfile.web --build-arg NEXT_PUBLIC_UMAMI_URL --build-arg NEXT_PUBLIC_API_PUBLIC --build-arg NEXT_PUBLIC_API_INTERNAL .
+      - run: echo "$REGISTRY_PASSWORD" | docker login registry.chiya.dev -u "$REGISTRY_USERNAME" --password-stdin
+      - run: docker push "$DOCKER_IMAGE_WEB"
 
   deploy-sync:
     executor: default
     steps:
       - checkout
-      - run: docker build -t $DOCKER_IMAGE_SYNC -f Dockerfile.sync .
-      - run: echo "$DOCKER_PASSWORD" | docker login $DOCKER_REGISTRY -u "$DOCKER_USERNAME" --password-stdin
-      - run: docker push $DOCKER_IMAGE_SYNC
+      - run: docker build -t "$DOCKER_IMAGE_SYNC" -f Dockerfile.sync .
+      - run: echo "$REGISTRY_PASSWORD" | docker login registry.chiya.dev -u "$REGISTRY_USERNAME" --password-stdin
+      - run: docker push "$DOCKER_IMAGE_SYNC"
 
 workflows:
   version: 2
@@ -33,8 +33,8 @@ workflows:
     jobs:
       - deploy-web:
           context:
-            - do-registry
+            - chiya-registry
 
       - deploy-sync:
           context:
-            - do-registry
+            - chiya-registry
