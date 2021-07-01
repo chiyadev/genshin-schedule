@@ -379,11 +379,10 @@ export const HuTao: Character = {
 export const Kazuha: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Kazuha" }),
-  wiki: "https://genshin.honeyhunterworld.com/db/char/kazuha/",
+  wiki: "https://genshin-impact.fandom.com/wiki/Kazuha",
   talentMaterialWeekly: [GildedScale],
   talentMaterials: [Diligence],
   commonMaterials: [TreasureHoarderInsignia, SeaGanoderma],
-  leaked: true,
 };
 
 export const Sayu: Character = {
