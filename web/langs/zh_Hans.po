@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
 "PO-Revision-Date: 2021-07-04 07:22+0000\n"
-"Last-Translator: phos <phosphene47@chiya.dev>\n"
+"Last-Translator: Richard Yu <yurichard3839@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -42,7 +42,7 @@ msgstr "切勿在与原神有关的网站上使用你的 米哈游 账号密码.
 #: components/Auth/UserSignIn.tsx:133
 msgctxt "components.Auth.UserSignIn.93eb72"
 msgid "All data will be stored locally on the browser."
-msgstr "所有数据都将存储在本地浏览器中."
+msgstr "所有数据都将存储在浏览器本地."
 
 #: components/Auth/UserSignIn.tsx:97
 msgctxt "components.Auth.UserSignIn.bc7fa7"
