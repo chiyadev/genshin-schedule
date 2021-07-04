@@ -15,10 +15,13 @@ import {
 import { FaBullhorn } from "react-icons/fa";
 import { FormattedMessage } from "react-intl";
 
-const LatestChangelog = 29;
+const LatestChangelog = 30;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={30} date="2021/07/04">
+      <ChangelogItem>Added Simplified Chinese localization. 添加了简体中文翻译。</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={29} date="2021/06/15">
       <ChangelogItem>Improved some parts of the website UI.</ChangelogItem>
     </ChangelogSection>,
