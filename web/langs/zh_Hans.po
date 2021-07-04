@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
-"PO-Revision-Date: 2021-07-04 07:25+0000\n"
+"PO-Revision-Date: 2021-07-04 10:13+0000\n"
 "Last-Translator: Golden_Water <2439577268@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
@@ -458,7 +458,7 @@ msgstr "GitHub"
 #: components/Footer.tsx:14
 msgctxt "components.Footer.d541af"
 msgid "{app} is not affiliated with or endorsed by {mihoyo}."
-msgstr "{app} 与{mihoyo}没有关联, 也没被{mihoyo}认可."
+msgstr "{app} 与 {mihoyo} 没有关联, 也没被 {mihoyo} 认可."
 
 #: components/Footer.tsx:42
 msgctxt "components.Footer.ec5030"
@@ -563,7 +563,7 @@ msgstr "{value} 需 {time}"
 #: components/Home/RealmCurrency/EstimatorByTime.tsx:52
 msgctxt "components.Home.RealmCurrency.EstimatorByTime.f0f932"
 msgid "{value} in {duration}"
-msgstr ""
+msgstr "{value} 需 {duration}"
 
 #: components/Home/RealmCurrency/index.tsx:73
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
@@ -576,7 +576,6 @@ msgid "Realm currency"
 msgstr "洞天宝钱"
 
 #: components/Home/RealmCurrency/index.tsx:57
-#, fuzzy
 msgctxt "components.Home.RealmCurrency.index.33dd2d"
 msgid "Adeptal energy"
 msgstr "洞天仙力"
@@ -584,7 +583,7 @@ msgstr "洞天仙力"
 #: components/Home/RealmCurrency/index.tsx:90
 msgctxt "components.Home.RealmCurrency.index.9ca85f"
 msgid "Your realm currency is full."
-msgstr ""
+msgstr "你的洞天宝钱已达上限."
 
 #: components/Home/RealmCurrency/index.tsx:35
 msgctxt "components.Home.RealmCurrency.index.d43d9b"
@@ -604,7 +603,7 @@ msgstr "{value} 需 {time}"
 #: components/Home/Resin/EstimatorByTime.tsx:48
 msgctxt "components.Home.Resin.EstimatorByTime.f0f932"
 msgid "{value} in {duration}"
-msgstr ""
+msgstr "{value} 需 {duration}"
 
 #: components/Home/Resin/NotificationSetter.tsx:32
 msgctxt "components.Home.Resin.NotificationSetter.94aedd"
@@ -654,12 +653,12 @@ msgstr "今日任务"
 #: components/Home/Tasks/index.tsx:81
 msgctxt "components.Home.Tasks.index.4ab261"
 msgid "Create one by clicking on the map."
-msgstr ""
+msgstr "点击地图来创建一个任务."
 
 #: components/Home/Tasks/index.tsx:78
 msgctxt "components.Home.Tasks.index.5c6f2d"
 msgid "No tasks for now."
-msgstr ""
+msgstr "目前没有任务."
 
 #: components/Home/Tasks/index.tsx:109
 msgctxt "components.Home.Tasks.index.778f27"
@@ -842,7 +841,6 @@ msgid "Toggle list overlay"
 msgstr "切换列表显示"
 
 #: components/ShortcutHelp.tsx:39
-#, fuzzy
 msgctxt "components.ShortcutHelp.c886e7"
 msgid "esc"
 msgstr "ESC"
@@ -895,7 +893,7 @@ msgstr "取消"
 #: components/Statistics/ResinStats.tsx:84
 msgctxt "components.Statistics.ResinStats.101bad"
 msgid "{percent}% efficiency"
-msgstr ""
+msgstr "{percent}% 的效率"
 
 #: components/Statistics/ResinStats.tsx:79
 msgctxt "components.Statistics.ResinStats.309da3"
@@ -1173,7 +1171,6 @@ msgid "Eula"
 msgstr "优菈"
 
 #: db/characters.ts:344
-#, fuzzy
 msgctxt "db.characters.579564"
 msgid "Ayaka"
 msgstr "神里绫华"
@@ -1221,7 +1218,7 @@ msgstr "迪奥娜"
 #: db/characters.ts:391
 msgctxt "db.characters.89d67c"
 msgid "Sayu"
-msgstr ""
+msgstr "早柚"
 
 #: db/characters.ts:155
 msgctxt "db.characters.921292"
@@ -1231,7 +1228,7 @@ msgstr "凯亚"
 #: db/characters.ts:403
 msgctxt "db.characters.9d0c00"
 msgid "Yoimiya"
-msgstr ""
+msgstr "宵宫"
 
 #: db/characters.ts:209
 msgctxt "db.characters.9de495"
@@ -1306,7 +1303,7 @@ msgstr "胡桃"
 #: db/characters.ts:381
 msgctxt "db.characters.e9f35f"
 msgid "Kazuha"
-msgstr ""
+msgstr "万叶"
 
 #: db/characters.ts:83
 msgctxt "db.characters.fdb676"
@@ -1426,7 +1423,7 @@ msgstr "萨满卷轴"
 #: db/commonMaterials.ts:218
 msgctxt "db.commonMaterials.c15ca5"
 msgid "Sea Ganoderma"
-msgstr ""
+msgstr "海灵芝"
 
 #: db/commonMaterials.ts:85
 msgctxt "db.commonMaterials.c5a9ac"
@@ -1546,12 +1543,12 @@ msgstr "武器突破素材"
 #: db/domainCategories.ts:58
 msgctxt "db.domainCategories.a6ee01"
 msgid "Trounce"
-msgstr ""
+msgstr "征讨"
 
 #: db/domainCategories.ts:51
 msgctxt "db.domainCategories.bb5cb2"
 msgid "Domain of Mastery"
-msgstr ""
+msgstr "精通秘境"
 
 #: db/domainCategories.ts:59
 msgctxt "db.domainCategories.f98247"
@@ -1631,47 +1628,47 @@ msgstr "无妄引咎密宫"
 #: db/domains.ts:112
 msgctxt "db.domains.70d1b9"
 msgid "Wolf of the North Challenge"
-msgstr ""
+msgstr "北风之狼挑战"
 
 #: db/domains.ts:70
 msgctxt "db.domains.85e44a"
 msgid "Valley of Remembrance"
-msgstr ""
+msgstr "铭记之谷"
 
 #: db/domains.ts:126
 msgctxt "db.domains.8e6257"
 msgid "Enter the Golden House"
-msgstr ""
+msgstr "进入「黄金屋」"
 
 #: db/domains.ts:119
 msgctxt "db.domains.c4c6cc"
 msgid "Peak of Vindagnyr"
-msgstr ""
+msgstr "芬德尼尔之顶"
 
 #: db/domains.ts:133
 msgctxt "db.domains.dbf3b5"
 msgid "Beneath the Dragon-Queller"
-msgstr ""
+msgstr "「伏龙树」之底"
 
 #: db/domains.ts:105
 msgctxt "db.domains.f93fee"
 msgid "Confront Stormterror"
-msgstr ""
+msgstr "深入风龙废墟"
 
 #: db/domains.ts:63
 msgctxt "db.domains.fc295a"
 msgid "Domain of Guyun"
-msgstr ""
+msgstr "孤云凌霄之处"
 
 #: db/domains.ts:84
 msgctxt "db.domains.fc83f4"
 msgid "Clear Pool and Mountain Cavern"
-msgstr ""
+msgstr "华池岩岫"
 
 #: db/domains.ts:42
 msgctxt "db.domains.fe4688"
 msgid "Cecilia Garden"
-msgstr ""
+msgstr "塞西莉亚苗圃"
 
 #: db/icons.ts:191
 msgctxt "db.icons.0026fa"
@@ -1681,117 +1678,118 @@ msgstr ""
 #: db/icons.ts:130
 msgctxt "db.icons.013c82"
 msgid "Red Dye"
-msgstr ""
+msgstr "红色染料"
 
 #: db/icons.ts:67
 msgctxt "db.icons.02b6af"
 msgid "Dead Ley Line Branch"
-msgstr ""
+msgstr "地脉的旧枝"
 
 #: db/icons.ts:123
 msgctxt "db.icons.03bcc1"
 msgid "Tomato"
-msgstr ""
+msgstr "番茄"
 
 #: db/icons.ts:163
 msgctxt "db.icons.07244e"
 msgid "Other Shops"
-msgstr ""
+msgstr "其他商店"
 
 #: db/icons.ts:177
 msgctxt "db.icons.087659"
 msgid "Genesis Crystal"
-msgstr ""
+msgstr "创世结晶"
 
 #: db/icons.ts:143
 msgctxt "db.icons.0b2b2d"
 msgid "Crystal Core"
-msgstr ""
+msgstr "晶核"
 
 #: db/icons.ts:89
 msgctxt "db.icons.0dc52d"
 msgid "Bamboo"
-msgstr ""
+msgstr "竹节"
 
 #: db/icons.ts:36
 msgctxt "db.icons.0e7ca0"
 msgid "Starsilver"
-msgstr ""
+msgstr "星银矿石"
 
 #: db/icons.ts:146
 msgctxt "db.icons.0e95d3"
 msgid "Lizard Tail"
-msgstr ""
+msgstr "蜥蜴尾巴"
 
 #: db/icons.ts:110
 msgctxt "db.icons.0f0eeb"
 msgid "Matsutake"
-msgstr ""
+msgstr "松茸"
 
 #: db/icons.ts:51
 msgctxt "db.icons.10fe45"
 msgid "Character ascension material"
-msgstr ""
+msgstr "角色突破素材"
 
 #: db/icons.ts:47
 msgctxt "db.icons.13fe0a"
 msgid "Fine Enhancement Ore"
-msgstr ""
+msgstr "精锻用良矿"
 
 #: db/icons.ts:29
 msgctxt "db.icons.15e7d8"
 msgid "Iron Chunk"
-msgstr ""
+msgstr "铁块"
 
 #: db/icons.ts:92
 msgctxt "db.icons.16740f"
 msgid "Jueyun Chili"
-msgstr ""
+msgstr "绝云椒椒"
 
 #: db/icons.ts:173
 msgctxt "db.icons.16b73a"
 msgid "Resin"
-msgstr ""
+msgstr "原粹树脂"
 
 #: db/icons.ts:83
 msgctxt "db.icons.19c45b"
 msgid "Valberry"
-msgstr ""
+msgstr "落落莓"
 
 #: db/icons.ts:149
 msgctxt "db.icons.1a2bb9"
 msgid "Mist Flower Corolla"
-msgstr ""
+msgstr "冰雾花花朵"
 
 #: db/icons.ts:116
 msgctxt "db.icons.1e3dc1"
 msgid "Radish"
-msgstr ""
+msgstr "白萝卜"
 
 #: db/icons.ts:22
 msgctxt "db.icons.22457b"
 msgid "Portable Waypoint"
-msgstr ""
+msgstr "口袋锚点"
 
 #: db/icons.ts:52
 msgctxt "db.icons.22e651"
 msgid "Agnidus Agate Sliver"
-msgstr ""
+msgstr "燃愿玛瑙碎屑"
 
 #: db/icons.ts:28
+#, fuzzy
 msgctxt "db.icons.23dfdf"
 msgid "Ore"
-msgstr ""
+msgstr "矿石"
 
 #: db/icons.ts:129
 msgctxt "db.icons.2456aa"
 msgid "Blue Dye"
-msgstr ""
+msgstr "蓝色染料"
 
 #: db/icons.ts:93
 msgctxt "db.icons.248863"
 msgid "Qingxin"
-msgstr ""
+msgstr "清心"
 
 #: db/icons.ts:200
 msgctxt "db.icons.2532a7"
@@ -1801,17 +1799,17 @@ msgstr ""
 #: db/icons.ts:119
 msgctxt "db.icons.29514d"
 msgid "Shrimp Meat"
-msgstr ""
+msgstr "虾仁"
 
 #: db/icons.ts:186
 msgctxt "db.icons.2d0e3a"
 msgid "Companionship Experience"
-msgstr ""
+msgstr "好感经验"
 
 #: db/icons.ts:127
 msgctxt "db.icons.2ecbee"
 msgid "Furnishing"
-msgstr ""
+msgstr "摆设"
 
 #: db/icons.ts:193
 msgctxt "db.icons.33c8b8"
@@ -1821,32 +1819,32 @@ msgstr ""
 #: db/icons.ts:115
 msgctxt "db.icons.38f5ee"
 msgid "Potato"
-msgstr ""
+msgstr "土豆"
 
 #: db/icons.ts:101
 msgctxt "db.icons.393374"
 msgid "Apple"
-msgstr ""
+msgstr "苹果"
 
 #: db/icons.ts:45
 msgctxt "db.icons.3a604c"
 msgid "Weapon enhancement material"
-msgstr ""
+msgstr "武器培养素材"
 
 #: db/icons.ts:111
 msgctxt "db.icons.3b03be"
 msgid "Mint"
-msgstr ""
+msgstr "薄荷"
 
 #: db/icons.ts:124
 msgctxt "db.icons.3e81e3"
 msgid "Wheat"
-msgstr ""
+msgstr "小麦"
 
 #: db/icons.ts:154
 msgctxt "db.icons.3e9210"
 msgid "Artifact"
-msgstr ""
+msgstr "圣遗物"
 
 #: db/icons.ts:66
 msgctxt "db.icons.3ef728"
@@ -1856,7 +1854,7 @@ msgstr ""
 #: db/icons.ts:108
 msgctxt "db.icons.40be2a"
 msgid "Fowl"
-msgstr ""
+msgstr "禽肉"
 
 #: db/icons.ts:159
 msgctxt "db.icons.4129ff"
@@ -1866,17 +1864,17 @@ msgstr ""
 #: db/icons.ts:107
 msgctxt "db.icons.41cfca"
 msgid "Fish"
-msgstr ""
+msgstr "鱼肉"
 
 #: db/icons.ts:31
 msgctxt "db.icons.41d4a2"
 msgid "Crystal Chunk"
-msgstr ""
+msgstr "水晶块"
 
 #: db/icons.ts:158
 msgctxt "db.icons.41f111"
 msgid "NPC"
-msgstr ""
+msgstr "NPC"
 
 #: db/icons.ts:65
 msgctxt "db.icons.42027c"
@@ -1886,37 +1884,37 @@ msgstr ""
 #: db/icons.ts:142
 msgctxt "db.icons.4a3007"
 msgid "Butterfly Wings"
-msgstr ""
+msgstr "蝴蝶翅膀"
 
 #: db/icons.ts:136
 msgctxt "db.icons.4ae142"
 msgid "Fir Wood"
-msgstr ""
+msgstr "杉木"
 
 #: db/icons.ts:174
 msgctxt "db.icons.4c9716"
 msgid "Condensed Resin"
-msgstr ""
+msgstr "浓缩树脂"
 
 #: db/icons.ts:187
 msgctxt "db.icons.4d4e7c"
 msgid "Battle Pass Experience"
-msgstr ""
+msgstr "纪行经验"
 
 #: db/icons.ts:39
 msgctxt "db.icons.4dbe55"
 msgid "Character EXP material"
-msgstr ""
+msgstr "角色经验素材"
 
 #: db/icons.ts:148
 msgctxt "db.icons.525124"
 msgid "Luminescent Spine"
-msgstr ""
+msgstr "发光髓"
 
 #: db/icons.ts:114
 msgctxt "db.icons.53f73c"
 msgid "Pinecone"
-msgstr ""
+msgstr "松果"
 
 #: db/icons.ts:53
 msgctxt "db.icons.541f0a"
@@ -1926,7 +1924,7 @@ msgstr ""
 #: db/icons.ts:64
 msgctxt "db.icons.574218"
 msgid "Firm Arrowhead"
-msgstr ""
+msgstr "牢固的箭簇"
 
 #: db/icons.ts:181
 msgctxt "db.icons.57fb2f"
@@ -1941,12 +1939,12 @@ msgstr ""
 #: db/icons.ts:88
 msgctxt "db.icons.5bdc86"
 msgid "Local specialty of Liyue"
-msgstr ""
+msgstr "璃月区域特产"
 
 #: db/icons.ts:99
 msgctxt "db.icons.6232ee"
 msgid "Cooking ingredient"
-msgstr ""
+msgstr "食材"
 
 #: db/icons.ts:74
 msgctxt "db.icons.6405d0"
@@ -1971,22 +1969,22 @@ msgstr ""
 #: db/icons.ts:80
 msgctxt "db.icons.6f7fb1"
 msgid "Dandelion Seed"
-msgstr ""
+msgstr "蒲公英籽"
 
 #: db/icons.ts:30
 msgctxt "db.icons.7486de"
 msgid "White Iron Chunk"
-msgstr ""
+msgstr "白铁块"
 
 #: db/icons.ts:40
 msgctxt "db.icons.74bf77"
 msgid "Wanderer's Advice"
-msgstr ""
+msgstr "流浪者的经验"
 
 #: db/icons.ts:103
 msgctxt "db.icons.767429"
 msgid "Bird Egg"
-msgstr ""
+msgstr "鸟蛋"
 
 #: db/icons.ts:179
 msgctxt "db.icons.7c09ca"
@@ -2001,27 +1999,27 @@ msgstr ""
 #: db/icons.ts:68
 msgctxt "db.icons.7ccd68"
 msgid "Chaos Device"
-msgstr ""
+msgstr "混沌装置"
 
 #: db/icons.ts:82
 msgctxt "db.icons.7ce6fd"
 msgid "Small Lamp Grass"
-msgstr ""
+msgstr "小灯草"
 
 #: db/icons.ts:42
 msgctxt "db.icons.7ef6f5"
 msgid "Hero's Wit"
-msgstr ""
+msgstr "大英雄的经验"
 
 #: db/icons.ts:112
 msgctxt "db.icons.7fa082"
 msgid "Mushroom"
-msgstr ""
+msgstr "蘑菇"
 
 #: db/icons.ts:118
 msgctxt "db.icons.7fd8e5"
 msgid "Chilled Meat"
-msgstr ""
+msgstr "「冷鲜肉」"
 
 #: db/icons.ts:62
 msgctxt "db.icons.866176"
@@ -2041,12 +2039,12 @@ msgstr ""
 #: db/icons.ts:78
 msgctxt "db.icons.8d1274"
 msgid "Calla Lily"
-msgstr ""
+msgstr "嘟嘟莲"
 
 #: db/icons.ts:102
 msgctxt "db.icons.8d722e"
 msgid "Berry"
-msgstr ""
+msgstr "树莓"
 
 #: db/icons.ts:55
 msgctxt "db.icons.90064a"
@@ -2061,7 +2059,7 @@ msgstr ""
 #: db/icons.ts:113
 msgctxt "db.icons.90c287"
 msgid "Onion"
-msgstr ""
+msgstr "洋葱"
 
 #: db/icons.ts:24
 msgctxt "db.icons.9410ec"
@@ -2081,27 +2079,27 @@ msgstr ""
 #: db/icons.ts:137
 msgctxt "db.icons.9ef200"
 msgid "Pine Wood"
-msgstr ""
+msgstr "松木"
 
 #: db/icons.ts:77
 msgctxt "db.icons.a01a12"
 msgid "Local specialty of Mondstadt"
-msgstr ""
+msgstr "蒙德区域特产"
 
 #: db/icons.ts:135
 msgctxt "db.icons.a5adc2"
 msgid "Cuihua Wood"
-msgstr ""
+msgstr "萃华木"
 
 #: db/icons.ts:33
 msgctxt "db.icons.a5b195"
 msgid "Electro Crystal"
-msgstr ""
+msgstr "电气水晶"
 
 #: db/icons.ts:46
 msgctxt "db.icons.a5dfca"
 msgid "Enhancement Ore"
-msgstr ""
+msgstr "精锻用杂矿"
 
 #: db/icons.ts:184
 msgctxt "db.icons.aa6277"
@@ -2146,7 +2144,7 @@ msgstr ""
 #: db/icons.ts:41
 msgctxt "db.icons.b42c8b"
 msgid "Adventurer's Experience"
-msgstr ""
+msgstr "冒险家的经验"
 
 #: db/icons.ts:150
 msgctxt "db.icons.b9fa1d"
@@ -2181,7 +2179,7 @@ msgstr ""
 #: db/icons.ts:117
 msgctxt "db.icons.c331fe"
 msgid "Raw Meat"
-msgstr ""
+msgstr "兽肉"
 
 #: db/icons.ts:72
 msgctxt "db.icons.c5a9ac"
@@ -2216,12 +2214,12 @@ msgstr ""
 #: db/icons.ts:48
 msgctxt "db.icons.cc7a59"
 msgid "Mystic Enhancement Ore"
-msgstr ""
+msgstr "精锻用魔矿"
 
 #: db/icons.ts:105
 msgctxt "db.icons.ccba58"
 msgid "Carrot"
-msgstr ""
+msgstr "胡萝卜"
 
 #: db/icons.ts:131
 msgctxt "db.icons.cd14cb"
@@ -2246,7 +2244,7 @@ msgstr ""
 #: db/icons.ts:172
 msgctxt "db.icons.cf9bf2"
 msgid "Mora"
-msgstr ""
+msgstr "摩拉"
 
 #: db/icons.ts:180
 msgctxt "db.icons.d53c75"
@@ -2281,7 +2279,7 @@ msgstr ""
 #: db/icons.ts:63
 msgctxt "db.icons.e1a50a"
 msgid "Damaged Mask"
-msgstr ""
+msgstr "破损的面具"
 
 #: db/icons.ts:100
 msgctxt "db.icons.e1c624"
@@ -2429,7 +2427,6 @@ msgid "Inazuma"
 msgstr "稻妻"
 
 #: db/regions.ts:127
-#, fuzzy
 msgctxt "db.regions.38ab8d"
 msgid "Snezhnaya"
 msgstr "至冬"
@@ -3127,29 +3124,29 @@ msgstr ""
 #: pages/customize/artifacts/[name].tsx:78
 msgctxt "pages.customize.artifacts.[name].f87fc3"
 msgid "No such artifact."
-msgstr ""
+msgstr "没有这样的圣遗物."
 
 #: pages/customize/characters/[name].tsx:59
 msgctxt "pages.customize.characters.[name].8c8c3a"
 msgid "This page may be inaccurate."
-msgstr ""
+msgstr "此页面可能不准确."
 
 #: pages/customize/characters/[name].tsx:107
 msgctxt "pages.customize.characters.[name].9bd832"
 msgid "No such character."
-msgstr ""
+msgstr "没有这样的角色."
 
 #: pages/customize/characters/[name].tsx:62
 msgctxt "pages.customize.characters.[name].ddaaad"
 msgid ""
 "The following information is based on leaked data from beta versions of the "
 "game. Take it with a grain of salt."
-msgstr ""
+msgstr "以下的信息是基于测试版游戏的泄露数据.请慎重考虑."
 
 #: pages/customize/weapons/[name].tsx:79
 msgctxt "pages.customize.weapons.[name].6a78b3"
 msgid "No such weapon."
-msgstr ""
+msgstr "没有这样的武器."
 
 #: pages/home/notifications/queue.tsx:45
 msgctxt "pages.home.notifications.queue.67684b"
@@ -3164,12 +3161,12 @@ msgstr "立即发送"
 #: pages/home/notifications/queue.tsx:129
 msgctxt "pages.home.notifications.queue.87f26c"
 msgid "Dequeue"
-msgstr ""
+msgstr "移除"
 
 #: pages/home/notifications/queue.tsx:87
 msgctxt "pages.home.notifications.queue.c5b4ec"
 msgid "Scheduled at {time} in {duration}."
-msgstr ""
+msgstr "计划在 {time} 还需 {duration}."
 
 #: pages/home/notifications/queue.tsx:54
 msgctxt "pages.home.notifications.queue.fcf2e1"
@@ -3181,14 +3178,14 @@ msgctxt "pages.index.0b66ba"
 msgid ""
 "Tracks open world resources and reminds you as soon as they respawn. There "
 "is no limit to the number of pins."
-msgstr ""
+msgstr "追踪大世界的资源, 一旦它们重新生成, 就会提醒你. 标记的数量没有限制."
 
 #: pages/index.tsx:87
 msgctxt "pages.index.0ed193"
 msgid ""
 "Tracks your resins and estimates when it will recharge without having to "
 "open the game."
-msgstr ""
+msgstr "追踪你的树脂, 并估计它何时恢复, 而不必打开游戏."
 
 #: pages/index.tsx:127
 msgctxt "pages.index.37b47a"
@@ -3208,16 +3205,14 @@ msgid "Features"
 msgstr "功能"
 
 #: pages/index.tsx:97
-#, fuzzy
 msgctxt "pages.index.755c57"
 msgid "Task scheduler"
 msgstr "任务计划"
 
 #: pages/index.tsx:110
-#, fuzzy
 msgctxt "pages.index.79dc9c"
 msgid "Domain view"
-msgstr "副本信息"
+msgstr "秘境信息"
 
 #: pages/index.tsx:84
 msgctxt "pages.index.96d48b"
@@ -3229,17 +3224,17 @@ msgctxt "pages.index.a92dae"
 msgid ""
 "Shows which domains can be cleared for ascension materials and artifacts for "
 "the day."
-msgstr ""
+msgstr "显示今天可以探索哪些秘境以获取突破素材和圣遗物."
 
 #: pages/index.tsx:70
 msgctxt "pages.index.c0ef70"
 msgid "GitHub"
-msgstr ""
+msgstr "Github"
 
 #: pages/index.tsx:48
 msgctxt "pages.index.e3e15c"
 msgid "Genshin Schedule"
-msgstr ""
+msgstr "Genshin Schedule"
 
 #: pages/index.tsx:51
 msgctxt "pages.index.fcffbd"
