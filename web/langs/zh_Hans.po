@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
-"PO-Revision-Date: 2021-07-04 07:24+0000\n"
-"Last-Translator: Golden_Water <2439577268@qq.com>\n"
+"PO-Revision-Date: 2021-07-04 07:25+0000\n"
+"Last-Translator: Richard Yu <yurichard3839@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -457,10 +457,9 @@ msgid "GitHub"
 msgstr "GitHub"
 
 #: components/Footer.tsx:14
-#, fuzzy
 msgctxt "components.Footer.d541af"
 msgid "{app} is not affiliated with or endorsed by {mihoyo}."
-msgstr "{app} 不是 {mihoyo} 的附属, 也没有被 {mihoyo} 认可."
+msgstr "{app} 与{mihoyo}没有关联, 也没被{mihoyo}认可."
 
 #: components/Footer.tsx:42
 msgctxt "components.Footer.ec5030"
