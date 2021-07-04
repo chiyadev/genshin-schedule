@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
 "PO-Revision-Date: 2021-07-04 07:25+0000\n"
-"Last-Translator: Richard Yu <yurichard3839@gmail.com>\n"
+"Last-Translator: Golden_Water <2439577268@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -114,7 +114,7 @@ msgstr "{name} 的突破素材"
 #: components/Customize/CharacterInfo/NoteInput.tsx:24
 msgctxt "components.Customize.CharacterInfo.NoteInput.1cfa1e"
 msgid "e.g. Anemo traveler"
-msgstr "例: 风旅行者"
+msgstr "例: 风属性旅行者"
 
 #: components/Customize/CharacterInfo/NoteInput.tsx:17
 msgctxt "components.Customize.CharacterInfo.NoteInput.c6a1b4"
@@ -354,10 +354,9 @@ msgid "Time steps (2h, 4h, 8h…)"
 msgstr "以时间分段 (2h, 4h, 8h…)"
 
 #: components/Customize/SettingsList/ResinNotifyMarkSlider.tsx:20
-#, fuzzy
 msgctxt "components.Customize.SettingsList.ResinNotifyMarkSlider.b9f3be"
 msgid "Send resin notification at"
-msgstr "需要发送树脂通知的数量"
+msgstr "树脂到达此值时发送通知"
 
 #: components/Customize/SettingsList/SignOutButton.tsx:22
 msgctxt "components.Customize.SettingsList.SignOutButton.c576c9"
