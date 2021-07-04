@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
-"PO-Revision-Date: 2021-07-04 07:22+0000\n"
+"PO-Revision-Date: 2021-07-04 07:23+0000\n"
 "Last-Translator: Richard Yu <yurichard3839@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
@@ -65,12 +65,11 @@ msgid "Update changelog"
 msgstr "更新日志"
 
 #: components/ClockOffsetWarning.tsx:24
-#, fuzzy
 msgctxt "components.ClockOffsetWarning.85fdee"
 msgid ""
 "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} "
 "other {in # days}}."
-msgstr "正在显示 {offset, plural, =1 {明天的计划} =-1 {昨天的计划} other {# 天后的计划}}."
+msgstr "正在显示{offset, plural, =1 {明天} =-1 {昨天} other {# 天后}}的计划."
 
 #: components/ClockOffsetWarning.tsx:36
 msgctxt "components.ClockOffsetWarning.8e6fec"
