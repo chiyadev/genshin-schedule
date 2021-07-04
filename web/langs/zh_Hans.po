@@ -59,7 +59,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr "密码"
 
-#: components/ChangelogModal.tsx:193
+#: components/ChangelogModal.tsx:196
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr "更新日志"
@@ -156,7 +156,9 @@ msgctxt "components.Customize.Notifications.Info.63d176"
 msgid ""
 "Genshin Schedule has a Discord bot that can send you notifications when your "
 "resin recharges or resources respawn."
-msgstr "Genshin Schedule 有一个Discord机器人, 可以在你的树脂恢复或资源刷新时向你发送通知."
+msgstr ""
+"Genshin Schedule 有一个Discord机器人, 可以在你的树脂恢复或资源刷新时向你发送"
+"通知."
 
 #: components/Customize/Notifications/Info.tsx:67
 msgctxt "components.Customize.Notifications.Info.70feee"
@@ -175,8 +177,8 @@ msgid ""
 "because you can only interact with the bot via DM anyway, but at least one "
 "common server is required for the bot to be able to message you."
 msgstr ""
-"1.加入{server}, 或{invite}到你的服务器. 两种方法都可以. 但因为你只能通过私聊与机器人互动, "
-"所以至少需要有一个你们都在里面的服务器, 机器人才能给你发送消息."
+"1.加入{server}, 或{invite}到你的服务器. 两种方法都可以. 但因为你只能通过私聊"
+"与机器人互动, 所以至少需要有一个你们都在里面的服务器, 机器人才能给你发送消息."
 
 #: components/Customize/Notifications/Info.tsx:112
 msgctxt "components.Customize.Notifications.Info.a7c1c8"
@@ -195,7 +197,8 @@ msgctxt "components.Customize.Notifications.Info.e159bf"
 msgid ""
 "3. Copy the following message and send it to the bot via DM. Don't share "
 "this message with anyone else, ever!"
-msgstr "3.复制以下信息并通过私聊发送给机器人. 不要给其他任何人发送这条信息, 千万不要!"
+msgstr ""
+"3.复制以下信息并通过私聊发送给机器人. 不要给其他任何人发送这条信息, 千万不要!"
 
 #: components/Customize/Notifications/Info.tsx:40
 msgctxt "components.Customize.Notifications.Info.e180cd"
@@ -1215,7 +1218,7 @@ msgctxt "db.characters.89304e"
 msgid "Diona"
 msgstr "迪奥娜"
 
-#: db/characters.ts:391
+#: db/characters.ts:390
 msgctxt "db.characters.89d67c"
 msgid "Sayu"
 msgstr "早柚"
@@ -1225,7 +1228,7 @@ msgctxt "db.characters.921292"
 msgid "Kaeya"
 msgstr "凯亚"
 
-#: db/characters.ts:403
+#: db/characters.ts:402
 msgctxt "db.characters.9d0c00"
 msgid "Yoimiya"
 msgstr "宵宫"

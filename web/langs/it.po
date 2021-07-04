@@ -59,7 +59,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:193
+#: components/ChangelogModal.tsx:196
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -1213,7 +1213,7 @@ msgctxt "db.characters.89304e"
 msgid "Diona"
 msgstr ""
 
-#: db/characters.ts:391
+#: db/characters.ts:390
 msgctxt "db.characters.89d67c"
 msgid "Sayu"
 msgstr ""
@@ -1223,7 +1223,7 @@ msgctxt "db.characters.921292"
 msgid "Kaeya"
 msgstr ""
 
-#: db/characters.ts:403
+#: db/characters.ts:402
 msgctxt "db.characters.9d0c00"
 msgid "Yoimiya"
 msgstr ""
