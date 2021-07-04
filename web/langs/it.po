@@ -2,69 +2,65 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-15 09:02+0200\n"
-"PO-Revision-Date: 2021-05-22 07:34+0000\n"
-"Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/genshin-"
-"schedule/web/id/>\n"
-"Language: id\n"
+"POT-Creation-Date: 2021-06-11 12:36+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Translate Toolkit 3.3.6\n"
 
 #: components/Auth/UserSignIn.tsx:57
 msgctxt "components.Auth.UserSignIn.242220"
 msgid "Username"
-msgstr "Username"
+msgstr ""
 
 #: components/Auth/UserSignIn.tsx:45
 msgctxt "components.Auth.UserSignIn.28def3"
 msgid "Error"
-msgstr "Error"
+msgstr ""
 
 #: components/Auth/UserSignIn.tsx:84
 msgctxt "components.Auth.UserSignIn.57f247"
 msgid "Forgot password?"
-msgstr "Lupa kata sandi?"
+msgstr ""
 
 #: components/Auth/UserSignIn.tsx:144
 msgctxt "components.Auth.UserSignIn.61ef74"
 msgid "Continue as anonymous"
-msgstr "Lanjut sebagai anonymous"
+msgstr ""
 
 #: components/Auth/UserSignIn.tsx:89
 msgctxt "components.Auth.UserSignIn.7249ee"
 msgid "Never reuse your miHoYo password on Genshin-related websites."
 msgstr ""
-"Mohon jangan menggunakan kata sandi miHoYo untuk situs yang berkaitan dengan "
-"Genshin."
 
 #: components/Auth/UserSignIn.tsx:133
 msgctxt "components.Auth.UserSignIn.93eb72"
 msgid "All data will be stored locally on the browser."
-msgstr "Seluruh data akan disimpan secara lokal dalam browser Anda."
+msgstr ""
 
 #: components/Auth/UserSignIn.tsx:97
 msgctxt "components.Auth.UserSignIn.bc7fa7"
 msgid "Read more."
-msgstr "Baca lebih lanjut."
+msgstr ""
 
 #: components/Auth/UserSignIn.tsx:130
 msgctxt "components.Auth.UserSignIn.c12651"
 msgid "Submit"
-msgstr "Submit"
+msgstr ""
 
 #: components/Auth/UserSignIn.tsx:70
 msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
-msgstr "Kata sandi"
+msgstr ""
 
 #: components/ChangelogModal.tsx:193
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
-msgstr "Update changelog"
+msgstr ""
 
 #: components/ClockOffsetWarning.tsx:24
 msgctxt "components.ClockOffsetWarning.85fdee"
@@ -72,68 +68,66 @@ msgid ""
 "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} "
 "other {in # days}}."
 msgstr ""
-"Menunjukkan jadwal {offset, plural, =1 {untuk besok} =-1 {untuk kemarin} "
-"other {untuk # hari}}."
 
 #: components/ClockOffsetWarning.tsx:36
 msgctxt "components.ClockOffsetWarning.8e6fec"
 msgid "Reset"
-msgstr "Reset"
+msgstr ""
 
 #: components/Customize/ArtifactInfo/NoteInput.tsx:24
 msgctxt "components.Customize.ArtifactInfo.NoteInput.ab582f"
 msgid "e.g. Lumine's artifact"
-msgstr "e.g. Artefak Lumine"
+msgstr ""
 
 #: components/Customize/ArtifactInfo/NoteInput.tsx:17
 msgctxt "components.Customize.ArtifactInfo.NoteInput.c6a1b4"
 msgid "Additional notes"
-msgstr "Catatan tambahan"
+msgstr ""
 
 #: components/Customize/ArtifactInfo/Toggle.tsx:23
 msgctxt "components.Customize.ArtifactInfo.Toggle.cce039"
 msgid "Show on schedule"
-msgstr "Tampilkan pada jadwal"
+msgstr ""
 
 #: components/Customize/ArtifactInfo/Toggle.tsx:27
 msgctxt "components.Customize.ArtifactInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
-msgstr "Domain terjadwal akan muncul di waktu mereka ada."
+msgstr ""
 
 #: components/Customize/ArtifactList/index.tsx:16
 msgctxt "components.Customize.ArtifactList.index.796e5e"
 msgid "Artifacts"
-msgstr "Artefak"
+msgstr ""
 
 #: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:55
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
-msgstr "Tambah sebagai task"
+msgstr ""
 
 #: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:45
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.b4b55a"
 msgid "ascension material for {name}"
-msgstr "ascension material untuk {name}"
+msgstr ""
 
 #: components/Customize/CharacterInfo/NoteInput.tsx:24
 msgctxt "components.Customize.CharacterInfo.NoteInput.1cfa1e"
 msgid "e.g. Anemo traveler"
-msgstr "e.g. Anemo traveler"
+msgstr ""
 
 #: components/Customize/CharacterInfo/NoteInput.tsx:17
 msgctxt "components.Customize.CharacterInfo.NoteInput.c6a1b4"
 msgid "Additional notes"
-msgstr "Catatan tambahan"
+msgstr ""
 
 #: components/Customize/CharacterInfo/Toggle.tsx:23
 msgctxt "components.Customize.CharacterInfo.Toggle.cce039"
 msgid "Show on schedule"
-msgstr "Tampilkan pada jadwal"
+msgstr ""
 
 #: components/Customize/CharacterInfo/Toggle.tsx:27
 msgctxt "components.Customize.CharacterInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
-msgstr "Domain terjadwal akan muncul di waktu mereka ada."
+msgstr ""
 
 #: components/Customize/CharacterList/Icon.tsx:60
 msgctxt "components.Customize.CharacterList.Icon.e637aa"
@@ -143,17 +137,17 @@ msgstr ""
 #: components/Customize/CharacterList/index.tsx:16
 msgctxt "components.Customize.CharacterList.index.4e372c"
 msgid "Characters"
-msgstr "Karakter"
+msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:104
 msgctxt "components.Customize.Notifications.Info.049a4d"
 msgid "Invite the bot"
-msgstr "Undang bot"
+msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:36
 msgctxt "components.Customize.Notifications.Info.34089d"
 msgid "Notifications"
-msgstr "Notifikasi"
+msgstr ""
 
 #: components/Customize/Notifications/Info.tsx:53
 msgctxt "components.Customize.Notifications.Info.63d176"
@@ -161,8 +155,6 @@ msgid ""
 "Genshin Schedule has a Discord bot that can send you notifications when your "
 "resin recharges or resources respawn."
 msgstr ""
-"Genshin Schedule memiliki bot Discord yang dapat mengirimkan Anda notifikasi "
-"ketika resin Anda sudah penuh atau resources sudah respawn."
 
 #: components/Customize/Notifications/Info.tsx:67
 msgctxt "components.Customize.Notifications.Info.70feee"
@@ -204,245 +196,243 @@ msgstr ""
 #: components/Customize/Notifications/Info.tsx:40
 msgctxt "components.Customize.Notifications.Info.e180cd"
 msgid "Queue"
-msgstr "Antrian"
+msgstr ""
 
 #: components/Customize/Notifications/MessageDisplay.tsx:34
 msgctxt "components.Customize.Notifications.MessageDisplay.a79e7a"
 msgid "Copied"
-msgstr "Tersalin"
+msgstr ""
 
 #: components/Customize/Notifications/MessageDisplay.tsx:34
 msgctxt "components.Customize.Notifications.MessageDisplay.e25eaf"
 msgid "Copy"
-msgstr "Salin"
+msgstr ""
 
 #: components/Customize/Notifications/MessageDisplay.tsx:20
 msgctxt "components.Customize.Notifications.MessageDisplay.fbf09e"
 msgid "You are not signed in."
-msgstr "Anda belum masuk."
+msgstr ""
 
 #: components/Customize/Search.tsx:28
 msgctxt "components.Customize.Search.2027a7"
 msgid "Select items to be added to your farming schedule."
-msgstr "Pilih item-item untuk ditambahkan ke jadwal farming Anda."
+msgstr ""
 
 #: components/Customize/Search.tsx:22
 msgctxt "components.Customize.Search.7c993e"
 msgid "Search characters, weapons and artifacts…"
-msgstr "Cari karakter, senjata, dan artefak…"
+msgstr ""
 
 #: components/Customize/Search.tsx:40
 msgctxt "components.Customize.Search.9e7721"
 msgid "create an issue"
-msgstr "buat issue"
+msgstr ""
 
 #: components/Customize/Search.tsx:31
 msgctxt "components.Customize.Search.bb5522"
 msgid "If there are any missing items, please {link} on GitHub."
-msgstr "Apabila ada item yang tidak ada, mohon {link} di GitHub."
+msgstr ""
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:88
 msgctxt "components.Customize.SettingsList.AccountManageButton.12c3f9"
 msgid "You can change your account username and password."
-msgstr "Anda dapat mengganti username ataupun kata sandi."
+msgstr ""
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:93
 msgctxt "components.Customize.SettingsList.AccountManageButton.242220"
 msgid "Username"
-msgstr "Username"
+msgstr ""
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:51
 msgctxt "components.Customize.SettingsList.AccountManageButton.2d40ff"
 msgid "Manage account"
-msgstr "Kelola akun"
+msgstr ""
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:121
 msgctxt "components.Customize.SettingsList.AccountManageButton.2f8c01"
 msgid "Linked Discord ID"
-msgstr "Linked Discord ID"
+msgstr ""
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:113
 msgctxt "components.Customize.SettingsList.AccountManageButton.7d31e1"
 msgid "New password"
-msgstr "Kata sandi baru"
+msgstr ""
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:98
 msgctxt "components.Customize.SettingsList.AccountManageButton.a58ae0"
 msgid "New username"
-msgstr "Username baru"
+msgstr ""
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:129
 msgctxt "components.Customize.SettingsList.AccountManageButton.c12651"
 msgid "Submit"
-msgstr "Submit"
+msgstr ""
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:133
 msgctxt "components.Customize.SettingsList.AccountManageButton.e3b158"
 msgid "Cancel"
-msgstr "Batal"
+msgstr ""
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:107
 msgctxt "components.Customize.SettingsList.AccountManageButton.e6c83b"
 msgid "Password"
-msgstr "Kata sandi"
+msgstr ""
 
 #: components/Customize/SettingsList/BackgroundSwitch.tsx:17
 msgctxt "components.Customize.SettingsList.BackgroundSwitch.5d0640"
 msgid "Background"
-msgstr "Latar belakang"
+msgstr ""
 
 #: components/Customize/SettingsList/BackgroundSwitch.tsx:31
 msgctxt "components.Customize.SettingsList.BackgroundSwitch.b6d853"
 msgid "Disabled"
-msgstr "Matikan"
+msgstr ""
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:67
 msgctxt "components.Customize.SettingsList.ConfigExportButton.243268"
 msgid "This action cannot be undone."
-msgstr "Aksi ini tidak bisa dikembalikan."
+msgstr ""
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:99
 msgctxt "components.Customize.SettingsList.ConfigExportButton.8ff2e0"
 msgid "Overwrite"
-msgstr "Timpa"
+msgstr ""
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:60
 msgctxt "components.Customize.SettingsList.ConfigExportButton.a27849"
 msgid ""
 "Input is not validated. Corrupted input can make data recovery impossible."
 msgstr ""
-"Tidak ada validasi input. Input yang korup dapat membuat pengembalian data "
-"mustahil."
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:109
 msgctxt "components.Customize.SettingsList.ConfigExportButton.a79e7a"
 msgid "Copied"
-msgstr "Tersalin"
+msgstr ""
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:64
 msgctxt "components.Customize.SettingsList.ConfigExportButton.b0e5f6"
 msgid "You can export your account data for backup and restore."
-msgstr "Anda dapat mengekspor akun Anda untuk di-backup dan di-restore."
+msgstr ""
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:52
 msgctxt "components.Customize.SettingsList.ConfigExportButton.dcad88"
 msgid "Manage data"
-msgstr "Kelola data"
+msgstr ""
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:109
 msgctxt "components.Customize.SettingsList.ConfigExportButton.e25eaf"
 msgid "Copy"
-msgstr "Salin"
+msgstr ""
 
 #: components/Customize/SettingsList/LanguageSwitch.tsx:39
 msgctxt "components.Customize.SettingsList.LanguageSwitch.4b7b37"
 msgid "Add new language"
-msgstr "Tambah bahasa baru"
+msgstr ""
 
 #: components/Customize/SettingsList/LanguageSwitch.tsx:18
 msgctxt "components.Customize.SettingsList.LanguageSwitch.cb5677"
 msgid "Language"
-msgstr "Bahasa"
+msgstr ""
 
 #: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:17
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.6eef86"
 msgid "Resin estimation mode"
-msgstr "Mode estimasi resin"
+msgstr ""
 
 #: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:30
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.a854bc"
 msgid "Value steps (20, 40, 60)"
-msgstr "Jarak nilai (20, 40, 60)"
+msgstr ""
 
 #: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:29
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.e2e5d9"
 msgid "Time steps (2h, 4h, 8h…)"
-msgstr "Jarak waktu (2h, 4h, 8h…)"
+msgstr ""
 
 #: components/Customize/SettingsList/ResinNotifyMarkSlider.tsx:20
 msgctxt "components.Customize.SettingsList.ResinNotifyMarkSlider.b9f3be"
 msgid "Send resin notification at"
-msgstr "Volume pengiriman notifikasi resin"
+msgstr ""
 
 #: components/Customize/SettingsList/SignOutButton.tsx:22
 msgctxt "components.Customize.SettingsList.SignOutButton.c576c9"
 msgid "Sign out"
-msgstr "Keluar"
+msgstr ""
 
 #: components/Customize/SettingsList/TaskDefaultZoomSlider.tsx:16
 msgctxt "components.Customize.SettingsList.TaskDefaultZoomSlider.9c6d23"
 msgid "Zoom on task focus"
-msgstr "Perbesar saat fokus di task"
+msgstr ""
 
 #: components/Customize/SettingsList/TaskListCompactSwitch.tsx:16
 msgctxt "components.Customize.SettingsList.TaskListCompactSwitch.a852ad"
 msgid "Compact task list"
-msgstr "Mode task list ringkas"
+msgstr ""
 
 #: components/Customize/SettingsList/ThemeSwitch.tsx:16
 msgctxt "components.Customize.SettingsList.ThemeSwitch.84c510"
 msgid "Dark mode"
-msgstr "Mode gelap"
+msgstr ""
 
 #: components/Customize/SettingsList/index.tsx:20
 msgctxt "components.Customize.SettingsList.index.0f789d"
 msgid "Settings"
-msgstr "Pengaturan"
+msgstr ""
 
 #: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:54
 msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
-msgstr "Tambah sebagai task"
+msgstr ""
 
 #: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:44
 msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.b4b55a"
 msgid "ascension material for {name}"
-msgstr "ascension material untuk {name}"
+msgstr ""
 
 #: components/Customize/WeaponInfo/NoteInput.tsx:24
 msgctxt "components.Customize.WeaponInfo.NoteInput.72b891"
 msgid "e.g. Lumine's weapon"
-msgstr "e.g. Senjata Lumine"
+msgstr ""
 
 #: components/Customize/WeaponInfo/NoteInput.tsx:17
 msgctxt "components.Customize.WeaponInfo.NoteInput.c6a1b4"
 msgid "Additional notes"
-msgstr "Catatan tambahan"
+msgstr ""
 
 #: components/Customize/WeaponInfo/Toggle.tsx:23
 msgctxt "components.Customize.WeaponInfo.Toggle.cce039"
 msgid "Show on schedule"
-msgstr "Tampilkan pada jadwal"
+msgstr ""
 
 #: components/Customize/WeaponInfo/Toggle.tsx:27
 msgctxt "components.Customize.WeaponInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
-msgstr "Domain terjadwal akan muncul di waktu mereka ada."
+msgstr ""
 
 #: components/Customize/WeaponList/index.tsx:16
 msgctxt "components.Customize.WeaponList.index.4477a1"
 msgid "Weapons"
-msgstr "Senjata"
+msgstr ""
 
 #: components/DropLabel.tsx:18
 msgctxt "components.DropLabel.9f02aa"
 msgid "This item does not drop from any domains."
-msgstr "Item ini tidak di-drop di domain manapun."
+msgstr ""
 
 #: components/DropLabel.tsx:41
 msgctxt "components.DropLabel.9f8862"
 msgid "{domain}{days, select, undefined {} other { on {days}}}"
-msgstr "{domain}{days, select, undefined {} other { on {days}}}"
+msgstr ""
 
 #: components/Footer.tsx:55
 msgctxt "components.Footer.16f995"
 msgid "Discord"
-msgstr "Discord"
+msgstr ""
 
 #: components/Footer.tsx:49
 msgctxt "components.Footer.484351"
 msgid "Help"
-msgstr "Bantuan"
+msgstr ""
 
 #: components/Footer.tsx:36
 msgctxt "components.Footer.865a3c"
@@ -450,93 +440,91 @@ msgid ""
 "Data on this website may not always be accurate or up-to-date with in-game "
 "changes."
 msgstr ""
-"Data dalam situs ini mungkin tidak selalu akurat atau up-to-date dengan "
-"realita dalam game."
 
 #: components/Footer.tsx:27
 msgctxt "components.Footer.a0a9e9"
 msgid "miHoYo"
-msgstr "miHoYo"
+msgstr ""
 
 #: components/Footer.tsx:61
 msgctxt "components.Footer.c0ef70"
 msgid "GitHub"
-msgstr "GitHub"
+msgstr ""
 
 #: components/Footer.tsx:14
 msgctxt "components.Footer.d541af"
 msgid "{app} is not affiliated with or endorsed by {mihoyo}."
-msgstr "{app} tidak memiliki affiliasi maupun di-endorse oleh {mihoyo}."
+msgstr ""
 
 #: components/Footer.tsx:42
 msgctxt "components.Footer.ec5030"
 msgid "Shortcuts"
-msgstr "Pintasan"
+msgstr ""
 
 #: components/Header.tsx:30
 msgctxt "components.Header.4d7a4e"
 msgid "Customize"
-msgstr "Kustomisasi"
+msgstr ""
 
 #: components/Header.tsx:17
 msgctxt "components.Header.e3e15c"
 msgid "Genshin Schedule"
-msgstr "Genshin Schedule"
+msgstr ""
 
 #: components/Home/Clock/DateDisplay.tsx:34
 msgctxt "components.Home.Clock.DateDisplay.d1826b"
 msgid "{value, plural, one {# resin} other {# resins}}"
-msgstr "{value, plural, one {# resin} other {# resins}}"
+msgstr ""
 
 #: components/Home/Clock/DateDisplay.tsx:26
 msgctxt "components.Home.Clock.DateDisplay.de212c"
 msgid "{duration} until reset"
-msgstr "{duration} sampai reset"
+msgstr ""
 
 #: components/Home/Clock/ServerText.tsx:16
 msgctxt "components.Home.Clock.ServerText.0fe07e"
 msgid "Switch server"
-msgstr "Ubah server"
+msgstr ""
 
 #: components/Home/Clock/TimeDisplay.tsx:61
 msgctxt "components.Home.Clock.TimeDisplay.44c3b9"
 msgid "Previous day"
-msgstr "Kemarin"
+msgstr ""
 
 #: components/Home/Clock/TimeDisplay.tsx:71
 msgctxt "components.Home.Clock.TimeDisplay.dd708b"
 msgid "Next day"
-msgstr "Besok"
+msgstr ""
 
 #: components/Home/Clock/index.tsx:15
 msgctxt "components.Home.Clock.index.2cbf2a"
 msgid "Time in Teyvat"
-msgstr "Waktu di Teyvat"
+msgstr ""
 
 #: components/Home/DomainView/DomainDisplay.tsx:23
 msgctxt "components.Home.DomainView.DomainDisplay.0388b5"
 msgid "{category}, {region}"
-msgstr "{category}, {region}"
+msgstr ""
 
 #: components/Home/DomainView/FilterButtons.tsx:28
 msgctxt "components.Home.DomainView.FilterButtons.4477a1"
 msgid "Weapons"
-msgstr "Senjata"
+msgstr ""
 
 #: components/Home/DomainView/FilterButtons.tsx:22
 msgctxt "components.Home.DomainView.FilterButtons.4e372c"
 msgid "Characters"
-msgstr "Karakter"
+msgstr ""
 
 #: components/Home/DomainView/FilterButtons.tsx:34
 msgctxt "components.Home.DomainView.FilterButtons.796e5e"
 msgid "Artifacts"
-msgstr "Artefak"
+msgstr ""
 
 #: components/Home/DomainView/index.tsx:267
 msgctxt "components.Home.DomainView.index.4af108"
 msgid "Ley Lines"
-msgstr "Ley Lines"
+msgstr ""
 
 #: components/Home/DomainView/index.tsx:257
 msgctxt "components.Home.DomainView.index.4d7a4e"
@@ -546,7 +534,7 @@ msgstr ""
 #: components/Home/DomainView/index.tsx:227
 msgctxt "components.Home.DomainView.index.c49d9f"
 msgid "Today's Domains"
-msgstr "Domain Hari Ini"
+msgstr ""
 
 #: components/Home/DomainView/index.tsx:248
 msgctxt "components.Home.DomainView.index.e73ff2"
@@ -561,7 +549,7 @@ msgstr ""
 #: components/Home/RealmCurrency/ClearButton.tsx:23
 msgctxt "components.Home.RealmCurrency.ClearButton.fc60a8"
 msgid "Clear"
-msgstr "Bersihkan"
+msgstr ""
 
 #: components/Home/RealmCurrency/EstimatorByCurrency.tsx:48
 msgctxt "components.Home.RealmCurrency.EstimatorByCurrency.5921a5"
@@ -576,17 +564,17 @@ msgstr ""
 #: components/Home/RealmCurrency/index.tsx:73
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
 msgid "Trust rank"
-msgstr "Trust rank"
+msgstr ""
 
 #: components/Home/RealmCurrency/index.tsx:80
 msgctxt "components.Home.RealmCurrency.index.27268e"
 msgid "Realm currency"
-msgstr "Realm currency"
+msgstr ""
 
 #: components/Home/RealmCurrency/index.tsx:57
 msgctxt "components.Home.RealmCurrency.index.33dd2d"
 msgid "Adeptal energy"
-msgstr "Adeptal energy"
+msgstr ""
 
 #: components/Home/RealmCurrency/index.tsx:90
 msgctxt "components.Home.RealmCurrency.index.9ca85f"
@@ -596,67 +584,67 @@ msgstr ""
 #: components/Home/RealmCurrency/index.tsx:35
 msgctxt "components.Home.RealmCurrency.index.d43d9b"
 msgid "Realm Currency Calculator"
-msgstr "Kalkulator Realm Currency"
+msgstr ""
 
 #: components/Home/Resin/EstimatorByNotifyMark.tsx:18
 msgctxt "components.Home.Resin.EstimatorByNotifyMark.5921a5"
 msgid "{value} in {time}"
-msgstr "{value} dalam {time}"
+msgstr ""
 
 #: components/Home/Resin/EstimatorByResin.tsx:38
 msgctxt "components.Home.Resin.EstimatorByResin.5921a5"
 msgid "{value} in {time}"
-msgstr "{value} dalam {time}"
+msgstr ""
 
 #: components/Home/Resin/EstimatorByTime.tsx:48
 msgctxt "components.Home.Resin.EstimatorByTime.f0f932"
 msgid "{value} in {duration}"
-msgstr "{value} dalam {duration}"
+msgstr ""
 
 #: components/Home/Resin/NotificationSetter.tsx:32
 msgctxt "components.Home.Resin.NotificationSetter.94aedd"
 msgid "You have {value} resins right now!"
-msgstr "Anda memiliki {value} resin sekarang!"
+msgstr ""
 
 #: components/Home/Resin/NotificationSetter.tsx:31
 msgctxt "components.Home.Resin.NotificationSetter.d9f446"
 msgid "Your resins have fully recharged!"
-msgstr "Resin Anda telah di recharge!"
+msgstr ""
 
 #: components/Home/Resin/NotificationSetter.tsx:28
 msgctxt "components.Home.Resin.NotificationSetter.db8673"
 msgid "Resin recharged"
-msgstr "Resin sudah terisi"
+msgstr ""
 
 #: components/Home/Resin/index.tsx:105
 msgctxt "components.Home.Resin.index.506b0c"
 msgid "Your resins are full."
-msgstr "Resin Anda sudah penuh."
+msgstr ""
 
 #: components/Home/Resin/index.tsx:36
 msgctxt "components.Home.Resin.index.fe85b2"
 msgid "Resin Calculator"
-msgstr "Kalkulator Resin"
+msgstr ""
 
 #: components/Home/Tasks/MarkAllDone.tsx:39
 msgctxt "components.Home.Tasks.MarkAllDone.ec7046"
 msgid "Mark everything as done"
-msgstr "Tandai semua sudah selesai"
+msgstr ""
 
 #: components/Home/Tasks/SearchButton.tsx:20
 msgctxt "components.Home.Tasks.SearchButton.c66715"
 msgid "Search"
-msgstr "Cari"
+msgstr ""
 
 #: components/Home/Tasks/ShowHiddenButton.tsx:13
 msgctxt "components.Home.Tasks.ShowHiddenButton.7a418f"
 msgid "Show hidden"
-msgstr "Tampilkan yang tidak terlihat"
+msgstr ""
 
 #: components/Home/Tasks/index.tsx:53
 msgctxt "components.Home.Tasks.index.0b9931"
 msgid "Today's Tasks"
-msgstr "Task Hari Ini"
+msgstr ""
 
 #: components/Home/Tasks/index.tsx:81
 msgctxt "components.Home.Tasks.index.4ab261"
@@ -671,297 +659,297 @@ msgstr ""
 #: components/Home/Tasks/index.tsx:109
 msgctxt "components.Home.Tasks.index.778f27"
 msgid "Open map"
-msgstr "Buka peta"
+msgstr ""
 
 #: components/Layout.tsx:62
 msgctxt "components.Layout.1f7783"
 msgid "Statistics"
-msgstr "Statistik"
+msgstr ""
 
 #: components/Layout.tsx:53
 msgctxt "components.Layout.34089d"
 msgid "Notifications"
-msgstr "Notifikasi"
+msgstr ""
 
 #: components/Map/TaskCreateLayer/CreateButton.tsx:32
 msgctxt "components.Map.TaskCreateLayer.CreateButton.573cd8"
 msgid "Create"
-msgstr "Buat"
+msgstr ""
 
 #: components/Map/TaskLayer/DeleteButton.tsx:31
 msgctxt "components.Map.TaskLayer.DeleteButton.2b7afa"
 msgid "Delete"
-msgstr "Hapus"
+msgstr ""
 
 #: components/Map/TaskLayer/DoneButton.tsx:31
 msgctxt "components.Map.TaskLayer.DoneButton.395490"
 msgid "Mark as to-do"
-msgstr "Tandai sebagai belum selesai"
+msgstr ""
 
 #: components/Map/TaskLayer/DoneButton.tsx:33
 msgctxt "components.Map.TaskLayer.DoneButton.927523"
 msgid "Mark as done"
-msgstr "Tandai sebagai selesai"
+msgstr ""
 
 #: components/Map/TaskMarker/BackButton.tsx:12
 msgctxt "components.Map.TaskMarker.BackButton.73247b"
 msgid "Back"
-msgstr "Kembali"
+msgstr ""
 
 #: components/Map/TaskMarker/InfoPage/DueText.tsx:25
 msgctxt "components.Map.TaskMarker.InfoPage.DueText.17572f"
 msgid "Due {time} ago"
-msgstr "Due {time} ago"
+msgstr ""
 
 #: components/Map/TaskMarker/InfoPage/DueText.tsx:20
 msgctxt "components.Map.TaskMarker.InfoPage.DueText.767ec9"
 msgid "Due in {time}"
-msgstr "Terlambat pada {time}"
+msgstr ""
 
 #: components/Map/TaskMarker/InfoPage/HideCheck.tsx:17
 msgctxt "components.Map.TaskMarker.InfoPage.HideCheck.fdf592"
 msgid "Hide temporarily"
-msgstr "Sembunyikan sementara"
+msgstr ""
 
 #: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:67
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.52cf48"
 msgid "{time}AM"
-msgstr "{time}AM"
+msgstr ""
 
 #: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:66
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.6e6cc8"
 msgid "Server reset"
-msgstr "Server reset"
+msgstr ""
 
 #: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:19
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.a736a6"
 msgid "Respawns every"
-msgstr "Respawn setiap"
+msgstr ""
 
 #: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:15
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalResetCheck.4b91b9"
 msgid "Respawns on server reset"
-msgstr "Respawn saat server reset"
+msgstr ""
 
 #: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:16
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalResetCheck.52cf48"
 msgid "{time}AM"
-msgstr "{time}AM"
+msgstr ""
 
 #: components/Map/TaskMarker/InfoPage/NotifyToggle.tsx:30
 msgctxt "components.Map.TaskMarker.InfoPage.NotifyToggle.0b66a8"
 msgid "{name} respawned"
-msgstr "{name} telah respawn"
+msgstr ""
 
 #: components/Map/TaskMarker/InfoPage/NotifyToggle.tsx:46
 msgctxt "components.Map.TaskMarker.InfoPage.NotifyToggle.da9e7e"
 msgid "Notify respawn"
-msgstr "Notifikasi saat respawn"
+msgstr ""
 
 #: components/Map/TaskMarker/InfoPage/index.tsx:70
 msgctxt "components.Map.TaskMarker.InfoPage.index.906238"
 msgid "Task description"
-msgstr "Deskripsi task"
+msgstr ""
 
 #: components/MapPage/SearchButton.tsx:26
 msgctxt "components.MapPage.SearchButton.c66715"
 msgid "Search"
-msgstr "Cari"
+msgstr ""
 
 #: components/MapPage/TaskListOverlay.tsx:54
 msgctxt "components.MapPage.TaskListOverlay.ea3f7e"
 msgid "Show list"
-msgstr "Tampilkan list"
+msgstr ""
 
 #: components/MapPage/TaskListOverlay.tsx:52
 msgctxt "components.MapPage.TaskListOverlay.f36c72"
 msgid "Hide list"
-msgstr "Sembunyikan list"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:67
 msgctxt "components.ShortcutHelp.0b8e0c"
 msgid "Focus next task"
-msgstr "Focus task selanjutnya"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:34
 msgctxt "components.ShortcutHelp.44c3b9"
 msgid "Previous day"
-msgstr "Kemarin"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:69
 msgctxt "components.ShortcutHelp.49f4fc"
 msgid "shift"
-msgstr "shift"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:33
 msgctxt "components.ShortcutHelp.5451c7"
 msgid "left"
-msgstr "kiri"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:36
 msgctxt "components.ShortcutHelp.55c972"
 msgid "right"
-msgstr "kanan"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:32
 msgctxt "components.ShortcutHelp.723949"
 msgid "Server clock"
-msgstr "Waktu server"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:59
 msgctxt "components.ShortcutHelp.755c57"
 msgid "Task scheduler"
-msgstr "Task scheduler"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:61
 msgctxt "components.ShortcutHelp.7acb8d"
 msgid "Search tasks"
-msgstr "Cari tasks"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:73
 msgctxt "components.ShortcutHelp.927523"
 msgid "Mark as done"
-msgstr "Tandai sebagai selesai"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:44
 msgctxt "components.ShortcutHelp.96d48b"
 msgid "Resin calculator"
-msgstr "Kalkulator resin"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:79
 msgctxt "components.ShortcutHelp.9f8054"
 msgid "Show keyboard shortcuts"
-msgstr "Tampilkan pintasan keyboard"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:46
 msgctxt "components.ShortcutHelp.b13795"
 msgid "Subtract {values}"
-msgstr "Kurangi {values}"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:25
 msgctxt "components.ShortcutHelp.bf360f"
 msgid "Keyboard shortcuts"
-msgstr "Pintasan keyboard"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:64
 msgctxt "components.ShortcutHelp.c03f14"
 msgid "Toggle list overlay"
-msgstr "Tampilkan overlay list"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:39
 msgctxt "components.ShortcutHelp.c886e7"
 msgid "esc"
-msgstr "esc"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:37
 msgctxt "components.ShortcutHelp.dd708b"
 msgid "Next day"
-msgstr "Besok"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:70
 msgctxt "components.ShortcutHelp.efcb6e"
 msgid "Focus previous task"
-msgstr "Focus task sebelumnya"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:40
 msgctxt "components.ShortcutHelp.fcc2fc"
 msgid "Reset offset"
-msgstr "Reset offset"
+msgstr ""
 
 #: components/ShortcutHelp.tsx:77
 msgctxt "components.ShortcutHelp.fd59c3"
 msgid "Other"
-msgstr "Lainnya"
+msgstr ""
 
 #: components/Statistics/InfoText.tsx:22
 msgctxt "components.Statistics.InfoText.22e144"
 msgid "Duration"
-msgstr "Durasi"
+msgstr ""
 
 #: components/Statistics/InfoText.tsx:19
 msgctxt "components.Statistics.InfoText.be142a"
 msgid "Range"
-msgstr "Waktu"
+msgstr ""
 
 #: components/Statistics/ResetButton.tsx:34
 msgctxt "components.Statistics.ResetButton.243268"
 msgid "This action cannot be undone."
-msgstr "Aksi ini tidak bisa dikembalikan."
+msgstr ""
 
 #: components/Statistics/ResetButton.tsx:46
 msgctxt "components.Statistics.ResetButton.8e6fec"
 msgid "Reset"
-msgstr "Reset"
+msgstr ""
 
 #: components/Statistics/ResetButton.tsx:50
 msgctxt "components.Statistics.ResetButton.e3b158"
 msgid "Cancel"
-msgstr "Batal"
+msgstr ""
 
 #: components/Statistics/ResinStats.tsx:84
 msgctxt "components.Statistics.ResinStats.101bad"
 msgid "{percent}% efficiency"
-msgstr "Efisiensi {percent}%"
+msgstr ""
 
 #: components/Statistics/ResinStats.tsx:79
 msgctxt "components.Statistics.ResinStats.309da3"
 msgid "Total"
-msgstr "Total"
+msgstr ""
 
 #: components/Statistics/ResinStats.tsx:102
 msgctxt "components.Statistics.ResinStats.6b30d3"
 msgid "Peak"
-msgstr "Maksimum"
+msgstr ""
 
 #: components/Statistics/ResinStats.tsx:107
 msgctxt "components.Statistics.ResinStats.76ed65"
 msgid "Never"
-msgstr "Tidak pernah"
+msgstr ""
 
 #: components/Statistics/ResinStats.tsx:15
 msgctxt "components.Statistics.ResinStats.99ed7d"
 msgid "Resins spent"
-msgstr "Resin dihabiskan"
+msgstr ""
 
 #: components/Statistics/ResinStats.tsx:63
 msgctxt "components.Statistics.ResinStats.cd681b"
 msgid "Today"
-msgstr "Hari ini"
+msgstr ""
 
 #: components/Statistics/TaskStats.tsx:76
 msgctxt "components.Statistics.TaskStats.309da3"
 msgid "Total"
-msgstr "Total"
+msgstr ""
 
 #: components/Statistics/TaskStats.tsx:92
 msgctxt "components.Statistics.TaskStats.6b30d3"
 msgid "Peak"
-msgstr "Maksimum"
+msgstr ""
 
 #: components/Statistics/TaskStats.tsx:97
 msgctxt "components.Statistics.TaskStats.76ed65"
 msgid "Never"
-msgstr "Tidak pernah"
+msgstr ""
 
 #: components/Statistics/TaskStats.tsx:14
 msgctxt "components.Statistics.TaskStats.c90f7d"
 msgid "Tasks done"
-msgstr "Tasks selesai"
+msgstr ""
 
 #: components/Statistics/TaskStats.tsx:61
 msgctxt "components.Statistics.TaskStats.cd681b"
 msgid "Today"
-msgstr "Hari ini"
+msgstr ""
 
 #: components/TaskListCard/DoneButton.tsx:24
 msgctxt "components.TaskListCard.DoneButton.927523"
 msgid "Mark as done"
-msgstr "Tandai sebagai selesai"
+msgstr ""
 
 #: components/TaskSearchModal.tsx:34
 msgctxt "components.TaskSearchModal.4ae60b"
 msgid "Search tasks…"
-msgstr "Cari tasks…"
+msgstr ""
 
 #: db/artifacts.ts:25
 msgctxt "db.artifacts.05500a"
@@ -3131,7 +3119,7 @@ msgstr ""
 #: pages/customize/artifacts/[name].tsx:78
 msgctxt "pages.customize.artifacts.[name].f87fc3"
 msgid "No such artifact."
-msgstr "Tidak ada artefak demikian."
+msgstr ""
 
 #: pages/customize/characters/[name].tsx:59
 msgctxt "pages.customize.characters.[name].8c8c3a"
@@ -3141,7 +3129,7 @@ msgstr ""
 #: pages/customize/characters/[name].tsx:107
 msgctxt "pages.customize.characters.[name].9bd832"
 msgid "No such character."
-msgstr "Tidak ada karakter demikian."
+msgstr ""
 
 #: pages/customize/characters/[name].tsx:62
 msgctxt "pages.customize.characters.[name].ddaaad"
@@ -3153,32 +3141,32 @@ msgstr ""
 #: pages/customize/weapons/[name].tsx:79
 msgctxt "pages.customize.weapons.[name].6a78b3"
 msgid "No such weapon."
-msgstr "Tidak ada senjata demikian."
+msgstr ""
 
 #: pages/home/notifications/queue.tsx:45
 msgctxt "pages.home.notifications.queue.67684b"
 msgid "Notification queue"
-msgstr "Antrian notifikasi"
+msgstr ""
 
 #: pages/home/notifications/queue.tsx:113
 msgctxt "pages.home.notifications.queue.76b25d"
 msgid "Send now"
-msgstr "Kirim sekarang"
+msgstr ""
 
 #: pages/home/notifications/queue.tsx:129
 msgctxt "pages.home.notifications.queue.87f26c"
 msgid "Dequeue"
-msgstr "Keluar dari antrian"
+msgstr ""
 
 #: pages/home/notifications/queue.tsx:87
 msgctxt "pages.home.notifications.queue.c5b4ec"
 msgid "Scheduled at {time} in {duration}."
-msgstr "Terjadwal pada {time} in {duration}."
+msgstr ""
 
 #: pages/home/notifications/queue.tsx:54
 msgctxt "pages.home.notifications.queue.fcf2e1"
 msgid "There are no notifications in queue."
-msgstr "Tidak ada notifikasi di antrian notifikasi."
+msgstr ""
 
 #: pages/index.tsx:100
 msgctxt "pages.index.0b66ba"
@@ -3186,8 +3174,6 @@ msgid ""
 "Tracks open world resources and reminds you as soon as they respawn. There "
 "is no limit to the number of pins."
 msgstr ""
-"Melacak resource open-world dan mengingatkan Anda ketika mereka sudah "
-"respawn. Tidak ada batasan dari jumlah tanda."
 
 #: pages/index.tsx:87
 msgctxt "pages.index.0ed193"
@@ -3195,8 +3181,6 @@ msgid ""
 "Tracks your resins and estimates when it will recharge without having to "
 "open the game."
 msgstr ""
-"Melacak resin dan mengestimasi kapan resin akan penuh tanpa harus membuka "
-"game."
 
 #: pages/index.tsx:127
 msgctxt "pages.index.37b47a"
@@ -3204,13 +3188,11 @@ msgid ""
 "Signing in will enable synchronization across multiple devices. If you do "
 "not already have an account, it will be created automatically."
 msgstr ""
-"Masuk atau membuat akun akan mengaktifkan sinkronisasi dalam gawai yang "
-"berbeda. Apabila Anda tidak memiliki akun, akan dibuat secara otomatis."
 
 #: pages/index.tsx:124
 msgctxt "pages.index.49026d"
 msgid "Sign in"
-msgstr "Masuk"
+msgstr ""
 
 #: pages/index.tsx:77
 msgctxt "pages.index.657a74"
@@ -3220,17 +3202,17 @@ msgstr ""
 #: pages/index.tsx:97
 msgctxt "pages.index.755c57"
 msgid "Task scheduler"
-msgstr "Task scheduler"
+msgstr ""
 
 #: pages/index.tsx:110
 msgctxt "pages.index.79dc9c"
 msgid "Domain view"
-msgstr "Tampilan domain"
+msgstr ""
 
 #: pages/index.tsx:84
 msgctxt "pages.index.96d48b"
 msgid "Resin calculator"
-msgstr "Kalkulator resin"
+msgstr ""
 
 #: pages/index.tsx:113
 msgctxt "pages.index.a92dae"
@@ -3238,18 +3220,16 @@ msgid ""
 "Shows which domains can be cleared for ascension materials and artifacts for "
 "the day."
 msgstr ""
-"Menunjukkan domain mana yang dapat dilaksanakan untuk mendapatkan ascension "
-"material dan artefak untuk hari ini."
 
 #: pages/index.tsx:70
 msgctxt "pages.index.c0ef70"
 msgid "GitHub"
-msgstr "GitHub"
+msgstr ""
 
 #: pages/index.tsx:48
 msgctxt "pages.index.e3e15c"
 msgid "Genshin Schedule"
-msgstr "Genshin Schedule"
+msgstr ""
 
 #: pages/index.tsx:51
 msgctxt "pages.index.fcffbd"
@@ -3257,127 +3237,108 @@ msgid ""
 "Genshin Schedule is a website to help you keep track of time-related game "
 "activities in Genshin Impact."
 msgstr ""
-"Genshin Schedule adalah sebuah aplikasi web yang digunakan untuk membantu "
-"Anda melacak aktifitas yang berkaitan dengan waktu di Genshin Impact."
 
 #: utils/time.tsx:202
 msgctxt "utils.time.19685b"
 msgid "Millisecond"
-msgstr "Milidetik"
+msgstr ""
 
 #: utils/time.tsx:169
 msgctxt "utils.time.1eb30e"
 msgid "{value, plural, one {# millisecond} other {# milliseconds}}"
-msgstr "{value, plural, one {# milidetik} other {# milidetik}}"
+msgstr ""
 
 #: utils/time.tsx:190
 msgctxt "utils.time.205a35"
 msgid "Year"
-msgstr "Tahun"
+msgstr ""
 
 #: utils/time.tsx:185
 msgctxt "utils.time.42b8a1"
 msgid "Friday"
-msgstr "Jumat"
+msgstr ""
 
 #: utils/time.tsx:159
 msgctxt "utils.time.4ee319"
 msgid "{value, plural, one {# week} other {# weeks}}"
-msgstr "{value, plural, one {# minggu} other {# minggu}}"
+msgstr ""
 
 #: utils/time.tsx:157
 msgctxt "utils.time.577d30"
 msgid "{value, plural, one {# year} other {# years}}"
-msgstr "{value, plural, one {# tahun} other {# tahun}}"
+msgstr ""
 
 #: utils/time.tsx:187
 msgctxt "utils.time.58c347"
 msgid "Saturday"
-msgstr "Sabtu"
+msgstr ""
 
 #: utils/time.tsx:179
 msgctxt "utils.time.600818"
 msgid "Tuesday"
-msgstr "Selasa"
+msgstr ""
 
 #: utils/time.tsx:177
 msgctxt "utils.time.6b332c"
 msgid "Monday"
-msgstr "Senin"
+msgstr ""
 
 #: utils/time.tsx:163
 msgctxt "utils.time.6c080b"
 msgid "{value, plural, one {# hour} other {# hours}}"
-msgstr "{value, plural, one {# jam} other {# jam}}"
+msgstr ""
 
 #: utils/time.tsx:196
 msgctxt "utils.time.6f5d56"
 msgid "Hour"
-msgstr "Jam"
+msgstr ""
 
 #: utils/time.tsx:181
 msgctxt "utils.time.9716e5"
 msgid "Wednesday"
-msgstr "Rabu"
+msgstr ""
 
 #: utils/time.tsx:175
 msgctxt "utils.time.989474"
 msgid "Sunday"
-msgstr "Minggu"
+msgstr ""
 
 #: utils/time.tsx:161
 msgctxt "utils.time.9febbe"
 msgid "{value, plural, one {# day} other {# days}}"
-msgstr "{value, plural, one {# hari} other {# hari}}"
+msgstr ""
 
 #: utils/time.tsx:183
 msgctxt "utils.time.a80854"
 msgid "Thursday"
-msgstr "Kamis"
+msgstr ""
 
 #: utils/time.tsx:192
 msgctxt "utils.time.b1dda2"
 msgid "Week"
-msgstr "Minggu"
+msgstr ""
 
 #: utils/time.tsx:200
 msgctxt "utils.time.b71604"
 msgid "Second"
-msgstr "Detik"
+msgstr ""
 
 #: utils/time.tsx:165
 msgctxt "utils.time.c32d7f"
 msgid "{value, plural, one {# minute} other {# minutes}}"
-msgstr "{value, plural, one {# menit} other {# menit}}"
+msgstr ""
 
 #: utils/time.tsx:167
 msgctxt "utils.time.c67dcc"
 msgid "{value, plural, one {# second} other {# seconds}}"
-msgstr "{value, plural, one {# detik} other {# detik}}"
+msgstr ""
 
 #: utils/time.tsx:198
 msgctxt "utils.time.c743e7"
 msgid "Minute"
-msgstr "Menit"
+msgstr ""
 
 #: utils/time.tsx:194
 msgctxt "utils.time.ee95eb"
 msgid "Day"
-msgstr "Hari"
-
-#~ msgctxt "components.Home.DomainView.index.41dc3d"
-#~ msgid "No domains for today. Maybe try some {link}?"
-#~ msgstr "Tidak ada domain untuk hari ini. Mungkin mencoba {link}?"
-
-#~ msgctxt "components.Home.Tasks.index.d6861b"
-#~ msgid "No tasks for now. Create one by clicking on the map."
-#~ msgstr ""
-#~ "Tidak ada task untuk sekarang. Buatlah sebuah task dengan mengklik peta."
-
-#~ msgctxt "components.Home.RealmCurrency.index.613cf4"
-#~ msgid "Realm currency calculator"
-#~ msgstr "Kalkulator realm currency"
-
-#~ msgctxt "components.Home.Resin.index.96d48b"
-#~ msgid "Resin calculator"
-#~ msgstr "Kalkulator resin"
+msgstr ""
