@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
-"PO-Revision-Date: 2021-07-04 03:54+0000\n"
-"Last-Translator: phos <phosphene47@chiya.dev>\n"
+"PO-Revision-Date: 2021-07-04 07:22+0000\n"
+"Last-Translator: Golden_Water <2439577268@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -40,10 +40,9 @@ msgid "Never reuse your miHoYo password on Genshin-related websites."
 msgstr "切勿在与原神有关的网站上使用你的 米哈游 账号密码."
 
 #: components/Auth/UserSignIn.tsx:133
-#, fuzzy
 msgctxt "components.Auth.UserSignIn.93eb72"
 msgid "All data will be stored locally on the browser."
-msgstr "所有数据都将本地的存储在浏览器中."
+msgstr "所有数据都将存储在本地浏览器中."
 
 #: components/Auth/UserSignIn.tsx:97
 msgctxt "components.Auth.UserSignIn.bc7fa7"
@@ -138,7 +137,7 @@ msgstr "计划中的秘境将会在当天能获取指定物品时显示."
 #: components/Customize/CharacterList/Icon.tsx:60
 msgctxt "components.Customize.CharacterList.Icon.e637aa"
 msgid "Unknown"
-msgstr ""
+msgstr "未知"
 
 #: components/Customize/CharacterList/index.tsx:16
 msgctxt "components.Customize.CharacterList.index.4e372c"
@@ -539,7 +538,7 @@ msgstr "地脉之花"
 #: components/Home/DomainView/index.tsx:257
 msgctxt "components.Home.DomainView.index.4d7a4e"
 msgid "Customize"
-msgstr ""
+msgstr "自定义"
 
 #: components/Home/DomainView/index.tsx:227
 msgctxt "components.Home.DomainView.index.c49d9f"
@@ -549,12 +548,12 @@ msgstr "今日秘境"
 #: components/Home/DomainView/index.tsx:248
 msgctxt "components.Home.DomainView.index.e73ff2"
 msgid "No domains for today."
-msgstr ""
+msgstr "今天没有秘境需要挑战."
 
 #: components/Home/DomainView/index.tsx:251
 msgctxt "components.Home.DomainView.index.f52777"
 msgid "Go to {customize} to add domains, or maybe try some {link}?"
-msgstr ""
+msgstr "前往 {customize} 以添加秘境, 或者可以试试 {link}?"
 
 #: components/Home/RealmCurrency/ClearButton.tsx:23
 msgctxt "components.Home.RealmCurrency.ClearButton.fc60a8"
@@ -564,7 +563,7 @@ msgstr "清空"
 #: components/Home/RealmCurrency/EstimatorByCurrency.tsx:48
 msgctxt "components.Home.RealmCurrency.EstimatorByCurrency.5921a5"
 msgid "{value} in {time}"
-msgstr ""
+msgstr "{value} 需 {time}"
 
 #: components/Home/RealmCurrency/EstimatorByTime.tsx:52
 msgctxt "components.Home.RealmCurrency.EstimatorByTime.f0f932"
@@ -600,12 +599,12 @@ msgstr "洞天宝钱计算器"
 #: components/Home/Resin/EstimatorByNotifyMark.tsx:18
 msgctxt "components.Home.Resin.EstimatorByNotifyMark.5921a5"
 msgid "{value} in {time}"
-msgstr ""
+msgstr "{value} 需 {time}"
 
 #: components/Home/Resin/EstimatorByResin.tsx:38
 msgctxt "components.Home.Resin.EstimatorByResin.5921a5"
 msgid "{value} in {time}"
-msgstr ""
+msgstr "{value} 需 {time}"
 
 #: components/Home/Resin/EstimatorByTime.tsx:48
 msgctxt "components.Home.Resin.EstimatorByTime.f0f932"
@@ -3180,7 +3179,7 @@ msgstr ""
 #: pages/home/notifications/queue.tsx:54
 msgctxt "pages.home.notifications.queue.fcf2e1"
 msgid "There are no notifications in queue."
-msgstr "通知队列为空"
+msgstr "通知队列为空."
 
 #: pages/index.tsx:100
 msgctxt "pages.index.0b66ba"
@@ -3248,12 +3247,11 @@ msgid "Genshin Schedule"
 msgstr ""
 
 #: pages/index.tsx:51
-#, fuzzy
 msgctxt "pages.index.fcffbd"
 msgid ""
 "Genshin Schedule is a website to help you keep track of time-related game "
 "activities in Genshin Impact."
-msgstr "Genshin Schedule 是一个帮你跟踪原神中时间相关的游戏活动的网站"
+msgstr "Genshin Schedule 是一个帮你跟踪原神中时间相关的游戏活动的网站."
 
 #: utils/time.tsx:202
 msgctxt "utils.time.19685b"
