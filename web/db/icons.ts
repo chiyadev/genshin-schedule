@@ -49,13 +49,13 @@ addIcons(registerMessage({ defaultMessage: "Weapon enhancement material" }), [
 ]);
 
 addIcons(registerMessage({ defaultMessage: "Character ascension material" }), [
-  { name: registerMessage({ defaultMessage: "Agnidus Agate Sliver" }) },
-  { name: registerMessage({ defaultMessage: "Brilliant Diamond Sliver" }) },
-  { name: registerMessage({ defaultMessage: "Prithiva Topaz Sliver" }) },
-  { name: registerMessage({ defaultMessage: "Shivada Jade Sliver" }) },
-  { name: registerMessage({ defaultMessage: "Vajrada Amethyst Sliver" }) },
-  { name: registerMessage({ defaultMessage: "Varunada Lazurite Sliver" }) },
-  { name: registerMessage({ defaultMessage: "Vayuda Turquoise Sliver" }) },
+  { name: registerMessage({ defaultMessage: "Agnidus Agate Silver" }) },
+  { name: registerMessage({ defaultMessage: "Brilliant Diamond Silver" }) },
+  { name: registerMessage({ defaultMessage: "Prithiva Topaz Silver" }) },
+  { name: registerMessage({ defaultMessage: "Shivada Jade Silver" }) },
+  { name: registerMessage({ defaultMessage: "Vajrada Amethyst Silver" }) },
+  { name: registerMessage({ defaultMessage: "Varunada Lazurite Silver" }) },
+  { name: registerMessage({ defaultMessage: "Vayuda Turquoise Silver" }) },
 ]);
 
 addIcons(registerMessage({ defaultMessage: "Common ascension material" }), [

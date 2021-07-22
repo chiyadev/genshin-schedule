@@ -1,9 +1,8 @@
 import React, { memo, ReactNode } from "react";
-import { Button, ButtonGroup, useColorModeValue } from "@chakra-ui/react";
+import { Button, ButtonGroup, chakra, Icon, useColorModeValue } from "@chakra-ui/react";
 import { Tooltip } from "@chakra-ui/tooltip";
 import { trackEvent } from "../../../utils/umami";
 import { Config, useConfig } from "../../../utils/config";
-import { arrayToggle } from "../../../utils";
 import {
   BlackArtifact,
   BlackCharacter,
@@ -13,10 +12,17 @@ import {
   WhiteWeapon,
 } from "../../../assets";
 import { FormattedMessage } from "react-intl";
+import { FaCalendar } from "react-icons/fa";
 
 const FilterButtons = () => {
   return (
     <ButtonGroup isAttached>
+      <FilterButton
+        type="today"
+        label={<FormattedMessage defaultMessage="Hide always available" />}
+        icon={FaCalendar}
+      />
+
       <FilterButton
         type="character"
         label={<FormattedMessage defaultMessage="Characters" />}
@@ -42,29 +48,35 @@ const FilterButton = ({
   type,
   label,
   image,
+  icon,
 }: {
-  type: Config["domainFilters"][0];
+  type: Config["domainFilter"];
   label: ReactNode;
-  image: string;
+  image?: string;
+  icon?: any;
 }) => {
-  const [filters, setFilters] = useConfig("domainFilters");
+  const [filter, setFilter] = useConfig("domainFilter");
 
   return (
-    <Tooltip label={label}>
+    <Tooltip label={label} closeOnClick={false}>
       <Button
         as="button"
         variant="ghost"
         w={8}
         h={8}
-        p={1}
+        p={0}
         minW={0}
-        opacity={filters.includes(type) ? 1 : 0.3}
         onClick={() => {
-          setFilters((filters) => arrayToggle(filters, type));
-          !filters.includes(type) && trackEvent("domainView", `filter${label}`);
+          if (filter === type) {
+            setFilter("all");
+          } else {
+            setFilter(type);
+            trackEvent("domainView", `filter${label}`);
+          }
         }}
       >
-        <img src={image} />
+        {icon && <Icon as={icon} transition=".2s" opacity={filter === type ? 1 : 0.3} />}
+        {image && <chakra.img src={image} w={5} transition=".2s" opacity={filter === type ? 1 : 0.3} />}
       </Button>
     </Tooltip>
   );

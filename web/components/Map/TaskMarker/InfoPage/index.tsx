@@ -43,13 +43,13 @@ const InfoPage = ({
       <HStack spacing={2}>
         <chakra.img
           alt={task.icon}
+          title={formatMessage({ defaultMessage: "Change icon" })}
           src={getAssetByName(task.icon)}
           w={8}
           h={8}
           cursor="pointer"
           objectFit="contain"
           onClick={() => setPage("icon")}
-          title={formatMessage({ defaultMessage: "Change icon" })}
         />
 
         <Input

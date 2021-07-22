@@ -34,6 +34,7 @@ function buildChangelog() {
       </Alert>
       <ChangelogItem>Upgraded all dependencies to latest versions.</ChangelogItem>
       <ChangelogItem>Added 2.0 Inazuma characters, weapons and artifacts.</ChangelogItem>
+      <ChangelogItem>Added normal boss drops and character ascension materials to the database.</ChangelogItem>
       <ChangelogItem>Added more character backgrounds.</ChangelogItem>
       <ChangelogItem>Improved some more parts of the website UI.</ChangelogItem>
     </ChangelogSection>,

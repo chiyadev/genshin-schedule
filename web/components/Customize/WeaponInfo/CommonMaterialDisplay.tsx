@@ -15,7 +15,14 @@ const CommonMaterialDisplay = ({ weapon, material }: { weapon: Weapon; material:
   return (
     <VStack align="start" spacing={4}>
       <HStack>
-        <chakra.img alt={material.item} src={getAssetByName(material.item)} w={10} h={10} objectFit="contain" />
+        <chakra.img
+          alt={material.item}
+          title={material.item}
+          src={getAssetByName(material.item)}
+          w={10}
+          h={10}
+          objectFit="contain"
+        />
 
         <div>
           <chakra.div fontSize="lg">

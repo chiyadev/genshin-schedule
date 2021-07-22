@@ -43,6 +43,7 @@ const Item = ({
       <HStack spacing={2} bg={task.highlight ? highlightColor : undefined} borderRadius="sm">
         <chakra.img
           alt={task.icon}
+          title={formatMessage({ defaultMessage: "Highlight task" })}
           src={getAssetByName(task.icon)}
           w={compact ? 6 : 10}
           h={compact ? 6 : 10}
@@ -57,7 +58,6 @@ const Item = ({
 
             trackEvent("taskList", "taskHighlight");
           }}
-          title={formatMessage({ defaultMessage: "Highlight task" })}
         />
 
         {compact ? (

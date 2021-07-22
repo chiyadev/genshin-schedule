@@ -1,12 +1,19 @@
-import React, { memo } from "react";
+import React, { memo, useRef } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useConfig } from "../../utils/config";
 import { chakra, Icon, Input, InputGroup, InputLeftElement, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import { FormattedMessage, useIntl } from "react-intl";
+import { useHotkeys } from "react-hotkeys-hook";
 
 const Search = () => {
   const { formatMessage } = useIntl();
   const [value, setValue] = useConfig("customizeQuery");
+  const ref = useRef<HTMLInputElement>(null);
+
+  useHotkeys("f", (e) => {
+    ref.current?.select();
+    e.preventDefault();
+  });
 
   return (
     <VStack align="stretch" spacing={2}>
@@ -16,6 +23,7 @@ const Search = () => {
         </InputLeftElement>
 
         <Input
+          ref={ref}
           variant="filled"
           value={value}
           onChange={({ currentTarget: { value } }) => setValue(value)}

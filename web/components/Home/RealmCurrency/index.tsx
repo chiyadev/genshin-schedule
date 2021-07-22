@@ -40,6 +40,7 @@ const RealmCurrency = () => {
         <HStack spacing={2}>
           <chakra.img
             alt="Realm Currency"
+            title={formatMessage({ defaultMessage: "Switch estimation mode" })}
             src={RealmCurrencyIcon.src}
             cursor={current < cap ? "pointer" : undefined}
             onClick={() => {
@@ -56,7 +57,6 @@ const RealmCurrency = () => {
             w={10}
             h={10}
             transform="scale(1.2)"
-            title={formatMessage({ defaultMessage: "Switch estimation mode" })}
           />
 
           <chakra.div fontSize="md">

@@ -11,6 +11,7 @@ import CommonMaterialDisplay from "../../../components/Customize/WeaponInfo/Comm
 import { Weapons, WeaponWiki } from "../../../db/weapons";
 import NoteInput from "../../../components/Customize/WeaponInfo/NoteInput";
 import { FormattedMessage } from "react-intl";
+import { DomainOfForgery } from "../../../db/domainCategories";
 
 type Props = {
   data: WebData | null;
@@ -52,7 +53,14 @@ const WeaponInfo = ({ data, name }: Props) => {
         {weapon ? (
           <WhiteCard divide>
             <HStack spacing={4}>
-              <chakra.img alt={weapon.name} src={getAssetByName(weapon.name)} w={16} h={16} objectFit="cover" />
+              <chakra.img
+                alt={weapon.name}
+                title={weapon.name}
+                src={getAssetByName(weapon.name)}
+                w={16}
+                h={16}
+                objectFit="cover"
+              />
 
               <div>
                 <chakra.div fontSize="xl" fontWeight="bold">
@@ -61,7 +69,7 @@ const WeaponInfo = ({ data, name }: Props) => {
                   </Link>
                 </chakra.div>
 
-                <Badge colorScheme="blue">
+                <Badge colorScheme={DomainOfForgery.colorHint}>
                   <Link href={WeaponWiki} isExternal>
                     {weapon.type}
                   </Link>

@@ -17,7 +17,7 @@ for (const region of Regions) {
           ArtifactSearch.add(region.name, artifact);
           ArtifactSearch.add(domain.name, artifact);
 
-          drops.name && ArtifactSearch.add(drops.name, artifact);
+          //drops.name && ArtifactSearch.add(drops.name, artifact);
           drops.days.forEach((day) => ArtifactSearch.add(day, artifact));
         }
       }

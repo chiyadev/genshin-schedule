@@ -12,7 +12,7 @@ const MaterialDisplay = ({ weapon, material }: { weapon: Weapon; material: Weapo
   return (
     <VStack align="start" spacing={4}>
       <HStack spacing={2}>
-        <chakra.img alt={material.item} src={getAssetByName(material.item)} w={10} h={10} />
+        <chakra.img alt={material.item} title={material.item} src={getAssetByName(material.item)} w={10} h={10} />
 
         <div>
           <chakra.div fontSize="lg">

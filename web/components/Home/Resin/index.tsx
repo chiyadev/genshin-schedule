@@ -40,6 +40,7 @@ const Resin = () => {
         <HStack spacing={2}>
           <chakra.img
             alt="Resin"
+            title={formatMessage({ defaultMessage: "Switch estimation mode" })}
             src={ResinIcon.src}
             w={10}
             h={10}
@@ -56,7 +57,6 @@ const Resin = () => {
 
               trackEvent("resin", "estimateSwitch");
             }}
-            title={formatMessage({ defaultMessage: "Switch estimation mode" })}
           />
 
           <AutoSizeInput

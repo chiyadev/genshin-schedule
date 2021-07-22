@@ -6,8 +6,8 @@ import Item from "./Item";
 const ArtifactList = ({ artifacts }: { artifacts: Artifact[] }) => {
   return (
     <VStack align="start" spacing={2} pl={4}>
-      {artifacts.map(({ name }) => (
-        <Item key={name} path="artifacts" name={name} />
+      {artifacts.map((artifact) => (
+        <Item key={artifact.name} {...artifact} />
       ))}
     </VStack>
   );

@@ -11,6 +11,7 @@ import NoteInput from "../../../components/Customize/ArtifactInfo/NoteInput";
 import Toggle from "../../../components/Customize/ArtifactInfo/Toggle";
 import DropLabel from "../../../components/DropLabel";
 import { FormattedMessage } from "react-intl";
+import { DomainOfBlessing } from "../../../db/domainCategories";
 
 type Props = {
   data: WebData | null;
@@ -52,7 +53,14 @@ const ArtifactInfo = ({ data, name }: Props) => {
         {artifact ? (
           <WhiteCard divide>
             <HStack spacing={4}>
-              <chakra.img alt={artifact.name} src={getAssetByName(artifact.name)} w={16} h={16} objectFit="contain" />
+              <chakra.img
+                alt={artifact.name}
+                title={artifact.name}
+                src={getAssetByName(artifact.name)}
+                w={16}
+                h={16}
+                objectFit="contain"
+              />
 
               <div>
                 <chakra.div fontSize="xl" fontWeight="bold">
@@ -61,7 +69,7 @@ const ArtifactInfo = ({ data, name }: Props) => {
                   </Link>
                 </chakra.div>
 
-                <Badge colorScheme="yellow">
+                <Badge colorScheme={DomainOfBlessing.colorHint}>
                   <Link href={ArtifactWiki} isExternal>
                     {artifact.type}
                   </Link>

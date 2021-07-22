@@ -1,6 +1,6 @@
 import { registerMessage } from "../utils";
 
-export const WeaponMaterialWiki = "https://genshin-impact.fandom.com/wiki/Weapon_Ascension_Material";
+export const WeaponMaterialWiki = "https://genshin-impact.fandom.com/wiki/Weapon_Ascension_Materials";
 
 export type WeaponMaterial = {
   type: "Weapon Ascension Material";

@@ -4,14 +4,23 @@ import { ScheduledDomain } from "./index";
 import MaterialList from "./MaterialList";
 import ArtifactList from "./ArtifactList";
 import { Badge, chakra, HStack, Link } from "@chakra-ui/react";
-import { Domain } from "../../../assets";
+import { getAssetByName } from "../../../assets";
 import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
 
-const DomainDisplay = ({ domain, region, category, talentMaterials, weaponMaterials, artifacts }: ScheduledDomain) => {
+const DomainDisplay = ({ domain, region, category, materials, artifacts }: ScheduledDomain) => {
   return (
     <WhiteCard divide>
       <HStack spacing={2}>
-        <chakra.img alt="Domain" src={Domain.src} w={10} h={10} objectFit="contain" />
+        {region && (
+          <chakra.img
+            alt={region.name}
+            title={region.name}
+            src={getAssetByName(region.name)}
+            w={10}
+            h={10}
+            objectFit="contain"
+          />
+        )}
 
         <div>
           <chakra.div fontSize="xl" fontWeight="bold">
@@ -42,18 +51,10 @@ const DomainDisplay = ({ domain, region, category, talentMaterials, weaponMateri
 
       {useMemo(
         () =>
-          talentMaterials.map(({ material, characters }) => (
-            <MaterialList key={material.name} material={material} items={characters} path="characters" />
+          materials.map(({ material, parents }) => (
+            <MaterialList key={material.name} material={material} linked={parents} />
           )),
-        [talentMaterials]
-      )}
-
-      {useMemo(
-        () =>
-          weaponMaterials.map(({ material, weapons }) => (
-            <MaterialList key={material.name} material={material} items={weapons} path="weapons" />
-          )),
-        [weaponMaterials]
+        [materials]
       )}
 
       {useMemo(() => !!artifacts.length && <ArtifactList artifacts={artifacts} />, [artifacts])}

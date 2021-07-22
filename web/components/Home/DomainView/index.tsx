@@ -9,6 +9,7 @@ import {
   DomainOfBlessing,
   DomainOfForgery,
   DomainOfMastery,
+  NormalBoss,
   Trounce,
 } from "../../../db/domainCategories";
 import { DomainDropSet, DomainDropSets } from "../../../db/domainDropSets";
@@ -24,18 +25,15 @@ import FilterButtons from "./FilterButtons";
 import styles from "./index.module.css";
 import { FormattedMessage } from "react-intl";
 import NextLink from "next/link";
+import { CharacterMaterial } from "../../../db/characterMaterials";
 
 export type ScheduledDomain = {
   domain: Domain;
   region?: Region;
   category?: DomainCategory;
-  talentMaterials: {
-    material: TalentMaterial;
-    characters: Character[];
-  }[];
-  weaponMaterials: {
-    material: WeaponMaterial;
-    weapons: Weapon[];
+  materials: {
+    material: CharacterMaterial | TalentMaterial | WeaponMaterial;
+    parents: (Character | Weapon)[];
   }[];
   artifacts: Artifact[];
 };
@@ -44,11 +42,13 @@ const DomainView = () => {
   const time = useServerTime(60000);
   const today = Weekdays[(6 + getServerResetTime(time).weekday) % 7];
 
-  const [filters] = useConfig("domainFilters");
+  const [filter] = useConfig("domainFilter");
   const [characters] = useConfig("characters");
+  const [charactersWeekly] = useConfig("charactersWeekly");
+  const [charactersGem] = useConfig("charactersGem");
+  const [charactersNormalBoss] = useConfig("charactersNormalBoss");
   const [weapons] = useConfig("weapons");
   const [artifacts] = useConfig("artifacts");
-  const [charactersWeekly] = useConfig("charactersWeekly");
 
   // build schedule
   const domains = useMemo(() => {
@@ -66,8 +66,7 @@ const DomainView = () => {
             domain,
             region,
             category,
-            talentMaterials: [],
-            weaponMaterials: [],
+            materials: [],
             artifacts: [],
           })
         );
@@ -84,121 +83,98 @@ const DomainView = () => {
       }
     };
 
-    const dropSets = DomainDropSets.filter((drops) => drops.days.includes(today));
+    for (const drops of DomainDropSets.filter((drops) => drops.days.includes(today))) {
+      if (filter === "today" && drops.days.length === 7) {
+        continue;
+      }
 
-    for (const drops of dropSets) {
-      if (!filters.length || filters.includes("character")) {
-        for (const characterName of characters) {
-          const character = Characters.find((char) => char.name === characterName);
+      const addMaterial = (
+        parent: ScheduledDomain["materials"][0]["parents"][0],
+        material: ScheduledDomain["materials"][0]["material"]
+      ) => {
+        if (drops.items.includes(material)) {
+          const domain = getDomainFromDrops(drops);
 
-          if (character) {
-            for (const material of character.talentMaterials) {
-              if (drops.items.includes(material)) {
-                const domain = getDomainFromDrops(drops);
+          if (domain) {
+            const scheduled = getScheduled(domain);
+            const group = scheduled.materials.find((x) => x.material === material);
 
-                if (domain) {
-                  const scheduled = getScheduled(domain);
-                  const group = scheduled.talentMaterials.find((x) => x.material === material);
-
-                  if (group) {
-                    group.characters.push(character);
-                  } else {
-                    scheduled.talentMaterials.push({
-                      material,
-                      characters: [character],
-                    });
-                  }
-                }
-              }
+            if (group) {
+              group.parents.push(parent);
+            } else {
+              scheduled.materials.push({
+                material,
+                parents: [parent],
+              });
             }
           }
         }
+      };
 
-        for (const characterName of charactersWeekly) {
-          const character = Characters.find((char) => char.name === characterName);
+      const addArtifact = (artifact: ScheduledDomain["artifacts"][0]) => {
+        if (drops.items.includes(artifact)) {
+          const domain = getDomainFromDrops(drops);
 
-          if (character) {
-            for (const material of character.talentMaterialWeekly) {
-              if (drops.items.includes(material)) {
-                const domain = getDomainFromDrops(drops);
-
-                if (domain) {
-                  const scheduled = getScheduled(domain);
-                  const group = scheduled.talentMaterials.find((x) => x.material === material);
-
-                  if (group) {
-                    group.characters.push(character);
-                  } else {
-                    scheduled.talentMaterials.push({
-                      material,
-                      characters: [character],
-                    });
-                  }
-                }
-              }
-            }
+          if (domain) {
+            getScheduled(domain).artifacts.push(artifact);
           }
+        }
+      };
+
+      if (filter === "all" || filter === "today" || filter === "character") {
+        for (const char of charactersWeekly) {
+          const character = Characters.find((character) => character.name === char);
+          character && addMaterial(character, character.talentMaterialWeekly);
+        }
+
+        for (const char of characters) {
+          const character = Characters.find((character) => character.name === char);
+          character && addMaterial(character, character.talentMaterial);
+        }
+
+        for (const char of charactersGem) {
+          const character = Characters.find((character) => character.name === char);
+          character && addMaterial(character, character.materials[0]);
+        }
+
+        for (const char of charactersNormalBoss) {
+          const character = Characters.find((character) => character.name === char);
+          character && addMaterial(character, character.materials[1]);
         }
       }
 
-      if (!filters.length || filters.includes("weapon")) {
-        for (const weaponName of weapons) {
-          const weapon = Weapons.find((weapon) => weapon.name === weaponName);
-
-          if (weapon && drops.items.includes(weapon.material)) {
-            const domain = getDomainFromDrops(drops);
-
-            if (domain) {
-              const scheduled = getScheduled(domain);
-              const group = scheduled.weaponMaterials.find((x) => x.material === weapon.material);
-
-              if (group) {
-                group.weapons.push(weapon);
-              } else {
-                scheduled.weaponMaterials.push({
-                  material: weapon.material,
-                  weapons: [weapon],
-                });
-              }
-            }
-          }
+      if (filter === "all" || filter === "today" || filter === "weapon") {
+        for (const weap of weapons) {
+          const weapon = Weapons.find((weapon) => weapon.name === weap);
+          weapon && addMaterial(weapon, weapon.material);
         }
       }
 
-      if (!filters.length || filters.includes("artifact")) {
-        for (const artifactName of artifacts) {
-          const artifact = Artifacts.find((artifact) => artifact.name === artifactName);
-
-          if (artifact && drops.items.includes(artifact)) {
-            const domain = getDomainFromDrops(drops);
-
-            if (domain) {
-              const scheduled = getScheduled(domain);
-
-              scheduled.artifacts.push(artifact);
-            }
-          }
+      if (filter === "all" || filter === "today" || filter === "artifact") {
+        for (const arti of artifacts) {
+          const artifact = Artifacts.find((artifact) => artifact.name === arti);
+          artifact && addArtifact(artifact);
         }
       }
     }
 
     for (const result of results) {
-      result.talentMaterials.sort((a, b) => a.material.name.localeCompare(b.material.name));
+      result.materials.sort((a, b) => a.material.name.localeCompare(b.material.name));
 
-      for (const group of result.talentMaterials) {
-        group.characters.sort((a, b) => a.name.localeCompare(b.name));
-      }
-
-      result.weaponMaterials.sort((a, b) => a.material.name.localeCompare(b.material.name));
-
-      for (const group of result.weaponMaterials) {
-        group.weapons.sort((a, b) => a.name.localeCompare(b.name));
+      for (const group of result.materials) {
+        group.parents.sort((a, b) => a.name.localeCompare(b.name));
       }
 
       result.artifacts.sort((a, b) => a.name.localeCompare(b.name));
     }
 
-    const categoryOrder: (DomainCategory | undefined)[] = [Trounce, DomainOfMastery, DomainOfForgery, DomainOfBlessing];
+    const categoryOrder: (DomainCategory | undefined)[] = [
+      Trounce,
+      DomainOfMastery,
+      DomainOfForgery,
+      DomainOfBlessing,
+      NormalBoss,
+    ];
 
     return results.sort((a, b) => {
       const category = categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category);
@@ -209,73 +185,90 @@ const DomainView = () => {
         return a.domain.name.localeCompare(b.domain.name);
       }
     });
-  }, [filters, characters, charactersWeekly, weapons, artifacts, today]);
+  }, [filter, characters, charactersWeekly, charactersGem, charactersNormalBoss, weapons, artifacts, today]);
 
-  const domainColumns = [
-    domains.filter(({ category }) => category === Trounce || category === DomainOfMastery),
-    domains.filter(({ category }) => category === DomainOfForgery || category === DomainOfBlessing),
-  ];
+  const domainColumns = useMemo(() => {
+    const results: ScheduledDomain[][] = [];
 
-  const [hidden] = useConfig("hiddenWidgets");
+    const addCategories = (...categories: DomainCategory[]) => {
+      results.push(domains.filter(({ category }) => category && categories.includes(category)));
+    };
 
-  return useMemo(
-    () => (
-      <WidgetWrapper
-        type="domains"
-        heading={
-          <span>
-            <FormattedMessage defaultMessage="Today's Domains" />
-            {!!domains.length && <span> ({domains.length})</span>}
-          </span>
-        }
-        menu={!!domains.length && <FilterButtons />}
-      >
-        {domains.length ? (
-          <Grid className={domainColumns.some((column) => !column.length) ? undefined : styles.grid} gap={4}>
-            {domainColumns.map((domains, i) => (
-              <VStack key={i} align="stretch" spacing={4}>
-                {domains.map((domain) => (
-                  <DomainDisplay key={domain.domain.name} {...domain} />
-                ))}
-              </VStack>
-            ))}
-          </Grid>
-        ) : (
-          <Alert status="info" borderRadius="md">
-            <AlertIcon />
-            <VStack align="start" spacing={0}>
-              <AlertTitle>
-                <FormattedMessage defaultMessage="No domains for today." />
-              </AlertTitle>
-              <div>
-                <FormattedMessage
-                  defaultMessage="Go to {customize} to add domains, or maybe try some {link}?"
-                  values={{
-                    customize: (
-                      <NextLink href="/customize" passHref>
-                        <Link color={useColorModeValue("blue.500", "blue.300")}>
-                          <FormattedMessage defaultMessage="Customize" />
-                        </Link>
-                      </NextLink>
-                    ),
-                    link: (
-                      <Link
-                        href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops"
-                        color={useColorModeValue("blue.500", "blue.300")}
-                        isExternal
-                      >
-                        <FormattedMessage defaultMessage="Ley Lines" />
-                      </Link>
-                    ),
-                  }}
-                />
-              </div>
+    switch (filter) {
+      case "weapon":
+        addCategories(Trounce, DomainOfForgery);
+        addCategories(NormalBoss);
+        break;
+
+      case "artifact":
+        addCategories(Trounce, DomainOfBlessing);
+        addCategories(NormalBoss);
+        break;
+
+      default:
+        addCategories(Trounce, DomainOfMastery);
+        addCategories(DomainOfForgery, DomainOfBlessing, NormalBoss);
+        break;
+    }
+
+    return results.filter((c) => c.length);
+  }, [domains, filter]);
+
+  return (
+    <WidgetWrapper
+      type="domains"
+      heading={
+        <span>
+          <FormattedMessage defaultMessage="Today's Domains" />
+          {!!domains.length && <span> ({domains.length})</span>}
+        </span>
+      }
+      menu={(!!domains.length || filter !== "all") && <FilterButtons />}
+    >
+      {domains.length ? (
+        <Grid className={domainColumns.length > 1 ? styles.grid : undefined} gap={4}>
+          {domainColumns.map((domains, i) => (
+            <VStack key={i} align="stretch" spacing={4}>
+              {domains.map((domain) => (
+                <DomainDisplay key={domain.domain.name} {...domain} />
+              ))}
             </VStack>
-          </Alert>
-        )}
-      </WidgetWrapper>
-    ),
-    [domains, hidden.domains]
+          ))}
+        </Grid>
+      ) : (
+        <Alert status="info" borderRadius="md">
+          <AlertIcon />
+          <VStack align="start" spacing={0}>
+            <AlertTitle>
+              <FormattedMessage defaultMessage="No domains for today." />
+            </AlertTitle>
+            <div>
+              <FormattedMessage
+                defaultMessage="Go to {customize} to add domains, or maybe try some {link}?"
+                values={{
+                  customize: (
+                    <NextLink href="/customize" passHref>
+                      <Link color={useColorModeValue("blue.500", "blue.300")}>
+                        <FormattedMessage defaultMessage="Customize" />
+                      </Link>
+                    </NextLink>
+                  ),
+                  link: (
+                    <Link
+                      href="https://genshin-impact.fandom.com/wiki/Ley_Line_Outcrops"
+                      color={useColorModeValue("blue.500", "blue.300")}
+                      isExternal
+                    >
+                      <FormattedMessage defaultMessage="Ley Lines" />
+                    </Link>
+                  ),
+                }}
+              />
+            </div>
+          </VStack>
+        </Alert>
+      )}
+    </WidgetWrapper>
   );
 };
 

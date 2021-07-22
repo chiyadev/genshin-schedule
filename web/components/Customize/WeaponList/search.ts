@@ -10,15 +10,12 @@ for (const weapon of Weapons) {
   WeaponSearch.add(weapon.type, weapon);
   WeaponSearch.add(weapon.name, weapon);
 
-  WeaponSearch.add(weapon.material.name, weapon);
-  WeaponSearch.add(weapon.material.item, weapon);
-
-  for (const material of weapon.commonMaterials) {
+  for (const material of [weapon.material, ...weapon.commonMaterials]) {
     WeaponSearch.add(material.name, weapon);
     WeaponSearch.add(material.item, weapon);
-  }
 
-  materialToWeapons.add(weapon.material.name, weapon);
+    materialToWeapons.add(material.name, weapon);
+  }
 }
 
 for (const region of Regions) {
@@ -29,7 +26,7 @@ for (const region of Regions) {
           WeaponSearch.add(region.name, weapon);
           WeaponSearch.add(domain.name, weapon);
 
-          drops.name && WeaponSearch.add(drops.name, weapon);
+          //drops.name && WeaponSearch.add(drops.name, weapon);
           drops.days.forEach((day) => WeaponSearch.add(day, weapon));
         }
       }

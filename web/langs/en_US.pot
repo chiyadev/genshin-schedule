@@ -46,7 +46,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:214
+#: components/ChangelogModal.tsx:215
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -81,17 +81,17 @@ msgctxt "components.Customize.ArtifactInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
 msgstr ""
 
-#: components/Customize/ArtifactList/index.tsx:16
+#: components/Customize/ArtifactList/index.tsx:18
 msgctxt "components.Customize.ArtifactList.index.796e5e"
 msgid "Artifacts"
 msgstr ""
 
-#: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:56
+#: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:63
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
 msgstr ""
 
-#: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:46
+#: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:53
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.b4b55a"
 msgid "ascension material for {name}"
 msgstr ""
@@ -106,22 +106,17 @@ msgctxt "components.Customize.CharacterInfo.NoteInput.c6a1b4"
 msgid "Additional notes"
 msgstr ""
 
-#: components/Customize/CharacterInfo/Toggle.tsx:23
+#: components/Customize/CharacterInfo/Toggle.tsx:25
 msgctxt "components.Customize.CharacterInfo.Toggle.cce039"
 msgid "Show on schedule"
 msgstr ""
 
-#: components/Customize/CharacterInfo/Toggle.tsx:27
+#: components/Customize/CharacterInfo/Toggle.tsx:29
 msgctxt "components.Customize.CharacterInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
 msgstr ""
 
-#: components/Customize/CharacterList/Icon.tsx:61
-msgctxt "components.Customize.CharacterList.Icon.e637aa"
-msgid "Unknown"
-msgstr ""
-
-#: components/Customize/CharacterList/index.tsx:16
+#: components/Customize/CharacterList/index.tsx:26
 msgctxt "components.Customize.CharacterList.index.4e372c"
 msgid "Characters"
 msgstr ""
@@ -191,22 +186,22 @@ msgctxt "components.Customize.Notifications.MessageDisplay.fbf09e"
 msgid "You are not signed in."
 msgstr ""
 
-#: components/Customize/Search.tsx:28
+#: components/Customize/Search.tsx:36
 msgctxt "components.Customize.Search.2027a7"
 msgid "Select items to be added to your farming schedule."
 msgstr ""
 
-#: components/Customize/Search.tsx:22
+#: components/Customize/Search.tsx:30
 msgctxt "components.Customize.Search.7c993e"
 msgid "Search characters, weapons and artifacts…"
 msgstr ""
 
-#: components/Customize/Search.tsx:40
+#: components/Customize/Search.tsx:48
 msgctxt "components.Customize.Search.9e7721"
 msgid "create an issue"
 msgstr ""
 
-#: components/Customize/Search.tsx:31
+#: components/Customize/Search.tsx:39
 msgctxt "components.Customize.Search.bb5522"
 msgid "If there are any missing items, please {link} on GitHub."
 msgstr ""
@@ -356,12 +351,12 @@ msgctxt "components.Customize.SettingsList.index.0f789d"
 msgid "Settings"
 msgstr ""
 
-#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:55
+#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:62
 msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
 msgstr ""
 
-#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:45
+#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:52
 msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.b4b55a"
 msgid "ascension material for {name}"
 msgstr ""
@@ -386,17 +381,22 @@ msgctxt "components.Customize.WeaponInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
 msgstr ""
 
-#: components/Customize/WeaponList/index.tsx:16
+#: components/Customize/WeaponList/index.tsx:18
 msgctxt "components.Customize.WeaponList.index.4477a1"
 msgid "Weapons"
 msgstr ""
 
-#: components/DropLabel.tsx:18
+#: components/DropLabel.tsx:63
+msgctxt "components.DropLabel.0388b5"
+msgid "{category}, {region}"
+msgstr ""
+
+#: components/DropLabel.tsx:39
 msgctxt "components.DropLabel.9f02aa"
 msgid "This item does not drop from any domains."
 msgstr ""
 
-#: components/DropLabel.tsx:41
+#: components/DropLabel.tsx:79
 msgctxt "components.DropLabel.9f8862"
 msgid "{domain}{days, select, undefined {} other { on {days}}}"
 msgstr ""
@@ -476,52 +476,57 @@ msgctxt "components.Home.Clock.index.2cbf2a"
 msgid "Time in Teyvat"
 msgstr ""
 
-#: components/Home/DomainView/DomainDisplay.tsx:24
+#: components/Home/DomainView/DomainDisplay.tsx:33
 msgctxt "components.Home.DomainView.DomainDisplay.0388b5"
 msgid "{category}, {region}"
 msgstr ""
 
-#: components/Home/DomainView/FilterButtons.tsx:28
+#: components/Home/DomainView/FilterButtons.tsx:34
 msgctxt "components.Home.DomainView.FilterButtons.4477a1"
 msgid "Weapons"
 msgstr ""
 
-#: components/Home/DomainView/FilterButtons.tsx:22
+#: components/Home/DomainView/FilterButtons.tsx:28
 msgctxt "components.Home.DomainView.FilterButtons.4e372c"
 msgid "Characters"
 msgstr ""
 
-#: components/Home/DomainView/FilterButtons.tsx:34
+#: components/Home/DomainView/FilterButtons.tsx:22
+msgctxt "components.Home.DomainView.FilterButtons.77dce8"
+msgid "Hide always available"
+msgstr ""
+
+#: components/Home/DomainView/FilterButtons.tsx:40
 msgctxt "components.Home.DomainView.FilterButtons.796e5e"
 msgid "Artifacts"
 msgstr ""
 
-#: components/Home/DomainView/Item.tsx:31
+#: components/Home/DomainView/Item.tsx:39
 msgctxt "components.Home.DomainView.Item.238d34"
 msgid "Highlight item"
 msgstr ""
 
-#: components/Home/DomainView/index.tsx:267
+#: components/Home/DomainView/index.tsx:262
 msgctxt "components.Home.DomainView.index.4af108"
 msgid "Ley Lines"
 msgstr ""
 
-#: components/Home/DomainView/index.tsx:257
+#: components/Home/DomainView/index.tsx:252
 msgctxt "components.Home.DomainView.index.4d7a4e"
 msgid "Customize"
 msgstr ""
 
-#: components/Home/DomainView/index.tsx:227
+#: components/Home/DomainView/index.tsx:222
 msgctxt "components.Home.DomainView.index.c49d9f"
 msgid "Today's Domains"
 msgstr ""
 
-#: components/Home/DomainView/index.tsx:248
+#: components/Home/DomainView/index.tsx:243
 msgctxt "components.Home.DomainView.index.e73ff2"
 msgid "No domains for today."
 msgstr ""
 
-#: components/Home/DomainView/index.tsx:251
+#: components/Home/DomainView/index.tsx:246
 msgctxt "components.Home.DomainView.index.f52777"
 msgid "Go to {customize} to add domains, or maybe try some {link}?"
 msgstr ""
@@ -566,7 +571,7 @@ msgctxt "components.Home.RealmCurrency.index.9ca85f"
 msgid "Your realm currency is full."
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:59
+#: components/Home/RealmCurrency/index.tsx:43
 msgctxt "components.Home.RealmCurrency.index.c3eb42"
 msgid "Switch estimation mode"
 msgstr ""
@@ -616,7 +621,7 @@ msgctxt "components.Home.Resin.index.506b0c"
 msgid "Your resins are full."
 msgstr ""
 
-#: components/Home/Resin/index.tsx:59
+#: components/Home/Resin/index.tsx:43
 msgctxt "components.Home.Resin.index.c3eb42"
 msgid "Switch estimation mode"
 msgstr ""
@@ -756,7 +761,7 @@ msgctxt "components.Map.TaskMarker.InfoPage.index.343579"
 msgid "Options"
 msgstr ""
 
-#: components/Map/TaskMarker/InfoPage/index.tsx:52
+#: components/Map/TaskMarker/InfoPage/index.tsx:46
 msgctxt "components.Map.TaskMarker.InfoPage.index.656cac"
 msgid "Change icon"
 msgstr ""
@@ -961,7 +966,7 @@ msgctxt "components.TaskListCard.DoneButton.927523"
 msgid "Mark as done"
 msgstr ""
 
-#: components/TaskListCard/Item.tsx:60
+#: components/TaskListCard/Item.tsx:46
 msgctxt "components.TaskListCard.Item.0ababe"
 msgid "Highlight task"
 msgstr ""
@@ -1146,197 +1151,322 @@ msgctxt "db.artifacts.fa86c6"
 msgid "Prayers for Illumination"
 msgstr ""
 
-#: db/characters.ts:303
+#: db/characterMaterials.ts:113
+msgctxt "db.characterMaterials.075225"
+msgid "Smoldering Pearl"
+msgstr ""
+
+#: db/characterMaterials.ts:28
+msgctxt "db.characterMaterials.1197ab"
+msgid "Shivada Jade"
+msgstr ""
+
+#: db/characterMaterials.ts:78
+msgctxt "db.characterMaterials.1a889f"
+msgid "Crystalline Bloom"
+msgstr ""
+
+#: db/characterMaterials.ts:85
+msgctxt "db.characterMaterials.1d76b3"
+msgid "Lightning Prism"
+msgstr ""
+
+#: db/characterMaterials.ts:15
+msgctxt "db.characterMaterials.263550"
+msgid "Brilliant Diamond Silver"
+msgstr ""
+
+#: db/characterMaterials.ts:21
+msgctxt "db.characterMaterials.402219"
+msgid "Vayuda Turquoise"
+msgstr ""
+
+#: db/characterMaterials.ts:57
+msgctxt "db.characterMaterials.442b7d"
+msgid "Agnidus Agate Silver"
+msgstr ""
+
+#: db/characterMaterials.ts:36
+msgctxt "db.characterMaterials.544601"
+msgid "Vajrada Amethyst Silver"
+msgstr ""
+
+#: db/characterMaterials.ts:43
+msgctxt "db.characterMaterials.61a03d"
+msgid "Prithiva Topaz Silver"
+msgstr ""
+
+#: db/characterMaterials.ts:127
+msgctxt "db.characterMaterials.69e399"
+msgid "Marionette Core"
+msgstr ""
+
+#: db/characterMaterials.ts:106
+msgctxt "db.characterMaterials.6dacd8"
+msgid "Everflame Seed"
+msgstr ""
+
+#: db/characterMaterials.ts:64
+msgctxt "db.characterMaterials.71aa4d"
+msgid "Hurricane Seed"
+msgstr ""
+
+#: db/characterMaterials.ts:29
+msgctxt "db.characterMaterials.7bbaf1"
+msgid "Shivada Jade Silver"
+msgstr ""
+
+#: db/characterMaterials.ts:92
+msgctxt "db.characterMaterials.84ad4f"
+msgid "Basalt Pillar"
+msgstr ""
+
+#: db/characterMaterials.ts:120
+msgctxt "db.characterMaterials.aef1aa"
+msgid "Juvenile Jade"
+msgstr ""
+
+#: db/characterMaterials.ts:56
+msgctxt "db.characterMaterials.ba86ce"
+msgid "Agnidus Agate"
+msgstr ""
+
+#: db/characterMaterials.ts:22
+msgctxt "db.characterMaterials.c0b022"
+msgid "Vayuda Turquoise Silver"
+msgstr ""
+
+#: db/characterMaterials.ts:49
+msgctxt "db.characterMaterials.cd566f"
+msgid "Varunada Lazurite"
+msgstr ""
+
+#: db/characterMaterials.ts:14
+msgctxt "db.characterMaterials.d82be1"
+msgid "Brilliant Diamond"
+msgstr ""
+
+#: db/characterMaterials.ts:71
+msgctxt "db.characterMaterials.e422cf"
+msgid "Hoarfrost Core"
+msgstr ""
+
+#: db/characterMaterials.ts:42
+msgctxt "db.characterMaterials.e52e52"
+msgid "Prithiva Topaz"
+msgstr ""
+
+#: db/characterMaterials.ts:99
+msgctxt "db.characterMaterials.e5dbaa"
+msgid "Cleansing Heart"
+msgstr ""
+
+#: db/characterMaterials.ts:35
+msgctxt "db.characterMaterials.eaa616"
+msgid "Vajrada Amethyst"
+msgstr ""
+
+#: db/characterMaterials.ts:134
+msgctxt "db.characterMaterials.f0ec25"
+msgid "Perpetual Heart"
+msgstr ""
+
+#: db/characterMaterials.ts:50
+msgctxt "db.characterMaterials.f20cfa"
+msgid "Varunada Lazurite Silver"
+msgstr ""
+
+#: db/characters.ts:354
 msgctxt "db.characters.07f6ca"
 msgid "Zhongli"
 msgstr ""
 
-#: db/characters.ts:150
+#: db/characters.ts:184
 msgctxt "db.characters.0e89af"
 msgid "Fischl"
 msgstr ""
 
-#: db/characters.ts:312
+#: db/characters.ts:364
 msgctxt "db.characters.17ba95"
 msgid "Xinyan"
 msgstr ""
 
-#: db/characters.ts:366
+#: db/characters.ts:424
 msgctxt "db.characters.18d80a"
 msgid "Xiao"
 msgstr ""
 
-#: db/characters.ts:249
+#: db/characters.ts:294
 msgctxt "db.characters.1c8781"
 msgid "Venti"
 msgstr ""
 
-#: db/characters.ts:321
+#: db/characters.ts:374
 msgctxt "db.characters.2fbbd1"
 msgid "Yanfei"
 msgstr ""
 
-#: db/characters.ts:258
+#: db/characters.ts:304
 msgctxt "db.characters.35f4f4"
 msgid "Xiangling"
 msgstr ""
 
-#: db/characters.ts:240
+#: db/characters.ts:284
 msgctxt "db.characters.3988a8"
 msgid "Sucrose"
 msgstr ""
 
-#: db/characters.ts:186
+#: db/characters.ts:224
 msgctxt "db.characters.42ddab"
 msgid "Lisa"
 msgstr ""
 
-#: db/characters.ts:330
+#: db/characters.ts:384
 msgctxt "db.characters.47f14e"
 msgid "Eula"
 msgstr ""
 
-#: db/characters.ts:357
+#: db/characters.ts:414
 msgctxt "db.characters.579564"
 msgid "Ayaka"
 msgstr ""
 
-#: db/characters.ts:78
+#: db/characters.ts:104
 msgctxt "db.characters.584d1b"
 msgid "Traveler (Geo)"
 msgstr ""
 
-#: db/characters.ts:231
+#: db/characters.ts:274
 msgctxt "db.characters.5934e2"
 msgid "Razor"
 msgstr ""
 
-#: db/characters.ts:204
+#: db/characters.ts:244
 msgctxt "db.characters.5e045b"
 msgid "Ningguang"
 msgstr ""
 
-#: db/characters.ts:114
+#: db/characters.ts:144
 msgctxt "db.characters.653885"
 msgid "Beidou"
 msgstr ""
 
-#: db/characters.ts:132
+#: db/characters.ts:164
 msgctxt "db.characters.7267c2"
 msgid "Chongyun"
 msgstr ""
 
-#: db/characters.ts:213
+#: db/characters.ts:254
 msgctxt "db.characters.7ce9c6"
 msgid "Noelle"
 msgstr ""
 
-#: db/characters.ts:159
+#: db/characters.ts:194
 msgctxt "db.characters.7f3adf"
 msgid "Jean"
 msgstr ""
 
-#: db/characters.ts:294
+#: db/characters.ts:344
 msgctxt "db.characters.89304e"
 msgid "Diona"
 msgstr ""
 
-#: db/characters.ts:402
+#: db/characters.ts:464
 msgctxt "db.characters.89d67c"
 msgid "Sayu"
 msgstr ""
 
-#: db/characters.ts:168
+#: db/characters.ts:204
 msgctxt "db.characters.921292"
 msgid "Kaeya"
 msgstr ""
 
-#: db/characters.ts:414
+#: db/characters.ts:475
 msgctxt "db.characters.9d0c00"
 msgid "Yoimiya"
 msgstr ""
 
-#: db/characters.ts:222
+#: db/characters.ts:264
 msgctxt "db.characters.9de495"
 msgid "Qiqi"
 msgstr ""
 
-#: db/characters.ts:267
+#: db/characters.ts:314
 msgctxt "db.characters.9e37b6"
 msgid "Xingqiu"
 msgstr ""
 
-#: db/characters.ts:141
+#: db/characters.ts:174
 msgctxt "db.characters.a1bb56"
 msgid "Diluc"
 msgstr ""
 
-#: db/characters.ts:105
+#: db/characters.ts:134
 msgctxt "db.characters.a808c9"
 msgid "Barbara"
 msgstr ""
 
-#: db/characters.ts:195
+#: db/characters.ts:234
 msgctxt "db.characters.af88fa"
 msgid "Mona"
 msgstr ""
 
-#: db/characters.ts:339
+#: db/characters.ts:394
 msgctxt "db.characters.b60444"
 msgid "Albedo"
 msgstr ""
 
-#: db/characters.ts:123
+#: db/characters.ts:154
 msgctxt "db.characters.b96249"
 msgid "Bennett"
 msgstr ""
 
-#: db/characters.ts:348
+#: db/characters.ts:404
 msgctxt "db.characters.bc58dc"
 msgid "Ganyu"
 msgstr ""
 
-#: db/characters.ts:285
+#: db/characters.ts:334
 msgctxt "db.characters.bdaeb2"
 msgid "Tartaglia"
 msgstr ""
 
-#: db/characters.ts:276
+#: db/characters.ts:324
 msgctxt "db.characters.ce2cb0"
 msgid "Klee"
 msgstr ""
 
-#: db/characters.ts:69
+#: db/characters.ts:94
 msgctxt "db.characters.d09c64"
 msgid "Traveler (Anemo)"
 msgstr ""
 
-#: db/characters.ts:177
+#: db/characters.ts:214
 msgctxt "db.characters.d9c480"
 msgid "Keqing"
 msgstr ""
 
-#: db/characters.ts:375
+#: db/characters.ts:434
 msgctxt "db.characters.dd7597"
 msgid "Rosaria"
 msgstr ""
 
-#: db/characters.ts:384
+#: db/characters.ts:444
 msgctxt "db.characters.de01da"
 msgid "Hu Tao"
 msgstr ""
 
-#: db/characters.ts:393
+#: db/characters.ts:454
 msgctxt "db.characters.e9f35f"
 msgid "Kazuha"
 msgstr ""
 
-#: db/characters.ts:87
+#: db/characters.ts:114
 msgctxt "db.characters.f0737d"
 msgid "Traveler (Electro)"
 msgstr ""
 
-#: db/characters.ts:96
+#: db/characters.ts:124
 msgctxt "db.characters.fdb676"
 msgid "Amber"
 msgstr ""
@@ -1356,6 +1486,11 @@ msgctxt "db.commonMaterials.19c45b"
 msgid "Valberry"
 msgstr ""
 
+#: db/commonMaterials.ts:260
+msgctxt "db.commonMaterials.21acbf"
+msgid "Crystal Marrow"
+msgstr ""
+
 #: db/commonMaterials.ts:162
 msgctxt "db.commonMaterials.248863"
 msgid "Qingxin"
@@ -1369,6 +1504,11 @@ msgstr ""
 #: db/commonMaterials.ts:36
 msgctxt "db.commonMaterials.42027c"
 msgid "Divining Scroll"
+msgstr ""
+
+#: db/commonMaterials.ts:224
+msgctxt "db.commonMaterials.4fb069"
+msgid "Handguard"
 msgstr ""
 
 #: db/commonMaterials.ts:29
@@ -1576,182 +1716,247 @@ msgctxt "db.commonMaterials.fe06d4"
 msgid "Cor Lapis"
 msgstr ""
 
-#: db/domainCategories.ts:33
-msgctxt "db.domainCategories.1ffb59"
-msgid "Domain of Forgery"
+#: db/domainCategories.ts:60
+msgctxt "db.domainCategories.08e597"
+msgid "Forgery"
 msgstr ""
 
-#: db/domainCategories.ts:41
-msgctxt "db.domainCategories.4e509f"
-msgid "Domain of Blessing"
+#: db/domainCategories.ts:87
+msgctxt "db.domainCategories.09a1d0"
+msgid "Boss"
 msgstr ""
 
-#: db/domainCategories.ts:59
+#: db/domainCategories.ts:88
+msgctxt "db.domainCategories.4b2b5d"
+msgid "Character Ascension Materials and Artifacts"
+msgstr ""
+
+#: db/domainCategories.ts:53
 msgctxt "db.domainCategories.6a94a1"
 msgid "Talent Level-Up Materials"
 msgstr ""
 
-#: db/domainCategories.ts:42
+#: db/domainCategories.ts:69
 msgctxt "db.domainCategories.796e5e"
 msgid "Artifacts"
 msgstr ""
 
-#: db/domainCategories.ts:34
+#: db/domainCategories.ts:68
+msgctxt "db.domainCategories.a02f64"
+msgid "Blessing"
+msgstr ""
+
+#: db/domainCategories.ts:61
 msgctxt "db.domainCategories.a4758a"
 msgid "Weapon Ascension Materials"
 msgstr ""
 
-#: db/domainCategories.ts:66
+#: db/domainCategories.ts:44
 msgctxt "db.domainCategories.a6ee01"
 msgid "Trounce"
 msgstr ""
 
-#: db/domainCategories.ts:58
-msgctxt "db.domainCategories.bb5cb2"
-msgid "Domain of Mastery"
+#: db/domainCategories.ts:52
+msgctxt "db.domainCategories.aeab32"
+msgid "Mastery"
 msgstr ""
 
-#: db/domainCategories.ts:67
+#: db/domainCategories.ts:45
 msgctxt "db.domainCategories.f98247"
 msgid "Weekly Challenge"
 msgstr ""
 
-#: db/domainDropSets.ts:317
+#: db/domainDropSets.ts:363
 msgctxt "db.domainDropSets.3153a6"
 msgid "Altar of Sands"
 msgstr ""
 
-#: db/domainDropSets.ts:310
+#: db/domainDropSets.ts:356
 msgctxt "db.domainDropSets.350bc4"
 msgid "Sunken Sands"
 msgstr ""
 
-#: db/domainDropSets.ts:131
-msgctxt "db.domainDropSets.617252"
-msgid "Trail Grounds of Thunder"
+#: db/domainDropSets.ts:154
+msgctxt "db.domainDropSets.5a8238"
+msgid "Trial Grounds of Thunder"
 msgstr ""
 
-#: db/domainDropSets.ts:117
+#: db/domainDropSets.ts:140
 msgctxt "db.domainDropSets.6db45f"
 msgid "Thundercloud"
 msgstr ""
 
-#: db/domainDropSets.ts:90
+#: db/domainDropSets.ts:113
 msgctxt "db.domainDropSets.727bc7"
 msgid "City of Reflections"
 msgstr ""
 
-#: db/domainDropSets.ts:97
+#: db/domainDropSets.ts:120
 msgctxt "db.domainDropSets.b61667"
 msgid "Submerged Valley"
 msgstr ""
 
-#: db/domainDropSets.ts:324
+#: db/domainDropSets.ts:370
 msgctxt "db.domainDropSets.c47ef9"
 msgid "Sand Burial"
 msgstr ""
 
-#: db/domainDropSets.ts:104
+#: db/domainDropSets.ts:127
 msgctxt "db.domainDropSets.dfec8a"
 msgid "Ruins of Thirsting Capital"
 msgstr ""
 
-#: db/domainDropSets.ts:138
+#: db/domainDropSets.ts:161
 msgctxt "db.domainDropSets.f12070"
 msgid "Electrostatic Field"
 msgstr ""
 
-#: db/domainDropSets.ts:124
+#: db/domainDropSets.ts:147
 msgctxt "db.domainDropSets.ffe184"
 msgid "Thundering Ruins"
 msgstr ""
 
-#: db/domains.ts:57
+#: db/domains.ts:68
 msgctxt "db.domains.011253"
 msgid "Hidden Palace of Lianshan Formula"
 msgstr ""
 
-#: db/domains.ts:99
+#: db/domains.ts:110
 msgctxt "db.domains.0cfa31"
 msgid "Forsaken Rift"
 msgstr ""
 
-#: db/domains.ts:148
+#: db/domains.ts:215
+msgctxt "db.domains.1a6b1b"
+msgid "Primo Geovishap"
+msgstr ""
+
+#: db/domains.ts:159
 msgctxt "db.domains.1c6c7d"
 msgid "Ridge Watch"
 msgstr ""
 
-#: db/domains.ts:64
+#: db/domains.ts:187
+msgctxt "db.domains.20c902"
+msgid "Anemo Hypostasis"
+msgstr ""
+
+#: db/domains.ts:75
 msgctxt "db.domains.24e0e0"
 msgid "Midsummer Courtyard"
 msgstr ""
 
-#: db/domains.ts:106
+#: db/domains.ts:117
 msgctxt "db.domains.2bbe8b"
 msgid "Taishan Mansion"
 msgstr ""
 
-#: db/domains.ts:85
+#: db/domains.ts:243
+msgctxt "db.domains.2d6984"
+msgid "Pyro Regisvine"
+msgstr ""
+
+#: db/domains.ts:201
+msgctxt "db.domains.5749e3"
+msgid "Cryo Regisvine"
+msgstr ""
+
+#: db/domains.ts:96
 msgctxt "db.domains.5d9d5d"
 msgid "Hidden Palace of Zhou Formula"
 msgstr ""
 
-#: db/domains.ts:169
+#: db/domains.ts:180
 msgctxt "db.domains.6ea1ac"
 msgid "Court of Flowing Sand"
 msgstr ""
 
-#: db/domains.ts:155
+#: db/domains.ts:166
 msgctxt "db.domains.6f9aa8"
 msgid "Momiji-Dyed Court"
 msgstr ""
 
-#: db/domains.ts:120
+#: db/domains.ts:131
 msgctxt "db.domains.70d1b9"
 msgid "Wolf of the North Challenge"
 msgstr ""
 
-#: db/domains.ts:162
+#: db/domains.ts:173
 msgctxt "db.domains.76827f"
 msgid "Violet Court"
 msgstr ""
 
-#: db/domains.ts:78
+#: db/domains.ts:222
+msgctxt "db.domains.7bb25e"
+msgid "Electro Hypostasis"
+msgstr ""
+
+#: db/domains.ts:89
 msgctxt "db.domains.85e44a"
 msgid "Valley of Remembrance"
 msgstr ""
 
-#: db/domains.ts:134
+#: db/domains.ts:145
 msgctxt "db.domains.8e6257"
 msgid "Enter the Golden House"
 msgstr ""
 
-#: db/domains.ts:127
+#: db/domains.ts:208
+msgctxt "db.domains.a0d4e3"
+msgid "Cryo Hypostasis"
+msgstr ""
+
+#: db/domains.ts:250
+msgctxt "db.domains.bd9e6f"
+msgid "Pyro Hypostasis"
+msgstr ""
+
+#: db/domains.ts:138
 msgctxt "db.domains.c4c6cc"
 msgid "Peak of Vindagnyr"
 msgstr ""
 
-#: db/domains.ts:141
+#: db/domains.ts:236
+msgctxt "db.domains.d4a950"
+msgid "Rhodeia of Loch"
+msgstr ""
+
+#: db/domains.ts:152
 msgctxt "db.domains.dbf3b5"
 msgid "Beneath the Dragon-Queller"
 msgstr ""
 
-#: db/domains.ts:113
+#: db/domains.ts:194
+msgctxt "db.domains.e09906"
+msgid "Maguu Kenki"
+msgstr ""
+
+#: db/domains.ts:229
+msgctxt "db.domains.e2e8f5"
+msgid "Geo Hypostasis"
+msgstr ""
+
+#: db/domains.ts:257
+msgctxt "db.domains.f07d15"
+msgid "Perpetual Mechanical Array"
+msgstr ""
+
+#: db/domains.ts:124
 msgctxt "db.domains.f93fee"
 msgid "Confront Stormterror"
 msgstr ""
 
-#: db/domains.ts:71
+#: db/domains.ts:82
 msgctxt "db.domains.fc295a"
 msgid "Domain of Guyun"
 msgstr ""
 
-#: db/domains.ts:92
+#: db/domains.ts:103
 msgctxt "db.domains.fc83f4"
 msgid "Clear Pool and Mountain Cavern"
 msgstr ""
 
-#: db/domains.ts:50
+#: db/domains.ts:61
 msgctxt "db.domains.fe4688"
 msgid "Cecilia Garden"
 msgstr ""
@@ -1861,11 +2066,6 @@ msgctxt "db.icons.22457b"
 msgid "Portable Waypoint"
 msgstr ""
 
-#: db/icons.ts:52
-msgctxt "db.icons.22e651"
-msgid "Agnidus Agate Sliver"
-msgstr ""
-
 #: db/icons.ts:28
 msgctxt "db.icons.23dfdf"
 msgid "Ore"
@@ -1884,6 +2084,11 @@ msgstr ""
 #: db/icons.ts:212
 msgctxt "db.icons.2532a7"
 msgid "Yellow Circle"
+msgstr ""
+
+#: db/icons.ts:53
+msgctxt "db.icons.263550"
+msgid "Brilliant Diamond Silver"
 msgstr ""
 
 #: db/icons.ts:131
@@ -1971,6 +2176,11 @@ msgctxt "db.icons.42027c"
 msgid "Divining Scroll"
 msgstr ""
 
+#: db/icons.ts:52
+msgctxt "db.icons.442b7d"
+msgid "Agnidus Agate Silver"
+msgstr ""
+
 #: db/icons.ts:154
 msgctxt "db.icons.4a3007"
 msgid "Butterfly Wings"
@@ -2006,9 +2216,9 @@ msgctxt "db.icons.53f73c"
 msgid "Pinecone"
 msgstr ""
 
-#: db/icons.ts:53
-msgctxt "db.icons.541f0a"
-msgid "Brilliant Diamond Sliver"
+#: db/icons.ts:56
+msgctxt "db.icons.544601"
+msgid "Vajrada Amethyst Silver"
 msgstr ""
 
 #: db/icons.ts:64
@@ -2039,6 +2249,11 @@ msgstr ""
 #: db/icons.ts:106
 msgctxt "db.icons.6154c2"
 msgid "Onikabuto"
+msgstr ""
+
+#: db/icons.ts:54
+msgctxt "db.icons.61a03d"
+msgid "Prithiva Topaz Silver"
 msgstr ""
 
 #: db/icons.ts:104
@@ -2094,6 +2309,11 @@ msgstr ""
 #: db/icons.ts:115
 msgctxt "db.icons.767429"
 msgid "Bird Egg"
+msgstr ""
+
+#: db/icons.ts:55
+msgctxt "db.icons.7bbaf1"
+msgid "Shivada Jade Silver"
 msgstr ""
 
 #: db/icons.ts:191
@@ -2154,11 +2374,6 @@ msgstr ""
 #: db/icons.ts:114
 msgctxt "db.icons.8d722e"
 msgid "Berry"
-msgstr ""
-
-#: db/icons.ts:55
-msgctxt "db.icons.90064a"
-msgid "Shivada Jade Sliver"
 msgstr ""
 
 #: db/icons.ts:217
@@ -2296,6 +2511,11 @@ msgctxt "db.icons.be8c87"
 msgid "Fragile Bone Shard"
 msgstr ""
 
+#: db/icons.ts:58
+msgctxt "db.icons.c0b022"
+msgid "Vayuda Turquoise Silver"
+msgstr ""
+
 #: db/icons.ts:209
 msgctxt "db.icons.c138a3"
 msgid "Gray Circle"
@@ -2336,11 +2556,6 @@ msgctxt "db.icons.caa480"
 msgid "Green Circle"
 msgstr ""
 
-#: db/icons.ts:56
-msgctxt "db.icons.cad7f8"
-msgid "Vajrada Amethyst Sliver"
-msgstr ""
-
 #: db/icons.ts:48
 msgctxt "db.icons.cc7a59"
 msgid "Mystic Enhancement Ore"
@@ -2359,11 +2574,6 @@ msgstr ""
 #: db/icons.ts:69
 msgctxt "db.icons.cd7e10"
 msgid "Mist Grass Pollen"
-msgstr ""
-
-#: db/icons.ts:54
-msgctxt "db.icons.cd8c65"
-msgid "Prithiva Topaz Sliver"
 msgstr ""
 
 #: db/icons.ts:88
@@ -2441,11 +2651,6 @@ msgctxt "db.icons.e91a4f"
 msgid "Primogem"
 msgstr ""
 
-#: db/icons.ts:57
-msgctxt "db.icons.ea244d"
-msgid "Varunada Lazurite Sliver"
-msgstr ""
-
 #: db/icons.ts:214
 msgctxt "db.icons.eabb1d"
 msgid "Teal Circle"
@@ -2486,9 +2691,9 @@ msgctxt "db.icons.f0996a"
 msgid "Flaming Flower Stamen"
 msgstr ""
 
-#: db/icons.ts:58
-msgctxt "db.icons.f0af2a"
-msgid "Vayuda Turquoise Sliver"
+#: db/icons.ts:57
+msgctxt "db.icons.f20cfa"
+msgid "Varunada Lazurite Silver"
 msgstr ""
 
 #: db/icons.ts:172
@@ -2556,22 +2761,22 @@ msgctxt "db.icons.fe8ed6"
 msgid "Crab"
 msgstr ""
 
-#: db/regions.ts:122
+#: db/regions.ts:141
 msgctxt "db.regions.06cea1"
 msgid "Inazuma"
 msgstr ""
 
-#: db/regions.ts:130
+#: db/regions.ts:149
 msgctxt "db.regions.38ab8d"
 msgid "Snezhnaya"
 msgstr ""
 
-#: db/regions.ts:71
+#: db/regions.ts:82
 msgctxt "db.regions.5a37ea"
 msgid "Mondstadt"
 msgstr ""
 
-#: db/regions.ts:105
+#: db/regions.ts:120
 msgctxt "db.regions.691c58"
 msgid "Liyue"
 msgstr ""
@@ -2634,6 +2839,11 @@ msgstr ""
 #: db/talentMaterials.ts:64
 msgctxt "db.talentMaterials.4a54fe"
 msgid "Teachings of Transience"
+msgstr ""
+
+#: db/talentMaterials.ts:63
+msgctxt "db.talentMaterials.4f38f4"
+msgid "Transience"
 msgstr ""
 
 #: db/talentMaterials.ts:116
@@ -3341,27 +3551,27 @@ msgctxt "db.weapons.ffe36a"
 msgid "Beginner's Protector"
 msgstr ""
 
-#: pages/customize/artifacts/[name].tsx:79
+#: pages/customize/artifacts/[name].tsx:87
 msgctxt "pages.customize.artifacts.[name].f87fc3"
 msgid "No such artifact."
 msgstr ""
 
-#: pages/customize/characters/[name].tsx:59
+#: pages/customize/characters/[name].tsx:60
 msgctxt "pages.customize.characters.[name].8c8c3a"
 msgid "This page may be inaccurate."
 msgstr ""
 
-#: pages/customize/characters/[name].tsx:108
+#: pages/customize/characters/[name].tsx:122
 msgctxt "pages.customize.characters.[name].9bd832"
 msgid "No such character."
 msgstr ""
 
-#: pages/customize/characters/[name].tsx:62
+#: pages/customize/characters/[name].tsx:63
 msgctxt "pages.customize.characters.[name].ddaaad"
 msgid "The following information is based on leaked data from beta versions of the game. Take it with a grain of salt."
 msgstr ""
 
-#: pages/customize/weapons/[name].tsx:80
+#: pages/customize/weapons/[name].tsx:88
 msgctxt "pages.customize.weapons.[name].6a78b3"
 msgid "No such weapon."
 msgstr ""

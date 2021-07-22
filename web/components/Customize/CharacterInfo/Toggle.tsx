@@ -6,8 +6,10 @@ import { Character } from "../../../db/characters";
 import { chakra, Checkbox, VStack } from "@chakra-ui/react";
 import { FormattedMessage } from "react-intl";
 
-const Toggle = ({ character, isWeekly }: { character: Character; isWeekly?: boolean }) => {
-  const [list, setList] = useConfig(isWeekly ? "charactersWeekly" : "characters");
+export type CharacterListName = "characters" | "charactersWeekly" | "charactersGem" | "charactersNormalBoss";
+
+const Toggle = ({ character, listName }: { character: Character; listName: CharacterListName }) => {
+  const [list, setList] = useConfig(listName);
   const exists = useMemo(() => list.includes(character.name), [list, character]);
 
   return (

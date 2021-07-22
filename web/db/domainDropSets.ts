@@ -19,6 +19,10 @@ import {
   NoblesseOblige,
   OceanConqueror,
   PaleFlame,
+  PrayersForDestiny,
+  PrayersForIllumination,
+  PrayersForWisdom,
+  PrayersToSpringtime,
   ResolutionOfSojourner,
   RetracingBolide,
   Scholar,
@@ -70,19 +74,38 @@ import {
 } from "./talentMaterials";
 import { Weekday } from "../utils/time";
 import { registerMessage } from "../utils";
+import {
+  AgnidusAgate,
+  BasaltPillar,
+  CharacterMaterial,
+  CleansingHeart,
+  CrystallineBloom,
+  EverflameSeed,
+  HoarfrostCore,
+  HurricaneSeed,
+  LightningPrism,
+  MarionetteCore,
+  PerpetualHeart,
+  PrithivaTopaz,
+  ShivadaJade,
+  SmolderingPearl,
+  VajradaAmethyst,
+  VarunadaLazurite,
+  VayudaTurquoise,
+} from "./characterMaterials";
 
 const MonThu: Weekday[] = ["monday", "thursday"];
 const TueFri: Weekday[] = ["tuesday", "friday"];
 const WedSat: Weekday[] = ["wednesday", "saturday"];
 const Sun: Weekday[] = ["sunday"];
-const AnyDay: Weekday[] = [...MonThu, ...TueFri, ...WedSat, ...Sun];
-const Trounce: Weekday[] = AnyDay;
+const Any: Weekday[] = [...MonThu, ...TueFri, ...WedSat, ...Sun];
+const Trounce: Weekday[] = Any;
 
 export type DomainDropSet = {
   type: "Domain Drop Set";
   name?: string;
   days: Weekday[];
-  items: (Artifact | WeaponMaterial | TalentMaterial)[];
+  items: (Artifact | CharacterMaterial | WeaponMaterial | TalentMaterial)[];
 };
 
 export const CityOfReflections: DomainDropSet = {
@@ -126,9 +149,9 @@ export const ThunderingRuins: DomainDropSet = {
   items: [MistVeiledElixir],
 };
 
-export const TrailGroundsOfThunder: DomainDropSet = {
+export const TrialGroundsOfThunder: DomainDropSet = {
   type: "Domain Drop Set",
-  name: registerMessage({ defaultMessage: "Trail Grounds of Thunder" }),
+  name: registerMessage({ defaultMessage: "Trial Grounds of Thunder" }),
   days: WedSat,
   items: [Aerosiderite],
 };
@@ -190,38 +213,50 @@ export const TaishanMansionDrops4: DomainDropSet = {
 
 export const MidsummerCourtyardDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: AnyDay,
+  days: Any,
   items: [Adventurer, ResolutionOfSojourner, ThunderingFury, Thundersoother],
 };
 
 export const DomainOfGuyunDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: AnyDay,
+  days: Any,
   items: [LuckyDog, BraveHeart, ArchaicPetra, RetracingBolide],
 };
 
 export const ValleyOfRemembranceDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: AnyDay,
+  days: Any,
   items: [TravelingDoctor, TinyMiracle, ViridescentVenerer, MaidenBeloved],
 };
 
 export const HiddenPalaceOfZhouFormulaDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: AnyDay,
+  days: Any,
   items: [DefendersWill, MartialArtist, CrimsonWitchOfFlames, Lavawalker],
 };
 
 export const ClearPoolAndMountainCavernDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: AnyDay,
+  days: Any,
   items: [BloodstainedChivalry, NoblesseOblige, Gambler, Scholar],
 };
 
 export const ConfrontStormterrorDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Trounce,
-  items: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe, DvalinPlume, DvalinSigh, DvalinClaw],
+  items: [
+    Berserker,
+    Instructor,
+    TheExile,
+    GladiatorsFinale,
+    WanderersTroupe,
+    DvalinPlume,
+    DvalinSigh,
+    DvalinClaw,
+    VayudaTurquoise,
+    VajradaAmethyst,
+    VarunadaLazurite,
+  ],
 };
 
 export const WolfOfTheNorthChallengeDrops: DomainDropSet = {
@@ -236,12 +271,15 @@ export const WolfOfTheNorthChallengeDrops: DomainDropSet = {
     RingOfBoreas,
     SpiritLocketOfBoreas,
     TailOfBoreas,
+    ShivadaJade,
+    AgnidusAgate,
+    PrithivaTopaz,
   ],
 };
 
 export const PeakOfVindagnyrDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: AnyDay,
+  days: Any,
   items: [DefendersWill, Gambler, Icebreaker, OceanConqueror],
 };
 
@@ -257,6 +295,9 @@ export const EnterTheGoldenHouseDrops: DomainDropSet = {
     TuskOfMonocerosCaeli,
     ShadowOfTheWarrior,
     ShardOfAFoulLegacy,
+    VarunadaLazurite,
+    VajradaAmethyst,
+    ShivadaJade,
   ],
 };
 
@@ -272,18 +313,23 @@ export const BeneathTheDragonQuellerDrops: DomainDropSet = {
     DragonLordsCrown,
     BloodjadeBranch,
     GildedScale,
+    PrithivaTopaz,
+    VarunadaLazurite,
+    VajradaAmethyst,
+    AgnidusAgate,
+    ShivadaJade,
   ],
 };
 
 export const RidgeWatchDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: AnyDay,
+  days: Any,
   items: [BraveHeart, MartialArtist, TenacityOfTheMillelith, PaleFlame],
 };
 
 export const MomijiDyedCourtDrops: DomainDropSet = {
   type: "Domain Drop Set",
-  days: AnyDay,
+  days: Any,
   items: [ResolutionOfSojourner, TinyMiracle, ShimenawaReminiscence, EmblemOfSeveredFate],
 };
 
@@ -332,6 +378,150 @@ export const CourtOfFlowingSandDrops4: DomainDropSet = {
   items: [BranchOfDistantSea, Narukami, NarukamiMask],
 };
 
+export const AnemoHypostasisDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [LuckyDog, Berserker, Instructor, GladiatorsFinale, WanderersTroupe, VayudaTurquoise, HurricaneSeed],
+};
+
+export const MaguuKenkiDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [
+    Berserker,
+    Instructor,
+    LuckyDog,
+    GladiatorsFinale,
+    WanderersTroupe,
+    VayudaTurquoise,
+    ShivadaJade,
+    MarionetteCore,
+  ],
+};
+
+export const CryoRegisvineDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [
+    LuckyDog,
+    Berserker,
+    TheExile,
+    GladiatorsFinale,
+    WanderersTroupe,
+    PrayersToSpringtime,
+    ShivadaJade,
+    HoarfrostCore,
+  ],
+};
+
+export const CryoHypostasisDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [
+    LuckyDog,
+    Berserker,
+    TheExile,
+    PrayersToSpringtime,
+    GladiatorsFinale,
+    WanderersTroupe,
+    ShivadaJade,
+    CrystallineBloom,
+  ],
+};
+
+export const PrimoGeovishapDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [
+    Berserker,
+    Instructor,
+    TheExile,
+    PrayersForWisdom,
+    PrayersToSpringtime,
+    PrayersForIllumination,
+    PrayersForDestiny,
+    GladiatorsFinale,
+    WanderersTroupe,
+    PrithivaTopaz,
+    VajradaAmethyst,
+    ShivadaJade,
+    AgnidusAgate,
+    VarunadaLazurite,
+  ],
+};
+
+export const ElectroHypostasisDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [
+    TravelingDoctor,
+    Instructor,
+    TheExile,
+    PrayersForWisdom,
+    GladiatorsFinale,
+    WanderersTroupe,
+    VajradaAmethyst,
+    LightningPrism,
+  ],
+};
+
+export const GeoHypostasisDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [TravelingDoctor, Instructor, TheExile, GladiatorsFinale, WanderersTroupe, PrithivaTopaz, BasaltPillar],
+};
+
+export const RhodeiaOfLochDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [
+    Adventurer,
+    Berserker,
+    TheExile,
+    PrayersForDestiny,
+    GladiatorsFinale,
+    WanderersTroupe,
+    VarunadaLazurite,
+    CleansingHeart,
+  ],
+};
+
+export const PyroRegisvineDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [
+    Adventurer,
+    Berserker,
+    Instructor,
+    PrayersForIllumination,
+    GladiatorsFinale,
+    WanderersTroupe,
+    AgnidusAgate,
+    EverflameSeed,
+  ],
+};
+
+export const PyroHypostasisDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [
+    Adventurer,
+    Instructor,
+    Berserker,
+    PrayersForIllumination,
+    GladiatorsFinale,
+    WanderersTroupe,
+    AgnidusAgate,
+    SmolderingPearl,
+  ],
+};
+
+export const PerpetualMechanicalArrayDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [Berserker, TheExile, LuckyDog, GladiatorsFinale, WanderersTroupe, PrithivaTopaz, ShivadaJade, PerpetualHeart],
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
@@ -339,7 +529,7 @@ export const DomainDropSets = [
   CeciliaGardenDrops4,
   Thundercloud,
   ThunderingRuins,
-  TrailGroundsOfThunder,
+  TrialGroundsOfThunder,
   HiddenPalaceOfLianshanFormulaDrops4,
   ForsakenRiftDrops1,
   ForsakenRiftDrops2,
@@ -368,4 +558,15 @@ export const DomainDropSets = [
   AltarOfSands,
   SandBurial,
   CourtOfFlowingSandDrops4,
+  AnemoHypostasisDrops,
+  MaguuKenkiDrops,
+  CryoRegisvineDrops,
+  CryoHypostasisDrops,
+  PrimoGeovishapDrops,
+  ElectroHypostasisDrops,
+  GeoHypostasisDrops,
+  RhodeiaOfLochDrops,
+  PyroRegisvineDrops,
+  PyroHypostasisDrops,
+  PerpetualMechanicalArrayDrops,
 ];

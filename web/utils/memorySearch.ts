@@ -11,6 +11,7 @@ function intersect<T>(set: Set<T>, other: Set<T>) {
 }
 
 /** simple in-memory search engine, no performance guarantee */
+//todo: make this more performant
 export class MemorySearch<T> {
   readonly index = new Map<string, Set<T>>();
 

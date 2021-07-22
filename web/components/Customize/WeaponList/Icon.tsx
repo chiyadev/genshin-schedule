@@ -1,5 +1,4 @@
-import React, { memo, useMemo } from "react";
-import { useConfig } from "../../../utils/config";
+import React, { memo } from "react";
 import { AspectRatio, Badge, Center, chakra, HStack, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import NextLink from "next/link";
@@ -7,10 +6,7 @@ import { Weapon } from "../../../db/weapons";
 import IconImage from "../IconImage";
 import { FormattedMessage as FormattedMessageId } from "react-intl";
 
-const Icon = ({ visible = true, weapon }: { visible?: boolean; weapon: Weapon }) => {
-  const [existing] = useConfig("weapons");
-  const alreadyAdded = useMemo(() => existing.includes(weapon.name), [existing, weapon.name]);
-
+const Icon = ({ visible = true, weapon, added }: { visible?: boolean; weapon: Weapon; added?: boolean }) => {
   return (
     <NextLink href={`/customize/weapons/${weapon.name}`} passHref>
       <Link d={visible ? undefined : "none"} borderRadius="md">
@@ -24,7 +20,7 @@ const Icon = ({ visible = true, weapon }: { visible?: boolean; weapon: Weapon })
             bg={useColorModeValue("white", "gray.900")}
             borderWidth={1}
             borderColor={useColorModeValue("gray.200", "gray.700")}
-            opacity={alreadyAdded ? 0.3 : 1}
+            opacity={added ? 0.3 : 1}
             transition=".2s"
           >
             <Center minH={0} flex={1}>
@@ -38,7 +34,13 @@ const Icon = ({ visible = true, weapon }: { visible?: boolean; weapon: Weapon })
 
               <Badge maxW="100%" colorScheme={weapon.material.colorHint}>
                 <HStack spacing={1}>
-                  <chakra.img alt={weapon.material.item} src={getAssetByName(weapon.material.item)} w={3} h={3} />
+                  <chakra.img
+                    alt={weapon.material.item}
+                    title={weapon.material.item}
+                    src={getAssetByName(weapon.material.item)}
+                    w={3}
+                    h={3}
+                  />
 
                   <chakra.div isTruncated>
                     <FormattedMessageId id={weapon.material.name} />

@@ -1,6 +1,6 @@
 import { registerMessage } from "../utils";
 
-export const CommonMaterialWiki = "https://genshin-impact.fandom.com/wiki/Common_Ascension_Material";
+export const CommonMaterialWiki = "https://genshin-impact.fandom.com/wiki/Common_Ascension_Materials";
 
 export type CommonMaterial = {
   type: "Common Ascension Material";
@@ -221,7 +221,7 @@ export const SeaGanoderma: CommonMaterial = {
 
 export const Handguard: CommonMaterial = {
   type: "Common Ascension Material",
-  name: registerMessage({ defaultMessage: "Old Handguard" }),
+  name: registerMessage({ defaultMessage: "Handguard" }),
   item: registerMessage({ defaultMessage: "Old Handguard" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Old_Handguard",
 };
@@ -252,6 +252,13 @@ export const MirrorPrism: CommonMaterial = {
   name: registerMessage({ defaultMessage: "Mirror Prism" }),
   item: registerMessage({ defaultMessage: "Dismal Prism" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Dismal_Prism",
+};
+
+export const CrystalMarrow: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Crystal Marrow" }),
+  item: registerMessage({ defaultMessage: "Crystal Marrow" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Crystal_Marrow",
 };
 
 export const CommonMaterials = [
@@ -290,4 +297,5 @@ export const CommonMaterials = [
   NakuWeed,
   ChaosGear,
   MirrorPrism,
+  CrystalMarrow,
 ];

@@ -7,6 +7,8 @@ import { FormattedMessage } from "react-intl";
 
 const WeaponList = () => {
   const [search] = useConfig("customizeQuery");
+  const [weapons] = useConfig("weapons");
+
   const all = useMemo(() => WeaponSearch.search("").sort((a, b) => a.name.localeCompare(b.name)), []);
   const results = useMemo(() => new Set(WeaponSearch.search(search)), [search]);
 
@@ -18,7 +20,7 @@ const WeaponList = () => {
 
       <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>
         {all.map((weapon) => (
-          <Icon key={weapon.name} visible={results.has(weapon)} weapon={weapon} />
+          <Icon key={weapon.name} visible={results.has(weapon)} weapon={weapon} added={weapons.includes(weapon.name)} />
         ))}
       </Grid>
     </VStack>

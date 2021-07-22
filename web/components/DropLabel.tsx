@@ -1,15 +1,36 @@
 import React, { memo, useMemo } from "react";
 import { DomainDropSet, DomainDropSets } from "../db/domainDropSets";
-import { Domains } from "../db/domains";
+import { Domain, Domains } from "../db/domains";
 import { FormattedUnit, Weekday, Weekdays } from "../utils/time";
-import { Domain } from "../assets";
-import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
+import { getAssetByName } from "../assets";
+import { Badge, chakra, HStack, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
+import { DomainCategories, DomainCategory } from "../db/domainCategories";
+import { Region, Regions } from "../db/regions";
 
 const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   const domains = useMemo(() => {
     const drops = DomainDropSets.filter((d) => d.items.includes(item));
-    return drops && Domains.filter((d) => d.drops.some((d) => drops.includes(d)));
+
+    return (
+      drops &&
+      Domains.filter((d) => d.drops.some((d) => drops.includes(d)))
+        .map((domain) => {
+          const category = DomainCategories.find((category) => category.domains.includes(domain));
+          const region = Regions.find((region) => region.domains.includes(domain));
+          return [domain, category, region] as [Domain, DomainCategory, Region];
+        })
+        .sort((a, b) => {
+          const category = DomainCategories.indexOf(a[1]) - DomainCategories.indexOf(b[1]);
+          if (category) return category;
+
+          const region = Regions.indexOf(a[2]) - Regions.indexOf(b[2]);
+          if (region) return region;
+
+          const name = a[0].name.localeCompare(b[0].name);
+          return name;
+        })
+    );
   }, [item]);
 
   if (!domains.length) {
@@ -22,7 +43,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
 
   return (
     <VStack align="start" spacing={0}>
-      {domains.map((domain) => {
+      {domains.map(([domain, category, region]) => {
         const days = new Set<Weekday>();
 
         for (const drops of domain.drops) {
@@ -35,14 +56,36 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
 
         return (
           <HStack key={domain.name} spacing={2}>
-            <chakra.img alt="Domain" src={Domain.src} w={4} h={4} />
+            <chakra.img alt={region.name} title={region.name} src={getAssetByName(region.name)} w={4} h={4} />
 
             <div>
+              <Badge colorScheme={category.colorHint}>
+                <FormattedMessage
+                  defaultMessage="{category}, {region}"
+                  values={{
+                    category: (
+                      <Link href={category.wiki} isExternal>
+                        <FormattedMessageId id={category.name} />
+                      </Link>
+                    ),
+                    region: (
+                      <Link href={region.wiki} isExternal>
+                        <FormattedMessageId id={region.name} />
+                      </Link>
+                    ),
+                  }}
+                />
+              </Badge>{" "}
               <FormattedMessage
                 defaultMessage="{domain}{days, select, undefined {} other { on {days}}}"
                 values={{
                   domain: (
-                    <Link href={domain.wiki} isExternal>
+                    <Link
+                      color={`${category.colorHint}.${useColorModeValue("500", "300")}`}
+                      fontWeight="semibold"
+                      href={domain.wiki}
+                      isExternal
+                    >
                       <FormattedMessageId id={domain.name} />
                     </Link>
                   ),

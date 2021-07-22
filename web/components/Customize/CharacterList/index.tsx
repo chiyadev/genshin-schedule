@@ -7,8 +7,18 @@ import { FormattedMessage } from "react-intl";
 
 const CharacterList = () => {
   const [search] = useConfig("customizeQuery");
+  const [characters] = useConfig("characters");
+  const [charactersWeekly] = useConfig("charactersWeekly");
+  const [charactersGem] = useConfig("charactersGem");
+  const [charactersNormalBoss] = useConfig("charactersNormalBoss");
+
   const all = useMemo(() => CharacterSearch.search("").sort((a, b) => a.name.localeCompare(b.name)), []);
   const results = useMemo(() => new Set(CharacterSearch.search(search)), [search]);
+
+  const added = useMemo(
+    () => new Set([...charactersWeekly, ...characters, ...charactersGem, ...charactersNormalBoss]),
+    [charactersWeekly, characters, charactersGem, charactersNormalBoss]
+  );
 
   return (
     <VStack align="stretch" spacing={4} d={results.size ? undefined : "none"}>
@@ -18,7 +28,12 @@ const CharacterList = () => {
 
       <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>
         {all.map((character) => (
-          <Icon key={character.name} visible={results.has(character)} character={character} />
+          <Icon
+            key={character.name}
+            visible={results.has(character)}
+            character={character}
+            added={added.has(character.name)}
+          />
         ))}
       </Grid>
     </VStack>

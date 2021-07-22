@@ -45,11 +45,13 @@ export type Config = {
     value: number;
     time: number;
   };
-  characters: string[];
-  charactersWeekly: string[];
+  characters: string[]; // talent mats
+  charactersWeekly: string[]; // weekly talent mats
+  charactersGem: string[]; // ascension gems
+  charactersNormalBoss: string[]; // normal boss mats
   weapons: string[];
   artifacts: string[];
-  domainFilters: ("character" | "weapon" | "artifact")[];
+  domainFilter: "all" | "today" | "character" | "weapon" | "artifact";
   itemNotes: { [key: string]: string };
   itemHighlights: string[];
   tasks: Task[];
@@ -115,9 +117,11 @@ export const DefaultConfig: Config = {
   },
   characters: [],
   charactersWeekly: [],
+  charactersGem: [],
+  charactersNormalBoss: [],
   weapons: [],
   artifacts: [],
-  domainFilters: [],
+  domainFilter: "all",
   itemNotes: {},
   itemHighlights: [],
   tasks: [],

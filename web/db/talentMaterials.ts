@@ -1,6 +1,6 @@
 import { registerMessage } from "../utils";
 
-export const TalentMaterialWiki = "https://genshin-impact.fandom.com/wiki/Talent_Level-Up_Material";
+export const TalentMaterialWiki = "https://genshin-impact.fandom.com/wiki/Talent_Level-Up_Materials";
 
 export type TalentMaterial = {
   type: "Talent Level-Up Material";
@@ -60,7 +60,7 @@ export const Gold: TalentMaterial = {
 
 export const Transience: TalentMaterial = {
   type: "Talent Level-Up Material",
-  name: registerMessage({ defaultMessage: "Teachings of Transience" }),
+  name: registerMessage({ defaultMessage: "Transience" }),
   item: registerMessage({ defaultMessage: "Teachings of Transience" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Talent_Level-Up_Materials",
   colorHint: "cyan",

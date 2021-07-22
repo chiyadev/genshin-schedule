@@ -7,6 +7,8 @@ import { FormattedMessage } from "react-intl";
 
 const ArtifactList = () => {
   const [search] = useConfig("customizeQuery");
+  const [artifacts] = useConfig("artifacts");
+
   const all = useMemo(() => ArtifactSearch.search("").sort((a, b) => a.name.localeCompare(b.name)), []);
   const results = useMemo(() => new Set(ArtifactSearch.search(search)), [search]);
 
@@ -18,7 +20,12 @@ const ArtifactList = () => {
 
       <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>
         {all.map((artifact) => (
-          <Icon key={artifact.name} visible={results.has(artifact)} artifact={artifact} />
+          <Icon
+            key={artifact.name}
+            visible={results.has(artifact)}
+            artifact={artifact}
+            added={artifacts.includes(artifact.name)}
+          />
         ))}
       </Grid>
     </VStack>
