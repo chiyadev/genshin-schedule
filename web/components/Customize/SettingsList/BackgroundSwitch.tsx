@@ -27,7 +27,13 @@ const BackgroundSwitch = () => {
       >
         <option value="paimon">{formatMessageId({ id: "Paimon" })}</option>
         <option value="klee">{formatMessageId({ id: "Klee" })}</option>
+        <option value="diluc">{formatMessageId({ id: "Diluc" })}</option>
+        <option value="tartaglia">{formatMessageId({ id: "Tartaglia" })}</option>
         <option value="zhongli">{formatMessageId({ id: "Zhongli" })}</option>
+        <option value="xiao">{formatMessageId({ id: "Xiao" })}</option>
+        <option value="hutao">{formatMessageId({ id: "Hu Tao" })}</option>
+        <option value="kazuha">{formatMessageId({ id: "Kazuha" })}</option>
+        <option value="ayaka">{formatMessageId({ id: "Ayaka" })}</option>
         <option value="none">{formatMessage({ defaultMessage: "Disabled" })}</option>
       </Select>
     </HStack>

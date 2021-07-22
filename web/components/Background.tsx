@@ -1,30 +1,45 @@
 import React, { memo } from "react";
-import { Config, useConfig } from "../utils/config";
-import { BackgroundKlee, BackgroundPaimon, BackgroundZhongli } from "../assets";
+import { useConfig } from "../utils/config";
+import {
+  BackgroundKlee,
+  BackgroundPaimon,
+  BackgroundDiluc,
+  BackgroundTartaglia,
+  BackgroundZhongli,
+  BackgroundXiao,
+  BackgroundHuTao,
+  BackgroundKazuha,
+  BackgroundAyaka,
+} from "../assets";
 import { chakra } from "@chakra-ui/react";
 
-const backgrounds: { [key in Config["background"]]?: string } = {
+export const CharacterBackgrounds = {
   paimon: BackgroundPaimon.src,
   klee: BackgroundKlee.src,
+  diluc: BackgroundDiluc.src,
+  tartaglia: BackgroundTartaglia.src,
   zhongli: BackgroundZhongli.src,
+  xiao: BackgroundXiao.src,
+  hutao: BackgroundHuTao.src,
+  kazuha: BackgroundKazuha.src,
+  ayaka: BackgroundAyaka.src,
 };
 
 const Background = () => {
   const [value] = useConfig("background");
-  const src = backgrounds[value];
 
-  if (!src) {
+  if (value === "none") {
     return null;
   }
 
   return (
     <chakra.img
-      src={src}
+      src={CharacterBackgrounds[value]}
       position="fixed"
       pointerEvents="none"
       userSelect="none"
       zIndex={-10}
-      opacity={0.05}
+      opacity={0.08}
       top={0}
       right={0}
       w="full"

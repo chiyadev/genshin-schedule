@@ -16,6 +16,7 @@ import { useListItemDispatch } from "./dispatch";
 import { ServerResetHour, useServerTime } from "./time";
 import { DateTime } from "luxon";
 import { Language } from "../langs";
+import { CharacterBackgrounds } from "../components/Background";
 
 type MapLocation = { lat: number; lng: number };
 
@@ -26,7 +27,7 @@ export type Config = {
   language: Language;
   server: "America" | "Europe" | "Asia" | "TW, HK, MO";
   theme: "light" | "dark";
-  background: "paimon" | "klee" | "zhongli" | "none";
+  background: keyof typeof CharacterBackgrounds | "none";
   lastChangelog: number;
   offsetDays: number;
   hiddenWidgets: {

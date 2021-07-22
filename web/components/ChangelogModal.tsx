@@ -34,6 +34,7 @@ function buildChangelog() {
       </Alert>
       <ChangelogItem>Upgraded all dependencies to latest versions.</ChangelogItem>
       <ChangelogItem>Added 2.0 Inazuma characters, weapons and artifacts.</ChangelogItem>
+      <ChangelogItem>Added more character backgrounds.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={30} date="2021/07/04">
       <ChangelogItem>Added Simplified Chinese localization. 添加了简体中文翻译。</ChangelogItem>

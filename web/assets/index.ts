@@ -17,8 +17,14 @@ import Apple from "./game/Apple.png";
 import AquilaFavonia from "./game/Aquila Favonia.png";
 import ArchaicPetra from "./game/Archaic Petra.png";
 import Ayaka from "./game/Ayaka.png";
+import BackgroundAyaka from "./game/BackgroundAyaka.png";
+import BackgroundDiluc from "./game/BackgroundDiluc.png";
+import BackgroundHuTao from "./game/BackgroundHuTao.png";
+import BackgroundKazuha from "./game/BackgroundKazuha.png";
 import BackgroundKlee from "./game/BackgroundKlee.png";
 import BackgroundPaimon from "./game/BackgroundPaimon.png";
+import BackgroundTartaglia from "./game/BackgroundTartaglia.png";
+import BackgroundXiao from "./game/BackgroundXiao.png";
 import BackgroundZhongli from "./game/BackgroundZhongli.png";
 import BambooSegment from "./game/Bamboo Segment.png";
 import Bamboo from "./game/Bamboo.png";
@@ -395,8 +401,14 @@ export {
   AquilaFavonia,
   ArchaicPetra,
   Ayaka,
+  BackgroundAyaka,
+  BackgroundDiluc,
+  BackgroundHuTao,
+  BackgroundKazuha,
   BackgroundKlee,
   BackgroundPaimon,
+  BackgroundTartaglia,
+  BackgroundXiao,
   BackgroundZhongli,
   BambooSegment,
   Bamboo,
@@ -775,8 +787,14 @@ export function getAssetByName(name: string): string | undefined {
     case "Aquila Favonia": return AquilaFavonia.src;
     case "Archaic Petra": return ArchaicPetra.src;
     case "Ayaka": return Ayaka.src;
+    case "BackgroundAyaka": return BackgroundAyaka.src;
+    case "BackgroundDiluc": return BackgroundDiluc.src;
+    case "BackgroundHuTao": return BackgroundHuTao.src;
+    case "BackgroundKazuha": return BackgroundKazuha.src;
     case "BackgroundKlee": return BackgroundKlee.src;
     case "BackgroundPaimon": return BackgroundPaimon.src;
+    case "BackgroundTartaglia": return BackgroundTartaglia.src;
+    case "BackgroundXiao": return BackgroundXiao.src;
     case "BackgroundZhongli": return BackgroundZhongli.src;
     case "Bamboo Segment": return BambooSegment.src;
     case "Bamboo": return Bamboo.src;
