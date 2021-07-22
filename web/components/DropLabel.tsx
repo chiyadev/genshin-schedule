@@ -35,7 +35,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
 
         return (
           <HStack key={domain.name} spacing={2}>
-            <chakra.img alt="Domain" src={Domain} w={4} h={4} />
+            <chakra.img alt="Domain" src={Domain.src} w={4} h={4} />
 
             <div>
               <FormattedMessage

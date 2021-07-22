@@ -11,7 +11,7 @@ const DomainDisplay = ({ domain, region, category, talentMaterials, weaponMateri
   return (
     <WhiteCard divide>
       <HStack spacing={2}>
-        <chakra.img alt="Domain" src={Domain} w={10} h={10} objectFit="contain" />
+        <chakra.img alt="Domain" src={Domain.src} w={10} h={10} objectFit="contain" />
 
         <div>
           <chakra.div fontSize="xl" fontWeight="bold">

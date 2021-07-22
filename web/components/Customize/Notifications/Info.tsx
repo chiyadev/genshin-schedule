@@ -53,7 +53,7 @@ const Info = () => {
             <FormattedMessage defaultMessage="Genshin Schedule has a Discord bot that can send you notifications when your resin recharges or resources respawn." />
           </div>
 
-          <chakra.img src={Bot} borderRadius="md" />
+          <chakra.img src={Bot.src} borderRadius="md" />
 
           <VStack align="start" spacing={2}>
             <div>
@@ -112,8 +112,8 @@ const Info = () => {
               <FormattedMessage defaultMessage="2. Make sure DMs from server members are enabled, otherwise the bot cannot message you." />
             </div>
 
-            <chakra.img src={Privacy} borderRadius="md" />
-            <chakra.img src={PrivacyDM} borderRadius="md" />
+            <chakra.img src={Privacy.src} borderRadius="md" />
+            <chakra.img src={PrivacyDM.src} borderRadius="md" />
           </VStack>
 
           <VStack align="start" spacing={2}>
@@ -124,7 +124,7 @@ const Info = () => {
             <MessageDisplay />
           </VStack>
 
-          <chakra.img src={Success} borderRadius="md" />
+          <chakra.img src={Success.src} borderRadius="md" />
         </VStack>
       </WhiteCard>
     </VStack>

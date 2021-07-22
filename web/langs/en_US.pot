@@ -46,7 +46,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:196
+#: components/ChangelogModal.tsx:199
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -3141,62 +3141,62 @@ msgctxt "pages.home.notifications.queue.fcf2e1"
 msgid "There are no notifications in queue."
 msgstr ""
 
-#: pages/index.tsx:100
+#: pages/index.tsx:103
 msgctxt "pages.index.0b66ba"
 msgid "Tracks open world resources and reminds you as soon as they respawn. There is no limit to the number of pins."
 msgstr ""
 
-#: pages/index.tsx:87
+#: pages/index.tsx:88
 msgctxt "pages.index.0ed193"
 msgid "Tracks your resins and estimates when it will recharge without having to open the game."
 msgstr ""
 
-#: pages/index.tsx:127
+#: pages/index.tsx:134
 msgctxt "pages.index.37b47a"
 msgid "Signing in will enable synchronization across multiple devices. If you do not already have an account, it will be created automatically."
 msgstr ""
 
-#: pages/index.tsx:124
+#: pages/index.tsx:131
 msgctxt "pages.index.49026d"
 msgid "Sign in"
 msgstr ""
 
-#: pages/index.tsx:77
+#: pages/index.tsx:78
 msgctxt "pages.index.657a74"
 msgid "Features"
 msgstr ""
 
-#: pages/index.tsx:97
+#: pages/index.tsx:100
 msgctxt "pages.index.755c57"
 msgid "Task scheduler"
 msgstr ""
 
-#: pages/index.tsx:110
+#: pages/index.tsx:115
 msgctxt "pages.index.79dc9c"
 msgid "Domain view"
 msgstr ""
 
-#: pages/index.tsx:84
+#: pages/index.tsx:85
 msgctxt "pages.index.96d48b"
 msgid "Resin calculator"
 msgstr ""
 
-#: pages/index.tsx:113
+#: pages/index.tsx:118
 msgctxt "pages.index.a92dae"
 msgid "Shows which domains can be cleared for ascension materials and artifacts for the day."
 msgstr ""
 
-#: pages/index.tsx:70
+#: pages/index.tsx:71
 msgctxt "pages.index.c0ef70"
 msgid "GitHub"
 msgstr ""
 
-#: pages/index.tsx:48
+#: pages/index.tsx:49
 msgctxt "pages.index.e3e15c"
 msgid "Genshin Schedule"
 msgstr ""
 
-#: pages/index.tsx:51
+#: pages/index.tsx:52
 msgctxt "pages.index.fcffbd"
 msgid "Genshin Schedule is a website to help you keep track of time-related game activities in Genshin Impact."
 msgstr ""

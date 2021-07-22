@@ -24,7 +24,7 @@ const NotificationSetter = () => {
       () => ({
         key: "resin",
         time: capTime,
-        icon: Resin,
+        icon: Resin.src,
         title: formatMessage({ defaultMessage: "Resin recharged" }),
         description:
           notifyMark === ResinCap

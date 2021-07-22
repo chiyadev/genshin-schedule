@@ -20,19 +20,19 @@ const FilterButtons = () => {
       <FilterButton
         type="character"
         label={<FormattedMessage defaultMessage="Characters" />}
-        image={useColorModeValue(BlackCharacter, WhiteCharacter)}
+        image={useColorModeValue(BlackCharacter.src, WhiteCharacter.src)}
       />
 
       <FilterButton
         type="weapon"
         label={<FormattedMessage defaultMessage="Weapons" />}
-        image={useColorModeValue(BlackWeapon, WhiteWeapon)}
+        image={useColorModeValue(BlackWeapon.src, WhiteWeapon.src)}
       />
 
       <FilterButton
         type="artifact"
         label={<FormattedMessage defaultMessage="Artifacts" />}
-        image={useColorModeValue(BlackArtifact, WhiteArtifact)}
+        image={useColorModeValue(BlackArtifact.src, WhiteArtifact.src)}
       />
     </ButtonGroup>
   );
@@ -61,7 +61,7 @@ const FilterButton = ({
         opacity={filters.includes(type) ? 1 : 0.5}
         onClick={() => {
           setFilters((filters) => arrayToggle(filters, type));
-          !filters.includes(type) && trackEvent("domainView", `filter${name}`);
+          !filters.includes(type) && trackEvent("domainView", `filter${label}`);
         }}
       >
         <img src={image} />

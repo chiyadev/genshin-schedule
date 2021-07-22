@@ -40,7 +40,7 @@ const Resin = () => {
         <HStack spacing={2}>
           <chakra.img
             alt="Resin"
-            src={ResinIcon}
+            src={ResinIcon.src}
             w={10}
             h={10}
             cursor="pointer"

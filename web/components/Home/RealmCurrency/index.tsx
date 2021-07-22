@@ -39,7 +39,7 @@ const RealmCurrency = () => {
         <HStack spacing={2}>
           <chakra.img
             alt="Realm Currency"
-            src={RealmCurrencyIcon}
+            src={RealmCurrencyIcon.src}
             cursor="pointer"
             onClick={() => {
               setMode((mode) => {

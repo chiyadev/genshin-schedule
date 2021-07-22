@@ -11,6 +11,7 @@ import { FaGithub, FaSignInAlt } from "react-icons/fa";
 import UserSignIn from "../components/Auth/UserSignIn";
 import Favicon180x180 from "../public/favicon-180x180.png";
 import { FormattedMessage } from "react-intl";
+import NextImage from "next/image";
 
 type Props = {};
 
@@ -40,7 +41,7 @@ const Welcome = () => {
         <VStack align="stretch" spacing={32} py={32} flex={1} maxW="568px" mx="auto">
           <VStack align="stretch" spacing={8}>
             <div>
-              <chakra.img w={20} src={Favicon180x180} borderRadius="md" />
+              <chakra.img w={20} src={Favicon180x180.src} borderRadius="md" />
             </div>
 
             <VStack align="stretch" spacing={4}>
@@ -88,7 +89,9 @@ const Welcome = () => {
                   </chakra.div>
                 </VStack>
 
-                <img src={ResinCalculator} />
+                <div>
+                  <NextImage src={ResinCalculator} />
+                </div>
               </VStack>
 
               <VStack align="stretch" spacing={8}>
@@ -101,7 +104,9 @@ const Welcome = () => {
                   </chakra.div>
                 </VStack>
 
-                <img src={TaskScheduler} />
+                <div>
+                  <NextImage src={TaskScheduler} />
+                </div>
               </VStack>
 
               <VStack align="stretch" spacing={8}>
@@ -114,7 +119,9 @@ const Welcome = () => {
                   </chakra.div>
                 </VStack>
 
-                <img src={DomainView} />
+                <div>
+                  <NextImage src={DomainView} />
+                </div>
               </VStack>
             </VStack>
           </VStack>

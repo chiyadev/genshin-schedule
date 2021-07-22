@@ -4,9 +4,9 @@ import { BackgroundKlee, BackgroundPaimon, BackgroundZhongli } from "../assets";
 import { chakra } from "@chakra-ui/react";
 
 const backgrounds: { [key in Config["background"]]?: string } = {
-  paimon: BackgroundPaimon,
-  klee: BackgroundKlee,
-  zhongli: BackgroundZhongli,
+  paimon: BackgroundPaimon.src,
+  klee: BackgroundKlee.src,
+  zhongli: BackgroundZhongli.src,
 };
 
 const Background = () => {

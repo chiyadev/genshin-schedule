@@ -37,7 +37,7 @@ const TaskMarker = ({
 
   const icon = useMemo(() => {
     return new Icon({
-      iconUrl: getAssetByName(task.icon) || TransparentPixel,
+      iconUrl: getAssetByName(task.icon) || TransparentPixel.src,
       iconSize: [36, 36],
       className: "task-marker-icon",
     });
