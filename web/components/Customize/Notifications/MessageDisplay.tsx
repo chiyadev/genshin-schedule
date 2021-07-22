@@ -1,9 +1,9 @@
 import { Button, Icon, Input, InputGroup, InputLeftAddon, useClipboard } from "@chakra-ui/react";
 import React, { memo, useEffect, useState } from "react";
-import { FaCheck, FaCopy } from "react-icons/fa";
 import { createApiClient } from "../../../utils/api";
 import { trackEvent } from "../../../utils/umami";
 import { FormattedMessage, useIntl } from "react-intl";
+import { Check, Copy } from "react-feather";
 
 const MessageDisplay = () => {
   const { formatMessage } = useIntl();
@@ -25,7 +25,7 @@ const MessageDisplay = () => {
     <InputGroup>
       <InputLeftAddon
         as={Button}
-        leftIcon={<Icon as={hasCopied ? FaCheck : FaCopy} />}
+        leftIcon={<Icon as={hasCopied ? Check : Copy} />}
         onClick={() => {
           onCopy();
           trackEvent("notifications", "tokenCopy");

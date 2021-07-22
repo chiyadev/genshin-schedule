@@ -1,8 +1,8 @@
 import React, { memo } from "react";
-import { FaDiscord, FaGithub, FaHeart, FaKeyboard, FaQuestion } from "react-icons/fa";
 import { chakra, HStack, Icon, Link, Divider, Tooltip, VStack } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { FormattedMessage } from "react-intl";
+import { Command, GitHub, Heart, HelpCircle, MessageSquare } from "react-feather";
 
 const Footer = ({ showShortcuts }: { showShortcuts?: () => void }) => {
   return (
@@ -41,32 +41,32 @@ const Footer = ({ showShortcuts }: { showShortcuts?: () => void }) => {
         {showShortcuts && (
           <Tooltip label={<FormattedMessage defaultMessage="Shortcuts" />}>
             <Link as="button" onClick={showShortcuts}>
-              <Icon as={FaKeyboard} />
+              <Icon as={Command} />
             </Link>
           </Tooltip>
         )}
 
         <Tooltip label={<FormattedMessage defaultMessage="Help" />}>
           <Link href="https://github.com/chiyadev/genshin-schedule/wiki" isExternal>
-            <Icon as={FaQuestion} />
+            <Icon as={HelpCircle} />
           </Link>
         </Tooltip>
 
         <Tooltip label={<FormattedMessage defaultMessage="Discord" />}>
           <Link href="https://discord.gg/XdPQeEaBE7" isExternal>
-            <Icon as={FaDiscord} />
+            <Icon as={MessageSquare} />
           </Link>
         </Tooltip>
 
         <Tooltip label={<FormattedMessage defaultMessage="GitHub" />}>
           <Link href="https://github.com/chiyadev/genshin-schedule" isExternal>
-            <Icon as={FaGithub} />
+            <Icon as={GitHub} />
           </Link>
         </Tooltip>
 
         <Tooltip label="chiya.dev">
           <Link href="https://chiya.dev" isExternal>
-            <Icon as={FaHeart} />
+            <Icon as={Heart} />
           </Link>
         </Tooltip>
       </HStack>

@@ -1,9 +1,9 @@
 import React, { memo } from "react";
 import { useConfig } from "../../../utils/config";
-import { FaRegStickyNote } from "react-icons/fa";
 import { HStack, Icon, Textarea, VStack } from "@chakra-ui/react";
 import { Character } from "../../../db/characters";
 import { FormattedMessage, useIntl } from "react-intl";
+import { AlignCenter } from "react-feather";
 
 const NoteInput = ({ character }: { character: Character }) => {
   const { formatMessage } = useIntl();
@@ -12,7 +12,7 @@ const NoteInput = ({ character }: { character: Character }) => {
   return (
     <VStack align="stretch" spacing={2}>
       <HStack fontSize="lg" spacing={2}>
-        <Icon as={FaRegStickyNote} />
+        <Icon as={AlignCenter} />
         <div>
           <FormattedMessage defaultMessage="Additional notes" />
         </div>

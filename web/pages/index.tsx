@@ -7,11 +7,11 @@ import Layout from "../components/Layout";
 import ResinCalculator from "../assets/welcome/ResinCalculator.jpg";
 import TaskScheduler from "../assets/welcome/TaskScheduler.jpg";
 import DomainView from "../assets/welcome/DomainView.jpg";
-import { FaGithub, FaSignInAlt } from "react-icons/fa";
 import UserSignIn from "../components/Auth/UserSignIn";
 import Favicon180x180 from "../public/favicon-180x180.png";
 import { FormattedMessage } from "react-intl";
 import NextImage from "next/image";
+import { GitHub, LogIn } from "react-feather";
 
 type Props = {};
 
@@ -56,7 +56,7 @@ const Welcome = () => {
             <ButtonGroup>
               <Button
                 colorScheme="blue"
-                leftIcon={<Icon as={FaSignInAlt} />}
+                leftIcon={<Icon as={LogIn} />}
                 onClick={() => authRef.current?.scrollIntoView({ block: "start" })}
               >
                 <FormattedMessage defaultMessage="Sign in" />
@@ -64,7 +64,7 @@ const Welcome = () => {
 
               <Button
                 as="a"
-                leftIcon={<Icon as={FaGithub} />}
+                leftIcon={<Icon as={GitHub} />}
                 href="https://github.com/chiyadev/genshin-schedule"
                 target="_blank"
               >

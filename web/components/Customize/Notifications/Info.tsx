@@ -13,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 import React, { memo } from "react";
 import WhiteCard from "../../WhiteCard";
-import { FaBell, FaDiscord, FaLink, FaListUl } from "react-icons/fa";
 import Bot from "../../../assets/notifications/Bot.jpg";
 import Privacy from "../../../assets/notifications/Privacy.jpg";
 import PrivacyDM from "../../../assets/notifications/PrivacyDM.jpg";
@@ -21,6 +20,7 @@ import Success from "../../../assets/notifications/Success.jpg";
 import MessageDisplay from "./MessageDisplay";
 import NextLink from "next/link";
 import { FormattedMessage } from "react-intl";
+import { Bell, List, MessageSquare, Link as LinkIcon } from "react-feather";
 
 export const DiscordServerInvite = "https://discord.gg/XdPQeEaBE7";
 export const DiscordBotInvite =
@@ -31,7 +31,7 @@ const Info = () => {
     <VStack flex={1} align="stretch" spacing={4}>
       <WhiteCard divide>
         <HStack spacing={2} fontSize="xl" fontWeight="bold">
-          <Icon as={FaBell} />
+          <Icon as={Bell} />
           <div>
             <FormattedMessage defaultMessage="Notifications" />
           </div>
@@ -41,7 +41,7 @@ const Info = () => {
             <span>
               <NextLink href="/home/notifications/queue" passHref>
                 <Link color={useColorModeValue("blue.500", "blue.300")}>
-                  <Icon as={FaListUl} fontSize="md" />
+                  <Icon as={List} fontSize="md" />
                 </Link>
               </NextLink>
             </span>
@@ -82,7 +82,7 @@ const Info = () => {
                   as="a"
                   href={DiscordServerInvite}
                   target="_blank"
-                  leftIcon={<Icon as={FaDiscord} />}
+                  leftIcon={<Icon as={MessageSquare} />}
                   color="white"
                   bg="#7289da"
                   colorScheme="none"
@@ -96,7 +96,7 @@ const Info = () => {
                   as="a"
                   href={DiscordBotInvite}
                   target="_blank"
-                  leftIcon={<Icon as={FaLink} />}
+                  leftIcon={<Icon as={LinkIcon} />}
                   color="white"
                   bg="#7289da"
                   colorScheme="none"

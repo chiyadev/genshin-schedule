@@ -17,11 +17,11 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
-import { FaUpload, FaUserEdit } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { useRouter } from "next/router";
 import { createApiClient, setAuthToken, User } from "../../../utils/api";
 import { FormattedMessage, useIntl } from "react-intl";
+import { Upload, User as UserIcon } from "react-feather";
 
 const AccountManageButton = ({ user }: { user: User }) => {
   const { formatMessage } = useIntl();
@@ -35,7 +35,7 @@ const AccountManageButton = ({ user }: { user: User }) => {
   return (
     <>
       <Button
-        leftIcon={<Icon as={FaUserEdit} />}
+        leftIcon={<Icon as={UserIcon} />}
         onClick={() => {
           setOpen(true);
           trackEvent("accountManager", "show");
@@ -125,7 +125,7 @@ const AccountManageButton = ({ user }: { user: User }) => {
 
             <ModalFooter>
               <ButtonGroup>
-                <Button type="submit" colorScheme="red" leftIcon={<Icon as={FaUpload} />} isLoading={load}>
+                <Button type="submit" colorScheme="red" leftIcon={<Icon as={Upload} />} isLoading={load}>
                   <FormattedMessage defaultMessage="Submit" />
                 </Button>
 

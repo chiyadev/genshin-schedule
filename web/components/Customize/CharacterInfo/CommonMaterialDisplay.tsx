@@ -2,11 +2,11 @@ debugger;
 import React, { memo, useState } from "react";
 import { Character } from "../../../db/characters";
 import { CommonMaterial, CommonMaterialWiki } from "../../../db/commonMaterials";
-import { FaPlus } from "react-icons/fa";
 import { Badge, Button, chakra, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import { useTaskCreator } from "../../../utils/tasks";
 import { FormattedMessage, FormattedMessage as FormattedMessageId, useIntl } from "react-intl";
+import { Plus } from "react-feather";
 
 const CommonMaterialDisplay = ({ character, material }: { character: Character; material: CommonMaterial }) => {
   const { formatMessage, formatMessage: formatMessageId } = useIntl();
@@ -42,7 +42,7 @@ const CommonMaterialDisplay = ({ character, material }: { character: Character; 
 
       <Button
         size="sm"
-        leftIcon={<Icon as={FaPlus} />}
+        leftIcon={<Icon as={Plus} />}
         isLoading={create}
         onClick={async () => {
           setCreate(true);

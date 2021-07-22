@@ -1,10 +1,10 @@
 import React, { memo, useState } from "react";
-import { FaSearch } from "react-icons/fa";
 import TaskSearchModal from "../TaskSearchModal";
 import { useConfig } from "../../utils/config";
-import { HStack, Link } from "@chakra-ui/react";
+import { HStack, Icon, Link } from "@chakra-ui/react";
 import { trackEvent } from "../../utils/umami";
 import { FormattedMessage } from "react-intl";
+import { Search } from "react-feather";
 
 const SearchButton = () => {
   const [open, setOpen] = useState(false);
@@ -22,7 +22,7 @@ const SearchButton = () => {
         }}
       >
         <HStack spacing={2}>
-          <FaSearch />
+          <Icon as={Search} />
           <div>{query ? `"${query}"` : <FormattedMessage defaultMessage="Search" />}</div>
         </HStack>
       </Link>

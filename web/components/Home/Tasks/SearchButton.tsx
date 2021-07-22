@@ -1,11 +1,11 @@
 import React, { memo, useState } from "react";
-import { FaSearch } from "react-icons/fa";
 import { Tooltip } from "@chakra-ui/tooltip";
 import TaskSearchModal from "../../TaskSearchModal";
 import { useConfig } from "../../../utils/config";
 import { Button, HStack, Icon } from "@chakra-ui/react";
 import { trackEvent } from "../../../utils/umami";
 import { FormattedMessage } from "react-intl";
+import { Search } from "react-feather";
 
 const SearchButton = () => {
   const [open, setOpen] = useState(false);
@@ -30,7 +30,7 @@ const SearchButton = () => {
             trackEvent("taskList", "taskSearch");
           }}
         >
-          <Icon as={FaSearch} />
+          <Icon as={Search} />
         </Button>
       </Tooltip>
     </HStack>

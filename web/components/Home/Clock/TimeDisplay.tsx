@@ -1,10 +1,11 @@
 import React, { memo, useCallback } from "react";
 import { useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
-import { Button, Heading, HStack, Tooltip } from "@chakra-ui/react";
+import { Button, Heading, HStack, Icon, Tooltip } from "@chakra-ui/react";
 import { useHotkeys } from "react-hotkeys-hook";
 import { useServerTime } from "../../../utils/time";
 import { FormattedMessage } from "react-intl";
+import { ChevronLeft, ChevronRight } from "react-feather";
 
 const TimeDisplay = () => {
   const time = useServerTime();
@@ -60,7 +61,7 @@ const TimeDisplay = () => {
     <HStack spacing={2} fontFamily="Genshin" justify="center">
       <Tooltip label={<FormattedMessage defaultMessage="Previous day" />} closeOnClick={false}>
         <Button variant="ghost" fontSize="4xl" w={12} h={12} p={0} onClick={backward} disabled={offset <= -6}>
-          &lt;
+          <Icon as={ChevronLeft} />
         </Button>
       </Tooltip>
 
@@ -70,7 +71,7 @@ const TimeDisplay = () => {
 
       <Tooltip label={<FormattedMessage defaultMessage="Next day" />} closeOnClick={false}>
         <Button variant="ghost" fontSize="4xl" w={12} h={12} p={0} onClick={forward} disabled={offset >= 6}>
-          &gt;
+          <Icon as={ChevronRight} />
         </Button>
       </Tooltip>
     </HStack>

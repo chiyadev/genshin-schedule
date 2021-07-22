@@ -1,9 +1,9 @@
 import React, { Dispatch, memo, useEffect, useState } from "react";
 import { Icon, Input, InputGroup, InputLeftElement, Modal, ModalContent, ModalOverlay, VStack } from "@chakra-ui/react";
-import { FaSearch } from "react-icons/fa";
 import { useConfig } from "../utils/config";
 import { useHotkeys } from "react-hotkeys-hook";
 import { useIntl } from "react-intl";
+import { Search } from "react-feather";
 
 const TaskSearchModal = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<boolean> }) => {
   const { formatMessage } = useIntl();
@@ -25,7 +25,7 @@ const TaskSearchModal = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<b
         <VStack align="stretch" spacing={2}>
           <InputGroup size="lg">
             <InputLeftElement pointerEvents="none">
-              <Icon as={FaSearch} color="gray.500" />
+              <Icon as={Search} />
             </InputLeftElement>
 
             <Input

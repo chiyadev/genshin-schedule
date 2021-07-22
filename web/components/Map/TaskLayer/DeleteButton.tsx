@@ -1,10 +1,10 @@
 import React, { memo } from "react";
 import { Task, useConfig, useSync } from "../../../utils/config";
-import { FaTrash } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { HStack, Icon, Link } from "@chakra-ui/react";
 import { createApiClient } from "../../../utils/api";
 import { FormattedMessage } from "react-intl";
+import { Trash } from "react-feather";
 
 const DeleteButton = ({ task }: { task: Task }) => {
   const [, setTasks] = useConfig("tasks");
@@ -26,7 +26,7 @@ const DeleteButton = ({ task }: { task: Task }) => {
       }}
     >
       <HStack spacing={2}>
-        <Icon as={FaTrash} />
+        <Icon as={Trash} />
         <div>
           <FormattedMessage defaultMessage="Delete" />
         </div>

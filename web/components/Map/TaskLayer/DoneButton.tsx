@@ -1,11 +1,11 @@
 import React, { Dispatch, memo, SetStateAction } from "react";
 import { Task } from "../../../utils/config";
 import { useServerTime } from "../../../utils/time";
-import { FaCheck, FaTimes } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { HStack, Icon, Link, useColorModeValue } from "@chakra-ui/react";
 import { useTaskDoneSetter, useTaskFocusSetter } from "../../../utils/tasks";
 import { FormattedMessage } from "react-intl";
+import { Check, X } from "react-feather";
 
 const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateAction<Task>> }) => {
   const time = useServerTime(1000);
@@ -26,7 +26,7 @@ const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateA
       }}
     >
       <HStack spacing={2}>
-        <Icon as={due ? FaTimes : FaCheck} />
+        <Icon as={due ? X : Check} />
         <div>
           {due ? (
             <FormattedMessage defaultMessage="Mark as to-do" />

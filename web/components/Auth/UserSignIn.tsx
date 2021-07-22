@@ -17,11 +17,11 @@ import {
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
-import { FaSignInAlt, FaUser } from "react-icons/fa";
 import { createApiClient, setAuthToken } from "../../utils/api";
 import { trackEvent } from "../../utils/umami";
 import { useRouter } from "next/router";
 import { FormattedMessage, useIntl } from "react-intl";
+import { LogIn, UserX } from "react-feather";
 
 const UserSignIn = () => {
   const { formatMessage } = useIntl();
@@ -104,7 +104,7 @@ const UserSignIn = () => {
           type="submit"
           isLoading={load}
           colorScheme="blue"
-          leftIcon={<Icon as={FaSignInAlt} />}
+          leftIcon={<Icon as={LogIn} />}
           disabled={load || !username || !password}
           onClick={async (e) => {
             // fixes network error on firefox: https://github.com/chiyadev/genshin-schedule/issues/8
@@ -136,7 +136,7 @@ const UserSignIn = () => {
         >
           <Button
             disabled={load}
-            leftIcon={<Icon as={FaUser} />}
+            leftIcon={<Icon as={UserX} />}
             onClick={() => {
               setAuthToken(undefined, "null");
               trackEvent("auth", "signInAnonymous");

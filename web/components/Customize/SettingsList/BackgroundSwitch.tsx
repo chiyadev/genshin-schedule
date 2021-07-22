@@ -1,9 +1,9 @@
 import React, { memo } from "react";
 import { HStack, Icon, Select } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/config";
-import { FaImage } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { FormattedMessage, useIntl } from "react-intl";
+import { Image } from "react-feather";
 
 const BackgroundSwitch = () => {
   const { formatMessage, formatMessage: formatMessageId } = useIntl();
@@ -12,7 +12,7 @@ const BackgroundSwitch = () => {
   return (
     <HStack spacing={4}>
       <HStack spacing={2}>
-        <Icon as={FaImage} />
+        <Icon as={Image} />
         <div>
           <FormattedMessage defaultMessage="Background" />
         </div>

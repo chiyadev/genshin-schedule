@@ -13,10 +13,10 @@ import { motion } from "framer-motion";
 import { useServerTime } from "../../../utils/time";
 import NotificationSetter from "./NotificationSetter";
 import EstimatorByNotifyMark from "./EstimatorByNotifyMark";
-import { FaBell } from "react-icons/fa";
 import NextLink from "next/link";
 import { FormattedMessage, useIntl } from "react-intl";
 import AutoSizeInput from "../../AutoSizeInput";
+import { Bell } from "react-feather";
 
 const estimateModes: Config["resinEstimateMode"][] = ["time", "value"];
 
@@ -117,7 +117,7 @@ const Resin = () => {
 
           {notifyMark !== ResinCap && current < notifyMark && (
             <HStack spacing={1} ml={-4}>
-              <Icon as={FaBell} w={3} fontSize="xs" />
+              <Icon as={Bell} w={3} fontSize="xs" />
 
               <NextLink href="/home/notifications/queue" passHref>
                 <Link>

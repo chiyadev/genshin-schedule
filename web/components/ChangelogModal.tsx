@@ -14,8 +14,8 @@ import {
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
-import { FaBullhorn } from "react-icons/fa";
 import { FormattedMessage } from "react-intl";
+import { GitPullRequest } from "react-feather";
 
 const LatestChangelog = 31;
 
@@ -37,6 +37,7 @@ function buildChangelog() {
       <ChangelogItem>Added normal boss drops and character ascension materials to the database.</ChangelogItem>
       <ChangelogItem>Added more character backgrounds.</ChangelogItem>
       <ChangelogItem>Improved some more parts of the website UI.</ChangelogItem>
+      <ChangelogItem>Changed website icon set for a cleaner look.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={30} date="2021/07/04">
       <ChangelogItem>Added Simplified Chinese localization. 添加了简体中文翻译。</ChangelogItem>
@@ -210,7 +211,7 @@ const ChangelogModal = () => {
       <ModalContent>
         <ModalHeader>
           <HStack>
-            <Icon as={FaBullhorn} />
+            <Icon as={GitPullRequest} />
             <div>
               <FormattedMessage defaultMessage="Update changelog" />
             </div>

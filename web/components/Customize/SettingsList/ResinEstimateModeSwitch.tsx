@@ -1,9 +1,9 @@
 import React, { memo } from "react";
 import { chakra, HStack, Icon, Select } from "@chakra-ui/react";
-import { FaCalculator } from "react-icons/fa";
 import { useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
 import { FormattedMessage, useIntl } from "react-intl";
+import { Divide } from "react-feather";
 
 const ResinEstimateModeSwitch = () => {
   const { formatMessage } = useIntl();
@@ -12,7 +12,7 @@ const ResinEstimateModeSwitch = () => {
   return (
     <HStack w="full" spacing={4}>
       <HStack spacing={2}>
-        <Icon as={FaCalculator} />
+        <Icon as={Divide} />
         <div>
           <FormattedMessage defaultMessage="Resin estimation mode" />
         </div>

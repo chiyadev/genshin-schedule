@@ -481,22 +481,22 @@ msgctxt "components.Home.DomainView.DomainDisplay.0388b5"
 msgid "{category}, {region}"
 msgstr ""
 
-#: components/Home/DomainView/FilterButtons.tsx:34
+#: components/Home/DomainView/FilterButtons.tsx:30
 msgctxt "components.Home.DomainView.FilterButtons.4477a1"
 msgid "Weapons"
 msgstr ""
 
-#: components/Home/DomainView/FilterButtons.tsx:28
+#: components/Home/DomainView/FilterButtons.tsx:24
 msgctxt "components.Home.DomainView.FilterButtons.4e372c"
 msgid "Characters"
 msgstr ""
 
-#: components/Home/DomainView/FilterButtons.tsx:22
+#: components/Home/DomainView/FilterButtons.tsx:20
 msgctxt "components.Home.DomainView.FilterButtons.77dce8"
 msgid "Hide always available"
 msgstr ""
 
-#: components/Home/DomainView/FilterButtons.tsx:40
+#: components/Home/DomainView/FilterButtons.tsx:36
 msgctxt "components.Home.DomainView.FilterButtons.796e5e"
 msgid "Artifacts"
 msgstr ""

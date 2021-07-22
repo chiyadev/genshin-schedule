@@ -1,10 +1,10 @@
 import React, { memo } from "react";
 import { HStack, Icon, Select } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/config";
-import { FaGlobeAsia } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { FormattedMessage, useIntl } from "react-intl";
 import { LanguageNames, Languages } from "../../../langs";
+import { Globe } from "react-feather";
 
 const LanguageSwitch = () => {
   const { formatMessage } = useIntl();
@@ -13,7 +13,7 @@ const LanguageSwitch = () => {
   return (
     <HStack spacing={4}>
       <HStack spacing={2}>
-        <Icon as={FaGlobeAsia} />
+        <Icon as={Globe} />
         <div>
           <FormattedMessage defaultMessage="Language" />
         </div>

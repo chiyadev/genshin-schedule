@@ -1,10 +1,10 @@
 import React, { memo, ReactNode } from "react";
 import Favicon32x32 from "../public/favicon-32x32.png";
 import { chakra, HStack, Icon, Link, Spacer } from "@chakra-ui/react";
-import { FaCog } from "react-icons/fa";
 import NextLink from "next/link";
 import { Tooltip } from "@chakra-ui/tooltip";
 import { FormattedMessage } from "react-intl";
+import { Settings } from "react-feather";
 
 const Header = ({ menu }: { menu?: ReactNode }) => {
   return (
@@ -29,7 +29,7 @@ const Header = ({ menu }: { menu?: ReactNode }) => {
           <Link flexShrink={0}>
             <Tooltip label={<FormattedMessage defaultMessage="Customize" />}>
               <span>
-                <Icon as={FaCog} />
+                <Icon as={Settings} />
               </span>
             </Tooltip>
           </Link>

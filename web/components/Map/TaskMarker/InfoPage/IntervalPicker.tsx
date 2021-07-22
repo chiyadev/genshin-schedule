@@ -1,10 +1,10 @@
 import React, { Dispatch, memo, useRef, useState } from "react";
 import { getAccuratestUnit, getUnitMs, ServerResetHour, TimeUnit, useFormatUnit } from "../../../../utils/time";
-import { FaSyncAlt } from "react-icons/fa";
 import { chakra, HStack, Icon, Input, Select } from "@chakra-ui/react";
 import { Task } from "../../../../utils/config";
 import { Duration } from "luxon";
 import { FormattedMessage, useIntl } from "react-intl";
+import { RefreshCw } from "react-feather";
 
 const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch<Task["refreshTime"]> }) => {
   const { formatMessage } = useIntl();
@@ -15,7 +15,7 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch
 
   return (
     <HStack fontSize="sm" spacing={2}>
-      <Icon as={FaSyncAlt} />
+      <Icon as={RefreshCw} />
       <chakra.div flexShrink={0}>
         <FormattedMessage defaultMessage="Respawns every" />:
       </chakra.div>

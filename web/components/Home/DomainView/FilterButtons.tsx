@@ -12,16 +12,12 @@ import {
   WhiteWeapon,
 } from "../../../assets";
 import { FormattedMessage } from "react-intl";
-import { FaCalendar } from "react-icons/fa";
+import { Calendar } from "react-feather";
 
 const FilterButtons = () => {
   return (
     <ButtonGroup isAttached>
-      <FilterButton
-        type="today"
-        label={<FormattedMessage defaultMessage="Hide always available" />}
-        icon={FaCalendar}
-      />
+      <FilterButton type="today" label={<FormattedMessage defaultMessage="Hide all-week domains" />} icon={Calendar} />
 
       <FilterButton
         type="character"
