@@ -51,6 +51,27 @@ export const Gold: TalentMaterial = {
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Gold%22",
 };
 
+export const Transience: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: registerMessage({ defaultMessage: "Teachings of Transience" }),
+  item: registerMessage({ defaultMessage: "Teachings of Transience" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Talent_Level-Up_Materials",
+};
+
+export const Elegance: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: registerMessage({ defaultMessage: "Elegance" }),
+  item: registerMessage({ defaultMessage: "Teachings of Elegance" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_Elegance",
+};
+
+export const Light: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: registerMessage({ defaultMessage: "Light" }),
+  item: registerMessage({ defaultMessage: "Teachings of Light" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_Light",
+};
+
 export const DvalinPlume: TalentMaterial = {
   type: "Talent Level-Up Material",
   name: registerMessage({ defaultMessage: "Dvalin's Plume" }),
@@ -142,6 +163,9 @@ export const TalentMaterials = [
   Diligence,
   Ballad,
   Gold,
+  Transience,
+  Elegance,
+  Light,
   DvalinPlume,
   DvalinSigh,
   DvalinClaw,

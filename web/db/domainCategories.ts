@@ -3,6 +3,7 @@ import {
   CeciliaGarden,
   ClearPoolAndMountainCavern,
   ConfrontStormterror,
+  CourtOfFlowingSand,
   Domain,
   DomainOfGuyun,
   EnterTheGoldenHouse,
@@ -10,10 +11,12 @@ import {
   HiddenPalaceOfLianshanFormula,
   HiddenPalaceOfZhouFormula,
   MidsummerCourtyard,
+  MomijiDyedCourt,
   PeakOfVindagnyr,
   RidgeWatch,
   TaishanMansion,
   ValleyOfRemembrance,
+  VioletCourt,
   WolfOfTheNorthChallenge,
 } from "./domains";
 import { registerMessage } from "../utils";
@@ -28,8 +31,8 @@ export type DomainCategory = {
 export const DomainOfForgery: DomainCategory = {
   name: registerMessage({ defaultMessage: "Domain of Forgery" }),
   dropDescription: registerMessage({ defaultMessage: "Weapon Ascension Materials" }),
-  domains: [CeciliaGarden, HiddenPalaceOfLianshanFormula],
-  wiki: "https://genshin-impact.fandom.com/wiki/Category:Domain_of_Forgery",
+  domains: [CeciliaGarden, HiddenPalaceOfLianshanFormula, CourtOfFlowingSand],
+  wiki: "https://genshin-impact.fandom.com/wiki/Category:Domains_of_Forgery",
 };
 
 export const DomainOfBlessing: DomainCategory = {
@@ -43,15 +46,16 @@ export const DomainOfBlessing: DomainCategory = {
     ClearPoolAndMountainCavern,
     PeakOfVindagnyr,
     RidgeWatch,
+    MomijiDyedCourt,
   ],
-  wiki: "https://genshin-impact.fandom.com/wiki/Category:Domain_of_Blessing",
+  wiki: "https://genshin-impact.fandom.com/wiki/Category:Domains_of_Blessing",
 };
 
 export const DomainOfMastery: DomainCategory = {
   name: registerMessage({ defaultMessage: "Domain of Mastery" }),
   dropDescription: registerMessage({ defaultMessage: "Talent Level-Up Materials" }),
-  domains: [ForsakenRift, TaishanMansion],
-  wiki: "https://genshin-impact.fandom.com/wiki/Category:Domain_of_Mastery",
+  domains: [ForsakenRift, TaishanMansion, VioletCourt],
+  wiki: "https://genshin-impact.fandom.com/wiki/Category:Domains_of_Mastery",
 };
 
 export const Trounce: DomainCategory = {

@@ -13,6 +13,8 @@ for (const character of Characters) {
 
   for (const material of [...character.talentMaterials, ...character.talentMaterialWeekly]) {
     CharacterSearch.add(material.name, character);
+    CharacterSearch.add(material.item, character);
+
     materialToCharacters.add(material.name, character);
   }
 }

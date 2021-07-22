@@ -3,6 +3,7 @@ import {
   CeciliaGarden,
   ClearPoolAndMountainCavern,
   ConfrontStormterror,
+  CourtOfFlowingSand,
   Domain,
   DomainOfGuyun,
   EnterTheGoldenHouse,
@@ -10,10 +11,12 @@ import {
   HiddenPalaceOfLianshanFormula,
   HiddenPalaceOfZhouFormula,
   MidsummerCourtyard,
+  MomijiDyedCourt,
   PeakOfVindagnyr,
   RidgeWatch,
   TaishanMansion,
   ValleyOfRemembrance,
+  VioletCourt,
   WolfOfTheNorthChallenge,
 } from "./domains";
 import {
@@ -118,7 +121,7 @@ export const Inazuma: Region = {
   type: "Region",
   name: registerMessage({ defaultMessage: "Inazuma" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Inazuma",
-  domains: [],
+  domains: [MomijiDyedCourt, VioletCourt, CourtOfFlowingSand],
   characters: [Ayaka, Kazuha, Sayu, Yoimiya],
 };
 

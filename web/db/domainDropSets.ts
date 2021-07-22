@@ -7,6 +7,7 @@ import {
   BraveHeart,
   CrimsonWitchOfFlames,
   DefendersWill,
+  EmblemOfSeveredFate,
   Gambler,
   GladiatorsFinale,
   Icebreaker,
@@ -21,6 +22,7 @@ import {
   ResolutionOfSojourner,
   RetracingBolide,
   Scholar,
+  ShimenawaReminiscence,
   TenacityOfTheMillelith,
   TheExile,
   ThunderingFury,
@@ -33,10 +35,13 @@ import {
 import {
   Aerosiderite,
   BorealWolf,
+  CoralBranchOfADistantSea,
   DandelionGladiator,
   Decarabian,
   Guyun,
+  MaskOfTheWickedLieutenant,
   MistVeiledElixir,
+  NarukamiWisdom,
   WeaponMaterial,
 } from "./weaponMaterials";
 import {
@@ -59,15 +64,18 @@ import {
   BloodjadeBranch,
   DragonLordsCrown,
   GildedScale,
+  Light,
+  Transience,
+  Elegance,
 } from "./talentMaterials";
 import { Weekday } from "../utils/time";
 import { registerMessage } from "../utils";
 
-const MonThur: Weekday[] = ["monday", "thursday"];
-const TuesFri: Weekday[] = ["tuesday", "friday"];
+const MonThu: Weekday[] = ["monday", "thursday"];
+const TueFri: Weekday[] = ["tuesday", "friday"];
 const WedSat: Weekday[] = ["wednesday", "saturday"];
 const Sun: Weekday[] = ["sunday"];
-const AnyDay: Weekday[] = [...MonThur, ...TuesFri, ...WedSat, ...Sun];
+const AnyDay: Weekday[] = [...MonThu, ...TueFri, ...WedSat, ...Sun];
 const Trounce: Weekday[] = AnyDay;
 
 export type DomainDropSet = {
@@ -80,14 +88,14 @@ export type DomainDropSet = {
 export const CityOfReflections: DomainDropSet = {
   type: "Domain Drop Set",
   name: registerMessage({ defaultMessage: "City of Reflections" }),
-  days: MonThur,
+  days: MonThu,
   items: [Decarabian],
 };
 
 export const SubmergedValley: DomainDropSet = {
   type: "Domain Drop Set",
   name: registerMessage({ defaultMessage: "Submerged Valley" }),
-  days: TuesFri,
+  days: TueFri,
   items: [BorealWolf],
 };
 
@@ -98,9 +106,8 @@ export const RuinsOfThirstingCapital: DomainDropSet = {
   items: [DandelionGladiator],
 };
 
-export const AltarOfTheFalls: DomainDropSet = {
+export const CeciliaGardenDrops4: DomainDropSet = {
   type: "Domain Drop Set",
-  name: registerMessage({ defaultMessage: "Altar of the Falls" }),
   days: Sun,
   items: [Decarabian, BorealWolf, DandelionGladiator],
 };
@@ -108,14 +115,14 @@ export const AltarOfTheFalls: DomainDropSet = {
 export const Thundercloud: DomainDropSet = {
   type: "Domain Drop Set",
   name: registerMessage({ defaultMessage: "Thundercloud" }),
-  days: MonThur,
+  days: MonThu,
   items: [Guyun],
 };
 
 export const ThunderingRuins: DomainDropSet = {
   type: "Domain Drop Set",
   name: registerMessage({ defaultMessage: "Thundering Ruins" }),
-  days: TuesFri,
+  days: TueFri,
   items: [MistVeiledElixir],
 };
 
@@ -126,7 +133,7 @@ export const TrailGroundsOfThunder: DomainDropSet = {
   items: [Aerosiderite],
 };
 
-export const ElectrostaticField: DomainDropSet = {
+export const HiddenPalaceOfLianshanFormulaDrops4: DomainDropSet = {
   type: "Domain Drop Set",
   name: registerMessage({ defaultMessage: "Electrostatic Field" }),
   days: Sun,
@@ -135,13 +142,13 @@ export const ElectrostaticField: DomainDropSet = {
 
 export const ForsakenRiftDrops1: DomainDropSet = {
   type: "Domain Drop Set",
-  days: MonThur,
+  days: MonThu,
   items: [Freedom],
 };
 
 export const ForsakenRiftDrops2: DomainDropSet = {
   type: "Domain Drop Set",
-  days: TuesFri,
+  days: TueFri,
   items: [Resistance],
 };
 
@@ -159,13 +166,13 @@ export const ForsakenRiftDrops4: DomainDropSet = {
 
 export const TaishanMansionDrops1: DomainDropSet = {
   type: "Domain Drop Set",
-  days: MonThur,
+  days: MonThu,
   items: [Prosperity],
 };
 
 export const TaishanMansionDrops2: DomainDropSet = {
   type: "Domain Drop Set",
-  days: TuesFri,
+  days: TueFri,
   items: [Diligence],
 };
 
@@ -274,15 +281,66 @@ export const RidgeWatchDrops: DomainDropSet = {
   items: [BraveHeart, MartialArtist, TenacityOfTheMillelith, PaleFlame],
 };
 
+export const MomijiDyedCourtDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: AnyDay,
+  items: [ResolutionOfSojourner, TinyMiracle, ShimenawaReminiscence, EmblemOfSeveredFate],
+};
+
+export const VioletCourtDrops1: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: MonThu,
+  items: [Transience],
+};
+
+export const VioletCourtDrops2: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: TueFri,
+  items: [Elegance],
+};
+
+export const VioletCourtDrops3: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: WedSat,
+  items: [Light],
+};
+
+export const SunkenSands: DomainDropSet = {
+  type: "Domain Drop Set",
+  name: registerMessage({ defaultMessage: "Sunken Sands" }),
+  days: MonThu,
+  items: [CoralBranchOfADistantSea],
+};
+
+export const AltarOfSands: DomainDropSet = {
+  type: "Domain Drop Set",
+  name: registerMessage({ defaultMessage: "Altar of Sands" }),
+  days: TueFri,
+  items: [NarukamiWisdom],
+};
+
+export const SandBurial: DomainDropSet = {
+  type: "Domain Drop Set",
+  name: registerMessage({ defaultMessage: "Sand Burial" }),
+  days: WedSat,
+  items: [MaskOfTheWickedLieutenant],
+};
+
+export const CourtOfFlowingSandDrops4: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Sun,
+  items: [CoralBranchOfADistantSea, NarukamiWisdom, MaskOfTheWickedLieutenant],
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
   RuinsOfThirstingCapital,
-  AltarOfTheFalls,
+  CeciliaGardenDrops4,
   Thundercloud,
   ThunderingRuins,
   TrailGroundsOfThunder,
-  ElectrostaticField,
+  HiddenPalaceOfLianshanFormulaDrops4,
   ForsakenRiftDrops1,
   ForsakenRiftDrops2,
   ForsakenRiftDrops3,
@@ -302,4 +360,12 @@ export const DomainDropSets = [
   EnterTheGoldenHouseDrops,
   BeneathTheDragonQuellerDrops,
   RidgeWatchDrops,
+  MomijiDyedCourtDrops,
+  VioletCourtDrops1,
+  VioletCourtDrops2,
+  VioletCourtDrops3,
+  SunkenSands,
+  AltarOfSands,
+  SandBurial,
+  CourtOfFlowingSandDrops4,
 ];

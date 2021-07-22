@@ -219,6 +219,41 @@ export const SeaGanoderma: CommonMaterial = {
   wiki: "https://genshin-impact.fandom.com/wiki/Sea_Ganoderma",
 };
 
+export const Handguard: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Old Handguard" }),
+  item: registerMessage({ defaultMessage: "Old Handguard" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Old_Handguard",
+};
+
+export const SakuraBloom: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Sakura Bloom" }),
+  item: registerMessage({ defaultMessage: "Sakura Bloom" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Sakura_Bloom",
+};
+
+export const NakuWeed: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Naku Weed" }),
+  item: registerMessage({ defaultMessage: "Naku Weed" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Naku_Weed",
+};
+
+export const ChaosGear: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Chaos Gear" }),
+  item: registerMessage({ defaultMessage: "Chaos Gear" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Chaos_Gear",
+};
+
+export const MirrorPrism: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Mirror Prism" }),
+  item: registerMessage({ defaultMessage: "Dismal Prism" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Dismal_Prism",
+};
+
 export const CommonMaterials = [
   BoneShard,
   CallaLily,
@@ -250,4 +285,9 @@ export const CommonMaterials = [
   WindwheelAster,
   Wolfhook,
   SeaGanoderma,
+  Handguard,
+  SakuraBloom,
+  NakuWeed,
+  ChaosGear,
+  MirrorPrism,
 ];

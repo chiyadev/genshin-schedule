@@ -6,6 +6,7 @@ import {
   DvalinClaw,
   DvalinPlume,
   DvalinSigh,
+  Elegance,
   Freedom,
   GildedScale,
   Gold,
@@ -17,6 +18,7 @@ import {
   SpiritLocketOfBoreas,
   TailOfBoreas,
   TalentMaterial,
+  Transience,
   TuskOfMonocerosCaeli,
 } from "./talentMaterials";
 import {
@@ -27,12 +29,14 @@ import {
   DandelionSeed,
   FatuiInsignia,
   GlazeLily,
+  Handguard,
   HilichurlArrowhead,
   HilichurlMask,
   JueyunChili,
   NoctilucousJade,
   PhilanemoMushroom,
   Qingxin,
+  SakuraBloom,
   SamachurlScroll,
   SeaGanoderma,
   SilkFlower,
@@ -63,7 +67,7 @@ export type Character = {
 export const TravelerAnemo: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Traveler (Anemo)" }),
-  wiki: "https://genshin-impact.fandom.com/wiki/Traveler#Anemo",
+  wiki: "https://genshin-impact.fandom.com/wiki/Traveler_(Anemo)",
   talentMaterialWeekly: [DvalinSigh],
   talentMaterials: [Resistance, Ballad],
   commonMaterials: [SamachurlScroll, WindwheelAster],
@@ -72,10 +76,19 @@ export const TravelerAnemo: Character = {
 export const TravelerGeo: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Traveler (Geo)" }),
-  wiki: "https://genshin-impact.fandom.com/wiki/Traveler#Geo",
+  wiki: "https://genshin-impact.fandom.com/wiki/Traveler_(Geo)",
   talentMaterialWeekly: [DvalinSigh],
   talentMaterials: [Resistance, Diligence],
   commonMaterials: [SamachurlScroll, HilichurlArrowhead, WindwheelAster],
+};
+
+export const TravelerElectro: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Traveler (Electro)" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Traveler_(Electro)",
+  talentMaterialWeekly: [DragonLordsCrown],
+  talentMaterials: [Transience],
+  commonMaterials: [Handguard],
 };
 
 export const Amber: Character = {
@@ -342,11 +355,10 @@ export const Ganyu: Character = {
 export const Ayaka: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Ayaka" }),
-  wiki: "https://genshin.honeyhunterworld.com/db/char/ayaka/",
-  talentMaterialWeekly: [RingOfBoreas],
-  talentMaterials: [Prosperity],
-  commonMaterials: [SamachurlScroll, WhopperflowerNectar, SmallLampGrass],
-  leaked: true,
+  wiki: "https://genshin-impact.fandom.com/wiki/Kamisato_Ayaka",
+  talentMaterialWeekly: [BloodjadeBranch],
+  talentMaterials: [Elegance],
+  commonMaterials: [SakuraBloom, Handguard],
 };
 
 export const Xiao: Character = {
@@ -412,6 +424,7 @@ export const Yoimiya: Character = {
 export const Characters = [
   //TravelerAnemo,
   //TravelerGeo,
+  //TravelerElectro,
   Albedo,
   Amber,
   Ayaka,

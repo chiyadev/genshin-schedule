@@ -9,7 +9,14 @@ const materialToWeapons = new MultiMap<string, Weapon>();
 for (const weapon of Weapons) {
   WeaponSearch.add(weapon.type, weapon);
   WeaponSearch.add(weapon.name, weapon);
+
   WeaponSearch.add(weapon.material.name, weapon);
+  WeaponSearch.add(weapon.material.item, weapon);
+
+  for (const material of weapon.commonMaterials) {
+    WeaponSearch.add(material.name, weapon);
+    WeaponSearch.add(material.item, weapon);
+  }
 
   materialToWeapons.add(weapon.material.name, weapon);
 }

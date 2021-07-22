@@ -1,12 +1,12 @@
 import {
-  AltarOfTheFalls,
+  CeciliaGardenDrops4,
   BeneathTheDragonQuellerDrops,
   CityOfReflections,
   ClearPoolAndMountainCavernDrops,
   ConfrontStormterrorDrops,
   DomainDropSet,
   DomainOfGuyunDrops,
-  ElectrostaticField,
+  HiddenPalaceOfLianshanFormulaDrops4,
   EnterTheGoldenHouseDrops,
   ForsakenRiftDrops1,
   ForsakenRiftDrops2,
@@ -14,6 +14,7 @@ import {
   ForsakenRiftDrops4,
   HiddenPalaceOfZhouFormulaDrops,
   MidsummerCourtyardDrops,
+  MomijiDyedCourtDrops,
   PeakOfVindagnyrDrops,
   RidgeWatchDrops,
   RuinsOfThirstingCapital,
@@ -26,7 +27,14 @@ import {
   ThunderingRuins,
   TrailGroundsOfThunder,
   ValleyOfRemembranceDrops,
+  VioletCourtDrops1,
+  VioletCourtDrops2,
+  VioletCourtDrops3,
   WolfOfTheNorthChallengeDrops,
+  SunkenSands,
+  AltarOfSands,
+  SandBurial,
+  CourtOfFlowingSandDrops4,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
 
@@ -41,14 +49,14 @@ export const CeciliaGarden: Domain = {
   type: "Domain",
   name: registerMessage({ defaultMessage: "Cecilia Garden" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Cecilia_Garden",
-  drops: [CityOfReflections, SubmergedValley, RuinsOfThirstingCapital, AltarOfTheFalls],
+  drops: [CityOfReflections, SubmergedValley, RuinsOfThirstingCapital, CeciliaGardenDrops4],
 };
 
 export const HiddenPalaceOfLianshanFormula: Domain = {
   type: "Domain",
   name: registerMessage({ defaultMessage: "Hidden Palace of Lianshan Formula" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Hidden_Palace_of_Lianshan_Formula",
-  drops: [Thundercloud, ThunderingRuins, TrailGroundsOfThunder, ElectrostaticField],
+  drops: [Thundercloud, ThunderingRuins, TrailGroundsOfThunder, HiddenPalaceOfLianshanFormulaDrops4],
 };
 
 export const MidsummerCourtyard: Domain = {
@@ -142,6 +150,27 @@ export const RidgeWatch: Domain = {
   drops: [RidgeWatchDrops],
 };
 
+export const MomijiDyedCourt: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Momiji-Dyed Court" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Momiji-Dyed_Court",
+  drops: [MomijiDyedCourtDrops],
+};
+
+export const VioletCourt: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Violet Court" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Violet_Court",
+  drops: [VioletCourtDrops1, VioletCourtDrops2, VioletCourtDrops3],
+};
+
+export const CourtOfFlowingSand: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Court of Flowing Sand" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Court_of_Flowing_Sand",
+  drops: [SunkenSands, AltarOfSands, SandBurial, CourtOfFlowingSandDrops4],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -158,4 +187,7 @@ export const Domains = [
   EnterTheGoldenHouse,
   BeneathTheDragonQueller,
   RidgeWatch,
+  MomijiDyedCourt,
+  VioletCourt,
+  CourtOfFlowingSand,
 ];

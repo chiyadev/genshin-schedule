@@ -51,4 +51,35 @@ export const Aerosiderite: WeaponMaterial = {
   wiki: "https://genshin-impact.fandom.com/wiki/Grain_of_Aerosiderite",
 };
 
-export const WeaponMaterials = [Decarabian, Guyun, BorealWolf, MistVeiledElixir, DandelionGladiator, Aerosiderite];
+export const CoralBranchOfADistantSea: WeaponMaterial = {
+  type: "Weapon Ascension Material",
+  name: registerMessage({ defaultMessage: "Coral Branch of a Distant Sea" }),
+  item: registerMessage({ defaultMessage: "Coral Branch of a Distant Sea" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Coral_Branch_of_a_Distant_Sea",
+};
+
+export const NarukamiWisdom: WeaponMaterial = {
+  type: "Weapon Ascension Material",
+  name: registerMessage({ defaultMessage: "Narukami's Wisdom" }),
+  item: registerMessage({ defaultMessage: "Narukami's Wisdom" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Narukami%27s_Wisdom",
+};
+
+export const MaskOfTheWickedLieutenant: WeaponMaterial = {
+  type: "Weapon Ascension Material",
+  name: registerMessage({ defaultMessage: "Mask of the Wicked Lieutenant" }),
+  item: registerMessage({ defaultMessage: "Mask of the Wicked Lieutenant" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Mask_of_the_Wicked_Lieutenant",
+};
+
+export const WeaponMaterials = [
+  Decarabian,
+  Guyun,
+  BorealWolf,
+  MistVeiledElixir,
+  DandelionGladiator,
+  Aerosiderite,
+  CoralBranchOfADistantSea,
+  NarukamiWisdom,
+  MaskOfTheWickedLieutenant,
+];
