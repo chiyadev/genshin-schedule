@@ -228,7 +228,7 @@ const DomainView = () => {
             {!!domains.length && <span> ({domains.length})</span>}
           </span>
         }
-        menu={<FilterButtons />}
+        menu={!!domains.length && <FilterButtons />}
       >
         {domains.length ? (
           <Grid className={domainColumns.some((column) => !column.length) ? undefined : styles.grid} gap={4}>
@@ -241,7 +241,7 @@ const DomainView = () => {
             ))}
           </Grid>
         ) : (
-          <Alert status="info">
+          <Alert status="info" borderRadius="md">
             <AlertIcon />
             <VStack align="start" spacing={0}>
               <AlertTitle>

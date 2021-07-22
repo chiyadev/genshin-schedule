@@ -15,17 +15,17 @@ import NotificationSetter from "./NotificationSetter";
 import EstimatorByNotifyMark from "./EstimatorByNotifyMark";
 import { FaBell } from "react-icons/fa";
 import NextLink from "next/link";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import AutoSizeInput from "../../AutoSizeInput";
 
 const estimateModes: Config["resinEstimateMode"][] = ["time", "value"];
 
 const Resin = () => {
+  const { formatMessage } = useIntl();
   const [resin, setResin] = useConfig("resin");
   const [, setStats] = useCurrentStats();
   const [mode, setMode] = useConfig("resinEstimateMode");
   const [notifyMark] = useConfig("resinNotifyMark");
-
   const [hover, setHover] = useState(false);
   const resinInput = useRef<HTMLInputElement>(null);
 
@@ -43,15 +43,20 @@ const Resin = () => {
             src={ResinIcon.src}
             w={10}
             h={10}
-            cursor="pointer"
+            cursor={current < ResinCap ? "pointer" : undefined}
             transform="scale(1.4)"
             onClick={() => {
+              if (current >= ResinCap) {
+                return;
+              }
+
               setMode((mode) => {
                 return estimateModes[(estimateModes.indexOf(mode) + 1) % estimateModes.length];
               });
 
               trackEvent("resin", "estimateSwitch");
             }}
+            title={formatMessage({ defaultMessage: "Switch estimation mode" })}
           />
 
           <AutoSizeInput
@@ -93,7 +98,7 @@ const Resin = () => {
         </HStack>
 
         <VStack
-          align="stretch"
+          align="start"
           spacing={2}
           color="gray.500"
           pl={12}
@@ -101,9 +106,9 @@ const Resin = () => {
           divider={<StackDivider borderColor={useColorModeValue("gray.200", "gray.700")} />}
         >
           {current >= ResinCap ? (
-            <span>
+            <chakra.span bg={useColorModeValue("yellow.100", "yellow.900")}>
               <FormattedMessage defaultMessage="Your resins are full." />
-            </span>
+            </chakra.span>
           ) : mode === "time" ? (
             <EstimatorByTime />
           ) : mode === "value" ? (

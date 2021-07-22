@@ -34,6 +34,7 @@ const Background = () => {
 
   return (
     <chakra.img
+      key={value}
       src={CharacterBackgrounds[value]}
       position="fixed"
       pointerEvents="none"

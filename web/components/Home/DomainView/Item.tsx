@@ -6,9 +6,10 @@ import NextLink from "next/link";
 import ItemNote from "./ItemNote";
 import { useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
-import { FormattedMessage as FormattedMessageId } from "react-intl";
+import { FormattedMessage as FormattedMessageId, useIntl } from "react-intl";
 
 const Item = ({ path, name }: { path: "characters" | "weapons" | "artifacts"; name: string }) => {
+  const { formatMessage } = useIntl();
   const [highlights, setHighlights] = useConfig("itemHighlights");
   const [highlightColor] = useToken("colors", [useColorModeValue("yellow.100", "yellow.900")]);
 
@@ -27,6 +28,7 @@ const Item = ({ path, name }: { path: "characters" | "weapons" | "artifacts"; na
           setHighlights((highlights) => arrayToggle(highlights, name));
           trackEvent("domainView", "itemHighlight");
         }}
+        title={formatMessage({ defaultMessage: "Highlight item" })}
       />
 
       <div>

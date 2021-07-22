@@ -8,6 +8,7 @@ import { FormattedMessage } from "react-intl";
 
 const MarkAllDone = () => {
   const time = useServerTime(1000);
+  const [showHidden] = useConfig("taskListShowHidden");
   const [, setTasks] = useConfig("tasks");
 
   return (
@@ -17,7 +18,7 @@ const MarkAllDone = () => {
       onClick={() => {
         setTasks((tasks) =>
           tasks.map((task) => {
-            if (task.visible && task.dueTime <= time.valueOf()) {
+            if ((showHidden || task.visible) && task.dueTime <= time.valueOf()) {
               return {
                 ...task,
                 dueTime:

@@ -3,7 +3,7 @@ import { TalentMaterial, TalentMaterialWiki } from "../../../db/talentMaterials"
 import { WeaponMaterial, WeaponMaterialWiki } from "../../../db/weaponMaterials";
 import { Character } from "../../../db/characters";
 import { Weapon } from "../../../db/weapons";
-import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
+import { Badge, chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import Item from "./Item";
 import { FormattedMessage as FormattedMessageId } from "react-intl";
@@ -28,7 +28,8 @@ const MaterialList = ({
               <FormattedMessageId id={material.name} />
             </Link>
           </chakra.div>
-          <chakra.div fontSize="sm" color="gray.500">
+
+          <Badge color="gray.500">
             <Link
               href={
                 material.type === "Talent Level-Up Material"
@@ -41,7 +42,7 @@ const MaterialList = ({
             >
               <FormattedMessageId id={material.type} />
             </Link>
-          </chakra.div>
+          </Badge>
         </div>
       </HStack>
 

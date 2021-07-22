@@ -35,13 +35,13 @@ import {
 import {
   Aerosiderite,
   BorealWolf,
-  CoralBranchOfADistantSea,
+  BranchOfDistantSea,
   DandelionGladiator,
   Decarabian,
   Guyun,
-  MaskOfTheWickedLieutenant,
+  NarukamiMask,
   MistVeiledElixir,
-  NarukamiWisdom,
+  Narukami,
   WeaponMaterial,
 } from "./weaponMaterials";
 import {
@@ -309,27 +309,27 @@ export const SunkenSands: DomainDropSet = {
   type: "Domain Drop Set",
   name: registerMessage({ defaultMessage: "Sunken Sands" }),
   days: MonThu,
-  items: [CoralBranchOfADistantSea],
+  items: [BranchOfDistantSea],
 };
 
 export const AltarOfSands: DomainDropSet = {
   type: "Domain Drop Set",
   name: registerMessage({ defaultMessage: "Altar of Sands" }),
   days: TueFri,
-  items: [NarukamiWisdom],
+  items: [Narukami],
 };
 
 export const SandBurial: DomainDropSet = {
   type: "Domain Drop Set",
   name: registerMessage({ defaultMessage: "Sand Burial" }),
   days: WedSat,
-  items: [MaskOfTheWickedLieutenant],
+  items: [NarukamiMask],
 };
 
 export const CourtOfFlowingSandDrops4: DomainDropSet = {
   type: "Domain Drop Set",
   days: Sun,
-  items: [CoralBranchOfADistantSea, NarukamiWisdom, MaskOfTheWickedLieutenant],
+  items: [BranchOfDistantSea, Narukami, NarukamiMask],
 };
 
 export const DomainDropSets = [

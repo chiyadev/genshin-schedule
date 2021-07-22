@@ -3,7 +3,7 @@ import React, { memo, useState } from "react";
 import { Character } from "../../../db/characters";
 import { CommonMaterial, CommonMaterialWiki } from "../../../db/commonMaterials";
 import { FaPlus } from "react-icons/fa";
-import { Button, chakra, HStack, Icon, Link, VStack } from "@chakra-ui/react";
+import { Badge, Button, chakra, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import { useTaskCreator } from "../../../utils/tasks";
 import { FormattedMessage, FormattedMessage as FormattedMessageId, useIntl } from "react-intl";
@@ -24,11 +24,12 @@ const CommonMaterialDisplay = ({ character, material }: { character: Character; 
               <FormattedMessageId id={material.name} />
             </Link>
           </chakra.div>
-          <chakra.div fontSize="sm" color="gray.500">
+
+          <Badge color="gray.500">
             <Link href={CommonMaterialWiki} isExternal>
               <FormattedMessageId id={material.type} />
             </Link>
-          </chakra.div>
+          </Badge>
         </div>
       </HStack>
 

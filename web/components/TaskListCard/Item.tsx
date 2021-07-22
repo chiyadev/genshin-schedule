@@ -5,6 +5,7 @@ import { trackEvent } from "../../utils/umami";
 import DoneButton from "./DoneButton";
 import { getAssetByName } from "../../assets";
 import { useTaskFocusSetter } from "../../utils/tasks";
+import { useIntl } from "react-intl";
 
 const Item = ({
   task,
@@ -15,6 +16,7 @@ const Item = ({
   setTask: Dispatch<SetStateAction<Task>>;
   onTaskClick?: (task: Task) => void;
 }) => {
+  const { formatMessage } = useIntl();
   const [compact] = useConfig("taskListCompact");
   const [highlightColor] = useToken("colors", [useColorModeValue("yellow.100", "yellow.900")]);
 
@@ -55,6 +57,7 @@ const Item = ({
 
             trackEvent("taskList", "taskHighlight");
           }}
+          title={formatMessage({ defaultMessage: "Highlight task" })}
         />
 
         {compact ? (

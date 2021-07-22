@@ -3,7 +3,7 @@ import { createApiClient, WebData } from "../../../utils/api";
 import { GetServerSideProps } from "next";
 import ConfigProvider from "../../../components/ConfigProvider";
 import Layout from "../../../components/Layout";
-import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
+import { Badge, chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import WhiteCard from "../../../components/WhiteCard";
 import { getAssetByName } from "../../../assets";
 import { Artifacts, ArtifactWiki } from "../../../db/artifacts";
@@ -60,11 +60,12 @@ const ArtifactInfo = ({ data, name }: Props) => {
                     {artifact.name}
                   </Link>
                 </chakra.div>
-                <chakra.div fontSize="sm" color="gray.500">
+
+                <Badge colorScheme="yellow">
                   <Link href={ArtifactWiki} isExternal>
                     {artifact.type}
                   </Link>
-                </chakra.div>
+                </Badge>
               </div>
             </HStack>
 

@@ -102,7 +102,7 @@ export const DefaultConfig: Config = {
   offsetDays: 0,
   hiddenWidgets: {},
   resin: {
-    value: ResinCap,
+    value: 0,
     time: Date.now(),
   },
   resinEstimateMode: "time",

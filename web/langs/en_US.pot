@@ -16,7 +16,7 @@ msgctxt "components.Auth.UserSignIn.57f247"
 msgid "Forgot password?"
 msgstr ""
 
-#: components/Auth/UserSignIn.tsx:144
+#: components/Auth/UserSignIn.tsx:147
 msgctxt "components.Auth.UserSignIn.61ef74"
 msgid "Continue as anonymous"
 msgstr ""
@@ -26,7 +26,7 @@ msgctxt "components.Auth.UserSignIn.7249ee"
 msgid "Never reuse your miHoYo password on Genshin-related websites."
 msgstr ""
 
-#: components/Auth/UserSignIn.tsx:133
+#: components/Auth/UserSignIn.tsx:134
 msgctxt "components.Auth.UserSignIn.93eb72"
 msgid "All data will be stored locally on the browser."
 msgstr ""
@@ -46,7 +46,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:212
+#: components/ChangelogModal.tsx:214
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -86,12 +86,12 @@ msgctxt "components.Customize.ArtifactList.index.796e5e"
 msgid "Artifacts"
 msgstr ""
 
-#: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:55
+#: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:56
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
 msgstr ""
 
-#: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:45
+#: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:46
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.b4b55a"
 msgid "ascension material for {name}"
 msgstr ""
@@ -116,7 +116,7 @@ msgctxt "components.Customize.CharacterInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
 msgstr ""
 
-#: components/Customize/CharacterList/Icon.tsx:60
+#: components/Customize/CharacterList/Icon.tsx:61
 msgctxt "components.Customize.CharacterList.Icon.e637aa"
 msgid "Unknown"
 msgstr ""
@@ -261,7 +261,7 @@ msgctxt "components.Customize.SettingsList.BackgroundSwitch.5d0640"
 msgid "Background"
 msgstr ""
 
-#: components/Customize/SettingsList/BackgroundSwitch.tsx:31
+#: components/Customize/SettingsList/BackgroundSwitch.tsx:37
 msgctxt "components.Customize.SettingsList.BackgroundSwitch.b6d853"
 msgid "Disabled"
 msgstr ""
@@ -356,12 +356,12 @@ msgctxt "components.Customize.SettingsList.index.0f789d"
 msgid "Settings"
 msgstr ""
 
-#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:54
+#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:55
 msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
 msgstr ""
 
-#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:44
+#: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:45
 msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.b4b55a"
 msgid "ascension material for {name}"
 msgstr ""
@@ -446,12 +446,12 @@ msgctxt "components.Header.e3e15c"
 msgid "Genshin Schedule"
 msgstr ""
 
-#: components/Home/Clock/DateDisplay.tsx:34
+#: components/Home/Clock/DateDisplay.tsx:33
 msgctxt "components.Home.Clock.DateDisplay.d1826b"
 msgid "{value, plural, one {# resin} other {# resins}}"
 msgstr ""
 
-#: components/Home/Clock/DateDisplay.tsx:26
+#: components/Home/Clock/DateDisplay.tsx:25
 msgctxt "components.Home.Clock.DateDisplay.de212c"
 msgid "{duration} until reset"
 msgstr ""
@@ -471,12 +471,12 @@ msgctxt "components.Home.Clock.TimeDisplay.dd708b"
 msgid "Next day"
 msgstr ""
 
-#: components/Home/Clock/index.tsx:15
+#: components/Home/Clock/index.tsx:16
 msgctxt "components.Home.Clock.index.2cbf2a"
 msgid "Time in Teyvat"
 msgstr ""
 
-#: components/Home/DomainView/DomainDisplay.tsx:23
+#: components/Home/DomainView/DomainDisplay.tsx:24
 msgctxt "components.Home.DomainView.DomainDisplay.0388b5"
 msgid "{category}, {region}"
 msgstr ""
@@ -494,6 +494,11 @@ msgstr ""
 #: components/Home/DomainView/FilterButtons.tsx:34
 msgctxt "components.Home.DomainView.FilterButtons.796e5e"
 msgid "Artifacts"
+msgstr ""
+
+#: components/Home/DomainView/Item.tsx:31
+msgctxt "components.Home.DomainView.Item.238d34"
+msgid "Highlight item"
 msgstr ""
 
 #: components/Home/DomainView/index.tsx:267
@@ -521,7 +526,12 @@ msgctxt "components.Home.DomainView.index.f52777"
 msgid "Go to {customize} to add domains, or maybe try some {link}?"
 msgstr ""
 
-#: components/Home/RealmCurrency/ClearButton.tsx:23
+#: components/Home/RealmCurrency/ClearButton.tsx:22
+msgctxt "components.Home.RealmCurrency.ClearButton.3bc57c"
+msgid "Clear currency"
+msgstr ""
+
+#: components/Home/RealmCurrency/ClearButton.tsx:24
 msgctxt "components.Home.RealmCurrency.ClearButton.fc60a8"
 msgid "Clear"
 msgstr ""
@@ -536,27 +546,32 @@ msgctxt "components.Home.RealmCurrency.EstimatorByTime.f0f932"
 msgid "{value} in {duration}"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:73
+#: components/Home/RealmCurrency/index.tsx:79
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
 msgid "Trust rank"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:80
+#: components/Home/RealmCurrency/index.tsx:86
 msgctxt "components.Home.RealmCurrency.index.27268e"
 msgid "Realm currency"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:57
+#: components/Home/RealmCurrency/index.tsx:63
 msgctxt "components.Home.RealmCurrency.index.33dd2d"
 msgid "Adeptal energy"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:90
+#: components/Home/RealmCurrency/index.tsx:99
 msgctxt "components.Home.RealmCurrency.index.9ca85f"
 msgid "Your realm currency is full."
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:35
+#: components/Home/RealmCurrency/index.tsx:59
+msgctxt "components.Home.RealmCurrency.index.c3eb42"
+msgid "Switch estimation mode"
+msgstr ""
+
+#: components/Home/RealmCurrency/index.tsx:36
 msgctxt "components.Home.RealmCurrency.index.d43d9b"
 msgid "Realm Currency Calculator"
 msgstr ""
@@ -591,9 +606,19 @@ msgctxt "components.Home.Resin.NotificationSetter.db8673"
 msgid "Resin recharged"
 msgstr ""
 
-#: components/Home/Resin/index.tsx:105
+#: components/Home/Resin/Subtractor.tsx:61
+msgctxt "components.Home.Resin.Subtractor.387912"
+msgid "Subtract {amount} resins"
+msgstr ""
+
+#: components/Home/Resin/index.tsx:110
 msgctxt "components.Home.Resin.index.506b0c"
 msgid "Your resins are full."
+msgstr ""
+
+#: components/Home/Resin/index.tsx:59
+msgctxt "components.Home.Resin.index.c3eb42"
+msgid "Switch estimation mode"
 msgstr ""
 
 #: components/Home/Resin/index.tsx:36
@@ -601,7 +626,7 @@ msgctxt "components.Home.Resin.index.fe85b2"
 msgid "Resin Calculator"
 msgstr ""
 
-#: components/Home/Tasks/MarkAllDone.tsx:39
+#: components/Home/Tasks/MarkAllDone.tsx:40
 msgctxt "components.Home.Tasks.MarkAllDone.ec7046"
 msgid "Mark everything as done"
 msgstr ""
@@ -611,9 +636,14 @@ msgctxt "components.Home.Tasks.SearchButton.c66715"
 msgid "Search"
 msgstr ""
 
-#: components/Home/Tasks/ShowHiddenButton.tsx:13
+#: components/Home/Tasks/ShowHiddenButton.tsx:15
 msgctxt "components.Home.Tasks.ShowHiddenButton.7a418f"
 msgid "Show hidden"
+msgstr ""
+
+#: components/Home/Tasks/ShowHiddenButton.tsx:15
+msgctxt "components.Home.Tasks.ShowHiddenButton.e9f3d0"
+msgid "Hide hidden"
 msgstr ""
 
 #: components/Home/Tasks/index.tsx:53
@@ -686,17 +716,17 @@ msgctxt "components.Map.TaskMarker.InfoPage.HideCheck.fdf592"
 msgid "Hide temporarily"
 msgstr ""
 
-#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:67
+#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:70
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.52cf48"
 msgid "{time}AM"
 msgstr ""
 
-#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:66
+#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:69
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.6e6cc8"
 msgid "Server reset"
 msgstr ""
 
-#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:19
+#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:20
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.a736a6"
 msgid "Respawns every"
 msgstr ""
@@ -721,7 +751,17 @@ msgctxt "components.Map.TaskMarker.InfoPage.NotifyToggle.da9e7e"
 msgid "Notify respawn"
 msgstr ""
 
-#: components/Map/TaskMarker/InfoPage/index.tsx:70
+#: components/Map/TaskMarker/InfoPage/index.tsx:94
+msgctxt "components.Map.TaskMarker.InfoPage.index.343579"
+msgid "Options"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/index.tsx:52
+msgctxt "components.Map.TaskMarker.InfoPage.index.656cac"
+msgid "Change icon"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/index.tsx:82
 msgctxt "components.Map.TaskMarker.InfoPage.index.906238"
 msgid "Task description"
 msgstr ""
@@ -861,57 +901,57 @@ msgctxt "components.Statistics.ResetButton.e3b158"
 msgid "Cancel"
 msgstr ""
 
-#: components/Statistics/ResinStats.tsx:84
+#: components/Statistics/ResinStats.tsx:101
 msgctxt "components.Statistics.ResinStats.101bad"
 msgid "{percent}% efficiency"
 msgstr ""
 
-#: components/Statistics/ResinStats.tsx:79
+#: components/Statistics/ResinStats.tsx:93
 msgctxt "components.Statistics.ResinStats.309da3"
 msgid "Total"
 msgstr ""
 
-#: components/Statistics/ResinStats.tsx:102
+#: components/Statistics/ResinStats.tsx:119
 msgctxt "components.Statistics.ResinStats.6b30d3"
 msgid "Peak"
 msgstr ""
 
-#: components/Statistics/ResinStats.tsx:107
+#: components/Statistics/ResinStats.tsx:127
 msgctxt "components.Statistics.ResinStats.76ed65"
 msgid "Never"
 msgstr ""
 
-#: components/Statistics/ResinStats.tsx:15
+#: components/Statistics/ResinStats.tsx:26
 msgctxt "components.Statistics.ResinStats.99ed7d"
 msgid "Resins spent"
 msgstr ""
 
-#: components/Statistics/ResinStats.tsx:63
+#: components/Statistics/ResinStats.tsx:74
 msgctxt "components.Statistics.ResinStats.cd681b"
 msgid "Today"
 msgstr ""
 
-#: components/Statistics/TaskStats.tsx:76
+#: components/Statistics/TaskStats.tsx:90
 msgctxt "components.Statistics.TaskStats.309da3"
 msgid "Total"
 msgstr ""
 
-#: components/Statistics/TaskStats.tsx:92
+#: components/Statistics/TaskStats.tsx:109
 msgctxt "components.Statistics.TaskStats.6b30d3"
 msgid "Peak"
 msgstr ""
 
-#: components/Statistics/TaskStats.tsx:97
+#: components/Statistics/TaskStats.tsx:117
 msgctxt "components.Statistics.TaskStats.76ed65"
 msgid "Never"
 msgstr ""
 
-#: components/Statistics/TaskStats.tsx:14
+#: components/Statistics/TaskStats.tsx:25
 msgctxt "components.Statistics.TaskStats.c90f7d"
 msgid "Tasks done"
 msgstr ""
 
-#: components/Statistics/TaskStats.tsx:61
+#: components/Statistics/TaskStats.tsx:72
 msgctxt "components.Statistics.TaskStats.cd681b"
 msgid "Today"
 msgstr ""
@@ -919,6 +959,11 @@ msgstr ""
 #: components/TaskListCard/DoneButton.tsx:24
 msgctxt "components.TaskListCard.DoneButton.927523"
 msgid "Mark as done"
+msgstr ""
+
+#: components/TaskListCard/Item.tsx:60
+msgctxt "components.TaskListCard.Item.0ababe"
+msgid "Highlight task"
 msgstr ""
 
 #: components/TaskSearchModal.tsx:34
@@ -1531,42 +1576,42 @@ msgctxt "db.commonMaterials.fe06d4"
 msgid "Cor Lapis"
 msgstr ""
 
-#: db/domainCategories.ts:32
+#: db/domainCategories.ts:33
 msgctxt "db.domainCategories.1ffb59"
 msgid "Domain of Forgery"
 msgstr ""
 
-#: db/domainCategories.ts:39
+#: db/domainCategories.ts:41
 msgctxt "db.domainCategories.4e509f"
 msgid "Domain of Blessing"
 msgstr ""
 
-#: db/domainCategories.ts:56
+#: db/domainCategories.ts:59
 msgctxt "db.domainCategories.6a94a1"
 msgid "Talent Level-Up Materials"
 msgstr ""
 
-#: db/domainCategories.ts:40
+#: db/domainCategories.ts:42
 msgctxt "db.domainCategories.796e5e"
 msgid "Artifacts"
 msgstr ""
 
-#: db/domainCategories.ts:33
+#: db/domainCategories.ts:34
 msgctxt "db.domainCategories.a4758a"
 msgid "Weapon Ascension Materials"
 msgstr ""
 
-#: db/domainCategories.ts:62
+#: db/domainCategories.ts:66
 msgctxt "db.domainCategories.a6ee01"
 msgid "Trounce"
 msgstr ""
 
-#: db/domainCategories.ts:55
+#: db/domainCategories.ts:58
 msgctxt "db.domainCategories.bb5cb2"
 msgid "Domain of Mastery"
 msgstr ""
 
-#: db/domainCategories.ts:63
+#: db/domainCategories.ts:67
 msgctxt "db.domainCategories.f98247"
 msgid "Weekly Challenge"
 msgstr ""
@@ -2531,224 +2576,239 @@ msgctxt "db.regions.691c58"
 msgid "Liyue"
 msgstr ""
 
-#: db/talentMaterials.ts:127
+#: db/talentMaterials.ts:137
 msgctxt "db.talentMaterials.03c76b"
 msgid "Shard of a Foul Legacy"
 msgstr ""
 
-#: db/talentMaterials.ts:113
+#: db/talentMaterials.ts:123
 msgctxt "db.talentMaterials.08f385"
 msgid "Spirit Locket of Boreas"
 msgstr ""
 
-#: db/talentMaterials.ts:49
+#: db/talentMaterials.ts:55
 msgctxt "db.talentMaterials.1b0aa2"
 msgid "Gold"
 msgstr ""
 
-#: db/talentMaterials.ts:78
+#: db/talentMaterials.ts:88
 msgctxt "db.talentMaterials.2238ed"
 msgid "Dvalin's Plume"
 msgstr ""
 
-#: db/talentMaterials.ts:134
+#: db/talentMaterials.ts:144
 msgctxt "db.talentMaterials.2276fe"
 msgid "Shadow of the Warrior"
 msgstr ""
 
-#: db/talentMaterials.ts:148
+#: db/talentMaterials.ts:158
 msgctxt "db.talentMaterials.24721e"
 msgid "Bloodjade Branch"
 msgstr ""
 
-#: db/talentMaterials.ts:155
+#: db/talentMaterials.ts:165
 msgctxt "db.talentMaterials.248351"
 msgid "Gilded Scale"
 msgstr ""
 
-#: db/talentMaterials.ts:36
+#: db/talentMaterials.ts:40
 msgctxt "db.talentMaterials.2d7841"
 msgid "Teachings of Diligence"
 msgstr ""
 
-#: db/talentMaterials.ts:99
+#: db/talentMaterials.ts:109
 msgctxt "db.talentMaterials.33d5e3"
 msgid "Tail of Boreas"
 msgstr ""
 
-#: db/talentMaterials.ts:64
+#: db/talentMaterials.ts:72
 msgctxt "db.talentMaterials.3d6db9"
 msgid "Teachings of Elegance"
 msgstr ""
 
-#: db/talentMaterials.ts:42
+#: db/talentMaterials.ts:47
 msgctxt "db.talentMaterials.476508"
 msgid "Ballad"
 msgstr ""
 
-#: db/talentMaterials.ts:57
+#: db/talentMaterials.ts:64
 msgctxt "db.talentMaterials.4a54fe"
 msgid "Teachings of Transience"
 msgstr ""
 
-#: db/talentMaterials.ts:106
+#: db/talentMaterials.ts:116
 msgctxt "db.talentMaterials.5a4b80"
 msgid "Ring of Boreas"
 msgstr ""
 
-#: db/talentMaterials.ts:43
+#: db/talentMaterials.ts:48
 msgctxt "db.talentMaterials.5b3857"
 msgid "Teachings of Ballad"
 msgstr ""
 
-#: db/talentMaterials.ts:92
+#: db/talentMaterials.ts:102
 msgctxt "db.talentMaterials.6955de"
 msgid "Dvalin's Claw"
 msgstr ""
 
-#: db/talentMaterials.ts:63
+#: db/talentMaterials.ts:71
 msgctxt "db.talentMaterials.6f9de0"
 msgid "Elegance"
 msgstr ""
 
-#: db/talentMaterials.ts:85
+#: db/talentMaterials.ts:95
 msgctxt "db.talentMaterials.7d035f"
 msgid "Dvalin's Sigh"
 msgstr ""
 
-#: db/talentMaterials.ts:15
+#: db/talentMaterials.ts:16
 msgctxt "db.talentMaterials.90c99f"
 msgid "Teachings of Freedom"
 msgstr ""
 
-#: db/talentMaterials.ts:22
+#: db/talentMaterials.ts:24
 msgctxt "db.talentMaterials.969122"
 msgid "Teachings of Prosperity"
 msgstr ""
 
-#: db/talentMaterials.ts:21
+#: db/talentMaterials.ts:23
 msgctxt "db.talentMaterials.997cd8"
 msgid "Prosperity"
 msgstr ""
 
-#: db/talentMaterials.ts:120
+#: db/talentMaterials.ts:130
 msgctxt "db.talentMaterials.a0af03"
 msgid "Tusk of Monoceros Caeli"
 msgstr ""
 
-#: db/talentMaterials.ts:29
+#: db/talentMaterials.ts:32
 msgctxt "db.talentMaterials.a5ac2e"
 msgid "Teachings of Resistance"
 msgstr ""
 
-#: db/talentMaterials.ts:28
+#: db/talentMaterials.ts:31
 msgctxt "db.talentMaterials.c6a0f7"
 msgid "Resistance"
 msgstr ""
 
-#: db/talentMaterials.ts:141
+#: db/talentMaterials.ts:151
 msgctxt "db.talentMaterials.cbd4e8"
 msgid "Dragon Lord's Crown"
 msgstr ""
 
-#: db/talentMaterials.ts:14
+#: db/talentMaterials.ts:15
 msgctxt "db.talentMaterials.ce07c6"
 msgid "Freedom"
 msgstr ""
 
-#: db/talentMaterials.ts:70
+#: db/talentMaterials.ts:79
 msgctxt "db.talentMaterials.ddc738"
 msgid "Light"
 msgstr ""
 
-#: db/talentMaterials.ts:71
+#: db/talentMaterials.ts:80
 msgctxt "db.talentMaterials.e5d4a4"
 msgid "Teachings of Light"
 msgstr ""
 
-#: db/talentMaterials.ts:50
+#: db/talentMaterials.ts:56
 msgctxt "db.talentMaterials.fc587a"
 msgid "Teachings of Gold"
 msgstr ""
 
-#: db/talentMaterials.ts:35
+#: db/talentMaterials.ts:39
 msgctxt "db.talentMaterials.ffd8d6"
 msgid "Diligence"
 msgstr ""
 
-#: db/weaponMaterials.ts:50
+#: db/weaponMaterials.ts:56
 msgctxt "db.weaponMaterials.009f9a"
 msgid "Grain of Aerosiderite"
 msgstr ""
 
-#: db/weaponMaterials.ts:15
+#: db/weaponMaterials.ts:16
 msgctxt "db.weaponMaterials.040efa"
 msgid "Tile of Decarabian's Tower"
 msgstr ""
 
-#: db/weaponMaterials.ts:43
+#: db/weaponMaterials.ts:79
+msgctxt "db.weaponMaterials.097db0"
+msgid "Mask"
+msgstr ""
+
+#: db/weaponMaterials.ts:48
 msgctxt "db.weaponMaterials.12045a"
 msgid "Fetters of the Dandelion Gladiator"
 msgstr ""
 
-#: db/weaponMaterials.ts:21
+#: db/weaponMaterials.ts:23
 msgctxt "db.weaponMaterials.2140ff"
 msgid "Guyun"
 msgstr ""
 
-#: db/weaponMaterials.ts:29
+#: db/weaponMaterials.ts:32
 msgctxt "db.weaponMaterials.33389c"
 msgid "Boreal Wolf's Milk Tooth"
 msgstr ""
 
-#: db/weaponMaterials.ts:14
+#: db/weaponMaterials.ts:71
+msgctxt "db.weaponMaterials.4b2f40"
+msgid "Narukami"
+msgstr ""
+
+#: db/weaponMaterials.ts:15
 msgctxt "db.weaponMaterials.4d0c6f"
 msgid "Decarabian"
 msgstr ""
 
-#: db/weaponMaterials.ts:49
+#: db/weaponMaterials.ts:55
 msgctxt "db.weaponMaterials.580f83"
 msgid "Aerosiderite"
 msgstr ""
 
-#: db/weaponMaterials.ts:22
+#: db/weaponMaterials.ts:24
 msgctxt "db.weaponMaterials.5c6a21"
 msgid "Luminous Sands from Guyun"
 msgstr ""
 
-#: db/weaponMaterials.ts:71
+#: db/weaponMaterials.ts:80
 msgctxt "db.weaponMaterials.673ee5"
 msgid "Mask of the Wicked Lieutenant"
 msgstr ""
 
-#: db/weaponMaterials.ts:28
+#: db/weaponMaterials.ts:31
 msgctxt "db.weaponMaterials.735b94"
 msgid "Boreal Wolf"
 msgstr ""
 
-#: db/weaponMaterials.ts:42
+#: db/weaponMaterials.ts:47
 msgctxt "db.weaponMaterials.cf0c7e"
 msgid "Dandelion Gladiator"
 msgstr ""
 
-#: db/weaponMaterials.ts:57
+#: db/weaponMaterials.ts:64
 msgctxt "db.weaponMaterials.de26b9"
 msgid "Coral Branch of a Distant Sea"
 msgstr ""
 
-#: db/weaponMaterials.ts:64
+#: db/weaponMaterials.ts:72
 msgctxt "db.weaponMaterials.f3c2f2"
 msgid "Narukami's Wisdom"
 msgstr ""
 
-#: db/weaponMaterials.ts:35
+#: db/weaponMaterials.ts:39
 msgctxt "db.weaponMaterials.f51889"
 msgid "Mist Veiled Elixir"
 msgstr ""
 
-#: db/weaponMaterials.ts:36
+#: db/weaponMaterials.ts:40
 msgctxt "db.weaponMaterials.f94a84"
 msgid "Mist Veiled Lead Elixir"
+msgstr ""
+
+#: db/weaponMaterials.ts:63
+msgctxt "db.weaponMaterials.fa188c"
+msgid "Branch of Distant Sea"
 msgstr ""
 
 #: db/weapons.ts:117
@@ -3281,7 +3341,7 @@ msgctxt "db.weapons.ffe36a"
 msgid "Beginner's Protector"
 msgstr ""
 
-#: pages/customize/artifacts/[name].tsx:78
+#: pages/customize/artifacts/[name].tsx:79
 msgctxt "pages.customize.artifacts.[name].f87fc3"
 msgid "No such artifact."
 msgstr ""
@@ -3291,7 +3351,7 @@ msgctxt "pages.customize.characters.[name].8c8c3a"
 msgid "This page may be inaccurate."
 msgstr ""
 
-#: pages/customize/characters/[name].tsx:107
+#: pages/customize/characters/[name].tsx:108
 msgctxt "pages.customize.characters.[name].9bd832"
 msgid "No such character."
 msgstr ""
@@ -3301,7 +3361,7 @@ msgctxt "pages.customize.characters.[name].ddaaad"
 msgid "The following information is based on leaked data from beta versions of the game. Take it with a grain of salt."
 msgstr ""
 
-#: pages/customize/weapons/[name].tsx:79
+#: pages/customize/weapons/[name].tsx:80
 msgctxt "pages.customize.weapons.[name].6a78b3"
 msgid "No such weapon."
 msgstr ""

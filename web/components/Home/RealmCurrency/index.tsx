@@ -4,8 +4,8 @@ import WhiteCard from "../../WhiteCard";
 import { getCurrencyCap, getCurrencyRate, getCurrencyRecharge } from "../../../db/realms";
 import { Config, useConfig } from "../../../utils/config";
 import { RealmCurrency as RealmCurrencyIcon } from "../../../assets";
-import { chakra, VStack, HStack, Spacer } from "@chakra-ui/react";
-import { FormattedMessage } from "react-intl";
+import { chakra, VStack, HStack, Spacer, useColorModeValue } from "@chakra-ui/react";
+import { FormattedMessage, useIntl } from "react-intl";
 import { motion } from "framer-motion";
 import ClearButton from "./ClearButton";
 import CurrencyInput from "./CurrencyInput";
@@ -19,15 +19,16 @@ import { trackEvent } from "../../../utils/umami";
 const estimateModes: Config["resinEstimateMode"][] = ["time", "value"];
 
 const RealmCurrency = () => {
+  const { formatMessage } = useIntl();
   const [currency] = useConfig("realmCurrency");
   const [rank] = useConfig("realmRank");
   const [energy] = useConfig("realmEnergy");
   const [mode, setMode] = useConfig("resinEstimateMode");
-
   const [hover, setHover] = useState(false);
 
   const time = useServerTime(60000);
   const current = currency.value + getCurrencyRecharge(energy, time.valueOf() - currency.time);
+  const cap = getCurrencyCap(rank);
 
   return (
     <WidgetWrapper
@@ -40,8 +41,12 @@ const RealmCurrency = () => {
           <chakra.img
             alt="Realm Currency"
             src={RealmCurrencyIcon.src}
-            cursor="pointer"
+            cursor={current < cap ? "pointer" : undefined}
             onClick={() => {
+              if (current >= cap) {
+                return;
+              }
+
               setMode((mode) => {
                 return estimateModes[(estimateModes.indexOf(mode) + 1) % estimateModes.length];
               });
@@ -51,6 +56,7 @@ const RealmCurrency = () => {
             w={10}
             h={10}
             transform="scale(1.2)"
+            title={formatMessage({ defaultMessage: "Switch estimation mode" })}
           />
 
           <chakra.div fontSize="md">
@@ -67,7 +73,7 @@ const RealmCurrency = () => {
           <motion.div animate={{ opacity: hover ? 1 : 0 }}>{current > 0 && <ClearButton />}</motion.div>
         </HStack>
 
-        <VStack align="stretch" spacing={2} pl={12}>
+        <VStack align="start" spacing={2} pl={12}>
           <HStack spacing={2}>
             <chakra.div fontSize="md">
               <FormattedMessage defaultMessage="Trust rank" />:
@@ -79,16 +85,19 @@ const RealmCurrency = () => {
             <chakra.div fontSize="md">
               <FormattedMessage defaultMessage="Realm currency" />:
             </chakra.div>
+
             <CurrencyInput />
 
             <chakra.div flexShrink={0} fontSize="sm" color="gray.500">
-              / {getCurrencyCap(rank)}
+              / {cap}
             </chakra.div>
           </HStack>
 
           <chakra.div color="gray.500" fontSize="sm">
             {current >= getCurrencyCap(rank) ? (
-              <FormattedMessage defaultMessage="Your realm currency is full." />
+              <chakra.span bg={useColorModeValue("yellow.100", "yellow.900")}>
+                <FormattedMessage defaultMessage="Your realm currency is full." />
+              </chakra.span>
             ) : mode === "time" ? (
               <EstimatorByTime />
             ) : mode === "value" ? (

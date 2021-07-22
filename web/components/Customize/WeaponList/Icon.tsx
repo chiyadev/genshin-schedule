@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from "react";
 import { useConfig } from "../../../utils/config";
-import { AspectRatio, Center, chakra, HStack, Link, Text, useColorModeValue, VStack } from "@chakra-ui/react";
+import { AspectRatio, Badge, Center, chakra, HStack, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import NextLink from "next/link";
 import { Weapon } from "../../../db/weapons";
@@ -24,24 +24,27 @@ const Icon = ({ visible = true, weapon }: { visible?: boolean; weapon: Weapon })
             bg={useColorModeValue("white", "gray.900")}
             borderWidth={1}
             borderColor={useColorModeValue("gray.200", "gray.700")}
-            opacity={alreadyAdded ? 0.25 : 1}
+            opacity={alreadyAdded ? 0.3 : 1}
             transition=".2s"
           >
             <Center minH={0} flex={1}>
               <IconImage name={weapon.name} h="full" objectFit="cover" />
             </Center>
 
-            <VStack spacing={0} maxW="100%">
-              <Text isTruncated maxW="100%">
+            <VStack spacing={1} maxW="100%">
+              <chakra.div isTruncated maxW="100%">
                 <FormattedMessageId id={weapon.name} />
-              </Text>
+              </chakra.div>
 
-              <HStack fontSize="sm" color="gray.500" spacing={1} maxW="100%">
-                <chakra.img alt={weapon.material.item} src={getAssetByName(weapon.material.item)} w={3} h={3} />
-                <Text isTruncated>
-                  <FormattedMessageId id={weapon.material.name} />
-                </Text>
-              </HStack>
+              <Badge maxW="100%" colorScheme={weapon.material.colorHint}>
+                <HStack spacing={1}>
+                  <chakra.img alt={weapon.material.item} src={getAssetByName(weapon.material.item)} w={3} h={3} />
+
+                  <chakra.div isTruncated>
+                    <FormattedMessageId id={weapon.material.name} />
+                  </chakra.div>
+                </HStack>
+              </Badge>
             </VStack>
           </VStack>
         </AspectRatio>

@@ -25,7 +25,7 @@ function buildChangelog() {
       <Alert status="info" mb={2}>
         <AlertIcon />
         <div>
-          This is a large database update. If you find any incorrect or missing information, please{" "}
+          This is a major database update. If you find any incorrect or missing information, please{" "}
           <Link color="blue.500" href="https://github.com/chiyadev/genshin-schedule/issues" isExternal>
             open an issue
           </Link>
@@ -35,6 +35,7 @@ function buildChangelog() {
       <ChangelogItem>Upgraded all dependencies to latest versions.</ChangelogItem>
       <ChangelogItem>Added 2.0 Inazuma characters, weapons and artifacts.</ChangelogItem>
       <ChangelogItem>Added more character backgrounds.</ChangelogItem>
+      <ChangelogItem>Improved some more parts of the website UI.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={30} date="2021/07/04">
       <ChangelogItem>Added Simplified Chinese localization. 添加了简体中文翻译。</ChangelogItem>

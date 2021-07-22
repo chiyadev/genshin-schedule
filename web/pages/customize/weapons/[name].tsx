@@ -3,7 +3,7 @@ import { createApiClient, WebData } from "../../../utils/api";
 import { GetServerSideProps } from "next";
 import ConfigProvider from "../../../components/ConfigProvider";
 import Layout from "../../../components/Layout";
-import { chakra, HStack, Link } from "@chakra-ui/react";
+import { Badge, chakra, HStack, Link } from "@chakra-ui/react";
 import WhiteCard from "../../../components/WhiteCard";
 import { getAssetByName } from "../../../assets";
 import MaterialDisplay from "../../../components/Customize/WeaponInfo/MaterialDisplay";
@@ -60,11 +60,12 @@ const WeaponInfo = ({ data, name }: Props) => {
                     {weapon.name}
                   </Link>
                 </chakra.div>
-                <chakra.div fontSize="sm" color="gray.500">
+
+                <Badge colorScheme="blue">
                   <Link href={WeaponWiki} isExternal>
                     {weapon.type}
                   </Link>
-                </chakra.div>
+                </Badge>
               </div>
             </HStack>
 

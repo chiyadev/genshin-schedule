@@ -130,7 +130,10 @@ const UserSignIn = () => {
           <FormattedMessage defaultMessage="Submit" />
         </Button>
 
-        <Tooltip label={<FormattedMessage defaultMessage="All data will be stored locally on the browser." />}>
+        <Tooltip
+          label={<FormattedMessage defaultMessage="All data will be stored locally on the browser." />}
+          closeOnClick={false}
+        >
           <Button
             disabled={load}
             leftIcon={<Icon as={FaUser} />}

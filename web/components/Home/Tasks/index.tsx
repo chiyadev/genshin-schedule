@@ -56,8 +56,8 @@ const TaskList = () => {
       }
       menu={
         <ButtonGroup isAttached>
-          <SearchButton />
-          <ShowHiddenButton />
+          {!!tasks.length && <SearchButton />}
+          {tasks.find((task) => !task.visible) && <ShowHiddenButton />}
         </ButtonGroup>
       }
     >
@@ -71,7 +71,7 @@ const TaskList = () => {
             </chakra.div>
           </VStack>
         ) : (
-          <Alert status="info">
+          <Alert status="info" borderRadius="md">
             <AlertIcon />
             <VStack align="start" spacing={0}>
               <AlertTitle>

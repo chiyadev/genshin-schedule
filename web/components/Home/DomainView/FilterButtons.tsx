@@ -58,7 +58,7 @@ const FilterButton = ({
         h={8}
         p={1}
         minW={0}
-        opacity={filters.includes(type) ? 1 : 0.5}
+        opacity={filters.includes(type) ? 1 : 0.3}
         onClick={() => {
           setFilters((filters) => arrayToggle(filters, type));
           !filters.includes(type) && trackEvent("domainView", `filter${label}`);

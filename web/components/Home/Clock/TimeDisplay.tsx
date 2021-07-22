@@ -57,14 +57,14 @@ const TimeDisplay = () => {
   );
 
   return (
-    <HStack spacing={2} fontFamily="Genshin">
+    <HStack spacing={2} fontFamily="Genshin" justify="center">
       <Tooltip label={<FormattedMessage defaultMessage="Previous day" />} closeOnClick={false}>
         <Button variant="ghost" fontSize="4xl" w={12} h={12} p={0} onClick={backward} disabled={offset <= -6}>
           &lt;
         </Button>
       </Tooltip>
 
-      <Heading size="xl">
+      <Heading size="xl" suppressHydrationWarning>
         {hour}:{minute}:{second}
       </Heading>
 

@@ -1,13 +1,13 @@
 import {
   Aerosiderite,
   BorealWolf,
-  CoralBranchOfADistantSea,
+  BranchOfDistantSea,
   DandelionGladiator,
   Decarabian,
   Guyun,
-  MaskOfTheWickedLieutenant,
+  NarukamiMask,
   MistVeiledElixir,
-  NarukamiWisdom,
+  Narukami,
   WeaponMaterial,
 } from "./weaponMaterials";
 import {
@@ -171,17 +171,14 @@ add(registerMessage({ defaultMessage: "Skyrider Sword" }), Aerosiderite, [BoneSh
 add(registerMessage({ defaultMessage: "Staff of Homa" }), Aerosiderite, [LeyLine, Slime]);
 add(registerMessage({ defaultMessage: "Vortex Vanquisher" }), Aerosiderite, [BoneShard, TreasureHoarderInsignia]);
 
-// Coral Branch of a Distant Sea
-add(registerMessage({ defaultMessage: "Mistsplitter Reforged" }), CoralBranchOfADistantSea, [ChaosGear, Handguard]);
-add(registerMessage({ defaultMessage: "Hakushin Ring" }), CoralBranchOfADistantSea, [MirrorPrism, SamachurlScroll]);
-add(registerMessage({ defaultMessage: "Amenoma Kageuchi" }), CoralBranchOfADistantSea, [ChaosGear, Handguard]);
+// Branch of Distant Sea
+add(registerMessage({ defaultMessage: "Mistsplitter Reforged" }), BranchOfDistantSea, [ChaosGear, Handguard]);
+add(registerMessage({ defaultMessage: "Hakushin Ring" }), BranchOfDistantSea, [MirrorPrism, SamachurlScroll]);
+add(registerMessage({ defaultMessage: "Amenoma Kageuchi" }), BranchOfDistantSea, [ChaosGear, Handguard]);
 
-// Narukami's Wisdom
-add(registerMessage({ defaultMessage: "Hamayumi" }), NarukamiWisdom, [MirrorPrism, HilichurlArrowhead]);
-add(registerMessage({ defaultMessage: "Katsuragikiri Nagamasa" }), NarukamiWisdom, [ChaosGear, Handguard]);
+// Narukami
+add(registerMessage({ defaultMessage: "Hamayumi" }), Narukami, [MirrorPrism, HilichurlArrowhead]);
+add(registerMessage({ defaultMessage: "Katsuragikiri Nagamasa" }), Narukami, [ChaosGear, Handguard]);
 
-// Mask of the Wicked Lieutenant
-add(registerMessage({ defaultMessage: "Kitain Cross Spear" }), MaskOfTheWickedLieutenant, [
-  ChaosGear,
-  TreasureHoarderInsignia,
-]);
+// Mask
+add(registerMessage({ defaultMessage: "Kitain Cross Spear" }), NarukamiMask, [ChaosGear, TreasureHoarderInsignia]);

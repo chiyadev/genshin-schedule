@@ -26,6 +26,7 @@ export type DomainCategory = {
   dropDescription: string;
   domains: Domain[];
   wiki: string;
+  colorHint?: string;
 };
 
 export const DomainOfForgery: DomainCategory = {
@@ -33,6 +34,7 @@ export const DomainOfForgery: DomainCategory = {
   dropDescription: registerMessage({ defaultMessage: "Weapon Ascension Materials" }),
   domains: [CeciliaGarden, HiddenPalaceOfLianshanFormula, CourtOfFlowingSand],
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Domains_of_Forgery",
+  colorHint: "blue",
 };
 
 export const DomainOfBlessing: DomainCategory = {
@@ -49,6 +51,7 @@ export const DomainOfBlessing: DomainCategory = {
     MomijiDyedCourt,
   ],
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Domains_of_Blessing",
+  colorHint: "yellow",
 };
 
 export const DomainOfMastery: DomainCategory = {
@@ -56,6 +59,7 @@ export const DomainOfMastery: DomainCategory = {
   dropDescription: registerMessage({ defaultMessage: "Talent Level-Up Materials" }),
   domains: [ForsakenRift, TaishanMansion, VioletCourt],
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Domains_of_Mastery",
+  colorHint: "pink",
 };
 
 export const Trounce: DomainCategory = {
@@ -63,6 +67,7 @@ export const Trounce: DomainCategory = {
   dropDescription: registerMessage({ defaultMessage: "Weekly Challenge" }),
   domains: [ConfrontStormterror, WolfOfTheNorthChallenge, EnterTheGoldenHouse, BeneathTheDragonQueller],
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Weekly_Bosses",
+  colorHint: "green",
 };
 
 export const DomainCategories = [DomainOfForgery, DomainOfBlessing, DomainOfMastery, Trounce];

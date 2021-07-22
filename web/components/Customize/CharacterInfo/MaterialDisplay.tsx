@@ -3,7 +3,7 @@ import { Character } from "../../../db/characters";
 import { TalentMaterial, TalentMaterialWiki } from "../../../db/talentMaterials";
 import DropLabel from "../../DropLabel";
 import Toggle from "./Toggle";
-import { chakra, HStack, Link, VStack } from "@chakra-ui/react";
+import { Badge, chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import { FormattedMessage as FormattedMessageId } from "react-intl";
 
@@ -27,11 +27,12 @@ const MaterialDisplay = ({
               <FormattedMessageId id={material.name} />
             </Link>
           </chakra.div>
-          <chakra.div fontSize="sm" color="gray.500">
+
+          <Badge color="gray.500">
             <Link href={TalentMaterialWiki} isExternal>
               <FormattedMessageId id={material.type} />
             </Link>
-          </chakra.div>
+          </Badge>
         </div>
       </HStack>
 

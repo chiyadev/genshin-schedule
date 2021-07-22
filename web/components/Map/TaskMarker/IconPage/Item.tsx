@@ -18,6 +18,7 @@ const Item = ({ name, onClick }: { name: string; onClick?: () => void }) => {
             objectFit: "contain",
           }}
           onClick={onClick}
+          title={name}
         />
       ) : (
         <div ref={ref} />

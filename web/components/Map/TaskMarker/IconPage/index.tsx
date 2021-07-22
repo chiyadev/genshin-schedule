@@ -84,7 +84,7 @@ const IconPage = ({
           () =>
             Object.keys(results).map((category) => (
               <VStack key={category} align="stretch" spacing={1}>
-                <chakra.span fontSize="sm">
+                <chakra.span fontWeight="bold" fontSize="sm">
                   <FormattedMessageId id={category} />
                 </chakra.span>
 
@@ -100,6 +100,7 @@ const IconPage = ({
                           ...task,
                           name: formatMessageId({ id: icon }),
                           icon,
+                          description: "",
                           refreshTime: timer || task.refreshTime,
                         }));
 

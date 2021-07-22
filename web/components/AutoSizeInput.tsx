@@ -12,10 +12,8 @@ const AutoSizeInput = forwardRef<HTMLInputElement>(
         ref={ref}
         className={className}
         style={{
-          textAlign: "center",
           width: (width || 0) + (focus ? 8 : 0),
           cursor: focus ? undefined : "pointer",
-          background: "inherit",
           ...style,
         }}
         value={value}
@@ -33,4 +31,10 @@ const AutoSizeInput = forwardRef<HTMLInputElement>(
   }
 );
 
-export default chakra<typeof AutoSizeInput, HTMLProps<HTMLInputElement>>(memo(AutoSizeInput));
+export default chakra<typeof AutoSizeInput, HTMLProps<HTMLInputElement>>(memo(AutoSizeInput), {
+  baseStyle: {
+    textAlign: "center",
+    background: "inherit",
+    borderRadius: "sm",
+  },
+});

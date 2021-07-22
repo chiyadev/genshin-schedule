@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import { getResinRecharge, roundResin } from "../../../db/resins";
-import { chakra } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/config";
 import {
   useFormatDurationPart,
@@ -21,7 +20,7 @@ const DateDisplay = () => {
   const resetResins = roundResin(getResinRecharge(resetDue.valueOf()));
 
   return (
-    <chakra.div fontSize="sm" color="gray.500">
+    <div>
       <FormattedUnit id={`day.${Weekdays[(6 + resetTime.weekday) % 7]}`} />,{" "}
       <FormattedMessage
         defaultMessage="{duration} until reset"
@@ -38,7 +37,7 @@ const DateDisplay = () => {
           )
         </span>
       )}
-    </chakra.div>
+    </div>
   );
 };
 

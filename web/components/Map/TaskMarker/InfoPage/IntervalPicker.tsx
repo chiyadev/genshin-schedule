@@ -9,6 +9,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch<Task["refreshTime"]> }) => {
   const { formatMessage } = useIntl();
   const ref = useRef<HTMLInputElement>(null);
+  const [focus, setFocus] = useState(false);
   const [unit, setUnit] = useState<TimeUnit>(() => getAccuratestUnit(Duration.fromMillis(value)));
   const displayValue = Math.floor(value / getUnitMs(unit));
 
@@ -22,7 +23,7 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch
       <Input
         ref={ref}
         type="number"
-        variant="unstyled"
+        variant={focus ? "outline" : "unstyled"}
         size="sm"
         min={1}
         value={displayValue}
@@ -36,6 +37,8 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch
         textAlign="right"
         borderRadius={0}
         onClick={() => ref.current?.select()}
+        onFocus={() => setFocus(true)}
+        onBlur={() => setFocus(false)}
       />
 
       <Select

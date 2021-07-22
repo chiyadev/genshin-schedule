@@ -3,7 +3,7 @@ import WhiteCard from "../../WhiteCard";
 import { ScheduledDomain } from "./index";
 import MaterialList from "./MaterialList";
 import ArtifactList from "./ArtifactList";
-import { chakra, HStack, Link } from "@chakra-ui/react";
+import { Badge, chakra, HStack, Link } from "@chakra-ui/react";
 import { Domain } from "../../../assets";
 import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
 
@@ -19,7 +19,8 @@ const DomainDisplay = ({ domain, region, category, talentMaterials, weaponMateri
               <FormattedMessageId id={domain.name} />
             </Link>
           </chakra.div>
-          <chakra.div fontSize="sm" color="gray.500">
+
+          <Badge colorScheme={category?.colorHint}>
             <FormattedMessage
               defaultMessage="{category}, {region}"
               values={{
@@ -35,7 +36,7 @@ const DomainDisplay = ({ domain, region, category, talentMaterials, weaponMateri
                 ),
               }}
             />
-          </chakra.div>
+          </Badge>
         </div>
       </HStack>
 

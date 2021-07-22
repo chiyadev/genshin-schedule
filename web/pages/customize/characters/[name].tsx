@@ -4,7 +4,7 @@ import { GetServerSideProps } from "next";
 import ConfigProvider from "../../../components/ConfigProvider";
 import Layout from "../../../components/Layout";
 import { Characters, CharacterWiki } from "../../../db/characters";
-import { Alert, AlertIcon, AlertTitle, chakra, HStack, Link, VStack } from "@chakra-ui/react";
+import { Alert, AlertIcon, AlertTitle, Badge, chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import WhiteCard from "../../../components/WhiteCard";
 import { getAssetByName } from "../../../assets";
 import MaterialDisplay from "../../../components/Customize/CharacterInfo/MaterialDisplay";
@@ -81,11 +81,12 @@ const CharacterInfo = ({ data, name }: Props) => {
                       {character.name}
                     </Link>
                   </chakra.div>
-                  <chakra.div fontSize="sm" color="gray.500">
+
+                  <Badge colorScheme="pink">
                     <Link href={CharacterWiki} isExternal>
                       {character.type}
                     </Link>
-                  </chakra.div>
+                  </Badge>
                 </div>
               </HStack>
 
