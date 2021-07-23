@@ -306,8 +306,8 @@ const DomainView = () => {
         break;
 
       default:
-        addCategories(Trounce, DomainOfMastery);
-        addCategories(DomainOfForgery, DomainOfBlessing, NormalBoss);
+        addCategories(Trounce, DomainOfMastery, DomainOfForgery);
+        addCategories(DomainOfBlessing, NormalBoss);
         break;
     }
 
