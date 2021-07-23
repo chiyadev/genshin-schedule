@@ -46,7 +46,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:215
+#: components/ChangelogModal.tsx:217
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -186,22 +186,22 @@ msgctxt "components.Customize.Notifications.MessageDisplay.fbf09e"
 msgid "You are not signed in."
 msgstr ""
 
-#: components/Customize/Search.tsx:36
+#: components/Customize/Search.tsx:43
 msgctxt "components.Customize.Search.2027a7"
 msgid "Select items to be added to your farming schedule."
 msgstr ""
 
-#: components/Customize/Search.tsx:30
+#: components/Customize/Search.tsx:37
 msgctxt "components.Customize.Search.7c993e"
 msgid "Search characters, weapons and artifacts…"
 msgstr ""
 
-#: components/Customize/Search.tsx:48
+#: components/Customize/Search.tsx:55
 msgctxt "components.Customize.Search.9e7721"
 msgid "create an issue"
 msgstr ""
 
-#: components/Customize/Search.tsx:39
+#: components/Customize/Search.tsx:46
 msgctxt "components.Customize.Search.bb5522"
 msgid "If there are any missing items, please {link} on GitHub."
 msgstr ""
@@ -386,17 +386,22 @@ msgctxt "components.Customize.WeaponList.index.4477a1"
 msgid "Weapons"
 msgstr ""
 
-#: components/DropLabel.tsx:63
+#: components/DropLabel.tsx:72
 msgctxt "components.DropLabel.0388b5"
 msgid "{category}, {region}"
 msgstr ""
 
-#: components/DropLabel.tsx:39
+#: components/DropLabel.tsx:66
+msgctxt "components.DropLabel.30b06c"
+msgid "Auxiliary drop based on probability"
+msgstr ""
+
+#: components/DropLabel.tsx:41
 msgctxt "components.DropLabel.9f02aa"
 msgid "This item does not drop from any domains."
 msgstr ""
 
-#: components/DropLabel.tsx:79
+#: components/DropLabel.tsx:88
 msgctxt "components.DropLabel.9f8862"
 msgid "{domain}{days, select, undefined {} other { on {days}}}"
 msgstr ""
@@ -461,12 +466,12 @@ msgctxt "components.Home.Clock.ServerText.0fe07e"
 msgid "Switch server"
 msgstr ""
 
-#: components/Home/Clock/TimeDisplay.tsx:61
+#: components/Home/Clock/TimeDisplay.tsx:62
 msgctxt "components.Home.Clock.TimeDisplay.44c3b9"
 msgid "Previous day"
 msgstr ""
 
-#: components/Home/Clock/TimeDisplay.tsx:71
+#: components/Home/Clock/TimeDisplay.tsx:72
 msgctxt "components.Home.Clock.TimeDisplay.dd708b"
 msgid "Next day"
 msgstr ""
@@ -476,28 +481,43 @@ msgctxt "components.Home.Clock.index.2cbf2a"
 msgid "Time in Teyvat"
 msgstr ""
 
-#: components/Home/DomainView/DomainDisplay.tsx:33
+#: components/Home/DomainView/DomainDisplay.tsx:31
 msgctxt "components.Home.DomainView.DomainDisplay.0388b5"
 msgid "{category}, {region}"
 msgstr ""
 
-#: components/Home/DomainView/FilterButtons.tsx:30
-msgctxt "components.Home.DomainView.FilterButtons.4477a1"
+#: components/Home/DomainView/FilterButtons.tsx:14
+msgctxt "components.Home.DomainView.FilterButtons.bca303"
+msgid "Filter by efficiency"
+msgstr ""
+
+#: components/Home/DomainView/FilterRegionButtons.tsx:26
+msgctxt "components.Home.DomainView.FilterRegionButtons.06cea1"
+msgid "Inazuma"
+msgstr ""
+
+#: components/Home/DomainView/FilterRegionButtons.tsx:14
+msgctxt "components.Home.DomainView.FilterRegionButtons.5a37ea"
+msgid "Mondstadt"
+msgstr ""
+
+#: components/Home/DomainView/FilterRegionButtons.tsx:20
+msgctxt "components.Home.DomainView.FilterRegionButtons.691c58"
+msgid "Liyue"
+msgstr ""
+
+#: components/Home/DomainView/FilterTypeButtons.tsx:27
+msgctxt "components.Home.DomainView.FilterTypeButtons.4477a1"
 msgid "Weapons"
 msgstr ""
 
-#: components/Home/DomainView/FilterButtons.tsx:24
-msgctxt "components.Home.DomainView.FilterButtons.4e372c"
+#: components/Home/DomainView/FilterTypeButtons.tsx:21
+msgctxt "components.Home.DomainView.FilterTypeButtons.4e372c"
 msgid "Characters"
 msgstr ""
 
-#: components/Home/DomainView/FilterButtons.tsx:20
-msgctxt "components.Home.DomainView.FilterButtons.77dce8"
-msgid "Hide always available"
-msgstr ""
-
-#: components/Home/DomainView/FilterButtons.tsx:36
-msgctxt "components.Home.DomainView.FilterButtons.796e5e"
+#: components/Home/DomainView/FilterTypeButtons.tsx:33
+msgctxt "components.Home.DomainView.FilterTypeButtons.796e5e"
 msgid "Artifacts"
 msgstr ""
 
@@ -506,27 +526,27 @@ msgctxt "components.Home.DomainView.Item.238d34"
 msgid "Highlight item"
 msgstr ""
 
-#: components/Home/DomainView/index.tsx:262
+#: components/Home/DomainView/index.tsx:376
 msgctxt "components.Home.DomainView.index.4af108"
 msgid "Ley Lines"
 msgstr ""
 
-#: components/Home/DomainView/index.tsx:252
+#: components/Home/DomainView/index.tsx:366
 msgctxt "components.Home.DomainView.index.4d7a4e"
 msgid "Customize"
 msgstr ""
 
-#: components/Home/DomainView/index.tsx:222
+#: components/Home/DomainView/index.tsx:322
 msgctxt "components.Home.DomainView.index.c49d9f"
 msgid "Today's Domains"
 msgstr ""
 
-#: components/Home/DomainView/index.tsx:243
+#: components/Home/DomainView/index.tsx:357
 msgctxt "components.Home.DomainView.index.e73ff2"
 msgid "No domains for today."
 msgstr ""
 
-#: components/Home/DomainView/index.tsx:246
+#: components/Home/DomainView/index.tsx:360
 msgctxt "components.Home.DomainView.index.f52777"
 msgid "Go to {customize} to add domains, or maybe try some {link}?"
 msgstr ""
@@ -651,22 +671,22 @@ msgctxt "components.Home.Tasks.ShowHiddenButton.e9f3d0"
 msgid "Hide hidden"
 msgstr ""
 
-#: components/Home/Tasks/index.tsx:53
+#: components/Home/Tasks/index.tsx:54
 msgctxt "components.Home.Tasks.index.0b9931"
 msgid "Today's Tasks"
 msgstr ""
 
-#: components/Home/Tasks/index.tsx:81
+#: components/Home/Tasks/index.tsx:82
 msgctxt "components.Home.Tasks.index.4ab261"
 msgid "Create one by clicking on the map."
 msgstr ""
 
-#: components/Home/Tasks/index.tsx:78
+#: components/Home/Tasks/index.tsx:79
 msgctxt "components.Home.Tasks.index.5c6f2d"
 msgid "No tasks for now."
 msgstr ""
 
-#: components/Home/Tasks/index.tsx:109
+#: components/Home/Tasks/index.tsx:112
 msgctxt "components.Home.Tasks.index.778f27"
 msgid "Open map"
 msgstr ""
@@ -1766,52 +1786,52 @@ msgctxt "db.domainCategories.f98247"
 msgid "Weekly Challenge"
 msgstr ""
 
-#: db/domainDropSets.ts:363
+#: db/domainDropSets.ts:365
 msgctxt "db.domainDropSets.3153a6"
 msgid "Altar of Sands"
 msgstr ""
 
-#: db/domainDropSets.ts:356
+#: db/domainDropSets.ts:358
 msgctxt "db.domainDropSets.350bc4"
 msgid "Sunken Sands"
 msgstr ""
 
-#: db/domainDropSets.ts:154
+#: db/domainDropSets.ts:156
 msgctxt "db.domainDropSets.5a8238"
 msgid "Trial Grounds of Thunder"
 msgstr ""
 
-#: db/domainDropSets.ts:140
+#: db/domainDropSets.ts:142
 msgctxt "db.domainDropSets.6db45f"
 msgid "Thundercloud"
 msgstr ""
 
-#: db/domainDropSets.ts:113
+#: db/domainDropSets.ts:115
 msgctxt "db.domainDropSets.727bc7"
 msgid "City of Reflections"
 msgstr ""
 
-#: db/domainDropSets.ts:120
+#: db/domainDropSets.ts:122
 msgctxt "db.domainDropSets.b61667"
 msgid "Submerged Valley"
 msgstr ""
 
-#: db/domainDropSets.ts:370
+#: db/domainDropSets.ts:372
 msgctxt "db.domainDropSets.c47ef9"
 msgid "Sand Burial"
 msgstr ""
 
-#: db/domainDropSets.ts:127
+#: db/domainDropSets.ts:129
 msgctxt "db.domainDropSets.dfec8a"
 msgid "Ruins of Thirsting Capital"
 msgstr ""
 
-#: db/domainDropSets.ts:161
+#: db/domainDropSets.ts:163
 msgctxt "db.domainDropSets.f12070"
 msgid "Electrostatic Field"
 msgstr ""
 
-#: db/domainDropSets.ts:147
+#: db/domainDropSets.ts:149
 msgctxt "db.domainDropSets.ffe184"
 msgid "Thundering Ruins"
 msgstr ""

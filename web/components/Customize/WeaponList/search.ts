@@ -21,7 +21,7 @@ for (const weapon of Weapons) {
 for (const region of Regions) {
   for (const domain of region.domains) {
     for (const drops of domain.drops) {
-      for (const item of drops.items) {
+      for (const item of [...drops.items, ...(drops.itemsAux || [])]) {
         for (const weapon of materialToWeapons.get(item.name)) {
           WeaponSearch.add(region.name, weapon);
           WeaponSearch.add(domain.name, weapon);

@@ -1,21 +1,15 @@
 import React, { memo } from "react";
-import { TalentMaterial, TalentMaterialWiki } from "../../../db/talentMaterials";
-import { WeaponMaterial, WeaponMaterialWiki } from "../../../db/weaponMaterials";
-import { Character } from "../../../db/characters";
-import { Weapon } from "../../../db/weapons";
+import { TalentMaterialWiki } from "../../../db/talentMaterials";
+import { WeaponMaterialWiki } from "../../../db/weaponMaterials";
 import { Badge, chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import Item from "./Item";
-import { FormattedMessage as FormattedMessageId } from "react-intl";
-import { CharacterMaterial, CharacterMaterialWiki } from "../../../db/characterMaterials";
+import { FormattedMessage as FormattedMessageId, useIntl } from "react-intl";
+import { CharacterMaterialWiki } from "../../../db/characterMaterials";
+import { ScheduledDomain } from ".";
 
-const MaterialList = ({
-  material,
-  linked,
-}: {
-  material: CharacterMaterial | TalentMaterial | WeaponMaterial;
-  linked: (Character | Weapon)[];
-}) => {
+const MaterialList = ({ material, linked, auxiliary }: ScheduledDomain["materials"][0]) => {
+  const { formatMessage } = useIntl();
   let wiki: string;
 
   switch (material.type) {
@@ -33,7 +27,12 @@ const MaterialList = ({
   }
 
   return (
-    <VStack align="stretch" spacing={4}>
+    <VStack
+      align="stretch"
+      spacing={4}
+      opacity={auxiliary ? 0.5 : 1}
+      title={auxiliary ? formatMessage({ defaultMessage: "This item is not guaranteed to drop." }) : undefined}
+    >
       <HStack spacing={2}>
         <chakra.img
           alt={material.name}

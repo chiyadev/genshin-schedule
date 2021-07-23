@@ -32,7 +32,7 @@ for (const region of Regions) {
 
 for (const domain of DomainOfMastery.domains) {
   for (const drops of domain.drops) {
-    for (const item of drops.items) {
+    for (const item of [...drops.items, ...(drops.itemsAux || [])]) {
       for (const character of materialToCharacters.get(item.name)) {
         CharacterSearch.add(domain.name, character);
 

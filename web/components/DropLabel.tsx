@@ -4,13 +4,15 @@ import { Domain, Domains } from "../db/domains";
 import { FormattedUnit, Weekday, Weekdays } from "../utils/time";
 import { getAssetByName } from "../assets";
 import { Badge, chakra, HStack, Link, useColorModeValue, VStack } from "@chakra-ui/react";
-import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
+import { FormattedMessage, FormattedMessage as FormattedMessageId, useIntl } from "react-intl";
 import { DomainCategories, DomainCategory } from "../db/domainCategories";
 import { Region, Regions } from "../db/regions";
 
 const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
+  const { formatMessage } = useIntl();
+
   const domains = useMemo(() => {
-    const drops = DomainDropSets.filter((d) => d.items.includes(item));
+    const drops = DomainDropSets.filter((d) => [...d.items, ...(d.itemsAux || [])].includes(item));
 
     return (
       drops &&
@@ -45,17 +47,24 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
     <VStack align="start" spacing={0}>
       {domains.map(([domain, category, region]) => {
         const days = new Set<Weekday>();
+        let auxiliary = true;
 
         for (const drops of domain.drops) {
-          if (drops.items.includes(item)) {
+          if ([...drops.items, ...(drops.itemsAux || [])].includes(item)) {
             for (const day of drops.days) {
               days.add(day);
+              auxiliary &&= drops.itemsAux?.includes(item) || false;
             }
           }
         }
 
         return (
-          <HStack key={domain.name} spacing={2}>
+          <HStack
+            key={domain.name}
+            spacing={2}
+            opacity={auxiliary ? 0.5 : 1}
+            title={auxiliary ? formatMessage({ defaultMessage: "Auxiliary drop based on probability" }) : undefined}
+          >
             <chakra.img alt={region.name} title={region.name} src={getAssetByName(region.name)} w={4} h={4} />
 
             <div>

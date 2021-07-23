@@ -43,6 +43,9 @@ import BlackCircle from "./game/Black Circle.png";
 import BlackTassel from "./game/Black Tassel.png";
 import BlackArtifact from "./game/BlackArtifact.png";
 import BlackCharacter from "./game/BlackCharacter.png";
+import BlackInazuma from "./game/BlackInazuma.png";
+import BlackLiyue from "./game/BlackLiyue.png";
+import BlackMondstadt from "./game/BlackMondstadt.png";
 import BlackWeapon from "./game/BlackWeapon.png";
 import BlackcliffAgate from "./game/Blackcliff Agate.png";
 import BlackcliffLongsword from "./game/Blackcliff Longsword.png";
@@ -372,6 +375,9 @@ import WhiteIronGreatsword from "./game/White Iron Greatsword.png";
 import WhiteTassel from "./game/White Tassel.png";
 import WhiteArtifact from "./game/WhiteArtifact.png";
 import WhiteCharacter from "./game/WhiteCharacter.png";
+import WhiteInazuma from "./game/WhiteInazuma.png";
+import WhiteLiyue from "./game/WhiteLiyue.png";
+import WhiteMondstadt from "./game/WhiteMondstadt.png";
 import WhiteWeapon from "./game/WhiteWeapon.png";
 import Whiteblind from "./game/Whiteblind.png";
 import WhopperflowerNectar from "./game/Whopperflower Nectar.png";
@@ -435,6 +441,9 @@ export {
   BlackTassel,
   BlackArtifact,
   BlackCharacter,
+  BlackInazuma,
+  BlackLiyue,
+  BlackMondstadt,
   BlackWeapon,
   BlackcliffAgate,
   BlackcliffLongsword,
@@ -764,6 +773,9 @@ export {
   WhiteTassel,
   WhiteArtifact,
   WhiteCharacter,
+  WhiteInazuma,
+  WhiteLiyue,
+  WhiteMondstadt,
   WhiteWeapon,
   Whiteblind,
   WhopperflowerNectar,
@@ -829,6 +841,9 @@ export function getAssetByName(name: string): string | undefined {
     case "Black Tassel": return BlackTassel.src;
     case "BlackArtifact": return BlackArtifact.src;
     case "BlackCharacter": return BlackCharacter.src;
+    case "BlackInazuma": return BlackInazuma.src;
+    case "BlackLiyue": return BlackLiyue.src;
+    case "BlackMondstadt": return BlackMondstadt.src;
     case "BlackWeapon": return BlackWeapon.src;
     case "Blackcliff Agate": return BlackcliffAgate.src;
     case "Blackcliff Longsword": return BlackcliffLongsword.src;
@@ -1158,6 +1173,9 @@ export function getAssetByName(name: string): string | undefined {
     case "White Tassel": return WhiteTassel.src;
     case "WhiteArtifact": return WhiteArtifact.src;
     case "WhiteCharacter": return WhiteCharacter.src;
+    case "WhiteInazuma": return WhiteInazuma.src;
+    case "WhiteLiyue": return WhiteLiyue.src;
+    case "WhiteMondstadt": return WhiteMondstadt.src;
     case "WhiteWeapon": return WhiteWeapon.src;
     case "Whiteblind": return Whiteblind.src;
     case "Whopperflower Nectar": return WhopperflowerNectar.src;

@@ -51,7 +51,9 @@ export type Config = {
   charactersNormalBoss: string[]; // normal boss mats
   weapons: string[];
   artifacts: string[];
-  domainFilter: "all" | "today" | "character" | "weapon" | "artifact";
+  domainFilter: "all" | "efficiency" | "today" | "noaux";
+  domainFilterType: "all" | "character" | "weapon" | "artifact";
+  domainFilterRegion: "all" | "mondstadt" | "liyue" | "inazuma";
   itemNotes: { [key: string]: string };
   itemHighlights: string[];
   tasks: Task[];
@@ -122,6 +124,8 @@ export const DefaultConfig: Config = {
   weapons: [],
   artifacts: [],
   domainFilter: "all",
+  domainFilterType: "all",
+  domainFilterRegion: "all",
   itemNotes: {},
   itemHighlights: [],
   tasks: [],

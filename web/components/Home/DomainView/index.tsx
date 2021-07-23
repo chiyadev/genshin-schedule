@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from "react";
 import { Domain, Domains } from "../../../db/domains";
-import { getServerResetTime, useServerTime, Weekdays } from "../../../utils/time";
+import { getServerResetTime, useServerTime, Weekday, Weekdays } from "../../../utils/time";
 import { useConfig } from "../../../utils/config";
 import { Character, Characters } from "../../../db/characters";
 import {
@@ -20,12 +20,14 @@ import { Region, Regions } from "../../../db/regions";
 import { Artifact, Artifacts } from "../../../db/artifacts";
 import DomainDisplay from "./DomainDisplay";
 import WidgetWrapper from "../WidgetWrapper";
-import { Alert, AlertIcon, AlertTitle, Grid, Link, useColorModeValue, VStack } from "@chakra-ui/react";
-import FilterButtons from "./FilterButtons";
+import { Alert, AlertIcon, AlertTitle, Grid, Link, useColorModeValue, VStack, Wrap, WrapItem } from "@chakra-ui/react";
+import FilterTypeButtons from "./FilterTypeButtons";
+import FilterRegionButtons from "./FilterRegionButtons";
 import styles from "./index.module.css";
 import { FormattedMessage } from "react-intl";
 import NextLink from "next/link";
 import { CharacterMaterial } from "../../../db/characterMaterials";
+import FilterButtons from "./FilterButtons";
 
 export type ScheduledDomain = {
   domain: Domain;
@@ -33,9 +35,15 @@ export type ScheduledDomain = {
   category: DomainCategory;
   materials: {
     material: CharacterMaterial | TalentMaterial | WeaponMaterial;
-    parents: (Character | Weapon)[];
+    linked: (Character | Weapon)[];
+    drops: DomainDropSet;
+    auxiliary: boolean;
   }[];
-  artifacts: Artifact[];
+  artifacts: {
+    linked: Artifact;
+    drops: DomainDropSet;
+    auxiliary: boolean;
+  }[];
 };
 
 const DomainView = () => {
@@ -43,16 +51,19 @@ const DomainView = () => {
   const today = Weekdays[(6 + getServerResetTime(time).weekday) % 7];
 
   const [filter] = useConfig("domainFilter");
+  const [filterType] = useConfig("domainFilterType");
+  const [filterRegion] = useConfig("domainFilterRegion");
   const [characters] = useConfig("characters");
   const [charactersWeekly] = useConfig("charactersWeekly");
   const [charactersGem] = useConfig("charactersGem");
   const [charactersNormalBoss] = useConfig("charactersNormalBoss");
   const [weapons] = useConfig("weapons");
   const [artifacts] = useConfig("artifacts");
+  const [highlights] = useConfig("itemHighlights");
 
   // build schedule
-  const domains = useMemo(() => {
-    const results: ScheduledDomain[] = [];
+  let domains = useMemo(() => {
+    let results: ScheduledDomain[] = [];
 
     const getScheduled = (domain: Domain) => {
       let scheduled = results.find((result) => result.domain === domain);
@@ -84,15 +95,15 @@ const DomainView = () => {
     };
 
     for (const drops of DomainDropSets.filter((drops) => drops.days.includes(today))) {
-      if (filter === "today" && drops.days.length === 7) {
+      if (filter === "today" && today !== "sunday" && drops.days.length === 7) {
         continue;
       }
 
       const addMaterial = (
-        parent: ScheduledDomain["materials"][0]["parents"][0],
+        linked: ScheduledDomain["materials"][0]["linked"][0],
         material: ScheduledDomain["materials"][0]["material"]
       ) => {
-        if (drops.items.includes(material)) {
+        if ([...drops.items, ...((filter !== "noaux" && drops.itemsAux) || [])].includes(material)) {
           const domain = getDomainFromDrops(drops);
 
           if (domain) {
@@ -100,28 +111,34 @@ const DomainView = () => {
             const group = scheduled.materials.find((x) => x.material === material);
 
             if (group) {
-              group.parents.push(parent);
+              group.linked.push(linked);
             } else {
               scheduled.materials.push({
                 material,
-                parents: [parent],
+                linked: [linked],
+                drops,
+                auxiliary: drops.itemsAux?.includes(material) || false,
               });
             }
           }
         }
       };
 
-      const addArtifact = (artifact: ScheduledDomain["artifacts"][0]) => {
-        if (drops.items.includes(artifact)) {
+      const addArtifact = (linked: ScheduledDomain["artifacts"][0]["linked"]) => {
+        if ([...drops.items, ...((filter !== "noaux" && drops.itemsAux) || [])].includes(linked)) {
           const domain = getDomainFromDrops(drops);
 
           if (domain) {
-            getScheduled(domain).artifacts.push(artifact);
+            getScheduled(domain).artifacts.push({
+              linked,
+              drops,
+              auxiliary: drops.itemsAux?.includes(linked) || false,
+            });
           }
         }
       };
 
-      if (filter === "all" || filter === "today" || filter === "character") {
+      if (filterType === "all" || filterType === "character") {
         for (const char of charactersWeekly) {
           const character = Characters.find((character) => character.name === char);
           character && addMaterial(character, character.talentMaterialWeekly);
@@ -143,14 +160,14 @@ const DomainView = () => {
         }
       }
 
-      if (filter === "all" || filter === "today" || filter === "weapon") {
+      if (filterType === "all" || filterType === "weapon") {
         for (const weap of weapons) {
           const weapon = Weapons.find((weapon) => weapon.name === weap);
           weapon && addMaterial(weapon, weapon.material);
         }
       }
 
-      if (filter === "all" || filter === "today" || filter === "artifact") {
+      if (filterType === "all" || filterType === "artifact") {
         for (const arti of artifacts) {
           const artifact = Artifacts.find((artifact) => artifact.name === arti);
           artifact && addArtifact(artifact);
@@ -158,17 +175,19 @@ const DomainView = () => {
       }
     }
 
-    for (const result of results) {
-      result.materials.sort((a, b) => a.material.name.localeCompare(b.material.name));
+    results = results.filter(({ region }) => filterRegion === "all" || region.name.toLowerCase() === filterRegion);
 
-      for (const group of result.materials) {
-        group.parents.sort((a, b) => a.name.localeCompare(b.name));
+    for (const domain of results) {
+      domain.materials.sort((a, b) => a.material.name.localeCompare(b.material.name));
+
+      for (const group of domain.materials) {
+        group.linked.sort((a, b) => a.name.localeCompare(b.name));
       }
 
-      result.artifacts.sort((a, b) => a.name.localeCompare(b.name));
+      domain.artifacts.sort((a, b) => a.linked.name.localeCompare(b.linked.name));
     }
 
-    return results.sort((a, b) => {
+    results = results.sort((a, b) => {
       const category = DomainCategories.indexOf(a.category) - DomainCategories.indexOf(b.category);
       if (category) return category;
 
@@ -178,7 +197,95 @@ const DomainView = () => {
       const name = a.domain.name.localeCompare(b.domain.name);
       return name;
     });
-  }, [filter, characters, charactersWeekly, charactersGem, charactersNormalBoss, weapons, artifacts, today]);
+
+    if (filter === "efficiency") {
+      const set = new Set<string>();
+      const add = (s: string) => !set.has(s) && set.add(s);
+
+      results = results
+        .map((domain) => {
+          let score = domain.artifacts.length;
+
+          for (const { linked } of domain.materials) {
+            score += linked.length;
+          }
+
+          return { domain, score };
+        })
+        .sort((a, b) => b.score - a.score)
+        .map(({ domain }) => domain);
+
+      const addAll = (auxiliaryFilter: boolean) => {
+        for (const domain of results) {
+          for (const group of domain.materials) {
+            group.auxiliary === auxiliaryFilter &&
+              (group.linked = group.linked.filter(({ name }) => add(`${group.material.name}|${name}`)));
+          }
+
+          domain.materials = domain.materials.filter(({ linked }) => linked.length);
+          domain.artifacts = domain.artifacts.filter(
+            ({ linked: { name }, auxiliary }) => auxiliary !== auxiliaryFilter || add(name)
+          );
+        }
+      };
+
+      // non-auxiliary (guaranteed drop) items must be added first in order to ensure correctness of order
+      addAll(false);
+      addAll(true);
+
+      results = results
+        .filter(({ materials, artifacts }) => materials.length || artifacts.length)
+        .map((domain) => {
+          let score = 0;
+          let available = new Set<Weekday>();
+          let highlighted = 0;
+
+          for (const { linked, drops } of domain.materials) {
+            score += linked.length;
+            highlighted += linked.filter(({ name }) => highlights.includes(name)).length;
+
+            for (const day of drops.days) {
+              available.add(day);
+            }
+          }
+
+          for (const { linked, drops } of domain.artifacts) {
+            score++;
+            highlights.includes(linked.name) && highlighted++;
+
+            for (const day of drops.days) {
+              available.add(day);
+            }
+          }
+
+          return { domain, score, availability: available.size, highlighted };
+        })
+        .sort((a, b) => {
+          const highlighted = b.highlighted - a.highlighted;
+          if (highlighted) return highlighted;
+
+          const availability = a.availability - b.availability;
+          if (availability) return availability;
+
+          return b.score - a.score;
+        })
+        .map(({ domain }) => domain);
+    }
+
+    return results;
+  }, [
+    filter,
+    filterType,
+    filterRegion,
+    characters,
+    charactersWeekly,
+    charactersGem,
+    charactersNormalBoss,
+    weapons,
+    artifacts,
+    today,
+    highlights,
+  ]);
 
   const domainColumns = useMemo(() => {
     const results: ScheduledDomain[][] = [];
@@ -187,7 +294,7 @@ const DomainView = () => {
       results.push(domains.filter(({ category }) => categories.includes(category)));
     };
 
-    switch (filter) {
+    switch (filterType) {
       case "weapon":
         addCategories(Trounce, DomainOfForgery);
         addCategories(NormalBoss);
@@ -205,7 +312,7 @@ const DomainView = () => {
     }
 
     return results.filter((c) => c.length);
-  }, [domains, filter]);
+  }, [domains, filterType]);
 
   return (
     <WidgetWrapper
@@ -216,7 +323,21 @@ const DomainView = () => {
           {!!domains.length && <span> ({domains.length})</span>}
         </span>
       }
-      menu={(!!domains.length || filter !== "all") && <FilterButtons />}
+      menu={
+        (!!domains.length || filterType !== "all") && (
+          <Wrap spacing={1} justify="flex-end">
+            <WrapItem>
+              <FilterButtons />
+            </WrapItem>
+            <WrapItem>
+              <FilterRegionButtons />
+            </WrapItem>
+            <WrapItem>
+              <FilterTypeButtons />
+            </WrapItem>
+          </Wrap>
+        )
+      }
     >
       {domains.length ? (
         <Grid className={domainColumns.length > 1 ? styles.grid : undefined} gap={4}>

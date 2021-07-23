@@ -47,14 +47,7 @@ const DomainDisplay = ({ domain, region, category, materials, artifacts }: Sched
         </div>
       </HStack>
 
-      {useMemo(
-        () =>
-          materials.map(({ material, parents }) => (
-            <MaterialList key={material.name} material={material} linked={parents} />
-          )),
-        [materials]
-      )}
-
+      {useMemo(() => materials.map((group) => <MaterialList key={group.material.name} {...group} />), [materials])}
       {useMemo(() => !!artifacts.length && <ArtifactList artifacts={artifacts} />, [artifacts])}
     </WhiteCard>
   );

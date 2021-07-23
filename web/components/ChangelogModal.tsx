@@ -36,9 +36,9 @@ function buildChangelog() {
       <ChangelogItem>Added 2.0 Inazuma characters, weapons and artifacts.</ChangelogItem>
       <ChangelogItem>Added normal boss drops and character ascension materials to the database.</ChangelogItem>
       <ChangelogItem>Added more character backgrounds.</ChangelogItem>
-      <ChangelogItem>Improved some more parts of the website UI.</ChangelogItem>
+      <ChangelogItem>Improved many more parts of the website UI.</ChangelogItem>
       <ChangelogItem>Improved search performance in Customize page.</ChangelogItem>
-      <ChangelogItem>Changed website icon set for a cleaner look.</ChangelogItem>
+      <ChangelogItem>Implemented a new algorithm to select most efficient domain runs.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={30} date="2021/07/04">
       <ChangelogItem>Added Simplified Chinese localization. 添加了简体中文翻译。</ChangelogItem>

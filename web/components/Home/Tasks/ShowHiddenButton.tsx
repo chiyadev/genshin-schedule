@@ -14,6 +14,7 @@ const ShowHiddenButton = () => {
       label={
         value ? <FormattedMessage defaultMessage="Hide hidden" /> : <FormattedMessage defaultMessage="Show hidden" />
       }
+      closeOnClick={false}
     >
       <Button
         as="button"

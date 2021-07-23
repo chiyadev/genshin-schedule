@@ -24,6 +24,7 @@ const WidgetWrapper = ({
       <HStack color={hidden[type] ? disabledColor : undefined} spacing={0}>
         <Link
           as="button"
+          whiteSpace="pre"
           fontSize="xl"
           fontWeight="bold"
           fontFamily="Genshin"
