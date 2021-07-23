@@ -12,12 +12,17 @@ import {
   WhiteWeapon,
 } from "../../../assets";
 import { FormattedMessage } from "react-intl";
-import { Calendar } from "react-feather";
+import { Flag } from "react-feather";
 
 const FilterButtons = () => {
   return (
     <ButtonGroup isAttached>
-      <FilterButton type="today" label={<FormattedMessage defaultMessage="Hide all-week domains" />} icon={Calendar} />
+      <FilterButton
+        type="today"
+        label={<FormattedMessage defaultMessage="Show all-week domains" />}
+        labelOff={<FormattedMessage defaultMessage="Hide all-week domains" />}
+        icon={Flag}
+      />
 
       <FilterButton
         type="character"
@@ -43,18 +48,20 @@ const FilterButtons = () => {
 const FilterButton = ({
   type,
   label,
+  labelOff,
   image,
   icon,
 }: {
   type: Config["domainFilter"];
   label: ReactNode;
+  labelOff?: ReactNode;
   image?: string;
   icon?: any;
 }) => {
   const [filter, setFilter] = useConfig("domainFilter");
 
   return (
-    <Tooltip label={label} closeOnClick={false}>
+    <Tooltip label={filter === type ? label : labelOff || label} closeOnClick={false}>
       <Button
         as="button"
         variant="ghost"

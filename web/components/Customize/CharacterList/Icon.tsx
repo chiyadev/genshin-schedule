@@ -6,10 +6,10 @@ import NextLink from "next/link";
 import IconImage from "../IconImage";
 import { FormattedMessage as FormattedMessageId } from "react-intl";
 
-const Icon = ({ visible = true, character, added }: { visible?: boolean; character: Character; added?: boolean }) => {
+const Icon = ({ character }: { character: Character }) => {
   return (
     <NextLink href={`/customize/characters/${character.name}`} passHref>
-      <Link d={visible ? undefined : "none"} borderRadius="md">
+      <Link borderRadius="md">
         <AspectRatio ratio={5 / 6}>
           <VStack
             align="stretch"
@@ -20,7 +20,6 @@ const Icon = ({ visible = true, character, added }: { visible?: boolean; charact
             bg={useColorModeValue("white", "gray.900")}
             borderWidth={1}
             borderColor={useColorModeValue("gray.200", "gray.700")}
-            opacity={added ? 0.3 : 1}
             transition=".2s"
           >
             <Center minH={0} flex={1}>

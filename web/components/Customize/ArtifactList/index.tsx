@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { ArtifactSearch } from "./search";
 import Icon from "./Icon";
-import { Grid, Heading, VStack } from "@chakra-ui/react";
+import { chakra, Grid, Heading, VStack } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/config";
 import { FormattedMessage } from "react-intl";
 
@@ -20,12 +20,13 @@ const ArtifactList = () => {
 
       <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>
         {all.map((artifact) => (
-          <Icon
+          <chakra.div
             key={artifact.name}
-            visible={results.has(artifact)}
-            artifact={artifact}
-            added={artifacts.includes(artifact.name)}
-          />
+            d={results.has(artifact) ? undefined : "none"}
+            opacity={artifacts.includes(artifact.name) ? 0.3 : 1}
+          >
+            <Icon artifact={artifact} />
+          </chakra.div>
         ))}
       </Grid>
     </VStack>

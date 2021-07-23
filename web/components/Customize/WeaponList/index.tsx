@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { WeaponSearch } from "./search";
 import Icon from "./Icon";
-import { Grid, Heading, VStack } from "@chakra-ui/react";
+import { chakra, Grid, Heading, VStack } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/config";
 import { FormattedMessage } from "react-intl";
 
@@ -20,7 +20,9 @@ const WeaponList = () => {
 
       <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>
         {all.map((weapon) => (
-          <Icon key={weapon.name} visible={results.has(weapon)} weapon={weapon} added={weapons.includes(weapon.name)} />
+          <chakra.div d={results.has(weapon) ? undefined : "none"} opacity={weapons.includes(weapon.name) ? 0.3 : 1}>
+            <Icon key={weapon.name} weapon={weapon} />
+          </chakra.div>
         ))}
       </Grid>
     </VStack>

@@ -37,6 +37,7 @@ function buildChangelog() {
       <ChangelogItem>Added normal boss drops and character ascension materials to the database.</ChangelogItem>
       <ChangelogItem>Added more character backgrounds.</ChangelogItem>
       <ChangelogItem>Improved some more parts of the website UI.</ChangelogItem>
+      <ChangelogItem>Improved search performance in Customize page.</ChangelogItem>
       <ChangelogItem>Changed website icon set for a cleaner look.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={30} date="2021/07/04">

@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from "react";
 import { CharacterSearch } from "./search";
 import Icon from "./Icon";
-import { Grid, Heading, VStack } from "@chakra-ui/react";
+import { chakra, Grid, Heading, VStack } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/config";
 import { FormattedMessage } from "react-intl";
 
@@ -28,12 +28,13 @@ const CharacterList = () => {
 
       <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>
         {all.map((character) => (
-          <Icon
+          <chakra.div
             key={character.name}
-            visible={results.has(character)}
-            character={character}
-            added={added.has(character.name)}
-          />
+            d={results.has(character) ? undefined : "none"}
+            opacity={added.has(character.name) ? 0.3 : 1}
+          >
+            <Icon character={character} />
+          </chakra.div>
         ))}
       </Grid>
     </VStack>
