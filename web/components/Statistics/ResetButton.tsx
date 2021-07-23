@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { useConfig } from "../../utils/config";
 import { FormattedMessage } from "react-intl";
-import { RefreshCw } from "react-feather";
+import { Repeat } from "react-feather";
 
 const ResetButton = () => {
   const [, setStats] = useConfig("stats");
@@ -21,7 +21,7 @@ const ResetButton = () => {
 
   return (
     <>
-      <Button colorScheme="red" leftIcon={<Icon as={RefreshCw} />} onClick={() => setConfirm(true)}>
+      <Button colorScheme="red" leftIcon={<Icon as={Repeat} />} onClick={() => setConfirm(true)}>
         <FormattedMessage defaultMessage="Reset" />
       </Button>
 

@@ -11,16 +11,14 @@ const DomainDisplay = ({ domain, region, category, materials, artifacts }: Sched
   return (
     <WhiteCard divide>
       <HStack spacing={2}>
-        {region && (
-          <chakra.img
-            alt={region.name}
-            title={region.name}
-            src={getAssetByName(region.name)}
-            w={10}
-            h={10}
-            objectFit="contain"
-          />
-        )}
+        <chakra.img
+          alt={region.name}
+          title={region.name}
+          src={getAssetByName(region.name)}
+          w={10}
+          h={10}
+          objectFit="contain"
+        />
 
         <div>
           <chakra.div fontSize="xl" fontWeight="bold">
@@ -29,16 +27,16 @@ const DomainDisplay = ({ domain, region, category, materials, artifacts }: Sched
             </Link>
           </chakra.div>
 
-          <Badge colorScheme={category?.colorHint}>
+          <Badge colorScheme={category.colorHint}>
             <FormattedMessage
               defaultMessage="{category}, {region}"
               values={{
-                category: category && (
+                category: (
                   <Link href={category.wiki} isExternal>
                     <FormattedMessageId id={category.name} />
                   </Link>
                 ),
-                region: region && (
+                region: (
                   <Link href={region.wiki} isExternal>
                     <FormattedMessageId id={region.name} />
                   </Link>

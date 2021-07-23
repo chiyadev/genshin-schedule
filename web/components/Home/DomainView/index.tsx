@@ -29,8 +29,8 @@ import { CharacterMaterial } from "../../../db/characterMaterials";
 
 export type ScheduledDomain = {
   domain: Domain;
-  region?: Region;
-  category?: DomainCategory;
+  region: Region;
+  category: DomainCategory;
   materials: {
     material: CharacterMaterial | TalentMaterial | WeaponMaterial;
     parents: (Character | Weapon)[];
@@ -58,8 +58,8 @@ const DomainView = () => {
       let scheduled = results.find((result) => result.domain === domain);
 
       if (!scheduled) {
-        const region = Regions.find((region) => region.domains.includes(domain));
-        const category = DomainCategories.find((category) => category.domains.includes(domain));
+        const region = Regions.find((region) => region.domains.includes(domain)) as any;
+        const category = DomainCategories.find((category) => category.domains.includes(domain)) as any;
 
         results.push(
           (scheduled = {
@@ -168,22 +168,15 @@ const DomainView = () => {
       result.artifacts.sort((a, b) => a.name.localeCompare(b.name));
     }
 
-    const categoryOrder: (DomainCategory | undefined)[] = [
-      Trounce,
-      DomainOfMastery,
-      DomainOfForgery,
-      DomainOfBlessing,
-      NormalBoss,
-    ];
-
     return results.sort((a, b) => {
-      const category = categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category);
+      const category = DomainCategories.indexOf(a.category) - DomainCategories.indexOf(b.category);
+      if (category) return category;
 
-      if (category) {
-        return category;
-      } else {
-        return a.domain.name.localeCompare(b.domain.name);
-      }
+      const region = Regions.indexOf(a.region) - Regions.indexOf(b.region);
+      if (region) return region;
+
+      const name = a.domain.name.localeCompare(b.domain.name);
+      return name;
     });
   }, [filter, characters, charactersWeekly, charactersGem, charactersNormalBoss, weapons, artifacts, today]);
 
@@ -191,7 +184,7 @@ const DomainView = () => {
     const results: ScheduledDomain[][] = [];
 
     const addCategories = (...categories: DomainCategory[]) => {
-      results.push(domains.filter(({ category }) => category && categories.includes(category)));
+      results.push(domains.filter(({ category }) => categories.includes(category)));
     };
 
     switch (filter) {
