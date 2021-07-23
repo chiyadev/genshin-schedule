@@ -12,7 +12,7 @@ import ColorModeOverride from "./ColorModeOverride";
 import ClockOffsetWarning from "./ClockOffsetWarning";
 import { Tooltip } from "@chakra-ui/tooltip";
 import { FormattedMessage } from "react-intl";
-import { Bell, PieChart } from "react-feather";
+import { Bell, HelpCircle, PieChart } from "react-feather";
 
 const Layout = ({
   children,
@@ -57,6 +57,7 @@ const Layout = ({
                       </Tooltip>
                     </Link>
                   </NextLink>
+
                   <NextLink href="/home/statistics" passHref>
                     <Link>
                       <Tooltip label={<FormattedMessage defaultMessage="Statistics" />}>
@@ -66,6 +67,12 @@ const Layout = ({
                       </Tooltip>
                     </Link>
                   </NextLink>
+
+                  <Tooltip label={<FormattedMessage defaultMessage="Help" />}>
+                    <Link href="https://github.com/chiyadev/genshin-schedule/wiki" isExternal>
+                      <Icon as={HelpCircle} />
+                    </Link>
+                  </Tooltip>
                 </>
               }
             />

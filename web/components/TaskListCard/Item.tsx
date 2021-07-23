@@ -1,4 +1,4 @@
-import { chakra, HStack, Link, Spacer, useColorModeValue, useToken, VStack } from "@chakra-ui/react";
+import { chakra, HStack, Link, useColorModeValue, useToken, VStack } from "@chakra-ui/react";
 import React, { Dispatch, memo, SetStateAction } from "react";
 import { Task, useConfig } from "../../utils/config";
 import { trackEvent } from "../../utils/umami";
@@ -27,6 +27,8 @@ const Item = ({
       as="button"
       fontSize="lg"
       fontWeight="bold"
+      maxW="full"
+      isTruncated
       onClick={() => {
         setFocused(task);
         onTaskClick?.(task);
@@ -40,7 +42,7 @@ const Item = ({
 
   return (
     <HStack spacing={0} my={compact ? -2 : -1} opacity={task.visible ? 1 : 0.5}>
-      <HStack spacing={2} bg={task.highlight ? highlightColor : undefined} borderRadius="sm">
+      <HStack spacing={2} bg={task.highlight ? highlightColor : undefined} borderRadius="sm" flex={1} isTruncated>
         <chakra.img
           alt={task.icon}
           title={formatMessage({ defaultMessage: "Highlight task" })}
@@ -61,7 +63,7 @@ const Item = ({
         />
 
         {compact ? (
-          <div>
+          <chakra.div minW={0}>
             {nameNode}
             {task.description && (
               <chakra.span color="gray.500" wordBreak="break-word">
@@ -69,20 +71,18 @@ const Item = ({
                 {task.description}
               </chakra.span>
             )}
-          </div>
+          </chakra.div>
         ) : (
-          <VStack align="start" spacing={0}>
+          <VStack align="start" spacing={0} flex={1} isTruncated>
             {nameNode}
             {task.description && (
-              <chakra.span fontSize="sm" color="gray.500" wordBreak="break-word">
+              <chakra.span fontSize="sm" color="gray.500" maxW="full" isTruncated>
                 {task.description}
               </chakra.span>
             )}
           </VStack>
         )}
       </HStack>
-
-      <Spacer minW={2} />
 
       <chakra.div flexShrink={0}>
         <DoneButton task={task} setTask={setTask} />

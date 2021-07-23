@@ -27,7 +27,7 @@ const Icon = ({ weapon }: { weapon: Weapon }) => {
             </Center>
 
             <VStack spacing={1} maxW="100%">
-              <chakra.div isTruncated maxW="100%">
+              <chakra.div isTruncated maxW="100%" fontSize="sm" fontWeight="500">
                 <FormattedMessageId id={weapon.name} />
               </chakra.div>
 

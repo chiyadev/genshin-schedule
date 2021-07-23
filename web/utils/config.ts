@@ -123,7 +123,7 @@ export const DefaultConfig: Config = {
   charactersNormalBoss: [],
   weapons: [],
   artifacts: [],
-  domainFilter: "all",
+  domainFilter: "efficiency",
   domainFilterType: "all",
   domainFilterRegion: "all",
   itemNotes: {},

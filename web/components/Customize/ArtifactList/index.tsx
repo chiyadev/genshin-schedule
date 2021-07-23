@@ -4,6 +4,7 @@ import Icon from "./Icon";
 import { chakra, Grid, Heading, VStack } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/config";
 import { FormattedMessage } from "react-intl";
+import styles from "../grid.module.css";
 
 const ArtifactList = () => {
   const [search] = useConfig("customizeQuery");
@@ -18,7 +19,7 @@ const ArtifactList = () => {
         <FormattedMessage defaultMessage="Artifacts" />
       </Heading>
 
-      <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>
+      <Grid gap={2} className={styles.grid}>
         {all.map((artifact) => (
           <chakra.div
             key={artifact.name}

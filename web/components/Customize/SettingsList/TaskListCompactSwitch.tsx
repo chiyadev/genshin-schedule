@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { HStack, Icon, Switch } from "@chakra-ui/react";
+import { HStack, Icon, Stat, StatLabel, StatNumber, Switch } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
 import { FormattedMessage } from "react-intl";
@@ -9,22 +9,26 @@ const TaskListCompactSwitch = () => {
   const [value, setValue] = useConfig("taskListCompact");
 
   return (
-    <HStack spacing={4}>
-      <HStack spacing={2}>
-        <Icon as={List} />
-        <div>
-          <FormattedMessage defaultMessage="Compact task list" />
-        </div>
-      </HStack>
+    <Stat>
+      <StatLabel>
+        <HStack spacing={2}>
+          <Icon as={List} />
+          <div>
+            <FormattedMessage defaultMessage="Compact task list" />
+          </div>
+        </HStack>
+      </StatLabel>
 
-      <Switch
-        isChecked={value}
-        onChange={({ currentTarget: { checked } }) => {
-          setValue(checked);
-          trackEvent("taskList", `compact${checked ? "Enable" : "Disable"}`);
-        }}
-      />
-    </HStack>
+      <StatNumber>
+        <Switch
+          isChecked={value}
+          onChange={({ currentTarget: { checked } }) => {
+            setValue(checked);
+            trackEvent("taskList", `compact${checked ? "Enable" : "Disable"}`);
+          }}
+        />
+      </StatNumber>
+    </Stat>
   );
 };
 

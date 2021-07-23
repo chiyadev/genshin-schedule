@@ -27,9 +27,9 @@ const Icon = ({ character }: { character: Character }) => {
             </Center>
 
             <VStack spacing={1}>
-              <div>
+              <chakra.div fontSize="sm" fontWeight="500">
                 <FormattedMessageId id={character.name} />
-              </div>
+              </chakra.div>
 
               <Badge colorScheme={character.talentMaterial.colorHint}>
                 <HStack spacing={1}>

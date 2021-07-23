@@ -21,7 +21,7 @@ const LatestChangelog = 31;
 
 function buildChangelog() {
   return [
-    <ChangelogSection key={31} date="2021/07/22">
+    <ChangelogSection key={31} date="2021/07/23">
       <Alert status="info" mb={2}>
         <AlertIcon />
         <div>

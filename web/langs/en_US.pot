@@ -1,47 +1,47 @@
 msgid ""
 msgstr ""
 
-#: components/Auth/UserSignIn.tsx:57
+#: components/Auth/UserSignIn.tsx:62
 msgctxt "components.Auth.UserSignIn.242220"
 msgid "Username"
 msgstr ""
 
-#: components/Auth/UserSignIn.tsx:45
+#: components/Auth/UserSignIn.tsx:46
 msgctxt "components.Auth.UserSignIn.28def3"
 msgid "Error"
 msgstr ""
 
-#: components/Auth/UserSignIn.tsx:84
+#: components/Auth/UserSignIn.tsx:93
 msgctxt "components.Auth.UserSignIn.57f247"
 msgid "Forgot password?"
 msgstr ""
 
-#: components/Auth/UserSignIn.tsx:147
-msgctxt "components.Auth.UserSignIn.61ef74"
-msgid "Continue as anonymous"
+#: components/Auth/UserSignIn.tsx:157
+msgctxt "components.Auth.UserSignIn.67b73d"
+msgid "Continue without signing in"
 msgstr ""
 
-#: components/Auth/UserSignIn.tsx:89
+#: components/Auth/UserSignIn.tsx:98
 msgctxt "components.Auth.UserSignIn.7249ee"
 msgid "Never reuse your miHoYo password on Genshin-related websites."
 msgstr ""
 
-#: components/Auth/UserSignIn.tsx:134
+#: components/Auth/UserSignIn.tsx:144
 msgctxt "components.Auth.UserSignIn.93eb72"
 msgid "All data will be stored locally on the browser."
 msgstr ""
 
-#: components/Auth/UserSignIn.tsx:97
+#: components/Auth/UserSignIn.tsx:105
 msgctxt "components.Auth.UserSignIn.bc7fa7"
 msgid "Read more."
 msgstr ""
 
-#: components/Auth/UserSignIn.tsx:130
+#: components/Auth/UserSignIn.tsx:138
 msgctxt "components.Auth.UserSignIn.c12651"
 msgid "Submit"
 msgstr ""
 
-#: components/Auth/UserSignIn.tsx:70
+#: components/Auth/UserSignIn.tsx:78
 msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
@@ -81,7 +81,7 @@ msgctxt "components.Customize.ArtifactInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
 msgstr ""
 
-#: components/Customize/ArtifactList/index.tsx:18
+#: components/Customize/ArtifactList/index.tsx:19
 msgctxt "components.Customize.ArtifactList.index.796e5e"
 msgid "Artifacts"
 msgstr ""
@@ -116,7 +116,7 @@ msgctxt "components.Customize.CharacterInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
 msgstr ""
 
-#: components/Customize/CharacterList/index.tsx:26
+#: components/Customize/CharacterList/index.tsx:27
 msgctxt "components.Customize.CharacterList.index.4e372c"
 msgid "Characters"
 msgstr ""
@@ -251,12 +251,12 @@ msgctxt "components.Customize.SettingsList.AccountManageButton.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/Customize/SettingsList/BackgroundSwitch.tsx:17
+#: components/Customize/SettingsList/BackgroundSwitch.tsx:18
 msgctxt "components.Customize.SettingsList.BackgroundSwitch.5d0640"
 msgid "Background"
 msgstr ""
 
-#: components/Customize/SettingsList/BackgroundSwitch.tsx:37
+#: components/Customize/SettingsList/BackgroundSwitch.tsx:40
 msgctxt "components.Customize.SettingsList.BackgroundSwitch.b6d853"
 msgid "Disabled"
 msgstr ""
@@ -296,32 +296,32 @@ msgctxt "components.Customize.SettingsList.ConfigExportButton.e25eaf"
 msgid "Copy"
 msgstr ""
 
-#: components/Customize/SettingsList/LanguageSwitch.tsx:39
+#: components/Customize/SettingsList/LanguageSwitch.tsx:42
 msgctxt "components.Customize.SettingsList.LanguageSwitch.4b7b37"
 msgid "Add new language"
 msgstr ""
 
-#: components/Customize/SettingsList/LanguageSwitch.tsx:18
+#: components/Customize/SettingsList/LanguageSwitch.tsx:19
 msgctxt "components.Customize.SettingsList.LanguageSwitch.cb5677"
 msgid "Language"
 msgstr ""
 
-#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:17
+#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:18
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.6eef86"
 msgid "Resin estimation mode"
 msgstr ""
 
-#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:30
+#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:33
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.a854bc"
 msgid "Value steps (20, 40, 60)"
 msgstr ""
 
-#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:29
+#: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:32
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.e2e5d9"
 msgid "Time steps (2h, 4h, 8h…)"
 msgstr ""
 
-#: components/Customize/SettingsList/ResinNotifyMarkSlider.tsx:20
+#: components/Customize/SettingsList/ResinNotifyMarkSlider.tsx:32
 msgctxt "components.Customize.SettingsList.ResinNotifyMarkSlider.b9f3be"
 msgid "Send resin notification at"
 msgstr ""
@@ -331,17 +331,17 @@ msgctxt "components.Customize.SettingsList.SignOutButton.c576c9"
 msgid "Sign out"
 msgstr ""
 
-#: components/Customize/SettingsList/TaskDefaultZoomSlider.tsx:16
+#: components/Customize/SettingsList/TaskDefaultZoomSlider.tsx:28
 msgctxt "components.Customize.SettingsList.TaskDefaultZoomSlider.9c6d23"
 msgid "Zoom on task focus"
 msgstr ""
 
-#: components/Customize/SettingsList/TaskListCompactSwitch.tsx:16
+#: components/Customize/SettingsList/TaskListCompactSwitch.tsx:17
 msgctxt "components.Customize.SettingsList.TaskListCompactSwitch.a852ad"
 msgid "Compact task list"
 msgstr ""
 
-#: components/Customize/SettingsList/ThemeSwitch.tsx:16
+#: components/Customize/SettingsList/ThemeSwitch.tsx:17
 msgctxt "components.Customize.SettingsList.ThemeSwitch.84c510"
 msgid "Dark mode"
 msgstr ""
@@ -381,7 +381,7 @@ msgctxt "components.Customize.WeaponInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
 msgstr ""
 
-#: components/Customize/WeaponList/index.tsx:18
+#: components/Customize/WeaponList/index.tsx:19
 msgctxt "components.Customize.WeaponList.index.4477a1"
 msgid "Weapons"
 msgstr ""
@@ -481,6 +481,11 @@ msgctxt "components.Home.Clock.index.2cbf2a"
 msgid "Time in Teyvat"
 msgstr ""
 
+#: components/Home/DomainView/ArtifactList.tsx:16
+msgctxt "components.Home.DomainView.ArtifactList.742197"
+msgid "This item is not guaranteed to drop."
+msgstr ""
+
 #: components/Home/DomainView/DomainDisplay.tsx:31
 msgctxt "components.Home.DomainView.DomainDisplay.0388b5"
 msgid "{category}, {region}"
@@ -524,6 +529,11 @@ msgstr ""
 #: components/Home/DomainView/Item.tsx:39
 msgctxt "components.Home.DomainView.Item.238d34"
 msgid "Highlight item"
+msgstr ""
+
+#: components/Home/DomainView/MaterialList.tsx:34
+msgctxt "components.Home.DomainView.MaterialList.742197"
+msgid "This item is not guaranteed to drop."
 msgstr ""
 
 #: components/Home/DomainView/index.tsx:376
@@ -691,7 +701,7 @@ msgctxt "components.Home.Tasks.index.778f27"
 msgid "Open map"
 msgstr ""
 
-#: components/Layout.tsx:62
+#: components/Layout.tsx:63
 msgctxt "components.Layout.1f7783"
 msgid "Statistics"
 msgstr ""
@@ -699,6 +709,11 @@ msgstr ""
 #: components/Layout.tsx:53
 msgctxt "components.Layout.34089d"
 msgid "Notifications"
+msgstr ""
+
+#: components/Layout.tsx:71
+msgctxt "components.Layout.484351"
+msgid "Help"
 msgstr ""
 
 #: components/Map/TaskCreateLayer/CreateButton.tsx:32
@@ -986,7 +1001,7 @@ msgctxt "components.TaskListCard.DoneButton.927523"
 msgid "Mark as done"
 msgstr ""
 
-#: components/TaskListCard/Item.tsx:46
+#: components/TaskListCard/Item.tsx:48
 msgctxt "components.TaskListCard.Item.0ababe"
 msgid "Highlight task"
 msgstr ""
@@ -3631,12 +3646,12 @@ msgctxt "pages.index.0ed193"
 msgid "Tracks your resins and estimates when it will recharge without having to open the game."
 msgstr ""
 
-#: pages/index.tsx:134
+#: pages/index.tsx:135
 msgctxt "pages.index.37b47a"
 msgid "Signing in will enable synchronization across multiple devices. If you do not already have an account, it will be created automatically."
 msgstr ""
 
-#: pages/index.tsx:131
+#: pages/index.tsx:132
 msgctxt "pages.index.49026d"
 msgid "Sign in"
 msgstr ""

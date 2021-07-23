@@ -84,9 +84,9 @@ const Welcome = () => {
                   <Heading size="md">
                     <FormattedMessage defaultMessage="Resin calculator" />
                   </Heading>
-                  <chakra.div color="gray.500">
+                  <div>
                     <FormattedMessage defaultMessage="Tracks your resins and estimates when it will recharge without having to open the game." />
-                  </chakra.div>
+                  </div>
                 </VStack>
 
                 <div>
@@ -99,9 +99,9 @@ const Welcome = () => {
                   <Heading size="md">
                     <FormattedMessage defaultMessage="Task scheduler" />
                   </Heading>
-                  <chakra.div color="gray.500">
+                  <div>
                     <FormattedMessage defaultMessage="Tracks open world resources and reminds you as soon as they respawn. There is no limit to the number of pins." />
-                  </chakra.div>
+                  </div>
                 </VStack>
 
                 <div>
@@ -114,9 +114,9 @@ const Welcome = () => {
                   <Heading size="md">
                     <FormattedMessage defaultMessage="Domain view" />
                   </Heading>
-                  <chakra.div color="gray.500">
+                  <div>
                     <FormattedMessage defaultMessage="Shows which domains can be cleared for ascension materials and artifacts for the day." />
-                  </chakra.div>
+                  </div>
                 </VStack>
 
                 <div>
@@ -126,13 +126,15 @@ const Welcome = () => {
             </VStack>
           </VStack>
 
-          <VStack ref={authRef} align="stretch" spacing={4}>
-            <Heading size="lg">
-              <FormattedMessage defaultMessage="Sign in" />
-            </Heading>
-            <div>
-              <FormattedMessage defaultMessage="Signing in will enable synchronization across multiple devices. If you do not already have an account, it will be created automatically." />
-            </div>
+          <VStack ref={authRef} align="stretch" spacing={8}>
+            <VStack align="stretch" spacing={4}>
+              <Heading size="lg">
+                <FormattedMessage defaultMessage="Sign in" />
+              </Heading>
+              <div>
+                <FormattedMessage defaultMessage="Signing in will enable synchronization across multiple devices. If you do not already have an account, it will be created automatically." />
+              </div>
+            </VStack>
 
             <UserSignIn />
           </VStack>

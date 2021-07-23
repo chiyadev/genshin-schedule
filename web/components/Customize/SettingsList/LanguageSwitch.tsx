@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { HStack, Icon, Select } from "@chakra-ui/react";
+import { HStack, Icon, Select, Stat, StatLabel, StatNumber } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -11,34 +11,38 @@ const LanguageSwitch = () => {
   const [value, setValue] = useConfig("language");
 
   return (
-    <HStack spacing={4}>
-      <HStack spacing={2}>
-        <Icon as={Globe} />
-        <div>
-          <FormattedMessage defaultMessage="Language" />
-        </div>
-      </HStack>
+    <Stat>
+      <StatLabel mb={1}>
+        <HStack spacing={2}>
+          <Icon as={Globe} />
+          <div>
+            <FormattedMessage defaultMessage="Language" />
+          </div>
+        </HStack>
+      </StatLabel>
 
-      <Select
-        value={value}
-        onChange={({ currentTarget: { value } }) => {
-          if (value === "contribute") {
-            window.open("https://github.com/chiyadev/genshin-schedule/tree/master/web/langs");
-          } else {
-            setValue(value as any);
-            trackEvent("background", value);
-          }
-        }}
-      >
-        {Languages.map((lang) => (
-          <option key={lang} value={lang}>
-            {LanguageNames[lang]}
-          </option>
-        ))}
+      <StatNumber>
+        <Select
+          value={value}
+          onChange={({ currentTarget: { value } }) => {
+            if (value === "contribute") {
+              window.open("https://github.com/chiyadev/genshin-schedule/tree/master/web/langs");
+            } else {
+              setValue(value as any);
+              trackEvent("background", value);
+            }
+          }}
+        >
+          {Languages.map((lang) => (
+            <option key={lang} value={lang}>
+              {LanguageNames[lang]}
+            </option>
+          ))}
 
-        <option value="contribute">({formatMessage({ defaultMessage: "Add new language" })})</option>
-      </Select>
-    </HStack>
+          <option value="contribute">({formatMessage({ defaultMessage: "Add new language" })})</option>
+        </Select>
+      </StatNumber>
+    </Stat>
   );
 };
 

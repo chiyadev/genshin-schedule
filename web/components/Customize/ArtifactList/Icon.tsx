@@ -25,7 +25,7 @@ const Icon = ({ artifact }: { artifact: Artifact }) => {
               <IconImage name={artifact.name} h="full" objectFit="contain" />
             </Center>
 
-            <chakra.div isTruncated textAlign="center" maxW="100%">
+            <chakra.div isTruncated textAlign="center" maxW="100%" fontSize="sm" fontWeight="500">
               <FormattedMessageId id={artifact.name} />
             </chakra.div>
           </VStack>

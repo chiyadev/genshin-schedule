@@ -4,6 +4,7 @@ import Icon from "./Icon";
 import { chakra, Grid, Heading, VStack } from "@chakra-ui/react";
 import { useConfig } from "../../../utils/config";
 import { FormattedMessage } from "react-intl";
+import styles from "../grid.module.css";
 
 const CharacterList = () => {
   const [search] = useConfig("customizeQuery");
@@ -26,7 +27,7 @@ const CharacterList = () => {
         <FormattedMessage defaultMessage="Characters" />
       </Heading>
 
-      <Grid templateColumns="repeat(auto-fill, minmax(7rem, 1fr))" gap={2}>
+      <Grid gap={2} className={styles.grid}>
         {all.map((character) => (
           <chakra.div
             key={character.name}
