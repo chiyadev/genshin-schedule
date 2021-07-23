@@ -1,24 +1,31 @@
 import React, { memo } from "react";
-import { FaClock } from "react-icons/fa";
 import ServerText from "./ServerText";
 import TimeDisplay from "./TimeDisplay";
 import DateDisplay from "./DateDisplay";
-import { HStack, Icon, VStack } from "@chakra-ui/react";
+import { HStack, Icon, Stat, StatHelpText, StatLabel, StatNumber } from "@chakra-ui/react";
 import { FormattedMessage } from "react-intl";
+import { Clock as ClockIcon } from "react-feather";
 
 const Clock = () => {
   return (
-    <VStack spacing={1}>
-      <HStack fontSize="lg" spacing={2} justify="center">
-        <Icon as={FaClock} />
-        <div>
-          <FormattedMessage defaultMessage="Time in Teyvat" /> (<ServerText />)
-        </div>
-      </HStack>
+    <Stat textAlign="center">
+      <StatLabel>
+        <HStack fontSize="md" spacing={2} justify="center">
+          <Icon as={ClockIcon} />
+          <div>
+            <FormattedMessage defaultMessage="Time in Teyvat" /> (<ServerText />)
+          </div>
+        </HStack>
+      </StatLabel>
 
-      <TimeDisplay />
-      <DateDisplay />
-    </VStack>
+      <StatNumber my={1}>
+        <TimeDisplay />
+      </StatNumber>
+
+      <StatHelpText>
+        <DateDisplay />
+      </StatHelpText>
+    </Stat>
   );
 };
 

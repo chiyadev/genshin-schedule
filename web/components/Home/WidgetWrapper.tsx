@@ -1,7 +1,7 @@
 import React, { memo, ReactNode } from "react";
 import { Config, useConfig } from "../../utils/config";
-import { FaCaretRight } from "react-icons/fa";
 import { chakra, Collapse, Fade, HStack, Icon, Link, Spacer, useColorModeValue, VStack } from "@chakra-ui/react";
+import { ChevronRight } from "react-feather";
 
 const WidgetWrapper = ({
   type,
@@ -24,6 +24,7 @@ const WidgetWrapper = ({
       <HStack color={hidden[type] ? disabledColor : undefined} spacing={0}>
         <Link
           as="button"
+          whiteSpace="pre"
           fontSize="xl"
           fontWeight="bold"
           fontFamily="Genshin"
@@ -34,7 +35,7 @@ const WidgetWrapper = ({
           <HStack spacing={2}>
             <div>{heading}</div>
             <Icon
-              as={FaCaretRight}
+              as={ChevronRight}
               transition=".1s cubic-bezier(0.16, 1, 0.3, 1)"
               transform={hidden[type] ? undefined : "rotate(90deg)"}
             />

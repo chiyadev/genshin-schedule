@@ -1,0 +1,9 @@
+.grid {
+  grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+}
+
+@media screen and (max-width: 30em) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

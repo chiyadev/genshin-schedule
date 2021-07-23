@@ -18,10 +18,10 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
-import { FaCheck, FaCode, FaCopy, FaPencilAlt } from "react-icons/fa";
 import { useConfigs } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
 import { FormattedMessage } from "react-intl";
+import { Check, Code, Copy, Edit } from "react-feather";
 
 const ConfigExportButton = () => {
   const [open, setOpen] = useState(false);
@@ -36,7 +36,7 @@ const ConfigExportButton = () => {
   return (
     <>
       <Button
-        leftIcon={<Icon as={FaCode} />}
+        leftIcon={<Icon as={Code} />}
         onClick={() => {
           setOpen(true);
           trackEvent("dataManager", "show");
@@ -78,7 +78,7 @@ const ConfigExportButton = () => {
             <ButtonGroup>
               <Button
                 colorScheme="red"
-                leftIcon={<Icon as={FaPencilAlt} />}
+                leftIcon={<Icon as={Edit} />}
                 onClick={() => {
                   try {
                     setConfigs(JSON.parse(data));
@@ -100,7 +100,7 @@ const ConfigExportButton = () => {
               </Button>
 
               <Button
-                leftIcon={<Icon as={hasCopied ? FaCheck : FaCopy} />}
+                leftIcon={<Icon as={hasCopied ? Check : Copy} />}
                 onClick={() => {
                   onCopy();
                   trackEvent("dataManager", "copy");

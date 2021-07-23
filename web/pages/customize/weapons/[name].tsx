@@ -3,7 +3,7 @@ import { createApiClient, WebData } from "../../../utils/api";
 import { GetServerSideProps } from "next";
 import ConfigProvider from "../../../components/ConfigProvider";
 import Layout from "../../../components/Layout";
-import { chakra, HStack, Link } from "@chakra-ui/react";
+import { Badge, chakra, HStack, Link } from "@chakra-ui/react";
 import WhiteCard from "../../../components/WhiteCard";
 import { getAssetByName } from "../../../assets";
 import MaterialDisplay from "../../../components/Customize/WeaponInfo/MaterialDisplay";
@@ -11,6 +11,7 @@ import CommonMaterialDisplay from "../../../components/Customize/WeaponInfo/Comm
 import { Weapons, WeaponWiki } from "../../../db/weapons";
 import NoteInput from "../../../components/Customize/WeaponInfo/NoteInput";
 import { FormattedMessage } from "react-intl";
+import { DomainOfForgery } from "../../../db/domainCategories";
 
 type Props = {
   data: WebData | null;
@@ -52,7 +53,14 @@ const WeaponInfo = ({ data, name }: Props) => {
         {weapon ? (
           <WhiteCard divide>
             <HStack spacing={4}>
-              <chakra.img alt={weapon.name} src={getAssetByName(weapon.name)} w={16} h={16} objectFit="cover" />
+              <chakra.img
+                alt={weapon.name}
+                title={weapon.name}
+                src={getAssetByName(weapon.name)}
+                w={16}
+                h={16}
+                objectFit="cover"
+              />
 
               <div>
                 <chakra.div fontSize="xl" fontWeight="bold">
@@ -60,11 +68,12 @@ const WeaponInfo = ({ data, name }: Props) => {
                     {weapon.name}
                   </Link>
                 </chakra.div>
-                <chakra.div fontSize="sm" color="gray.500">
+
+                <Badge colorScheme={DomainOfForgery.colorHint}>
                   <Link href={WeaponWiki} isExternal>
                     {weapon.type}
                   </Link>
-                </chakra.div>
+                </Badge>
               </div>
             </HStack>
 

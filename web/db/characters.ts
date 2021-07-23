@@ -6,9 +6,11 @@ import {
   DvalinClaw,
   DvalinPlume,
   DvalinSigh,
+  Elegance,
   Freedom,
   GildedScale,
   Gold,
+  Light,
   Prosperity,
   Resistance,
   RingOfBoreas,
@@ -17,6 +19,7 @@ import {
   SpiritLocketOfBoreas,
   TailOfBoreas,
   TalentMaterial,
+  Transience,
   TuskOfMonocerosCaeli,
 } from "./talentMaterials";
 import {
@@ -24,15 +27,19 @@ import {
   Cecilia,
   CommonMaterial,
   CorLapis,
+  CrystalMarrow,
   DandelionSeed,
   FatuiInsignia,
   GlazeLily,
+  Handguard,
   HilichurlArrowhead,
   HilichurlMask,
   JueyunChili,
+  NakuWeed,
   NoctilucousJade,
   PhilanemoMushroom,
   Qingxin,
+  SakuraBloom,
   SamachurlScroll,
   SeaGanoderma,
   SilkFlower,
@@ -47,6 +54,27 @@ import {
   Wolfhook,
 } from "./commonMaterials";
 import { registerMessage } from "../utils";
+import {
+  AgnidusAgate,
+  BasaltPillar,
+  BrilliantDiamond,
+  CharacterMaterial,
+  CleansingHeart,
+  CrystallineBloom,
+  EverflameSeed,
+  HoarfrostCore,
+  HurricaneSeed,
+  JuvenileJade,
+  LightningPrism,
+  MarionetteCore,
+  PerpetualHeart,
+  PrithivaTopaz,
+  ShivadaJade,
+  SmolderingPearl,
+  VajradaAmethyst,
+  VarunadaLazurite,
+  VayudaTurquoise,
+} from "./characterMaterials";
 
 export const CharacterWiki = "https://genshin-impact.fandom.com/wiki/Characters";
 
@@ -54,8 +82,9 @@ export type Character = {
   type: "Character";
   name: string;
   wiki: string;
-  talentMaterialWeekly: TalentMaterial[];
-  talentMaterials: TalentMaterial[];
+  materials: CharacterMaterial[];
+  talentMaterialWeekly: TalentMaterial;
+  talentMaterial: TalentMaterial;
   commonMaterials: CommonMaterial[];
   leaked?: boolean;
 };
@@ -63,27 +92,40 @@ export type Character = {
 export const TravelerAnemo: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Traveler (Anemo)" }),
-  wiki: "https://genshin-impact.fandom.com/wiki/Traveler#Anemo",
-  talentMaterialWeekly: [DvalinSigh],
-  talentMaterials: [Resistance, Ballad],
+  wiki: "https://genshin-impact.fandom.com/wiki/Traveler_(Anemo)",
+  materials: [BrilliantDiamond],
+  talentMaterialWeekly: DvalinSigh,
+  talentMaterial: Resistance,
   commonMaterials: [SamachurlScroll, WindwheelAster],
 };
 
 export const TravelerGeo: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Traveler (Geo)" }),
-  wiki: "https://genshin-impact.fandom.com/wiki/Traveler#Geo",
-  talentMaterialWeekly: [DvalinSigh],
-  talentMaterials: [Resistance, Diligence],
+  wiki: "https://genshin-impact.fandom.com/wiki/Traveler_(Geo)",
+  materials: [BrilliantDiamond],
+  talentMaterialWeekly: DvalinSigh,
+  talentMaterial: Resistance,
   commonMaterials: [SamachurlScroll, HilichurlArrowhead, WindwheelAster],
+};
+
+export const TravelerElectro: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Traveler (Electro)" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Traveler_(Electro)",
+  materials: [BrilliantDiamond],
+  talentMaterialWeekly: DragonLordsCrown,
+  talentMaterial: Transience,
+  commonMaterials: [Handguard],
 };
 
 export const Amber: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Amber" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Amber",
-  talentMaterialWeekly: [DvalinSigh],
-  talentMaterials: [Freedom],
+  materials: [AgnidusAgate, EverflameSeed],
+  talentMaterialWeekly: DvalinSigh,
+  talentMaterial: Freedom,
   commonMaterials: [HilichurlArrowhead, SmallLampGrass],
 };
 
@@ -91,8 +133,9 @@ export const Barbara: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Barbara" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Barbara",
-  talentMaterialWeekly: [RingOfBoreas],
-  talentMaterials: [Freedom],
+  materials: [VarunadaLazurite, CleansingHeart],
+  talentMaterialWeekly: RingOfBoreas,
+  talentMaterial: Freedom,
   commonMaterials: [SamachurlScroll, PhilanemoMushroom],
 };
 
@@ -100,8 +143,9 @@ export const Beidou: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Beidou" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Beidou",
-  talentMaterialWeekly: [DvalinSigh],
-  talentMaterials: [Gold],
+  materials: [VajradaAmethyst, LightningPrism],
+  talentMaterialWeekly: DvalinSigh,
+  talentMaterial: Gold,
   commonMaterials: [TreasureHoarderInsignia, NoctilucousJade],
 };
 
@@ -109,8 +153,9 @@ export const Bennett: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Bennett" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Bennett",
-  talentMaterialWeekly: [DvalinPlume],
-  talentMaterials: [Resistance],
+  materials: [AgnidusAgate, EverflameSeed],
+  talentMaterialWeekly: DvalinPlume,
+  talentMaterial: Resistance,
   commonMaterials: [TreasureHoarderInsignia, WindwheelAster],
 };
 
@@ -118,8 +163,9 @@ export const Chongyun: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Chongyun" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Chongyun",
-  talentMaterialWeekly: [DvalinSigh],
-  talentMaterials: [Diligence],
+  materials: [ShivadaJade, HoarfrostCore],
+  talentMaterialWeekly: DvalinSigh,
+  talentMaterial: Diligence,
   commonMaterials: [HilichurlMask, CorLapis],
 };
 
@@ -127,8 +173,9 @@ export const Diluc: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Diluc" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Diluc",
-  talentMaterialWeekly: [DvalinPlume],
-  talentMaterials: [Resistance],
+  materials: [AgnidusAgate, EverflameSeed],
+  talentMaterialWeekly: DvalinPlume,
+  talentMaterial: Resistance,
   commonMaterials: [FatuiInsignia, SmallLampGrass],
 };
 
@@ -136,8 +183,9 @@ export const Fischl: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Fischl" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Fischl",
-  talentMaterialWeekly: [SpiritLocketOfBoreas],
-  talentMaterials: [Ballad],
+  materials: [VajradaAmethyst, LightningPrism],
+  talentMaterialWeekly: SpiritLocketOfBoreas,
+  talentMaterial: Ballad,
   commonMaterials: [HilichurlArrowhead, SmallLampGrass],
 };
 
@@ -145,8 +193,9 @@ export const Jean: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Jean" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Jean",
-  talentMaterialWeekly: [DvalinPlume],
-  talentMaterials: [Resistance],
+  materials: [VayudaTurquoise, HurricaneSeed],
+  talentMaterialWeekly: DvalinPlume,
+  talentMaterial: Resistance,
   commonMaterials: [HilichurlMask, DandelionSeed],
 };
 
@@ -154,8 +203,9 @@ export const Kaeya: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Kaeya" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Kaeya",
-  talentMaterialWeekly: [SpiritLocketOfBoreas],
-  talentMaterials: [Ballad],
+  materials: [ShivadaJade, HoarfrostCore],
+  talentMaterialWeekly: SpiritLocketOfBoreas,
+  talentMaterial: Ballad,
   commonMaterials: [TreasureHoarderInsignia, CallaLily],
 };
 
@@ -163,8 +213,9 @@ export const Keqing: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Keqing" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Keqing",
-  talentMaterialWeekly: [RingOfBoreas],
-  talentMaterials: [Prosperity],
+  materials: [VajradaAmethyst, LightningPrism],
+  talentMaterialWeekly: RingOfBoreas,
+  talentMaterial: Prosperity,
   commonMaterials: [WhopperflowerNectar, CorLapis],
 };
 
@@ -172,8 +223,9 @@ export const Lisa: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Lisa" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Lisa",
-  talentMaterialWeekly: [DvalinClaw],
-  talentMaterials: [Ballad],
+  materials: [VajradaAmethyst, LightningPrism],
+  talentMaterialWeekly: DvalinClaw,
+  talentMaterial: Ballad,
   commonMaterials: [Slime, Valberry],
 };
 
@@ -181,8 +233,9 @@ export const Mona: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Mona" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Mona",
-  talentMaterialWeekly: [RingOfBoreas],
-  talentMaterials: [Resistance],
+  materials: [VarunadaLazurite, CleansingHeart],
+  talentMaterialWeekly: RingOfBoreas,
+  talentMaterial: Resistance,
   commonMaterials: [WhopperflowerNectar, PhilanemoMushroom],
 };
 
@@ -190,8 +243,9 @@ export const Ningguang: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Ningguang" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Ningguang",
-  talentMaterialWeekly: [SpiritLocketOfBoreas],
-  talentMaterials: [Prosperity],
+  materials: [PrithivaTopaz, BasaltPillar],
+  talentMaterialWeekly: SpiritLocketOfBoreas,
+  talentMaterial: Prosperity,
   commonMaterials: [FatuiInsignia, GlazeLily],
 };
 
@@ -199,8 +253,9 @@ export const Noelle: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Noelle" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Noelle",
-  talentMaterialWeekly: [DvalinClaw],
-  talentMaterials: [Resistance],
+  materials: [PrithivaTopaz, BasaltPillar],
+  talentMaterialWeekly: DvalinClaw,
+  talentMaterial: Resistance,
   commonMaterials: [HilichurlMask, Valberry],
 };
 
@@ -208,8 +263,9 @@ export const Qiqi: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Qiqi" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Qiqi",
-  talentMaterialWeekly: [TailOfBoreas],
-  talentMaterials: [Prosperity],
+  materials: [ShivadaJade, HoarfrostCore],
+  talentMaterialWeekly: TailOfBoreas,
+  talentMaterial: Prosperity,
   commonMaterials: [SamachurlScroll, Violetgrass],
 };
 
@@ -217,8 +273,9 @@ export const Razor: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Razor" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Razor",
-  talentMaterialWeekly: [DvalinClaw],
-  talentMaterials: [Resistance],
+  materials: [VajradaAmethyst, LightningPrism],
+  talentMaterialWeekly: DvalinClaw,
+  talentMaterial: Resistance,
   commonMaterials: [HilichurlMask, Wolfhook],
 };
 
@@ -226,8 +283,9 @@ export const Sucrose: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Sucrose" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Sucrose",
-  talentMaterialWeekly: [SpiritLocketOfBoreas],
-  talentMaterials: [Freedom],
+  materials: [VayudaTurquoise, HurricaneSeed],
+  talentMaterialWeekly: SpiritLocketOfBoreas,
+  talentMaterial: Freedom,
   commonMaterials: [WhopperflowerNectar, WindwheelAster],
 };
 
@@ -235,8 +293,9 @@ export const Venti: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Venti" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Venti",
-  talentMaterialWeekly: [TailOfBoreas],
-  talentMaterials: [Ballad],
+  materials: [VayudaTurquoise, HurricaneSeed],
+  talentMaterialWeekly: TailOfBoreas,
+  talentMaterial: Ballad,
   commonMaterials: [Slime, Cecilia],
 };
 
@@ -244,8 +303,9 @@ export const Xiangling: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Xiangling" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Xiangling",
-  talentMaterialWeekly: [DvalinClaw],
-  talentMaterials: [Diligence],
+  materials: [AgnidusAgate, EverflameSeed],
+  talentMaterialWeekly: DvalinClaw,
+  talentMaterial: Diligence,
   commonMaterials: [Slime, JueyunChili],
 };
 
@@ -253,8 +313,9 @@ export const Xingqiu: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Xingqiu" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Xingqiu",
-  talentMaterialWeekly: [TailOfBoreas],
-  talentMaterials: [Gold],
+  materials: [VarunadaLazurite, CleansingHeart],
+  talentMaterialWeekly: TailOfBoreas,
+  talentMaterial: Gold,
   commonMaterials: [HilichurlMask, SilkFlower],
 };
 
@@ -262,8 +323,9 @@ export const Klee: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Klee" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Klee",
-  talentMaterialWeekly: [RingOfBoreas],
-  talentMaterials: [Freedom],
+  materials: [AgnidusAgate, EverflameSeed],
+  talentMaterialWeekly: RingOfBoreas,
+  talentMaterial: Freedom,
   commonMaterials: [SamachurlScroll, PhilanemoMushroom],
 };
 
@@ -271,8 +333,9 @@ export const Tartaglia: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Tartaglia" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Tartaglia",
-  talentMaterialWeekly: [ShardOfAFoulLegacy],
-  talentMaterials: [Freedom],
+  materials: [VarunadaLazurite, CleansingHeart],
+  talentMaterialWeekly: ShardOfAFoulLegacy,
+  talentMaterial: Freedom,
   commonMaterials: [FatuiInsignia, Starconch],
 };
 
@@ -280,8 +343,9 @@ export const Diona: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Diona" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Diona",
-  talentMaterialWeekly: [ShardOfAFoulLegacy],
-  talentMaterials: [Freedom],
+  materials: [ShivadaJade, HoarfrostCore],
+  talentMaterialWeekly: ShardOfAFoulLegacy,
+  talentMaterial: Freedom,
   commonMaterials: [HilichurlArrowhead, CallaLily],
 };
 
@@ -289,8 +353,9 @@ export const Zhongli: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Zhongli" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Zhongli",
-  talentMaterialWeekly: [TuskOfMonocerosCaeli],
-  talentMaterials: [Gold],
+  materials: [PrithivaTopaz, BasaltPillar],
+  talentMaterialWeekly: TuskOfMonocerosCaeli,
+  talentMaterial: Gold,
   commonMaterials: [Slime, CorLapis],
 };
 
@@ -298,8 +363,9 @@ export const Xinyan: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Xinyan" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Xinyan",
-  talentMaterialWeekly: [TuskOfMonocerosCaeli],
-  talentMaterials: [Gold],
+  materials: [AgnidusAgate, EverflameSeed],
+  talentMaterialWeekly: TuskOfMonocerosCaeli,
+  talentMaterial: Gold,
   commonMaterials: [TreasureHoarderInsignia, Violetgrass],
 };
 
@@ -307,8 +373,9 @@ export const Yanfei: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Yanfei" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Yanfei",
-  talentMaterialWeekly: [BloodjadeBranch],
-  talentMaterials: [Gold],
+  materials: [AgnidusAgate, JuvenileJade],
+  talentMaterialWeekly: BloodjadeBranch,
+  talentMaterial: Gold,
   commonMaterials: [TreasureHoarderInsignia, NoctilucousJade],
 };
 
@@ -316,8 +383,9 @@ export const Eula: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Eula" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Eula",
-  talentMaterialWeekly: [DragonLordsCrown],
-  talentMaterials: [Resistance],
+  materials: [ShivadaJade, CrystallineBloom],
+  talentMaterialWeekly: DragonLordsCrown,
+  talentMaterial: Resistance,
   commonMaterials: [HilichurlMask, DandelionSeed],
 };
 
@@ -325,8 +393,9 @@ export const Albedo: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Albedo" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Albedo",
-  talentMaterialWeekly: [TuskOfMonocerosCaeli],
-  talentMaterials: [Ballad],
+  materials: [PrithivaTopaz, BasaltPillar],
+  talentMaterialWeekly: TuskOfMonocerosCaeli,
+  talentMaterial: Ballad,
   commonMaterials: [SamachurlScroll, Cecilia],
 };
 
@@ -334,27 +403,29 @@ export const Ganyu: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Ganyu" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Ganyu",
-  talentMaterialWeekly: [ShadowOfTheWarrior],
-  talentMaterials: [Diligence],
+  materials: [ShivadaJade, HoarfrostCore],
+  talentMaterialWeekly: ShadowOfTheWarrior,
+  talentMaterial: Diligence,
   commonMaterials: [WhopperflowerNectar, Qingxin],
 };
 
 export const Ayaka: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Ayaka" }),
-  wiki: "https://genshin.honeyhunterworld.com/db/char/ayaka/",
-  talentMaterialWeekly: [RingOfBoreas],
-  talentMaterials: [Prosperity],
-  commonMaterials: [SamachurlScroll, WhopperflowerNectar, SmallLampGrass],
-  leaked: true,
+  wiki: "https://genshin-impact.fandom.com/wiki/Kamisato_Ayaka",
+  materials: [ShivadaJade, PerpetualHeart],
+  talentMaterialWeekly: BloodjadeBranch,
+  talentMaterial: Elegance,
+  commonMaterials: [SakuraBloom, Handguard],
 };
 
 export const Xiao: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Xiao" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Xiao",
-  talentMaterialWeekly: [ShadowOfTheWarrior],
-  talentMaterials: [Prosperity],
+  materials: [VayudaTurquoise, JuvenileJade],
+  talentMaterialWeekly: ShadowOfTheWarrior,
+  talentMaterial: Prosperity,
   commonMaterials: [Slime, Qingxin],
 };
 
@@ -362,8 +433,9 @@ export const Rosaria: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Rosaria" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Rosaria",
-  talentMaterialWeekly: [ShadowOfTheWarrior],
-  talentMaterials: [Ballad],
+  materials: [ShivadaJade, HoarfrostCore],
+  talentMaterialWeekly: ShadowOfTheWarrior,
+  talentMaterial: Ballad,
   commonMaterials: [FatuiInsignia, Valberry],
 };
 
@@ -371,8 +443,9 @@ export const HuTao: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Hu Tao" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Hu_Tao",
-  talentMaterialWeekly: [ShardOfAFoulLegacy],
-  talentMaterials: [Diligence],
+  materials: [AgnidusAgate, JuvenileJade],
+  talentMaterialWeekly: ShardOfAFoulLegacy,
+  talentMaterial: Diligence,
   commonMaterials: [WhopperflowerNectar, SilkFlower],
 };
 
@@ -380,8 +453,9 @@ export const Kazuha: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Kazuha" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Kazuha",
-  talentMaterialWeekly: [GildedScale],
-  talentMaterials: [Diligence],
+  materials: [VayudaTurquoise, MarionetteCore],
+  talentMaterialWeekly: GildedScale,
+  talentMaterial: Diligence,
   commonMaterials: [TreasureHoarderInsignia, SeaGanoderma],
 };
 
@@ -389,11 +463,10 @@ export const Sayu: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Sayu" }),
   wiki: "https://genshin.honeyhunterworld.com/db/char/sayu/",
-  talentMaterialWeekly: [GildedScale],
-  talentMaterials: [
-    /*unknown*/
-  ],
-  commonMaterials: [WhopperflowerNectar /*unknown*/],
+  materials: [VayudaTurquoise, MarionetteCore],
+  talentMaterialWeekly: GildedScale,
+  talentMaterial: Light,
+  commonMaterials: [WhopperflowerNectar, CrystalMarrow],
   leaked: true,
 };
 
@@ -401,17 +474,17 @@ export const Yoimiya: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Yoimiya" }),
   wiki: "https://genshin.honeyhunterworld.com/db/char/yoimiya/",
-  talentMaterialWeekly: [DragonLordsCrown],
-  talentMaterials: [
-    /*unknown*/
-  ],
-  commonMaterials: [SamachurlScroll /*unknown*/],
+  materials: [AgnidusAgate, SmolderingPearl],
+  talentMaterialWeekly: DragonLordsCrown,
+  talentMaterial: Transience,
+  commonMaterials: [SamachurlScroll, NakuWeed],
   leaked: true,
 };
 
 export const Characters = [
   //TravelerAnemo,
   //TravelerGeo,
+  //TravelerElectro,
   Albedo,
   Amber,
   Ayaka,

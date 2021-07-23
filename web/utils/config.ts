@@ -16,6 +16,7 @@ import { useListItemDispatch } from "./dispatch";
 import { ServerResetHour, useServerTime } from "./time";
 import { DateTime } from "luxon";
 import { Language } from "../langs";
+import { CharacterBackgrounds } from "../components/Background";
 
 type MapLocation = { lat: number; lng: number };
 
@@ -26,7 +27,7 @@ export type Config = {
   language: Language;
   server: "America" | "Europe" | "Asia" | "TW, HK, MO";
   theme: "light" | "dark";
-  background: "paimon" | "klee" | "zhongli" | "none";
+  background: keyof typeof CharacterBackgrounds | "none";
   lastChangelog: number;
   offsetDays: number;
   hiddenWidgets: {
@@ -44,11 +45,15 @@ export type Config = {
     value: number;
     time: number;
   };
-  characters: string[];
-  charactersWeekly: string[];
+  characters: string[]; // talent mats
+  charactersWeekly: string[]; // weekly talent mats
+  charactersGem: string[]; // ascension gems
+  charactersNormalBoss: string[]; // normal boss mats
   weapons: string[];
   artifacts: string[];
-  domainFilters: ("character" | "weapon" | "artifact")[];
+  domainFilter: "all" | "efficiency" | "today" | "noaux";
+  domainFilterType: "all" | "character" | "weapon" | "artifact";
+  domainFilterRegion: "all" | "mondstadt" | "liyue" | "inazuma";
   itemNotes: { [key: string]: string };
   itemHighlights: string[];
   tasks: Task[];
@@ -101,7 +106,7 @@ export const DefaultConfig: Config = {
   offsetDays: 0,
   hiddenWidgets: {},
   resin: {
-    value: ResinCap,
+    value: 0,
     time: Date.now(),
   },
   resinEstimateMode: "time",
@@ -114,9 +119,13 @@ export const DefaultConfig: Config = {
   },
   characters: [],
   charactersWeekly: [],
+  charactersGem: [],
+  charactersNormalBoss: [],
   weapons: [],
   artifacts: [],
-  domainFilters: [],
+  domainFilter: "efficiency",
+  domainFilterType: "all",
+  domainFilterRegion: "all",
   itemNotes: {},
   itemHighlights: [],
   tasks: [],

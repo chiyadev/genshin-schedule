@@ -1,12 +1,12 @@
 import React, { Dispatch, memo, useMemo } from "react";
 import { Checkbox, HStack, Icon, Spacer } from "@chakra-ui/react";
-import { FaBell, FaBellSlash } from "react-icons/fa";
 import { trackEvent } from "../../../../utils/umami";
 import { Task, useApiNotification } from "../../../../utils/config";
 import { useServerTime } from "../../../../utils/time";
 import { getAssetByName } from "../../../../assets";
 import { useColorHex } from "../../../../utils/theme";
 import { FormattedMessage, useIntl } from "react-intl";
+import { Bell, BellOff } from "react-feather";
 
 export const NotifyToggle = ({
   task,
@@ -39,7 +39,7 @@ export const NotifyToggle = ({
 
   return (
     <HStack spacing={2}>
-      <Icon as={value ? FaBell : FaBellSlash} />
+      <Icon as={value ? Bell : BellOff} />
 
       <HStack as="label" spacing={2} cursor="pointer" flex={1}>
         <div>

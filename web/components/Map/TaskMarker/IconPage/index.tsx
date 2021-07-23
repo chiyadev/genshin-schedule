@@ -4,8 +4,8 @@ import { PopupPage } from "../index";
 import { IconCategories, IconSearch, KnownResourceTimers } from "../../../../db/icons";
 import Item from "./Item";
 import { chakra, Icon, Input, InputGroup, InputLeftElement, SimpleGrid, VStack } from "@chakra-ui/react";
-import { FaSearch } from "react-icons/fa";
 import { FormattedMessage as FormattedMessageId, useIntl } from "react-intl";
+import { Search } from "react-feather";
 
 const IconPage = ({
   setTask,
@@ -66,7 +66,7 @@ const IconPage = ({
     <VStack align="stretch" spacing={0}>
       <InputGroup size="sm" zIndex={1}>
         <InputLeftElement pointerEvents="none">
-          <Icon as={FaSearch} color="gray.500" fontSize="md" />
+          <Icon as={Search} color="gray.500" fontSize="md" />
         </InputLeftElement>
 
         <Input
@@ -84,7 +84,7 @@ const IconPage = ({
           () =>
             Object.keys(results).map((category) => (
               <VStack key={category} align="stretch" spacing={1}>
-                <chakra.span fontSize="sm">
+                <chakra.span fontWeight="semibold" fontSize="sm">
                   <FormattedMessageId id={category} />
                 </chakra.span>
 
@@ -100,6 +100,7 @@ const IconPage = ({
                           ...task,
                           name: formatMessageId({ id: icon }),
                           icon,
+                          description: "",
                           refreshTime: timer || task.refreshTime,
                         }));
 

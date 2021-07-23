@@ -12,6 +12,7 @@ const Item = ({ name, onClick }: { name: string; onClick?: () => void }) => {
         <chakra.img
           ref={ref}
           alt={name}
+          title={name}
           src={getAssetByName(name)}
           cursor="pointer"
           style={{
@@ -20,7 +21,7 @@ const Item = ({ name, onClick }: { name: string; onClick?: () => void }) => {
           onClick={onClick}
         />
       ) : (
-        <div ref={ref} />
+        <div ref={ref} title={name} />
       )}
     </AspectRatio>
   );

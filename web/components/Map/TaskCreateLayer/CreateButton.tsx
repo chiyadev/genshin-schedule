@@ -1,10 +1,10 @@
 import React, { memo } from "react";
 import { useConfig } from "../../../utils/config";
 import { useServerTime } from "../../../utils/time";
-import { FaCheck } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { HStack, Icon, Link, useColorModeValue } from "@chakra-ui/react";
 import { FormattedMessage } from "react-intl";
+import { Check } from "react-feather";
 
 const CreateButton = () => {
   const time = useServerTime(1000);
@@ -27,7 +27,7 @@ const CreateButton = () => {
       }}
     >
       <HStack spacing={2}>
-        <Icon as={FaCheck} />
+        <Icon as={Check} />
         <div>
           <FormattedMessage defaultMessage="Create" />
         </div>

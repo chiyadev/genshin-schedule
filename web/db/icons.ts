@@ -49,13 +49,13 @@ addIcons(registerMessage({ defaultMessage: "Weapon enhancement material" }), [
 ]);
 
 addIcons(registerMessage({ defaultMessage: "Character ascension material" }), [
-  { name: registerMessage({ defaultMessage: "Agnidus Agate Sliver" }) },
-  { name: registerMessage({ defaultMessage: "Brilliant Diamond Sliver" }) },
-  { name: registerMessage({ defaultMessage: "Prithiva Topaz Sliver" }) },
-  { name: registerMessage({ defaultMessage: "Shivada Jade Sliver" }) },
-  { name: registerMessage({ defaultMessage: "Vajrada Amethyst Sliver" }) },
-  { name: registerMessage({ defaultMessage: "Varunada Lazurite Sliver" }) },
-  { name: registerMessage({ defaultMessage: "Vayuda Turquoise Sliver" }) },
+  { name: registerMessage({ defaultMessage: "Agnidus Agate Silver" }) },
+  { name: registerMessage({ defaultMessage: "Brilliant Diamond Silver" }) },
+  { name: registerMessage({ defaultMessage: "Prithiva Topaz Silver" }) },
+  { name: registerMessage({ defaultMessage: "Shivada Jade Silver" }) },
+  { name: registerMessage({ defaultMessage: "Vajrada Amethyst Silver" }) },
+  { name: registerMessage({ defaultMessage: "Varunada Lazurite Silver" }) },
+  { name: registerMessage({ defaultMessage: "Vayuda Turquoise Silver" }) },
 ]);
 
 addIcons(registerMessage({ defaultMessage: "Common ascension material" }), [
@@ -72,6 +72,9 @@ addIcons(registerMessage({ defaultMessage: "Common ascension material" }), [
   { name: registerMessage({ defaultMessage: "Treasure Hoarder Insignia" }), timer: "reset" },
   { name: registerMessage({ defaultMessage: "Fragile Bone Shard" }), timer: "reset" },
   { name: registerMessage({ defaultMessage: "Whopperflower Nectar" }), timer: "reset" },
+  { name: registerMessage({ defaultMessage: "Old Handguard" }), timer: "reset" },
+  { name: registerMessage({ defaultMessage: "Chaos Gear" }), timer: "reset" },
+  { name: registerMessage({ defaultMessage: "Dismal Prism" }), timer: "reset" },
 ]);
 
 addIcons(registerMessage({ defaultMessage: "Local specialty of Mondstadt" }), [
@@ -94,6 +97,15 @@ addIcons(registerMessage({ defaultMessage: "Local specialty of Liyue" }), [
   { name: registerMessage({ defaultMessage: "Silk Flower" }), timer: 48 },
   { name: registerMessage({ defaultMessage: "Starconch" }), timer: 48 },
   { name: registerMessage({ defaultMessage: "Violetgrass" }), timer: 48 },
+]);
+
+addIcons(registerMessage({ defaultMessage: "Local Specialty of Inazuma" }), [
+  { name: registerMessage({ defaultMessage: "Crystal Marrow" }), timer: 48 },
+  { name: registerMessage({ defaultMessage: "Dendrobium" }), timer: 48 },
+  { name: registerMessage({ defaultMessage: "Naku Weed" }), timer: 48 },
+  { name: registerMessage({ defaultMessage: "Onikabuto" }), timer: 48 },
+  { name: registerMessage({ defaultMessage: "Sakura Bloom" }), timer: 48 },
+  { name: registerMessage({ defaultMessage: "Sea Ganoderma" }), timer: 48 },
 ]);
 
 addIcons(registerMessage({ defaultMessage: "Cooking ingredient" }), [

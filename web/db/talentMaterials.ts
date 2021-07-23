@@ -1,12 +1,13 @@
 import { registerMessage } from "../utils";
 
-export const TalentMaterialWiki = "https://genshin-impact.fandom.com/wiki/Talent_Level-Up_Material";
+export const TalentMaterialWiki = "https://genshin-impact.fandom.com/wiki/Talent_Level-Up_Materials";
 
 export type TalentMaterial = {
   type: "Talent Level-Up Material";
   name: string;
   item: string;
   wiki: string;
+  colorHint?: string;
 };
 
 export const Freedom: TalentMaterial = {
@@ -14,6 +15,7 @@ export const Freedom: TalentMaterial = {
   name: registerMessage({ defaultMessage: "Freedom" }),
   item: registerMessage({ defaultMessage: "Teachings of Freedom" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Freedom%22",
+  colorHint: "green",
 };
 
 export const Prosperity: TalentMaterial = {
@@ -21,6 +23,7 @@ export const Prosperity: TalentMaterial = {
   name: registerMessage({ defaultMessage: "Prosperity" }),
   item: registerMessage({ defaultMessage: "Teachings of Prosperity" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Prosperity%22",
+  colorHint: "teal",
 };
 
 export const Resistance: TalentMaterial = {
@@ -28,6 +31,7 @@ export const Resistance: TalentMaterial = {
   name: registerMessage({ defaultMessage: "Resistance" }),
   item: registerMessage({ defaultMessage: "Teachings of Resistance" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Resistance%22",
+  colorHint: "red",
 };
 
 export const Diligence: TalentMaterial = {
@@ -35,6 +39,7 @@ export const Diligence: TalentMaterial = {
   name: registerMessage({ defaultMessage: "Diligence" }),
   item: registerMessage({ defaultMessage: "Teachings of Diligence" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Diligence%22",
+  colorHint: "orange",
 };
 
 export const Ballad: TalentMaterial = {
@@ -42,6 +47,7 @@ export const Ballad: TalentMaterial = {
   name: registerMessage({ defaultMessage: "Ballad" }),
   item: registerMessage({ defaultMessage: "Teachings of Ballad" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Ballad%22",
+  colorHint: "blue",
 };
 
 export const Gold: TalentMaterial = {
@@ -49,6 +55,31 @@ export const Gold: TalentMaterial = {
   name: registerMessage({ defaultMessage: "Gold" }),
   item: registerMessage({ defaultMessage: "Teachings of Gold" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_%22Gold%22",
+  colorHint: "yellow",
+};
+
+export const Transience: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: registerMessage({ defaultMessage: "Transience" }),
+  item: registerMessage({ defaultMessage: "Teachings of Transience" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Talent_Level-Up_Materials",
+  colorHint: "cyan",
+};
+
+export const Elegance: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: registerMessage({ defaultMessage: "Elegance" }),
+  item: registerMessage({ defaultMessage: "Teachings of Elegance" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_Elegance",
+  colorHint: "purple",
+};
+
+export const Light: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: registerMessage({ defaultMessage: "Light" }),
+  item: registerMessage({ defaultMessage: "Teachings of Light" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Teachings_of_Light",
+  colorHint: "pink",
 };
 
 export const DvalinPlume: TalentMaterial = {
@@ -142,6 +173,9 @@ export const TalentMaterials = [
   Diligence,
   Ballad,
   Gold,
+  Transience,
+  Elegance,
+  Light,
   DvalinPlume,
   DvalinSigh,
   DvalinClaw,

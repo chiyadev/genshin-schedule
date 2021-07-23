@@ -1,11 +1,11 @@
 import React, { memo, useState } from "react";
 import { CommonMaterial, CommonMaterialWiki } from "../../../db/commonMaterials";
-import { FaPlus } from "react-icons/fa";
-import { Button, chakra, HStack, Icon, Link, VStack } from "@chakra-ui/react";
+import { Badge, Button, chakra, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import { useTaskCreator } from "../../../utils/tasks";
 import { Weapon } from "../../../db/weapons";
 import { FormattedMessage, FormattedMessage as FormattedMessageId, useIntl } from "react-intl";
+import { Plus } from "react-feather";
 
 const CommonMaterialDisplay = ({ weapon, material }: { weapon: Weapon; material: CommonMaterial }) => {
   const { formatMessage, formatMessage: formatMessageId } = useIntl();
@@ -15,7 +15,14 @@ const CommonMaterialDisplay = ({ weapon, material }: { weapon: Weapon; material:
   return (
     <VStack align="start" spacing={4}>
       <HStack>
-        <chakra.img alt={material.item} src={getAssetByName(material.item)} w={10} h={10} objectFit="contain" />
+        <chakra.img
+          alt={material.item}
+          title={material.item}
+          src={getAssetByName(material.item)}
+          w={10}
+          h={10}
+          objectFit="contain"
+        />
 
         <div>
           <chakra.div fontSize="lg">
@@ -23,17 +30,18 @@ const CommonMaterialDisplay = ({ weapon, material }: { weapon: Weapon; material:
               <FormattedMessageId id={material.name} />
             </Link>
           </chakra.div>
-          <chakra.div fontSize="sm" color="gray.500">
+
+          <Badge color="gray.500">
             <Link href={CommonMaterialWiki} isExternal>
               <FormattedMessageId id={material.type} />
             </Link>
-          </chakra.div>
+          </Badge>
         </div>
       </HStack>
 
       <Button
         size="sm"
-        leftIcon={<Icon as={FaPlus} />}
+        leftIcon={<Icon as={Plus} />}
         isLoading={create}
         onClick={async () => {
           setCreate(true);

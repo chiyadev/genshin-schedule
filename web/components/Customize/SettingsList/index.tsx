@@ -21,11 +21,11 @@ const SettingsList = ({ user }: { user?: User }) => {
       </Heading>
 
       <VStack align="start" spacing={4}>
+        <ThemeSwitch />
+        <TaskListCompactSwitch />
         <LanguageSwitch />
         <BackgroundSwitch />
         <ResinEstimateModeSwitch />
-        <ThemeSwitch />
-        <TaskListCompactSwitch />
         <ResinNotifyMarkSlider />
         <TaskDefaultZoomSlider />
 

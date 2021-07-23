@@ -1,6 +1,17 @@
 import React, { memo } from "react";
 import WhiteCard from "../WhiteCard";
-import { chakra, Heading, HStack, StackDivider, useColorModeValue, useToken, VStack } from "@chakra-ui/react";
+import {
+  Heading,
+  HStack,
+  StackDivider,
+  Stat,
+  StatHelpText,
+  StatLabel,
+  StatNumber,
+  useColorModeValue,
+  useToken,
+  VStack,
+} from "@chakra-ui/react";
 import { StatFrame, useConfig, useCurrentStats } from "../../utils/config";
 import { DateTime } from "luxon";
 import { ResinsPerMinute } from "../../db/resins";
@@ -58,12 +69,15 @@ const TodayPanel = () => {
   const color = useEfficiencyColor(value / ResinsPerDay);
 
   return (
-    <VStack flex={1} spacing={2}>
-      <div>
+    <Stat flex={1} textAlign="center">
+      <StatLabel>
         <FormattedMessage defaultMessage="Today" />
-      </div>
-      <Heading color={color}>{value}</Heading>
-    </VStack>
+      </StatLabel>
+
+      <StatNumber my={1}>
+        <Heading color={color}>{value}</Heading>
+      </StatNumber>
+    </Stat>
   );
 };
 
@@ -74,19 +88,22 @@ const TotalPanel = () => {
   const color = useEfficiencyColor(value / (ResinsPerDay * retention));
 
   return (
-    <VStack flex={1} spacing={2}>
-      <div>
+    <Stat flex={1} textAlign="center">
+      <StatLabel>
         <FormattedMessage defaultMessage="Total" />
-      </div>
-      <Heading color={color}>{value}</Heading>
+      </StatLabel>
 
-      <chakra.div fontSize="sm" color="gray.500">
+      <StatNumber my={1}>
+        <Heading color={color}>{value}</Heading>
+      </StatNumber>
+
+      <StatHelpText>
         <FormattedMessage
           defaultMessage="{percent}% efficiency"
           values={{ percent: Math.round((value / (ResinsPerDay * retention)) * 100) }}
         />
-      </chakra.div>
-    </VStack>
+      </StatHelpText>
+    </Stat>
   );
 };
 
@@ -97,16 +114,19 @@ const PeakPanel = () => {
   const color = useEfficiencyColor(value / ResinsPerDay);
 
   return (
-    <VStack flex={1} spacing={2}>
-      <div>
+    <Stat flex={1} textAlign="center">
+      <StatLabel>
         <FormattedMessage defaultMessage="Peak" />
-      </div>
-      <Heading color={color}>{value}</Heading>
+      </StatLabel>
 
-      <chakra.div fontSize="sm" color="gray.500">
+      <StatNumber my={1}>
+        <Heading color={color}>{value}</Heading>
+      </StatNumber>
+
+      <StatHelpText>
         {peak ? DateTime.fromMillis(peak.time).toLocaleString() : <FormattedMessage defaultMessage="Never" />}
-      </chakra.div>
-    </VStack>
+      </StatHelpText>
+    </Stat>
   );
 };
 

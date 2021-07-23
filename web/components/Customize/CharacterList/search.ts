@@ -11,8 +11,15 @@ for (const character of Characters) {
   CharacterSearch.add(character.type, character);
   CharacterSearch.add(character.name, character);
 
-  for (const material of [...character.talentMaterials, ...character.talentMaterialWeekly]) {
+  for (const material of [
+    ...character.materials,
+    ...character.commonMaterials,
+    character.talentMaterial,
+    character.talentMaterialWeekly,
+  ]) {
     CharacterSearch.add(material.name, character);
+    CharacterSearch.add(material.item, character);
+
     materialToCharacters.add(material.name, character);
   }
 }
@@ -25,11 +32,11 @@ for (const region of Regions) {
 
 for (const domain of DomainOfMastery.domains) {
   for (const drops of domain.drops) {
-    for (const item of drops.items) {
+    for (const item of [...drops.items, ...(drops.itemsAux || [])]) {
       for (const character of materialToCharacters.get(item.name)) {
         CharacterSearch.add(domain.name, character);
 
-        drops.name && CharacterSearch.add(drops.name, character);
+        //drops.name && CharacterSearch.add(drops.name, character);
         drops.days.forEach((day) => CharacterSearch.add(day, character));
       }
     }

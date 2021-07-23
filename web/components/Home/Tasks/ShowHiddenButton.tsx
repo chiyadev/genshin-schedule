@@ -1,16 +1,21 @@
 import React, { memo } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Tooltip } from "@chakra-ui/tooltip";
 import { useConfig } from "../../../utils/config";
 import { Button, Icon } from "@chakra-ui/react";
 import { trackEvent } from "../../../utils/umami";
 import { FormattedMessage } from "react-intl";
+import { Eye, EyeOff } from "react-feather";
 
 const ShowHiddenButton = () => {
   const [value, setValue] = useConfig("taskListShowHidden");
 
   return (
-    <Tooltip label={<FormattedMessage defaultMessage="Show hidden" />}>
+    <Tooltip
+      label={
+        value ? <FormattedMessage defaultMessage="Hide hidden" /> : <FormattedMessage defaultMessage="Show hidden" />
+      }
+      closeOnClick={false}
+    >
       <Button
         as="button"
         variant="ghost"
@@ -24,7 +29,7 @@ const ShowHiddenButton = () => {
           trackEvent("taskList", "taskShowHidden");
         }}
       >
-        <Icon as={value ? FaEye : FaEyeSlash} />
+        <Icon as={value ? Eye : EyeOff} />
       </Button>
     </Tooltip>
   );

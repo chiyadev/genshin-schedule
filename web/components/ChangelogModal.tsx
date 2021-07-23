@@ -2,6 +2,8 @@ import React, { memo, ReactNode, useEffect, useMemo } from "react";
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/modal";
 import { useConfig } from "../utils/config";
 import {
+  Alert,
+  AlertIcon,
   Heading,
   HStack,
   Icon,
@@ -12,13 +14,32 @@ import {
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
-import { FaBullhorn } from "react-icons/fa";
 import { FormattedMessage } from "react-intl";
+import { GitPullRequest } from "react-feather";
 
-const LatestChangelog = 30;
+const LatestChangelog = 31;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={31} date="2021/07/23">
+      <Alert status="info" mb={2}>
+        <AlertIcon />
+        <div>
+          This is a major database update. If you find any incorrect or missing information, please{" "}
+          <Link color="blue.500" href="https://github.com/chiyadev/genshin-schedule/issues" isExternal>
+            open an issue
+          </Link>
+          .
+        </div>
+      </Alert>
+      <ChangelogItem>Upgraded all dependencies to latest versions.</ChangelogItem>
+      <ChangelogItem>Added 2.0 Inazuma characters, weapons and artifacts.</ChangelogItem>
+      <ChangelogItem>Added normal boss drops and character ascension materials to the database.</ChangelogItem>
+      <ChangelogItem>Added more character backgrounds.</ChangelogItem>
+      <ChangelogItem>Improved many more parts of the website UI.</ChangelogItem>
+      <ChangelogItem>Improved search performance in Customize page.</ChangelogItem>
+      <ChangelogItem>Implemented a new algorithm to select most efficient domain runs.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={30} date="2021/07/04">
       <ChangelogItem>Added Simplified Chinese localization. 添加了简体中文翻译。</ChangelogItem>
     </ChangelogSection>,
@@ -191,7 +212,7 @@ const ChangelogModal = () => {
       <ModalContent>
         <ModalHeader>
           <HStack>
-            <Icon as={FaBullhorn} />
+            <Icon as={GitPullRequest} />
             <div>
               <FormattedMessage defaultMessage="Update changelog" />
             </div>

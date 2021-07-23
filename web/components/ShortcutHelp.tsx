@@ -3,8 +3,8 @@ import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOve
 import { useHotkeys } from "react-hotkeys-hook";
 import { Heading, HStack, Kbd, ListItem, UnorderedList, VStack } from "@chakra-ui/layout";
 import { Icon } from "@chakra-ui/react";
-import { FaKeyboard } from "react-icons/fa";
 import { FormattedMessage, useIntl } from "react-intl";
+import { Command } from "react-feather";
 
 const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<boolean> }) => {
   const { formatMessage } = useIntl();
@@ -20,7 +20,7 @@ const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<bool
       <ModalContent>
         <ModalHeader>
           <HStack>
-            <Icon as={FaKeyboard} />
+            <Icon as={Command} />
             <div>
               <FormattedMessage defaultMessage="Keyboard shortcuts" />
             </div>

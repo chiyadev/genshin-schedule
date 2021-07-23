@@ -1,18 +1,14 @@
-import React, { memo, useMemo } from "react";
-import { useConfig } from "../../../utils/config";
-import { AspectRatio, Center, Link, Text, useColorModeValue, VStack } from "@chakra-ui/react";
+import React, { memo } from "react";
+import { AspectRatio, Center, chakra, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import NextLink from "next/link";
 import IconImage from "../IconImage";
 import { Artifact } from "../../../db/artifacts";
 import { FormattedMessage as FormattedMessageId } from "react-intl";
 
-const Icon = ({ visible = true, artifact }: { visible?: boolean; artifact: Artifact }) => {
-  const [existing] = useConfig("artifacts");
-  const alreadyAdded = useMemo(() => existing.includes(artifact.name), [existing, artifact.name]);
-
+const Icon = ({ artifact }: { artifact: Artifact }) => {
   return (
     <NextLink href={`/customize/artifacts/${artifact.name}`} passHref>
-      <Link d={visible ? undefined : "none"} borderRadius="md">
+      <Link borderRadius="md">
         <AspectRatio ratio={5 / 6}>
           <VStack
             align="stretch"
@@ -23,16 +19,15 @@ const Icon = ({ visible = true, artifact }: { visible?: boolean; artifact: Artif
             bg={useColorModeValue("white", "gray.900")}
             borderWidth={1}
             borderColor={useColorModeValue("gray.200", "gray.700")}
-            opacity={alreadyAdded ? 0.25 : 1}
             transition=".2s"
           >
             <Center minH={0} flex={1}>
               <IconImage name={artifact.name} h="full" objectFit="contain" />
             </Center>
 
-            <Text isTruncated textAlign="center" maxW="100%">
+            <chakra.div isTruncated textAlign="center" maxW="100%" fontSize="sm" fontWeight="500">
               <FormattedMessageId id={artifact.name} />
-            </Text>
+            </chakra.div>
           </VStack>
         </AspectRatio>
       </Link>

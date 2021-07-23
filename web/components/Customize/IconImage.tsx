@@ -7,9 +7,9 @@ const IconImage = ({ name, ...props }: { name: string } & ComponentProps<typeof 
   const [ref, visible] = useInView({ triggerOnce: true });
 
   if (visible) {
-    return <chakra.img ref={ref} alt={name} src={getAssetByName(name)} {...(props as any)} />;
+    return <chakra.img ref={ref} alt={name} title={name} src={getAssetByName(name)} {...(props as any)} />;
   } else {
-    return <chakra.div ref={ref} {...props} />;
+    return <chakra.div ref={ref} title={name} {...props} />;
   }
 };
 

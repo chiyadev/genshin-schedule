@@ -12,12 +12,12 @@ for (const artifact of Artifacts) {
 for (const region of Regions) {
   for (const domain of region.domains) {
     for (const drops of domain.drops) {
-      for (const artifact of drops.items) {
+      for (const artifact of [...drops.items, ...(drops.itemsAux || [])]) {
         if (artifact.type === "Artifact") {
           ArtifactSearch.add(region.name, artifact);
           ArtifactSearch.add(domain.name, artifact);
 
-          drops.name && ArtifactSearch.add(drops.name, artifact);
+          //drops.name && ArtifactSearch.add(drops.name, artifact);
           drops.days.forEach((day) => ArtifactSearch.add(day, artifact));
         }
       }

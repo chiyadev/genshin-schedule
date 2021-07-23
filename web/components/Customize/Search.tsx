@@ -1,24 +1,39 @@
-import React, { memo } from "react";
-import { FaSearch } from "react-icons/fa";
+import React, { memo, useRef, useState } from "react";
 import { useConfig } from "../../utils/config";
 import { chakra, Icon, Input, InputGroup, InputLeftElement, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import { FormattedMessage, useIntl } from "react-intl";
+import { useHotkeys } from "react-hotkeys-hook";
+import { Search as SearchIcon } from "react-feather";
 
 const Search = () => {
   const { formatMessage } = useIntl();
-  const [value, setValue] = useConfig("customizeQuery");
+  const [query, setQuery] = useConfig("customizeQuery");
+  const [value, setValue] = useState(query);
+  const ref = useRef<HTMLInputElement>(null);
+  const debounce = useRef<number>();
+
+  useHotkeys("f", (e) => {
+    ref.current?.select();
+    e.preventDefault();
+  });
 
   return (
     <VStack align="stretch" spacing={2}>
       <InputGroup size="lg">
         <InputLeftElement pointerEvents="none">
-          <Icon as={FaSearch} color="gray.500" fontSize="md" />
+          <Icon as={SearchIcon} color="gray.500" />
         </InputLeftElement>
 
         <Input
+          ref={ref}
           variant="filled"
           value={value}
-          onChange={({ currentTarget: { value } }) => setValue(value)}
+          onChange={({ currentTarget: { value } }) => {
+            setValue(value);
+
+            clearTimeout(debounce.current);
+            debounce.current = window.setTimeout(() => setQuery(value), 100);
+          }}
           placeholder={formatMessage({ defaultMessage: "Search characters, weapons and artifacts…" })}
         />
       </InputGroup>

@@ -39,7 +39,7 @@ ${names.map((name) => `  ${name},`).join("\n")}
 
 export function getAssetByName(name: string): string | undefined {
   switch (name) {
-${names.map((name, i) => `    case "${path.parse(files[i]).name}": return ${name};`).join("\n")}
+${names.map((name, i) => `    case "${path.parse(files[i]).name}": return ${name}.src;`).join("\n")}
   }
 }
 `

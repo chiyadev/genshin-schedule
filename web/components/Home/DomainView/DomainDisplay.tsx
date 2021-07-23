@@ -3,15 +3,22 @@ import WhiteCard from "../../WhiteCard";
 import { ScheduledDomain } from "./index";
 import MaterialList from "./MaterialList";
 import ArtifactList from "./ArtifactList";
-import { chakra, HStack, Link } from "@chakra-ui/react";
-import { Domain } from "../../../assets";
+import { Badge, chakra, HStack, Link } from "@chakra-ui/react";
+import { getAssetByName } from "../../../assets";
 import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
 
-const DomainDisplay = ({ domain, region, category, talentMaterials, weaponMaterials, artifacts }: ScheduledDomain) => {
+const DomainDisplay = ({ domain, region, category, materials, artifacts }: ScheduledDomain) => {
   return (
     <WhiteCard divide>
       <HStack spacing={2}>
-        <chakra.img alt="Domain" src={Domain} w={10} h={10} objectFit="contain" />
+        <chakra.img
+          alt={region.name}
+          title={region.name}
+          src={getAssetByName(region.name)}
+          w={10}
+          h={10}
+          objectFit="contain"
+        />
 
         <div>
           <chakra.div fontSize="xl" fontWeight="bold">
@@ -19,42 +26,28 @@ const DomainDisplay = ({ domain, region, category, talentMaterials, weaponMateri
               <FormattedMessageId id={domain.name} />
             </Link>
           </chakra.div>
-          <chakra.div fontSize="sm" color="gray.500">
+
+          <Badge colorScheme={category.colorHint}>
             <FormattedMessage
               defaultMessage="{category}, {region}"
               values={{
-                category: category && (
+                category: (
                   <Link href={category.wiki} isExternal>
                     <FormattedMessageId id={category.name} />
                   </Link>
                 ),
-                region: region && (
+                region: (
                   <Link href={region.wiki} isExternal>
                     <FormattedMessageId id={region.name} />
                   </Link>
                 ),
               }}
             />
-          </chakra.div>
+          </Badge>
         </div>
       </HStack>
 
-      {useMemo(
-        () =>
-          talentMaterials.map(({ material, characters }) => (
-            <MaterialList key={material.name} material={material} items={characters} path="characters" />
-          )),
-        [talentMaterials]
-      )}
-
-      {useMemo(
-        () =>
-          weaponMaterials.map(({ material, weapons }) => (
-            <MaterialList key={material.name} material={material} items={weapons} path="weapons" />
-          )),
-        [weaponMaterials]
-      )}
-
+      {useMemo(() => materials.map((group) => <MaterialList key={group.material.name} {...group} />), [materials])}
       {useMemo(() => !!artifacts.length && <ArtifactList artifacts={artifacts} />, [artifacts])}
     </WhiteCard>
   );

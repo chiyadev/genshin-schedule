@@ -1,70 +1,45 @@
 import React, { memo, ReactNode } from "react";
-import { Button, ButtonGroup, useColorModeValue } from "@chakra-ui/react";
+import { Button, ButtonGroup, Icon } from "@chakra-ui/react";
 import { Tooltip } from "@chakra-ui/tooltip";
 import { trackEvent } from "../../../utils/umami";
 import { Config, useConfig } from "../../../utils/config";
-import { arrayToggle } from "../../../utils";
-import {
-  BlackArtifact,
-  BlackCharacter,
-  BlackWeapon,
-  WhiteArtifact,
-  WhiteCharacter,
-  WhiteWeapon,
-} from "../../../assets";
 import { FormattedMessage } from "react-intl";
+import { Compass } from "react-feather";
 
 const FilterButtons = () => {
   return (
     <ButtonGroup isAttached>
       <FilterButton
-        type="character"
-        label={<FormattedMessage defaultMessage="Characters" />}
-        image={useColorModeValue(BlackCharacter, WhiteCharacter)}
-      />
-
-      <FilterButton
-        type="weapon"
-        label={<FormattedMessage defaultMessage="Weapons" />}
-        image={useColorModeValue(BlackWeapon, WhiteWeapon)}
-      />
-
-      <FilterButton
-        type="artifact"
-        label={<FormattedMessage defaultMessage="Artifacts" />}
-        image={useColorModeValue(BlackArtifact, WhiteArtifact)}
+        type="efficiency"
+        label={<FormattedMessage defaultMessage="Filter by efficiency" />}
+        icon={Compass}
       />
     </ButtonGroup>
   );
 };
 
-const FilterButton = ({
-  type,
-  label,
-  image,
-}: {
-  type: Config["domainFilters"][0];
-  label: ReactNode;
-  image: string;
-}) => {
-  const [filters, setFilters] = useConfig("domainFilters");
+const FilterButton = ({ type, label, icon }: { type: Config["domainFilter"]; label: ReactNode; icon?: any }) => {
+  const [filter, setFilter] = useConfig("domainFilter");
 
   return (
-    <Tooltip label={label}>
+    <Tooltip label={label} closeOnClick={false}>
       <Button
         as="button"
         variant="ghost"
         w={8}
         h={8}
-        p={1}
+        p={0}
         minW={0}
-        opacity={filters.includes(type) ? 1 : 0.5}
         onClick={() => {
-          setFilters((filters) => arrayToggle(filters, type));
-          !filters.includes(type) && trackEvent("domainView", `filter${name}`);
+          if (filter === type) {
+            setFilter("all");
+          } else {
+            setFilter(type);
+            trackEvent("domainView", `filter${label}`);
+          }
         }}
       >
-        <img src={image} />
+        {icon && <Icon as={icon} transition=".2s" opacity={filter === type ? 1 : 0.3} />}
       </Button>
     </Tooltip>
   );

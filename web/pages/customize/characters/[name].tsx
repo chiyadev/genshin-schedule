@@ -4,13 +4,14 @@ import { GetServerSideProps } from "next";
 import ConfigProvider from "../../../components/ConfigProvider";
 import Layout from "../../../components/Layout";
 import { Characters, CharacterWiki } from "../../../db/characters";
-import { Alert, AlertIcon, AlertTitle, chakra, HStack, Link, VStack } from "@chakra-ui/react";
+import { Alert, AlertIcon, AlertTitle, Badge, chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import WhiteCard from "../../../components/WhiteCard";
 import { getAssetByName } from "../../../assets";
 import MaterialDisplay from "../../../components/Customize/CharacterInfo/MaterialDisplay";
 import CommonMaterialDisplay from "../../../components/Customize/CharacterInfo/CommonMaterialDisplay";
 import NoteInput from "../../../components/Customize/CharacterInfo/NoteInput";
 import { FormattedMessage } from "react-intl";
+import { DomainOfMastery } from "../../../db/domainCategories";
 
 type Props = {
   data: WebData | null;
@@ -52,7 +53,7 @@ const CharacterInfo = ({ data, name }: Props) => {
         {character ? (
           <VStack align="stretch" spacing={4}>
             {!character.leaked ? null : (
-              <Alert status="warning">
+              <Alert status="warning" borderRadius="md">
                 <AlertIcon />
                 <VStack align="stretch" spacing={0}>
                   <AlertTitle>
@@ -69,6 +70,7 @@ const CharacterInfo = ({ data, name }: Props) => {
               <HStack spacing={4}>
                 <chakra.img
                   alt={character.name}
+                  title={character.name}
                   src={getAssetByName(character.name)}
                   w={16}
                   h={16}
@@ -81,21 +83,34 @@ const CharacterInfo = ({ data, name }: Props) => {
                       {character.name}
                     </Link>
                   </chakra.div>
-                  <chakra.div fontSize="sm" color="gray.500">
+
+                  <Badge colorScheme={DomainOfMastery.colorHint}>
                     <Link href={CharacterWiki} isExternal>
                       {character.type}
                     </Link>
-                  </chakra.div>
+                  </Badge>
                 </div>
               </HStack>
 
-              {character.talentMaterialWeekly.map((material) => (
-                <MaterialDisplay key={material.name} character={character} material={material} isWeekly />
-              ))}
+              {character.materials[0] && (
+                <MaterialDisplay character={character} material={character.materials[0]} listName="charactersGem" />
+              )}
 
-              {character.talentMaterials.map((material) => (
-                <MaterialDisplay key={material.name} character={character} material={material} />
-              ))}
+              {character.materials[1] && (
+                <MaterialDisplay
+                  character={character}
+                  material={character.materials[1]}
+                  listName="charactersNormalBoss"
+                />
+              )}
+
+              <MaterialDisplay character={character} material={character.talentMaterial} listName="characters" />
+
+              <MaterialDisplay
+                character={character}
+                material={character.talentMaterialWeekly}
+                listName="charactersWeekly"
+              />
 
               {character.commonMaterials.map((material) => (
                 <CommonMaterialDisplay key={material.name} character={character} material={material} />

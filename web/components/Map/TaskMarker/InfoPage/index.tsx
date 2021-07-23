@@ -4,12 +4,23 @@ import { PopupPage } from "../index";
 import IntervalPicker from "./IntervalPicker";
 import DueText from "./DueText";
 import HideCheck from "./HideCheck";
-import { chakra, HStack, Input, Textarea, VStack } from "@chakra-ui/react";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+  chakra,
+  HStack,
+  Input,
+  Textarea,
+  VStack,
+} from "@chakra-ui/react";
 import { getAssetByName } from "../../../../assets";
 import IntervalResetCheck from "./IntervalResetCheck";
 import { KnownResourceTimers } from "../../../../db/icons";
 import NotifyToggle from "./NotifyToggle";
-import { useIntl } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const InfoPage = ({
   task,
@@ -24,6 +35,7 @@ const InfoPage = ({
 }) => {
   const { formatMessage } = useIntl();
   const [nameFocus, setNameFocus] = useState(false);
+  const [descFocus, setDescFocus] = useState(false);
   const { enabled: syncEnabled } = useSync();
 
   return (
@@ -31,6 +43,7 @@ const InfoPage = ({
       <HStack spacing={2}>
         <chakra.img
           alt={task.icon}
+          title={formatMessage({ defaultMessage: "Change icon" })}
           src={getAssetByName(task.icon)}
           w={8}
           h={8}
@@ -47,7 +60,7 @@ const InfoPage = ({
           flex={1}
           fontSize="lg"
           fontWeight="bold"
-          borderWidth={nameFocus ? undefined : 0}
+          variant={nameFocus ? "outline" : "unstyled"}
           p={1}
           h={8}
           placeholder={task.icon}
@@ -57,65 +70,83 @@ const InfoPage = ({
       </HStack>
 
       <Textarea
-        variant="unstyled"
         value={task.description || ""}
         onChange={({ currentTarget: { value } }) => {
           setTask((task) => ({ ...task, description: value }));
         }}
         color="gray.500"
         resize="none"
+        variant={descFocus ? "outline" : "unstyled"}
+        p={1}
         h={12}
-        p={0}
-        borderRadius={0}
         placeholder={formatMessage({ defaultMessage: "Task description" })}
+        onFocus={() => setDescFocus(true)}
+        onBlur={() => setDescFocus(false)}
       />
 
-      <VStack key={task.icon} align="stretch" spacing={1}>
-        {task.refreshTime === "reset" ? (
-          <IntervalResetCheck
-            value
-            setValue={() => {
-              setTask((task) => {
-                const timer = KnownResourceTimers[task.icon];
+      <VStack key={task.icon} align="stretch" spacing={0}>
+        <Accordion allowToggle>
+          <AccordionItem borderWidth="0 !important">
+            <AccordionButton fontSize="sm" px={0} py={1}>
+              <HStack spacing={1} flex={1} textAlign="left">
+                <AccordionIcon w={4} />
+                <div>
+                  <FormattedMessage defaultMessage="Options" />
+                </div>
+              </HStack>
+            </AccordionButton>
 
-                return {
-                  ...task,
-                  refreshTime: typeof timer === "number" ? timer : DefaultConfig.mapCreateTask.refreshTime,
-                };
-              });
-            }}
-          />
-        ) : (
-          <IntervalPicker
-            value={task.refreshTime}
-            setValue={(value) => {
-              setTask((task) => ({ ...task, refreshTime: value }));
-            }}
-          />
-        )}
+            <AccordionPanel p={0} mb={1}>
+              <VStack align="stretch" spacing={1}>
+                {task.refreshTime === "reset" ? (
+                  <IntervalResetCheck
+                    value
+                    setValue={() => {
+                      setTask((task) => {
+                        const timer = KnownResourceTimers[task.icon];
 
-        {showDue && (
-          <>
-            <HideCheck
-              value={!task.visible}
-              setValue={(v) => {
-                setTask((task) => ({ ...task, visible: !v }));
-              }}
-            />
+                        return {
+                          ...task,
+                          refreshTime: typeof timer === "number" ? timer : DefaultConfig.mapCreateTask.refreshTime,
+                        };
+                      });
+                    }}
+                  />
+                ) : (
+                  <IntervalPicker
+                    value={task.refreshTime}
+                    setValue={(value) => {
+                      setTask((task) => ({ ...task, refreshTime: value }));
+                    }}
+                  />
+                )}
 
-            {syncEnabled && (
-              <NotifyToggle
-                task={task}
-                value={task.notify || false}
-                setValue={(value) => {
-                  setTask((task) => ({ ...task, notify: value }));
-                }}
-              />
-            )}
+                {showDue && (
+                  <>
+                    <HideCheck
+                      value={!task.visible}
+                      setValue={(v) => {
+                        setTask((task) => ({ ...task, visible: !v }));
+                      }}
+                    />
 
-            <DueText task={task} />
-          </>
-        )}
+                    {syncEnabled && (
+                      <NotifyToggle
+                        task={task}
+                        value={task.notify || false}
+                        setValue={(value) => {
+                          setTask((task) => ({ ...task, notify: value }));
+                        }}
+                      />
+                    )}
+                  </>
+                )}
+              </VStack>
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
+
+        {showDue && <DueText task={task} />}
       </VStack>
     </VStack>
   );

@@ -6,22 +6,43 @@ import NextLink from "next/link";
 import ItemNote from "./ItemNote";
 import { useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
-import { FormattedMessage as FormattedMessageId } from "react-intl";
+import { FormattedMessage as FormattedMessageId, useIntl } from "react-intl";
+import { Weapon } from "../../../db/weapons";
+import { Character } from "../../../db/characters";
+import { Artifact } from "../../../db/artifacts";
 
-const Item = ({ path, name }: { path: "characters" | "weapons" | "artifacts"; name: string }) => {
+const Item = ({ name, type }: Character | Weapon | Artifact) => {
+  const { formatMessage } = useIntl();
   const [highlights, setHighlights] = useConfig("itemHighlights");
   const [highlightColor] = useToken("colors", [useColorModeValue("yellow.100", "yellow.900")]);
 
+  let path: string;
+
+  switch (type) {
+    case "Character":
+      path = "characters";
+      break;
+
+    case "Weapon":
+      path = "weapons";
+      break;
+
+    case "Artifact":
+      path = "artifacts";
+      break;
+  }
+
   return (
-    <HStack key={name} spacing={2} bg={highlights.includes(name) ? highlightColor : undefined} borderRadius="sm">
+    <HStack spacing={2} bg={highlights.includes(name) ? highlightColor : undefined} borderRadius="sm">
       <chakra.img
         alt={name}
+        title={formatMessage({ defaultMessage: "Highlight item" })}
         src={getAssetByName(name)}
         w={6}
         h={6}
         flexShrink={0}
         objectFit="contain"
-        borderRadius={path === "characters" ? "full" : undefined}
+        borderRadius={type === "Character" ? "full" : undefined}
         cursor="pointer"
         onClick={() => {
           setHighlights((highlights) => arrayToggle(highlights, name));
@@ -31,7 +52,7 @@ const Item = ({ path, name }: { path: "characters" | "weapons" | "artifacts"; na
 
       <div>
         <NextLink href={`/customize/${path}/${name}`} passHref>
-          <Link>
+          <Link fontWeight={highlights.includes(name) ? "semibold" : undefined}>
             <FormattedMessageId id={name} />
           </Link>
         </NextLink>

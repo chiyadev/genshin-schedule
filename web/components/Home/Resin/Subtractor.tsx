@@ -5,6 +5,7 @@ import { clampResin, getResinRecharge } from "../../../db/resins";
 import { trackEvent } from "../../../utils/umami";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { useHotkeys } from "react-hotkeys-hook";
+import { useIntl } from "react-intl";
 
 const resinUsages = [60, 40, 30, 20];
 
@@ -39,7 +40,9 @@ const Subtractor = ({ current }: { current: number }) => {
 };
 
 const SubtractButton = ({ value, onClick }: { value: number; onClick: () => void }) => {
+  const { formatMessage } = useIntl();
   const hotkey = value.toString().slice(0, 1);
+
   useHotkeys(
     `${hotkey}, num_${hotkey}`, // support numpad keys for niche cases (e.g. Firefox on macOS)
     (e) => {
@@ -50,7 +53,13 @@ const SubtractButton = ({ value, onClick }: { value: number; onClick: () => void
   );
 
   return (
-    <Button variant="ghost" color="gray.500" size="sm" p={0} onClick={onClick}>
+    <Button
+      color="gray.500"
+      size="sm"
+      p={2}
+      onClick={onClick}
+      title={formatMessage({ defaultMessage: "Subtract {amount} resins" }, { amount: value })}
+    >
       -{value}
     </Button>
   );

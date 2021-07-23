@@ -7,9 +7,9 @@ import { VStack } from "@chakra-ui/layout";
 import WhiteCard from "../../../components/WhiteCard";
 import { Button, chakra, Code, HStack, Icon } from "@chakra-ui/react";
 import { DateTime } from "luxon";
-import { FaPaperPlane } from "react-icons/fa";
 import { useFormatDuration } from "../../../utils/time";
 import { FormattedMessage } from "react-intl";
+import { Send } from "react-feather";
 
 type Props = {
   data: WebData | null;
@@ -95,7 +95,7 @@ const Item = ({ notification }: { notification: Notification }) => {
           <Button
             size="sm"
             colorScheme="blue"
-            leftIcon={<Icon as={FaPaperPlane} />}
+            leftIcon={<Icon as={Send} />}
             isLoading={send}
             onClick={async () => {
               setSend(true);

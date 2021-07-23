@@ -7,12 +7,12 @@ import Background from "./Background";
 import KeyHelp from "./ShortcutHelp";
 import ChangelogModal from "./ChangelogModal";
 import NextLink from "next/link";
-import { FaBell, FaChartBar } from "react-icons/fa";
 import StatisticsUpdater from "./Statistics/StatisticsUpdater";
 import ColorModeOverride from "./ColorModeOverride";
 import ClockOffsetWarning from "./ClockOffsetWarning";
 import { Tooltip } from "@chakra-ui/tooltip";
 import { FormattedMessage } from "react-intl";
+import { Bell, HelpCircle, PieChart } from "react-feather";
 
 const Layout = ({
   children,
@@ -52,20 +52,27 @@ const Layout = ({
                     <Link>
                       <Tooltip label={<FormattedMessage defaultMessage="Notifications" />}>
                         <span>
-                          <Icon as={FaBell} />
+                          <Icon as={Bell} />
                         </span>
                       </Tooltip>
                     </Link>
                   </NextLink>
+
                   <NextLink href="/home/statistics" passHref>
                     <Link>
                       <Tooltip label={<FormattedMessage defaultMessage="Statistics" />}>
                         <span>
-                          <Icon as={FaChartBar} />
+                          <Icon as={PieChart} />
                         </span>
                       </Tooltip>
                     </Link>
                   </NextLink>
+
+                  <Tooltip label={<FormattedMessage defaultMessage="Help" />}>
+                    <Link href="https://github.com/chiyadev/genshin-schedule/wiki" isExternal>
+                      <Icon as={HelpCircle} />
+                    </Link>
+                  </Tooltip>
                 </>
               }
             />

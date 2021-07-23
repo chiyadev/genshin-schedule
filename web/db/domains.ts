@@ -1,12 +1,12 @@
 import {
-  AltarOfTheFalls,
+  CeciliaGardenDrops4,
   BeneathTheDragonQuellerDrops,
   CityOfReflections,
   ClearPoolAndMountainCavernDrops,
   ConfrontStormterrorDrops,
   DomainDropSet,
   DomainOfGuyunDrops,
-  ElectrostaticField,
+  HiddenPalaceOfLianshanFormulaDrops4,
   EnterTheGoldenHouseDrops,
   ForsakenRiftDrops1,
   ForsakenRiftDrops2,
@@ -14,6 +14,7 @@ import {
   ForsakenRiftDrops4,
   HiddenPalaceOfZhouFormulaDrops,
   MidsummerCourtyardDrops,
+  MomijiDyedCourtDrops,
   PeakOfVindagnyrDrops,
   RidgeWatchDrops,
   RuinsOfThirstingCapital,
@@ -24,9 +25,27 @@ import {
   TaishanMansionDrops4,
   Thundercloud,
   ThunderingRuins,
-  TrailGroundsOfThunder,
+  TrialGroundsOfThunder,
   ValleyOfRemembranceDrops,
+  VioletCourtDrops1,
+  VioletCourtDrops2,
+  VioletCourtDrops3,
   WolfOfTheNorthChallengeDrops,
+  SunkenSands,
+  AltarOfSands,
+  SandBurial,
+  CourtOfFlowingSandDrops4,
+  AnemoHypostasisDrops,
+  MaguuKenkiDrops,
+  CryoRegisvineDrops,
+  CryoHypostasisDrops,
+  PrimoGeovishapDrops,
+  ElectroHypostasisDrops,
+  GeoHypostasisDrops,
+  RhodeiaOfLochDrops,
+  PyroRegisvineDrops,
+  PyroHypostasisDrops,
+  PerpetualMechanicalArrayDrops,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
 
@@ -41,14 +60,14 @@ export const CeciliaGarden: Domain = {
   type: "Domain",
   name: registerMessage({ defaultMessage: "Cecilia Garden" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Cecilia_Garden",
-  drops: [CityOfReflections, SubmergedValley, RuinsOfThirstingCapital, AltarOfTheFalls],
+  drops: [CityOfReflections, SubmergedValley, RuinsOfThirstingCapital, CeciliaGardenDrops4],
 };
 
 export const HiddenPalaceOfLianshanFormula: Domain = {
   type: "Domain",
   name: registerMessage({ defaultMessage: "Hidden Palace of Lianshan Formula" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Hidden_Palace_of_Lianshan_Formula",
-  drops: [Thundercloud, ThunderingRuins, TrailGroundsOfThunder, ElectrostaticField],
+  drops: [Thundercloud, ThunderingRuins, TrialGroundsOfThunder, HiddenPalaceOfLianshanFormulaDrops4],
 };
 
 export const MidsummerCourtyard: Domain = {
@@ -142,6 +161,104 @@ export const RidgeWatch: Domain = {
   drops: [RidgeWatchDrops],
 };
 
+export const MomijiDyedCourt: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Momiji-Dyed Court" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Momiji-Dyed_Court",
+  drops: [MomijiDyedCourtDrops],
+};
+
+export const VioletCourt: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Violet Court" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Violet_Court",
+  drops: [VioletCourtDrops1, VioletCourtDrops2, VioletCourtDrops3],
+};
+
+export const CourtOfFlowingSand: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Court of Flowing Sand" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Court_of_Flowing_Sand",
+  drops: [SunkenSands, AltarOfSands, SandBurial, CourtOfFlowingSandDrops4],
+};
+
+export const AnemoHypostasis: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Anemo Hypostasis" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Anemo_Hypostasis",
+  drops: [AnemoHypostasisDrops],
+};
+
+export const MaguuKenki: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Maguu Kenki" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Maguu_Kenki",
+  drops: [MaguuKenkiDrops],
+};
+
+export const CryoRegisvine: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Cryo Regisvine" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Cryo_Regisvine",
+  drops: [CryoRegisvineDrops],
+};
+
+export const CryoHypostasis: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Cryo Hypostasis" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Cryo_Hypostasis",
+  drops: [CryoHypostasisDrops],
+};
+
+export const PrimoGeovishap: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Primo Geovishap" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Primo_Geovishap",
+  drops: [PrimoGeovishapDrops],
+};
+
+export const ElectroHypostasis: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Electro Hypostasis" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Electro_Hypostasis",
+  drops: [ElectroHypostasisDrops],
+};
+
+export const GeoHypostasis: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Geo Hypostasis" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Geo_Hypostasis",
+  drops: [GeoHypostasisDrops],
+};
+
+export const RhodeiaOfLoch: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Rhodeia of Loch" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Rhodeia_of_Loch",
+  drops: [RhodeiaOfLochDrops],
+};
+
+export const PyroRegisvine: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Pyro Regisvine" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Pyro_Regisvine",
+  drops: [PyroRegisvineDrops],
+};
+
+export const PyroHypostasis: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Pyro Hypostasis" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Pyro_Hypostasis",
+  drops: [PyroHypostasisDrops],
+};
+
+export const PerpetualMechanicalArray: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Perpetual Mechanical Array" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Perpetual_Mechanical_Array",
+  drops: [PerpetualMechanicalArrayDrops],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -158,4 +275,18 @@ export const Domains = [
   EnterTheGoldenHouse,
   BeneathTheDragonQueller,
   RidgeWatch,
+  MomijiDyedCourt,
+  VioletCourt,
+  CourtOfFlowingSand,
+  AnemoHypostasis,
+  MaguuKenki,
+  CryoRegisvine,
+  CryoHypostasis,
+  PrimoGeovishap,
+  ElectroHypostasis,
+  GeoHypostasis,
+  RhodeiaOfLoch,
+  PyroRegisvine,
+  PyroHypostasis,
+  PerpetualMechanicalArray,
 ];

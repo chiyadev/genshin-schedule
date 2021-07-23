@@ -17,9 +17,9 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
-import { FaSignInAlt } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { createApiClient, setAuthToken } from "../../utils/api";
+import { LogIn } from "react-feather";
 
 const DirectSignInButton = () => {
   const [open, setOpen] = useState(false);
@@ -30,7 +30,7 @@ const DirectSignInButton = () => {
 
   return (
     <>
-      <Button leftIcon={<Icon as={FaSignInAlt} />} onClick={() => setOpen(true)}>
+      <Button leftIcon={<Icon as={LogIn} />} onClick={() => setOpen(true)}>
         Direct sign in
       </Button>
 
@@ -87,7 +87,7 @@ const DirectSignInButton = () => {
 
             <ModalFooter>
               <ButtonGroup>
-                <Button type="submit" colorScheme="blue" leftIcon={<Icon as={FaSignInAlt} />} isLoading={load}>
+                <Button type="submit" colorScheme="blue" leftIcon={<Icon as={LogIn} />} isLoading={load}>
                   Sign in
                 </Button>
 

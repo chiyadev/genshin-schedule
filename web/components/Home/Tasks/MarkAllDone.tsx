@@ -1,13 +1,14 @@
 import React, { memo } from "react";
 import { useConfig } from "../../../utils/config";
-import { FaCheck } from "react-icons/fa";
 import { trackEvent } from "../../../utils/umami";
 import { HStack, Icon, Link } from "@chakra-ui/react";
 import { getServerResetTime, useServerTime } from "../../../utils/time";
 import { FormattedMessage } from "react-intl";
+import { Check } from "react-feather";
 
 const MarkAllDone = () => {
   const time = useServerTime(1000);
+  const [showHidden] = useConfig("taskListShowHidden");
   const [, setTasks] = useConfig("tasks");
 
   return (
@@ -17,7 +18,7 @@ const MarkAllDone = () => {
       onClick={() => {
         setTasks((tasks) =>
           tasks.map((task) => {
-            if (task.visible && task.dueTime <= time.valueOf()) {
+            if ((showHidden || task.visible) && task.dueTime <= time.valueOf()) {
               return {
                 ...task,
                 dueTime:
@@ -38,7 +39,7 @@ const MarkAllDone = () => {
         <div>
           <FormattedMessage defaultMessage="Mark everything as done" />
         </div>
-        <Icon as={FaCheck} />
+        <Icon as={Check} />
       </HStack>
     </Link>
   );

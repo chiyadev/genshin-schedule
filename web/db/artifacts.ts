@@ -206,6 +206,18 @@ export const PaleFlame: Artifact = {
   wiki: "https://genshin-impact.fandom.com/wiki/Pale_Flame",
 };
 
+export const ShimenawaReminiscence: Artifact = {
+  type: "Artifact",
+  name: registerMessage({ defaultMessage: "Shimenawa's Reminiscence" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Shimenawa%27s_Reminiscence",
+};
+
+export const EmblemOfSeveredFate: Artifact = {
+  type: "Artifact",
+  name: registerMessage({ defaultMessage: "Emblem of Severed Fate" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Emblem_of_Severed_Fate",
+};
+
 export const Artifacts = [
   Adventurer,
   ArchaicPetra,
@@ -240,4 +252,6 @@ export const Artifacts = [
   WanderersTroupe,
   TenacityOfTheMillelith,
   PaleFlame,
+  ShimenawaReminiscence,
+  EmblemOfSeveredFate,
 ];

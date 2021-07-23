@@ -3,7 +3,6 @@ import WidgetWrapper from "../WidgetWrapper";
 import { useDueTasks, useFilteredTasks } from "../../../utils/tasks";
 import TaskListCard from "../../TaskListCard";
 import MarkAllDone from "./MarkAllDone";
-import { FaAngleRight } from "react-icons/fa";
 import NextLink from "next/link";
 import {
   Alert,
@@ -11,6 +10,7 @@ import {
   AlertTitle,
   ButtonGroup,
   chakra,
+  HStack,
   Icon,
   Link,
   useColorModeValue,
@@ -22,6 +22,7 @@ import { useHotkeys } from "react-hotkeys-hook";
 import { useConfig } from "../../../utils/config";
 import ShowHiddenButton from "./ShowHiddenButton";
 import { FormattedMessage } from "react-intl";
+import { ChevronRight } from "react-feather";
 
 const MapCore = dynamic(() => import("../../Map"), { ssr: false });
 
@@ -56,8 +57,8 @@ const TaskList = () => {
       }
       menu={
         <ButtonGroup isAttached>
-          <SearchButton />
-          <ShowHiddenButton />
+          {!!tasks.length && <SearchButton />}
+          {tasks.find((task) => !task.visible) && <ShowHiddenButton />}
         </ButtonGroup>
       }
     >
@@ -71,7 +72,7 @@ const TaskList = () => {
             </chakra.div>
           </VStack>
         ) : (
-          <Alert status="info">
+          <Alert status="info" borderRadius="md">
             <AlertIcon />
             <VStack align="start" spacing={0}>
               <AlertTitle>
@@ -103,13 +104,18 @@ const TaskList = () => {
             />
           </chakra.div>
 
-          <chakra.div textAlign="right" fontSize="sm">
+          <HStack justify="flex-end">
             <NextLink href="/home/map" passHref>
-              <Link>
-                <FormattedMessage defaultMessage="Open map" /> <Icon as={FaAngleRight} />
+              <Link fontSize="sm">
+                <HStack spacing={2}>
+                  <div>
+                    <FormattedMessage defaultMessage="Open map" />
+                  </div>
+                  <Icon as={ChevronRight} />
+                </HStack>
               </Link>
             </NextLink>
-          </chakra.div>
+          </HStack>
         </VStack>
       </VStack>
     </WidgetWrapper>

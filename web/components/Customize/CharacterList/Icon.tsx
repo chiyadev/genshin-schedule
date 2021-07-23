@@ -1,25 +1,15 @@
-import React, { memo, useMemo } from "react";
+import React, { memo } from "react";
 import { Character } from "../../../db/characters";
-import { useConfig } from "../../../utils/config";
-import { AspectRatio, Center, chakra, HStack, Link, useColorModeValue, VStack } from "@chakra-ui/react";
+import { AspectRatio, Badge, Center, chakra, HStack, Link, useColorModeValue, VStack } from "@chakra-ui/react";
 import { getAssetByName } from "../../../assets";
 import NextLink from "next/link";
 import IconImage from "../IconImage";
-import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
+import { FormattedMessage as FormattedMessageId } from "react-intl";
 
-const Icon = ({ visible = true, character }: { visible?: boolean; character: Character }) => {
-  const [charactersWeekly] = useConfig("charactersWeekly");
-  const [characters] = useConfig("characters");
-
-  const alreadyAdded = useMemo(() => new Set([...charactersWeekly, ...characters]).has(character.name), [
-    charactersWeekly,
-    characters,
-    character.name,
-  ]);
-
+const Icon = ({ character }: { character: Character }) => {
   return (
     <NextLink href={`/customize/characters/${character.name}`} passHref>
-      <Link d={visible ? undefined : "none"} borderRadius="md">
+      <Link borderRadius="md">
         <AspectRatio ratio={5 / 6}>
           <VStack
             align="stretch"
@@ -30,36 +20,32 @@ const Icon = ({ visible = true, character }: { visible?: boolean; character: Cha
             bg={useColorModeValue("white", "gray.900")}
             borderWidth={1}
             borderColor={useColorModeValue("gray.200", "gray.700")}
-            opacity={alreadyAdded ? 0.25 : 1}
             transition=".2s"
           >
             <Center minH={0} flex={1}>
-              <IconImage name={character.name} h="full" borderRadius="full" />
+              <IconImage name={character.name} h="full" borderRadius="full" objectFit="cover" />
             </Center>
 
-            <VStack spacing={0}>
-              <div>
+            <VStack spacing={1}>
+              <chakra.div fontSize="sm" fontWeight="500">
                 <FormattedMessageId id={character.name} />
-              </div>
+              </chakra.div>
 
-              {character.talentMaterials.length ? (
-                <HStack fontSize="sm" color="gray.500" spacing={1}>
+              <Badge colorScheme={character.talentMaterial.colorHint}>
+                <HStack spacing={1}>
                   <chakra.img
-                    alt={character.talentMaterials[0].item}
-                    src={getAssetByName(character.talentMaterials[0].item)}
+                    alt={character.talentMaterial.item}
+                    title={character.talentMaterial.item}
+                    src={getAssetByName(character.talentMaterial.item)}
                     w={3}
                     h={3}
                   />
 
                   <div>
-                    <FormattedMessageId id={character.talentMaterials[0].name} />
+                    <FormattedMessageId id={character.talentMaterial.name} />
                   </div>
                 </HStack>
-              ) : (
-                <chakra.div fontSize="sm" color="gray.500">
-                  <FormattedMessage defaultMessage="Unknown" />
-                </chakra.div>
-              )}
+              </Badge>
             </VStack>
           </VStack>
         </AspectRatio>
