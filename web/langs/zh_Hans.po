@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
-"PO-Revision-Date: 2021-07-05 15:33+0000\n"
+"PO-Revision-Date: 2021-07-29 15:34+0000\n"
 "Last-Translator: Golden_Water <2439577268@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8-dev\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 
 #: components/Auth/UserSignIn.tsx:62
 msgctxt "components.Auth.UserSignIn.242220"
@@ -32,7 +32,7 @@ msgstr "忘记密码?"
 #: components/Auth/UserSignIn.tsx:157
 msgctxt "components.Auth.UserSignIn.67b73d"
 msgid "Continue without signing in"
-msgstr ""
+msgstr "继续但不登录"
 
 #: components/Auth/UserSignIn.tsx:98
 msgctxt "components.Auth.UserSignIn.7249ee"
@@ -334,7 +334,7 @@ msgstr "添加新语言"
 #: components/Customize/SettingsList/LanguageSwitch.tsx:36
 msgctxt "components.Customize.SettingsList.LanguageSwitch.94abfc"
 msgid "Default"
-msgstr ""
+msgstr "默认"
 
 #: components/Customize/SettingsList/LanguageSwitch.tsx:19
 msgctxt "components.Customize.SettingsList.LanguageSwitch.cb5677"
@@ -424,7 +424,7 @@ msgstr "武器"
 #: components/DropLabel.tsx:72
 msgctxt "components.DropLabel.0388b5"
 msgid "{category}, {region}"
-msgstr ""
+msgstr "{category}, {region}"
 
 #: components/DropLabel.tsx:66
 msgctxt "components.DropLabel.30b06c"
@@ -506,22 +506,22 @@ msgstr "切换服务器"
 #: components/Home/Clock/ServerText.tsx:28
 msgctxt "components.Home.Clock.ServerText.125d0a"
 msgid "TW, HK, MO"
-msgstr ""
+msgstr "港服"
 
 #: components/Home/Clock/ServerText.tsx:20
 msgctxt "components.Home.Clock.ServerText.5f7008"
 msgid "Europe"
-msgstr ""
+msgstr "欧服"
 
 #: components/Home/Clock/ServerText.tsx:24
 msgctxt "components.Home.Clock.ServerText.8a04bd"
 msgid "Asia"
-msgstr ""
+msgstr "亚服"
 
 #: components/Home/Clock/ServerText.tsx:16
 msgctxt "components.Home.Clock.ServerText.9d0209"
 msgid "America"
-msgstr ""
+msgstr "美服"
 
 #: components/Home/Clock/TimeDisplay.tsx:62
 msgctxt "components.Home.Clock.TimeDisplay.44c3b9"
@@ -556,32 +556,32 @@ msgstr ""
 #: components/Home/DomainView/FilterRegionButtons.tsx:26
 msgctxt "components.Home.DomainView.FilterRegionButtons.06cea1"
 msgid "Inazuma"
-msgstr ""
+msgstr "稻妻"
 
 #: components/Home/DomainView/FilterRegionButtons.tsx:14
 msgctxt "components.Home.DomainView.FilterRegionButtons.5a37ea"
 msgid "Mondstadt"
-msgstr ""
+msgstr "蒙德"
 
 #: components/Home/DomainView/FilterRegionButtons.tsx:20
 msgctxt "components.Home.DomainView.FilterRegionButtons.691c58"
 msgid "Liyue"
-msgstr ""
+msgstr "璃月"
 
 #: components/Home/DomainView/FilterTypeButtons.tsx:27
 msgctxt "components.Home.DomainView.FilterTypeButtons.4477a1"
 msgid "Weapons"
-msgstr ""
+msgstr "武器"
 
 #: components/Home/DomainView/FilterTypeButtons.tsx:21
 msgctxt "components.Home.DomainView.FilterTypeButtons.4e372c"
 msgid "Characters"
-msgstr ""
+msgstr "角色"
 
 #: components/Home/DomainView/FilterTypeButtons.tsx:33
 msgctxt "components.Home.DomainView.FilterTypeButtons.796e5e"
 msgid "Artifacts"
-msgstr ""
+msgstr "圣遗物"
 
 #: components/Home/DomainView/Item.tsx:39
 msgctxt "components.Home.DomainView.Item.238d34"
@@ -621,7 +621,7 @@ msgstr "前往{customize}以添加秘境, 或者可以试试{link}?"
 #: components/Home/RealmCurrency/ClearButton.tsx:22
 msgctxt "components.Home.RealmCurrency.ClearButton.3bc57c"
 msgid "Clear currency"
-msgstr ""
+msgstr "清空宝钱"
 
 #: components/Home/RealmCurrency/ClearButton.tsx:24
 msgctxt "components.Home.RealmCurrency.ClearButton.fc60a8"
@@ -661,7 +661,7 @@ msgstr "你的洞天宝钱已达上限."
 #: components/Home/RealmCurrency/index.tsx:43
 msgctxt "components.Home.RealmCurrency.index.c3eb42"
 msgid "Switch estimation mode"
-msgstr ""
+msgstr "切换估算模式"
 
 #: components/Home/RealmCurrency/index.tsx:36
 msgctxt "components.Home.RealmCurrency.index.d43d9b"
@@ -701,7 +701,7 @@ msgstr "树脂恢复"
 #: components/Home/Resin/Subtractor.tsx:61
 msgctxt "components.Home.Resin.Subtractor.387912"
 msgid "Subtract {amount} resins"
-msgstr ""
+msgstr "减去{amount}树脂"
 
 #: components/Home/Resin/index.tsx:110
 msgctxt "components.Home.Resin.index.506b0c"
@@ -711,7 +711,7 @@ msgstr "你的树脂满了."
 #: components/Home/Resin/index.tsx:43
 msgctxt "components.Home.Resin.index.c3eb42"
 msgid "Switch estimation mode"
-msgstr ""
+msgstr "切换估算模式"
 
 #: components/Home/Resin/index.tsx:36
 msgctxt "components.Home.Resin.index.fe85b2"
@@ -736,7 +736,7 @@ msgstr "显示隐藏任务"
 #: components/Home/Tasks/ShowHiddenButton.tsx:15
 msgctxt "components.Home.Tasks.ShowHiddenButton.e9f3d0"
 msgid "Hide hidden"
-msgstr ""
+msgstr "隐藏隐藏的"
 
 #: components/Home/Tasks/index.tsx:54
 msgctxt "components.Home.Tasks.index.0b9931"
@@ -771,7 +771,7 @@ msgstr "通知"
 #: components/Layout.tsx:71
 msgctxt "components.Layout.484351"
 msgid "Help"
-msgstr ""
+msgstr "帮助"
 
 #: components/Map/TaskCreateLayer/CreateButton.tsx:32
 msgctxt "components.Map.TaskCreateLayer.CreateButton.573cd8"
@@ -851,12 +851,12 @@ msgstr "刷新提醒"
 #: components/Map/TaskMarker/InfoPage/index.tsx:94
 msgctxt "components.Map.TaskMarker.InfoPage.index.343579"
 msgid "Options"
-msgstr ""
+msgstr "选项"
 
 #: components/Map/TaskMarker/InfoPage/index.tsx:46
 msgctxt "components.Map.TaskMarker.InfoPage.index.656cac"
 msgid "Change icon"
-msgstr ""
+msgstr "更改图标"
 
 #: components/Map/TaskMarker/InfoPage/index.tsx:82
 msgctxt "components.Map.TaskMarker.InfoPage.index.906238"
@@ -986,7 +986,7 @@ msgstr "范围"
 #: components/Statistics/ResetButton.tsx:32
 msgctxt "components.Statistics.ResetButton.1e2167"
 msgid "Reset statistics"
-msgstr ""
+msgstr "重置统计"
 
 #: components/Statistics/ResetButton.tsx:36
 msgctxt "components.Statistics.ResetButton.243268"
@@ -1121,7 +1121,7 @@ msgstr "游医"
 #: db/artifacts.ts:11
 msgctxt "db.artifacts.3e9210"
 msgid "Artifact"
-msgstr ""
+msgstr "圣遗物"
 
 #: db/artifacts.ts:171
 msgctxt "db.artifacts.485473"
@@ -1326,7 +1326,7 @@ msgstr ""
 #: db/characterMaterials.ts:94
 msgctxt "db.characterMaterials.84ad4f"
 msgid "Basalt Pillar"
-msgstr ""
+msgstr "玄岩之塔"
 
 #: db/characterMaterials.ts:122
 msgctxt "db.characterMaterials.aef1aa"
@@ -2071,7 +2071,7 @@ msgstr ""
 #: db/domains.ts:231
 msgctxt "db.domains.e2e8f5"
 msgid "Geo Hypostasis"
-msgstr ""
+msgstr "无相之岩"
 
 #: db/domains.ts:259
 msgctxt "db.domains.f07d15"
@@ -3957,7 +3957,7 @@ msgstr "新手长枪"
 #: pages/customize/artifacts/[name].tsx:77
 msgctxt "pages.customize.artifacts.[name].146974"
 msgid "artifact"
-msgstr ""
+msgstr "圣遗物"
 
 #: pages/customize/artifacts/[name].tsx:90
 msgctxt "pages.customize.artifacts.[name].f87fc3"
@@ -3984,7 +3984,7 @@ msgstr "以下的信息是基于测试版游戏的泄露数据.请慎重考虑."
 #: pages/customize/characters/[name].tsx:92
 msgctxt "pages.customize.characters.[name].e5ae51"
 msgid "character"
-msgstr ""
+msgstr "角色"
 
 #: pages/customize/weapons/[name].tsx:91
 msgctxt "pages.customize.weapons.[name].6a78b3"
@@ -3994,7 +3994,7 @@ msgstr "没有这样的武器."
 #: pages/customize/weapons/[name].tsx:77
 msgctxt "pages.customize.weapons.[name].78facd"
 msgid "weapon"
-msgstr ""
+msgstr "武器"
 
 #: pages/home/notifications/queue.tsx:48
 msgctxt "pages.home.notifications.queue.67684b"
