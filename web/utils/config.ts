@@ -98,7 +98,7 @@ const defaultMapCenter = {
 };
 
 export const DefaultConfig: Config = {
-  language: "en-US",
+  language: "default",
   server: "America",
   theme: "light",
   background: "paimon",

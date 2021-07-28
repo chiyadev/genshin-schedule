@@ -3,7 +3,7 @@ import { Config } from "./config";
 import { destroyCookie, parseCookies, setCookie } from "nookies";
 import { GetServerSidePropsContext } from "next";
 import node_fetch from "node-fetch";
-import { Language, LanguageAliases, Languages } from "../langs";
+import { Language, LanguageAliases } from "../langs";
 import { pick as parseLanguage } from "accept-language-parser";
 
 export type User = {
