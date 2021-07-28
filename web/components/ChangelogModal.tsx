@@ -26,8 +26,9 @@ function buildChangelog() {
         Added support for automatic language detection based on request headers.
       </ChangelogItem>
       <ChangelogItem>Added localization support for map labels.</ChangelogItem>
-      <ChangelogItem>Fixed Chinese localization not being applied on database entry names.</ChangelogItem>
       <ChangelogItem>Fixed localized item names not being searchable in Customize page.</ChangelogItem>
+      <ChangelogItem>Fixed Chinese localization not being applied on database entry names.</ChangelogItem>
+      <ChangelogItem>Pulled latest localization files from Weblate.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={31} date="2021/07/23">
       <Alert status="info" mb={2}>
