@@ -2,7 +2,6 @@
   "components.Auth.UserSignIn.242220": "Brukernavn",
   "components.Auth.UserSignIn.28def3": "Feil",
   "components.Auth.UserSignIn.57f247": "Glemt passordet?",
-  "components.Auth.UserSignIn.61ef74": "Fortsett som anonym",
   "components.Auth.UserSignIn.7249ee": "Aldri gjenbruk ditt miHoYo-passord på Genshin-relaterte nettsider.",
   "components.Auth.UserSignIn.bc7fa7": "Les mer.",
   "components.Auth.UserSignIn.c12651": "Send inn",
@@ -35,7 +34,6 @@
   "components.Home.Clock.ServerText.0fe07e": "Bytt tjener",
   "components.Home.Clock.TimeDisplay.44c3b9": "Forrige dag",
   "components.Home.Clock.TimeDisplay.dd708b": "Neste dag",
-  "components.Home.DomainView.FilterButtons.4477a1": "Våpen",
   "components.Home.RealmCurrency.ClearButton.fc60a8": "Tøm",
   "components.Home.RealmCurrency.index.1b0b98": "Tillitsrangering",
   "components.Home.Tasks.SearchButton.c66715": "Søk",
@@ -70,5 +68,7 @@
   "Damaged Mask": "Skadet maske",
   "Thundercloud": "Tordensky",
   "Tomato": "Tomat",
-  "Other Shops": "Andre butikker"
+  "Other Shops": "Andre butikker",
+  "components.Auth.UserSignIn.61ef74": "Fortsett som anonym",
+  "components.Home.DomainView.FilterButtons.4477a1": "Våpen"
 }
