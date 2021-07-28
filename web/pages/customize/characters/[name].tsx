@@ -12,8 +12,10 @@ import CommonMaterialDisplay from "../../../components/Customize/CharacterInfo/C
 import NoteInput from "../../../components/Customize/CharacterInfo/NoteInput";
 import { FormattedMessage } from "react-intl";
 import { DomainOfMastery } from "../../../db/domainCategories";
+import { Language } from "../../../langs";
 
 type Props = {
+  language: Language | null;
   data: WebData | null;
   name: string | null;
 };
@@ -38,17 +40,18 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
   return {
     props: {
+      language: client.language || null,
       data: client.authenticated ? await client.getSync() : null,
       name: character?.name || null,
     },
   };
 };
 
-const CharacterInfo = ({ data, name }: Props) => {
+const CharacterInfo = ({ language, data, name }: Props) => {
   const character = Characters.find((character) => character.name === name);
 
   return (
-    <ConfigProvider initial={data}>
+    <ConfigProvider initial={data} language={language}>
       <Layout title={[character?.name || "Not Found"]}>
         {character ? (
           <VStack align="stretch" spacing={4}>

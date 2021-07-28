@@ -24,7 +24,7 @@ export const MapZoomMin = 4;
 export const MapZoomMax = 7;
 
 export type Config = {
-  language: Language;
+  language: Language | "default";
   server: "America" | "Europe" | "Asia" | "TW, HK, MO";
   theme: "light" | "dark";
   background: keyof typeof CharacterBackgrounds | "none";

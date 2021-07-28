@@ -12,8 +12,10 @@ import { Weapons, WeaponWiki } from "../../../db/weapons";
 import NoteInput from "../../../components/Customize/WeaponInfo/NoteInput";
 import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
 import { DomainOfForgery } from "../../../db/domainCategories";
+import { Language } from "../../../langs";
 
 type Props = {
+  language: Language | null;
   data: WebData | null;
   name: string | null;
 };
@@ -38,17 +40,18 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
   return {
     props: {
+      language: client.language || null,
       data: client.authenticated ? await client.getSync() : null,
       name: weapon?.name || null,
     },
   };
 };
 
-const WeaponInfo = ({ data, name }: Props) => {
+const WeaponInfo = ({ language, data, name }: Props) => {
   const weapon = Weapons.find((weapon) => weapon.name === name);
 
   return (
-    <ConfigProvider initial={data}>
+    <ConfigProvider initial={data} language={language}>
       <Layout title={[weapon?.name || "Not Found"]}>
         {weapon ? (
           <WhiteCard divide>

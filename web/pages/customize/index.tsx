@@ -9,8 +9,10 @@ import CharacterList from "../../components/Customize/CharacterList";
 import WeaponList from "../../components/Customize/WeaponList";
 import ArtifactList from "../../components/Customize/ArtifactList";
 import SettingsList from "../../components/Customize/SettingsList";
+import { Language } from "../../langs";
 
 type Props = {
+  language: Language | null;
   user: User | null;
   data: WebData | null;
 };
@@ -29,15 +31,16 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
   return {
     props: {
+      language: client.language || null,
       user: client.authenticated ? await client.getSelf() : null,
       data: client.authenticated ? await client.getSync() : null,
     },
   };
 };
 
-const Customize = ({ user, data }: Props) => {
+const Customize = ({ language, user, data }: Props) => {
   return (
-    <ConfigProvider initial={data}>
+    <ConfigProvider initial={data} language={language}>
       <Layout title={["Customize"]}>
         <VStack align="stretch" spacing={16}>
           <Search />

@@ -33,6 +33,8 @@ const LanguageSwitch = () => {
             }
           }}
         >
+          <option value="default">{formatMessage({ defaultMessage: "Default" })}</option>
+
           {Languages.map((lang) => (
             <option key={lang} value={lang}>
               {LanguageNames[lang]}

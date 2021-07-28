@@ -12,8 +12,11 @@ import Favicon180x180 from "../public/favicon-180x180.png";
 import { FormattedMessage } from "react-intl";
 import NextImage from "next/image";
 import { GitHub, LogIn } from "react-feather";
+import { Language } from "../langs";
 
-type Props = {};
+type Props = {
+  language: Language | null;
+};
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const client = createApiClient(ctx);
@@ -28,15 +31,17 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   }
 
   return {
-    props: {},
+    props: {
+      language: client.language || null,
+    },
   };
 };
 
-const Welcome = () => {
+const Welcome = ({ language }: Props) => {
   const authRef = useRef<HTMLDivElement>(null);
 
   return (
-    <ConfigProvider>
+    <ConfigProvider language={language}>
       <Layout header={false}>
         <VStack align="stretch" spacing={32} py={32} flex={1} maxW="568px" mx="auto">
           <VStack align="stretch" spacing={8}>

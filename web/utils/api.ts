@@ -3,6 +3,8 @@ import { Config } from "./config";
 import { destroyCookie, parseCookies, setCookie } from "nookies";
 import { GetServerSidePropsContext } from "next";
 import node_fetch from "node-fetch";
+import { Language, LanguageAliases, Languages } from "../langs";
+import { pick as parseLanguage } from "accept-language-parser";
 
 export type User = {
   username: string;
@@ -50,7 +52,19 @@ export const ApiUrlPublic = process.env.NEXT_PUBLIC_API_PUBLIC || ApiUrlDefault;
 export const ApiUrlInternal = process.env.NEXT_PUBLIC_API_INTERNAL || ApiUrlPublic;
 
 export function createApiClient(ctx?: Pick<GetServerSidePropsContext, "req">): ApiClient {
-  return new ApiClient(ctx?.req ? ApiUrlInternal : ApiUrlPublic, getAuthToken(ctx));
+  return new ApiClient(ctx?.req ? ApiUrlInternal : ApiUrlPublic, getAuthToken(ctx), getLanguage(ctx));
+}
+
+export function getLanguage(ctx?: Pick<GetServerSidePropsContext, "req">): Language {
+  let alias: string;
+
+  if (ctx) {
+    alias = parseLanguage(Object.keys(LanguageAliases), ctx.req.headers["accept-language"] || "") || "";
+  } else {
+    alias = Object.keys(LanguageAliases).find((lang) => lang === navigator.language) || "";
+  }
+
+  return LanguageAliases[alias] || "en-US";
 }
 
 export function getAuthToken(ctx?: Pick<GetServerSidePropsContext, "req">): string | undefined {
@@ -73,7 +87,7 @@ export function setAuthToken(ctx?: Pick<GetServerSidePropsContext, "res">, token
 }
 
 export class ApiClient {
-  constructor(public baseUrl: string, public token?: string) {}
+  constructor(public baseUrl: string, public token?: string, public language?: Language) {}
 
   get authenticated() {
     return typeof this.token === "string" && !this.anonymous;

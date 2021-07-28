@@ -62,7 +62,7 @@ const FilterButton = ({
             setFilter("all");
           } else {
             setFilter(type);
-            trackEvent("domainView", `filterType${label}`);
+            trackEvent("domainView", `filter${type}`);
           }
         }}
       >

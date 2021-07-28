@@ -16,13 +16,25 @@ import { PromiseSignal } from "../utils/promiseSignal";
 import { createPatch, Patch } from "rfc6902";
 import { useToast } from "@chakra-ui/react";
 import { IntlProvider } from "react-intl";
-import { Localizations } from "../langs";
+import { Language, Localizations } from "../langs";
 
-const ConfigProvider = ({ initial, children }: { initial?: WebData | null; children?: ReactNode }) => {
+const ConfigProvider = ({
+  initial,
+  language,
+  children,
+}: {
+  initial?: WebData | null;
+  language?: Language | null;
+  children?: ReactNode;
+}) => {
   if (initial) {
-    return <SynchronizedConfigProvider initial={initial}>{children}</SynchronizedConfigProvider>;
+    return (
+      <SynchronizedConfigProvider initial={initial} language={language || undefined}>
+        {children}
+      </SynchronizedConfigProvider>
+    );
   } else {
-    return <LocalConfigProvider>{children}</LocalConfigProvider>;
+    return <LocalConfigProvider language={language || undefined}>{children}</LocalConfigProvider>;
   }
 };
 
@@ -53,7 +65,7 @@ function setLocalConfig(config: Config) {
   }
 }
 
-const LocalConfigProvider = ({ children }: { children?: ReactNode }) => {
+const LocalConfigProvider = ({ language, children }: { language?: Language; children?: ReactNode }) => {
   const [value, setValueCore] = useState(DefaultConfig);
   const setValue = useCallback((newValue: SetStateAction<Config>) => {
     if (typeof newValue === "function") {
@@ -80,13 +92,21 @@ const LocalConfigProvider = ({ children }: { children?: ReactNode }) => {
   }, []);
 
   return (
-    <ConfigContextRoot value={value} setValue={setValue}>
+    <ConfigContextRoot value={value} setValue={setValue} language={language}>
       {children}
     </ConfigContextRoot>
   );
 };
 
-const SynchronizedConfigProvider = ({ initial, children }: { initial: WebData; children?: ReactNode }) => {
+const SynchronizedConfigProvider = ({
+  initial,
+  language,
+  children,
+}: {
+  initial: WebData;
+  language?: Language;
+  children?: ReactNode;
+}) => {
   const [value, setValue] = useState(() => ({ ...DefaultConfig, ...initial.data }));
   const [, setSync] = useState(false);
 
@@ -172,7 +192,7 @@ const SynchronizedConfigProvider = ({ initial, children }: { initial: WebData; c
   }, [signals, patchQueue]);
 
   return (
-    <ConfigContextRoot value={value} setValue={setValue}>
+    <ConfigContextRoot value={value} setValue={setValue} language={language}>
       <SyncContext.Provider
         value={useMemo(
           () => ({
@@ -198,14 +218,15 @@ const SynchronizedConfigProvider = ({ initial, children }: { initial: WebData; c
 const ConfigContextRoot = ({
   value,
   setValue,
+  language = "en-US",
   children,
 }: {
   value: Config;
   setValue: Dispatch<SetStateAction<Config>>;
+  language?: Language;
   children?: ReactNode;
 }) => {
   const ref = useRef(value);
-
   const set = useCallback(
     (newValue: SetStateAction<Config>) => {
       setValue((value) => {
@@ -238,6 +259,10 @@ const ConfigContextRoot = ({
     }
   }, [value, events]);
 
+  if (value.language !== "default") {
+    language = value.language;
+  }
+
   return (
     <ConfigContext.Provider
       value={useMemo(
@@ -249,7 +274,7 @@ const ConfigContextRoot = ({
         [ref, set, events]
       )}
     >
-      <IntlProvider locale={value.language} messages={Localizations[value.language]}>
+      <IntlProvider locale={language} messages={Localizations[language]}>
         {children}
       </IntlProvider>
     </ConfigContext.Provider>

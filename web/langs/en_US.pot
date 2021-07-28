@@ -46,7 +46,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:217
+#: components/ChangelogModal.tsx:225
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -296,9 +296,14 @@ msgctxt "components.Customize.SettingsList.ConfigExportButton.e25eaf"
 msgid "Copy"
 msgstr ""
 
-#: components/Customize/SettingsList/LanguageSwitch.tsx:42
+#: components/Customize/SettingsList/LanguageSwitch.tsx:44
 msgctxt "components.Customize.SettingsList.LanguageSwitch.4b7b37"
 msgid "Add new language"
+msgstr ""
+
+#: components/Customize/SettingsList/LanguageSwitch.tsx:36
+msgctxt "components.Customize.SettingsList.LanguageSwitch.94abfc"
+msgid "Default"
 msgstr ""
 
 #: components/Customize/SettingsList/LanguageSwitch.tsx:19
@@ -3916,127 +3921,127 @@ msgctxt "db.weapons.ffe36a"
 msgid "Beginner's Protector"
 msgstr ""
 
-#: pages/customize/artifacts/[name].tsx:74
+#: pages/customize/artifacts/[name].tsx:77
 msgctxt "pages.customize.artifacts.[name].146974"
 msgid "artifact"
 msgstr ""
 
-#: pages/customize/artifacts/[name].tsx:87
+#: pages/customize/artifacts/[name].tsx:90
 msgctxt "pages.customize.artifacts.[name].f87fc3"
 msgid "No such artifact."
 msgstr ""
 
-#: pages/customize/characters/[name].tsx:60
+#: pages/customize/characters/[name].tsx:63
 msgctxt "pages.customize.characters.[name].8c8c3a"
 msgid "This page may be inaccurate."
 msgstr ""
 
-#: pages/customize/characters/[name].tsx:122
+#: pages/customize/characters/[name].tsx:125
 msgctxt "pages.customize.characters.[name].9bd832"
 msgid "No such character."
 msgstr ""
 
-#: pages/customize/characters/[name].tsx:63
+#: pages/customize/characters/[name].tsx:66
 msgctxt "pages.customize.characters.[name].ddaaad"
 msgid "The following information is based on leaked data from beta versions of the game. Take it with a grain of salt."
 msgstr ""
 
-#: pages/customize/characters/[name].tsx:89
+#: pages/customize/characters/[name].tsx:92
 msgctxt "pages.customize.characters.[name].e5ae51"
 msgid "character"
 msgstr ""
 
-#: pages/customize/weapons/[name].tsx:88
+#: pages/customize/weapons/[name].tsx:91
 msgctxt "pages.customize.weapons.[name].6a78b3"
 msgid "No such weapon."
 msgstr ""
 
-#: pages/customize/weapons/[name].tsx:74
+#: pages/customize/weapons/[name].tsx:77
 msgctxt "pages.customize.weapons.[name].78facd"
 msgid "weapon"
 msgstr ""
 
-#: pages/home/notifications/queue.tsx:45
+#: pages/home/notifications/queue.tsx:48
 msgctxt "pages.home.notifications.queue.67684b"
 msgid "Notification queue"
 msgstr ""
 
-#: pages/home/notifications/queue.tsx:113
+#: pages/home/notifications/queue.tsx:116
 msgctxt "pages.home.notifications.queue.76b25d"
 msgid "Send now"
 msgstr ""
 
-#: pages/home/notifications/queue.tsx:129
+#: pages/home/notifications/queue.tsx:132
 msgctxt "pages.home.notifications.queue.87f26c"
 msgid "Dequeue"
 msgstr ""
 
-#: pages/home/notifications/queue.tsx:87
+#: pages/home/notifications/queue.tsx:90
 msgctxt "pages.home.notifications.queue.c5b4ec"
 msgid "Scheduled at {time} in {duration}."
 msgstr ""
 
-#: pages/home/notifications/queue.tsx:54
+#: pages/home/notifications/queue.tsx:57
 msgctxt "pages.home.notifications.queue.fcf2e1"
 msgid "There are no notifications in queue."
 msgstr ""
 
-#: pages/index.tsx:103
+#: pages/index.tsx:108
 msgctxt "pages.index.0b66ba"
 msgid "Tracks open world resources and reminds you as soon as they respawn. There is no limit to the number of pins."
 msgstr ""
 
-#: pages/index.tsx:88
+#: pages/index.tsx:93
 msgctxt "pages.index.0ed193"
 msgid "Tracks your resins and estimates when it will recharge without having to open the game."
 msgstr ""
 
-#: pages/index.tsx:135
+#: pages/index.tsx:140
 msgctxt "pages.index.37b47a"
 msgid "Signing in will enable synchronization across multiple devices. If you do not already have an account, it will be created automatically."
 msgstr ""
 
-#: pages/index.tsx:132
+#: pages/index.tsx:137
 msgctxt "pages.index.49026d"
 msgid "Sign in"
 msgstr ""
 
-#: pages/index.tsx:78
+#: pages/index.tsx:83
 msgctxt "pages.index.657a74"
 msgid "Features"
 msgstr ""
 
-#: pages/index.tsx:100
+#: pages/index.tsx:105
 msgctxt "pages.index.755c57"
 msgid "Task scheduler"
 msgstr ""
 
-#: pages/index.tsx:115
+#: pages/index.tsx:120
 msgctxt "pages.index.79dc9c"
 msgid "Domain view"
 msgstr ""
 
-#: pages/index.tsx:85
+#: pages/index.tsx:90
 msgctxt "pages.index.96d48b"
 msgid "Resin calculator"
 msgstr ""
 
-#: pages/index.tsx:118
+#: pages/index.tsx:123
 msgctxt "pages.index.a92dae"
 msgid "Shows which domains can be cleared for ascension materials and artifacts for the day."
 msgstr ""
 
-#: pages/index.tsx:71
+#: pages/index.tsx:76
 msgctxt "pages.index.c0ef70"
 msgid "GitHub"
 msgstr ""
 
-#: pages/index.tsx:49
+#: pages/index.tsx:54
 msgctxt "pages.index.e3e15c"
 msgid "Genshin Schedule"
 msgstr ""
 
-#: pages/index.tsx:52
+#: pages/index.tsx:57
 msgctxt "pages.index.fcffbd"
 msgid "Genshin Schedule is a website to help you keep track of time-related game activities in Genshin Impact."
 msgstr ""

@@ -7,8 +7,10 @@ import dynamic from "next/dynamic";
 import TaskListOverlay from "../../components/MapPage/TaskListOverlay";
 import HeaderOverlay from "../../components/MapPage/HeaderOverlay";
 import { chakra } from "@chakra-ui/react";
+import { Language } from "../../langs";
 
 type Props = {
+  language: Language | null;
   data: WebData | null;
 };
 
@@ -26,6 +28,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
   return {
     props: {
+      language: client.language || null,
       data: client.authenticated ? await client.getSync() : null,
     },
   };
@@ -33,9 +36,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
 const MapCore = dynamic(() => import("../../components/Map"), { ssr: false });
 
-const Map = ({ data }: Props) => {
+const Map = ({ language, data }: Props) => {
   return (
-    <ConfigProvider initial={data}>
+    <ConfigProvider initial={data} language={language}>
       <Layout title={["Map"]} header={false} footer={false} background={false}>
         <HeaderOverlay />
         <TaskListOverlay />

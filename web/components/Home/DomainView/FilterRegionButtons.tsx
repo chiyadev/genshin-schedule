@@ -55,7 +55,7 @@ const FilterButton = ({
             setFilter("all");
           } else {
             setFilter(type);
-            trackEvent("domainView", `filterRegion${label}`);
+            trackEvent("domainView", `filter${type}`);
           }
         }}
       >

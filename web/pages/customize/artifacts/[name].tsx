@@ -12,8 +12,10 @@ import Toggle from "../../../components/Customize/ArtifactInfo/Toggle";
 import DropLabel from "../../../components/DropLabel";
 import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
 import { DomainOfBlessing } from "../../../db/domainCategories";
+import { Language } from "../../../langs";
 
 type Props = {
+  language: Language | null;
   data: WebData | null;
   name: string | null;
 };
@@ -38,17 +40,18 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
   return {
     props: {
+      language: client.language || null,
       data: client.authenticated ? await client.getSync() : null,
       name: artifact?.name || null,
     },
   };
 };
 
-const ArtifactInfo = ({ data, name }: Props) => {
+const ArtifactInfo = ({ language, data, name }: Props) => {
   const artifact = Artifacts.find((artifact) => artifact.name === name);
 
   return (
-    <ConfigProvider initial={data}>
+    <ConfigProvider initial={data} language={language}>
       <Layout title={[artifact?.name || "Not Found"]}>
         {artifact ? (
           <WhiteCard divide>

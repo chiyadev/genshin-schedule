@@ -35,7 +35,7 @@ const FilterButton = ({ type, label, icon }: { type: Config["domainFilter"]; lab
             setFilter("all");
           } else {
             setFilter(type);
-            trackEvent("domainView", `filter${label}`);
+            trackEvent("domainView", `filter${type}`);
           }
         }}
       >

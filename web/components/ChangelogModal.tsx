@@ -17,10 +17,18 @@ import {
 import { FormattedMessage } from "react-intl";
 import { GitPullRequest } from "react-feather";
 
-const LatestChangelog = 31;
+const LatestChangelog = 32;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={32} date="2021/07/28">
+      <ChangelogItem github={79}>
+        Added support for automatic language detection based on request headers.
+      </ChangelogItem>
+      <ChangelogItem>Added localization support for map labels.</ChangelogItem>
+      <ChangelogItem>Fixed Chinese localization not being applied on database entry names.</ChangelogItem>
+      <ChangelogItem>Fixed localized item names not being searchable in Customize page.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={31} date="2021/07/23">
       <Alert status="info" mb={2}>
         <AlertIcon />
@@ -221,7 +229,7 @@ const ChangelogModal = () => {
         <ModalCloseButton />
         <ModalBody>
           <VStack align="stretch" spacing={4} pb={2} divider={<StackDivider borderColor={dividerColor} />}>
-            {changelog.slice(0, 3)}
+            {changelog.slice(0, 5)}
           </VStack>
         </ModalBody>
       </ModalContent>

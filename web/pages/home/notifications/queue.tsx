@@ -10,8 +10,10 @@ import { DateTime } from "luxon";
 import { useFormatDuration } from "../../../utils/time";
 import { FormattedMessage } from "react-intl";
 import { Send } from "react-feather";
+import { Language } from "../../../langs";
 
 type Props = {
+  language: Language | null;
   data: WebData | null;
   queue: Notification[] | null;
 };
@@ -30,15 +32,16 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
 
   return {
     props: {
+      language: client.language || null,
       data: client.authenticated ? await client.getSync() : null,
       queue: client.authenticated ? await client.listNotifications() : null,
     },
   };
 };
 
-const Home = ({ data, queue }: Props) => {
+const Home = ({ language, data, queue }: Props) => {
   return (
-    <ConfigProvider initial={data}>
+    <ConfigProvider initial={data} language={language}>
       <Layout title={["Notification queue"]}>
         <VStack align="stretch" spacing={4}>
           <div>
