@@ -59,7 +59,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr "密码"
 
-#: components/ChangelogModal.tsx:217
+#: components/ChangelogModal.tsx:225
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr "更新日志"
@@ -326,10 +326,15 @@ msgctxt "components.Customize.SettingsList.ConfigExportButton.e25eaf"
 msgid "Copy"
 msgstr "复制"
 
-#: components/Customize/SettingsList/LanguageSwitch.tsx:42
+#: components/Customize/SettingsList/LanguageSwitch.tsx:44
 msgctxt "components.Customize.SettingsList.LanguageSwitch.4b7b37"
 msgid "Add new language"
 msgstr "添加新语言"
+
+#: components/Customize/SettingsList/LanguageSwitch.tsx:36
+msgctxt "components.Customize.SettingsList.LanguageSwitch.94abfc"
+msgid "Default"
+msgstr ""
 
 #: components/Customize/SettingsList/LanguageSwitch.tsx:19
 msgctxt "components.Customize.SettingsList.LanguageSwitch.cb5677"
@@ -493,10 +498,30 @@ msgctxt "components.Home.Clock.DateDisplay.de212c"
 msgid "{duration} until reset"
 msgstr "{duration} 后重置"
 
-#: components/Home/Clock/ServerText.tsx:16
+#: components/Home/Clock/ServerText.tsx:36
 msgctxt "components.Home.Clock.ServerText.0fe07e"
 msgid "Switch server"
 msgstr "切换服务器"
+
+#: components/Home/Clock/ServerText.tsx:28
+msgctxt "components.Home.Clock.ServerText.125d0a"
+msgid "TW, HK, MO"
+msgstr ""
+
+#: components/Home/Clock/ServerText.tsx:20
+msgctxt "components.Home.Clock.ServerText.5f7008"
+msgid "Europe"
+msgstr ""
+
+#: components/Home/Clock/ServerText.tsx:24
+msgctxt "components.Home.Clock.ServerText.8a04bd"
+msgid "Asia"
+msgstr ""
+
+#: components/Home/Clock/ServerText.tsx:16
+msgctxt "components.Home.Clock.ServerText.9d0209"
+msgid "America"
+msgstr ""
 
 #: components/Home/Clock/TimeDisplay.tsx:62
 msgctxt "components.Home.Clock.TimeDisplay.44c3b9"
@@ -958,17 +983,22 @@ msgctxt "components.Statistics.InfoText.be142a"
 msgid "Range"
 msgstr "范围"
 
-#: components/Statistics/ResetButton.tsx:34
+#: components/Statistics/ResetButton.tsx:32
+msgctxt "components.Statistics.ResetButton.1e2167"
+msgid "Reset statistics"
+msgstr ""
+
+#: components/Statistics/ResetButton.tsx:36
 msgctxt "components.Statistics.ResetButton.243268"
 msgid "This action cannot be undone."
 msgstr "此操作不可撤销."
 
-#: components/Statistics/ResetButton.tsx:46
+#: components/Statistics/ResetButton.tsx:48
 msgctxt "components.Statistics.ResetButton.8e6fec"
 msgid "Reset"
 msgstr "重置"
 
-#: components/Statistics/ResetButton.tsx:50
+#: components/Statistics/ResetButton.tsx:52
 msgctxt "components.Statistics.ResetButton.e3b158"
 msgid "Cancel"
 msgstr "取消"
@@ -1043,987 +1073,1027 @@ msgctxt "components.TaskSearchModal.4ae60b"
 msgid "Search tasks…"
 msgstr "搜索任务…"
 
-#: db/artifacts.ts:25
+#: db/artifacts.ts:27
 msgctxt "db.artifacts.05500a"
 msgid "Berserker"
 msgstr "战狂"
 
-#: db/artifacts.ts:91
+#: db/artifacts.ts:93
 msgctxt "db.artifacts.069da3"
 msgid "Maiden Beloved"
 msgstr "被怜爱的少女"
 
-#: db/artifacts.ts:115
+#: db/artifacts.ts:117
 msgctxt "db.artifacts.1c37ab"
 msgid "Prayers for Destiny"
 msgstr "祭水礼冠"
 
-#: db/artifacts.ts:73
+#: db/artifacts.ts:75
 msgctxt "db.artifacts.214709"
 msgid "Instructor"
 msgstr "教官"
 
-#: db/artifacts.ts:49
+#: db/artifacts.ts:51
 msgctxt "db.artifacts.21612b"
 msgid "Defender's Will"
 msgstr "守护之心"
 
-#: db/artifacts.ts:205
+#: db/artifacts.ts:207
 msgctxt "db.artifacts.21a80b"
 msgid "Pale Flame"
 msgstr "苍白之火"
 
-#: db/artifacts.ts:103
+#: db/artifacts.ts:105
 msgctxt "db.artifacts.280c08"
 msgid "Noblesse Oblige"
 msgstr "昔日宗室之仪"
 
-#: db/artifacts.ts:13
+#: db/artifacts.ts:15
 msgctxt "db.artifacts.2ff052"
 msgid "Adventurer"
 msgstr "冒险家"
 
-#: db/artifacts.ts:181
+#: db/artifacts.ts:183
 msgctxt "db.artifacts.38bb7d"
 msgid "Traveling Doctor"
 msgstr "游医"
 
-#: db/artifacts.ts:169
+#: db/artifacts.ts:11
+msgctxt "db.artifacts.3e9210"
+msgid "Artifact"
+msgstr ""
+
+#: db/artifacts.ts:171
 msgctxt "db.artifacts.485473"
 msgid "Thundersoother"
 msgstr "平息鸣雷的尊者"
 
-#: db/artifacts.ts:97
+#: db/artifacts.ts:99
 msgctxt "db.artifacts.4f913f"
 msgid "Martial Artist"
 msgstr "武人"
 
-#: db/artifacts.ts:133
+#: db/artifacts.ts:135
 msgctxt "db.artifacts.51460e"
 msgid "Prayers to Springtime"
 msgstr "祭冰之人"
 
-#: db/artifacts.ts:37
+#: db/artifacts.ts:39
 msgctxt "db.artifacts.5681e8"
 msgid "Brave Heart"
 msgstr "勇士之心"
 
-#: db/artifacts.ts:79
+#: db/artifacts.ts:81
 msgctxt "db.artifacts.5bcd27"
 msgid "Lavawalker"
 msgstr "渡过烈火的贤人"
 
-#: db/artifacts.ts:109
+#: db/artifacts.ts:111
 msgctxt "db.artifacts.6d7eb3"
 msgid "Ocean Conqueror"
 msgstr "沉沦之心"
 
-#: db/artifacts.ts:85
+#: db/artifacts.ts:87
 msgctxt "db.artifacts.730401"
 msgid "Lucky Dog"
 msgstr "幸运儿"
 
-#: db/artifacts.ts:175
+#: db/artifacts.ts:177
 msgctxt "db.artifacts.7e4369"
 msgid "Tiny Miracle"
 msgstr "奇迹"
 
-#: db/artifacts.ts:157
+#: db/artifacts.ts:159
 msgctxt "db.artifacts.7e7a67"
 msgid "The Exile"
 msgstr "流放者"
 
-#: db/artifacts.ts:199
+#: db/artifacts.ts:201
 msgctxt "db.artifacts.8003f4"
 msgid "Tenacity of the Millelith"
 msgstr "千岩牢固"
 
-#: db/artifacts.ts:43
+#: db/artifacts.ts:45
 msgctxt "db.artifacts.851f90"
 msgid "Crimson Witch of Flames"
 msgstr "炽烈的炎之魔女"
 
-#: db/artifacts.ts:217
+#: db/artifacts.ts:219
 msgctxt "db.artifacts.898ec3"
 msgid "Emblem of Severed Fate"
 msgstr ""
 
-#: db/artifacts.ts:187
+#: db/artifacts.ts:189
 msgctxt "db.artifacts.95e53b"
 msgid "Viridescent Venerer"
 msgstr "翠绿之影"
 
-#: db/artifacts.ts:163
+#: db/artifacts.ts:165
 msgctxt "db.artifacts.9f336e"
 msgid "Thundering Fury"
 msgstr "如雷的盛怒"
 
-#: db/artifacts.ts:55
+#: db/artifacts.ts:57
 msgctxt "db.artifacts.a5f405"
 msgid "Gambler"
 msgstr "赌徒"
 
-#: db/artifacts.ts:67
+#: db/artifacts.ts:69
 msgctxt "db.artifacts.b45e3e"
 msgid "Icebreaker"
 msgstr "冰风迷途的勇士"
 
-#: db/artifacts.ts:151
+#: db/artifacts.ts:153
 msgctxt "db.artifacts.bf3cde"
 msgid "Scholar"
 msgstr "学士"
 
-#: db/artifacts.ts:19
+#: db/artifacts.ts:21
 msgctxt "db.artifacts.c4de81"
 msgid "Archaic Petra"
 msgstr "悠古的磐岩"
 
-#: db/artifacts.ts:31
+#: db/artifacts.ts:33
 msgctxt "db.artifacts.c4ee4e"
 msgid "Bloodstained Chivalry"
 msgstr "染血的骑士道"
 
-#: db/artifacts.ts:139
+#: db/artifacts.ts:141
 msgctxt "db.artifacts.d086de"
 msgid "Resolution of Sojourner"
 msgstr "行者之心"
 
-#: db/artifacts.ts:211
+#: db/artifacts.ts:213
 msgctxt "db.artifacts.de601b"
 msgid "Shimenawa's Reminiscence"
 msgstr ""
 
-#: db/artifacts.ts:145
+#: db/artifacts.ts:147
 msgctxt "db.artifacts.e2996a"
 msgid "Retracing Bolide"
 msgstr "逆飞的流星"
 
-#: db/artifacts.ts:193
+#: db/artifacts.ts:195
 msgctxt "db.artifacts.e34cca"
 msgid "Wanderer's Troupe"
 msgstr "流浪大地的乐团"
 
-#: db/artifacts.ts:127
+#: db/artifacts.ts:129
 msgctxt "db.artifacts.e52b68"
 msgid "Prayers for Wisdom"
 msgstr "祭雷之人"
 
-#: db/artifacts.ts:61
+#: db/artifacts.ts:63
 msgctxt "db.artifacts.efac76"
 msgid "Gladiator's Finale"
 msgstr "角斗士的终幕礼"
 
-#: db/artifacts.ts:121
+#: db/artifacts.ts:123
 msgctxt "db.artifacts.fa86c6"
 msgid "Prayers for Illumination"
 msgstr "祭火之人"
 
-#: db/characterMaterials.ts:113
+#: db/characterMaterials.ts:115
 msgctxt "db.characterMaterials.075225"
 msgid "Smoldering Pearl"
 msgstr ""
 
-#: db/characterMaterials.ts:28
+#: db/characterMaterials.ts:30
 msgctxt "db.characterMaterials.1197ab"
 msgid "Shivada Jade"
 msgstr ""
 
-#: db/characterMaterials.ts:78
+#: db/characterMaterials.ts:80
 msgctxt "db.characterMaterials.1a889f"
 msgid "Crystalline Bloom"
 msgstr ""
 
-#: db/characterMaterials.ts:85
+#: db/characterMaterials.ts:87
 msgctxt "db.characterMaterials.1d76b3"
 msgid "Lightning Prism"
 msgstr ""
 
-#: db/characterMaterials.ts:15
+#: db/characterMaterials.ts:17
 msgctxt "db.characterMaterials.263550"
 msgid "Brilliant Diamond Silver"
 msgstr ""
 
-#: db/characterMaterials.ts:21
+#: db/characterMaterials.ts:12
+msgctxt "db.characterMaterials.2c5da2"
+msgid "Character Ascension Material"
+msgstr ""
+
+#: db/characterMaterials.ts:23
 msgctxt "db.characterMaterials.402219"
 msgid "Vayuda Turquoise"
 msgstr ""
 
-#: db/characterMaterials.ts:57
+#: db/characterMaterials.ts:59
 msgctxt "db.characterMaterials.442b7d"
 msgid "Agnidus Agate Silver"
 msgstr ""
 
-#: db/characterMaterials.ts:36
+#: db/characterMaterials.ts:38
 msgctxt "db.characterMaterials.544601"
 msgid "Vajrada Amethyst Silver"
 msgstr ""
 
-#: db/characterMaterials.ts:43
+#: db/characterMaterials.ts:45
 msgctxt "db.characterMaterials.61a03d"
 msgid "Prithiva Topaz Silver"
 msgstr ""
 
-#: db/characterMaterials.ts:127
+#: db/characterMaterials.ts:129
 msgctxt "db.characterMaterials.69e399"
 msgid "Marionette Core"
 msgstr ""
 
-#: db/characterMaterials.ts:106
+#: db/characterMaterials.ts:108
 msgctxt "db.characterMaterials.6dacd8"
 msgid "Everflame Seed"
 msgstr ""
 
-#: db/characterMaterials.ts:64
+#: db/characterMaterials.ts:66
 msgctxt "db.characterMaterials.71aa4d"
 msgid "Hurricane Seed"
 msgstr ""
 
-#: db/characterMaterials.ts:29
+#: db/characterMaterials.ts:31
 msgctxt "db.characterMaterials.7bbaf1"
 msgid "Shivada Jade Silver"
 msgstr ""
 
-#: db/characterMaterials.ts:92
+#: db/characterMaterials.ts:94
 msgctxt "db.characterMaterials.84ad4f"
 msgid "Basalt Pillar"
 msgstr ""
 
-#: db/characterMaterials.ts:120
+#: db/characterMaterials.ts:122
 msgctxt "db.characterMaterials.aef1aa"
 msgid "Juvenile Jade"
 msgstr ""
 
-#: db/characterMaterials.ts:56
+#: db/characterMaterials.ts:58
 msgctxt "db.characterMaterials.ba86ce"
 msgid "Agnidus Agate"
 msgstr ""
 
-#: db/characterMaterials.ts:22
+#: db/characterMaterials.ts:24
 msgctxt "db.characterMaterials.c0b022"
 msgid "Vayuda Turquoise Silver"
 msgstr ""
 
-#: db/characterMaterials.ts:49
+#: db/characterMaterials.ts:51
 msgctxt "db.characterMaterials.cd566f"
 msgid "Varunada Lazurite"
 msgstr ""
 
-#: db/characterMaterials.ts:14
+#: db/characterMaterials.ts:16
 msgctxt "db.characterMaterials.d82be1"
 msgid "Brilliant Diamond"
 msgstr ""
 
-#: db/characterMaterials.ts:71
+#: db/characterMaterials.ts:73
 msgctxt "db.characterMaterials.e422cf"
 msgid "Hoarfrost Core"
 msgstr ""
 
-#: db/characterMaterials.ts:42
+#: db/characterMaterials.ts:44
 msgctxt "db.characterMaterials.e52e52"
 msgid "Prithiva Topaz"
 msgstr ""
 
-#: db/characterMaterials.ts:99
+#: db/characterMaterials.ts:101
 msgctxt "db.characterMaterials.e5dbaa"
 msgid "Cleansing Heart"
 msgstr ""
 
-#: db/characterMaterials.ts:35
+#: db/characterMaterials.ts:37
 msgctxt "db.characterMaterials.eaa616"
 msgid "Vajrada Amethyst"
 msgstr ""
 
-#: db/characterMaterials.ts:134
+#: db/characterMaterials.ts:136
 msgctxt "db.characterMaterials.f0ec25"
 msgid "Perpetual Heart"
 msgstr ""
 
-#: db/characterMaterials.ts:50
+#: db/characterMaterials.ts:52
 msgctxt "db.characterMaterials.f20cfa"
 msgid "Varunada Lazurite Silver"
 msgstr ""
 
-#: db/characters.ts:354
+#: db/characters.ts:357
 msgctxt "db.characters.07f6ca"
 msgid "Zhongli"
 msgstr "钟离"
 
-#: db/characters.ts:184
+#: db/characters.ts:92
+msgctxt "db.characters.096e0e"
+msgid "Character"
+msgstr ""
+
+#: db/characters.ts:187
 msgctxt "db.characters.0e89af"
 msgid "Fischl"
 msgstr "菲谢尔"
 
-#: db/characters.ts:364
+#: db/characters.ts:367
 msgctxt "db.characters.17ba95"
 msgid "Xinyan"
 msgstr "辛焱"
 
-#: db/characters.ts:424
+#: db/characters.ts:427
 msgctxt "db.characters.18d80a"
 msgid "Xiao"
 msgstr "魈"
 
-#: db/characters.ts:294
+#: db/characters.ts:297
 msgctxt "db.characters.1c8781"
 msgid "Venti"
 msgstr "温迪"
 
-#: db/characters.ts:374
+#: db/characters.ts:377
 msgctxt "db.characters.2fbbd1"
 msgid "Yanfei"
 msgstr "烟绯"
 
-#: db/characters.ts:304
+#: db/characters.ts:307
 msgctxt "db.characters.35f4f4"
 msgid "Xiangling"
 msgstr "香菱"
 
-#: db/characters.ts:284
+#: db/characters.ts:287
 msgctxt "db.characters.3988a8"
 msgid "Sucrose"
 msgstr "砂糖"
 
-#: db/characters.ts:224
+#: db/characters.ts:227
 msgctxt "db.characters.42ddab"
 msgid "Lisa"
 msgstr "丽莎"
 
-#: db/characters.ts:384
+#: db/characters.ts:387
 msgctxt "db.characters.47f14e"
 msgid "Eula"
 msgstr "优菈"
 
-#: db/characters.ts:414
+#: db/characters.ts:417
 msgctxt "db.characters.579564"
 msgid "Ayaka"
 msgstr "神里绫华"
 
-#: db/characters.ts:104
+#: db/characters.ts:107
 msgctxt "db.characters.584d1b"
 msgid "Traveler (Geo)"
 msgstr "旅行者 (岩)"
 
-#: db/characters.ts:274
+#: db/characters.ts:277
 msgctxt "db.characters.5934e2"
 msgid "Razor"
 msgstr "雷泽"
 
-#: db/characters.ts:244
+#: db/characters.ts:247
 msgctxt "db.characters.5e045b"
 msgid "Ningguang"
 msgstr "凝光"
 
-#: db/characters.ts:144
+#: db/characters.ts:147
 msgctxt "db.characters.653885"
 msgid "Beidou"
 msgstr "北斗"
 
-#: db/characters.ts:164
+#: db/characters.ts:167
 msgctxt "db.characters.7267c2"
 msgid "Chongyun"
 msgstr "重云"
 
-#: db/characters.ts:254
+#: db/characters.ts:257
 msgctxt "db.characters.7ce9c6"
 msgid "Noelle"
 msgstr "诺艾尔"
 
-#: db/characters.ts:194
+#: db/characters.ts:197
 msgctxt "db.characters.7f3adf"
 msgid "Jean"
 msgstr "琴"
 
-#: db/characters.ts:344
+#: db/characters.ts:347
 msgctxt "db.characters.89304e"
 msgid "Diona"
 msgstr "迪奥娜"
 
-#: db/characters.ts:464
+#: db/characters.ts:467
 msgctxt "db.characters.89d67c"
 msgid "Sayu"
 msgstr "早柚"
 
-#: db/characters.ts:204
+#: db/characters.ts:207
 msgctxt "db.characters.921292"
 msgid "Kaeya"
 msgstr "凯亚"
 
-#: db/characters.ts:475
+#: db/characters.ts:478
 msgctxt "db.characters.9d0c00"
 msgid "Yoimiya"
 msgstr "宵宫"
 
-#: db/characters.ts:264
+#: db/characters.ts:267
 msgctxt "db.characters.9de495"
 msgid "Qiqi"
 msgstr "七七"
 
-#: db/characters.ts:314
+#: db/characters.ts:317
 msgctxt "db.characters.9e37b6"
 msgid "Xingqiu"
 msgstr "行秋"
 
-#: db/characters.ts:174
+#: db/characters.ts:177
 msgctxt "db.characters.a1bb56"
 msgid "Diluc"
 msgstr "迪卢克"
 
-#: db/characters.ts:134
+#: db/characters.ts:137
 msgctxt "db.characters.a808c9"
 msgid "Barbara"
 msgstr "芭芭拉"
 
-#: db/characters.ts:234
+#: db/characters.ts:237
 msgctxt "db.characters.af88fa"
 msgid "Mona"
 msgstr "莫娜"
 
-#: db/characters.ts:394
+#: db/characters.ts:397
 msgctxt "db.characters.b60444"
 msgid "Albedo"
 msgstr "阿贝多"
 
-#: db/characters.ts:154
+#: db/characters.ts:157
 msgctxt "db.characters.b96249"
 msgid "Bennett"
 msgstr "班尼特"
 
-#: db/characters.ts:404
+#: db/characters.ts:407
 msgctxt "db.characters.bc58dc"
 msgid "Ganyu"
 msgstr "甘雨"
 
-#: db/characters.ts:334
+#: db/characters.ts:337
 msgctxt "db.characters.bdaeb2"
 msgid "Tartaglia"
 msgstr "达达利亚"
 
-#: db/characters.ts:324
+#: db/characters.ts:327
 msgctxt "db.characters.ce2cb0"
 msgid "Klee"
 msgstr "可莉"
 
-#: db/characters.ts:94
+#: db/characters.ts:97
 msgctxt "db.characters.d09c64"
 msgid "Traveler (Anemo)"
 msgstr "旅行者 (风)"
 
-#: db/characters.ts:214
+#: db/characters.ts:217
 msgctxt "db.characters.d9c480"
 msgid "Keqing"
 msgstr "刻晴"
 
-#: db/characters.ts:434
+#: db/characters.ts:437
 msgctxt "db.characters.dd7597"
 msgid "Rosaria"
 msgstr "罗莎莉亚"
 
-#: db/characters.ts:444
+#: db/characters.ts:447
 msgctxt "db.characters.de01da"
 msgid "Hu Tao"
 msgstr "胡桃"
 
-#: db/characters.ts:454
+#: db/characters.ts:457
 msgctxt "db.characters.e9f35f"
 msgid "Kazuha"
 msgstr "万叶"
 
-#: db/characters.ts:114
+#: db/characters.ts:117
 msgctxt "db.characters.f0737d"
 msgid "Traveler (Electro)"
 msgstr ""
 
-#: db/characters.ts:124
+#: db/characters.ts:93
+msgctxt "db.characters.fc54ed"
+msgid "Paimon"
+msgstr ""
+
+#: db/characters.ts:127
 msgctxt "db.characters.fdb676"
 msgid "Amber"
 msgstr "安柏"
 
-#: db/commonMaterials.ts:50
+#: db/commonMaterials.ts:52
 msgctxt "db.commonMaterials.02b6af"
 msgid "Dead Ley Line Branch"
 msgstr "地脉的旧枝"
 
-#: db/commonMaterials.ts:141
+#: db/commonMaterials.ts:143
 msgctxt "db.commonMaterials.16740f"
 msgid "Jueyun Chili"
 msgstr "绝云椒椒"
 
-#: db/commonMaterials.ts:190
+#: db/commonMaterials.ts:192
 msgctxt "db.commonMaterials.19c45b"
 msgid "Valberry"
 msgstr "落落莓"
 
-#: db/commonMaterials.ts:260
+#: db/commonMaterials.ts:262
 msgctxt "db.commonMaterials.21acbf"
 msgid "Crystal Marrow"
 msgstr ""
 
-#: db/commonMaterials.ts:162
+#: db/commonMaterials.ts:164
 msgctxt "db.commonMaterials.248863"
 msgid "Qingxin"
 msgstr "清心"
 
-#: db/commonMaterials.ts:43
+#: db/commonMaterials.ts:45
 msgctxt "db.commonMaterials.3ef728"
 msgid "Heavy Horn"
 msgstr "沉重号角"
 
-#: db/commonMaterials.ts:36
+#: db/commonMaterials.ts:38
 msgctxt "db.commonMaterials.42027c"
 msgid "Divining Scroll"
 msgstr "导能绘卷"
 
-#: db/commonMaterials.ts:224
+#: db/commonMaterials.ts:226
 msgctxt "db.commonMaterials.4fb069"
 msgid "Handguard"
 msgstr ""
 
-#: db/commonMaterials.ts:29
+#: db/commonMaterials.ts:31
 msgctxt "db.commonMaterials.574218"
 msgid "Firm Arrowhead"
 msgstr "牢固的箭簇"
 
-#: db/commonMaterials.ts:21
+#: db/commonMaterials.ts:23
 msgctxt "db.commonMaterials.5e010a"
 msgid "Hilichurl Mask"
 msgstr "破损的面具"
 
-#: db/commonMaterials.ts:239
+#: db/commonMaterials.ts:241
 msgctxt "db.commonMaterials.60776e"
 msgid "Naku Weed"
 msgstr ""
 
-#: db/commonMaterials.ts:252
+#: db/commonMaterials.ts:254
 msgctxt "db.commonMaterials.6224ad"
 msgid "Mirror Prism"
 msgstr ""
 
-#: db/commonMaterials.ts:99
+#: db/commonMaterials.ts:101
 msgctxt "db.commonMaterials.6405d0"
 msgid "Whopperflower Nectar"
 msgstr "骗骗花蜜"
 
-#: db/commonMaterials.ts:127
+#: db/commonMaterials.ts:129
 msgctxt "db.commonMaterials.6f7fb1"
 msgid "Dandelion Seed"
 msgstr "蒲公英籽"
 
-#: db/commonMaterials.ts:14
+#: db/commonMaterials.ts:16
 msgctxt "db.commonMaterials.76ab19"
 msgid "Slime"
 msgstr "史莱姆"
 
-#: db/commonMaterials.ts:57
+#: db/commonMaterials.ts:59
 msgctxt "db.commonMaterials.7ccd68"
 msgid "Chaos Device"
 msgstr "混沌装置"
 
-#: db/commonMaterials.ts:176
+#: db/commonMaterials.ts:178
 msgctxt "db.commonMaterials.7ce6fd"
 msgid "Small Lamp Grass"
 msgstr "小灯草"
 
-#: db/commonMaterials.ts:15
+#: db/commonMaterials.ts:17
 msgctxt "db.commonMaterials.866176"
 msgid "Slime Condensate"
 msgstr "史莱姆凝液"
 
-#: db/commonMaterials.ts:106
+#: db/commonMaterials.ts:108
 msgctxt "db.commonMaterials.8d1274"
 msgid "Calla Lily"
 msgstr "嘟嘟莲"
 
-#: db/commonMaterials.ts:232
+#: db/commonMaterials.ts:234
 msgctxt "db.commonMaterials.929cdd"
 msgid "Sakura Bloom"
 msgstr ""
 
-#: db/commonMaterials.ts:183
+#: db/commonMaterials.ts:185
 msgctxt "db.commonMaterials.9653ee"
 msgid "Starconch"
 msgstr "星螺"
 
-#: db/commonMaterials.ts:253
+#: db/commonMaterials.ts:255
 msgctxt "db.commonMaterials.9d4696"
 msgid "Dismal Prism"
 msgstr ""
 
-#: db/commonMaterials.ts:49
+#: db/commonMaterials.ts:51
 msgctxt "db.commonMaterials.9f19e7"
 msgid "Ley Line"
 msgstr "地脉"
 
-#: db/commonMaterials.ts:246
+#: db/commonMaterials.ts:12
+msgctxt "db.commonMaterials.a20818"
+msgid "Common Ascension Material"
+msgstr ""
+
+#: db/commonMaterials.ts:248
 msgctxt "db.commonMaterials.a831e1"
 msgid "Chaos Gear"
 msgstr ""
 
-#: db/commonMaterials.ts:197
+#: db/commonMaterials.ts:199
 msgctxt "db.commonMaterials.ace079"
 msgid "Violetgrass"
 msgstr "琉璃袋"
 
-#: db/commonMaterials.ts:77
+#: db/commonMaterials.ts:79
 msgctxt "db.commonMaterials.b1e166"
 msgid "Fatui Insignia"
 msgstr "愚人众徽章"
 
-#: db/commonMaterials.ts:169
+#: db/commonMaterials.ts:171
 msgctxt "db.commonMaterials.bc0224"
 msgid "Silk Flower"
 msgstr "霓裳花"
 
-#: db/commonMaterials.ts:92
+#: db/commonMaterials.ts:94
 msgctxt "db.commonMaterials.be8c87"
 msgid "Fragile Bone Shard"
 msgstr "脆弱的骨片"
 
-#: db/commonMaterials.ts:35
+#: db/commonMaterials.ts:37
 msgctxt "db.commonMaterials.bf08d6"
 msgid "Samachurl Scroll"
 msgstr "萨满卷轴"
 
-#: db/commonMaterials.ts:218
+#: db/commonMaterials.ts:220
 msgctxt "db.commonMaterials.c15ca5"
 msgid "Sea Ganoderma"
 msgstr "海灵芝"
 
-#: db/commonMaterials.ts:85
+#: db/commonMaterials.ts:87
 msgctxt "db.commonMaterials.c5a9ac"
 msgid "Treasure Hoarder Insignia"
 msgstr "寻宝鸦印"
 
-#: db/commonMaterials.ts:42
+#: db/commonMaterials.ts:44
 msgctxt "db.commonMaterials.c631e3"
 msgid "Hilichurl Horn"
 msgstr "丘丘号角"
 
-#: db/commonMaterials.ts:71
+#: db/commonMaterials.ts:73
 msgctxt "db.commonMaterials.c6cff7"
 msgid "Hunter's Sacrificial Knife"
 msgstr "猎兵祭刀"
 
-#: db/commonMaterials.ts:64
+#: db/commonMaterials.ts:66
 msgctxt "db.commonMaterials.cd7e10"
 msgid "Mist Grass Pollen"
 msgstr "雾虚花粉"
 
-#: db/commonMaterials.ts:211
+#: db/commonMaterials.ts:213
 msgctxt "db.commonMaterials.ce7fa6"
 msgid "Wolfhook"
 msgstr "钩钩果"
 
-#: db/commonMaterials.ts:63
+#: db/commonMaterials.ts:65
 msgctxt "db.commonMaterials.d47bda"
 msgid "Mist Grass"
 msgstr "雾虚草囊"
 
-#: db/commonMaterials.ts:148
+#: db/commonMaterials.ts:150
 msgctxt "db.commonMaterials.d8877a"
 msgid "Noctilucous Jade"
 msgstr "夜泊石"
 
-#: db/commonMaterials.ts:91
+#: db/commonMaterials.ts:93
 msgctxt "db.commonMaterials.d88f11"
 msgid "Bone Shard"
 msgstr "龙蜥骨片"
 
-#: db/commonMaterials.ts:56
+#: db/commonMaterials.ts:58
 msgctxt "db.commonMaterials.db3ec4"
 msgid "Chaos Part"
 msgstr "混沌部件"
 
-#: db/commonMaterials.ts:22
+#: db/commonMaterials.ts:24
 msgctxt "db.commonMaterials.e1a50a"
 msgid "Damaged Mask"
 msgstr "破损的面具"
 
-#: db/commonMaterials.ts:113
+#: db/commonMaterials.ts:115
 msgctxt "db.commonMaterials.e513cc"
 msgid "Cecilia"
 msgstr "塞西莉亚花"
 
-#: db/commonMaterials.ts:155
+#: db/commonMaterials.ts:157
 msgctxt "db.commonMaterials.e78aed"
 msgid "Philanemo Mushroom"
 msgstr "慕风蘑菇"
 
-#: db/commonMaterials.ts:134
+#: db/commonMaterials.ts:136
 msgctxt "db.commonMaterials.ee85bc"
 msgid "Glaze Lily"
 msgstr "琉璃百合"
 
-#: db/commonMaterials.ts:28
+#: db/commonMaterials.ts:30
 msgctxt "db.commonMaterials.f31a91"
 msgid "Hilichurl Arrowhead"
 msgstr "丘丘箭簇"
 
-#: db/commonMaterials.ts:70
+#: db/commonMaterials.ts:72
 msgctxt "db.commonMaterials.f55bde"
 msgid "Fatui Knife"
 msgstr "讨债人的祭刀"
 
-#: db/commonMaterials.ts:204
+#: db/commonMaterials.ts:206
 msgctxt "db.commonMaterials.fb66ad"
 msgid "Windwheel Aster"
 msgstr "风车菊"
 
-#: db/commonMaterials.ts:78
+#: db/commonMaterials.ts:80
 msgctxt "db.commonMaterials.fd54ff"
 msgid "Recruit's Insignia"
 msgstr "新兵的徽记"
 
-#: db/commonMaterials.ts:225
+#: db/commonMaterials.ts:227
 msgctxt "db.commonMaterials.fd9d15"
 msgid "Old Handguard"
 msgstr ""
 
-#: db/commonMaterials.ts:120
+#: db/commonMaterials.ts:122
 msgctxt "db.commonMaterials.fe06d4"
 msgid "Cor Lapis"
 msgstr "石珀"
 
-#: db/domainCategories.ts:60
+#: db/domainCategories.ts:66
 msgctxt "db.domainCategories.08e597"
 msgid "Forgery"
 msgstr ""
 
-#: db/domainCategories.ts:87
+#: db/domainCategories.ts:95
 msgctxt "db.domainCategories.09a1d0"
 msgid "Boss"
 msgstr ""
 
-#: db/domainCategories.ts:88
+#: db/domainCategories.ts:96
 msgctxt "db.domainCategories.4b2b5d"
 msgid "Character Ascension Materials and Artifacts"
 msgstr ""
 
-#: db/domainCategories.ts:53
+#: db/domainCategories.ts:58
 msgctxt "db.domainCategories.6a94a1"
 msgid "Talent Level-Up Materials"
 msgstr "天赋培养素材"
 
-#: db/domainCategories.ts:69
+#: db/domainCategories.ts:76
 msgctxt "db.domainCategories.796e5e"
 msgid "Artifacts"
 msgstr "圣遗物"
 
-#: db/domainCategories.ts:68
+#: db/domainCategories.ts:44
+msgctxt "db.domainCategories.999229"
+msgid "Domain Category"
+msgstr ""
+
+#: db/domainCategories.ts:75
 msgctxt "db.domainCategories.a02f64"
 msgid "Blessing"
 msgstr ""
 
-#: db/domainCategories.ts:61
+#: db/domainCategories.ts:67
 msgctxt "db.domainCategories.a4758a"
 msgid "Weapon Ascension Materials"
 msgstr "武器突破素材"
 
-#: db/domainCategories.ts:44
+#: db/domainCategories.ts:48
 msgctxt "db.domainCategories.a6ee01"
 msgid "Trounce"
 msgstr "征讨"
 
-#: db/domainCategories.ts:52
+#: db/domainCategories.ts:57
 msgctxt "db.domainCategories.aeab32"
 msgid "Mastery"
 msgstr ""
 
-#: db/domainCategories.ts:45
+#: db/domainCategories.ts:49
 msgctxt "db.domainCategories.f98247"
 msgid "Weekly Challenge"
 msgstr "每周挑战"
 
-#: db/domainDropSets.ts:365
+#: db/domainDropSets.ts:367
 msgctxt "db.domainDropSets.3153a6"
 msgid "Altar of Sands"
 msgstr ""
 
-#: db/domainDropSets.ts:358
+#: db/domainDropSets.ts:360
 msgctxt "db.domainDropSets.350bc4"
 msgid "Sunken Sands"
 msgstr ""
 
-#: db/domainDropSets.ts:156
+#: db/domainDropSets.ts:113
+msgctxt "db.domainDropSets.4284f2"
+msgid "Domain Drop Set"
+msgstr ""
+
+#: db/domainDropSets.ts:158
 msgctxt "db.domainDropSets.5a8238"
 msgid "Trial Grounds of Thunder"
 msgstr ""
 
-#: db/domainDropSets.ts:142
+#: db/domainDropSets.ts:144
 msgctxt "db.domainDropSets.6db45f"
 msgid "Thundercloud"
 msgstr "雷云祭坛"
 
-#: db/domainDropSets.ts:115
+#: db/domainDropSets.ts:117
 msgctxt "db.domainDropSets.727bc7"
 msgid "City of Reflections"
 msgstr "水光之城"
 
-#: db/domainDropSets.ts:122
+#: db/domainDropSets.ts:124
 msgctxt "db.domainDropSets.b61667"
 msgid "Submerged Valley"
 msgstr "深没之谷"
 
-#: db/domainDropSets.ts:372
+#: db/domainDropSets.ts:374
 msgctxt "db.domainDropSets.c47ef9"
 msgid "Sand Burial"
 msgstr ""
 
-#: db/domainDropSets.ts:129
+#: db/domainDropSets.ts:131
 msgctxt "db.domainDropSets.dfec8a"
 msgid "Ruins of Thirsting Capital"
 msgstr "渴水的废都"
 
-#: db/domainDropSets.ts:163
+#: db/domainDropSets.ts:165
 msgctxt "db.domainDropSets.f12070"
 msgid "Electrostatic Field"
 msgstr ""
 
-#: db/domainDropSets.ts:149
+#: db/domainDropSets.ts:151
 msgctxt "db.domainDropSets.ffe184"
 msgid "Thundering Ruins"
 msgstr "鸣雷城墟"
 
-#: db/domains.ts:68
+#: db/domains.ts:70
 msgctxt "db.domains.011253"
 msgid "Hidden Palace of Lianshan Formula"
 msgstr "震雷连山密宫"
 
-#: db/domains.ts:110
+#: db/domains.ts:112
 msgctxt "db.domains.0cfa31"
 msgid "Forsaken Rift"
 msgstr "忘却之峡"
 
-#: db/domains.ts:215
+#: db/domains.ts:217
 msgctxt "db.domains.1a6b1b"
 msgid "Primo Geovishap"
 msgstr ""
 
-#: db/domains.ts:159
+#: db/domains.ts:161
 msgctxt "db.domains.1c6c7d"
 msgid "Ridge Watch"
 msgstr "山脊守望"
 
-#: db/domains.ts:187
+#: db/domains.ts:189
 msgctxt "db.domains.20c902"
 msgid "Anemo Hypostasis"
 msgstr ""
 
-#: db/domains.ts:75
+#: db/domains.ts:77
 msgctxt "db.domains.24e0e0"
 msgid "Midsummer Courtyard"
 msgstr "仲夏庭园"
 
-#: db/domains.ts:117
+#: db/domains.ts:119
 msgctxt "db.domains.2bbe8b"
 msgid "Taishan Mansion"
 msgstr "太山府"
 
-#: db/domains.ts:243
+#: db/domains.ts:245
 msgctxt "db.domains.2d6984"
 msgid "Pyro Regisvine"
 msgstr ""
 
-#: db/domains.ts:201
+#: db/domains.ts:203
 msgctxt "db.domains.5749e3"
 msgid "Cryo Regisvine"
 msgstr ""
 
-#: db/domains.ts:96
+#: db/domains.ts:98
 msgctxt "db.domains.5d9d5d"
 msgid "Hidden Palace of Zhou Formula"
 msgstr "无妄引咎密宫"
 
-#: db/domains.ts:180
+#: db/domains.ts:182
 msgctxt "db.domains.6ea1ac"
 msgid "Court of Flowing Sand"
 msgstr ""
 
-#: db/domains.ts:166
+#: db/domains.ts:168
 msgctxt "db.domains.6f9aa8"
 msgid "Momiji-Dyed Court"
 msgstr ""
 
-#: db/domains.ts:131
+#: db/domains.ts:133
 msgctxt "db.domains.70d1b9"
 msgid "Wolf of the North Challenge"
 msgstr "北风之狼挑战"
 
-#: db/domains.ts:173
+#: db/domains.ts:175
 msgctxt "db.domains.76827f"
 msgid "Violet Court"
 msgstr ""
 
-#: db/domains.ts:222
+#: db/domains.ts:224
 msgctxt "db.domains.7bb25e"
 msgid "Electro Hypostasis"
 msgstr ""
 
-#: db/domains.ts:89
+#: db/domains.ts:91
 msgctxt "db.domains.85e44a"
 msgid "Valley of Remembrance"
 msgstr "铭记之谷"
 
-#: db/domains.ts:145
+#: db/domains.ts:147
 msgctxt "db.domains.8e6257"
 msgid "Enter the Golden House"
 msgstr "进入「黄金屋」"
 
-#: db/domains.ts:208
+#: db/domains.ts:59
+msgctxt "db.domains.a00160"
+msgid "Domain"
+msgstr ""
+
+#: db/domains.ts:210
 msgctxt "db.domains.a0d4e3"
 msgid "Cryo Hypostasis"
 msgstr ""
 
-#: db/domains.ts:250
+#: db/domains.ts:252
 msgctxt "db.domains.bd9e6f"
 msgid "Pyro Hypostasis"
 msgstr ""
 
-#: db/domains.ts:138
+#: db/domains.ts:140
 msgctxt "db.domains.c4c6cc"
 msgid "Peak of Vindagnyr"
 msgstr "芬德尼尔之顶"
 
-#: db/domains.ts:236
+#: db/domains.ts:238
 msgctxt "db.domains.d4a950"
 msgid "Rhodeia of Loch"
 msgstr ""
 
-#: db/domains.ts:152
+#: db/domains.ts:154
 msgctxt "db.domains.dbf3b5"
 msgid "Beneath the Dragon-Queller"
 msgstr "「伏龙树」之底"
 
-#: db/domains.ts:194
+#: db/domains.ts:196
 msgctxt "db.domains.e09906"
 msgid "Maguu Kenki"
 msgstr ""
 
-#: db/domains.ts:229
+#: db/domains.ts:231
 msgctxt "db.domains.e2e8f5"
 msgid "Geo Hypostasis"
 msgstr ""
 
-#: db/domains.ts:257
+#: db/domains.ts:259
 msgctxt "db.domains.f07d15"
 msgid "Perpetual Mechanical Array"
 msgstr ""
 
-#: db/domains.ts:124
+#: db/domains.ts:126
 msgctxt "db.domains.f93fee"
 msgid "Confront Stormterror"
 msgstr "深入风龙废墟"
 
-#: db/domains.ts:82
+#: db/domains.ts:84
 msgctxt "db.domains.fc295a"
 msgid "Domain of Guyun"
 msgstr "孤云凌霄之处"
 
-#: db/domains.ts:103
+#: db/domains.ts:105
 msgctxt "db.domains.fc83f4"
 msgid "Clear Pool and Mountain Cavern"
 msgstr "华池岩岫"
 
-#: db/domains.ts:61
+#: db/domains.ts:63
 msgctxt "db.domains.fe4688"
 msgid "Cecilia Garden"
 msgstr "塞西莉亚苗圃"
@@ -2829,912 +2899,1192 @@ msgctxt "db.icons.fe8ed6"
 msgid "Crab"
 msgstr ""
 
-#: db/regions.ts:141
+#: db/map.ts:73
+msgctxt "db.map.03b6ce"
+msgid "Cider Lake"
+msgstr ""
+
+#: db/map.ts:13
+msgctxt "db.map.0427ba"
+msgid "Wolvendom"
+msgstr ""
+
+#: db/map.ts:61
+msgctxt "db.map.082833"
+msgid "Cape Oath"
+msgstr ""
+
+#: db/map.ts:173
+msgctxt "db.map.135688"
+msgid "Mt. Aocang"
+msgstr ""
+
+#: db/map.ts:197
+msgctxt "db.map.145456"
+msgid "Starglow Cavern"
+msgstr ""
+
+#: db/map.ts:193
+msgctxt "db.map.15da53"
+msgid "Skyfrost Nail"
+msgstr ""
+
+#: db/map.ts:37
+msgctxt "db.map.16620e"
+msgid "Starsnatch Cliff"
+msgstr ""
+
+#: db/map.ts:89
+msgctxt "db.map.1b9ba5"
+msgid "Sal Terrae"
+msgstr ""
+
+#: db/map.ts:177
+msgctxt "db.map.1f32ba"
+msgid "Snow-Covered Path"
+msgstr ""
+
+#: db/map.ts:121
+msgctxt "db.map.222770"
+msgid "Mt. Tianheng"
+msgstr ""
+
+#: db/map.ts:153
+msgctxt "db.map.2674f8"
+msgid "Cuijue Slope"
+msgstr ""
+
+#: db/map.ts:157
+msgctxt "db.map.27ea30"
+msgid "Jueyun Karst"
+msgstr ""
+
+#: db/map.ts:185
+msgctxt "db.map.3af338"
+msgid "Entombed City - Outskirts"
+msgstr ""
+
+#: db/map.ts:21
+msgctxt "db.map.430ff6"
+msgid "Springvale"
+msgstr ""
+
+#: db/map.ts:5
+msgctxt "db.map.48d455"
+msgid "Stormterror's Lair"
+msgstr ""
+
+#: db/map.ts:97
+msgctxt "db.map.4a30b1"
+msgid "Wangshu Inn"
+msgstr ""
+
+#: db/map.ts:117
+msgctxt "db.map.4b454f"
+msgid "Luhua Pool"
+msgstr ""
+
+#: db/map.ts:133
+msgctxt "db.map.510a40"
+msgid "Lingju Pass"
+msgstr ""
+
+#: db/map.ts:113
+msgctxt "db.map.540286"
+msgid "Guyun Stone Forest"
+msgstr ""
+
+#: db/map.ts:145
+msgctxt "db.map.576457"
+msgid "Tianqiu Valley"
+msgstr ""
+
+#: db/map.ts:161
+msgctxt "db.map.587277"
+msgid "Qingyun Peak"
+msgstr ""
+
+#: db/map.ts:69
+msgctxt "db.map.5a37ea"
+msgid "Mondstadt"
+msgstr ""
+
+#: db/map.ts:33
+msgctxt "db.map.67056c"
+msgid "Thousand Winds Temple"
+msgstr ""
+
+#: db/map.ts:141
+msgctxt "db.map.68f8de"
+msgid "Chasm"
+msgstr ""
+
+#: db/map.ts:29
+msgctxt "db.map.6da2ab"
+msgid "Falcon Coast"
+msgstr ""
+
+#: db/map.ts:41
+msgctxt "db.map.6dcc87"
+msgid "Whispering Woods"
+msgstr ""
+
+#: db/map.ts:101
+msgctxt "db.map.74fcf0"
+msgid "Mingyun Village"
+msgstr ""
+
+#: db/map.ts:109
+msgctxt "db.map.7febf1"
+msgid "Guili Plains"
+msgstr ""
+
+#: db/map.ts:45
+msgctxt "db.map.8566ec"
+msgid "Starfell Lake"
+msgstr ""
+
+#: db/map.ts:81
+msgctxt "db.map.8cfe9e"
+msgid "Qingce Village"
+msgstr ""
+
+#: db/map.ts:93
+msgctxt "db.map.8e2190"
+msgid "Dihua Marsh"
+msgstr ""
+
+#: db/map.ts:9
+msgctxt "db.map.9aa982"
+msgid "Brightcrown Canyon"
+msgstr ""
+
+#: db/map.ts:165
+msgctxt "db.map.a61d69"
+msgid "Huaguang Stone Forest"
+msgstr ""
+
+#: db/map.ts:125
+msgctxt "db.map.aaa08a"
+msgid "Liyue Harbor"
+msgstr ""
+
+#: db/map.ts:105
+msgctxt "db.map.ab7b85"
+msgid "Yaoguang Shoal"
+msgstr ""
+
+#: db/map.ts:129
+msgctxt "db.map.ad2439"
+msgid "Dunyu Ruins"
+msgstr ""
+
+#: db/map.ts:77
+msgctxt "db.map.afc0c3"
+msgid "Wuwang Hill"
+msgstr ""
+
+#: db/map.ts:189
+msgctxt "db.map.b724b2"
+msgid "Entombed City - Ancient Palace"
+msgstr ""
+
+#: db/map.ts:57
+msgctxt "db.map.bf26ec"
+msgid "Dadaupa Gorge"
+msgstr ""
+
+#: db/map.ts:65
+msgctxt "db.map.c333f8"
+msgid "Musk Reef"
+msgstr ""
+
+#: db/map.ts:49
+msgctxt "db.map.c3ef8e"
+msgid "Stormbearer Mountains"
+msgstr ""
+
+#: db/map.ts:149
+msgctxt "db.map.c42db6"
+msgid "Nantianmen"
+msgstr ""
+
+#: db/map.ts:53
+msgctxt "db.map.cb3dbb"
+msgid "Stormbearer Point"
+msgstr ""
+
+#: db/map.ts:169
+msgctxt "db.map.e8f2c9"
+msgid "Mt. Hulao"
+msgstr ""
+
+#: db/map.ts:25
+msgctxt "db.map.eabd3a"
+msgid "Windrise"
+msgstr ""
+
+#: db/map.ts:181
+msgctxt "db.map.ee39fa"
+msgid "Wyrmrest Valley"
+msgstr ""
+
+#: db/map.ts:85
+msgctxt "db.map.f7d6f3"
+msgid "Stone Gate"
+msgstr ""
+
+#: db/map.ts:17
+msgctxt "db.map.f978c6"
+msgid "Dawn Winery"
+msgstr ""
+
+#: db/map.ts:137
+msgctxt "db.map.fbe305"
+msgid "Qingxu Pool"
+msgstr ""
+
+#: db/regions.ts:143
 msgctxt "db.regions.06cea1"
 msgid "Inazuma"
 msgstr "稻妻"
 
-#: db/regions.ts:149
+#: db/regions.ts:151
 msgctxt "db.regions.38ab8d"
 msgid "Snezhnaya"
 msgstr "至冬"
 
-#: db/regions.ts:82
+#: db/regions.ts:84
 msgctxt "db.regions.5a37ea"
 msgid "Mondstadt"
 msgstr "蒙德"
 
-#: db/regions.ts:120
+#: db/regions.ts:122
 msgctxt "db.regions.691c58"
 msgid "Liyue"
 msgstr "璃月"
 
-#: db/talentMaterials.ts:137
+#: db/regions.ts:80
+msgctxt "db.regions.967696"
+msgid "Region"
+msgstr ""
+
+#: db/talentMaterials.ts:139
 msgctxt "db.talentMaterials.03c76b"
 msgid "Shard of a Foul Legacy"
 msgstr ""
 
-#: db/talentMaterials.ts:123
+#: db/talentMaterials.ts:125
 msgctxt "db.talentMaterials.08f385"
 msgid "Spirit Locket of Boreas"
 msgstr ""
 
-#: db/talentMaterials.ts:55
+#: db/talentMaterials.ts:57
 msgctxt "db.talentMaterials.1b0aa2"
 msgid "Gold"
 msgstr ""
 
-#: db/talentMaterials.ts:88
+#: db/talentMaterials.ts:90
 msgctxt "db.talentMaterials.2238ed"
 msgid "Dvalin's Plume"
 msgstr ""
 
-#: db/talentMaterials.ts:144
+#: db/talentMaterials.ts:146
 msgctxt "db.talentMaterials.2276fe"
 msgid "Shadow of the Warrior"
 msgstr ""
 
-#: db/talentMaterials.ts:158
+#: db/talentMaterials.ts:160
 msgctxt "db.talentMaterials.24721e"
 msgid "Bloodjade Branch"
 msgstr ""
 
-#: db/talentMaterials.ts:165
+#: db/talentMaterials.ts:167
 msgctxt "db.talentMaterials.248351"
 msgid "Gilded Scale"
 msgstr ""
 
-#: db/talentMaterials.ts:40
+#: db/talentMaterials.ts:42
 msgctxt "db.talentMaterials.2d7841"
 msgid "Teachings of Diligence"
 msgstr ""
 
-#: db/talentMaterials.ts:109
+#: db/talentMaterials.ts:111
 msgctxt "db.talentMaterials.33d5e3"
 msgid "Tail of Boreas"
 msgstr ""
 
-#: db/talentMaterials.ts:72
+#: db/talentMaterials.ts:74
 msgctxt "db.talentMaterials.3d6db9"
 msgid "Teachings of Elegance"
 msgstr ""
 
-#: db/talentMaterials.ts:47
+#: db/talentMaterials.ts:49
 msgctxt "db.talentMaterials.476508"
 msgid "Ballad"
 msgstr "诗文"
 
-#: db/talentMaterials.ts:64
+#: db/talentMaterials.ts:66
 msgctxt "db.talentMaterials.4a54fe"
 msgid "Teachings of Transience"
 msgstr ""
 
-#: db/talentMaterials.ts:63
+#: db/talentMaterials.ts:65
 msgctxt "db.talentMaterials.4f38f4"
 msgid "Transience"
 msgstr ""
 
-#: db/talentMaterials.ts:116
+#: db/talentMaterials.ts:118
 msgctxt "db.talentMaterials.5a4b80"
 msgid "Ring of Boreas"
 msgstr ""
 
-#: db/talentMaterials.ts:48
+#: db/talentMaterials.ts:50
 msgctxt "db.talentMaterials.5b3857"
 msgid "Teachings of Ballad"
 msgstr "「诗文」的教导"
 
-#: db/talentMaterials.ts:102
+#: db/talentMaterials.ts:104
 msgctxt "db.talentMaterials.6955de"
 msgid "Dvalin's Claw"
 msgstr ""
 
-#: db/talentMaterials.ts:71
+#: db/talentMaterials.ts:73
 msgctxt "db.talentMaterials.6f9de0"
 msgid "Elegance"
 msgstr ""
 
-#: db/talentMaterials.ts:95
+#: db/talentMaterials.ts:97
 msgctxt "db.talentMaterials.7d035f"
 msgid "Dvalin's Sigh"
 msgstr ""
 
-#: db/talentMaterials.ts:16
+#: db/talentMaterials.ts:18
 msgctxt "db.talentMaterials.90c99f"
 msgid "Teachings of Freedom"
 msgstr "「自由」的教导"
 
-#: db/talentMaterials.ts:24
+#: db/talentMaterials.ts:26
 msgctxt "db.talentMaterials.969122"
 msgid "Teachings of Prosperity"
 msgstr "「繁荣」的教导"
 
-#: db/talentMaterials.ts:23
+#: db/talentMaterials.ts:25
 msgctxt "db.talentMaterials.997cd8"
 msgid "Prosperity"
 msgstr "繁荣"
 
-#: db/talentMaterials.ts:130
+#: db/talentMaterials.ts:132
 msgctxt "db.talentMaterials.a0af03"
 msgid "Tusk of Monoceros Caeli"
 msgstr "吞天之鲸·只角"
 
-#: db/talentMaterials.ts:32
+#: db/talentMaterials.ts:34
 msgctxt "db.talentMaterials.a5ac2e"
 msgid "Teachings of Resistance"
 msgstr ""
 
-#: db/talentMaterials.ts:31
+#: db/talentMaterials.ts:33
 msgctxt "db.talentMaterials.c6a0f7"
 msgid "Resistance"
 msgstr ""
 
-#: db/talentMaterials.ts:151
+#: db/talentMaterials.ts:153
 msgctxt "db.talentMaterials.cbd4e8"
 msgid "Dragon Lord's Crown"
 msgstr ""
 
-#: db/talentMaterials.ts:15
+#: db/talentMaterials.ts:17
 msgctxt "db.talentMaterials.ce07c6"
 msgid "Freedom"
 msgstr "自由"
 
-#: db/talentMaterials.ts:79
+#: db/talentMaterials.ts:81
 msgctxt "db.talentMaterials.ddc738"
 msgid "Light"
 msgstr ""
 
-#: db/talentMaterials.ts:80
+#: db/talentMaterials.ts:13
+msgctxt "db.talentMaterials.e14aed"
+msgid "Talent Level-Up Material"
+msgstr ""
+
+#: db/talentMaterials.ts:82
 msgctxt "db.talentMaterials.e5d4a4"
 msgid "Teachings of Light"
 msgstr ""
 
-#: db/talentMaterials.ts:56
+#: db/talentMaterials.ts:58
 msgctxt "db.talentMaterials.fc587a"
 msgid "Teachings of Gold"
 msgstr ""
 
-#: db/talentMaterials.ts:39
+#: db/talentMaterials.ts:41
 msgctxt "db.talentMaterials.ffd8d6"
 msgid "Diligence"
 msgstr ""
 
-#: db/weaponMaterials.ts:56
+#: db/weaponMaterials.ts:58
 msgctxt "db.weaponMaterials.009f9a"
 msgid "Grain of Aerosiderite"
 msgstr ""
 
-#: db/weaponMaterials.ts:16
+#: db/weaponMaterials.ts:18
 msgctxt "db.weaponMaterials.040efa"
 msgid "Tile of Decarabian's Tower"
 msgstr ""
 
-#: db/weaponMaterials.ts:79
+#: db/weaponMaterials.ts:81
 msgctxt "db.weaponMaterials.097db0"
 msgid "Mask"
 msgstr ""
 
-#: db/weaponMaterials.ts:48
+#: db/weaponMaterials.ts:50
 msgctxt "db.weaponMaterials.12045a"
 msgid "Fetters of the Dandelion Gladiator"
 msgstr ""
 
-#: db/weaponMaterials.ts:23
+#: db/weaponMaterials.ts:25
 msgctxt "db.weaponMaterials.2140ff"
 msgid "Guyun"
 msgstr ""
 
-#: db/weaponMaterials.ts:32
+#: db/weaponMaterials.ts:34
 msgctxt "db.weaponMaterials.33389c"
 msgid "Boreal Wolf's Milk Tooth"
 msgstr ""
 
-#: db/weaponMaterials.ts:71
+#: db/weaponMaterials.ts:73
 msgctxt "db.weaponMaterials.4b2f40"
 msgid "Narukami"
 msgstr ""
 
-#: db/weaponMaterials.ts:15
+#: db/weaponMaterials.ts:17
 msgctxt "db.weaponMaterials.4d0c6f"
 msgid "Decarabian"
 msgstr ""
 
-#: db/weaponMaterials.ts:55
+#: db/weaponMaterials.ts:57
 msgctxt "db.weaponMaterials.580f83"
 msgid "Aerosiderite"
 msgstr ""
 
-#: db/weaponMaterials.ts:24
+#: db/weaponMaterials.ts:26
 msgctxt "db.weaponMaterials.5c6a21"
 msgid "Luminous Sands from Guyun"
 msgstr ""
 
-#: db/weaponMaterials.ts:80
+#: db/weaponMaterials.ts:13
+msgctxt "db.weaponMaterials.5fb6f7"
+msgid "Weapon Ascension Material"
+msgstr ""
+
+#: db/weaponMaterials.ts:82
 msgctxt "db.weaponMaterials.673ee5"
 msgid "Mask of the Wicked Lieutenant"
 msgstr ""
 
-#: db/weaponMaterials.ts:31
+#: db/weaponMaterials.ts:33
 msgctxt "db.weaponMaterials.735b94"
 msgid "Boreal Wolf"
 msgstr ""
 
-#: db/weaponMaterials.ts:47
+#: db/weaponMaterials.ts:49
 msgctxt "db.weaponMaterials.cf0c7e"
 msgid "Dandelion Gladiator"
 msgstr ""
 
-#: db/weaponMaterials.ts:64
+#: db/weaponMaterials.ts:66
 msgctxt "db.weaponMaterials.de26b9"
 msgid "Coral Branch of a Distant Sea"
 msgstr ""
 
-#: db/weaponMaterials.ts:72
+#: db/weaponMaterials.ts:74
 msgctxt "db.weaponMaterials.f3c2f2"
 msgid "Narukami's Wisdom"
 msgstr ""
 
-#: db/weaponMaterials.ts:39
+#: db/weaponMaterials.ts:41
 msgctxt "db.weaponMaterials.f51889"
 msgid "Mist Veiled Elixir"
 msgstr ""
 
-#: db/weaponMaterials.ts:40
+#: db/weaponMaterials.ts:42
 msgctxt "db.weaponMaterials.f94a84"
 msgid "Mist Veiled Lead Elixir"
 msgstr ""
 
-#: db/weaponMaterials.ts:63
+#: db/weaponMaterials.ts:65
 msgctxt "db.weaponMaterials.fa188c"
 msgid "Branch of Distant Sea"
 msgstr ""
 
-#: db/weapons.ts:117
+#: db/weapons.ts:119
 msgctxt "db.weapons.02470f"
 msgid "White Iron Greatsword"
 msgstr "白铁大剑"
 
-#: db/weapons.ts:97
+#: db/weapons.ts:99
 msgctxt "db.weapons.025ed2"
 msgid "Amos' Bow"
 msgstr "阿莫斯之弓"
 
-#: db/weapons.ts:78
+#: db/weapons.ts:80
 msgctxt "db.weapons.03f248"
 msgid "Dragonspine Spear"
 msgstr "龙脊长枪"
 
-#: db/weapons.ts:184
+#: db/weapons.ts:186
 msgctxt "db.weapons.040218"
 msgid "Kitain Cross Spear"
 msgstr ""
 
-#: db/weapons.ts:156
+#: db/weapons.ts:158
 msgctxt "db.weapons.073d1f"
 msgid "The Unforged"
 msgstr "无工之剑"
 
-#: db/weapons.ts:86
+#: db/weapons.ts:88
 msgctxt "db.weapons.0c4b78"
 msgid "Skyward Harp"
 msgstr "天空之翼"
 
-#: db/weapons.ts:62
+#: db/weapons.ts:64
 msgctxt "db.weapons.0c570b"
 msgid "Magic Guide"
 msgstr "学徒笔记"
 
-#: db/weapons.ts:123
+#: db/weapons.ts:125
 msgctxt "db.weapons.0c59e2"
 msgid "Blackcliff Longsword"
 msgstr "黑岩长剑"
 
-#: db/weapons.ts:82
+#: db/weapons.ts:84
 msgctxt "db.weapons.119465"
 msgid "Sacrificial Greatsword"
 msgstr "祭礼大剑"
 
-#: db/weapons.ts:140
+#: db/weapons.ts:142
 msgctxt "db.weapons.138035"
 msgid "Blackcliff Slasher"
 msgstr "黑岩斩刀"
 
-#: db/weapons.ts:106
+#: db/weapons.ts:108
 msgctxt "db.weapons.13b285"
 msgid "Otherworldly Story"
 msgstr "异世界行记"
 
-#: db/weapons.ts:58
+#: db/weapons.ts:60
 msgctxt "db.weapons.15dfab"
 msgid "Cool Steel"
 msgstr "冷刃"
 
-#: db/weapons.ts:65
+#: db/weapons.ts:67
 msgctxt "db.weapons.16cefd"
 msgid "Royal Grimoire"
 msgstr "宗室秘法录"
 
-#: db/weapons.ts:144
+#: db/weapons.ts:146
 msgctxt "db.weapons.180e9e"
 msgid "Fillet Blade"
 msgstr "吃虎鱼刀"
 
-#: db/weapons.ts:102
+#: db/weapons.ts:104
 msgctxt "db.weapons.188019"
 msgid "Festering Desire"
 msgstr "腐殖之剑"
 
-#: db/weapons.ts:177
+#: db/weapons.ts:179
 msgctxt "db.weapons.19a216"
 msgid "Amenoma Kageuchi"
 msgstr ""
 
-#: db/weapons.ts:181
+#: db/weapons.ts:183
 msgctxt "db.weapons.1a2044"
 msgid "Katsuragikiri Nagamasa"
 msgstr ""
 
-#: db/weapons.ts:131
+#: db/weapons.ts:133
 msgctxt "db.weapons.1ac9a9"
 msgid "Rust"
 msgstr "弓藏"
 
-#: db/weapons.ts:155
+#: db/weapons.ts:157
 msgctxt "db.weapons.1c3519"
 msgid "Royal Spear"
 msgstr "宗室猎枪"
 
-#: db/weapons.ts:77
+#: db/weapons.ts:79
 msgctxt "db.weapons.230154"
 msgid "Dodoco Tales"
 msgstr "嘟嘟可故事集"
 
-#: db/weapons.ts:153
+#: db/weapons.ts:155
 msgctxt "db.weapons.28794d"
 msgid "Prototype Rancour"
 msgstr "试作斩岩"
 
-#: db/weapons.ts:169
+#: db/weapons.ts:171
 msgctxt "db.weapons.313d62"
 msgid "Skyrider Greatsword"
 msgstr "飞天大御剑"
 
-#: db/weapons.ts:69
+#: db/weapons.ts:71
 msgctxt "db.weapons.3801e6"
 msgid "The Alley Flash"
 msgstr "暗巷闪光"
 
-#: db/weapons.ts:139
+#: db/weapons.ts:141
 msgctxt "db.weapons.3ba383"
 msgid "Blackcliff Pole"
 msgstr "黑岩刺枪"
 
-#: db/weapons.ts:81
+#: db/weapons.ts:83
 msgctxt "db.weapons.3bc913"
 msgid "Sacrificial Bow"
 msgstr "祭礼弓"
 
-#: db/weapons.ts:104
+#: db/weapons.ts:106
 msgctxt "db.weapons.3e536f"
 msgid "Frostbearer"
 msgstr "忍冬之果"
 
-#: db/weapons.ts:76
+#: db/weapons.ts:78
 msgctxt "db.weapons.4488ef"
 msgid "Deathmatch"
 msgstr "决斗之枪"
 
-#: db/weapons.ts:165
+#: db/weapons.ts:167
 msgctxt "db.weapons.46ab3b"
 msgid "Memory of Dust"
 msgstr "尘世之锁"
 
-#: db/weapons.ts:126
+#: db/weapons.ts:128
 msgctxt "db.weapons.471e2a"
 msgid "Dark Iron Sword"
 msgstr "暗铁剑"
 
-#: db/weapons.ts:92
+#: db/weapons.ts:94
 msgctxt "db.weapons.48bcb2"
 msgid "Thrilling Tales of Dragon Slayers"
 msgstr "讨龙英杰谭"
 
-#: db/weapons.ts:110
+#: db/weapons.ts:112
 msgctxt "db.weapons.48dcf8"
 msgid "Sacrificial Fragments"
 msgstr "祭礼残章"
 
-#: db/weapons.ts:108
+#: db/weapons.ts:110
 msgctxt "db.weapons.48e9df"
 msgid "Royal Bow"
 msgstr "宗室长弓"
 
-#: db/weapons.ts:141
+#: db/weapons.ts:143
 msgctxt "db.weapons.4da5a4"
 msgid "Debate Club"
 msgstr "以理服人"
 
-#: db/weapons.ts:170
+#: db/weapons.ts:172
 msgctxt "db.weapons.4df4c4"
 msgid "Skyrider Sword"
 msgstr "飞天御剑"
 
-#: db/weapons.ts:128
+#: db/weapons.ts:130
 msgctxt "db.weapons.4f92ed"
 msgid "Lithic Blade"
 msgstr "千岩古剑"
 
-#: db/weapons.ts:162
+#: db/weapons.ts:164
 msgctxt "db.weapons.500132"
 msgid "Iron Sting"
 msgstr "铁蜂刺"
 
-#: db/weapons.ts:142
+#: db/weapons.ts:144
 msgctxt "db.weapons.5553fb"
 msgid "Dragon's Bane"
 msgstr "匣里灭辰"
 
-#: db/weapons.ts:79
+#: db/weapons.ts:81
 msgctxt "db.weapons.587ae5"
 msgid "Elegy for the End"
 msgstr "终末嗟叹之诗"
 
-#: db/weapons.ts:161
+#: db/weapons.ts:163
 msgctxt "db.weapons.59adc6"
 msgid "Compound Bow"
 msgstr "钢轮弓"
 
-#: db/weapons.ts:163
+#: db/weapons.ts:165
 msgctxt "db.weapons.59b38a"
 msgid "Lithic Spear"
 msgstr "千岩长枪"
 
-#: db/weapons.ts:133
+#: db/weapons.ts:135
 msgctxt "db.weapons.5e235d"
 msgid "Solar Pearl"
 msgstr "匣里日月"
 
-#: db/weapons.ts:145
+#: db/weapons.ts:147
 msgctxt "db.weapons.623be3"
 msgid "Halberd"
 msgstr "钺矛"
 
-#: db/weapons.ts:157
+#: db/weapons.ts:159
 msgctxt "db.weapons.630c0f"
 msgid "Twin Nephrite"
 msgstr "甲级宝珏"
 
-#: db/weapons.ts:176
+#: db/weapons.ts:178
 msgctxt "db.weapons.64f159"
 msgid "Hakushin Ring"
 msgstr ""
 
-#: db/weapons.ts:89
+#: db/weapons.ts:91
 msgctxt "db.weapons.6a706f"
 msgid "The Black Sword"
 msgstr "黑剑"
 
-#: db/weapons.ts:130
+#: db/weapons.ts:132
 msgctxt "db.weapons.737d80"
 msgid "Primordial Jade Winged-Spear"
 msgstr "和璞鸢"
 
-#: db/weapons.ts:119
+#: db/weapons.ts:121
 msgctxt "db.weapons.7443eb"
 msgid "Wolf's Gravestone"
 msgstr "狼的末路"
 
-#: db/weapons.ts:152
+#: db/weapons.ts:154
 msgctxt "db.weapons.748ca0"
 msgid "Prototype Amber"
 msgstr "试作金珀"
 
-#: db/weapons.ts:88
+#: db/weapons.ts:90
 msgctxt "db.weapons.78c45f"
 msgid "Sword of Descension"
 msgstr "降临之剑"
 
-#: db/weapons.ts:70
+#: db/weapons.ts:72
 msgctxt "db.weapons.7b69b8"
 msgid "The Bell"
 msgstr "钟剑"
 
-#: db/weapons.ts:93
+#: db/weapons.ts:95
 msgctxt "db.weapons.867c82"
 msgid "Wine and Song"
 msgstr "暗巷的酒与诗"
 
-#: db/weapons.ts:143
+#: db/weapons.ts:145
 msgctxt "db.weapons.874a83"
 msgid "Eye of Perception"
 msgstr "昭心"
 
-#: db/weapons.ts:167
+#: db/weapons.ts:169
 msgctxt "db.weapons.88b507"
 msgid "Prototype Starglitter"
 msgstr "试作星镰"
 
-#: db/weapons.ts:151
+#: db/weapons.ts:153
 msgctxt "db.weapons.8990d6"
 msgid "Prototype Crescent"
 msgstr "试作澹月"
 
-#: db/weapons.ts:114
+#: db/weapons.ts:44
+msgctxt "db.weapons.8b8a4f"
+msgid "Weapon"
+msgstr ""
+
+#: db/weapons.ts:116
 msgctxt "db.weapons.8de396"
 msgid "Sacrificial Sword"
 msgstr "祭礼剑"
 
-#: db/weapons.ts:101
+#: db/weapons.ts:103
 msgctxt "db.weapons.8e76e6"
 msgid "Favonius Warbow"
 msgstr "西风猎弓"
 
-#: db/weapons.ts:118
+#: db/weapons.ts:120
 msgctxt "db.weapons.8f3c08"
 msgid "Windblume Ode"
 msgstr "风花之颂"
 
-#: db/weapons.ts:180
+#: db/weapons.ts:182
 msgctxt "db.weapons.91de62"
 msgid "Hamayumi"
 msgstr ""
 
-#: db/weapons.ts:127
+#: db/weapons.ts:129
 msgctxt "db.weapons.932810"
 msgid "Emerald Orb"
 msgstr "翡玉法球"
 
-#: db/weapons.ts:103
+#: db/weapons.ts:105
 msgctxt "db.weapons.9c6933"
 msgid "Freedom-Sworn"
 msgstr "苍古自由之誓"
 
-#: db/weapons.ts:166
+#: db/weapons.ts:168
 msgctxt "db.weapons.9d7f69"
 msgid "Prototype Archaic"
 msgstr "试作古华"
 
-#: db/weapons.ts:134
+#: db/weapons.ts:136
 msgctxt "db.weapons.9fe22c"
 msgid "Summit Shaper"
 msgstr "斫峰之刃"
 
-#: db/weapons.ts:146
+#: db/weapons.ts:148
 msgctxt "db.weapons.a0205e"
 msgid "Messenger"
 msgstr "信使"
 
-#: db/weapons.ts:154
+#: db/weapons.ts:156
 msgctxt "db.weapons.a1a162"
 msgid "Rainslasher"
 msgstr "雨裁"
 
-#: db/weapons.ts:116
+#: db/weapons.ts:118
 msgctxt "db.weapons.a66256"
 msgid "Traveler's Handy Sword"
 msgstr "旅行剑"
 
-#: db/weapons.ts:71
+#: db/weapons.ts:73
 msgctxt "db.weapons.a77ea9"
 msgid "The Stringless"
 msgstr "绝弦"
 
-#: db/weapons.ts:122
+#: db/weapons.ts:124
 msgctxt "db.weapons.a794cd"
 msgid "Blackcliff Agate"
 msgstr "黑岩绯玉"
 
-#: db/weapons.ts:59
+#: db/weapons.ts:61
 msgctxt "db.weapons.af9dce"
 msgid "Favonius Codex"
 msgstr "西风秘典"
 
-#: db/weapons.ts:85
+#: db/weapons.ts:87
 msgctxt "db.weapons.b1b853"
 msgid "Skyward Blade"
 msgstr "天空之刃"
 
-#: db/weapons.ts:105
+#: db/weapons.ts:107
 msgctxt "db.weapons.b2d661"
 msgid "Lost Prayer to the Sacred Winds"
 msgstr "四风原典"
 
-#: db/weapons.ts:109
+#: db/weapons.ts:111
 msgctxt "db.weapons.b5f792"
 msgid "Royal Greatsword"
 msgstr "宗室大剑"
 
-#: db/weapons.ts:64
+#: db/weapons.ts:66
 msgctxt "db.weapons.bde733"
 msgid "Raven Bow"
 msgstr "鸦羽弓"
 
-#: db/weapons.ts:100
+#: db/weapons.ts:102
 msgctxt "db.weapons.bffca8"
 msgid "Favonius Lance"
 msgstr "西风长枪"
 
-#: db/weapons.ts:63
+#: db/weapons.ts:65
 msgctxt "db.weapons.c1ee71"
 msgid "Mitternachts Waltz"
 msgstr "幽夜华尔兹"
 
-#: db/weapons.ts:129
+#: db/weapons.ts:131
 msgctxt "db.weapons.ca27da"
 msgid "Lion's Roar"
 msgstr "匣里龙吟"
 
-#: db/weapons.ts:175
+#: db/weapons.ts:177
 msgctxt "db.weapons.caea60"
 msgid "Mistsplitter Reforged"
 msgstr ""
 
-#: db/weapons.ts:107
+#: db/weapons.ts:109
 msgctxt "db.weapons.cb0fdc"
 msgid "Recurve Bow"
 msgstr "反曲弓"
 
-#: db/weapons.ts:80
+#: db/weapons.ts:82
 msgctxt "db.weapons.cd6a74"
 msgid "Harbinger of Dawn"
 msgstr "黎明神剑"
 
-#: db/weapons.ts:164
+#: db/weapons.ts:166
 msgctxt "db.weapons.cd75c9"
 msgid "Mappa Mare"
 msgstr "万国诸海图谱"
 
-#: db/weapons.ts:125
+#: db/weapons.ts:127
 msgctxt "db.weapons.ce3943"
 msgid "Crescent Pike"
 msgstr "流月针"
 
-#: db/weapons.ts:75
+#: db/weapons.ts:77
 msgctxt "db.weapons.ced704"
 msgid "Bloodtainted Greatsword"
 msgstr "沐浴龙血的剑"
 
-#: db/weapons.ts:147
+#: db/weapons.ts:149
 msgctxt "db.weapons.d21193"
 msgid "Primordial Jade Cutter"
 msgstr "磐岩结绿"
 
-#: db/weapons.ts:172
+#: db/weapons.ts:174
 msgctxt "db.weapons.d63451"
 msgid "Vortex Vanquisher"
 msgstr "贯虹之槊"
 
-#: db/weapons.ts:99
+#: db/weapons.ts:101
 msgctxt "db.weapons.d6fdb8"
 msgid "Favonius Greatsword"
 msgstr "西风大剑"
 
-#: db/weapons.ts:96
+#: db/weapons.ts:98
 msgctxt "db.weapons.d8a782"
 msgid "Alley Hunter"
 msgstr "暗巷猎手"
 
-#: db/weapons.ts:90
+#: db/weapons.ts:92
 msgctxt "db.weapons.da3955"
 msgid "The Flute"
 msgstr "笛剑"
 
-#: db/weapons.ts:136
+#: db/weapons.ts:138
 msgctxt "db.weapons.de23c9"
 msgid "Whiteblind"
 msgstr "白影剑"
 
-#: db/weapons.ts:72
+#: db/weapons.ts:74
 msgctxt "db.weapons.df6bad"
 msgid "The Viridescent Hunt"
 msgstr "苍翠猎弓"
 
-#: db/weapons.ts:171
+#: db/weapons.ts:173
 msgctxt "db.weapons.e43450"
 msgid "Staff of Homa"
 msgstr "护摩之杖"
 
-#: db/weapons.ts:87
+#: db/weapons.ts:89
 msgctxt "db.weapons.e53a5e"
 msgid "Skyward Pride"
 msgstr "天空之傲"
 
-#: db/weapons.ts:124
+#: db/weapons.ts:126
 msgctxt "db.weapons.e6fc75"
 msgid "Blackcliff Warbow"
 msgstr "黑岩战弓"
 
-#: db/weapons.ts:83
+#: db/weapons.ts:85
 msgctxt "db.weapons.e87597"
 msgid "Sharpshooter's Oath"
 msgstr "神射手之誓"
 
-#: db/weapons.ts:60
+#: db/weapons.ts:62
 msgctxt "db.weapons.e95d91"
 msgid "Favonius Sword"
 msgstr "西风剑"
 
-#: db/weapons.ts:115
+#: db/weapons.ts:117
 msgctxt "db.weapons.e9f646"
 msgid "Skyward Spine"
 msgstr "天空之脊"
 
-#: db/weapons.ts:57
+#: db/weapons.ts:59
 msgctxt "db.weapons.ebc3d0"
 msgid "Aquila Favonia"
 msgstr "风鹰剑"
 
-#: db/weapons.ts:61
+#: db/weapons.ts:63
 msgctxt "db.weapons.ece880"
 msgid "Ferrous Shadow"
 msgstr "铁影阔剑"
 
-#: db/weapons.ts:168
+#: db/weapons.ts:170
 msgctxt "db.weapons.ed05a0"
 msgid "Serpent Spine"
 msgstr "螭骨剑"
 
-#: db/weapons.ts:135
+#: db/weapons.ts:137
 msgctxt "db.weapons.f20081"
 msgid "White Tassel"
 msgstr "白缨枪"
 
-#: db/weapons.ts:91
+#: db/weapons.ts:93
 msgctxt "db.weapons.f531f1"
 msgid "The Widsith"
 msgstr "流浪乐章"
 
-#: db/weapons.ts:67
+#: db/weapons.ts:69
 msgctxt "db.weapons.f62d45"
 msgid "Song of Broken Pines"
 msgstr "松籁响起之时"
 
-#: db/weapons.ts:160
+#: db/weapons.ts:162
 msgctxt "db.weapons.f67ae4"
 msgid "Black Tassel"
 msgstr "黑缨枪"
 
-#: db/weapons.ts:132
+#: db/weapons.ts:134
 msgctxt "db.weapons.f7393e"
 msgid "Slingshot"
 msgstr "弹弓"
 
-#: db/weapons.ts:68
+#: db/weapons.ts:70
 msgctxt "db.weapons.f7afc0"
 msgid "Snow-Tombed Starsilver"
 msgstr "雪葬的星银"
 
-#: db/weapons.ts:66
+#: db/weapons.ts:68
 msgctxt "db.weapons.f8cb91"
 msgid "Royal Longsword"
 msgstr "宗室长剑"
 
-#: db/weapons.ts:84
+#: db/weapons.ts:86
 msgctxt "db.weapons.fda75f"
 msgid "Skyward Atlas"
 msgstr "天空之卷"
 
-#: db/weapons.ts:98
+#: db/weapons.ts:100
 msgctxt "db.weapons.ffe36a"
 msgid "Beginner's Protector"
 msgstr "新手长枪"
 
-#: pages/customize/artifacts/[name].tsx:87
+#: pages/customize/artifacts/[name].tsx:77
+msgctxt "pages.customize.artifacts.[name].146974"
+msgid "artifact"
+msgstr ""
+
+#: pages/customize/artifacts/[name].tsx:90
 msgctxt "pages.customize.artifacts.[name].f87fc3"
 msgid "No such artifact."
 msgstr "没有这样的圣遗物."
 
-#: pages/customize/characters/[name].tsx:60
+#: pages/customize/characters/[name].tsx:63
 msgctxt "pages.customize.characters.[name].8c8c3a"
 msgid "This page may be inaccurate."
 msgstr "此页面可能不准确."
 
-#: pages/customize/characters/[name].tsx:122
+#: pages/customize/characters/[name].tsx:125
 msgctxt "pages.customize.characters.[name].9bd832"
 msgid "No such character."
 msgstr "没有这样的角色."
 
-#: pages/customize/characters/[name].tsx:63
+#: pages/customize/characters/[name].tsx:66
 msgctxt "pages.customize.characters.[name].ddaaad"
 msgid ""
 "The following information is based on leaked data from beta versions of the "
 "game. Take it with a grain of salt."
 msgstr "以下的信息是基于测试版游戏的泄露数据.请慎重考虑."
 
-#: pages/customize/weapons/[name].tsx:88
+#: pages/customize/characters/[name].tsx:92
+msgctxt "pages.customize.characters.[name].e5ae51"
+msgid "character"
+msgstr ""
+
+#: pages/customize/weapons/[name].tsx:91
 msgctxt "pages.customize.weapons.[name].6a78b3"
 msgid "No such weapon."
 msgstr "没有这样的武器."
 
-#: pages/home/notifications/queue.tsx:45
+#: pages/customize/weapons/[name].tsx:77
+msgctxt "pages.customize.weapons.[name].78facd"
+msgid "weapon"
+msgstr ""
+
+#: pages/home/notifications/queue.tsx:48
 msgctxt "pages.home.notifications.queue.67684b"
 msgid "Notification queue"
 msgstr "通知队列"
 
-#: pages/home/notifications/queue.tsx:113
+#: pages/home/notifications/queue.tsx:116
 msgctxt "pages.home.notifications.queue.76b25d"
 msgid "Send now"
 msgstr "立即发送"
 
-#: pages/home/notifications/queue.tsx:129
+#: pages/home/notifications/queue.tsx:132
 msgctxt "pages.home.notifications.queue.87f26c"
 msgid "Dequeue"
 msgstr "移除"
 
-#: pages/home/notifications/queue.tsx:87
+#: pages/home/notifications/queue.tsx:90
 msgctxt "pages.home.notifications.queue.c5b4ec"
 msgid "Scheduled at {time} in {duration}."
 msgstr "计划在 {time} 还需 {duration}."
 
-#: pages/home/notifications/queue.tsx:54
+#: pages/home/notifications/queue.tsx:57
 msgctxt "pages.home.notifications.queue.fcf2e1"
 msgid "There are no notifications in queue."
 msgstr "通知队列为空."
 
-#: pages/index.tsx:103
+#: pages/index.tsx:108
 msgctxt "pages.index.0b66ba"
 msgid ""
 "Tracks open world resources and reminds you as soon as they respawn. There "
 "is no limit to the number of pins."
 msgstr "追踪大世界的资源, 一旦它们重新生成, 就会提醒你. 标记的数量没有限制."
 
-#: pages/index.tsx:88
+#: pages/index.tsx:93
 msgctxt "pages.index.0ed193"
 msgid ""
 "Tracks your resins and estimates when it will recharge without having to "
 "open the game."
 msgstr "追踪你的树脂, 并估计它何时恢复, 而不必打开游戏."
 
-#: pages/index.tsx:135
+#: pages/index.tsx:140
 msgctxt "pages.index.37b47a"
 msgid ""
 "Signing in will enable synchronization across multiple devices. If you do "
 "not already have an account, it will be created automatically."
 msgstr "登录后能在多个设备间同步数据. 如果你还没有账号，将会自动注册."
 
-#: pages/index.tsx:132
+#: pages/index.tsx:137
 msgctxt "pages.index.49026d"
 msgid "Sign in"
 msgstr "登录"
 
-#: pages/index.tsx:78
+#: pages/index.tsx:83
 msgctxt "pages.index.657a74"
 msgid "Features"
 msgstr "功能"
 
-#: pages/index.tsx:100
+#: pages/index.tsx:105
 msgctxt "pages.index.755c57"
 msgid "Task scheduler"
 msgstr "任务计划"
 
-#: pages/index.tsx:115
+#: pages/index.tsx:120
 msgctxt "pages.index.79dc9c"
 msgid "Domain view"
 msgstr "秘境信息"
 
-#: pages/index.tsx:85
+#: pages/index.tsx:90
 msgctxt "pages.index.96d48b"
 msgid "Resin calculator"
 msgstr "树脂计算器"
 
-#: pages/index.tsx:118
+#: pages/index.tsx:123
 msgctxt "pages.index.a92dae"
 msgid ""
 "Shows which domains can be cleared for ascension materials and artifacts for "
 "the day."
 msgstr "显示今天可以探索哪些秘境以获取突破素材和圣遗物."
 
-#: pages/index.tsx:71
+#: pages/index.tsx:76
 msgctxt "pages.index.c0ef70"
 msgid "GitHub"
 msgstr "Github"
 
-#: pages/index.tsx:49
+#: pages/index.tsx:54
 msgctxt "pages.index.e3e15c"
 msgid "Genshin Schedule"
 msgstr "Genshin Schedule"
 
-#: pages/index.tsx:52
+#: pages/index.tsx:57
 msgctxt "pages.index.fcffbd"
 msgid ""
 "Genshin Schedule is a website to help you keep track of time-related game "
