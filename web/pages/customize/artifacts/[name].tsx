@@ -10,7 +10,7 @@ import { Artifacts, ArtifactWiki } from "../../../db/artifacts";
 import NoteInput from "../../../components/Customize/ArtifactInfo/NoteInput";
 import Toggle from "../../../components/Customize/ArtifactInfo/Toggle";
 import DropLabel from "../../../components/DropLabel";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
 import { DomainOfBlessing } from "../../../db/domainCategories";
 
 type Props = {
@@ -65,13 +65,13 @@ const ArtifactInfo = ({ data, name }: Props) => {
               <div>
                 <chakra.div fontSize="xl" fontWeight="bold">
                   <Link href={artifact.wiki} isExternal>
-                    {artifact.name}
+                    <FormattedMessageId id={artifact.name} />
                   </Link>
                 </chakra.div>
 
                 <Badge colorScheme={DomainOfBlessing.colorHint}>
                   <Link href={ArtifactWiki} isExternal>
-                    {artifact.type}
+                    <FormattedMessage defaultMessage="artifact" />
                   </Link>
                 </Badge>
               </div>

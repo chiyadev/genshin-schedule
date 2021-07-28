@@ -7,8 +7,7 @@
     "start": "next start",
     "type-check": "tsc",
     "genassets": "node genassets",
-    "extract": "node langs/extract.js",
-    "genlangs": "node langs/generate.js"
+    "genlangs": "node langs/extract.js && node langs/generate.js"
   },
   "dependencies": {
     "@chakra-ui/react": "1.6.5",

@@ -926,17 +926,22 @@ msgctxt "components.Statistics.InfoText.be142a"
 msgid "Range"
 msgstr ""
 
-#: components/Statistics/ResetButton.tsx:34
+#: components/Statistics/ResetButton.tsx:32
+msgctxt "components.Statistics.ResetButton.1e2167"
+msgid "Reset statistics"
+msgstr ""
+
+#: components/Statistics/ResetButton.tsx:36
 msgctxt "components.Statistics.ResetButton.243268"
 msgid "This action cannot be undone."
 msgstr ""
 
-#: components/Statistics/ResetButton.tsx:46
+#: components/Statistics/ResetButton.tsx:48
 msgctxt "components.Statistics.ResetButton.8e6fec"
 msgid "Reset"
 msgstr ""
 
-#: components/Statistics/ResetButton.tsx:50
+#: components/Statistics/ResetButton.tsx:52
 msgctxt "components.Statistics.ResetButton.e3b158"
 msgid "Cancel"
 msgstr ""
@@ -3586,6 +3591,11 @@ msgctxt "db.weapons.ffe36a"
 msgid "Beginner's Protector"
 msgstr ""
 
+#: pages/customize/artifacts/[name].tsx:74
+msgctxt "pages.customize.artifacts.[name].146974"
+msgid "artifact"
+msgstr ""
+
 #: pages/customize/artifacts/[name].tsx:87
 msgctxt "pages.customize.artifacts.[name].f87fc3"
 msgid "No such artifact."
@@ -3606,9 +3616,19 @@ msgctxt "pages.customize.characters.[name].ddaaad"
 msgid "The following information is based on leaked data from beta versions of the game. Take it with a grain of salt."
 msgstr ""
 
+#: pages/customize/characters/[name].tsx:89
+msgctxt "pages.customize.characters.[name].e5ae51"
+msgid "character"
+msgstr ""
+
 #: pages/customize/weapons/[name].tsx:88
 msgctxt "pages.customize.weapons.[name].6a78b3"
 msgid "No such weapon."
+msgstr ""
+
+#: pages/customize/weapons/[name].tsx:74
+msgctxt "pages.customize.weapons.[name].78facd"
+msgid "weapon"
 msgstr ""
 
 #: pages/home/notifications/queue.tsx:45

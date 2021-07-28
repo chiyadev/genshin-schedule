@@ -23,7 +23,7 @@ const SKIP_EMPTY = true;
       let id = item.msgctxt;
 
       if (id.startsWith("db.")) {
-        id = item.msgstr[0];
+        id = item.msgid;
       }
 
       map.set(id, item.msgstr[0]);

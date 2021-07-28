@@ -28,7 +28,9 @@ const ResetButton = () => {
       <AlertDialog isOpen={confirm} onClose={() => setConfirm(false)} leastDestructiveRef={cancelRef}>
         <AlertDialogOverlay />
         <AlertDialogContent>
-          <AlertDialogHeader>Reset statistics</AlertDialogHeader>
+          <AlertDialogHeader>
+            <FormattedMessage defaultMessage="Reset statistics" />
+          </AlertDialogHeader>
 
           <AlertDialogBody>
             <FormattedMessage defaultMessage="This action cannot be undone." />

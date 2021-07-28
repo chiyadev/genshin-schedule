@@ -80,13 +80,13 @@ const CharacterInfo = ({ data, name }: Props) => {
                 <div>
                   <chakra.div fontSize="xl" fontWeight="bold">
                     <Link href={character.wiki} isExternal>
-                      {character.name}
+                      <FormattedMessage id={character.name} />
                     </Link>
                   </chakra.div>
 
                   <Badge colorScheme={DomainOfMastery.colorHint}>
                     <Link href={CharacterWiki} isExternal>
-                      {character.type}
+                      <FormattedMessage defaultMessage="character" />
                     </Link>
                   </Badge>
                 </div>

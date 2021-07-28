@@ -10,7 +10,7 @@ import MaterialDisplay from "../../../components/Customize/WeaponInfo/MaterialDi
 import CommonMaterialDisplay from "../../../components/Customize/WeaponInfo/CommonMaterialDisplay";
 import { Weapons, WeaponWiki } from "../../../db/weapons";
 import NoteInput from "../../../components/Customize/WeaponInfo/NoteInput";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
 import { DomainOfForgery } from "../../../db/domainCategories";
 
 type Props = {
@@ -65,13 +65,13 @@ const WeaponInfo = ({ data, name }: Props) => {
               <div>
                 <chakra.div fontSize="xl" fontWeight="bold">
                   <Link href={weapon.wiki} isExternal>
-                    {weapon.name}
+                    <FormattedMessageId id={weapon.name} />
                   </Link>
                 </chakra.div>
 
                 <Badge colorScheme={DomainOfForgery.colorHint}>
                   <Link href={WeaponWiki} isExternal>
-                    {weapon.type}
+                    <FormattedMessage defaultMessage="weapon" />
                   </Link>
                 </Badge>
               </div>
