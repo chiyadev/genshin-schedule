@@ -89,6 +89,9 @@ export type Character = {
   leaked?: boolean;
 };
 
+registerMessage({ defaultMessage: "Character" });
+registerMessage({ defaultMessage: "Paimon" });
+
 export const TravelerAnemo: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Traveler (Anemo)" }),

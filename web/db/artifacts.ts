@@ -8,6 +8,8 @@ export type Artifact = {
   wiki: string;
 };
 
+registerMessage({ defaultMessage: "Artifact" });
+
 export const Adventurer: Artifact = {
   type: "Artifact",
   name: registerMessage({ defaultMessage: "Adventurer" }),

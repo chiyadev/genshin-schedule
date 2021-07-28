@@ -33,6 +33,7 @@ import {
 import { registerMessage } from "../utils";
 
 export type DomainCategory = {
+  type: "Domain Category";
   name: string;
   dropDescription: string;
   domains: Domain[];
@@ -40,7 +41,10 @@ export type DomainCategory = {
   colorHint?: string;
 };
 
+registerMessage({ defaultMessage: "Domain Category" });
+
 export const Trounce: DomainCategory = {
+  type: "Domain Category",
   name: registerMessage({ defaultMessage: "Trounce" }),
   dropDescription: registerMessage({ defaultMessage: "Weekly Challenge" }),
   domains: [ConfrontStormterror, WolfOfTheNorthChallenge, EnterTheGoldenHouse, BeneathTheDragonQueller],
@@ -49,6 +53,7 @@ export const Trounce: DomainCategory = {
 };
 
 export const DomainOfMastery: DomainCategory = {
+  type: "Domain Category",
   name: registerMessage({ defaultMessage: "Mastery" }),
   dropDescription: registerMessage({ defaultMessage: "Talent Level-Up Materials" }),
   domains: [ForsakenRift, TaishanMansion, VioletCourt],
@@ -57,6 +62,7 @@ export const DomainOfMastery: DomainCategory = {
 };
 
 export const DomainOfForgery: DomainCategory = {
+  type: "Domain Category",
   name: registerMessage({ defaultMessage: "Forgery" }),
   dropDescription: registerMessage({ defaultMessage: "Weapon Ascension Materials" }),
   domains: [CeciliaGarden, HiddenPalaceOfLianshanFormula, CourtOfFlowingSand],
@@ -65,6 +71,7 @@ export const DomainOfForgery: DomainCategory = {
 };
 
 export const DomainOfBlessing: DomainCategory = {
+  type: "Domain Category",
   name: registerMessage({ defaultMessage: "Blessing" }),
   dropDescription: registerMessage({ defaultMessage: "Artifacts" }),
   domains: [
@@ -84,6 +91,7 @@ export const DomainOfBlessing: DomainCategory = {
 // Normal boss feature is implemented using the same infrastructure
 // as domains because they are functionally the same things.
 export const NormalBoss: DomainCategory = {
+  type: "Domain Category",
   name: registerMessage({ defaultMessage: "Boss" }),
   dropDescription: registerMessage({ defaultMessage: "Character Ascension Materials and Artifacts" }),
   domains: [

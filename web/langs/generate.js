@@ -3,10 +3,8 @@ const path = require("path");
 const PO = require("pofile");
 const { readFile, writeFile } = require("fs/promises");
 
-const FILE = "langs/*.po";
+const FILE = "langs/*.{po,pot}";
 const IGNORE = [];
-const SKIP_FUZZY = true;
-const SKIP_EMPTY = true;
 
 (async () => {
   const files = await glob(FILE, { ignore: IGNORE });
@@ -17,8 +15,8 @@ const SKIP_EMPTY = true;
     const map = new Map();
 
     for (const item of po.items) {
-      if (SKIP_FUZZY && item.flags.fuzzy === true) continue;
-      if (SKIP_EMPTY && !item.msgstr[0]) continue;
+      if (item.flags.fuzzy === true) continue;
+      if (!item.msgstr[0] && !file.endsWith(".pot")) continue;
 
       let id = item.msgctxt;
 
@@ -26,7 +24,7 @@ const SKIP_EMPTY = true;
         id = item.msgid;
       }
 
-      map.set(id, item.msgstr[0]);
+      map.set(id, item.msgstr[0] || item.msgid);
     }
 
     await writeFile(`langs/${path.parse(file).name}.json`, JSON.stringify(Object.fromEntries(map), null, 2));

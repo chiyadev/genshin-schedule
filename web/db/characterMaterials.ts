@@ -9,6 +9,8 @@ export type CharacterMaterial = {
   wiki: string;
 };
 
+registerMessage({ defaultMessage: "Character Ascension Material" });
+
 export const BrilliantDiamond: CharacterMaterial = {
   type: "Character Ascension Material",
   name: registerMessage({ defaultMessage: "Brilliant Diamond" }),

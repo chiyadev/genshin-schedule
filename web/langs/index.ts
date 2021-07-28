@@ -1,3 +1,4 @@
+import EnUS from "./en_US.json";
 import Id from "./id.json";
 import ZhHans from "./zh_Hans.json";
 import NbNO from "./nb_NO.json";
@@ -13,8 +14,18 @@ export const LanguageNames: Record<Language, string> = {
 };
 
 export const Localizations: Record<Language, any> = {
-  "en-US": {},
-  id: Id,
-  "zh-Hans": ZhHans,
-  "nb-NO": NbNO,
+  "en-US": EnUS,
+  id: { ...EnUS, ...Id },
+  "zh-Hans": { ...EnUS, ...ZhHans },
+  "nb-NO": { ...EnUS, ...NbNO },
 };
+
+export function getTranslatedMessages(id: string) {
+  const results: string[] = [];
+
+  for (const localization of Object.values(Localizations)) {
+    localization[id] && results.push(localization[id]);
+  }
+
+  return results;
+}

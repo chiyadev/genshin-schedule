@@ -110,6 +110,8 @@ export type DomainDropSet = {
   itemsAux?: (Artifact | CharacterMaterial | WeaponMaterial | TalentMaterial)[];
 };
 
+registerMessage({ defaultMessage: "Domain Drop Set" });
+
 export const CityOfReflections: DomainDropSet = {
   type: "Domain Drop Set",
   name: registerMessage({ defaultMessage: "City of Reflections" }),

@@ -9,6 +9,8 @@ export type CommonMaterial = {
   wiki: string;
 };
 
+registerMessage({ defaultMessage: "Common Ascension Material" });
+
 export const Slime: CommonMaterial = {
   type: "Common Ascension Material",
   name: registerMessage({ defaultMessage: "Slime" }),

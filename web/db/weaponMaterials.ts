@@ -10,6 +10,8 @@ export type WeaponMaterial = {
   colorHint?: string;
 };
 
+registerMessage({ defaultMessage: "Weapon Ascension Material" });
+
 export const Decarabian: WeaponMaterial = {
   type: "Weapon Ascension Material",
   name: registerMessage({ defaultMessage: "Decarabian" }),

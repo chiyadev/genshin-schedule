@@ -10,6 +10,8 @@ export type TalentMaterial = {
   colorHint?: string;
 };
 
+registerMessage({ defaultMessage: "Talent Level-Up Material" });
+
 export const Freedom: TalentMaterial = {
   type: "Talent Level-Up Material",
   name: registerMessage({ defaultMessage: "Freedom" }),

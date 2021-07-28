@@ -2,11 +2,14 @@ import { MemorySearch } from "../../../utils/memorySearch";
 import { Weapon, Weapons } from "../../../db/weapons";
 import { MultiMap } from "../../../utils/multiMap";
 import { Regions } from "../../../db/regions";
+import { getTranslatedMessages } from "../../../langs";
 
 export const WeaponSearch = new MemorySearch<Weapon>();
 const materialToWeapons = new MultiMap<string, Weapon>();
 
 for (const weapon of Weapons) {
+  const names = [weapon.name];
+
   WeaponSearch.add(weapon.type, weapon);
   WeaponSearch.add(weapon.name, weapon);
 
@@ -14,6 +17,7 @@ for (const weapon of Weapons) {
     WeaponSearch.add(material.name, weapon);
     WeaponSearch.add(material.item, weapon);
 
+    names.push(material.name);
     materialToWeapons.add(material.name, weapon);
   }
 }

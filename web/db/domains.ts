@@ -56,6 +56,8 @@ export type Domain = {
   drops: DomainDropSet[];
 };
 
+registerMessage({ defaultMessage: "Domain" });
+
 export const CeciliaGarden: Domain = {
   type: "Domain",
   name: registerMessage({ defaultMessage: "Cecilia Garden" }),

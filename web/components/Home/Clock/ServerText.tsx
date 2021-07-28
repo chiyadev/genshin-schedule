@@ -3,11 +3,31 @@ import React, { memo } from "react";
 import { ServerList, useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
 import { useServerTimeZone } from "../../../utils/time";
-import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
+import { FormattedMessage } from "react-intl";
 
 const ServerText = () => {
   const [server, setServer] = useConfig("server");
   const timeZone = useServerTimeZone();
+
+  let name: any;
+
+  switch (server) {
+    case "America":
+      name = <FormattedMessage defaultMessage="America" />;
+      break;
+
+    case "Europe":
+      name = <FormattedMessage defaultMessage="Europe" />;
+      break;
+
+    case "Asia":
+      name = <FormattedMessage defaultMessage="Asia" />;
+      break;
+
+    case "TW, HK, MO":
+      name = <FormattedMessage defaultMessage="TW, HK, MO" />;
+      break;
+  }
 
   return (
     <Tooltip
@@ -26,7 +46,7 @@ const ServerText = () => {
           trackEvent("clock", "serverSwitch");
         }}
       >
-        <FormattedMessageId id={server} />
+        {name}
       </Link>
     </Tooltip>
   );

@@ -77,6 +77,8 @@ export type Region = {
   characters: Character[];
 };
 
+registerMessage({ defaultMessage: "Region" });
+
 export const Mondstadt: Region = {
   type: "Region",
   name: registerMessage({ defaultMessage: "Mondstadt" }),

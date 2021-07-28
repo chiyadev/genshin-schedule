@@ -41,6 +41,8 @@ export type Weapon = {
   commonMaterials: CommonMaterial[];
 };
 
+registerMessage({ defaultMessage: "Weapon" });
+
 export const Weapons: Weapon[] = [];
 
 function add(name: string, material: WeaponMaterial, commonMaterials: CommonMaterial[]) {

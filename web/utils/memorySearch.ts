@@ -8,9 +8,16 @@ export class MemorySearch<T> {
     findAllMatches: true,
   });
 
-  add(text: string, value: T) {
+  add(text: string | string[], value: T) {
     this.store.add(value);
-    this.index.add({ key: text, value });
+
+    if (Array.isArray(text)) {
+      for (const key of text) {
+        this.index.add({ key, value });
+      }
+    } else {
+      this.index.add({ key: text, value });
+    }
   }
 
   search(text: string): T[] {

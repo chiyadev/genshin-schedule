@@ -249,13 +249,7 @@ const ConfigContextRoot = ({
         [ref, set, events]
       )}
     >
-      <IntlProvider
-        locale={value.language}
-        messages={Localizations[value.language]}
-        onError={() => {
-          // ignore missing keys (untranslated database entries)
-        }}
-      >
+      <IntlProvider locale={value.language} messages={Localizations[value.language]}>
         {children}
       </IntlProvider>
     </ConfigContext.Provider>
