@@ -3,160 +3,170 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-01 08:42+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-08-02 07:33+0000\n"
+"Last-Translator: The_BadUser <vanjavs@mail.ru>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/genshin-schedule/"
+"web/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.3.6\n"
-
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.8-dev\n"
 
 #: components/Auth/UserSignIn.tsx:62
 msgctxt "components.Auth.UserSignIn.242220"
 msgid "Username"
-msgstr ""
+msgstr "Имя пользователя"
 
 #: components/Auth/UserSignIn.tsx:46
 msgctxt "components.Auth.UserSignIn.28def3"
 msgid "Error"
-msgstr ""
+msgstr "Ошибка"
 
 #: components/Auth/UserSignIn.tsx:93
 msgctxt "components.Auth.UserSignIn.57f247"
 msgid "Forgot password?"
-msgstr ""
+msgstr "Забыли пароль?"
 
 #: components/Auth/UserSignIn.tsx:157
 msgctxt "components.Auth.UserSignIn.67b73d"
 msgid "Continue without signing in"
-msgstr ""
+msgstr "Продолжить без входа"
 
 #: components/Auth/UserSignIn.tsx:98
 msgctxt "components.Auth.UserSignIn.7249ee"
 msgid "Never reuse your miHoYo password on Genshin-related websites."
 msgstr ""
+"Никогда не используйте свой пароль miHoYo на сайтах, связанных с Genshin."
 
 #: components/Auth/UserSignIn.tsx:144
 msgctxt "components.Auth.UserSignIn.93eb72"
 msgid "All data will be stored locally on the browser."
-msgstr ""
+msgstr "Все данные будут храниться локально в браузере."
 
 #: components/Auth/UserSignIn.tsx:105
 msgctxt "components.Auth.UserSignIn.bc7fa7"
 msgid "Read more."
-msgstr ""
+msgstr "Читать далее."
 
 #: components/Auth/UserSignIn.tsx:138
 msgctxt "components.Auth.UserSignIn.c12651"
 msgid "Submit"
-msgstr ""
+msgstr "Отправить"
 
 #: components/Auth/UserSignIn.tsx:78
 msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 #: components/ChangelogModal.tsx:225
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
-msgstr ""
+msgstr "Список изменений обновлений"
 
 #: components/ClockOffsetWarning.tsx:24
+#, fuzzy
 msgctxt "components.ClockOffsetWarning.85fdee"
 msgid "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} other {in # days}}."
 msgstr ""
+"Отображение расписания {offset, plural, =1 {for tomorrow} =-1 {for yesterday}"
+" other {in # days}}."
 
 #: components/ClockOffsetWarning.tsx:36
 msgctxt "components.ClockOffsetWarning.8e6fec"
 msgid "Reset"
-msgstr ""
+msgstr "Сброс"
 
 #: components/Customize/ArtifactInfo/NoteInput.tsx:24
 msgctxt "components.Customize.ArtifactInfo.NoteInput.ab582f"
 msgid "e.g. Lumine's artifact"
-msgstr ""
+msgstr "например, артефакт Люмина"
 
 #: components/Customize/ArtifactInfo/NoteInput.tsx:17
 msgctxt "components.Customize.ArtifactInfo.NoteInput.c6a1b4"
 msgid "Additional notes"
-msgstr ""
+msgstr "Дополнительные примечания"
 
 #: components/Customize/ArtifactInfo/Toggle.tsx:23
 msgctxt "components.Customize.ArtifactInfo.Toggle.cce039"
 msgid "Show on schedule"
-msgstr ""
+msgstr "Показывать по расписанию"
 
 #: components/Customize/ArtifactInfo/Toggle.tsx:27
 msgctxt "components.Customize.ArtifactInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
 msgstr ""
+"Запланированные подземелья будут появляться в те дни, когда они доступны."
 
 #: components/Customize/ArtifactList/index.tsx:19
 msgctxt "components.Customize.ArtifactList.index.796e5e"
 msgid "Artifacts"
-msgstr ""
+msgstr "Артефакты"
 
 #: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:63
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
-msgstr ""
+msgstr "Добавить как задачу"
 
 #: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:53
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.b4b55a"
 msgid "ascension material for {name}"
-msgstr ""
+msgstr "материал возвышения для {name}"
 
 #: components/Customize/CharacterInfo/NoteInput.tsx:24
 msgctxt "components.Customize.CharacterInfo.NoteInput.1cfa1e"
 msgid "e.g. Anemo traveler"
-msgstr ""
+msgstr "например Анемо Путешественник"
 
 #: components/Customize/CharacterInfo/NoteInput.tsx:17
 msgctxt "components.Customize.CharacterInfo.NoteInput.c6a1b4"
 msgid "Additional notes"
-msgstr ""
+msgstr "Дополнительные примечания"
 
 #: components/Customize/CharacterInfo/Toggle.tsx:25
 msgctxt "components.Customize.CharacterInfo.Toggle.cce039"
 msgid "Show on schedule"
-msgstr ""
+msgstr "Показывать по расписанию"
 
 #: components/Customize/CharacterInfo/Toggle.tsx:29
 msgctxt "components.Customize.CharacterInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
 msgstr ""
+"Запланированные подземелья будут появляться в те дни, когда они доступны."
 
 #: components/Customize/CharacterList/index.tsx:27
 msgctxt "components.Customize.CharacterList.index.4e372c"
 msgid "Characters"
-msgstr ""
+msgstr "Персонажи"
 
 #: components/Customize/Notifications/Info.tsx:104
 msgctxt "components.Customize.Notifications.Info.049a4d"
 msgid "Invite the bot"
-msgstr ""
+msgstr "Пригласить бота"
 
 #: components/Customize/Notifications/Info.tsx:36
 msgctxt "components.Customize.Notifications.Info.34089d"
 msgid "Notifications"
-msgstr ""
+msgstr "Уведомления"
 
 #: components/Customize/Notifications/Info.tsx:53
 msgctxt "components.Customize.Notifications.Info.63d176"
 msgid "Genshin Schedule has a Discord bot that can send you notifications when your resin recharges or resources respawn."
 msgstr ""
+"У Genshin Schedule есть бот для Discord, который может присылать вам "
+"уведомления о перезарядке смолы или появлении ресурсов."
 
 #: components/Customize/Notifications/Info.tsx:67
 msgctxt "components.Customize.Notifications.Info.70feee"
 msgid "Genshin Schedule server"
-msgstr ""
+msgstr "Сервер Genshin Schedule"
 
 #: components/Customize/Notifications/Info.tsx:72
 msgctxt "components.Customize.Notifications.Info.8f57ce"
 msgid "invite the bot"
-msgstr ""
+msgstr "пригласить бота"
 
 #: components/Customize/Notifications/Info.tsx:60
 msgctxt "components.Customize.Notifications.Info.9da5a0"
