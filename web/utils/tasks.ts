@@ -32,10 +32,11 @@ export function useFilteredTasks(tasks: Task[]) {
 export function useDueTasks(tasks: Task[]) {
   const time = useServerTime(60000);
   const [showHidden] = useConfig("taskListShowHidden");
+  const [showDone] = useConfig("taskListShowDone")
 
   return useMemo(() => {
     return tasks
-      .filter((task) => (showHidden || task.visible) && task.dueTime <= time.valueOf())
+      .filter((task) => (showHidden || task.visible) && (task.dueTime <= time.valueOf() || showDone))
       .sort((a, b) => {
         const icon = iconIndexes[a.icon] - iconIndexes[b.icon];
         if (icon) return icon;
