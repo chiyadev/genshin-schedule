@@ -1,4 +1,4 @@
-import {chakra, HStack, Link, useColorModeValue, useToken, VStack} from "@chakra-ui/react";
+import {ButtonGroup, chakra, HStack, Link, useColorModeValue, useToken, VStack} from "@chakra-ui/react";
 import React, {Dispatch, memo, SetStateAction} from "react";
 import {Task, useConfig} from "../../utils/config";
 import {trackEvent} from "../../utils/umami";
@@ -7,7 +7,7 @@ import {getAssetByName} from "../../assets";
 import {useTaskFocusSetter} from "../../utils/tasks";
 import {useIntl} from "react-intl";
 import {useServerTime} from "../../utils/time";
-import UndoneButton from "./UndoneButton";
+import HideButton from "./HideButton";
 
 const Item = ({
                 task,
@@ -88,11 +88,10 @@ const Item = ({
       </HStack>
 
       <chakra.div flexShrink={0}>
-        {task.dueTime <= time.valueOf() ? (
+        <ButtonGroup isAttached>
+          <HideButton task={task} setTask={setTask}/>
           <DoneButton task={task} setTask={setTask}/>
-        ) : (
-          <UndoneButton task={task} setTask={setTask}/>
-        )}
+        </ButtonGroup>
       </chakra.div>
     </HStack>
   );
