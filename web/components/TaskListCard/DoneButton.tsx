@@ -17,10 +17,11 @@ const DoneButton = ({task, setTask}: { task: Task; setTask: Dispatch<SetStateAct
   const isDue = task.dueTime <= time.valueOf();
 
   return (
-    <Tooltip label={isDue ?
-      <FormattedMessage defaultMessage="Mark as done"/> :
-      <FormattedMessage defaultMessage="Mark as to-do"/>
-    }>
+    <Tooltip
+      label={
+        isDue ? <FormattedMessage defaultMessage="Mark as done"/> : <FormattedMessage defaultMessage="Mark as to-do"/>
+      }
+      closeOnClick={false}>
       <IconButton
         variant="outline"
         colorScheme={isDue ? "green" : "red"}
