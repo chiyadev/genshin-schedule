@@ -53,11 +53,10 @@ export function useListDispatch<T extends { id: string }>(
     });
   }, [ids, setItems]);
 
-  return useMemo(() => items.map((item, i) => [item, itemSetters[i], itemRemovers[i]]), [
-    items,
-    itemSetters,
-    itemRemovers,
-  ]);
+  return useMemo(
+    () => items.map((item, i) => [item, itemSetters[i], itemRemovers[i]]),
+    [items, itemSetters, itemRemovers]
+  );
 }
 
 export function useListItemDispatch<T extends { id: string }>(

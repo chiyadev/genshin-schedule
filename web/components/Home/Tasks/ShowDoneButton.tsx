@@ -11,9 +11,7 @@ const ShowDoneButton = () => {
 
   return (
     <Tooltip
-      label={
-        value ? <FormattedMessage defaultMessage="Hide done" /> : <FormattedMessage defaultMessage="Show done" />
-      }
+      label={value ? <FormattedMessage defaultMessage="Hide done" /> : <FormattedMessage defaultMessage="Show done" />}
       closeOnClick={false}
     >
       <Button

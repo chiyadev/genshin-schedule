@@ -1,24 +1,24 @@
-import {ButtonGroup, chakra, HStack, Link, useColorModeValue, useToken, VStack} from "@chakra-ui/react";
-import React, {Dispatch, memo, SetStateAction} from "react";
-import {Task, useConfig} from "../../utils/config";
-import {trackEvent} from "../../utils/umami";
+import { ButtonGroup, chakra, HStack, Link, useColorModeValue, useToken, VStack } from "@chakra-ui/react";
+import React, { Dispatch, memo, SetStateAction } from "react";
+import { Task, useConfig } from "../../utils/config";
+import { trackEvent } from "../../utils/umami";
 import DoneButton from "./DoneButton";
-import {getAssetByName} from "../../assets";
-import {useTaskFocusSetter} from "../../utils/tasks";
-import {useIntl} from "react-intl";
-import {useServerTime} from "../../utils/time";
+import { getAssetByName } from "../../assets";
+import { useTaskFocusSetter } from "../../utils/tasks";
+import { useIntl } from "react-intl";
+import { useServerTime } from "../../utils/time";
 import HideButton from "./HideButton";
 
 const Item = ({
-                task,
-                setTask,
-                onTaskClick,
-              }: {
+  task,
+  setTask,
+  onTaskClick,
+}: {
   task: Task;
   setTask: Dispatch<SetStateAction<Task>>;
   onTaskClick?: (task: Task) => void;
 }) => {
-  const {formatMessage} = useIntl();
+  const { formatMessage } = useIntl();
   const time = useServerTime(60000);
   const [compact] = useConfig("taskListCompact");
   const [highlightColor] = useToken("colors", [useColorModeValue("yellow.100", "yellow.900")]);
@@ -44,11 +44,11 @@ const Item = ({
   );
 
   return (
-    <HStack spacing={0} my={compact ? -2 : -1} opacity={(task.visible && task.dueTime <= time.valueOf()) ? 1 : 0.5}>
+    <HStack spacing={0} my={compact ? -2 : -1} opacity={task.visible && task.dueTime <= time.valueOf() ? 1 : 0.5}>
       <HStack spacing={2} bg={task.highlight ? highlightColor : undefined} borderRadius="sm" flex={1} isTruncated>
         <chakra.img
           alt={task.icon}
-          title={formatMessage({defaultMessage: "Highlight task"})}
+          title={formatMessage({ defaultMessage: "Highlight task" })}
           src={getAssetByName(task.icon)}
           w={compact ? 6 : 10}
           h={compact ? 6 : 10}
@@ -89,8 +89,8 @@ const Item = ({
 
       <chakra.div flexShrink={0}>
         <ButtonGroup isAttached>
-          <HideButton task={task} setTask={setTask}/>
-          <DoneButton task={task} setTask={setTask}/>
+          <HideButton task={task} setTask={setTask} />
+          <DoneButton task={task} setTask={setTask} />
         </ButtonGroup>
       </chakra.div>
     </HStack>

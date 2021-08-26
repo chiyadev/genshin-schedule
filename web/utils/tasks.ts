@@ -32,7 +32,7 @@ export function useFilteredTasks(tasks: Task[]) {
 export function useDueTasks(tasks: Task[]) {
   const time = useServerTime(60000);
   const [showHidden] = useConfig("taskListShowHidden");
-  const [showDone] = useConfig("taskListShowDone")
+  const [showDone] = useConfig("taskListShowDone");
 
   return useMemo(() => {
     return tasks
