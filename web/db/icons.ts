@@ -34,6 +34,7 @@ addIcons(registerMessage({ defaultMessage: "Ore" }), [
   { name: registerMessage({ defaultMessage: "Cor Lapis" }), timer: 48 },
   { name: registerMessage({ defaultMessage: "Noctilucous Jade" }), timer: 48 },
   { name: registerMessage({ defaultMessage: "Starsilver" }), timer: 48 },
+  { name: registerMessage({ defaultMessage: "Amethyst Lump" }), timer: 48 },
 ]);
 
 addIcons(registerMessage({ defaultMessage: "Character EXP material" }), [

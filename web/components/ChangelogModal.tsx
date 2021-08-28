@@ -23,7 +23,8 @@ function buildChangelog() {
   return [
     <ChangelogSection key={33} date="2021/08/28">
       <ChangelogItem github={96}>Added buttons to show done tasks in task list.</ChangelogItem>
-      <ChangelogItem>Remove leaked character warnings from Sayu and Yoimiya.</ChangelogItem>
+      <ChangelogItem>Added missing Amethyst Lump icon.</ChangelogItem>
+      <ChangelogItem>Removed leaked character warnings from Sayu and Yoimiya.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={32} date="2021/07/28">
       <ChangelogItem github={79}>

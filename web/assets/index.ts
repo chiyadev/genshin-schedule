@@ -10,6 +10,7 @@ import AlleyHunter from "./game/Alley Hunter.png";
 import Almond from "./game/Almond.png";
 import Amber from "./game/Amber.png";
 import AmenomaKageuchi from "./game/Amenoma Kageuchi.png";
+import AmethystLump from "./game/Amethyst Lump.png";
 import AmosBow from "./game/Amos' Bow.png";
 import AnemoSigil from "./game/Anemo Sigil.png";
 import Anemo from "./game/Anemo.png";
@@ -408,6 +409,7 @@ export {
   Almond,
   Amber,
   AmenomaKageuchi,
+  AmethystLump,
   AmosBow,
   AnemoSigil,
   Anemo,
@@ -808,6 +810,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Almond": return Almond.src;
     case "Amber": return Amber.src;
     case "Amenoma Kageuchi": return AmenomaKageuchi.src;
+    case "Amethyst Lump": return AmethystLump.src;
     case "Amos' Bow": return AmosBow.src;
     case "Anemo Sigil": return AnemoSigil.src;
     case "Anemo": return Anemo.src;
