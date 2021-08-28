@@ -2,9 +2,10 @@ import EnUS from "./en_US.json";
 import ZhHans from "./zh_Hans.json";
 import Id from "./id.json";
 import NbNO from "./nb_NO.json";
+import Ru from "./ru.json";
 
-export type Language = "en-US" | "zh-Hans" | "id" | "nb-NO";
-export const Languages: Language[] = ["en-US", "zh-Hans", "id", "nb-NO"];
+export type Language = "en-US" | "zh-Hans" | "id" | "nb-NO" | "ru";
+export const Languages: Language[] = ["en-US", "zh-Hans", "id", "nb-NO", "ru"];
 
 export const LanguageAliases: Record<string, Language> = {
   "en-US": "en-US",
@@ -20,6 +21,9 @@ export const LanguageAliases: Record<string, Language> = {
 
   "nb-NO": "nb-NO",
   nb: "nb-NO",
+
+  "ru-RU": "ru",
+  ru: "ru",
 };
 
 export const LanguageNames: Record<Language, string> = {
@@ -27,6 +31,7 @@ export const LanguageNames: Record<Language, string> = {
   "zh-Hans": "简体中文",
   id: "Bahasa Indonesia",
   "nb-NO": "Bokmål (Preview)",
+  ru: "русский (Preview)",
 };
 
 export const Localizations: Record<Language, any> = {
@@ -34,6 +39,7 @@ export const Localizations: Record<Language, any> = {
   "zh-Hans": { ...EnUS, ...ZhHans },
   id: { ...EnUS, ...Id },
   "nb-NO": { ...EnUS, ...NbNO },
+  ru: { ...EnUS, ...Ru },
 };
 
 export function getTranslatedMessages(id: string) {

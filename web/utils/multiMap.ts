@@ -13,10 +13,7 @@ export class MultiMap<TKey, TValue> {
     if (set) {
       set.add(value);
     } else {
-      this.map.set(
-        key,
-        new Set<TValue>([value])
-      );
+      this.map.set(key, new Set<TValue>([value]));
     }
 
     return this;
