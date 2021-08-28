@@ -46,7 +46,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:229
+#: components/ChangelogModal.tsx:230
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -1496,7 +1496,7 @@ msgctxt "db.characters.921292"
 msgid "Kaeya"
 msgstr ""
 
-#: db/characters.ts:478
+#: db/characters.ts:477
 msgctxt "db.characters.9d0c00"
 msgid "Yoimiya"
 msgstr ""

@@ -465,23 +465,21 @@ export const Kazuha: Character = {
 export const Sayu: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Sayu" }),
-  wiki: "https://genshin.honeyhunterworld.com/db/char/sayu/",
+  wiki: "https://genshin-impact.fandom.com/wiki/Sayu",
   materials: [VayudaTurquoise, MarionetteCore],
   talentMaterialWeekly: GildedScale,
   talentMaterial: Light,
   commonMaterials: [WhopperflowerNectar, CrystalMarrow],
-  leaked: true,
 };
 
 export const Yoimiya: Character = {
   type: "Character",
   name: registerMessage({ defaultMessage: "Yoimiya" }),
-  wiki: "https://genshin.honeyhunterworld.com/db/char/yoimiya/",
+  wiki: "https://genshin-impact.fandom.com/wiki/Yoimiya",
   materials: [AgnidusAgate, SmolderingPearl],
   talentMaterialWeekly: DragonLordsCrown,
   talentMaterial: Transience,
   commonMaterials: [SamachurlScroll, NakuWeed],
-  leaked: true,
 };
 
 export const Characters = [
