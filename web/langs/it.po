@@ -59,7 +59,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:230
+#: components/ChangelogModal.tsx:232
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -2128,42 +2128,42 @@ msgctxt "db.domains.fe4688"
 msgid "Cecilia Garden"
 msgstr ""
 
-#: db/icons.ts:203
+#: db/icons.ts:204
 msgctxt "db.icons.0026fa"
 msgid "Guidance of the Land"
 msgstr ""
 
-#: db/icons.ts:142
+#: db/icons.ts:143
 msgctxt "db.icons.013c82"
 msgid "Red Dye"
 msgstr ""
 
-#: db/icons.ts:67
+#: db/icons.ts:68
 msgctxt "db.icons.02b6af"
 msgid "Dead Ley Line Branch"
 msgstr ""
 
-#: db/icons.ts:135
+#: db/icons.ts:136
 msgctxt "db.icons.03bcc1"
 msgid "Tomato"
 msgstr ""
 
-#: db/icons.ts:175
+#: db/icons.ts:176
 msgctxt "db.icons.07244e"
 msgid "Other Shops"
 msgstr ""
 
-#: db/icons.ts:189
+#: db/icons.ts:190
 msgctxt "db.icons.087659"
 msgid "Genesis Crystal"
 msgstr ""
 
-#: db/icons.ts:155
+#: db/icons.ts:156
 msgctxt "db.icons.0b2b2d"
 msgid "Crystal Core"
 msgstr ""
 
-#: db/icons.ts:92
+#: db/icons.ts:93
 msgctxt "db.icons.0dc52d"
 msgid "Bamboo"
 msgstr ""
@@ -2173,22 +2173,22 @@ msgctxt "db.icons.0e7ca0"
 msgid "Starsilver"
 msgstr ""
 
-#: db/icons.ts:158
+#: db/icons.ts:159
 msgctxt "db.icons.0e95d3"
 msgid "Lizard Tail"
 msgstr ""
 
-#: db/icons.ts:122
+#: db/icons.ts:123
 msgctxt "db.icons.0f0eeb"
 msgid "Matsutake"
 msgstr ""
 
-#: db/icons.ts:51
+#: db/icons.ts:52
 msgctxt "db.icons.10fe45"
 msgid "Character ascension material"
 msgstr ""
 
-#: db/icons.ts:47
+#: db/icons.ts:48
 msgctxt "db.icons.13fe0a"
 msgid "Fine Enhancement Ore"
 msgstr ""
@@ -2198,32 +2198,32 @@ msgctxt "db.icons.15e7d8"
 msgid "Iron Chunk"
 msgstr ""
 
-#: db/icons.ts:95
+#: db/icons.ts:96
 msgctxt "db.icons.16740f"
 msgid "Jueyun Chili"
 msgstr ""
 
-#: db/icons.ts:185
+#: db/icons.ts:186
 msgctxt "db.icons.16b73a"
 msgid "Resin"
 msgstr ""
 
-#: db/icons.ts:86
+#: db/icons.ts:87
 msgctxt "db.icons.19c45b"
 msgid "Valberry"
 msgstr ""
 
-#: db/icons.ts:161
+#: db/icons.ts:162
 msgctxt "db.icons.1a2bb9"
 msgid "Mist Flower Corolla"
 msgstr ""
 
-#: db/icons.ts:128
+#: db/icons.ts:129
 msgctxt "db.icons.1e3dc1"
 msgid "Radish"
 msgstr ""
 
-#: db/icons.ts:103
+#: db/icons.ts:104
 msgctxt "db.icons.21acbf"
 msgid "Crystal Marrow"
 msgstr ""
@@ -2238,92 +2238,92 @@ msgctxt "db.icons.23dfdf"
 msgid "Ore"
 msgstr ""
 
-#: db/icons.ts:141
+#: db/icons.ts:142
 msgctxt "db.icons.2456aa"
 msgid "Blue Dye"
 msgstr ""
 
-#: db/icons.ts:96
+#: db/icons.ts:97
 msgctxt "db.icons.248863"
 msgid "Qingxin"
 msgstr ""
 
-#: db/icons.ts:212
+#: db/icons.ts:213
 msgctxt "db.icons.2532a7"
 msgid "Yellow Circle"
 msgstr ""
 
-#: db/icons.ts:53
+#: db/icons.ts:54
 msgctxt "db.icons.263550"
 msgid "Brilliant Diamond Silver"
 msgstr ""
 
-#: db/icons.ts:131
+#: db/icons.ts:132
 msgctxt "db.icons.29514d"
 msgid "Shrimp Meat"
 msgstr ""
 
-#: db/icons.ts:198
+#: db/icons.ts:199
 msgctxt "db.icons.2d0e3a"
 msgid "Companionship Experience"
 msgstr ""
 
-#: db/icons.ts:139
+#: db/icons.ts:140
 msgctxt "db.icons.2ecbee"
 msgid "Furnishing"
 msgstr ""
 
-#: db/icons.ts:205
+#: db/icons.ts:206
 msgctxt "db.icons.33c8b8"
 msgid "Battle Pass Bundle"
 msgstr ""
 
-#: db/icons.ts:127
+#: db/icons.ts:128
 msgctxt "db.icons.38f5ee"
 msgid "Potato"
 msgstr ""
 
-#: db/icons.ts:113
+#: db/icons.ts:114
 msgctxt "db.icons.393374"
 msgid "Apple"
 msgstr ""
 
-#: db/icons.ts:45
+#: db/icons.ts:46
 msgctxt "db.icons.3a604c"
 msgid "Weapon enhancement material"
 msgstr ""
 
-#: db/icons.ts:123
+#: db/icons.ts:124
 msgctxt "db.icons.3b03be"
 msgid "Mint"
 msgstr ""
 
-#: db/icons.ts:136
+#: db/icons.ts:137
 msgctxt "db.icons.3e81e3"
 msgid "Wheat"
 msgstr ""
 
-#: db/icons.ts:166
+#: db/icons.ts:167
 msgctxt "db.icons.3e9210"
 msgid "Artifact"
 msgstr ""
 
-#: db/icons.ts:66
+#: db/icons.ts:67
 msgctxt "db.icons.3ef728"
 msgid "Heavy Horn"
 msgstr ""
 
-#: db/icons.ts:120
+#: db/icons.ts:121
 msgctxt "db.icons.40be2a"
 msgid "Fowl"
 msgstr ""
 
-#: db/icons.ts:171
+#: db/icons.ts:172
 msgctxt "db.icons.4129ff"
 msgid "General Goods"
 msgstr ""
 
-#: db/icons.ts:119
+#: db/icons.ts:120
 msgctxt "db.icons.41cfca"
 msgid "Fish"
 msgstr ""
@@ -2333,132 +2333,132 @@ msgctxt "db.icons.41d4a2"
 msgid "Crystal Chunk"
 msgstr ""
 
-#: db/icons.ts:170
+#: db/icons.ts:171
 msgctxt "db.icons.41f111"
 msgid "NPC"
 msgstr ""
 
-#: db/icons.ts:65
+#: db/icons.ts:66
 msgctxt "db.icons.42027c"
 msgid "Divining Scroll"
 msgstr ""
 
-#: db/icons.ts:52
+#: db/icons.ts:53
 msgctxt "db.icons.442b7d"
 msgid "Agnidus Agate Silver"
 msgstr ""
 
-#: db/icons.ts:154
+#: db/icons.ts:155
 msgctxt "db.icons.4a3007"
 msgid "Butterfly Wings"
 msgstr ""
 
-#: db/icons.ts:148
+#: db/icons.ts:149
 msgctxt "db.icons.4ae142"
 msgid "Fir Wood"
 msgstr ""
 
-#: db/icons.ts:186
+#: db/icons.ts:187
 msgctxt "db.icons.4c9716"
 msgid "Condensed Resin"
 msgstr ""
 
-#: db/icons.ts:199
+#: db/icons.ts:200
 msgctxt "db.icons.4d4e7c"
 msgid "Battle Pass Experience"
 msgstr ""
 
-#: db/icons.ts:39
+#: db/icons.ts:40
 msgctxt "db.icons.4dbe55"
 msgid "Character EXP material"
 msgstr ""
 
-#: db/icons.ts:160
+#: db/icons.ts:161
 msgctxt "db.icons.525124"
 msgid "Luminescent Spine"
 msgstr ""
 
-#: db/icons.ts:126
+#: db/icons.ts:127
 msgctxt "db.icons.53f73c"
 msgid "Pinecone"
 msgstr ""
 
-#: db/icons.ts:56
+#: db/icons.ts:57
 msgctxt "db.icons.544601"
 msgid "Vajrada Amethyst Silver"
 msgstr ""
 
-#: db/icons.ts:64
+#: db/icons.ts:65
 msgctxt "db.icons.574218"
 msgid "Firm Arrowhead"
 msgstr ""
 
-#: db/icons.ts:193
+#: db/icons.ts:194
 msgctxt "db.icons.57fb2f"
 msgid "Masterless Stardust"
 msgstr ""
 
-#: db/icons.ts:180
+#: db/icons.ts:181
 msgctxt "db.icons.58f564"
 msgid "Geo Sigil"
 msgstr ""
 
-#: db/icons.ts:91
+#: db/icons.ts:92
 msgctxt "db.icons.5bdc86"
 msgid "Local specialty of Liyue"
 msgstr ""
 
-#: db/icons.ts:105
+#: db/icons.ts:106
 msgctxt "db.icons.60776e"
 msgid "Naku Weed"
 msgstr ""
 
-#: db/icons.ts:106
+#: db/icons.ts:107
 msgctxt "db.icons.6154c2"
 msgid "Onikabuto"
 msgstr ""
 
-#: db/icons.ts:54
+#: db/icons.ts:55
 msgctxt "db.icons.61a03d"
 msgid "Prithiva Topaz Silver"
 msgstr ""
 
-#: db/icons.ts:104
+#: db/icons.ts:105
 msgctxt "db.icons.6204f3"
 msgid "Dendrobium"
 msgstr ""
 
-#: db/icons.ts:111
+#: db/icons.ts:112
 msgctxt "db.icons.6232ee"
 msgid "Cooking ingredient"
 msgstr ""
 
-#: db/icons.ts:74
+#: db/icons.ts:75
 msgctxt "db.icons.6405d0"
 msgid "Whopperflower Nectar"
 msgstr ""
 
-#: db/icons.ts:94
+#: db/icons.ts:95
 msgctxt "db.icons.6453b7"
 msgid "Horsetail"
 msgstr ""
 
-#: db/icons.ts:178
+#: db/icons.ts:179
 msgctxt "db.icons.66d12a"
 msgid "Sigil"
 msgstr ""
 
-#: db/icons.ts:150
+#: db/icons.ts:151
 msgctxt "db.icons.698018"
 msgid "Sandbearer Wood"
 msgstr ""
 
-#: db/icons.ts:83
+#: db/icons.ts:84
 msgctxt "db.icons.6f7fb1"
 msgid "Dandelion Seed"
 msgstr ""
 
-#: db/icons.ts:102
+#: db/icons.ts:103
 msgctxt "db.icons.740397"
 msgid "Local Specialty of Inazuma"
 msgstr ""
@@ -2468,62 +2468,62 @@ msgctxt "db.icons.7486de"
 msgid "White Iron Chunk"
 msgstr ""
 
-#: db/icons.ts:40
+#: db/icons.ts:41
 msgctxt "db.icons.74bf77"
 msgid "Wanderer's Advice"
 msgstr ""
 
-#: db/icons.ts:115
+#: db/icons.ts:116
 msgctxt "db.icons.767429"
 msgid "Bird Egg"
 msgstr ""
 
-#: db/icons.ts:55
+#: db/icons.ts:56
 msgctxt "db.icons.7bbaf1"
 msgid "Shivada Jade Silver"
 msgstr ""
 
-#: db/icons.ts:191
+#: db/icons.ts:192
 msgctxt "db.icons.7c09ca"
 msgid "Acquaint Fate"
 msgstr ""
 
-#: db/icons.ts:153
+#: db/icons.ts:154
 msgctxt "db.icons.7cc8a0"
 msgid "Material"
 msgstr ""
 
-#: db/icons.ts:68
+#: db/icons.ts:69
 msgctxt "db.icons.7ccd68"
 msgid "Chaos Device"
 msgstr ""
 
-#: db/icons.ts:85
+#: db/icons.ts:86
 msgctxt "db.icons.7ce6fd"
 msgid "Small Lamp Grass"
 msgstr ""
 
-#: db/icons.ts:42
+#: db/icons.ts:43
 msgctxt "db.icons.7ef6f5"
 msgid "Hero's Wit"
 msgstr ""
 
-#: db/icons.ts:124
+#: db/icons.ts:125
 msgctxt "db.icons.7fa082"
 msgid "Mushroom"
 msgstr ""
 
-#: db/icons.ts:130
+#: db/icons.ts:131
 msgctxt "db.icons.7fd8e5"
 msgid "Chilled Meat"
 msgstr ""
 
-#: db/icons.ts:62
+#: db/icons.ts:63
 msgctxt "db.icons.866176"
 msgid "Slime Condensate"
 msgstr ""
 
-#: db/icons.ts:218
+#: db/icons.ts:219
 msgctxt "db.icons.89d95a"
 msgid "Pink Circle"
 msgstr ""
@@ -2533,27 +2533,27 @@ msgctxt "db.icons.8c9a21"
 msgid "Serenitea Pot"
 msgstr ""
 
-#: db/icons.ts:81
+#: db/icons.ts:82
 msgctxt "db.icons.8d1274"
 msgid "Calla Lily"
 msgstr ""
 
-#: db/icons.ts:114
+#: db/icons.ts:115
 msgctxt "db.icons.8d722e"
 msgid "Berry"
 msgstr ""
 
-#: db/icons.ts:217
+#: db/icons.ts:218
 msgctxt "db.icons.901e12"
 msgid "Purple Circle"
 msgstr ""
 
-#: db/icons.ts:125
+#: db/icons.ts:126
 msgctxt "db.icons.90c287"
 msgid "Onion"
 msgstr ""
 
-#: db/icons.ts:107
+#: db/icons.ts:108
 msgctxt "db.icons.929cdd"
 msgid "Sakura Bloom"
 msgstr ""
@@ -2563,32 +2563,32 @@ msgctxt "db.icons.9410ec"
 msgid "Parametric Transformer"
 msgstr ""
 
-#: db/icons.ts:98
+#: db/icons.ts:99
 msgctxt "db.icons.9653ee"
 msgid "Starconch"
 msgstr ""
 
-#: db/icons.ts:77
+#: db/icons.ts:78
 msgctxt "db.icons.9d4696"
 msgid "Dismal Prism"
 msgstr ""
 
-#: db/icons.ts:173
+#: db/icons.ts:174
 msgctxt "db.icons.9edf8f"
 msgid "Blacksmith"
 msgstr ""
 
-#: db/icons.ts:149
+#: db/icons.ts:150
 msgctxt "db.icons.9ef200"
 msgid "Pine Wood"
 msgstr ""
 
-#: db/icons.ts:80
+#: db/icons.ts:81
 msgctxt "db.icons.a01a12"
 msgid "Local specialty of Mondstadt"
 msgstr ""
 
-#: db/icons.ts:147
+#: db/icons.ts:148
 msgctxt "db.icons.a5adc2"
 msgid "Cuihua Wood"
 msgstr ""
@@ -2598,167 +2598,172 @@ msgctxt "db.icons.a5b195"
 msgid "Electro Crystal"
 msgstr ""
 
-#: db/icons.ts:46
+#: db/icons.ts:47
 msgctxt "db.icons.a5dfca"
 msgid "Enhancement Ore"
 msgstr ""
 
-#: db/icons.ts:76
+#: db/icons.ts:77
 msgctxt "db.icons.a831e1"
 msgid "Chaos Gear"
 msgstr ""
 
-#: db/icons.ts:196
+#: db/icons.ts:197
 msgctxt "db.icons.aa6277"
 msgid "Experience"
 msgstr ""
 
-#: db/icons.ts:174
+#: db/icons.ts:175
 msgctxt "db.icons.abfa4a"
 msgid "Souvenir Shop"
 msgstr ""
 
-#: db/icons.ts:99
+#: db/icons.ts:100
 msgctxt "db.icons.ace079"
 msgid "Violetgrass"
 msgstr ""
 
-#: db/icons.ts:190
+#: db/icons.ts:191
 msgctxt "db.icons.ae75da"
 msgid "Intertwined Fate"
 msgstr ""
 
-#: db/icons.ts:216
+#: db/icons.ts:217
 msgctxt "db.icons.b11983"
 msgid "Cyan Circle"
 msgstr ""
 
-#: db/icons.ts:187
+#: db/icons.ts:188
 msgctxt "db.icons.b324da"
 msgid "Transient Resin"
 msgstr ""
 
-#: db/icons.ts:211
+#: db/icons.ts:212
 msgctxt "db.icons.b35f1b"
 msgid "Orange Circle"
 msgstr ""
 
-#: db/icons.ts:146
+#: db/icons.ts:147
 msgctxt "db.icons.b38d81"
 msgid "Fragrant Cedar Wood"
 msgstr ""
 
-#: db/icons.ts:41
+#: db/icons.ts:42
 msgctxt "db.icons.b42c8b"
 msgid "Adventurer's Experience"
 msgstr ""
 
-#: db/icons.ts:162
+#: db/icons.ts:37
+msgctxt "db.icons.b5d05a"
+msgid "Amethyst Lump"
+msgstr ""
+
+#: db/icons.ts:163
 msgctxt "db.icons.b9fa1d"
 msgid "Vitalized Dragontooth"
 msgstr ""
 
-#: db/icons.ts:97
+#: db/icons.ts:98
 msgctxt "db.icons.bc0224"
 msgid "Silk Flower"
 msgstr ""
 
-#: db/icons.ts:208
+#: db/icons.ts:209
 msgctxt "db.icons.bc7f2c"
 msgid "Circle"
 msgstr ""
 
-#: db/icons.ts:210
+#: db/icons.ts:211
 msgctxt "db.icons.bd5cf8"
 msgid "Red Circle"
 msgstr ""
 
-#: db/icons.ts:73
+#: db/icons.ts:74
 msgctxt "db.icons.be8c87"
 msgid "Fragile Bone Shard"
 msgstr ""
 
-#: db/icons.ts:58
+#: db/icons.ts:59
 msgctxt "db.icons.c0b022"
 msgid "Vayuda Turquoise Silver"
 msgstr ""
 
-#: db/icons.ts:209
+#: db/icons.ts:210
 msgctxt "db.icons.c138a3"
 msgid "Gray Circle"
 msgstr ""
 
-#: db/icons.ts:108
+#: db/icons.ts:109
 msgctxt "db.icons.c15ca5"
 msgid "Sea Ganoderma"
 msgstr ""
 
-#: db/icons.ts:129
+#: db/icons.ts:130
 msgctxt "db.icons.c331fe"
 msgid "Raw Meat"
 msgstr ""
 
-#: db/icons.ts:72
+#: db/icons.ts:73
 msgctxt "db.icons.c5a9ac"
 msgid "Treasure Hoarder Insignia"
 msgstr ""
 
-#: db/icons.ts:70
+#: db/icons.ts:71
 msgctxt "db.icons.c6cff7"
 msgid "Hunter's Sacrificial Knife"
 msgstr ""
 
-#: db/icons.ts:121
+#: db/icons.ts:122
 msgctxt "db.icons.c7c1c1"
 msgid "Lotus Head"
 msgstr ""
 
-#: db/icons.ts:159
+#: db/icons.ts:160
 msgctxt "db.icons.ca10ad"
 msgid "Loach Pearl"
 msgstr ""
 
-#: db/icons.ts:213
+#: db/icons.ts:214
 msgctxt "db.icons.caa480"
 msgid "Green Circle"
 msgstr ""
 
-#: db/icons.ts:48
+#: db/icons.ts:49
 msgctxt "db.icons.cc7a59"
 msgid "Mystic Enhancement Ore"
 msgstr ""
 
-#: db/icons.ts:117
+#: db/icons.ts:118
 msgctxt "db.icons.ccba58"
 msgid "Carrot"
 msgstr ""
 
-#: db/icons.ts:143
+#: db/icons.ts:144
 msgctxt "db.icons.cd14cb"
 msgid "Fabric"
 msgstr ""
 
-#: db/icons.ts:69
+#: db/icons.ts:70
 msgctxt "db.icons.cd7e10"
 msgid "Mist Grass Pollen"
 msgstr ""
 
-#: db/icons.ts:88
+#: db/icons.ts:89
 msgctxt "db.icons.ce7fa6"
 msgid "Wolfhook"
 msgstr ""
 
-#: db/icons.ts:184
+#: db/icons.ts:185
 msgctxt "db.icons.cf9bf2"
 msgid "Mora"
 msgstr ""
 
-#: db/icons.ts:192
+#: db/icons.ts:193
 msgctxt "db.icons.d53c75"
 msgid "Masterless Starglitter"
 msgstr ""
 
-#: db/icons.ts:61
+#: db/icons.ts:62
 msgctxt "db.icons.d8468e"
 msgid "Common ascension material"
 msgstr ""
@@ -2773,7 +2778,7 @@ msgctxt "db.icons.ddc40f"
 msgid "Gadget"
 msgstr ""
 
-#: db/icons.ts:133
+#: db/icons.ts:134
 msgctxt "db.icons.dee07a"
 msgid "Sunsettia"
 msgstr ""
@@ -2783,87 +2788,87 @@ msgctxt "db.icons.e0e475"
 msgid "Adepti Seeker's Stove"
 msgstr ""
 
-#: db/icons.ts:63
+#: db/icons.ts:64
 msgctxt "db.icons.e1a50a"
 msgid "Damaged Mask"
 msgstr ""
 
-#: db/icons.ts:112
+#: db/icons.ts:113
 msgctxt "db.icons.e1c624"
 msgid "Almond"
 msgstr ""
 
-#: db/icons.ts:82
+#: db/icons.ts:83
 msgctxt "db.icons.e513cc"
 msgid "Cecilia"
 msgstr ""
 
-#: db/icons.ts:204
+#: db/icons.ts:205
 msgctxt "db.icons.e770a4"
 msgid "Philosophies of the Land"
 msgstr ""
 
-#: db/icons.ts:84
+#: db/icons.ts:85
 msgctxt "db.icons.e78aed"
 msgid "Philanemo Mushroom"
 msgstr ""
 
-#: db/icons.ts:183
+#: db/icons.ts:184
 msgctxt "db.icons.e7985d"
 msgid "Currency"
 msgstr ""
 
-#: db/icons.ts:188
+#: db/icons.ts:189
 msgctxt "db.icons.e91a4f"
 msgid "Primogem"
 msgstr ""
 
-#: db/icons.ts:214
+#: db/icons.ts:215
 msgctxt "db.icons.eabb1d"
 msgid "Teal Circle"
 msgstr ""
 
-#: db/icons.ts:93
+#: db/icons.ts:94
 msgctxt "db.icons.ee85bc"
 msgid "Glaze Lily"
 msgstr ""
 
-#: db/icons.ts:202
+#: db/icons.ts:203
 msgctxt "db.icons.effb8d"
 msgid "Bundle"
 msgstr ""
 
-#: db/icons.ts:157
+#: db/icons.ts:158
 msgctxt "db.icons.f01710"
 msgid "Frog"
 msgstr ""
 
-#: db/icons.ts:179
+#: db/icons.ts:180
 msgctxt "db.icons.f03b85"
 msgid "Anemo Sigil"
 msgstr ""
 
-#: db/icons.ts:215
+#: db/icons.ts:216
 msgctxt "db.icons.f0480a"
 msgid "Blue Circle"
 msgstr ""
 
-#: db/icons.ts:140
+#: db/icons.ts:141
 msgctxt "db.icons.f089f5"
 msgid "Yellow Dye"
 msgstr ""
 
-#: db/icons.ts:156
+#: db/icons.ts:157
 msgctxt "db.icons.f0996a"
 msgid "Flaming Flower Stamen"
 msgstr ""
 
-#: db/icons.ts:57
+#: db/icons.ts:58
 msgctxt "db.icons.f20cfa"
 msgid "Varunada Lazurite Silver"
 msgstr ""
 
-#: db/icons.ts:172
+#: db/icons.ts:173
 msgctxt "db.icons.f28595"
 msgid "Restaurant"
 msgstr ""
@@ -2873,47 +2878,47 @@ msgctxt "db.icons.f462d2"
 msgid "Magical Crystal Chunk"
 msgstr ""
 
-#: db/icons.ts:145
+#: db/icons.ts:146
 msgctxt "db.icons.f493cf"
 msgid "Birch Wood"
 msgstr ""
 
-#: db/icons.ts:197
+#: db/icons.ts:198
 msgctxt "db.icons.f4d3f2"
 msgid "Adventure Experience"
 msgstr ""
 
-#: db/icons.ts:144
+#: db/icons.ts:145
 msgctxt "db.icons.f4f3bd"
 msgid "Bamboo Segment"
 msgstr ""
 
-#: db/icons.ts:116
+#: db/icons.ts:117
 msgctxt "db.icons.f5cea5"
 msgid "Cabbage"
 msgstr ""
 
-#: db/icons.ts:132
+#: db/icons.ts:133
 msgctxt "db.icons.f9a862"
 msgid "Snapdragon"
 msgstr ""
 
-#: db/icons.ts:134
+#: db/icons.ts:135
 msgctxt "db.icons.fa7985"
 msgid "Sweet Flower"
 msgstr ""
 
-#: db/icons.ts:87
+#: db/icons.ts:88
 msgctxt "db.icons.fb66ad"
 msgid "Windwheel Aster"
 msgstr ""
 
-#: db/icons.ts:71
+#: db/icons.ts:72
 msgctxt "db.icons.fd54ff"
 msgid "Recruit's Insignia"
 msgstr ""
 
-#: db/icons.ts:75
+#: db/icons.ts:76
 msgctxt "db.icons.fd9d15"
 msgid "Old Handguard"
 msgstr ""
@@ -2923,7 +2928,7 @@ msgctxt "db.icons.fe06d4"
 msgid "Cor Lapis"
 msgstr ""
 
-#: db/icons.ts:118
+#: db/icons.ts:119
 msgctxt "db.icons.fe8ed6"
 msgid "Crab"
 msgstr ""
