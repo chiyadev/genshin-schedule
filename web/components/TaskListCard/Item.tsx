@@ -1,4 +1,4 @@
-import { chakra, HStack, Link, useColorModeValue, useToken, VStack } from "@chakra-ui/react";
+import { ButtonGroup, chakra, HStack, Link, useColorModeValue, useToken, VStack } from "@chakra-ui/react";
 import React, { Dispatch, memo, SetStateAction } from "react";
 import { Task, useConfig } from "../../utils/config";
 import { trackEvent } from "../../utils/umami";
@@ -6,6 +6,8 @@ import DoneButton from "./DoneButton";
 import { getAssetByName } from "../../assets";
 import { useTaskFocusSetter } from "../../utils/tasks";
 import { useIntl } from "react-intl";
+import { useServerTime } from "../../utils/time";
+import HideButton from "./HideButton";
 
 const Item = ({
   task,
@@ -17,9 +19,10 @@ const Item = ({
   onTaskClick?: (task: Task) => void;
 }) => {
   const { formatMessage } = useIntl();
+  const time = useServerTime(60000);
   const [compact] = useConfig("taskListCompact");
   const [highlightColor] = useToken("colors", [useColorModeValue("yellow.100", "yellow.900")]);
-
+  const [showHidden] = useConfig("taskListShowHidden");
   const setFocused = useTaskFocusSetter();
 
   const nameNode = (
@@ -41,7 +44,7 @@ const Item = ({
   );
 
   return (
-    <HStack spacing={0} my={compact ? -2 : -1} opacity={task.visible ? 1 : 0.5}>
+    <HStack spacing={0} my={compact ? -2 : -1} opacity={task.visible && task.dueTime <= time.valueOf() ? 1 : 0.5}>
       <HStack spacing={2} bg={task.highlight ? highlightColor : undefined} borderRadius="sm" flex={1} isTruncated>
         <chakra.img
           alt={task.icon}
@@ -85,7 +88,10 @@ const Item = ({
       </HStack>
 
       <chakra.div flexShrink={0}>
-        <DoneButton task={task} setTask={setTask} />
+        <ButtonGroup>
+          {showHidden && <HideButton task={task} setTask={setTask} />}
+          <DoneButton task={task} setTask={setTask} rounded />
+        </ButtonGroup>
       </chakra.div>
     </HStack>
   );

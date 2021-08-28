@@ -23,13 +23,17 @@ import { useConfig } from "../../../utils/config";
 import ShowHiddenButton from "./ShowHiddenButton";
 import { FormattedMessage } from "react-intl";
 import { ChevronRight } from "react-feather";
+import ShowDoneButton from "./ShowDoneButton";
+import { useServerTime } from "../../../utils/time";
 
 const MapCore = dynamic(() => import("../../Map"), { ssr: false });
 
 const TaskList = () => {
+  const time = useServerTime(60000);
   const [tasks] = useConfig("tasks");
   const dueTasks = useDueTasks(useFilteredTasks(tasks));
   const mapRef = useRef<HTMLDivElement>(null);
+  const [showHidden] = useConfig("taskListShowHidden");
 
   const scrollToMap = useCallback(() => {
     mapRef.current?.scrollIntoView({
@@ -58,7 +62,8 @@ const TaskList = () => {
       menu={
         <ButtonGroup isAttached>
           {!!tasks.length && <SearchButton />}
-          {tasks.find((task) => !task.visible) && <ShowHiddenButton />}
+          {(tasks.find((task) => !task.visible) || showHidden) && <ShowHiddenButton />}
+          {tasks.find((task) => time.valueOf() < task.dueTime) && <ShowDoneButton />}
         </ButtonGroup>
       }
     >

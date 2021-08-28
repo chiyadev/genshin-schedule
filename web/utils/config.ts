@@ -60,6 +60,7 @@ export type Config = {
   taskQuery: string;
   taskListCompact: boolean;
   taskListShowHidden: boolean;
+  taskListShowDone: boolean;
   customizeQuery: string;
   iconQuery: string;
   iconListScroll: number;
@@ -132,6 +133,7 @@ export const DefaultConfig: Config = {
   taskQuery: "",
   taskListCompact: false,
   taskListShowHidden: false,
+  taskListShowDone: false,
   customizeQuery: "",
   iconQuery: "",
   iconListScroll: 0,

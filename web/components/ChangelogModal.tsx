@@ -17,10 +17,13 @@ import {
 import { FormattedMessage } from "react-intl";
 import { GitPullRequest } from "react-feather";
 
-const LatestChangelog = 32;
+const LatestChangelog = 33;
 
 function buildChangelog() {
   return [
+    <ChangelogSection key={33} date="2021/08/28">
+      <ChangelogItem github={96}>Added buttons to show done tasks in task list.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={32} date="2021/07/28">
       <ChangelogItem github={79}>
         Added support for automatic language detection based on request headers.
