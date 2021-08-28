@@ -22,7 +22,7 @@ const Item = ({
   const time = useServerTime(60000);
   const [compact] = useConfig("taskListCompact");
   const [highlightColor] = useToken("colors", [useColorModeValue("yellow.100", "yellow.900")]);
-
+  const [showHidden] = useConfig("taskListShowHidden");
   const setFocused = useTaskFocusSetter();
 
   const nameNode = (
@@ -88,9 +88,9 @@ const Item = ({
       </HStack>
 
       <chakra.div flexShrink={0}>
-        <ButtonGroup isAttached>
-          <HideButton task={task} setTask={setTask} />
-          <DoneButton task={task} setTask={setTask} />
+        <ButtonGroup>
+          {showHidden && <HideButton task={task} setTask={setTask} />}
+          <DoneButton task={task} setTask={setTask} rounded />
         </ButtonGroup>
       </chakra.div>
     </HStack>

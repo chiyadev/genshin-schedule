@@ -7,7 +7,15 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Check, X } from "react-feather";
 import { useServerTime } from "../../utils/time";
 
-const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateAction<Task>> }) => {
+const DoneButton = ({
+  task,
+  setTask,
+  rounded,
+}: {
+  task: Task;
+  setTask: Dispatch<SetStateAction<Task>>;
+  rounded?: boolean;
+}) => {
   const { formatMessage } = useIntl();
   const time = useServerTime(60000);
   const [compact] = useConfig("taskListCompact");
@@ -27,7 +35,8 @@ const DoneButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateA
         variant="outline"
         colorScheme={isDue ? "green" : "red"}
         size={compact ? "xs" : "sm"}
-        borderRadius="full"
+        borderRadius={rounded ? "full" : undefined}
+        minW={8}
         icon={<Icon as={isDue ? Check : X} fontSize="lg" />}
         aria-label={
           isDue ? formatMessage({ defaultMessage: "Mark as done" }) : formatMessage({ defaultMessage: "Mark as to-do" })

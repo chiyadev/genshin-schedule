@@ -4,7 +4,7 @@ import { useConfig } from "../../../utils/config";
 import { Button, Icon } from "@chakra-ui/react";
 import { trackEvent } from "../../../utils/umami";
 import { FormattedMessage } from "react-intl";
-import { Eye, EyeOff } from "react-feather";
+import { CheckCircle, XCircle } from "react-feather";
 
 const ShowDoneButton = () => {
   const [value, setValue] = useConfig("taskListShowDone");
@@ -27,7 +27,7 @@ const ShowDoneButton = () => {
           trackEvent("taskList", "taskShowDone");
         }}
       >
-        <Icon as={value ? Eye : EyeOff} />
+        <Icon as={value ? CheckCircle : XCircle} />
       </Button>
     </Tooltip>
   );

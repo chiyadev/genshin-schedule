@@ -5,7 +5,15 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Eye, EyeOff } from "react-feather";
 import { useTaskFocusSetter } from "../../utils/tasks";
 
-const HideButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateAction<Task>> }) => {
+const HideButton = ({
+  task,
+  setTask,
+  rounded,
+}: {
+  task: Task;
+  setTask: Dispatch<SetStateAction<Task>>;
+  rounded?: boolean;
+}) => {
   const { formatMessage } = useIntl();
   const [compact] = useConfig("taskListCompact");
 
@@ -14,14 +22,21 @@ const HideButton = ({ task, setTask }: { task: Task; setTask: Dispatch<SetStateA
 
   return (
     <Tooltip
-      label={isVisible ? <FormattedMessage defaultMessage="Hide" /> : <FormattedMessage defaultMessage="Show" />}
+      label={
+        isVisible ? (
+          <FormattedMessage defaultMessage="Hide temporarily" />
+        ) : (
+          <FormattedMessage defaultMessage="Unhide" />
+        )
+      }
       closeOnClick={false}
     >
       <IconButton
-        variant="outline"
-        colorScheme={"white"}
+        variant="ghost"
+        color="gray.500"
         size={compact ? "xs" : "sm"}
-        borderRadius="full"
+        borderRadius={rounded ? "full" : undefined}
+        minW={8}
         icon={<Icon as={isVisible ? Eye : EyeOff} fontSize="lg" />}
         aria-label={isVisible ? formatMessage({ defaultMessage: "Hide" }) : formatMessage({ defaultMessage: "Show" })}
         onClick={() => {
