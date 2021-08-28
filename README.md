@@ -16,6 +16,10 @@ For more information, visit [genshin.chiya.dev](https://genshin.chiya.dev).
 
 ![home](images/home.png)
 
+## Contributions welcome
+
+The original author of this website ([phosphene47](https://github.com/phosphene47)) does not have much time to continue its development except for occasional database updates to stay up-to-date with the game. New feature implementations and bug fixes will be accepted via [pull requests](https://github.com/chiyadev/genshin-schedule/pulls), which are usually reviewed and merged within a week.
+
 ## Translations
 
 We use [Weblate](https://hosted.weblate.org/projects/genshin-schedule/) for translations; see [here](https://github.com/chiyadev/genshin-schedule/blob/master/web/langs/README.md) for more information.

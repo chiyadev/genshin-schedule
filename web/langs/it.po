@@ -59,7 +59,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:225
+#: components/ChangelogModal.tsx:230
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -723,6 +723,16 @@ msgctxt "components.Home.Tasks.SearchButton.c66715"
 msgid "Search"
 msgstr ""
 
+#: components/Home/Tasks/ShowDoneButton.tsx:14
+msgctxt "components.Home.Tasks.ShowDoneButton.1e4bd0"
+msgid "Hide done"
+msgstr ""
+
+#: components/Home/Tasks/ShowDoneButton.tsx:14
+msgctxt "components.Home.Tasks.ShowDoneButton.e73315"
+msgid "Show done"
+msgstr ""
+
 #: components/Home/Tasks/ShowHiddenButton.tsx:15
 msgctxt "components.Home.Tasks.ShowHiddenButton.7a418f"
 msgid "Show hidden"
@@ -733,22 +743,22 @@ msgctxt "components.Home.Tasks.ShowHiddenButton.e9f3d0"
 msgid "Hide hidden"
 msgstr ""
 
-#: components/Home/Tasks/index.tsx:54
+#: components/Home/Tasks/index.tsx:58
 msgctxt "components.Home.Tasks.index.0b9931"
 msgid "Today's Tasks"
 msgstr ""
 
-#: components/Home/Tasks/index.tsx:82
+#: components/Home/Tasks/index.tsx:87
 msgctxt "components.Home.Tasks.index.4ab261"
 msgid "Create one by clicking on the map."
 msgstr ""
 
-#: components/Home/Tasks/index.tsx:79
+#: components/Home/Tasks/index.tsx:84
 msgctxt "components.Home.Tasks.index.5c6f2d"
 msgid "No tasks for now."
 msgstr ""
 
-#: components/Home/Tasks/index.tsx:112
+#: components/Home/Tasks/index.tsx:117
 msgctxt "components.Home.Tasks.index.778f27"
 msgid "Open map"
 msgstr ""
@@ -1053,12 +1063,37 @@ msgctxt "components.Statistics.TaskStats.cd681b"
 msgid "Today"
 msgstr ""
 
-#: components/TaskListCard/DoneButton.tsx:24
+#: components/TaskListCard/DoneButton.tsx:42
+msgctxt "components.TaskListCard.DoneButton.395490"
+msgid "Mark as to-do"
+msgstr ""
+
+#: components/TaskListCard/DoneButton.tsx:42
 msgctxt "components.TaskListCard.DoneButton.927523"
 msgid "Mark as done"
 msgstr ""
 
-#: components/TaskListCard/Item.tsx:48
+#: components/TaskListCard/HideButton.tsx:41
+msgctxt "components.TaskListCard.HideButton.2bb024"
+msgid "Show"
+msgstr ""
+
+#: components/TaskListCard/HideButton.tsx:28
+msgctxt "components.TaskListCard.HideButton.3106fe"
+msgid "Unhide"
+msgstr ""
+
+#: components/TaskListCard/HideButton.tsx:41
+msgctxt "components.TaskListCard.HideButton.540fd9"
+msgid "Hide"
+msgstr ""
+
+#: components/TaskListCard/HideButton.tsx:26
+msgctxt "components.TaskListCard.HideButton.fdf592"
+msgid "Hide temporarily"
+msgstr ""
+
+#: components/TaskListCard/Item.tsx:51
 msgctxt "components.TaskListCard.Item.0ababe"
 msgid "Highlight task"
 msgstr ""
@@ -1488,7 +1523,7 @@ msgctxt "db.characters.921292"
 msgid "Kaeya"
 msgstr ""
 
-#: db/characters.ts:478
+#: db/characters.ts:477
 msgctxt "db.characters.9d0c00"
 msgid "Yoimiya"
 msgstr ""
