@@ -36,7 +36,12 @@ export function useDueTasks(tasks: Task[]) {
 
   return useMemo(() => {
     return tasks
-      .filter((task) => (showHidden || task.visible) && (task.dueTime <= time.valueOf() || showDone))
+      .filter((task) => {
+        const visible = task.visible;
+        const due = task.dueTime <= time.valueOf();
+
+        return (showHidden && !visible) || (showDone && !due) || (visible && due);
+      })
       .sort((a, b) => {
         const icon = iconIndexes[a.icon] - iconIndexes[b.icon];
         if (icon) return icon;
