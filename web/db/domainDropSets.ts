@@ -355,6 +355,12 @@ export const VioletCourtDrops3: DomainDropSet = {
   items: [Light],
 };
 
+export const VioletCourtDrops4: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Sun,
+  items: [Elegance, Light, Transience],
+};
+
 export const SunkenSands: DomainDropSet = {
   type: "Domain Drop Set",
   name: registerMessage({ defaultMessage: "Sunken Sands" }),
@@ -506,6 +512,7 @@ export const DomainDropSets = [
   VioletCourtDrops1,
   VioletCourtDrops2,
   VioletCourtDrops3,
+  VioletCourtDrops4,
   SunkenSands,
   AltarOfSands,
   SandBurial,
