@@ -277,6 +277,13 @@ export const Dendrobium: CommonMaterial = {
   wiki: "https://genshin-impact.fandom.com/wiki/Dendrobium",
 };
 
+export const Onikabuto: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Onikabuto" }),
+  item: registerMessage({ defaultMessage: "Onikabuto" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Onikabuto",
+};
+
 export const AmakumoFruit: CommonMaterial = {
   type: "Common Ascension Material",
   name: registerMessage({ defaultMessage: "Amakumo Fruit" }),

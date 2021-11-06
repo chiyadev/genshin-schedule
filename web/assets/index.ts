@@ -158,6 +158,7 @@ import Geo from "./game/Geo.png";
 import GildedScale from "./game/Gilded Scale.png";
 import GladiatorsFinale from "./game/Gladiator's Finale.png";
 import GlazeLily from "./game/Glaze Lily.png";
+import Gorou from "./game/Gorou.png";
 import GrainofAerosiderite from "./game/Grain of Aerosiderite.png";
 import GrayCircle from "./game/Gray Circle.png";
 import GreenCircle from "./game/Green Circle.png";
@@ -181,6 +182,7 @@ import Instructor from "./game/Instructor.png";
 import IntertwinedFate from "./game/Intertwined Fate.png";
 import IronChunk from "./game/Iron Chunk.png";
 import IronSting from "./game/Iron Sting.png";
+import Itto from "./game/Itto.png";
 import Jean from "./game/Jean.png";
 import JueyunChili from "./game/Jueyun Chili.png";
 import JuvenileJade from "./game/Juvenile Jade.png";
@@ -289,6 +291,7 @@ import Resin from "./game/Resin.png";
 import ResolutionofSojourner from "./game/Resolution of Sojourner.png";
 import Restaurant from "./game/Restaurant.png";
 import RetracingBolide from "./game/Retracing Bolide.png";
+import RiftbornRegalia from "./game/Riftborn Regalia.png";
 import RingofBoreas from "./game/Ring of Boreas.png";
 import Rosaria from "./game/Rosaria.png";
 import RoyalBow from "./game/Royal Bow.png";
@@ -581,6 +584,7 @@ export {
   GildedScale,
   GladiatorsFinale,
   GlazeLily,
+  Gorou,
   GrainofAerosiderite,
   GrayCircle,
   GreenCircle,
@@ -604,6 +608,7 @@ export {
   IntertwinedFate,
   IronChunk,
   IronSting,
+  Itto,
   Jean,
   JueyunChili,
   JuvenileJade,
@@ -712,6 +717,7 @@ export {
   ResolutionofSojourner,
   Restaurant,
   RetracingBolide,
+  RiftbornRegalia,
   RingofBoreas,
   Rosaria,
   RoyalBow,
@@ -1006,6 +1012,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Gilded Scale": return GildedScale.src;
     case "Gladiator's Finale": return GladiatorsFinale.src;
     case "Glaze Lily": return GlazeLily.src;
+    case "Gorou": return Gorou.src;
     case "Grain of Aerosiderite": return GrainofAerosiderite.src;
     case "Gray Circle": return GrayCircle.src;
     case "Green Circle": return GreenCircle.src;
@@ -1029,6 +1036,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Intertwined Fate": return IntertwinedFate.src;
     case "Iron Chunk": return IronChunk.src;
     case "Iron Sting": return IronSting.src;
+    case "Itto": return Itto.src;
     case "Jean": return Jean.src;
     case "Jueyun Chili": return JueyunChili.src;
     case "Juvenile Jade": return JuvenileJade.src;
@@ -1137,6 +1145,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Resolution of Sojourner": return ResolutionofSojourner.src;
     case "Restaurant": return Restaurant.src;
     case "Retracing Bolide": return RetracingBolide.src;
+    case "Riftborn Regalia": return RiftbornRegalia.src;
     case "Ring of Boreas": return RingofBoreas.src;
     case "Rosaria": return Rosaria.src;
     case "Royal Bow": return RoyalBow.src;

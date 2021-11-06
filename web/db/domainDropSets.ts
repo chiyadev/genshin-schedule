@@ -92,6 +92,7 @@ import {
   MarionetteCore,
   PerpetualHeart,
   PrithivaTopaz,
+  RiftbornRegalia,
   ShivadaJade,
   SmolderingPearl,
   StormBeads,
@@ -514,6 +515,13 @@ export const NarukamiIslandTenshukakuDrops: DomainDropSet = {
   ],
 };
 
+export const GoldenWolflordDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [RiftbornRegalia],
+  itemsAux: [TravelingDoctor, Instructor, TheExile, PrayersForDestiny, GladiatorsFinale, WanderersTroupe, PrithivaTopaz], // check
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
@@ -565,4 +573,5 @@ export const DomainDropSets = [
   ThunderManifestationDrops,
   HydroHypostasisDrops,
   NarukamiIslandTenshukakuDrops,
+  GoldenWolflordDrops,
 ];

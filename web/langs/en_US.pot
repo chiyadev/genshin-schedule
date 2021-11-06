@@ -1346,6 +1346,11 @@ msgctxt "db.characterMaterials.b1845e"
 msgid "Dew of Repudiation"
 msgstr ""
 
+#: db/characterMaterials.ts:157
+msgctxt "db.characterMaterials.b7e9f6"
+msgid "Riftborn Regalia"
+msgstr ""
+
 #: db/characterMaterials.ts:58
 msgctxt "db.characterMaterials.ba86ce"
 msgid "Agnidus Agate"
@@ -1396,232 +1401,242 @@ msgctxt "db.characterMaterials.f20cfa"
 msgid "Varunada Lazurite Silver"
 msgstr ""
 
-#: db/characters.ts:367
+#: db/characters.ts:369
 msgctxt "db.characters.07f6ca"
 msgid "Zhongli"
 msgstr ""
 
-#: db/characters.ts:102
+#: db/characters.ts:104
 msgctxt "db.characters.096e0e"
 msgid "Character"
 msgstr ""
 
-#: db/characters.ts:197
+#: db/characters.ts:199
 msgctxt "db.characters.0e89af"
 msgid "Fischl"
 msgstr ""
 
-#: db/characters.ts:377
+#: db/characters.ts:379
 msgctxt "db.characters.17ba95"
 msgid "Xinyan"
 msgstr ""
 
-#: db/characters.ts:437
+#: db/characters.ts:439
 msgctxt "db.characters.18d80a"
 msgid "Xiao"
 msgstr ""
 
-#: db/characters.ts:307
+#: db/characters.ts:549
+msgctxt "db.characters.1a3695"
+msgid "Gorou"
+msgstr ""
+
+#: db/characters.ts:309
 msgctxt "db.characters.1c8781"
 msgid "Venti"
 msgstr ""
 
-#: db/characters.ts:387
+#: db/characters.ts:559
+msgctxt "db.characters.24a6dc"
+msgid "Itto"
+msgstr ""
+
+#: db/characters.ts:389
 msgctxt "db.characters.2fbbd1"
 msgid "Yanfei"
 msgstr ""
 
-#: db/characters.ts:317
+#: db/characters.ts:319
 msgctxt "db.characters.35f4f4"
 msgid "Xiangling"
 msgstr ""
 
-#: db/characters.ts:297
+#: db/characters.ts:299
 msgctxt "db.characters.3988a8"
 msgid "Sucrose"
 msgstr ""
 
-#: db/characters.ts:237
+#: db/characters.ts:239
 msgctxt "db.characters.42ddab"
 msgid "Lisa"
 msgstr ""
 
-#: db/characters.ts:397
+#: db/characters.ts:399
 msgctxt "db.characters.47f14e"
 msgid "Eula"
 msgstr ""
 
-#: db/characters.ts:427
+#: db/characters.ts:429
 msgctxt "db.characters.579564"
 msgid "Ayaka"
 msgstr ""
 
-#: db/characters.ts:117
+#: db/characters.ts:119
 msgctxt "db.characters.584d1b"
 msgid "Traveler (Geo)"
 msgstr ""
 
-#: db/characters.ts:287
+#: db/characters.ts:289
 msgctxt "db.characters.5934e2"
 msgid "Razor"
 msgstr ""
 
-#: db/characters.ts:257
+#: db/characters.ts:259
 msgctxt "db.characters.5e045b"
 msgid "Ningguang"
 msgstr ""
 
-#: db/characters.ts:157
+#: db/characters.ts:159
 msgctxt "db.characters.653885"
 msgid "Beidou"
 msgstr ""
 
-#: db/characters.ts:177
+#: db/characters.ts:179
 msgctxt "db.characters.7267c2"
 msgid "Chongyun"
 msgstr ""
 
-#: db/characters.ts:267
+#: db/characters.ts:269
 msgctxt "db.characters.7ce9c6"
 msgid "Noelle"
 msgstr ""
 
-#: db/characters.ts:207
+#: db/characters.ts:209
 msgctxt "db.characters.7f3adf"
 msgid "Jean"
 msgstr ""
 
-#: db/characters.ts:357
+#: db/characters.ts:359
 msgctxt "db.characters.89304e"
 msgid "Diona"
 msgstr ""
 
-#: db/characters.ts:477
+#: db/characters.ts:479
 msgctxt "db.characters.89d67c"
 msgid "Sayu"
 msgstr ""
 
-#: db/characters.ts:217
+#: db/characters.ts:219
 msgctxt "db.characters.921292"
 msgid "Kaeya"
 msgstr ""
 
-#: db/characters.ts:537
+#: db/characters.ts:539
 msgctxt "db.characters.9a051f"
 msgid "Thoma"
 msgstr ""
 
-#: db/characters.ts:487
+#: db/characters.ts:489
 msgctxt "db.characters.9d0c00"
 msgid "Yoimiya"
 msgstr ""
 
-#: db/characters.ts:277
+#: db/characters.ts:279
 msgctxt "db.characters.9de495"
 msgid "Qiqi"
 msgstr ""
 
-#: db/characters.ts:327
+#: db/characters.ts:329
 msgctxt "db.characters.9e37b6"
 msgid "Xingqiu"
 msgstr ""
 
-#: db/characters.ts:187
+#: db/characters.ts:189
 msgctxt "db.characters.a1bb56"
 msgid "Diluc"
 msgstr ""
 
-#: db/characters.ts:147
+#: db/characters.ts:149
 msgctxt "db.characters.a808c9"
 msgid "Barbara"
 msgstr ""
 
-#: db/characters.ts:247
+#: db/characters.ts:249
 msgctxt "db.characters.af88fa"
 msgid "Mona"
 msgstr ""
 
-#: db/characters.ts:407
+#: db/characters.ts:409
 msgctxt "db.characters.b60444"
 msgid "Albedo"
 msgstr ""
 
-#: db/characters.ts:167
+#: db/characters.ts:169
 msgctxt "db.characters.b96249"
 msgid "Bennett"
 msgstr ""
 
-#: db/characters.ts:417
+#: db/characters.ts:419
 msgctxt "db.characters.bc58dc"
 msgid "Ganyu"
 msgstr ""
 
-#: db/characters.ts:347
+#: db/characters.ts:349
 msgctxt "db.characters.bdaeb2"
 msgid "Tartaglia"
 msgstr ""
 
-#: db/characters.ts:517
+#: db/characters.ts:519
 msgctxt "db.characters.c68789"
 msgid "Kokomi"
 msgstr ""
 
-#: db/characters.ts:507
+#: db/characters.ts:509
 msgctxt "db.characters.c976d6"
 msgid "Kujou Sara"
 msgstr ""
 
-#: db/characters.ts:337
+#: db/characters.ts:339
 msgctxt "db.characters.ce2cb0"
 msgid "Klee"
 msgstr ""
 
-#: db/characters.ts:107
+#: db/characters.ts:109
 msgctxt "db.characters.d09c64"
 msgid "Traveler (Anemo)"
 msgstr ""
 
-#: db/characters.ts:227
+#: db/characters.ts:229
 msgctxt "db.characters.d9c480"
 msgid "Keqing"
 msgstr ""
 
-#: db/characters.ts:447
+#: db/characters.ts:449
 msgctxt "db.characters.dd7597"
 msgid "Rosaria"
 msgstr ""
 
-#: db/characters.ts:527
+#: db/characters.ts:529
 msgctxt "db.characters.dd770d"
 msgid "Aloy"
 msgstr ""
 
-#: db/characters.ts:457
+#: db/characters.ts:459
 msgctxt "db.characters.de01da"
 msgid "Hu Tao"
 msgstr ""
 
-#: db/characters.ts:467
+#: db/characters.ts:469
 msgctxt "db.characters.e9f35f"
 msgid "Kazuha"
 msgstr ""
 
-#: db/characters.ts:127
+#: db/characters.ts:129
 msgctxt "db.characters.f0737d"
 msgid "Traveler (Electro)"
 msgstr ""
 
-#: db/characters.ts:497
+#: db/characters.ts:499
 msgctxt "db.characters.f55126"
 msgid "Raiden Shogun"
 msgstr ""
 
-#: db/characters.ts:103
+#: db/characters.ts:105
 msgctxt "db.characters.fc54ed"
 msgid "Paimon"
 msgstr ""
 
-#: db/characters.ts:137
+#: db/characters.ts:139
 msgctxt "db.characters.fdb676"
 msgid "Amber"
 msgstr ""
@@ -1651,12 +1666,12 @@ msgctxt "db.commonMaterials.248863"
 msgid "Qingxin"
 msgstr ""
 
-#: db/commonMaterials.ts:283
+#: db/commonMaterials.ts:290
 msgctxt "db.commonMaterials.2a674f"
 msgid "Amakumo Fruit"
 msgstr ""
 
-#: db/commonMaterials.ts:290
+#: db/commonMaterials.ts:297
 msgctxt "db.commonMaterials.2b3cd3"
 msgid "Sango Pearl"
 msgstr ""
@@ -1696,6 +1711,11 @@ msgctxt "db.commonMaterials.60776e"
 msgid "Naku Weed"
 msgstr ""
 
+#: db/commonMaterials.ts:283
+msgctxt "db.commonMaterials.6154c2"
+msgid "Onikabuto"
+msgstr ""
+
 #: db/commonMaterials.ts:276
 msgctxt "db.commonMaterials.6204f3"
 msgid "Dendrobium"
@@ -1721,7 +1741,7 @@ msgctxt "db.commonMaterials.76ab19"
 msgid "Slime"
 msgstr ""
 
-#: db/commonMaterials.ts:304
+#: db/commonMaterials.ts:311
 msgctxt "db.commonMaterials.76d056"
 msgid "Fluorescent Fungus"
 msgstr ""
@@ -1756,7 +1776,7 @@ msgctxt "db.commonMaterials.929cdd"
 msgid "Sakura Bloom"
 msgstr ""
 
-#: db/commonMaterials.ts:297
+#: db/commonMaterials.ts:304
 msgctxt "db.commonMaterials.93c0a9"
 msgid "Concealed Claw"
 msgstr ""
@@ -1911,57 +1931,57 @@ msgctxt "db.commonMaterials.fe06d4"
 msgid "Cor Lapis"
 msgstr ""
 
-#: db/domainCategories.ts:69
+#: db/domainCategories.ts:70
 msgctxt "db.domainCategories.08e597"
 msgid "Forgery"
 msgstr ""
 
-#: db/domainCategories.ts:98
+#: db/domainCategories.ts:99
 msgctxt "db.domainCategories.09a1d0"
 msgid "Boss"
 msgstr ""
 
-#: db/domainCategories.ts:99
+#: db/domainCategories.ts:100
 msgctxt "db.domainCategories.4b2b5d"
 msgid "Character Ascension Materials and Artifacts"
 msgstr ""
 
-#: db/domainCategories.ts:61
+#: db/domainCategories.ts:62
 msgctxt "db.domainCategories.6a94a1"
 msgid "Talent Level-Up Materials"
 msgstr ""
 
-#: db/domainCategories.ts:79
+#: db/domainCategories.ts:80
 msgctxt "db.domainCategories.796e5e"
 msgid "Artifacts"
 msgstr ""
 
-#: db/domainCategories.ts:47
+#: db/domainCategories.ts:48
 msgctxt "db.domainCategories.999229"
 msgid "Domain Category"
 msgstr ""
 
-#: db/domainCategories.ts:78
+#: db/domainCategories.ts:79
 msgctxt "db.domainCategories.a02f64"
 msgid "Blessing"
 msgstr ""
 
-#: db/domainCategories.ts:70
+#: db/domainCategories.ts:71
 msgctxt "db.domainCategories.a4758a"
 msgid "Weapon Ascension Materials"
 msgstr ""
 
-#: db/domainCategories.ts:51
+#: db/domainCategories.ts:52
 msgctxt "db.domainCategories.a6ee01"
 msgid "Trounce"
 msgstr ""
 
-#: db/domainCategories.ts:60
+#: db/domainCategories.ts:61
 msgctxt "db.domainCategories.aeab32"
 msgid "Mastery"
 msgstr ""
 
-#: db/domainCategories.ts:52
+#: db/domainCategories.ts:53
 msgctxt "db.domainCategories.f98247"
 msgid "Weekly Challenge"
 msgstr ""
@@ -1976,27 +1996,27 @@ msgctxt "db.domainDropSets.350bc4"
 msgid "Sunken Sands"
 msgstr ""
 
-#: db/domainDropSets.ts:118
+#: db/domainDropSets.ts:119
 msgctxt "db.domainDropSets.4284f2"
 msgid "Domain Drop Set"
 msgstr ""
 
-#: db/domainDropSets.ts:163
+#: db/domainDropSets.ts:164
 msgctxt "db.domainDropSets.5a8238"
 msgid "Trial Grounds of Thunder"
 msgstr ""
 
-#: db/domainDropSets.ts:149
+#: db/domainDropSets.ts:150
 msgctxt "db.domainDropSets.6db45f"
 msgid "Thundercloud"
 msgstr ""
 
-#: db/domainDropSets.ts:122
+#: db/domainDropSets.ts:123
 msgctxt "db.domainDropSets.727bc7"
 msgid "City of Reflections"
 msgstr ""
 
-#: db/domainDropSets.ts:129
+#: db/domainDropSets.ts:130
 msgctxt "db.domainDropSets.b61667"
 msgid "Submerged Valley"
 msgstr ""
@@ -2006,17 +2026,17 @@ msgctxt "db.domainDropSets.c47ef9"
 msgid "Sand Burial"
 msgstr ""
 
-#: db/domainDropSets.ts:136
+#: db/domainDropSets.ts:137
 msgctxt "db.domainDropSets.dfec8a"
 msgid "Ruins of Thirsting Capital"
 msgstr ""
 
-#: db/domainDropSets.ts:170
+#: db/domainDropSets.ts:171
 msgctxt "db.domainDropSets.f12070"
 msgid "Electrostatic Field"
 msgstr ""
 
-#: db/domainDropSets.ts:156
+#: db/domainDropSets.ts:157
 msgctxt "db.domainDropSets.ffe184"
 msgid "Thundering Ruins"
 msgstr ""
@@ -3261,27 +3281,27 @@ msgctxt "db.map.fbe305"
 msgid "Qingxu Pool"
 msgstr ""
 
-#: db/regions.ts:150
+#: db/regions.ts:153
 msgctxt "db.regions.06cea1"
 msgid "Inazuma"
 msgstr ""
 
-#: db/regions.ts:158
+#: db/regions.ts:161
 msgctxt "db.regions.38ab8d"
 msgid "Snezhnaya"
 msgstr ""
 
-#: db/regions.ts:91
+#: db/regions.ts:94
 msgctxt "db.regions.5a37ea"
 msgid "Mondstadt"
 msgstr ""
 
-#: db/regions.ts:129
+#: db/regions.ts:132
 msgctxt "db.regions.691c58"
 msgid "Liyue"
 msgstr ""
 
-#: db/regions.ts:87
+#: db/regions.ts:90
 msgctxt "db.regions.967696"
 msgid "Region"
 msgstr ""

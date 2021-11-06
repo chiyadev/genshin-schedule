@@ -50,6 +50,7 @@ import {
   ThunderManifestationDrops,
   NarukamiIslandTenshukakuDrops,
   HydroHypostasisDrops,
+  GoldenWolflordDrops,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
 
@@ -286,6 +287,13 @@ export const HydroHypostasis: Domain = {
   drops: [HydroHypostasisDrops],
 };
 
+export const GoldenWolflord: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Golden Wolflord" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Golden_Wolflord",
+  drops: [GoldenWolflordDrops],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -319,4 +327,5 @@ export const Domains = [
   ThunderManifestation,
   HydroHypostasis,
   NarukamiIslandTenshukaku,
+  GoldenWolflord,
 ];

@@ -13,6 +13,7 @@ import {
   EnterTheGoldenHouse,
   ForsakenRift,
   GeoHypostasis,
+  GoldenWolflord,
   HiddenPalaceOfLianshanFormula,
   HiddenPalaceOfZhouFormula,
   HydroHypostasis,
@@ -47,6 +48,8 @@ import {
   Eula,
   Fischl,
   Ganyu,
+  Gorou,
+  Itto,
   Jean,
   Kaeya,
   Kazuha,
@@ -149,8 +152,8 @@ export const Inazuma: Region = {
   type: "Region",
   name: registerMessage({ defaultMessage: "Inazuma" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Inazuma",
-  domains: [MomijiDyedCourt, VioletCourt, CourtOfFlowingSand, MaguuKenki, PyroHypostasis, PerpetualMechanicalArray, ThunderManifestation, HydroHypostasis, NarukamiIslandTenshukaku],
-  characters: [Ayaka, Kazuha, Kokomi, KujouSara, RaidenShogun, Sayu, Thoma, Yoimiya],
+  domains: [MomijiDyedCourt, VioletCourt, CourtOfFlowingSand, MaguuKenki, PyroHypostasis, PerpetualMechanicalArray, ThunderManifestation, HydroHypostasis, NarukamiIslandTenshukaku, GoldenWolflord],
+  characters: [Ayaka, Gorou, Itto, Kazuha, Kokomi, KujouSara, RaidenShogun, Sayu, Thoma, Yoimiya],
 };
 
 export const Snezhnaya: Region = {
