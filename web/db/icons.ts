@@ -76,6 +76,8 @@ addIcons(registerMessage({ defaultMessage: "Common ascension material" }), [
   { name: registerMessage({ defaultMessage: "Old Handguard" }), timer: "reset" },
   { name: registerMessage({ defaultMessage: "Chaos Gear" }), timer: "reset" },
   { name: registerMessage({ defaultMessage: "Dismal Prism" }), timer: "reset" },
+  { name: registerMessage({ defaultMessage: "Spectral Husk" }), timer: "reset" },
+  { name: registerMessage({ defaultMessage: "Concealed Claw" }), timer: "reset" },
 ]);
 
 addIcons(registerMessage({ defaultMessage: "Local specialty of Mondstadt" }), [
@@ -107,6 +109,9 @@ addIcons(registerMessage({ defaultMessage: "Local Specialty of Inazuma" }), [
   { name: registerMessage({ defaultMessage: "Onikabuto" }), timer: 48 },
   { name: registerMessage({ defaultMessage: "Sakura Bloom" }), timer: 48 },
   { name: registerMessage({ defaultMessage: "Sea Ganoderma" }), timer: 48 },
+  { name: registerMessage({ defaultMessage: "Amakumo Fruit" }), timer: 48 },
+  { name: registerMessage({ defaultMessage: "Sango Pearl" }), timer: 48 },
+  { name: registerMessage({ defaultMessage: "Fluorescent Fungus" }), timer: 48 },
 ]);
 
 addIcons(registerMessage({ defaultMessage: "Cooking ingredient" }), [
