@@ -71,6 +71,9 @@ import {
   Light,
   Transience,
   Elegance,
+  MoltenMoment,
+  HellfireButterfly,
+  AshenHeart,
 } from "./talentMaterials";
 import { Weekday } from "../utils/time";
 import { registerMessage } from "../utils";
@@ -80,6 +83,7 @@ import {
   CharacterMaterial,
   CleansingHeart,
   CrystallineBloom,
+  DewOfRepudiation,
   EverflameSeed,
   HoarfrostCore,
   HurricaneSeed,
@@ -90,6 +94,7 @@ import {
   PrithivaTopaz,
   ShivadaJade,
   SmolderingPearl,
+  StormBeads,
   VajradaAmethyst,
   VarunadaLazurite,
   VayudaTurquoise,
@@ -474,6 +479,35 @@ export const PerpetualMechanicalArrayDrops: DomainDropSet = {
   itemsAux: [Berserker, TheExile, LuckyDog, GladiatorsFinale, WanderersTroupe, PrithivaTopaz, ShivadaJade],
 };
 
+export const ThunderManifestationDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [StormBeads],
+  itemsAux: [TravelingDoctor, Instructor, TheExile, PrayersForWisdom, GladiatorsFinale, WanderersTroupe, VajradaAmethyst],
+};
+
+export const HydroHypostasisDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [DewOfRepudiation],
+  itemsAux: [TravelingDoctor, Instructor, TheExile, PrayersForDestiny, GladiatorsFinale, WanderersTroupe, VarunadaLazurite],
+};
+
+export const NarukamiIslandTenshukakuDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Trounce,
+  items: [MoltenMoment, HellfireButterfly, AshenHeart],
+  itemsAux: [
+    Berserker,
+    Instructor,
+    TheExile,
+    GladiatorsFinale,
+    WanderersTroupe,
+    ShivadaJade,
+    AgnidusAgate,
+  ],
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
@@ -521,4 +555,7 @@ export const DomainDropSets = [
   PyroRegisvineDrops,
   PyroHypostasisDrops,
   PerpetualMechanicalArrayDrops,
+  ThunderManifestationDrops,
+  HydroHypostasisDrops,
+  NarukamiIslandTenshukakuDrops,
 ];

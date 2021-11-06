@@ -136,3 +136,17 @@ export const PerpetualHeart: CharacterMaterial = {
   item: registerMessage({ defaultMessage: "Perpetual Heart" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Perpetual_Heart",
 };
+
+export const StormBeads: CharacterMaterial = {
+  type: "Character Ascension Material",
+  name: registerMessage({ defaultMessage: "Storm Beads" }),
+  item: registerMessage({ defaultMessage: "Storm Beads" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Storm_Beads",
+};
+
+export const DewOfRepudiation: CharacterMaterial = {
+  type: "Character Ascension Material",
+  name: registerMessage({ defaultMessage: "Dew of Repudiation" }),
+  item: registerMessage({ defaultMessage: "Dew of Repudiation" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Dew_of_Repudiation",
+};
