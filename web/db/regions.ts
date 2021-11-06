@@ -35,7 +35,6 @@ import {
 } from "./domains";
 import {
   Albedo,
-  Aloy,
   Amber,
   Ayaka,
   Barbara,
