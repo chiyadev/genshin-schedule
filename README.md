@@ -16,7 +16,7 @@ For more information, visit [genshin.chiya.dev](https://genshin.chiya.dev).
 
 ![home](images/home.png)
 
-## Contributions welcome
+## Contributions welcome!
 
 The original author of this website ([phosphene47](https://github.com/phosphene47)) does not have much time to continue its development except for occasional database updates to stay up-to-date with the game. New feature implementations and bug fixes will be accepted via [pull requests](https://github.com/chiyadev/genshin-schedule/pulls), which are usually reviewed and merged within a week.
 
@@ -31,6 +31,6 @@ This website consists of two subprojects: [web](web) and [sync](sync)
 - `web` frontend serving the website assets
 - `sync` backend handling API requests
 
-Navigate to the respective subprojects for a detailed build procedure.
+Navigate to the respective subproject directories for a detailed build procedure.
 
 You may use the provided Dockerfiles ([web](Dockerfile.web) and [sync](Dockerfile.sync)) to generate production images.

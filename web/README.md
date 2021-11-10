@@ -42,10 +42,7 @@ Refer to the [Dockerfile](../Dockerfile.web) which is a more advanced production
 
 Compile-time variables:
 
-- (optional) `NEXT_PUBLIC_API_PUBLIC` URL of the API server that is accessible from the internet. Defaults to `https://genshin.chiya.dev/api/v1`.
-- (optional) `NEXT_PUBLIC_API_INTERNAL` URL of the API server that is accessible within the local network. This can be useful when running on Docker because requests will be handled faster. e.g. if the API service is named `genshin-sync`, set as `http://genshin-sync:5000`. Falls back to `NEXT_PUBLIC_API_PUBLIC` when not specified.
+- (optional) `NEXT_PUBLIC_API_PUBLIC` URL of the `sync` server that is accessible from the internet.
+- (optional) `NEXT_PUBLIC_API_INTERNAL` URL of the `sync` server that is accessible within the local network. This can be useful when running on Docker because requests will be handled faster. e.g. if the API service is named `genshin-sync`, set as `http://genshin-sync:5000`. Falls back to `NEXT_PUBLIC_API_PUBLIC` when not specified.
 
-
-## Adding new game assets
-
-When adding an image asset for a new item to the [assets](assets/game) folder, the asset index file should be regenerated using `yarn genassets` command.
+This project interacts with the [sync](../sync) server by communicating through a RESTful HTTP API. Unless `NEXT_PUBLIC_API_PUBLIC` is configured, the official API provided by [chiya.dev](https://genshin.chiya.dev/api/v1) is used by default. This makes development simpler because you do not need to run Postgres and `sync` locally.
