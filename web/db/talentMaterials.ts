@@ -168,6 +168,27 @@ export const GildedScale: TalentMaterial = {
   wiki: "https://genshin-impact.fandom.com/wiki/Gilded_Scale",
 };
 
+export const MoltenMoment: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: registerMessage({ defaultMessage: "Molten Moment" }),
+  item: registerMessage({ defaultMessage: "Molten Moment" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Molten_Moment",
+};
+
+export const HellfireButterfly: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: registerMessage({ defaultMessage: "Hellfire Butterfly" }),
+  item: registerMessage({ defaultMessage: "Hellfire Butterfly" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Hellfire_Butterfly",
+};
+
+export const AshenHeart: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: registerMessage({ defaultMessage: "Ashen Heart" }),
+  item: registerMessage({ defaultMessage: "Ashen Heart" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Ashen_Heart",
+};
+
 export const TalentMaterials = [
   Freedom,
   Prosperity,
@@ -190,4 +211,7 @@ export const TalentMaterials = [
   DragonLordsCrown,
   BloodjadeBranch,
   GildedScale,
+  MoltenMoment,
+  HellfireButterfly,
+  AshenHeart,
 ];

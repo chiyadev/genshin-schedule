@@ -46,6 +46,9 @@ import {
   PyroRegisvineDrops,
   PyroHypostasisDrops,
   PerpetualMechanicalArrayDrops,
+  ThunderManifestationDrops,
+  NarukamiIslandTenshukakuDrops,
+  HydroHypostasisDrops,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
 
@@ -156,6 +159,13 @@ export const BeneathTheDragonQueller: Domain = {
   drops: [BeneathTheDragonQuellerDrops],
 };
 
+export const NarukamiIslandTenshukaku: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Narukami Island: Tenshukaku" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Narukami_Island:_Tenshukaku",
+  drops: [NarukamiIslandTenshukakuDrops],
+};
+
 export const RidgeWatch: Domain = {
   type: "Domain",
   name: registerMessage({ defaultMessage: "Ridge Watch" }),
@@ -261,6 +271,20 @@ export const PerpetualMechanicalArray: Domain = {
   drops: [PerpetualMechanicalArrayDrops],
 };
 
+export const ThunderManifestation: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Thunder Manifestation" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Thunder_Manifestation",
+  drops: [ThunderManifestationDrops],
+};
+
+export const HydroHypostasis: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Hydro Hypostasis" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Hydro_Hypostasis",
+  drops: [HydroHypostasisDrops],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -291,4 +315,7 @@ export const Domains = [
   PyroRegisvine,
   PyroHypostasis,
   PerpetualMechanicalArray,
+  ThunderManifestation,
+  HydroHypostasis,
+  NarukamiIslandTenshukaku,
 ];
