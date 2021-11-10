@@ -5,9 +5,12 @@ import AdventureExperience from "./game/Adventure Experience.png";
 import AdventurersExperience from "./game/Adventurer's Experience.png";
 import Adventurer from "./game/Adventurer.png";
 import AgnidusAgateSilver from "./game/Agnidus Agate Silver.png";
+import Akuoumaru from "./game/Akuoumaru.png";
 import Albedo from "./game/Albedo.png";
 import AlleyHunter from "./game/Alley Hunter.png";
 import Almond from "./game/Almond.png";
+import Aloy from "./game/Aloy.png";
+import AmakumoFruit from "./game/Amakumo Fruit.png";
 import Amber from "./game/Amber.png";
 import AmenomaKageuchi from "./game/Amenoma Kageuchi.png";
 import AmethystLump from "./game/Amethyst Lump.png";
@@ -17,6 +20,7 @@ import Anemo from "./game/Anemo.png";
 import Apple from "./game/Apple.png";
 import AquilaFavonia from "./game/Aquila Favonia.png";
 import ArchaicPetra from "./game/Archaic Petra.png";
+import AshenHeart from "./game/Ashen Heart.png";
 import Ayaka from "./game/Ayaka.png";
 import BackgroundAyaka from "./game/BackgroundAyaka.png";
 import BackgroundDiluc from "./game/BackgroundDiluc.png";
@@ -74,6 +78,7 @@ import Chongyun from "./game/Chongyun.png";
 import CleansingHeart from "./game/Cleansing Heart.png";
 import CompanionshipExperience from "./game/Companionship Experience.png";
 import CompoundBow from "./game/Compound Bow.png";
+import ConcealedClaw from "./game/Concealed Claw.png";
 import CondensedResin from "./game/Condensed Resin.png";
 import CoolSteel from "./game/Cool Steel.png";
 import CorLapis from "./game/Cor Lapis.png";
@@ -97,6 +102,7 @@ import DebateClub from "./game/Debate Club.png";
 import DefendersWill from "./game/Defender's Will.png";
 import Dendro from "./game/Dendro.png";
 import Dendrobium from "./game/Dendrobium.png";
+import DewofRepudiation from "./game/Dew of Repudiation.png";
 import Diluc from "./game/Diluc.png";
 import Diona from "./game/Diona.png";
 import DismalPrism from "./game/Dismal Prism.png";
@@ -114,9 +120,11 @@ import Electro from "./game/Electro.png";
 import ElegyfortheEnd from "./game/Elegy for the End.png";
 import EmblemofSeveredFate from "./game/Emblem of Severed Fate.png";
 import EmeraldOrb from "./game/Emerald Orb.png";
+import EngulfingLightning from "./game/Engulfing Lightning.png";
 import EnhancementOre from "./game/Enhancement Ore.png";
 import Eula from "./game/Eula.png";
 import EverflameSeed from "./game/Everflame Seed.png";
+import EverlastingMoonglow from "./game/Everlasting Moonglow.png";
 import EyeofPerception from "./game/Eye of Perception.png";
 import Fabric from "./game/Fabric.png";
 import FavoniusCodex from "./game/Favonius Codex.png";
@@ -134,6 +142,7 @@ import FirmArrowhead from "./game/Firm Arrowhead.png";
 import Fischl from "./game/Fischl.png";
 import Fish from "./game/Fish.png";
 import FlamingFlowerStamen from "./game/Flaming Flower Stamen.png";
+import FluorescentFungus from "./game/Fluorescent Fungus.png";
 import Fowl from "./game/Fowl.png";
 import FragileBoneShard from "./game/Fragile Bone Shard.png";
 import FragrantCedarWood from "./game/Fragrant Cedar Wood.png";
@@ -158,6 +167,7 @@ import Halberd from "./game/Halberd.png";
 import Hamayumi from "./game/Hamayumi.png";
 import HarbingerofDawn from "./game/Harbinger of Dawn.png";
 import HeavyHorn from "./game/Heavy Horn.png";
+import HellfireButterfly from "./game/Hellfire Butterfly.png";
 import HerosWit from "./game/Hero's Wit.png";
 import HoarfrostCore from "./game/Hoarfrost Core.png";
 import Horsetail from "./game/Horsetail.png";
@@ -180,6 +190,8 @@ import Kazuha from "./game/Kazuha.png";
 import Keqing from "./game/Keqing.png";
 import KitainCrossSpear from "./game/Kitain Cross Spear.png";
 import Klee from "./game/Klee.png";
+import Kokomi from "./game/Kokomi.png";
+import KujouSara from "./game/Kujou Sara.png";
 import Lavawalker from "./game/Lavawalker.png";
 import LightningPrism from "./game/Lightning Prism.png";
 import LionsRoar from "./game/Lion's Roar.png";
@@ -194,6 +206,7 @@ import LotusHead from "./game/Lotus Head.png";
 import LuckyDog from "./game/Lucky Dog.png";
 import LuminescentSpine from "./game/Luminescent Spine.png";
 import LuminousSandsfromGuyun from "./game/Luminous Sands from Guyun.png";
+import LuxuriousSeaLord from "./game/Luxurious Sea-Lord.png";
 import MagicGuide from "./game/Magic Guide.png";
 import MagicalCrystalChunk from "./game/Magical Crystal Chunk.png";
 import MaidenBeloved from "./game/Maiden Beloved.png";
@@ -212,9 +225,11 @@ import MistGrassPollen from "./game/Mist Grass Pollen.png";
 import MistVeiledLeadElixir from "./game/Mist Veiled Lead Elixir.png";
 import MistsplitterReforged from "./game/Mistsplitter Reforged.png";
 import MitternachtsWaltz from "./game/Mitternachts Waltz.png";
+import MoltenMoment from "./game/Molten Moment.png";
 import Mona from "./game/Mona.png";
 import Mondstadt from "./game/Mondstadt.png";
 import Mora from "./game/Mora.png";
+import MouunsMoon from "./game/Mouun's Moon.png";
 import Mushroom from "./game/Mushroom.png";
 import MysticEnhancementOre from "./game/Mystic Enhancement Ore.png";
 import NakuWeed from "./game/Naku Weed.png";
@@ -238,12 +253,14 @@ import PhilosophiesoftheLand from "./game/Philosophies of the Land.png";
 import PineWood from "./game/Pine Wood.png";
 import Pinecone from "./game/Pinecone.png";
 import PinkCircle from "./game/Pink Circle.png";
+import PolarStar from "./game/Polar Star.png";
 import PortableWaypoint from "./game/Portable Waypoint.png";
 import Potato from "./game/Potato.png";
 import PrayersforDestiny from "./game/Prayers for Destiny.png";
 import PrayersforIllumination from "./game/Prayers for Illumination.png";
 import PrayersforWisdom from "./game/Prayers for Wisdom.png";
 import PrayerstoSpringtime from "./game/Prayers to Springtime.png";
+import Predator from "./game/Predator.png";
 import Primogem from "./game/Primogem.png";
 import PrimordialJadeCutter from "./game/Primordial Jade Cutter.png";
 import PrimordialJadeWingedSpear from "./game/Primordial Jade Winged-Spear.png";
@@ -258,6 +275,7 @@ import Pyro from "./game/Pyro.png";
 import Qingxin from "./game/Qingxin.png";
 import Qiqi from "./game/Qiqi.png";
 import Radish from "./game/Radish.png";
+import RaidenShogun from "./game/Raiden Shogun.png";
 import Rainslasher from "./game/Rainslasher.png";
 import RavenBow from "./game/Raven Bow.png";
 import RawMeat from "./game/Raw Meat.png";
@@ -285,6 +303,7 @@ import SacrificialGreatsword from "./game/Sacrificial Greatsword.png";
 import SacrificialSword from "./game/Sacrificial Sword.png";
 import SakuraBloom from "./game/Sakura Bloom.png";
 import SandbearerWood from "./game/Sandbearer Wood.png";
+import SangoPearl from "./game/Sango Pearl.png";
 import Sayu from "./game/Sayu.png";
 import Scholar from "./game/Scholar.png";
 import SeaGanoderma from "./game/Sea Ganoderma.png";
@@ -313,10 +332,12 @@ import SnowTombedStarsilver from "./game/Snow-Tombed Starsilver.png";
 import SolarPearl from "./game/Solar Pearl.png";
 import SongofBrokenPines from "./game/Song of Broken Pines.png";
 import SouvenirShop from "./game/Souvenir Shop.png";
+import SpectralHusk from "./game/Spectral Husk.png";
 import SpiritLocketofBoreas from "./game/Spirit Locket of Boreas.png";
 import StaffofHoma from "./game/Staff of Homa.png";
 import Starconch from "./game/Starconch.png";
 import Starsilver from "./game/Starsilver.png";
+import StormBeads from "./game/Storm Beads.png";
 import Sucrose from "./game/Sucrose.png";
 import SummitShaper from "./game/Summit Shaper.png";
 import Sunsettia from "./game/Sunsettia.png";
@@ -338,12 +359,14 @@ import TenacityoftheMillelith from "./game/Tenacity of the Millelith.png";
 import TheAlleyFlash from "./game/The Alley Flash.png";
 import TheBell from "./game/The Bell.png";
 import TheBlackSword from "./game/The Black Sword.png";
+import TheCatch from "./game/The Catch.png";
 import TheExile from "./game/The Exile.png";
 import TheFlute from "./game/The Flute.png";
 import TheStringless from "./game/The Stringless.png";
 import TheUnforged from "./game/The Unforged.png";
 import TheViridescentHunt from "./game/The Viridescent Hunt.png";
 import TheWidsith from "./game/The Widsith.png";
+import Thoma from "./game/Thoma.png";
 import ThrillingTalesofDragonSlayers from "./game/Thrilling Tales of Dragon Slayers.png";
 import ThunderingFury from "./game/Thundering Fury.png";
 import Thundersoother from "./game/Thundersoother.png";
@@ -370,6 +393,7 @@ import VortexVanquisher from "./game/Vortex Vanquisher.png";
 import WanderersAdvice from "./game/Wanderer's Advice.png";
 import WanderersTroupe from "./game/Wanderer's Troupe.png";
 import WarmingBottle from "./game/Warming Bottle.png";
+import WavebreakersFin from "./game/Wavebreaker's Fin.png";
 import Wheat from "./game/Wheat.png";
 import WhiteIronChunk from "./game/White Iron Chunk.png";
 import WhiteIronGreatsword from "./game/White Iron Greatsword.png";
@@ -404,9 +428,12 @@ export {
   AdventurersExperience,
   Adventurer,
   AgnidusAgateSilver,
+  Akuoumaru,
   Albedo,
   AlleyHunter,
   Almond,
+  Aloy,
+  AmakumoFruit,
   Amber,
   AmenomaKageuchi,
   AmethystLump,
@@ -416,6 +443,7 @@ export {
   Apple,
   AquilaFavonia,
   ArchaicPetra,
+  AshenHeart,
   Ayaka,
   BackgroundAyaka,
   BackgroundDiluc,
@@ -473,6 +501,7 @@ export {
   CleansingHeart,
   CompanionshipExperience,
   CompoundBow,
+  ConcealedClaw,
   CondensedResin,
   CoolSteel,
   CorLapis,
@@ -496,6 +525,7 @@ export {
   DefendersWill,
   Dendro,
   Dendrobium,
+  DewofRepudiation,
   Diluc,
   Diona,
   DismalPrism,
@@ -513,9 +543,11 @@ export {
   ElegyfortheEnd,
   EmblemofSeveredFate,
   EmeraldOrb,
+  EngulfingLightning,
   EnhancementOre,
   Eula,
   EverflameSeed,
+  EverlastingMoonglow,
   EyeofPerception,
   Fabric,
   FavoniusCodex,
@@ -533,6 +565,7 @@ export {
   Fischl,
   Fish,
   FlamingFlowerStamen,
+  FluorescentFungus,
   Fowl,
   FragileBoneShard,
   FragrantCedarWood,
@@ -557,6 +590,7 @@ export {
   Hamayumi,
   HarbingerofDawn,
   HeavyHorn,
+  HellfireButterfly,
   HerosWit,
   HoarfrostCore,
   Horsetail,
@@ -579,6 +613,8 @@ export {
   Keqing,
   KitainCrossSpear,
   Klee,
+  Kokomi,
+  KujouSara,
   Lavawalker,
   LightningPrism,
   LionsRoar,
@@ -593,6 +629,7 @@ export {
   LuckyDog,
   LuminescentSpine,
   LuminousSandsfromGuyun,
+  LuxuriousSeaLord,
   MagicGuide,
   MagicalCrystalChunk,
   MaidenBeloved,
@@ -611,9 +648,11 @@ export {
   MistVeiledLeadElixir,
   MistsplitterReforged,
   MitternachtsWaltz,
+  MoltenMoment,
   Mona,
   Mondstadt,
   Mora,
+  MouunsMoon,
   Mushroom,
   MysticEnhancementOre,
   NakuWeed,
@@ -637,12 +676,14 @@ export {
   PineWood,
   Pinecone,
   PinkCircle,
+  PolarStar,
   PortableWaypoint,
   Potato,
   PrayersforDestiny,
   PrayersforIllumination,
   PrayersforWisdom,
   PrayerstoSpringtime,
+  Predator,
   Primogem,
   PrimordialJadeCutter,
   PrimordialJadeWingedSpear,
@@ -657,6 +698,7 @@ export {
   Qingxin,
   Qiqi,
   Radish,
+  RaidenShogun,
   Rainslasher,
   RavenBow,
   RawMeat,
@@ -684,6 +726,7 @@ export {
   SacrificialSword,
   SakuraBloom,
   SandbearerWood,
+  SangoPearl,
   Sayu,
   Scholar,
   SeaGanoderma,
@@ -712,10 +755,12 @@ export {
   SolarPearl,
   SongofBrokenPines,
   SouvenirShop,
+  SpectralHusk,
   SpiritLocketofBoreas,
   StaffofHoma,
   Starconch,
   Starsilver,
+  StormBeads,
   Sucrose,
   SummitShaper,
   Sunsettia,
@@ -737,12 +782,14 @@ export {
   TheAlleyFlash,
   TheBell,
   TheBlackSword,
+  TheCatch,
   TheExile,
   TheFlute,
   TheStringless,
   TheUnforged,
   TheViridescentHunt,
   TheWidsith,
+  Thoma,
   ThrillingTalesofDragonSlayers,
   ThunderingFury,
   Thundersoother,
@@ -769,6 +816,7 @@ export {
   WanderersAdvice,
   WanderersTroupe,
   WarmingBottle,
+  WavebreakersFin,
   Wheat,
   WhiteIronChunk,
   WhiteIronGreatsword,
@@ -805,9 +853,12 @@ export function getAssetByName(name: string): string | undefined {
     case "Adventurer's Experience": return AdventurersExperience.src;
     case "Adventurer": return Adventurer.src;
     case "Agnidus Agate Silver": return AgnidusAgateSilver.src;
+    case "Akuoumaru": return Akuoumaru.src;
     case "Albedo": return Albedo.src;
     case "Alley Hunter": return AlleyHunter.src;
     case "Almond": return Almond.src;
+    case "Aloy": return Aloy.src;
+    case "Amakumo Fruit": return AmakumoFruit.src;
     case "Amber": return Amber.src;
     case "Amenoma Kageuchi": return AmenomaKageuchi.src;
     case "Amethyst Lump": return AmethystLump.src;
@@ -817,6 +868,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Apple": return Apple.src;
     case "Aquila Favonia": return AquilaFavonia.src;
     case "Archaic Petra": return ArchaicPetra.src;
+    case "Ashen Heart": return AshenHeart.src;
     case "Ayaka": return Ayaka.src;
     case "BackgroundAyaka": return BackgroundAyaka.src;
     case "BackgroundDiluc": return BackgroundDiluc.src;
@@ -874,6 +926,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Cleansing Heart": return CleansingHeart.src;
     case "Companionship Experience": return CompanionshipExperience.src;
     case "Compound Bow": return CompoundBow.src;
+    case "Concealed Claw": return ConcealedClaw.src;
     case "Condensed Resin": return CondensedResin.src;
     case "Cool Steel": return CoolSteel.src;
     case "Cor Lapis": return CorLapis.src;
@@ -897,6 +950,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Defender's Will": return DefendersWill.src;
     case "Dendro": return Dendro.src;
     case "Dendrobium": return Dendrobium.src;
+    case "Dew of Repudiation": return DewofRepudiation.src;
     case "Diluc": return Diluc.src;
     case "Diona": return Diona.src;
     case "Dismal Prism": return DismalPrism.src;
@@ -914,9 +968,11 @@ export function getAssetByName(name: string): string | undefined {
     case "Elegy for the End": return ElegyfortheEnd.src;
     case "Emblem of Severed Fate": return EmblemofSeveredFate.src;
     case "Emerald Orb": return EmeraldOrb.src;
+    case "Engulfing Lightning": return EngulfingLightning.src;
     case "Enhancement Ore": return EnhancementOre.src;
     case "Eula": return Eula.src;
     case "Everflame Seed": return EverflameSeed.src;
+    case "Everlasting Moonglow": return EverlastingMoonglow.src;
     case "Eye of Perception": return EyeofPerception.src;
     case "Fabric": return Fabric.src;
     case "Favonius Codex": return FavoniusCodex.src;
@@ -934,6 +990,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Fischl": return Fischl.src;
     case "Fish": return Fish.src;
     case "Flaming Flower Stamen": return FlamingFlowerStamen.src;
+    case "Fluorescent Fungus": return FluorescentFungus.src;
     case "Fowl": return Fowl.src;
     case "Fragile Bone Shard": return FragileBoneShard.src;
     case "Fragrant Cedar Wood": return FragrantCedarWood.src;
@@ -958,6 +1015,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Hamayumi": return Hamayumi.src;
     case "Harbinger of Dawn": return HarbingerofDawn.src;
     case "Heavy Horn": return HeavyHorn.src;
+    case "Hellfire Butterfly": return HellfireButterfly.src;
     case "Hero's Wit": return HerosWit.src;
     case "Hoarfrost Core": return HoarfrostCore.src;
     case "Horsetail": return Horsetail.src;
@@ -980,6 +1038,8 @@ export function getAssetByName(name: string): string | undefined {
     case "Keqing": return Keqing.src;
     case "Kitain Cross Spear": return KitainCrossSpear.src;
     case "Klee": return Klee.src;
+    case "Kokomi": return Kokomi.src;
+    case "Kujou Sara": return KujouSara.src;
     case "Lavawalker": return Lavawalker.src;
     case "Lightning Prism": return LightningPrism.src;
     case "Lion's Roar": return LionsRoar.src;
@@ -994,6 +1054,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Lucky Dog": return LuckyDog.src;
     case "Luminescent Spine": return LuminescentSpine.src;
     case "Luminous Sands from Guyun": return LuminousSandsfromGuyun.src;
+    case "Luxurious Sea-Lord": return LuxuriousSeaLord.src;
     case "Magic Guide": return MagicGuide.src;
     case "Magical Crystal Chunk": return MagicalCrystalChunk.src;
     case "Maiden Beloved": return MaidenBeloved.src;
@@ -1012,9 +1073,11 @@ export function getAssetByName(name: string): string | undefined {
     case "Mist Veiled Lead Elixir": return MistVeiledLeadElixir.src;
     case "Mistsplitter Reforged": return MistsplitterReforged.src;
     case "Mitternachts Waltz": return MitternachtsWaltz.src;
+    case "Molten Moment": return MoltenMoment.src;
     case "Mona": return Mona.src;
     case "Mondstadt": return Mondstadt.src;
     case "Mora": return Mora.src;
+    case "Mouun's Moon": return MouunsMoon.src;
     case "Mushroom": return Mushroom.src;
     case "Mystic Enhancement Ore": return MysticEnhancementOre.src;
     case "Naku Weed": return NakuWeed.src;
@@ -1038,12 +1101,14 @@ export function getAssetByName(name: string): string | undefined {
     case "Pine Wood": return PineWood.src;
     case "Pinecone": return Pinecone.src;
     case "Pink Circle": return PinkCircle.src;
+    case "Polar Star": return PolarStar.src;
     case "Portable Waypoint": return PortableWaypoint.src;
     case "Potato": return Potato.src;
     case "Prayers for Destiny": return PrayersforDestiny.src;
     case "Prayers for Illumination": return PrayersforIllumination.src;
     case "Prayers for Wisdom": return PrayersforWisdom.src;
     case "Prayers to Springtime": return PrayerstoSpringtime.src;
+    case "Predator": return Predator.src;
     case "Primogem": return Primogem.src;
     case "Primordial Jade Cutter": return PrimordialJadeCutter.src;
     case "Primordial Jade Winged-Spear": return PrimordialJadeWingedSpear.src;
@@ -1058,6 +1123,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Qingxin": return Qingxin.src;
     case "Qiqi": return Qiqi.src;
     case "Radish": return Radish.src;
+    case "Raiden Shogun": return RaidenShogun.src;
     case "Rainslasher": return Rainslasher.src;
     case "Raven Bow": return RavenBow.src;
     case "Raw Meat": return RawMeat.src;
@@ -1085,6 +1151,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Sacrificial Sword": return SacrificialSword.src;
     case "Sakura Bloom": return SakuraBloom.src;
     case "Sandbearer Wood": return SandbearerWood.src;
+    case "Sango Pearl": return SangoPearl.src;
     case "Sayu": return Sayu.src;
     case "Scholar": return Scholar.src;
     case "Sea Ganoderma": return SeaGanoderma.src;
@@ -1113,10 +1180,12 @@ export function getAssetByName(name: string): string | undefined {
     case "Solar Pearl": return SolarPearl.src;
     case "Song of Broken Pines": return SongofBrokenPines.src;
     case "Souvenir Shop": return SouvenirShop.src;
+    case "Spectral Husk": return SpectralHusk.src;
     case "Spirit Locket of Boreas": return SpiritLocketofBoreas.src;
     case "Staff of Homa": return StaffofHoma.src;
     case "Starconch": return Starconch.src;
     case "Starsilver": return Starsilver.src;
+    case "Storm Beads": return StormBeads.src;
     case "Sucrose": return Sucrose.src;
     case "Summit Shaper": return SummitShaper.src;
     case "Sunsettia": return Sunsettia.src;
@@ -1138,12 +1207,14 @@ export function getAssetByName(name: string): string | undefined {
     case "The Alley Flash": return TheAlleyFlash.src;
     case "The Bell": return TheBell.src;
     case "The Black Sword": return TheBlackSword.src;
+    case "The Catch": return TheCatch.src;
     case "The Exile": return TheExile.src;
     case "The Flute": return TheFlute.src;
     case "The Stringless": return TheStringless.src;
     case "The Unforged": return TheUnforged.src;
     case "The Viridescent Hunt": return TheViridescentHunt.src;
     case "The Widsith": return TheWidsith.src;
+    case "Thoma": return Thoma.src;
     case "Thrilling Tales of Dragon Slayers": return ThrillingTalesofDragonSlayers.src;
     case "Thundering Fury": return ThunderingFury.src;
     case "Thundersoother": return Thundersoother.src;
@@ -1170,6 +1241,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Wanderer's Advice": return WanderersAdvice.src;
     case "Wanderer's Troupe": return WanderersTroupe.src;
     case "Warming Bottle": return WarmingBottle.src;
+    case "Wavebreaker's Fin": return WavebreakersFin.src;
     case "Wheat": return Wheat.src;
     case "White Iron Chunk": return WhiteIronChunk.src;
     case "White Iron Greatsword": return WhiteIronGreatsword.src;

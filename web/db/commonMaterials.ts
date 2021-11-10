@@ -263,6 +263,48 @@ export const CrystalMarrow: CommonMaterial = {
   wiki: "https://genshin-impact.fandom.com/wiki/Crystal_Marrow",
 };
 
+export const SpectralCore: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Spectral Core" }),
+  item: registerMessage({ defaultMessage: "Spectral Husk" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Spectral_Husk",
+};
+
+export const Dendrobium: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Dendrobium" }),
+  item: registerMessage({ defaultMessage: "Dendrobium" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Dendrobium",
+};
+
+export const AmakumoFruit: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Amakumo Fruit" }),
+  item: registerMessage({ defaultMessage: "Amakumo Fruit" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Amakumo_Fruit",
+};
+
+export const SangoPearl: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Sango Pearl" }),
+  item: registerMessage({ defaultMessage: "Sango Pearl" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Sango_Pearl",
+};
+
+export const ConcealedClaw: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Concealed Claw" }),
+  item: registerMessage({ defaultMessage: "Concealed Claw" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Concealed_Claw",
+};
+
+export const FluorescentFungus: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Fluorescent Fungus" }),
+  item: registerMessage({ defaultMessage: "Fluorescent Fungus" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Fluorescent_Fungus",
+};
+
 export const CommonMaterials = [
   BoneShard,
   CallaLily,
@@ -300,4 +342,10 @@ export const CommonMaterials = [
   ChaosGear,
   MirrorPrism,
   CrystalMarrow,
+  SpectralCore,
+  Dendrobium,
+  AmakumoFruit,
+  SangoPearl,
+  ConcealedClaw,
+  FluorescentFungus,
 ];

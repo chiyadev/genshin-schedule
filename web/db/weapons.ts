@@ -15,6 +15,7 @@ import {
   ChaosGear,
   ChaosPart,
   CommonMaterial,
+  ConcealedClaw,
   FatuiInsignia,
   FatuiKnife,
   Handguard,
@@ -26,6 +27,7 @@ import {
   MistGrass,
   SamachurlScroll,
   Slime,
+  SpectralCore,
   TreasureHoarderInsignia,
   WhopperflowerNectar,
 } from "./commonMaterials";
@@ -163,6 +165,7 @@ add(registerMessage({ defaultMessage: "Black Tassel" }), Aerosiderite, [BoneShar
 add(registerMessage({ defaultMessage: "Compound Bow" }), Aerosiderite, [BoneShard, FatuiInsignia]);
 add(registerMessage({ defaultMessage: "Iron Sting" }), Aerosiderite, [BoneShard, WhopperflowerNectar]);
 add(registerMessage({ defaultMessage: "Lithic Spear" }), Aerosiderite, [BoneShard, HilichurlArrowhead]);
+add(registerMessage({ defaultMessage: "Luxurious Sea-Lord" }), Aerosiderite, [BoneShard, Slime]);
 add(registerMessage({ defaultMessage: "Mappa Mare" }), Aerosiderite, [BoneShard, Slime]);
 add(registerMessage({ defaultMessage: "Memory of Dust" }), Aerosiderite, [BoneShard, HilichurlMask]);
 add(registerMessage({ defaultMessage: "Prototype Archaic" }), Aerosiderite, [BoneShard, HilichurlMask]);
@@ -174,13 +177,21 @@ add(registerMessage({ defaultMessage: "Staff of Homa" }), Aerosiderite, [LeyLine
 add(registerMessage({ defaultMessage: "Vortex Vanquisher" }), Aerosiderite, [BoneShard, TreasureHoarderInsignia]);
 
 // Branch of Distant Sea
-add(registerMessage({ defaultMessage: "Mistsplitter Reforged" }), BranchOfDistantSea, [ChaosGear, Handguard]);
-add(registerMessage({ defaultMessage: "Hakushin Ring" }), BranchOfDistantSea, [MirrorPrism, SamachurlScroll]);
+add(registerMessage({ defaultMessage: "Akuoumaru" }), BranchOfDistantSea, [ConcealedClaw, Handguard]);
 add(registerMessage({ defaultMessage: "Amenoma Kageuchi" }), BranchOfDistantSea, [ChaosGear, Handguard]);
+add(registerMessage({ defaultMessage: "Everlasting Moonglow" }), BranchOfDistantSea, [MirrorPrism, SpectralCore]);
+add(registerMessage({ defaultMessage: "Hakushin Ring" }), BranchOfDistantSea, [MirrorPrism, SamachurlScroll]);
+add(registerMessage({ defaultMessage: "Mistsplitter Reforged" }), BranchOfDistantSea, [ChaosGear, Handguard]);
 
 // Narukami
 add(registerMessage({ defaultMessage: "Hamayumi" }), Narukami, [MirrorPrism, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "Katsuragikiri Nagamasa" }), Narukami, [ChaosGear, Handguard]);
+add(registerMessage({ defaultMessage: "Mouun's Moon" }), Narukami, [MirrorPrism, SpectralCore]);
+add(registerMessage({ defaultMessage: "Predator" }), Narukami, [MirrorPrism, HilichurlArrowhead]);
 
 // Mask
+add(registerMessage({ defaultMessage: "Engulfing Lightning" }), NarukamiMask, [ChaosGear, Handguard]);
 add(registerMessage({ defaultMessage: "Kitain Cross Spear" }), NarukamiMask, [ChaosGear, TreasureHoarderInsignia]);
+add(registerMessage({ defaultMessage: "Polar Star" }), NarukamiMask, [ConcealedClaw, SpectralCore]);
+add(registerMessage({ defaultMessage: "The Catch" }), NarukamiMask, [ChaosGear, SpectralCore]);
+add(registerMessage({ defaultMessage: "Wavebreaker's Fin" }), NarukamiMask, [ConcealedClaw, Handguard]);
