@@ -61,7 +61,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr "Пароль"
 
-#: components/ChangelogModal.tsx:237
+#: components/ChangelogModal.tsx:238
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr "Список изменений обновлений"
