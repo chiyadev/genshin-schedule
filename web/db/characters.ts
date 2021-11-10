@@ -1,4 +1,5 @@
 import {
+  AshenHeart,
   Ballad,
   BloodjadeBranch,
   Diligence,
@@ -10,7 +11,9 @@ import {
   Freedom,
   GildedScale,
   Gold,
+  HellfireButterfly,
   Light,
+  MoltenMoment,
   Prosperity,
   Resistance,
   RingOfBoreas,
@@ -23,13 +26,16 @@ import {
   TuskOfMonocerosCaeli,
 } from "./talentMaterials";
 import {
+  AmakumoFruit,
   CallaLily,
   Cecilia,
   CommonMaterial,
   CorLapis,
   CrystalMarrow,
   DandelionSeed,
+  Dendrobium,
   FatuiInsignia,
+  FluorescentFungus,
   GlazeLily,
   Handguard,
   HilichurlArrowhead,
@@ -41,10 +47,12 @@ import {
   Qingxin,
   SakuraBloom,
   SamachurlScroll,
+  SangoPearl,
   SeaGanoderma,
   SilkFlower,
   Slime,
   SmallLampGrass,
+  SpectralCore,
   Starconch,
   TreasureHoarderInsignia,
   Valberry,
@@ -61,6 +69,7 @@ import {
   CharacterMaterial,
   CleansingHeart,
   CrystallineBloom,
+  DewOfRepudiation,
   EverflameSeed,
   HoarfrostCore,
   HurricaneSeed,
@@ -71,6 +80,7 @@ import {
   PrithivaTopaz,
   ShivadaJade,
   SmolderingPearl,
+  StormBeads,
   VajradaAmethyst,
   VarunadaLazurite,
   VayudaTurquoise,
@@ -482,11 +492,63 @@ export const Yoimiya: Character = {
   commonMaterials: [SamachurlScroll, NakuWeed],
 };
 
+export const RaidenShogun: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Raiden Shogun" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Raiden_Shogun",
+  materials: [VajradaAmethyst, StormBeads],
+  talentMaterialWeekly: MoltenMoment,
+  talentMaterial: Light,
+  commonMaterials: [Handguard, AmakumoFruit],
+};
+
+export const KujouSara: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Kujou Sara" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Kujou_Sara",
+  materials: [VajradaAmethyst, StormBeads],
+  talentMaterialWeekly: AshenHeart,
+  talentMaterial: Elegance,
+  commonMaterials: [HilichurlMask, Dendrobium],
+};
+
+export const Kokomi: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Kokomi" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Sangonomiya_Kokomi",
+  materials: [VarunadaLazurite, DewOfRepudiation],
+  talentMaterialWeekly: HellfireButterfly,
+  talentMaterial: Transience,
+  commonMaterials: [SpectralCore, SangoPearl],
+};
+
+export const Aloy: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Aloy" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Aloy",
+  materials: [ShivadaJade, CrystallineBloom],
+  talentMaterialWeekly: MoltenMoment,
+  talentMaterial: Freedom,
+  commonMaterials: [SpectralCore, CrystalMarrow],
+};
+
+export const Thoma: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Thoma" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Thoma",
+  materials: [AgnidusAgate, SmolderingPearl],
+  talentMaterialWeekly: HellfireButterfly,
+  talentMaterial: Transience,
+  commonMaterials: [TreasureHoarderInsignia, FluorescentFungus],
+};
+
 export const Characters = [
+  // https://github.com/chiyadev/genshin-schedule/issues/11
   //TravelerAnemo,
   //TravelerGeo,
   //TravelerElectro,
   Albedo,
+  Aloy,
   Amber,
   Ayaka,
   Barbara,
@@ -501,25 +563,29 @@ export const Characters = [
   HuTao,
   Jean,
   Kaeya,
+  Kazuha,
   Keqing,
   Klee,
+  Kokomi,
+  KujouSara,
   Lisa,
   Mona,
   Ningguang,
   Noelle,
   Qiqi,
+  RaidenShogun,
   Razor,
   Rosaria,
+  Sayu,
   Sucrose,
   Tartaglia,
+  Thoma,
   Venti,
   Xiangling,
   Xiao,
   Xingqiu,
   Xinyan,
   Yanfei,
-  Zhongli,
-  Kazuha,
-  Sayu,
   Yoimiya,
+  Zhongli,
 ];
