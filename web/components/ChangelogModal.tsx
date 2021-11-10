@@ -26,6 +26,7 @@ function buildChangelog() {
     <ChangelogSection key={34} date="2021/11/10">
       <ChangelogItem github={100}>Added 2.1 and 2.2 characters, weapons and artifacts.</ChangelogItem>
       <ChangelogItem github={101}>Updated character images in customize page to be more consistent.</ChangelogItem>
+      <ChangelogItem github={102}>Fixed Violet Court domain drops not being displayed on Sundays.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={33} date="2021/08/28">
       <ChangelogItem github={96}>Added buttons to show done tasks in task list.</ChangelogItem>

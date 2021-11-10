@@ -30,6 +30,7 @@ import {
   VioletCourtDrops1,
   VioletCourtDrops2,
   VioletCourtDrops3,
+  VioletCourtDrops4,
   WolfOfTheNorthChallengeDrops,
   SunkenSands,
   AltarOfSands,
@@ -184,7 +185,7 @@ export const VioletCourt: Domain = {
   type: "Domain",
   name: registerMessage({ defaultMessage: "Violet Court" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Violet_Court",
-  drops: [VioletCourtDrops1, VioletCourtDrops2, VioletCourtDrops3],
+  drops: [VioletCourtDrops1, VioletCourtDrops2, VioletCourtDrops3, VioletCourtDrops4],
 };
 
 export const CourtOfFlowingSand: Domain = {
