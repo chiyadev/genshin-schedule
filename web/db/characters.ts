@@ -543,6 +543,7 @@ export const Thoma: Character = {
 };
 
 export const Characters = [
+  // https://github.com/chiyadev/genshin-schedule/issues/11
   //TravelerAnemo,
   //TravelerGeo,
   //TravelerElectro,

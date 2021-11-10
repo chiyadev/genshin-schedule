@@ -17,10 +17,15 @@ import {
 import { FormattedMessage } from "react-intl";
 import { GitPullRequest } from "react-feather";
 
-const LatestChangelog = 33;
+const LatestChangelog = 34;
 
 function buildChangelog() {
+  // To create a new changelog section, increment LatestChangelog counter by one
+  // and ensure that the counter is equal to the key of the first element in this array.
   return [
+    <ChangelogSection key={34} date="2021/11/10">
+      <ChangelogItem github={100}>Added 2.1 and 2.2 characters, weapons and artifacts.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={33} date="2021/08/28">
       <ChangelogItem github={96}>Added buttons to show done tasks in task list.</ChangelogItem>
       <ChangelogItem>Added missing Amethyst Lump icon.</ChangelogItem>
@@ -244,7 +249,7 @@ const ChangelogModal = () => {
   );
 };
 
-const ChangelogSection = ({ date, children }: { date?: ReactNode; children?: ReactNode }) => {
+const ChangelogSection = ({ date, children }: { date: ReactNode; children?: ReactNode }) => {
   return (
     <VStack align="start" spacing={3}>
       <Heading size="sm">{date}</Heading>
