@@ -75,6 +75,7 @@ import ChaosDevice from "./game/Chaos Device.png";
 import ChaosGear from "./game/Chaos Gear.png";
 import ChilledMeat from "./game/Chilled Meat.png";
 import Chongyun from "./game/Chongyun.png";
+import CinnabarSpindle from "./game/Cinnabar Spindle.png";
 import CleansingHeart from "./game/Cleansing Heart.png";
 import CompanionshipExperience from "./game/Companionship Experience.png";
 import CompoundBow from "./game/Compound Bow.png";
@@ -287,6 +288,7 @@ import RecruitsInsignia from "./game/Recruit's Insignia.png";
 import RecurveBow from "./game/Recurve Bow.png";
 import RedCircle from "./game/Red Circle.png";
 import RedDye from "./game/Red Dye.png";
+import RedhornStonethresher from "./game/Redhorn Stonethresher.png";
 import Resin from "./game/Resin.png";
 import ResolutionofSojourner from "./game/Resolution of Sojourner.png";
 import Restaurant from "./game/Restaurant.png";
@@ -501,6 +503,7 @@ export {
   ChaosGear,
   ChilledMeat,
   Chongyun,
+  CinnabarSpindle,
   CleansingHeart,
   CompanionshipExperience,
   CompoundBow,
@@ -713,6 +716,7 @@ export {
   RecurveBow,
   RedCircle,
   RedDye,
+  RedhornStonethresher,
   Resin,
   ResolutionofSojourner,
   Restaurant,
@@ -929,6 +933,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Chaos Gear": return ChaosGear.src;
     case "Chilled Meat": return ChilledMeat.src;
     case "Chongyun": return Chongyun.src;
+    case "Cinnabar Spindle": return CinnabarSpindle.src;
     case "Cleansing Heart": return CleansingHeart.src;
     case "Companionship Experience": return CompanionshipExperience.src;
     case "Compound Bow": return CompoundBow.src;
@@ -1141,6 +1146,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Recurve Bow": return RecurveBow.src;
     case "Red Circle": return RedCircle.src;
     case "Red Dye": return RedDye.src;
+    case "Redhorn Stonethresher": return RedhornStonethresher.src;
     case "Resin": return Resin.src;
     case "Resolution of Sojourner": return ResolutionofSojourner.src;
     case "Restaurant": return Restaurant.src;

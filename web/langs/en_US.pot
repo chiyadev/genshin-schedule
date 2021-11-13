@@ -1986,12 +1986,12 @@ msgctxt "db.domainCategories.f98247"
 msgid "Weekly Challenge"
 msgstr ""
 
-#: db/domainDropSets.ts:378
+#: db/domainDropSets.ts:379
 msgctxt "db.domainDropSets.3153a6"
 msgid "Altar of Sands"
 msgstr ""
 
-#: db/domainDropSets.ts:371
+#: db/domainDropSets.ts:372
 msgctxt "db.domainDropSets.350bc4"
 msgid "Sunken Sands"
 msgstr ""
@@ -2021,7 +2021,7 @@ msgctxt "db.domainDropSets.b61667"
 msgid "Submerged Valley"
 msgstr ""
 
-#: db/domainDropSets.ts:385
+#: db/domainDropSets.ts:386
 msgctxt "db.domainDropSets.c47ef9"
 msgid "Sand Burial"
 msgstr ""
@@ -2041,167 +2041,172 @@ msgctxt "db.domainDropSets.ffe184"
 msgid "Thundering Ruins"
 msgstr ""
 
-#: db/domains.ts:74
+#: db/domains.ts:75
 msgctxt "db.domains.011253"
 msgid "Hidden Palace of Lianshan Formula"
 msgstr ""
 
-#: db/domains.ts:116
+#: db/domains.ts:117
 msgctxt "db.domains.0cfa31"
 msgid "Forsaken Rift"
 msgstr ""
 
-#: db/domains.ts:228
+#: db/domains.ts:229
 msgctxt "db.domains.1a6b1b"
 msgid "Primo Geovishap"
 msgstr ""
 
-#: db/domains.ts:172
+#: db/domains.ts:173
 msgctxt "db.domains.1c6c7d"
 msgid "Ridge Watch"
 msgstr ""
 
-#: db/domains.ts:200
+#: db/domains.ts:201
 msgctxt "db.domains.20c902"
 msgid "Anemo Hypostasis"
 msgstr ""
 
-#: db/domains.ts:81
+#: db/domains.ts:82
 msgctxt "db.domains.24e0e0"
 msgid "Midsummer Courtyard"
 msgstr ""
 
-#: db/domains.ts:123
+#: db/domains.ts:124
 msgctxt "db.domains.2bbe8b"
 msgid "Taishan Mansion"
 msgstr ""
 
-#: db/domains.ts:256
+#: db/domains.ts:257
 msgctxt "db.domains.2d6984"
 msgid "Pyro Regisvine"
 msgstr ""
 
-#: db/domains.ts:165
+#: db/domains.ts:166
 msgctxt "db.domains.2e59fb"
 msgid "Narukami Island: Tenshukaku"
 msgstr ""
 
-#: db/domains.ts:284
+#: db/domains.ts:285
 msgctxt "db.domains.31c6bb"
 msgid "Hydro Hypostasis"
 msgstr ""
 
-#: db/domains.ts:214
+#: db/domains.ts:215
 msgctxt "db.domains.5749e3"
 msgid "Cryo Regisvine"
 msgstr ""
 
-#: db/domains.ts:102
+#: db/domains.ts:103
 msgctxt "db.domains.5d9d5d"
 msgid "Hidden Palace of Zhou Formula"
 msgstr ""
 
-#: db/domains.ts:193
+#: db/domains.ts:292
+msgctxt "db.domains.68fb19"
+msgid "Golden Wolflord"
+msgstr ""
+
+#: db/domains.ts:194
 msgctxt "db.domains.6ea1ac"
 msgid "Court of Flowing Sand"
 msgstr ""
 
-#: db/domains.ts:179
+#: db/domains.ts:180
 msgctxt "db.domains.6f9aa8"
 msgid "Momiji-Dyed Court"
 msgstr ""
 
-#: db/domains.ts:137
+#: db/domains.ts:138
 msgctxt "db.domains.70d1b9"
 msgid "Wolf of the North Challenge"
 msgstr ""
 
-#: db/domains.ts:186
+#: db/domains.ts:187
 msgctxt "db.domains.76827f"
 msgid "Violet Court"
 msgstr ""
 
-#: db/domains.ts:235
+#: db/domains.ts:236
 msgctxt "db.domains.7bb25e"
 msgid "Electro Hypostasis"
 msgstr ""
 
-#: db/domains.ts:95
+#: db/domains.ts:96
 msgctxt "db.domains.85e44a"
 msgid "Valley of Remembrance"
 msgstr ""
 
-#: db/domains.ts:151
+#: db/domains.ts:152
 msgctxt "db.domains.8e6257"
 msgid "Enter the Golden House"
 msgstr ""
 
-#: db/domains.ts:63
+#: db/domains.ts:64
 msgctxt "db.domains.a00160"
 msgid "Domain"
 msgstr ""
 
-#: db/domains.ts:221
+#: db/domains.ts:222
 msgctxt "db.domains.a0d4e3"
 msgid "Cryo Hypostasis"
 msgstr ""
 
-#: db/domains.ts:277
+#: db/domains.ts:278
 msgctxt "db.domains.a55538"
 msgid "Thunder Manifestation"
 msgstr ""
 
-#: db/domains.ts:263
+#: db/domains.ts:264
 msgctxt "db.domains.bd9e6f"
 msgid "Pyro Hypostasis"
 msgstr ""
 
-#: db/domains.ts:144
+#: db/domains.ts:145
 msgctxt "db.domains.c4c6cc"
 msgid "Peak of Vindagnyr"
 msgstr ""
 
-#: db/domains.ts:249
+#: db/domains.ts:250
 msgctxt "db.domains.d4a950"
 msgid "Rhodeia of Loch"
 msgstr ""
 
-#: db/domains.ts:158
+#: db/domains.ts:159
 msgctxt "db.domains.dbf3b5"
 msgid "Beneath the Dragon-Queller"
 msgstr ""
 
-#: db/domains.ts:207
+#: db/domains.ts:208
 msgctxt "db.domains.e09906"
 msgid "Maguu Kenki"
 msgstr ""
 
-#: db/domains.ts:242
+#: db/domains.ts:243
 msgctxt "db.domains.e2e8f5"
 msgid "Geo Hypostasis"
 msgstr ""
 
-#: db/domains.ts:270
+#: db/domains.ts:271
 msgctxt "db.domains.f07d15"
 msgid "Perpetual Mechanical Array"
 msgstr ""
 
-#: db/domains.ts:130
+#: db/domains.ts:131
 msgctxt "db.domains.f93fee"
 msgid "Confront Stormterror"
 msgstr ""
 
-#: db/domains.ts:88
+#: db/domains.ts:89
 msgctxt "db.domains.fc295a"
 msgid "Domain of Guyun"
 msgstr ""
 
-#: db/domains.ts:109
+#: db/domains.ts:110
 msgctxt "db.domains.fc83f4"
 msgid "Clear Pool and Mountain Cavern"
 msgstr ""
 
-#: db/domains.ts:67
+#: db/domains.ts:68
 msgctxt "db.domains.fe4688"
 msgid "Cecilia Garden"
 msgstr ""
@@ -3571,32 +3576,32 @@ msgctxt "db.weaponMaterials.fa188c"
 msgid "Branch of Distant Sea"
 msgstr ""
 
-#: db/weapons.ts:121
+#: db/weapons.ts:122
 msgctxt "db.weapons.02470f"
 msgid "White Iron Greatsword"
 msgstr ""
 
-#: db/weapons.ts:101
+#: db/weapons.ts:102
 msgctxt "db.weapons.025ed2"
 msgid "Amos' Bow"
 msgstr ""
 
-#: db/weapons.ts:82
+#: db/weapons.ts:83
 msgctxt "db.weapons.03f248"
 msgid "Dragonspine Spear"
 msgstr ""
 
-#: db/weapons.ts:194
+#: db/weapons.ts:196
 msgctxt "db.weapons.040218"
 msgid "Kitain Cross Spear"
 msgstr ""
 
-#: db/weapons.ts:160
+#: db/weapons.ts:161
 msgctxt "db.weapons.073d1f"
 msgid "The Unforged"
 msgstr ""
 
-#: db/weapons.ts:90
+#: db/weapons.ts:91
 msgctxt "db.weapons.0c4b78"
 msgid "Skyward Harp"
 msgstr ""
@@ -3606,27 +3611,27 @@ msgctxt "db.weapons.0c570b"
 msgid "Magic Guide"
 msgstr ""
 
-#: db/weapons.ts:127
+#: db/weapons.ts:128
 msgctxt "db.weapons.0c59e2"
 msgid "Blackcliff Longsword"
 msgstr ""
 
-#: db/weapons.ts:86
+#: db/weapons.ts:87
 msgctxt "db.weapons.119465"
 msgid "Sacrificial Greatsword"
 msgstr ""
 
-#: db/weapons.ts:195
+#: db/weapons.ts:197
 msgctxt "db.weapons.119676"
 msgid "Polar Star"
 msgstr ""
 
-#: db/weapons.ts:144
+#: db/weapons.ts:145
 msgctxt "db.weapons.138035"
 msgid "Blackcliff Slasher"
 msgstr ""
 
-#: db/weapons.ts:110
+#: db/weapons.ts:111
 msgctxt "db.weapons.13b285"
 msgid "Otherworldly Story"
 msgstr ""
@@ -3641,52 +3646,57 @@ msgctxt "db.weapons.16cefd"
 msgid "Royal Grimoire"
 msgstr ""
 
-#: db/weapons.ts:148
+#: db/weapons.ts:149
 msgctxt "db.weapons.180e9e"
 msgid "Fillet Blade"
 msgstr ""
 
-#: db/weapons.ts:106
+#: db/weapons.ts:107
 msgctxt "db.weapons.188019"
 msgid "Festering Desire"
 msgstr ""
 
-#: db/weapons.ts:181
+#: db/weapons.ts:182
 msgctxt "db.weapons.19a216"
 msgid "Amenoma Kageuchi"
 msgstr ""
 
-#: db/weapons.ts:188
+#: db/weapons.ts:189
 msgctxt "db.weapons.1a2044"
 msgid "Katsuragikiri Nagamasa"
 msgstr ""
 
-#: db/weapons.ts:135
+#: db/weapons.ts:136
 msgctxt "db.weapons.1ac9a9"
 msgid "Rust"
 msgstr ""
 
-#: db/weapons.ts:159
+#: db/weapons.ts:160
 msgctxt "db.weapons.1c3519"
 msgid "Royal Spear"
 msgstr ""
 
-#: db/weapons.ts:197
+#: db/weapons.ts:199
 msgctxt "db.weapons.1fc19a"
 msgid "Wavebreaker's Fin"
 msgstr ""
 
-#: db/weapons.ts:81
+#: db/weapons.ts:77
+msgctxt "db.weapons.1fd882"
+msgid "Cinnabar Spindle"
+msgstr ""
+
+#: db/weapons.ts:82
 msgctxt "db.weapons.230154"
 msgid "Dodoco Tales"
 msgstr ""
 
-#: db/weapons.ts:157
+#: db/weapons.ts:158
 msgctxt "db.weapons.28794d"
 msgid "Prototype Rancour"
 msgstr ""
 
-#: db/weapons.ts:174
+#: db/weapons.ts:175
 msgctxt "db.weapons.313d62"
 msgid "Skyrider Greatsword"
 msgstr ""
@@ -3696,137 +3706,137 @@ msgctxt "db.weapons.3801e6"
 msgid "The Alley Flash"
 msgstr ""
 
-#: db/weapons.ts:182
+#: db/weapons.ts:183
 msgctxt "db.weapons.39d5a4"
 msgid "Everlasting Moonglow"
 msgstr ""
 
-#: db/weapons.ts:143
+#: db/weapons.ts:144
 msgctxt "db.weapons.3ba383"
 msgid "Blackcliff Pole"
 msgstr ""
 
-#: db/weapons.ts:85
+#: db/weapons.ts:86
 msgctxt "db.weapons.3bc913"
 msgid "Sacrificial Bow"
 msgstr ""
 
-#: db/weapons.ts:108
+#: db/weapons.ts:109
 msgctxt "db.weapons.3e536f"
 msgid "Frostbearer"
 msgstr ""
 
-#: db/weapons.ts:80
+#: db/weapons.ts:81
 msgctxt "db.weapons.4488ef"
 msgid "Deathmatch"
 msgstr ""
 
-#: db/weapons.ts:170
+#: db/weapons.ts:171
 msgctxt "db.weapons.46ab3b"
 msgid "Memory of Dust"
 msgstr ""
 
-#: db/weapons.ts:130
+#: db/weapons.ts:131
 msgctxt "db.weapons.471e2a"
 msgid "Dark Iron Sword"
 msgstr ""
 
-#: db/weapons.ts:96
+#: db/weapons.ts:97
 msgctxt "db.weapons.48bcb2"
 msgid "Thrilling Tales of Dragon Slayers"
 msgstr ""
 
-#: db/weapons.ts:114
+#: db/weapons.ts:115
 msgctxt "db.weapons.48dcf8"
 msgid "Sacrificial Fragments"
 msgstr ""
 
-#: db/weapons.ts:112
+#: db/weapons.ts:113
 msgctxt "db.weapons.48e9df"
 msgid "Royal Bow"
 msgstr ""
 
-#: db/weapons.ts:145
+#: db/weapons.ts:146
 msgctxt "db.weapons.4da5a4"
 msgid "Debate Club"
 msgstr ""
 
-#: db/weapons.ts:175
+#: db/weapons.ts:176
 msgctxt "db.weapons.4df4c4"
 msgid "Skyrider Sword"
 msgstr ""
 
-#: db/weapons.ts:132
+#: db/weapons.ts:133
 msgctxt "db.weapons.4f92ed"
 msgid "Lithic Blade"
 msgstr ""
 
-#: db/weapons.ts:166
+#: db/weapons.ts:167
 msgctxt "db.weapons.500132"
 msgid "Iron Sting"
 msgstr ""
 
-#: db/weapons.ts:146
+#: db/weapons.ts:147
 msgctxt "db.weapons.5553fb"
 msgid "Dragon's Bane"
 msgstr ""
 
-#: db/weapons.ts:83
+#: db/weapons.ts:84
 msgctxt "db.weapons.587ae5"
 msgid "Elegy for the End"
 msgstr ""
 
-#: db/weapons.ts:165
+#: db/weapons.ts:166
 msgctxt "db.weapons.59adc6"
 msgid "Compound Bow"
 msgstr ""
 
-#: db/weapons.ts:167
+#: db/weapons.ts:168
 msgctxt "db.weapons.59b38a"
 msgid "Lithic Spear"
 msgstr ""
 
-#: db/weapons.ts:137
+#: db/weapons.ts:138
 msgctxt "db.weapons.5e235d"
 msgid "Solar Pearl"
 msgstr ""
 
-#: db/weapons.ts:149
+#: db/weapons.ts:150
 msgctxt "db.weapons.623be3"
 msgid "Halberd"
 msgstr ""
 
-#: db/weapons.ts:161
+#: db/weapons.ts:162
 msgctxt "db.weapons.630c0f"
 msgid "Twin Nephrite"
 msgstr ""
 
-#: db/weapons.ts:183
+#: db/weapons.ts:184
 msgctxt "db.weapons.64f159"
 msgid "Hakushin Ring"
 msgstr ""
 
-#: db/weapons.ts:93
+#: db/weapons.ts:94
 msgctxt "db.weapons.6a706f"
 msgid "The Black Sword"
 msgstr ""
 
-#: db/weapons.ts:134
+#: db/weapons.ts:135
 msgctxt "db.weapons.737d80"
 msgid "Primordial Jade Winged-Spear"
 msgstr ""
 
-#: db/weapons.ts:123
+#: db/weapons.ts:124
 msgctxt "db.weapons.7443eb"
 msgid "Wolf's Gravestone"
 msgstr ""
 
-#: db/weapons.ts:156
+#: db/weapons.ts:157
 msgctxt "db.weapons.748ca0"
 msgid "Prototype Amber"
 msgstr ""
 
-#: db/weapons.ts:92
+#: db/weapons.ts:93
 msgctxt "db.weapons.78c45f"
 msgid "Sword of Descension"
 msgstr ""
@@ -3836,22 +3846,22 @@ msgctxt "db.weapons.7b69b8"
 msgid "The Bell"
 msgstr ""
 
-#: db/weapons.ts:97
+#: db/weapons.ts:98
 msgctxt "db.weapons.867c82"
 msgid "Wine and Song"
 msgstr ""
 
-#: db/weapons.ts:147
+#: db/weapons.ts:148
 msgctxt "db.weapons.874a83"
 msgid "Eye of Perception"
 msgstr ""
 
-#: db/weapons.ts:172
+#: db/weapons.ts:173
 msgctxt "db.weapons.88b507"
 msgid "Prototype Starglitter"
 msgstr ""
 
-#: db/weapons.ts:155
+#: db/weapons.ts:156
 msgctxt "db.weapons.8990d6"
 msgid "Prototype Crescent"
 msgstr ""
@@ -3861,62 +3871,62 @@ msgctxt "db.weapons.8b8a4f"
 msgid "Weapon"
 msgstr ""
 
-#: db/weapons.ts:118
+#: db/weapons.ts:119
 msgctxt "db.weapons.8de396"
 msgid "Sacrificial Sword"
 msgstr ""
 
-#: db/weapons.ts:105
+#: db/weapons.ts:106
 msgctxt "db.weapons.8e76e6"
 msgid "Favonius Warbow"
 msgstr ""
 
-#: db/weapons.ts:122
+#: db/weapons.ts:123
 msgctxt "db.weapons.8f3c08"
 msgid "Windblume Ode"
 msgstr ""
 
-#: db/weapons.ts:187
+#: db/weapons.ts:188
 msgctxt "db.weapons.91de62"
 msgid "Hamayumi"
 msgstr ""
 
-#: db/weapons.ts:131
+#: db/weapons.ts:132
 msgctxt "db.weapons.932810"
 msgid "Emerald Orb"
 msgstr ""
 
-#: db/weapons.ts:107
+#: db/weapons.ts:108
 msgctxt "db.weapons.9c6933"
 msgid "Freedom-Sworn"
 msgstr ""
 
-#: db/weapons.ts:171
+#: db/weapons.ts:172
 msgctxt "db.weapons.9d7f69"
 msgid "Prototype Archaic"
 msgstr ""
 
-#: db/weapons.ts:138
+#: db/weapons.ts:139
 msgctxt "db.weapons.9fe22c"
 msgid "Summit Shaper"
 msgstr ""
 
-#: db/weapons.ts:150
+#: db/weapons.ts:151
 msgctxt "db.weapons.a0205e"
 msgid "Messenger"
 msgstr ""
 
-#: db/weapons.ts:158
+#: db/weapons.ts:159
 msgctxt "db.weapons.a1a162"
 msgid "Rainslasher"
 msgstr ""
 
-#: db/weapons.ts:196
+#: db/weapons.ts:198
 msgctxt "db.weapons.a2de1f"
 msgid "The Catch"
 msgstr ""
 
-#: db/weapons.ts:120
+#: db/weapons.ts:121
 msgctxt "db.weapons.a66256"
 msgid "Traveler's Handy Sword"
 msgstr ""
@@ -3926,12 +3936,12 @@ msgctxt "db.weapons.a77ea9"
 msgid "The Stringless"
 msgstr ""
 
-#: db/weapons.ts:126
+#: db/weapons.ts:127
 msgctxt "db.weapons.a794cd"
 msgid "Blackcliff Agate"
 msgstr ""
 
-#: db/weapons.ts:190
+#: db/weapons.ts:191
 msgctxt "db.weapons.ad7045"
 msgid "Predator"
 msgstr ""
@@ -3941,22 +3951,22 @@ msgctxt "db.weapons.af9dce"
 msgid "Favonius Codex"
 msgstr ""
 
-#: db/weapons.ts:89
+#: db/weapons.ts:90
 msgctxt "db.weapons.b1b853"
 msgid "Skyward Blade"
 msgstr ""
 
-#: db/weapons.ts:109
+#: db/weapons.ts:110
 msgctxt "db.weapons.b2d661"
 msgid "Lost Prayer to the Sacred Winds"
 msgstr ""
 
-#: db/weapons.ts:113
+#: db/weapons.ts:114
 msgctxt "db.weapons.b5f792"
 msgid "Royal Greatsword"
 msgstr ""
 
-#: db/weapons.ts:189
+#: db/weapons.ts:190
 msgctxt "db.weapons.b70f24"
 msgid "Mouun's Moon"
 msgstr ""
@@ -3966,12 +3976,12 @@ msgctxt "db.weapons.bde733"
 msgid "Raven Bow"
 msgstr ""
 
-#: db/weapons.ts:104
+#: db/weapons.ts:105
 msgctxt "db.weapons.bffca8"
 msgid "Favonius Lance"
 msgstr ""
 
-#: db/weapons.ts:180
+#: db/weapons.ts:181
 msgctxt "db.weapons.c0d32e"
 msgid "Akuoumaru"
 msgstr ""
@@ -3981,72 +3991,72 @@ msgctxt "db.weapons.c1ee71"
 msgid "Mitternachts Waltz"
 msgstr ""
 
-#: db/weapons.ts:133
+#: db/weapons.ts:134
 msgctxt "db.weapons.ca27da"
 msgid "Lion's Roar"
 msgstr ""
 
-#: db/weapons.ts:184
+#: db/weapons.ts:185
 msgctxt "db.weapons.caea60"
 msgid "Mistsplitter Reforged"
 msgstr ""
 
-#: db/weapons.ts:111
+#: db/weapons.ts:112
 msgctxt "db.weapons.cb0fdc"
 msgid "Recurve Bow"
 msgstr ""
 
-#: db/weapons.ts:84
+#: db/weapons.ts:85
 msgctxt "db.weapons.cd6a74"
 msgid "Harbinger of Dawn"
 msgstr ""
 
-#: db/weapons.ts:169
+#: db/weapons.ts:170
 msgctxt "db.weapons.cd75c9"
 msgid "Mappa Mare"
 msgstr ""
 
-#: db/weapons.ts:129
+#: db/weapons.ts:130
 msgctxt "db.weapons.ce3943"
 msgid "Crescent Pike"
 msgstr ""
 
-#: db/weapons.ts:79
+#: db/weapons.ts:80
 msgctxt "db.weapons.ced704"
 msgid "Bloodtainted Greatsword"
 msgstr ""
 
-#: db/weapons.ts:151
+#: db/weapons.ts:152
 msgctxt "db.weapons.d21193"
 msgid "Primordial Jade Cutter"
 msgstr ""
 
-#: db/weapons.ts:193
+#: db/weapons.ts:195
 msgctxt "db.weapons.d54d9d"
 msgid "Engulfing Lightning"
 msgstr ""
 
-#: db/weapons.ts:177
+#: db/weapons.ts:178
 msgctxt "db.weapons.d63451"
 msgid "Vortex Vanquisher"
 msgstr ""
 
-#: db/weapons.ts:103
+#: db/weapons.ts:104
 msgctxt "db.weapons.d6fdb8"
 msgid "Favonius Greatsword"
 msgstr ""
 
-#: db/weapons.ts:100
+#: db/weapons.ts:101
 msgctxt "db.weapons.d8a782"
 msgid "Alley Hunter"
 msgstr ""
 
-#: db/weapons.ts:94
+#: db/weapons.ts:95
 msgctxt "db.weapons.da3955"
 msgid "The Flute"
 msgstr ""
 
-#: db/weapons.ts:140
+#: db/weapons.ts:141
 msgctxt "db.weapons.de23c9"
 msgid "Whiteblind"
 msgstr ""
@@ -4056,27 +4066,27 @@ msgctxt "db.weapons.df6bad"
 msgid "The Viridescent Hunt"
 msgstr ""
 
-#: db/weapons.ts:168
+#: db/weapons.ts:169
 msgctxt "db.weapons.e33267"
 msgid "Luxurious Sea-Lord"
 msgstr ""
 
-#: db/weapons.ts:176
+#: db/weapons.ts:177
 msgctxt "db.weapons.e43450"
 msgid "Staff of Homa"
 msgstr ""
 
-#: db/weapons.ts:91
+#: db/weapons.ts:92
 msgctxt "db.weapons.e53a5e"
 msgid "Skyward Pride"
 msgstr ""
 
-#: db/weapons.ts:128
+#: db/weapons.ts:129
 msgctxt "db.weapons.e6fc75"
 msgid "Blackcliff Warbow"
 msgstr ""
 
-#: db/weapons.ts:87
+#: db/weapons.ts:88
 msgctxt "db.weapons.e87597"
 msgid "Sharpshooter's Oath"
 msgstr ""
@@ -4086,7 +4096,7 @@ msgctxt "db.weapons.e95d91"
 msgid "Favonius Sword"
 msgstr ""
 
-#: db/weapons.ts:119
+#: db/weapons.ts:120
 msgctxt "db.weapons.e9f646"
 msgid "Skyward Spine"
 msgstr ""
@@ -4101,17 +4111,17 @@ msgctxt "db.weapons.ece880"
 msgid "Ferrous Shadow"
 msgstr ""
 
-#: db/weapons.ts:173
+#: db/weapons.ts:174
 msgctxt "db.weapons.ed05a0"
 msgid "Serpent Spine"
 msgstr ""
 
-#: db/weapons.ts:139
+#: db/weapons.ts:140
 msgctxt "db.weapons.f20081"
 msgid "White Tassel"
 msgstr ""
 
-#: db/weapons.ts:95
+#: db/weapons.ts:96
 msgctxt "db.weapons.f531f1"
 msgid "The Widsith"
 msgstr ""
@@ -4121,12 +4131,12 @@ msgctxt "db.weapons.f62d45"
 msgid "Song of Broken Pines"
 msgstr ""
 
-#: db/weapons.ts:164
+#: db/weapons.ts:165
 msgctxt "db.weapons.f67ae4"
 msgid "Black Tassel"
 msgstr ""
 
-#: db/weapons.ts:136
+#: db/weapons.ts:137
 msgctxt "db.weapons.f7393e"
 msgid "Slingshot"
 msgstr ""
@@ -4136,17 +4146,22 @@ msgctxt "db.weapons.f7afc0"
 msgid "Snow-Tombed Starsilver"
 msgstr ""
 
+#: db/weapons.ts:192
+msgctxt "db.weapons.f81f58"
+msgid "Redhorn Stonethresher"
+msgstr ""
+
 #: db/weapons.ts:70
 msgctxt "db.weapons.f8cb91"
 msgid "Royal Longsword"
 msgstr ""
 
-#: db/weapons.ts:88
+#: db/weapons.ts:89
 msgctxt "db.weapons.fda75f"
 msgid "Skyward Atlas"
 msgstr ""
 
-#: db/weapons.ts:102
+#: db/weapons.ts:103
 msgctxt "db.weapons.ffe36a"
 msgid "Beginner's Protector"
 msgstr ""
