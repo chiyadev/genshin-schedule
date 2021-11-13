@@ -10,6 +10,7 @@ import {
   EmblemOfSeveredFate,
   Gambler,
   GladiatorsFinale,
+  HuskOfOpulentDreams,
   Icebreaker,
   Instructor,
   Lavawalker,
@@ -18,6 +19,7 @@ import {
   MartialArtist,
   NoblesseOblige,
   OceanConqueror,
+  OceanHuedClam,
   PaleFlame,
   PrayersForDestiny,
   PrayersForIllumination,
@@ -522,6 +524,13 @@ export const GoldenWolflordDrops: DomainDropSet = {
   itemsAux: [TravelingDoctor, Instructor, TheExile, PrayersForDestiny, GladiatorsFinale, WanderersTroupe, PrithivaTopaz], // check
 };
 
+export const NewDomainDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [OceanHuedClam, HuskOfOpulentDreams],
+  itemsAux: [TravelingDoctor, Instructor, TheExile, PrayersForDestiny, GladiatorsFinale, WanderersTroupe, PrithivaTopaz], // check
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
@@ -574,4 +583,5 @@ export const DomainDropSets = [
   HydroHypostasisDrops,
   NarukamiIslandTenshukakuDrops,
   GoldenWolflordDrops,
+  NewDomainDrops,
 ];

@@ -220,6 +220,18 @@ export const EmblemOfSeveredFate: Artifact = {
   wiki: "https://genshin-impact.fandom.com/wiki/Emblem_of_Severed_Fate",
 };
 
+export const OceanHuedClam: Artifact = {
+  type: "Artifact",
+  name: registerMessage({ defaultMessage: "Ocean-Hued Clam" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Ocean-Hued_Clam",
+};
+
+export const HuskOfOpulentDreams: Artifact = {
+  type: "Artifact",
+  name: registerMessage({ defaultMessage: "Husk of Opulent Dreams" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Husk_of_Opulent_Dreams",
+};
+
 export const Artifacts = [
   Adventurer,
   ArchaicPetra,
@@ -256,4 +268,6 @@ export const Artifacts = [
   PaleFlame,
   ShimenawaReminiscence,
   EmblemOfSeveredFate,
+  OceanHuedClam,
+  HuskOfOpulentDreams,
 ];

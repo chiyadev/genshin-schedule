@@ -176,6 +176,7 @@ import Horsetail from "./game/Horsetail.png";
 import HuTao from "./game/Hu Tao.png";
 import HuntersSacrificialKnife from "./game/Hunter's Sacrificial Knife.png";
 import HurricaneSeed from "./game/Hurricane Seed.png";
+import HuskofOpulentDreams from "./game/Husk of Opulent Dreams.png";
 import Hydro from "./game/Hydro.png";
 import Icebreaker from "./game/Icebreaker.png";
 import Inazuma from "./game/Inazuma.png";
@@ -242,6 +243,7 @@ import NoblesseOblige from "./game/Noblesse Oblige.png";
 import NoctilucousJade from "./game/Noctilucous Jade.png";
 import Noelle from "./game/Noelle.png";
 import OceanConqueror from "./game/Ocean Conqueror.png";
+import OceanHuedClam from "./game/Ocean-Hued Clam.png";
 import OldHandguard from "./game/Old Handguard.png";
 import Onikabuto from "./game/Onikabuto.png";
 import Onion from "./game/Onion.png";
@@ -604,6 +606,7 @@ export {
   HuTao,
   HuntersSacrificialKnife,
   HurricaneSeed,
+  HuskofOpulentDreams,
   Hydro,
   Icebreaker,
   Inazuma,
@@ -670,6 +673,7 @@ export {
   NoctilucousJade,
   Noelle,
   OceanConqueror,
+  OceanHuedClam,
   OldHandguard,
   Onikabuto,
   Onion,
@@ -1034,6 +1038,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Hu Tao": return HuTao.src;
     case "Hunter's Sacrificial Knife": return HuntersSacrificialKnife.src;
     case "Hurricane Seed": return HurricaneSeed.src;
+    case "Husk of Opulent Dreams": return HuskofOpulentDreams.src;
     case "Hydro": return Hydro.src;
     case "Icebreaker": return Icebreaker.src;
     case "Inazuma": return Inazuma.src;
@@ -1100,6 +1105,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Noctilucous Jade": return NoctilucousJade.src;
     case "Noelle": return Noelle.src;
     case "Ocean Conqueror": return OceanConqueror.src;
+    case "Ocean-Hued Clam": return OceanHuedClam.src;
     case "Old Handguard": return OldHandguard.src;
     case "Onikabuto": return Onikabuto.src;
     case "Onion": return Onion.src;

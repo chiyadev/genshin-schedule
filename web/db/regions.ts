@@ -21,6 +21,7 @@ import {
   MidsummerCourtyard,
   MomijiDyedCourt,
   NarukamiIslandTenshukaku,
+  NewDomain,
   PeakOfVindagnyr,
   PerpetualMechanicalArray,
   PrimoGeovishap,
@@ -152,7 +153,7 @@ export const Inazuma: Region = {
   type: "Region",
   name: registerMessage({ defaultMessage: "Inazuma" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Inazuma",
-  domains: [MomijiDyedCourt, VioletCourt, CourtOfFlowingSand, MaguuKenki, PyroHypostasis, PerpetualMechanicalArray, ThunderManifestation, HydroHypostasis, NarukamiIslandTenshukaku, GoldenWolflord],
+  domains: [MomijiDyedCourt, VioletCourt, CourtOfFlowingSand, MaguuKenki, PyroHypostasis, PerpetualMechanicalArray, ThunderManifestation, HydroHypostasis, NarukamiIslandTenshukaku, GoldenWolflord, NewDomain],
   characters: [Ayaka, Gorou, Itto, Kazuha, Kokomi, KujouSara, RaidenShogun, Sayu, Thoma, Yoimiya],
 };
 
