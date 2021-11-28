@@ -1446,7 +1446,7 @@ msgctxt "db.characters.1c8781"
 msgid "Venti"
 msgstr ""
 
-#: db/characters.ts:559
+#: db/characters.ts:560
 msgctxt "db.characters.24a6dc"
 msgid "Itto"
 msgstr ""
@@ -2101,11 +2101,6 @@ msgctxt "db.domains.31c6bb"
 msgid "Hydro Hypostasis"
 msgstr ""
 
-#: db/domains.ts:300
-msgctxt "db.domains.483bfd"
-msgid "New Domain"
-msgstr ""
-
 #: db/domains.ts:216
 msgctxt "db.domains.5749e3"
 msgid "Cryo Regisvine"
@@ -2189,6 +2184,11 @@ msgstr ""
 #: db/domains.ts:160
 msgctxt "db.domains.dbf3b5"
 msgid "Beneath the Dragon-Queller"
+msgstr ""
+
+#: db/domains.ts:300
+msgctxt "db.domains.e0808d"
+msgid "Slumbering Court"
 msgstr ""
 
 #: db/domains.ts:209

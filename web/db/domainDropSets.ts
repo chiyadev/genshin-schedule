@@ -521,14 +521,14 @@ export const GoldenWolflordDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Any,
   items: [RiftbornRegalia],
-  itemsAux: [TravelingDoctor, Instructor, TheExile, PrayersForDestiny, GladiatorsFinale, WanderersTroupe, PrithivaTopaz], // check
+  itemsAux: [TravelingDoctor, Instructor, TheExile, GladiatorsFinale, WanderersTroupe, PrithivaTopaz],
 };
 
-export const NewDomainDrops: DomainDropSet = {
+export const SlumberingCourtDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Any,
   items: [OceanHuedClam, HuskOfOpulentDreams],
-  itemsAux: [TravelingDoctor, Instructor, TheExile, PrayersForDestiny, GladiatorsFinale, WanderersTroupe, PrithivaTopaz], // check
+  itemsAux: [DefendersWill, BraveHeart],
 };
 
 export const DomainDropSets = [
@@ -583,5 +583,5 @@ export const DomainDropSets = [
   HydroHypostasisDrops,
   NarukamiIslandTenshukakuDrops,
   GoldenWolflordDrops,
-  NewDomainDrops,
+  SlumberingCourtDrops,
 ];

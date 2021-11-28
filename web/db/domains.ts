@@ -51,7 +51,7 @@ import {
   NarukamiIslandTenshukakuDrops,
   HydroHypostasisDrops,
   GoldenWolflordDrops,
-  NewDomainDrops,
+  SlumberingCourtDrops,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
 
@@ -295,11 +295,11 @@ export const GoldenWolflord: Domain = {
   drops: [GoldenWolflordDrops],
 };
 
-export const NewDomain: Domain = {
+export const SlumberingCourt: Domain = {
   type: "Domain",
-  name: registerMessage({ defaultMessage: "New Domain" }),
-  wiki: "https://genshin-impact.fandom.com/wiki/Court_of_Flowing_Sand",
-  drops: [NewDomainDrops],
+  name: registerMessage({ defaultMessage: "Slumbering Court" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Slumbering_Court",
+  drops: [SlumberingCourtDrops],
 };
 
 export const Domains = [
@@ -336,5 +336,5 @@ export const Domains = [
   HydroHypostasis,
   NarukamiIslandTenshukaku,
   GoldenWolflord,
-  NewDomain,
+  SlumberingCourt,
 ];
