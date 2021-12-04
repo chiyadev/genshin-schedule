@@ -148,7 +148,22 @@ export const Liyue: Region = {
     RhodeiaOfLoch,
     PyroRegisvine,
   ],
-  characters: [Beidou, Chongyun, Ganyu, Keqing, Ningguang, Qiqi, Shenhe, Xiangling, Xiao, Xingqiu, Xinyan, Yanfei, YunJin, Zhongli],
+  characters: [
+    Beidou,
+    Chongyun,
+    Ganyu,
+    Keqing,
+    Ningguang,
+    Qiqi,
+    Shenhe,
+    Xiangling,
+    Xiao,
+    Xingqiu,
+    Xinyan,
+    Yanfei,
+    YunJin,
+    Zhongli,
+  ],
 };
 
 export const Inazuma: Region = {
