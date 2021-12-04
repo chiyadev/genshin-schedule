@@ -24,8 +24,8 @@ function buildChangelog() {
   // and ensure that the counter is equal to the key of the first element in this array.
   return [
     <ChangelogSection key={35} date="2021/12/05">
-      <ChangelogItem github={103}>Added 2.3 characters, weapons and artifacts.</ChangelogItem>
-      <ChangelogItem github={103}>Added accuracy warning to leaked weapon pages.</ChangelogItem>
+      <ChangelogItem github={104}>Added 2.3 characters, weapons and artifacts.</ChangelogItem>
+      <ChangelogItem github={104}>Added accuracy warning to leaked weapon pages.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={34} date="2021/11/10">
       <ChangelogItem github={100}>Added 2.1 and 2.2 characters, weapons and artifacts.</ChangelogItem>
