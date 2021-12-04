@@ -50,6 +50,8 @@ import {
   ThunderManifestationDrops,
   NarukamiIslandTenshukakuDrops,
   HydroHypostasisDrops,
+  GoldenWolflordDrops,
+  SlumberingCourtDrops,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
 
@@ -286,6 +288,20 @@ export const HydroHypostasis: Domain = {
   drops: [HydroHypostasisDrops],
 };
 
+export const GoldenWolflord: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Golden Wolflord" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Golden_Wolflord",
+  drops: [GoldenWolflordDrops],
+};
+
+export const SlumberingCourt: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Slumbering Court" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Slumbering_Court",
+  drops: [SlumberingCourtDrops],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -319,4 +335,6 @@ export const Domains = [
   ThunderManifestation,
   HydroHypostasis,
   NarukamiIslandTenshukaku,
+  GoldenWolflord,
+  SlumberingCourt,
 ];

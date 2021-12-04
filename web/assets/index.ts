@@ -75,6 +75,7 @@ import ChaosDevice from "./game/Chaos Device.png";
 import ChaosGear from "./game/Chaos Gear.png";
 import ChilledMeat from "./game/Chilled Meat.png";
 import Chongyun from "./game/Chongyun.png";
+import CinnabarSpindle from "./game/Cinnabar Spindle.png";
 import CleansingHeart from "./game/Cleansing Heart.png";
 import CompanionshipExperience from "./game/Companionship Experience.png";
 import CompoundBow from "./game/Compound Bow.png";
@@ -158,6 +159,7 @@ import Geo from "./game/Geo.png";
 import GildedScale from "./game/Gilded Scale.png";
 import GladiatorsFinale from "./game/Gladiator's Finale.png";
 import GlazeLily from "./game/Glaze Lily.png";
+import Gorou from "./game/Gorou.png";
 import GrainofAerosiderite from "./game/Grain of Aerosiderite.png";
 import GrayCircle from "./game/Gray Circle.png";
 import GreenCircle from "./game/Green Circle.png";
@@ -174,6 +176,7 @@ import Horsetail from "./game/Horsetail.png";
 import HuTao from "./game/Hu Tao.png";
 import HuntersSacrificialKnife from "./game/Hunter's Sacrificial Knife.png";
 import HurricaneSeed from "./game/Hurricane Seed.png";
+import HuskofOpulentDreams from "./game/Husk of Opulent Dreams.png";
 import Hydro from "./game/Hydro.png";
 import Icebreaker from "./game/Icebreaker.png";
 import Inazuma from "./game/Inazuma.png";
@@ -181,6 +184,7 @@ import Instructor from "./game/Instructor.png";
 import IntertwinedFate from "./game/Intertwined Fate.png";
 import IronChunk from "./game/Iron Chunk.png";
 import IronSting from "./game/Iron Sting.png";
+import Itto from "./game/Itto.png";
 import Jean from "./game/Jean.png";
 import JueyunChili from "./game/Jueyun Chili.png";
 import JuvenileJade from "./game/Juvenile Jade.png";
@@ -239,6 +243,7 @@ import NoblesseOblige from "./game/Noblesse Oblige.png";
 import NoctilucousJade from "./game/Noctilucous Jade.png";
 import Noelle from "./game/Noelle.png";
 import OceanConqueror from "./game/Ocean Conqueror.png";
+import OceanHuedClam from "./game/Ocean-Hued Clam.png";
 import OldHandguard from "./game/Old Handguard.png";
 import Onikabuto from "./game/Onikabuto.png";
 import Onion from "./game/Onion.png";
@@ -285,10 +290,12 @@ import RecruitsInsignia from "./game/Recruit's Insignia.png";
 import RecurveBow from "./game/Recurve Bow.png";
 import RedCircle from "./game/Red Circle.png";
 import RedDye from "./game/Red Dye.png";
+import RedhornStonethresher from "./game/Redhorn Stonethresher.png";
 import Resin from "./game/Resin.png";
 import ResolutionofSojourner from "./game/Resolution of Sojourner.png";
 import Restaurant from "./game/Restaurant.png";
 import RetracingBolide from "./game/Retracing Bolide.png";
+import RiftbornRegalia from "./game/Riftborn Regalia.png";
 import RingofBoreas from "./game/Ring of Boreas.png";
 import Rosaria from "./game/Rosaria.png";
 import RoyalBow from "./game/Royal Bow.png";
@@ -498,6 +505,7 @@ export {
   ChaosGear,
   ChilledMeat,
   Chongyun,
+  CinnabarSpindle,
   CleansingHeart,
   CompanionshipExperience,
   CompoundBow,
@@ -581,6 +589,7 @@ export {
   GildedScale,
   GladiatorsFinale,
   GlazeLily,
+  Gorou,
   GrainofAerosiderite,
   GrayCircle,
   GreenCircle,
@@ -597,6 +606,7 @@ export {
   HuTao,
   HuntersSacrificialKnife,
   HurricaneSeed,
+  HuskofOpulentDreams,
   Hydro,
   Icebreaker,
   Inazuma,
@@ -604,6 +614,7 @@ export {
   IntertwinedFate,
   IronChunk,
   IronSting,
+  Itto,
   Jean,
   JueyunChili,
   JuvenileJade,
@@ -662,6 +673,7 @@ export {
   NoctilucousJade,
   Noelle,
   OceanConqueror,
+  OceanHuedClam,
   OldHandguard,
   Onikabuto,
   Onion,
@@ -708,10 +720,12 @@ export {
   RecurveBow,
   RedCircle,
   RedDye,
+  RedhornStonethresher,
   Resin,
   ResolutionofSojourner,
   Restaurant,
   RetracingBolide,
+  RiftbornRegalia,
   RingofBoreas,
   Rosaria,
   RoyalBow,
@@ -923,6 +937,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Chaos Gear": return ChaosGear.src;
     case "Chilled Meat": return ChilledMeat.src;
     case "Chongyun": return Chongyun.src;
+    case "Cinnabar Spindle": return CinnabarSpindle.src;
     case "Cleansing Heart": return CleansingHeart.src;
     case "Companionship Experience": return CompanionshipExperience.src;
     case "Compound Bow": return CompoundBow.src;
@@ -1006,6 +1021,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Gilded Scale": return GildedScale.src;
     case "Gladiator's Finale": return GladiatorsFinale.src;
     case "Glaze Lily": return GlazeLily.src;
+    case "Gorou": return Gorou.src;
     case "Grain of Aerosiderite": return GrainofAerosiderite.src;
     case "Gray Circle": return GrayCircle.src;
     case "Green Circle": return GreenCircle.src;
@@ -1022,6 +1038,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Hu Tao": return HuTao.src;
     case "Hunter's Sacrificial Knife": return HuntersSacrificialKnife.src;
     case "Hurricane Seed": return HurricaneSeed.src;
+    case "Husk of Opulent Dreams": return HuskofOpulentDreams.src;
     case "Hydro": return Hydro.src;
     case "Icebreaker": return Icebreaker.src;
     case "Inazuma": return Inazuma.src;
@@ -1029,6 +1046,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Intertwined Fate": return IntertwinedFate.src;
     case "Iron Chunk": return IronChunk.src;
     case "Iron Sting": return IronSting.src;
+    case "Itto": return Itto.src;
     case "Jean": return Jean.src;
     case "Jueyun Chili": return JueyunChili.src;
     case "Juvenile Jade": return JuvenileJade.src;
@@ -1087,6 +1105,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Noctilucous Jade": return NoctilucousJade.src;
     case "Noelle": return Noelle.src;
     case "Ocean Conqueror": return OceanConqueror.src;
+    case "Ocean-Hued Clam": return OceanHuedClam.src;
     case "Old Handguard": return OldHandguard.src;
     case "Onikabuto": return Onikabuto.src;
     case "Onion": return Onion.src;
@@ -1133,10 +1152,12 @@ export function getAssetByName(name: string): string | undefined {
     case "Recurve Bow": return RecurveBow.src;
     case "Red Circle": return RedCircle.src;
     case "Red Dye": return RedDye.src;
+    case "Redhorn Stonethresher": return RedhornStonethresher.src;
     case "Resin": return Resin.src;
     case "Resolution of Sojourner": return ResolutionofSojourner.src;
     case "Restaurant": return Restaurant.src;
     case "Retracing Bolide": return RetracingBolide.src;
+    case "Riftborn Regalia": return RiftbornRegalia.src;
     case "Ring of Boreas": return RingofBoreas.src;
     case "Rosaria": return Rosaria.src;
     case "Royal Bow": return RoyalBow.src;

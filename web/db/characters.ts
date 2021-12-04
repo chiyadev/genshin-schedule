@@ -43,6 +43,7 @@ import {
   JueyunChili,
   NakuWeed,
   NoctilucousJade,
+  Onikabuto,
   PhilanemoMushroom,
   Qingxin,
   SakuraBloom,
@@ -78,6 +79,7 @@ import {
   MarionetteCore,
   PerpetualHeart,
   PrithivaTopaz,
+  RiftbornRegalia,
   ShivadaJade,
   SmolderingPearl,
   StormBeads,
@@ -542,6 +544,28 @@ export const Thoma: Character = {
   commonMaterials: [TreasureHoarderInsignia, FluorescentFungus],
 };
 
+export const Gorou: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Gorou" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Gorou",
+  materials: [PrithivaTopaz, PerpetualHeart],
+  talentMaterialWeekly: MoltenMoment,
+  talentMaterial: Light,
+  commonMaterials: [SpectralCore, SangoPearl],
+  leaked: true,
+};
+
+export const Itto: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Itto" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Arataki_Itto",
+  materials: [PrithivaTopaz, RiftbornRegalia],
+  talentMaterialWeekly: AshenHeart,
+  talentMaterial: Elegance,
+  commonMaterials: [Slime, Onikabuto],
+  leaked: true,
+};
+
 export const Characters = [
   // https://github.com/chiyadev/genshin-schedule/issues/11
   //TravelerAnemo,
@@ -560,7 +584,9 @@ export const Characters = [
   Eula,
   Fischl,
   Ganyu,
+  Gorou,
   HuTao,
+  Itto,
   Jean,
   Kaeya,
   Kazuha,

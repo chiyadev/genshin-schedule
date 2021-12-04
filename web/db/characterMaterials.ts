@@ -150,3 +150,10 @@ export const DewOfRepudiation: CharacterMaterial = {
   item: registerMessage({ defaultMessage: "Dew of Repudiation" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Dew_of_Repudiation",
 };
+
+export const RiftbornRegalia: CharacterMaterial = {
+  type: "Character Ascension Material",
+  name: registerMessage({ defaultMessage: "Riftborn Regalia" }),
+  item: registerMessage({ defaultMessage: "Riftborn Regalia" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Riftborn_Regalia",
+};
