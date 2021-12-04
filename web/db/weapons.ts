@@ -41,19 +41,21 @@ export type Weapon = {
   wiki: string;
   material: WeaponMaterial;
   commonMaterials: CommonMaterial[];
+  leaked?: boolean;
 };
 
 registerMessage({ defaultMessage: "Weapon" });
 
 export const Weapons: Weapon[] = [];
 
-function add(name: string, material: WeaponMaterial, commonMaterials: CommonMaterial[]) {
+function add(name: string, material: WeaponMaterial, commonMaterials: CommonMaterial[], leaked = false) {
   Weapons.push({
     type: "Weapon",
     name,
     wiki: `https://genshin-impact.fandom.com/wiki/${encodeURIComponent(name.replace(" ", "_"))}`,
     material,
     commonMaterials,
+    leaked,
   });
 }
 
@@ -189,7 +191,7 @@ add(registerMessage({ defaultMessage: "Hamayumi" }), Narukami, [MirrorPrism, Hil
 add(registerMessage({ defaultMessage: "Katsuragikiri Nagamasa" }), Narukami, [ChaosGear, Handguard]);
 add(registerMessage({ defaultMessage: "Mouun's Moon" }), Narukami, [MirrorPrism, SpectralCore]);
 add(registerMessage({ defaultMessage: "Predator" }), Narukami, [MirrorPrism, HilichurlArrowhead]);
-add(registerMessage({ defaultMessage: "Redhorn Stonethresher" }), Narukami, [ConcealedClaw, Handguard]);
+add(registerMessage({ defaultMessage: "Redhorn Stonethresher" }), Narukami, [ConcealedClaw, Handguard], true);
 
 // Mask
 add(registerMessage({ defaultMessage: "Engulfing Lightning" }), NarukamiMask, [ChaosGear, Handguard]);

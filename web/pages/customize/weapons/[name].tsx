@@ -3,7 +3,7 @@ import { createApiClient, WebData } from "../../../utils/api";
 import { GetServerSideProps } from "next";
 import ConfigProvider from "../../../components/ConfigProvider";
 import Layout from "../../../components/Layout";
-import { Badge, chakra, HStack, Link } from "@chakra-ui/react";
+import { Badge, chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import WhiteCard from "../../../components/WhiteCard";
 import { getAssetByName } from "../../../assets";
 import MaterialDisplay from "../../../components/Customize/WeaponInfo/MaterialDisplay";
@@ -13,6 +13,7 @@ import NoteInput from "../../../components/Customize/WeaponInfo/NoteInput";
 import { FormattedMessage, FormattedMessage as FormattedMessageId } from "react-intl";
 import { DomainOfForgery } from "../../../db/domainCategories";
 import { Language } from "../../../langs";
+import LeakedWarning from "../../../components/Customize/LeakedWarning";
 
 type Props = {
   language: Language | null;
@@ -54,40 +55,45 @@ const WeaponInfo = ({ language, data, name }: Props) => {
     <ConfigProvider initial={data} language={language}>
       <Layout title={[weapon?.name || "Not Found"]}>
         {weapon ? (
-          <WhiteCard divide>
-            <HStack spacing={4}>
-              <chakra.img
-                alt={weapon.name}
-                title={weapon.name}
-                src={getAssetByName(weapon.name)}
-                w={16}
-                h={16}
-                objectFit="cover"
-              />
+          <VStack align="stretch" spacing={4}>
+            {!weapon.leaked ? null : (
+              <LeakedWarning />
+            )}
+            <WhiteCard divide>
+              <HStack spacing={4}>
+                <chakra.img
+                  alt={weapon.name}
+                  title={weapon.name}
+                  src={getAssetByName(weapon.name)}
+                  w={16}
+                  h={16}
+                  objectFit="cover"
+                />
 
-              <div>
-                <chakra.div fontSize="xl" fontWeight="bold">
-                  <Link href={weapon.wiki} isExternal>
-                    <FormattedMessageId id={weapon.name} />
-                  </Link>
-                </chakra.div>
+                <div>
+                  <chakra.div fontSize="xl" fontWeight="bold">
+                    <Link href={weapon.wiki} isExternal>
+                      <FormattedMessageId id={weapon.name} />
+                    </Link>
+                  </chakra.div>
 
-                <Badge colorScheme={DomainOfForgery.colorHint}>
-                  <Link href={WeaponWiki} isExternal>
-                    <FormattedMessage defaultMessage="weapon" />
-                  </Link>
-                </Badge>
-              </div>
-            </HStack>
+                  <Badge colorScheme={DomainOfForgery.colorHint}>
+                    <Link href={WeaponWiki} isExternal>
+                      <FormattedMessage defaultMessage="weapon" />
+                    </Link>
+                  </Badge>
+                </div>
+              </HStack>
 
-            <MaterialDisplay weapon={weapon} material={weapon.material} />
+              <MaterialDisplay weapon={weapon} material={weapon.material} />
 
-            {weapon.commonMaterials.map((material) => (
-              <CommonMaterialDisplay key={material.name} weapon={weapon} material={material} />
-            ))}
+              {weapon.commonMaterials.map((material) => (
+                <CommonMaterialDisplay key={material.name} weapon={weapon} material={material} />
+              ))}
 
-            <NoteInput weapon={weapon} />
-          </WhiteCard>
+              <NoteInput weapon={weapon} />
+            </WhiteCard>
+          </VStack>
         ) : (
           <FormattedMessage defaultMessage="No such weapon." />
         )}

@@ -4,7 +4,7 @@ import { GetServerSideProps } from "next";
 import ConfigProvider from "../../../components/ConfigProvider";
 import Layout from "../../../components/Layout";
 import { Characters, CharacterWiki } from "../../../db/characters";
-import { Alert, AlertIcon, AlertTitle, Badge, chakra, HStack, Link, VStack } from "@chakra-ui/react";
+import { Badge, chakra, HStack, Link, VStack } from "@chakra-ui/react";
 import WhiteCard from "../../../components/WhiteCard";
 import { getAssetByName } from "../../../assets";
 import MaterialDisplay from "../../../components/Customize/CharacterInfo/MaterialDisplay";
@@ -13,6 +13,7 @@ import NoteInput from "../../../components/Customize/CharacterInfo/NoteInput";
 import { FormattedMessage } from "react-intl";
 import { DomainOfMastery } from "../../../db/domainCategories";
 import { Language } from "../../../langs";
+import LeakedWarning from "../../../components/Customize/LeakedWarning";
 
 type Props = {
   language: Language | null;
@@ -56,17 +57,7 @@ const CharacterInfo = ({ language, data, name }: Props) => {
         {character ? (
           <VStack align="stretch" spacing={4}>
             {!character.leaked ? null : (
-              <Alert status="warning" borderRadius="md">
-                <AlertIcon />
-                <VStack align="stretch" spacing={0}>
-                  <AlertTitle>
-                    <FormattedMessage defaultMessage="This page may be inaccurate." />
-                  </AlertTitle>
-                  <div>
-                    <FormattedMessage defaultMessage="The following information is based on leaked data from beta versions of the game. Take it with a grain of salt." />
-                  </div>
-                </VStack>
-              </Alert>
+              <LeakedWarning />
             )}
 
             <WhiteCard divide>
