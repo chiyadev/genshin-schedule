@@ -113,6 +113,7 @@ import DodocoTales from "./game/Dodoco Tales.png";
 import Domain from "./game/Domain.png";
 import DragonLordsCrown from "./game/Dragon Lord's Crown.png";
 import DragonsBane from "./game/Dragon's Bane.png";
+import DragonheirsFalseFin from "./game/Dragonheir's False Fin.png";
 import DragonspineSpear from "./game/Dragonspine Spear.png";
 import DvalinsClaw from "./game/Dvalin's Claw.png";
 import DvalinsPlume from "./game/Dvalin's Plume.png";
@@ -546,6 +547,7 @@ export {
   Domain,
   DragonLordsCrown,
   DragonsBane,
+  DragonheirsFalseFin,
   DragonspineSpear,
   DvalinsClaw,
   DvalinsPlume,
@@ -981,6 +983,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Domain": return Domain.src;
     case "Dragon Lord's Crown": return DragonLordsCrown.src;
     case "Dragon's Bane": return DragonsBane.src;
+    case "Dragonheir's False Fin": return DragonheirsFalseFin.src;
     case "Dragonspine Spear": return DragonspineSpear.src;
     case "Dvalin's Claw": return DvalinsClaw.src;
     case "Dvalin's Plume": return DvalinsPlume.src;
