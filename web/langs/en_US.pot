@@ -46,7 +46,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:239
+#: components/ChangelogModal.tsx:243
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -1951,27 +1951,27 @@ msgctxt "db.commonMaterials.fe06d4"
 msgid "Cor Lapis"
 msgstr ""
 
-#: db/domainCategories.ts:71
+#: db/domainCategories.ts:77
 msgctxt "db.domainCategories.08e597"
 msgid "Forgery"
 msgstr ""
 
-#: db/domainCategories.ts:101
+#: db/domainCategories.ts:107
 msgctxt "db.domainCategories.09a1d0"
 msgid "Boss"
 msgstr ""
 
-#: db/domainCategories.ts:102
+#: db/domainCategories.ts:108
 msgctxt "db.domainCategories.4b2b5d"
 msgid "Character Ascension Materials and Artifacts"
 msgstr ""
 
-#: db/domainCategories.ts:63
+#: db/domainCategories.ts:69
 msgctxt "db.domainCategories.6a94a1"
 msgid "Talent Level-Up Materials"
 msgstr ""
 
-#: db/domainCategories.ts:81
+#: db/domainCategories.ts:87
 msgctxt "db.domainCategories.796e5e"
 msgid "Artifacts"
 msgstr ""
@@ -1981,12 +1981,12 @@ msgctxt "db.domainCategories.999229"
 msgid "Domain Category"
 msgstr ""
 
-#: db/domainCategories.ts:80
+#: db/domainCategories.ts:86
 msgctxt "db.domainCategories.a02f64"
 msgid "Blessing"
 msgstr ""
 
-#: db/domainCategories.ts:72
+#: db/domainCategories.ts:78
 msgctxt "db.domainCategories.a4758a"
 msgid "Weapon Ascension Materials"
 msgstr ""
@@ -1996,7 +1996,7 @@ msgctxt "db.domainCategories.a6ee01"
 msgid "Trounce"
 msgstr ""
 
-#: db/domainCategories.ts:62
+#: db/domainCategories.ts:68
 msgctxt "db.domainCategories.aeab32"
 msgid "Mastery"
 msgstr ""
@@ -3316,7 +3316,7 @@ msgctxt "db.regions.06cea1"
 msgid "Inazuma"
 msgstr ""
 
-#: db/regions.ts:162
+#: db/regions.ts:174
 msgctxt "db.regions.38ab8d"
 msgid "Snezhnaya"
 msgstr ""
@@ -4201,22 +4201,22 @@ msgctxt "pages.customize.artifacts.[name].f87fc3"
 msgid "No such artifact."
 msgstr ""
 
-#: pages/customize/characters/[name].tsx:116
+#: pages/customize/characters/[name].tsx:114
 msgctxt "pages.customize.characters.[name].9bd832"
 msgid "No such character."
 msgstr ""
 
-#: pages/customize/characters/[name].tsx:83
+#: pages/customize/characters/[name].tsx:81
 msgctxt "pages.customize.characters.[name].e5ae51"
 msgid "character"
 msgstr ""
 
-#: pages/customize/weapons/[name].tsx:97
+#: pages/customize/weapons/[name].tsx:95
 msgctxt "pages.customize.weapons.[name].6a78b3"
 msgid "No such weapon."
 msgstr ""
 
-#: pages/customize/weapons/[name].tsx:82
+#: pages/customize/weapons/[name].tsx:80
 msgctxt "pages.customize.weapons.[name].78facd"
 msgid "weapon"
 msgstr ""

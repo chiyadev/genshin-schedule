@@ -56,9 +56,7 @@ const WeaponInfo = ({ language, data, name }: Props) => {
       <Layout title={[weapon?.name || "Not Found"]}>
         {weapon ? (
           <VStack align="stretch" spacing={4}>
-            {!weapon.leaked ? null : (
-              <LeakedWarning />
-            )}
+            {!weapon.leaked ? null : <LeakedWarning />}
             <WhiteCard divide>
               <HStack spacing={4}>
                 <chakra.img

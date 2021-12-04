@@ -492,29 +492,37 @@ export const ThunderManifestationDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Any,
   items: [StormBeads],
-  itemsAux: [TravelingDoctor, Instructor, TheExile, PrayersForWisdom, GladiatorsFinale, WanderersTroupe, VajradaAmethyst],
+  itemsAux: [
+    TravelingDoctor,
+    Instructor,
+    TheExile,
+    PrayersForWisdom,
+    GladiatorsFinale,
+    WanderersTroupe,
+    VajradaAmethyst,
+  ],
 };
 
 export const HydroHypostasisDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Any,
   items: [DewOfRepudiation],
-  itemsAux: [TravelingDoctor, Instructor, TheExile, PrayersForDestiny, GladiatorsFinale, WanderersTroupe, VarunadaLazurite],
+  itemsAux: [
+    TravelingDoctor,
+    Instructor,
+    TheExile,
+    PrayersForDestiny,
+    GladiatorsFinale,
+    WanderersTroupe,
+    VarunadaLazurite,
+  ],
 };
 
 export const NarukamiIslandTenshukakuDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Trounce,
   items: [MoltenMoment, HellfireButterfly, AshenHeart],
-  itemsAux: [
-    Berserker,
-    Instructor,
-    TheExile,
-    GladiatorsFinale,
-    WanderersTroupe,
-    ShivadaJade,
-    AgnidusAgate,
-  ],
+  itemsAux: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe, ShivadaJade, AgnidusAgate],
 };
 
 export const GoldenWolflordDrops: DomainDropSet = {
