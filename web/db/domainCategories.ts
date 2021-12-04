@@ -52,7 +52,13 @@ export const Trounce: DomainCategory = {
   type: "Domain Category",
   name: registerMessage({ defaultMessage: "Trounce" }),
   dropDescription: registerMessage({ defaultMessage: "Weekly Challenge" }),
-  domains: [ConfrontStormterror, WolfOfTheNorthChallenge, EnterTheGoldenHouse, BeneathTheDragonQueller, NarukamiIslandTenshukaku],
+  domains: [
+    ConfrontStormterror,
+    WolfOfTheNorthChallenge,
+    EnterTheGoldenHouse,
+    BeneathTheDragonQueller,
+    NarukamiIslandTenshukaku,
+  ],
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Weekly_Bosses",
   colorHint: "green",
 };

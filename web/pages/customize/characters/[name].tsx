@@ -56,9 +56,7 @@ const CharacterInfo = ({ language, data, name }: Props) => {
       <Layout title={[character?.name || "Not Found"]}>
         {character ? (
           <VStack align="stretch" spacing={4}>
-            {!character.leaked ? null : (
-              <LeakedWarning />
-            )}
+            {!character.leaked ? null : <LeakedWarning />}
 
             <WhiteCard divide>
               <HStack spacing={4}>

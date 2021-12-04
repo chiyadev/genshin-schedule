@@ -155,7 +155,19 @@ export const Inazuma: Region = {
   type: "Region",
   name: registerMessage({ defaultMessage: "Inazuma" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Inazuma",
-  domains: [MomijiDyedCourt, VioletCourt, CourtOfFlowingSand, MaguuKenki, PyroHypostasis, PerpetualMechanicalArray, ThunderManifestation, HydroHypostasis, NarukamiIslandTenshukaku, GoldenWolflord, SlumberingCourt],
+  domains: [
+    MomijiDyedCourt,
+    VioletCourt,
+    CourtOfFlowingSand,
+    MaguuKenki,
+    PyroHypostasis,
+    PerpetualMechanicalArray,
+    ThunderManifestation,
+    HydroHypostasis,
+    NarukamiIslandTenshukaku,
+    GoldenWolflord,
+    SlumberingCourt,
+  ],
   characters: [Ayaka, Gorou, Itto, Kazuha, Kokomi, KujouSara, RaidenShogun, Sayu, Thoma, Yoimiya],
 };
 
