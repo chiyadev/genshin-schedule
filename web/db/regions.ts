@@ -66,6 +66,7 @@ import {
   RaidenShogun,
   Razor,
   Sayu,
+  Shenhe,
   Sucrose,
   Tartaglia,
   Thoma,
@@ -76,6 +77,7 @@ import {
   Xinyan,
   Yanfei,
   Yoimiya,
+  YunJin,
   Zhongli,
 } from "./characters";
 import { registerMessage } from "../utils";
@@ -146,7 +148,7 @@ export const Liyue: Region = {
     RhodeiaOfLoch,
     PyroRegisvine,
   ],
-  characters: [Beidou, Chongyun, Ganyu, Keqing, Ningguang, Qiqi, Xiangling, Xiao, Xingqiu, Xinyan, Yanfei, Zhongli],
+  characters: [Beidou, Chongyun, Ganyu, Keqing, Ningguang, Qiqi, Shenhe, Xiangling, Xiao, Xingqiu, Xinyan, Yanfei, YunJin, Zhongli],
 };
 
 export const Inazuma: Region = {

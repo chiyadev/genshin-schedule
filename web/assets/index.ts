@@ -68,6 +68,7 @@ import BraveHeart from "./game/Brave Heart.png";
 import BrilliantDiamondSilver from "./game/Brilliant Diamond Silver.png";
 import ButterflyWings from "./game/Butterfly Wings.png";
 import Cabbage from "./game/Cabbage.png";
+import CalamityQueller from "./game/Calamity Queller.png";
 import CallaLily from "./game/Calla Lily.png";
 import Carrot from "./game/Carrot.png";
 import Cecilia from "./game/Cecilia.png";
@@ -319,6 +320,7 @@ import SerpentSpine from "./game/Serpent Spine.png";
 import ShadowoftheWarrior from "./game/Shadow of the Warrior.png";
 import ShardofaFoulLegacy from "./game/Shard of a Foul Legacy.png";
 import SharpshootersOath from "./game/Sharpshooter's Oath.png";
+import Shenhe from "./game/Shenhe.png";
 import ShimenawasReminiscence from "./game/Shimenawa's Reminiscence.png";
 import ShivadaJadeSilver from "./game/Shivada Jade Silver.png";
 import ShrimpMeat from "./game/Shrimp Meat.png";
@@ -426,6 +428,7 @@ import Yanfei from "./game/Yanfei.png";
 import YellowCircle from "./game/Yellow Circle.png";
 import YellowDye from "./game/Yellow Dye.png";
 import Yoimiya from "./game/Yoimiya.png";
+import YunJin from "./game/Yun Jin.png";
 import Zhongli from "./game/Zhongli.png";
 
 export {
@@ -498,6 +501,7 @@ export {
   BrilliantDiamondSilver,
   ButterflyWings,
   Cabbage,
+  CalamityQueller,
   CallaLily,
   Carrot,
   Cecilia,
@@ -749,6 +753,7 @@ export {
   ShadowoftheWarrior,
   ShardofaFoulLegacy,
   SharpshootersOath,
+  Shenhe,
   ShimenawasReminiscence,
   ShivadaJadeSilver,
   ShrimpMeat,
@@ -856,6 +861,7 @@ export {
   YellowCircle,
   YellowDye,
   Yoimiya,
+  YunJin,
   Zhongli,
 };
 
@@ -930,6 +936,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Brilliant Diamond Silver": return BrilliantDiamondSilver.src;
     case "Butterfly Wings": return ButterflyWings.src;
     case "Cabbage": return Cabbage.src;
+    case "Calamity Queller": return CalamityQueller.src;
     case "Calla Lily": return CallaLily.src;
     case "Carrot": return Carrot.src;
     case "Cecilia": return Cecilia.src;
@@ -1181,6 +1188,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Shadow of the Warrior": return ShadowoftheWarrior.src;
     case "Shard of a Foul Legacy": return ShardofaFoulLegacy.src;
     case "Sharpshooter's Oath": return SharpshootersOath.src;
+    case "Shenhe": return Shenhe.src;
     case "Shimenawa's Reminiscence": return ShimenawasReminiscence.src;
     case "Shivada Jade Silver": return ShivadaJadeSilver.src;
     case "Shrimp Meat": return ShrimpMeat.src;
@@ -1288,6 +1296,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Yellow Circle": return YellowCircle.src;
     case "Yellow Dye": return YellowDye.src;
     case "Yoimiya": return Yoimiya.src;
+    case "Yun Jin": return YunJin.src;
     case "Zhongli": return Zhongli.src;
   }
 }
