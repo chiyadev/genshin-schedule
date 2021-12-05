@@ -411,14 +411,14 @@ msgctxt "components.DropLabel.30b06c"
 msgid "Auxiliary drop based on probability"
 msgstr ""
 
-#: components/DropLabel.tsx:41
-msgctxt "components.DropLabel.9f02aa"
-msgid "This item does not drop from any domains."
-msgstr ""
-
 #: components/DropLabel.tsx:88
 msgctxt "components.DropLabel.9f8862"
 msgid "{domain}{days, select, undefined {} other { on {days}}}"
+msgstr ""
+
+#: components/DropLabel.tsx:41
+msgctxt "components.DropLabel.abb354"
+msgid "This item does not currently drop from any domains."
 msgstr ""
 
 #: components/Footer.tsx:55
@@ -3326,12 +3326,12 @@ msgctxt "db.map.fbe305"
 msgid "Qingxu Pool"
 msgstr ""
 
-#: db/regions.ts:156
+#: db/regions.ts:171
 msgctxt "db.regions.06cea1"
 msgid "Inazuma"
 msgstr ""
 
-#: db/regions.ts:176
+#: db/regions.ts:191
 msgctxt "db.regions.38ab8d"
 msgid "Snezhnaya"
 msgstr ""

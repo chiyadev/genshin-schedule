@@ -38,7 +38,7 @@ const DropLabel = ({ item }: { item: DomainDropSet["items"][0] }) => {
   if (!domains.length) {
     return (
       <div>
-        <FormattedMessage defaultMessage="This item does not drop from any domains." />
+        <FormattedMessage defaultMessage="This item does not currently drop from any domains." />
       </div>
     );
   }
