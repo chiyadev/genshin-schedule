@@ -54,7 +54,7 @@ const DirectSignInButton = () => {
 
                 setAuthToken(undefined, token);
                 setTimeout(() => router.push("/home"));
-              } catch (e) {
+              } catch (e: any) {
                 toast({
                   position: "top-right",
                   status: "error",

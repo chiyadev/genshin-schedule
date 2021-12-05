@@ -18,7 +18,7 @@ const RegionLabelLayer = () => {
     <GeoJSON
       key={renderId}
       data={GeoMarkers as any}
-      pointToLayer={({ id }, latlng) => pointToLayer(state, formatMessageId({ id }), latlng)}
+      pointToLayer={({ id }, latlng) => pointToLayer(state, formatMessageId({ id: id?.toString() }), latlng)}
     />
   );
 };

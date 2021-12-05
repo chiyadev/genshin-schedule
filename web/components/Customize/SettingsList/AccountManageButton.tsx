@@ -69,7 +69,7 @@ const AccountManageButton = ({ user }: { user: User }) => {
                 trackEvent("accountManager", "updateAuth");
 
                 setTimeout(() => router.reload());
-              } catch (e) {
+              } catch (e: any) {
                 toast({
                   position: "top-right",
                   status: "error",

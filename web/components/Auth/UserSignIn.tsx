@@ -129,7 +129,7 @@ const UserSignIn = () => {
                 trackEvent("auth", "signIn");
 
                 setTimeout(() => router.push("/home"));
-              } catch (e) {
+              } catch (e: any) {
                 setError(e);
                 setLoad(false);
               }

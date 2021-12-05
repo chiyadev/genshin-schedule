@@ -17,12 +17,15 @@ import {
 import { FormattedMessage } from "react-intl";
 import { GitPullRequest } from "react-feather";
 
-const LatestChangelog = 35;
+const LatestChangelog = 36;
 
 function buildChangelog() {
   // To create a new changelog section, increment LatestChangelog counter by one
   // and ensure that the counter is equal to the key of the first element in this array.
   return [
+    <ChangelogSection key={36} date="2021/12/06">
+      <ChangelogItem>Upgraded all dependencies to the latest versions.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={35} date="2021/12/05">
       <ChangelogItem github={104}>Added 2.3 characters, weapons and artifacts.</ChangelogItem>
       <ChangelogItem github={104}>Added accuracy warning to leaked weapon pages.</ChangelogItem>
@@ -58,7 +61,7 @@ function buildChangelog() {
           .
         </div>
       </Alert>
-      <ChangelogItem>Upgraded all dependencies to latest versions.</ChangelogItem>
+      <ChangelogItem>Upgraded all dependencies to the latest versions.</ChangelogItem>
       <ChangelogItem>Added 2.0 Inazuma characters, weapons and artifacts.</ChangelogItem>
       <ChangelogItem>Added normal boss drops and character ascension materials to the database.</ChangelogItem>
       <ChangelogItem>Added more character backgrounds.</ChangelogItem>
