@@ -167,9 +167,8 @@ const SynchronizedConfigProvider = ({
           await callbackPromise;
 
           signals.forEach((signal) => signal.resolve());
-        } catch (e) {
+        } catch (e: any) {
           console.error(e);
-
           signals.forEach((signal) => signal.reject(e));
 
           toast({

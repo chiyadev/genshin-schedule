@@ -83,7 +83,7 @@ const ConfigExportButton = () => {
                   try {
                     setConfigs(JSON.parse(data));
                     setOpen(false);
-                  } catch (e) {
+                  } catch {
                     toast({
                       position: "top-right",
                       status: "error",

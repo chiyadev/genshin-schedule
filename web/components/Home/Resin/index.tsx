@@ -8,7 +8,17 @@ import EstimatorByTime from "./EstimatorByTime";
 import EstimatorByResin from "./EstimatorByResin";
 import { Config, useConfig, useCurrentStats } from "../../../utils/config";
 import { Resin as ResinIcon } from "../../../assets";
-import { chakra, HStack, Spacer, StackDivider, useColorModeValue, VStack, Icon, Link } from "@chakra-ui/react";
+import {
+  chakra,
+  HStack,
+  Spacer,
+  StackDivider,
+  useColorModeValue,
+  VStack,
+  Icon,
+  Link,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useServerTime } from "../../../utils/time";
 import NotificationSetter from "./NotificationSetter";
@@ -27,6 +37,7 @@ const Resin = () => {
   const [mode, setMode] = useConfig("resinEstimateMode");
   const [notifyMark] = useConfig("resinNotifyMark");
   const [hover, setHover] = useState(false);
+  const isMobile = useBreakpointValue({ base: true, md: false });
   const resinInput = useRef<HTMLInputElement>(null);
 
   const time = useServerTime(60000);
@@ -92,7 +103,7 @@ const Resin = () => {
 
           <Spacer />
 
-          <motion.div animate={{ opacity: hover ? 1 : 0 }}>
+          <motion.div animate={{ opacity: hover || isMobile ? 1 : 0 }}>
             <Subtractor current={current} />
           </motion.div>
         </HStack>

@@ -46,7 +46,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:244
+#: components/ChangelogModal.tsx:247
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -421,39 +421,49 @@ msgctxt "components.DropLabel.abb354"
 msgid "This item does not currently drop from any domains."
 msgstr ""
 
-#: components/Footer.tsx:55
+#: components/Footer.tsx:77
 msgctxt "components.Footer.16f995"
 msgid "Discord"
 msgstr ""
 
-#: components/Footer.tsx:49
+#: components/Footer.tsx:71
 msgctxt "components.Footer.484351"
 msgid "Help"
 msgstr ""
 
-#: components/Footer.tsx:36
+#: components/Footer.tsx:40
+msgctxt "components.Footer.76b2f1"
+msgid "Written by {chiya} and {contrib} on GitHub."
+msgstr ""
+
+#: components/Footer.tsx:34
 msgctxt "components.Footer.865a3c"
 msgid "Data on this website may not always be accurate or up-to-date with in-game changes."
 msgstr ""
 
-#: components/Footer.tsx:27
+#: components/Footer.tsx:25
 msgctxt "components.Footer.a0a9e9"
 msgid "miHoYo"
 msgstr ""
 
-#: components/Footer.tsx:61
+#: components/Footer.tsx:83
 msgctxt "components.Footer.c0ef70"
 msgid "GitHub"
 msgstr ""
 
-#: components/Footer.tsx:14
+#: components/Footer.tsx:12
 msgctxt "components.Footer.d541af"
 msgid "{app} is not affiliated with or endorsed by {mihoyo}."
 msgstr ""
 
-#: components/Footer.tsx:42
+#: components/Footer.tsx:64
 msgctxt "components.Footer.ec5030"
 msgid "Shortcuts"
+msgstr ""
+
+#: components/Footer.tsx:54
+msgctxt "components.Footer.fdbaf2"
+msgid "contributors"
 msgstr ""
 
 #: components/Header.tsx:30
@@ -616,32 +626,32 @@ msgctxt "components.Home.RealmCurrency.EstimatorByTime.f0f932"
 msgid "{value} in {duration}"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:79
+#: components/Home/RealmCurrency/index.tsx:80
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
 msgid "Trust rank"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:86
+#: components/Home/RealmCurrency/index.tsx:87
 msgctxt "components.Home.RealmCurrency.index.27268e"
 msgid "Realm currency"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:63
+#: components/Home/RealmCurrency/index.tsx:64
 msgctxt "components.Home.RealmCurrency.index.33dd2d"
 msgid "Adeptal energy"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:99
+#: components/Home/RealmCurrency/index.tsx:100
 msgctxt "components.Home.RealmCurrency.index.9ca85f"
 msgid "Your realm currency is full."
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:43
+#: components/Home/RealmCurrency/index.tsx:44
 msgctxt "components.Home.RealmCurrency.index.c3eb42"
 msgid "Switch estimation mode"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:36
+#: components/Home/RealmCurrency/index.tsx:37
 msgctxt "components.Home.RealmCurrency.index.d43d9b"
 msgid "Realm Currency Calculator"
 msgstr ""
@@ -681,17 +691,17 @@ msgctxt "components.Home.Resin.Subtractor.387912"
 msgid "Subtract {amount} resins"
 msgstr ""
 
-#: components/Home/Resin/index.tsx:110
+#: components/Home/Resin/index.tsx:121
 msgctxt "components.Home.Resin.index.506b0c"
 msgid "Your resins are full."
 msgstr ""
 
-#: components/Home/Resin/index.tsx:43
+#: components/Home/Resin/index.tsx:54
 msgctxt "components.Home.Resin.index.c3eb42"
 msgid "Switch estimation mode"
 msgstr ""
 
-#: components/Home/Resin/index.tsx:36
+#: components/Home/Resin/index.tsx:47
 msgctxt "components.Home.Resin.index.fe85b2"
 msgid "Resin Calculator"
 msgstr ""

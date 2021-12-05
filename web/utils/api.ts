@@ -2,9 +2,9 @@ import { Patch } from "rfc6902";
 import { Config } from "./config";
 import { destroyCookie, parseCookies, setCookie } from "nookies";
 import { GetServerSidePropsContext } from "next";
-import node_fetch from "node-fetch";
 import { Language, LanguageAliases } from "../langs";
 import { pick as parseLanguage } from "accept-language-parser";
+import axios, { Axios } from "axios";
 
 export type User = {
   username: string;
@@ -87,7 +87,16 @@ export function setAuthToken(ctx?: Pick<GetServerSidePropsContext, "res">, token
 }
 
 export class ApiClient {
-  constructor(public baseUrl: string, public token?: string, public language?: Language) {}
+  readonly axios: Axios;
+
+  constructor(public baseUrl: string, public token?: string, public language?: Language) {
+    this.axios = axios.create({
+      baseURL: baseUrl,
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
+  }
 
   get authenticated() {
     return typeof this.token === "string" && !this.anonymous;
@@ -97,174 +106,63 @@ export class ApiClient {
     return this.token === "null";
   }
 
-  fetch(input: Request | string, init?: RequestInit): Promise<Response> {
-    if (typeof window !== "undefined") {
-      return window.fetch(input, init);
-    } else {
-      return (node_fetch as any)(input, { ...init, highWaterMark: 1024 * 1024 * 1024 });
-    }
-  }
-
   async auth(request: AuthRequest): Promise<AuthResponse> {
-    const response = await this.fetch(`${this.baseUrl}/auth`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(request),
-    });
-
-    if (!response.ok) {
-      throw Error(await response.text());
-    } else {
-      return await response.json();
-    }
+    return (await this.axios.post("auth", request)).data;
   }
 
   async authBypass(request: Pick<AuthRequest, "username">): Promise<AuthResponse> {
-    const response = await this.fetch(`${this.baseUrl}/users/${request.username}/auth`, {
-      method: "GET",
-      headers: {
-        authorization: `Bearer ${this.token}`,
-      },
-    });
-
-    if (!response.ok) {
-      throw Error(await response.text());
-    } else {
-      return await response.json();
-    }
+    return (await this.axios.get(`users/${request.username}/auth`)).data;
   }
 
   async updateAuth(request: AuthRequest): Promise<AuthResponse> {
-    const response = await this.fetch(`${this.baseUrl}/auth`, {
-      method: "PUT",
-      headers: {
-        authorization: `Bearer ${this.token}`,
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(request),
-    });
-
-    if (!response.ok) {
-      throw Error(await response.text());
-    } else {
-      return await response.json();
-    }
+    return (await this.axios.put("auth", request)).data;
   }
 
   async getSelf(): Promise<User> {
-    const response = await this.fetch(`${this.baseUrl}/auth`, {
-      method: "GET",
-      headers: {
-        authorization: `Bearer ${this.token}`,
-      },
-    });
-
-    if (!response.ok) {
-      throw Error(await response.text());
-    } else {
-      return await response.json();
-    }
+    return (await this.axios.get("auth")).data;
   }
 
   async getSync(): Promise<WebData> {
-    const response = await this.fetch(`${this.baseUrl}/sync`, {
-      method: "GET",
-      headers: {
-        authorization: `Bearer ${this.token}`,
-      },
-    });
-
-    if (!response.ok) {
-      throw Error(await response.text());
-    } else {
-      return await response.json();
-    }
+    return (await this.axios.get("sync")).data;
   }
 
   async patchSync(
     request: SyncRequest
   ): Promise<({ type: "success" } & SyncResponse) | ({ type: "failure" } & WebData)> {
-    const response = await this.fetch(`${this.baseUrl}/sync`, {
-      method: "PATCH",
-      headers: {
-        authorization: `Bearer ${this.token}`,
-        "content-type": "application/json-patch+json",
-      },
-      body: JSON.stringify(request),
-    });
+    try {
+      const response = await this.axios.patch("sync", request, {
+        headers: { "content-type": "application/json-patch+json" },
+      });
 
-    if (response.ok) {
       return {
-        ...(await response.json()),
+        ...response.data,
         type: "success",
       };
-    } else if (response.status === 400) {
-      return {
-        ...(await response.json()),
-        type: "failure",
-      };
-    } else {
-      throw Error(await response.text());
+    } catch (e: any) {
+      if (e.response.status === 400) {
+        return {
+          ...e.response.data,
+          type: "failure",
+        };
+      }
+
+      throw e;
     }
   }
 
   async listNotifications(): Promise<Notification[]> {
-    const response = await this.fetch(`${this.baseUrl}/notifications`, {
-      method: "GET",
-      headers: {
-        authorization: `Bearer ${this.token}`,
-      },
-    });
-
-    if (!response.ok) {
-      throw Error(await response.text());
-    } else {
-      return await response.json();
-    }
+    return (await this.axios.get("notifications")).data;
   }
 
   async getNotification(key: string): Promise<Notification> {
-    const response = await this.fetch(`${this.baseUrl}/notifications/${key}`, {
-      method: "GET",
-      headers: {
-        authorization: `Bearer ${this.token}`,
-      },
-    });
-
-    if (!response.ok) {
-      throw Error(await response.text());
-    } else {
-      return await response.json();
-    }
+    return (await this.axios.get(`notifications/${key}`)).data;
   }
 
   async setNotification(notification: Notification) {
-    const response = await this.fetch(`${this.baseUrl}/notifications/${notification.key}`, {
-      method: "PUT",
-      headers: {
-        authorization: `Bearer ${this.token}`,
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(notification),
-    });
-
-    if (!response.ok) {
-      throw Error(await response.text());
-    }
+    await this.axios.put(`notifications/${notification.key}`, notification);
   }
 
   async deleteNotification(key: string) {
-    const response = await this.fetch(`${this.baseUrl}/notifications/${key}`, {
-      method: "DELETE",
-      headers: {
-        authorization: `Bearer ${this.token}`,
-      },
-    });
-
-    if (!response.ok) {
-      throw Error(await response.text());
-    }
+    await this.axios.delete(`notifications/${key}`);
   }
 }
