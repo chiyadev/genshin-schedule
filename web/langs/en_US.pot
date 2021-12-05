@@ -691,12 +691,12 @@ msgctxt "components.Home.Resin.NotificationSetter.db8673"
 msgid "Resin recharged"
 msgstr ""
 
-#: components/Home/Resin/Subtractor.tsx:62
+#: components/Home/Resin/Subtractor.tsx:65
 msgctxt "components.Home.Resin.Subtractor.387912"
 msgid "Subtract {amount} resins"
 msgstr ""
 
-#: components/Home/Resin/Subtractor.tsx:61
+#: components/Home/Resin/Subtractor.tsx:64
 msgctxt "components.Home.Resin.Subtractor.9f72cf"
 msgid "Add {amount} resins"
 msgstr ""

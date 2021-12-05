@@ -27,7 +27,10 @@ const Subtractor = ({ current }: { current: number }) => {
                   time: time.valueOf(),
                 }));
 
-                setStats((stats) => stats && { ...stats, resinsSpent: stats.resinsSpent - value });
+                if (value < 0) {
+                  setStats((stats) => stats && { ...stats, resinsSpent: stats.resinsSpent - value });
+                }
+
                 trackEvent("resin", `resin${value}`);
               }}
             />
