@@ -4,7 +4,7 @@ import WhiteCard from "../../WhiteCard";
 import { getCurrencyCap, getCurrencyRate, getCurrencyRecharge } from "../../../db/realms";
 import { Config, useConfig } from "../../../utils/config";
 import { RealmCurrency as RealmCurrencyIcon } from "../../../assets";
-import { chakra, VStack, HStack, Spacer, useColorModeValue } from "@chakra-ui/react";
+import { chakra, VStack, HStack, Spacer, useColorModeValue, useBreakpointValue } from "@chakra-ui/react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { motion } from "framer-motion";
 import ClearButton from "./ClearButton";
@@ -25,6 +25,7 @@ const RealmCurrency = () => {
   const [energy] = useConfig("realmEnergy");
   const [mode, setMode] = useConfig("resinEstimateMode");
   const [hover, setHover] = useState(false);
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   const time = useServerTime(60000);
   const current = currency.value + getCurrencyRecharge(energy, time.valueOf() - currency.time);
@@ -70,7 +71,7 @@ const RealmCurrency = () => {
           </chakra.div>
 
           <Spacer />
-          <motion.div animate={{ opacity: hover ? 1 : 0 }}>{current > 0 && <ClearButton />}</motion.div>
+          <motion.div animate={{ opacity: hover || isMobile ? 1 : 0 }}>{current > 0 && <ClearButton />}</motion.div>
         </HStack>
 
         <VStack align="start" spacing={2} pl={12}>
