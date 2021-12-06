@@ -7,7 +7,7 @@ import { Button, ButtonGroup } from "@chakra-ui/react";
 import { useHotkeys } from "react-hotkeys-hook";
 import { useIntl } from "react-intl";
 
-const Subtractor = ({ current }: { current: number }) => {
+const SideButtons = ({ current }: { current: number }) => {
   const time = useServerTime(1000);
   const [, setResin] = useConfig("resin");
   const [buttons] = useConfig("resinCalcButtons");
@@ -23,7 +23,7 @@ const Subtractor = ({ current }: { current: number }) => {
         // if subtraction, don't underflow
         if ((delta < 0 && rounded >= 0) || (delta > 0 && rounded <= ResinCap)) {
           return (
-            <SubtractButton
+            <SideButton
               key={delta}
               value={delta}
               onClick={() => {
@@ -47,7 +47,7 @@ const Subtractor = ({ current }: { current: number }) => {
   );
 };
 
-const SubtractButton = ({ value, onClick }: { value: number; onClick: () => void }) => {
+const SideButton = ({ value, onClick }: { value: number; onClick: () => void }) => {
   const { formatMessage } = useIntl();
 
   // conditional hotkey react hook: breaks rules of hooks
@@ -93,4 +93,4 @@ const SubtractButton = ({ value, onClick }: { value: number; onClick: () => void
   );
 };
 
-export default memo(Subtractor);
+export default memo(SideButtons);

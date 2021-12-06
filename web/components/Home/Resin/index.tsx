@@ -3,7 +3,7 @@ import WidgetWrapper from "../WidgetWrapper";
 import WhiteCard from "../../WhiteCard";
 import { trackEvent } from "../../../utils/umami";
 import { getResinRecharge, ResinCap, roundResin } from "../../../db/resins";
-import Subtractor from "./Subtractor";
+import SideButtons from "./SideButtons";
 import EstimatorByTime from "./EstimatorByTime";
 import EstimatorByResin from "./EstimatorByResin";
 import { Config, useConfig, useCurrentStats } from "../../../utils/config";
@@ -104,7 +104,7 @@ const Resin = () => {
           <Spacer />
 
           <motion.div animate={{ opacity: hover || isMobile ? 1 : 0 }}>
-            <Subtractor current={current} />
+            <SideButtons current={current} />
           </motion.div>
         </HStack>
 
