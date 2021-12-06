@@ -25,6 +25,7 @@ function buildChangelog() {
   return [
     <ChangelogSection key={36} date="2021/12/06">
       <ChangelogItem>Upgraded all dependencies to the latest versions.</ChangelogItem>
+      <ChangelogItem github={105}>Added leaked 2.4 characters and weapon.</ChangelogItem>
       <ChangelogItem github={106}>Added support for custom resin calculator buttons.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={35} date="2021/12/05">

@@ -80,6 +80,7 @@ import {
   PerpetualHeart,
   PrithivaTopaz,
   RiftbornRegalia,
+  DragonheirsFalseFin,
   ShivadaJade,
   SmolderingPearl,
   StormBeads,
@@ -566,6 +567,28 @@ export const Itto: Character = {
   leaked: true,
 };
 
+export const YunJin: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Yun Jin" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Yun_Jin",
+  materials: [PrithivaTopaz, RiftbornRegalia],
+  talentMaterialWeekly: AshenHeart,
+  talentMaterial: Diligence,
+  commonMaterials: [HilichurlMask, GlazeLily],
+  leaked: true,
+};
+
+export const Shenhe: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Shenhe" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Shenhe",
+  materials: [ShivadaJade, DragonheirsFalseFin],
+  talentMaterialWeekly: HellfireButterfly,
+  talentMaterial: Prosperity,
+  commonMaterials: [WhopperflowerNectar, Qingxin],
+  leaked: true,
+};
+
 export const Characters = [
   // https://github.com/chiyadev/genshin-schedule/issues/11
   //TravelerAnemo,
@@ -603,6 +626,7 @@ export const Characters = [
   Razor,
   Rosaria,
   Sayu,
+  Shenhe,
   Sucrose,
   Tartaglia,
   Thoma,
@@ -613,5 +637,6 @@ export const Characters = [
   Xinyan,
   Yanfei,
   Yoimiya,
+  YunJin,
   Zhongli,
 ];
