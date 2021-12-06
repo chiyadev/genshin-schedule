@@ -15,27 +15,34 @@ const Subtractor = ({ current }: { current: number }) => {
 
   return (
     <ButtonGroup isAttached>
-      {buttons.map(
-        (value) =>
-          ((value < 0 && current + value >= 0) || (value > 0 && current < ResinCap)) && (
+      {buttons.map((delta) => {
+        // round down, without clamping because we need to check for extremities
+        const rounded = Math.floor(current + delta);
+
+        // if addition, don't overflow
+        // if subtraction, don't underflow
+        if ((delta < 0 && rounded >= 0) || (delta > 0 && rounded <= ResinCap)) {
+          return (
             <SubtractButton
-              key={value}
-              value={value}
+              key={delta}
+              value={delta}
               onClick={() => {
                 setResin((resin) => ({
-                  value: clampResin(clampResin(resin.value + getResinRecharge(time.valueOf() - resin.time)) + value),
+                  value: clampResin(clampResin(resin.value + getResinRecharge(time.valueOf() - resin.time)) + delta),
                   time: time.valueOf(),
                 }));
 
-                if (value < 0) {
-                  setStats((stats) => ({ ...stats, resinsSpent: stats.resinsSpent - value }));
+                if (delta < 0) {
+                  setStats((stats) => ({ ...stats, resinsSpent: stats.resinsSpent - delta }));
+                  trackEvent("resin", `resinSub${Math.abs(delta)}`);
+                } else {
+                  trackEvent("resin", `resinAdd${delta}`);
                 }
-
-                trackEvent("resin", `resin${value}`);
               }}
             />
-          )
-      )}
+          );
+        }
+      })}
     </ButtonGroup>
   );
 };
@@ -44,7 +51,7 @@ const SubtractButton = ({ value, onClick }: { value: number; onClick: () => void
   const { formatMessage } = useIntl();
 
   // conditional hotkey react hook: breaks rules of hooks
-  // but `value` never changes (see `key={value}` above) so it's fine
+  // but `value` never changes (see `key={delta}` above) so it's fine
   // value must be two digits and multiple of ten, otherwise keys could conflict
   if (Math.abs(value) < 100 && value % 10 === 0) {
     const num = Math.abs(value).toString().slice(0, 1);
@@ -58,8 +65,6 @@ const SubtractButton = ({ value, onClick }: { value: number; onClick: () => void
       // backwards compat: `num` for sub, `shift+num` for add
       hotkeys = hotkeys.map((key) => `shift+${key}`);
     }
-
-    console.log(hotkeys);
 
     useHotkeys(
       hotkeys.join(", "),

@@ -691,12 +691,12 @@ msgctxt "components.Home.Resin.NotificationSetter.db8673"
 msgid "Resin recharged"
 msgstr ""
 
-#: components/Home/Resin/Subtractor.tsx:83
+#: components/Home/Resin/Subtractor.tsx:88
 msgctxt "components.Home.Resin.Subtractor.387912"
 msgid "Subtract {amount} resins"
 msgstr ""
 
-#: components/Home/Resin/Subtractor.tsx:82
+#: components/Home/Resin/Subtractor.tsx:87
 msgctxt "components.Home.Resin.Subtractor.9f72cf"
 msgid "Add {amount} resins"
 msgstr ""
@@ -886,9 +886,14 @@ msgctxt "components.MapPage.TaskListOverlay.f36c72"
 msgid "Hide list"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:67
+#: components/ShortcutHelp.tsx:79
 msgctxt "components.ShortcutHelp.0b8e0c"
 msgid "Focus next task"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:58
+msgctxt "components.ShortcutHelp.0eca1d"
+msgid "Add {values}"
 msgstr ""
 
 #: components/ShortcutHelp.tsx:34
@@ -896,7 +901,7 @@ msgctxt "components.ShortcutHelp.44c3b9"
 msgid "Previous day"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:69
+#: components/ShortcutHelp.tsx:81
 msgctxt "components.ShortcutHelp.49f4fc"
 msgid "shift"
 msgstr ""
@@ -916,17 +921,17 @@ msgctxt "components.ShortcutHelp.723949"
 msgid "Server clock"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:59
+#: components/ShortcutHelp.tsx:71
 msgctxt "components.ShortcutHelp.755c57"
 msgid "Task scheduler"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:61
+#: components/ShortcutHelp.tsx:73
 msgctxt "components.ShortcutHelp.7acb8d"
 msgid "Search tasks"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:73
+#: components/ShortcutHelp.tsx:85
 msgctxt "components.ShortcutHelp.927523"
 msgid "Mark as done"
 msgstr ""
@@ -936,7 +941,7 @@ msgctxt "components.ShortcutHelp.96d48b"
 msgid "Resin calculator"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:79
+#: components/ShortcutHelp.tsx:91
 msgctxt "components.ShortcutHelp.9f8054"
 msgid "Show keyboard shortcuts"
 msgstr ""
@@ -951,7 +956,7 @@ msgctxt "components.ShortcutHelp.bf360f"
 msgid "Keyboard shortcuts"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:64
+#: components/ShortcutHelp.tsx:76
 msgctxt "components.ShortcutHelp.c03f14"
 msgid "Toggle list overlay"
 msgstr ""
@@ -966,7 +971,7 @@ msgctxt "components.ShortcutHelp.dd708b"
 msgid "Next day"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:70
+#: components/ShortcutHelp.tsx:82
 msgctxt "components.ShortcutHelp.efcb6e"
 msgid "Focus previous task"
 msgstr ""
@@ -976,7 +981,7 @@ msgctxt "components.ShortcutHelp.fcc2fc"
 msgid "Reset offset"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:77
+#: components/ShortcutHelp.tsx:89
 msgctxt "components.ShortcutHelp.fd59c3"
 msgid "Other"
 msgstr ""
