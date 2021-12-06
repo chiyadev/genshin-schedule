@@ -28,7 +28,7 @@ const Subtractor = ({ current }: { current: number }) => {
                 }));
 
                 if (value < 0) {
-                  setStats((stats) => stats && { ...stats, resinsSpent: stats.resinsSpent - value });
+                  setStats((stats) => ({ ...stats, resinsSpent: stats.resinsSpent - value }));
                 }
 
                 trackEvent("resin", `resin${value}`);
@@ -42,16 +42,34 @@ const Subtractor = ({ current }: { current: number }) => {
 
 const SubtractButton = ({ value, onClick }: { value: number; onClick: () => void }) => {
   const { formatMessage } = useIntl();
-  const hotkey = Math.abs(value).toString().slice(0, 1);
 
-  useHotkeys(
-    `${hotkey}, num_${hotkey}`, // support numpad keys for niche cases (e.g. Firefox on macOS)
-    (e) => {
-      onClick();
-      e.preventDefault();
-    },
-    [onClick]
-  );
+  // conditional hotkey react hook: breaks rules of hooks
+  // but `value` never changes (see `key={value}` above) so it's fine
+  // value must be two digits and multiple of ten, otherwise keys could conflict
+  if (Math.abs(value) < 100 && value % 10 === 0) {
+    const num = Math.abs(value).toString().slice(0, 1);
+    let hotkeys = [`${num}`];
+
+    // https://github.com/chiyadev/genshin-schedule/pull/56
+    // support numpad keys for niche cases (e.g. Firefox on macOS)
+    hotkeys.push(`num_${num}`);
+
+    if (value > 0) {
+      // backwards compat: `num` for sub, `shift+num` for add
+      hotkeys = hotkeys.map((key) => `shift+${key}`);
+    }
+
+    console.log(hotkeys);
+
+    useHotkeys(
+      hotkeys.join(", "),
+      (e) => {
+        onClick();
+        e.preventDefault();
+      },
+      [onClick]
+    );
+  }
 
   return (
     <Button
