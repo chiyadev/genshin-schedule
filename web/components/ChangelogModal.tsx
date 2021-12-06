@@ -25,11 +25,11 @@ function buildChangelog() {
   return [
     <ChangelogSection key={36} date="2021/12/06">
       <ChangelogItem>Upgraded all dependencies to the latest versions.</ChangelogItem>
+      <ChangelogItem github={105}>Added leaked 2.4 characters and weapon.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={35} date="2021/12/05">
       <ChangelogItem github={104}>Added 2.3 characters, weapons and artifacts.</ChangelogItem>
       <ChangelogItem github={104}>Added accuracy warning to leaked weapon pages.</ChangelogItem>
-      <ChangelogItem github={105}>Added leaked 2.4 characters and weapon.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={34} date="2021/11/10">
       <ChangelogItem github={100}>Added 2.1 and 2.2 characters, weapons and artifacts.</ChangelogItem>
