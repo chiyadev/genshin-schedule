@@ -3,6 +3,7 @@ import { HStack, Icon, Input, Stat, StatLabel, StatNumber } from "@chakra-ui/rea
 import { useConfig } from "../../../utils/config";
 import { FormattedMessage } from "react-intl";
 import { Percent } from "react-feather";
+import { ResinCap } from "../../../db/resins";
 
 const ResinCalcButtonInput = () => {
   const [value, setValue] = useConfig("resinCalcButtons");
@@ -39,7 +40,10 @@ const ResinCalcButtonInput = () => {
 
               for (const part of value.split(",")) {
                 const parsed = parseInt(part);
-                if (!isNaN(parsed)) {
+
+                // value must be an integer and multiple of ten
+                // clamp it within the resin cap just to make sure we are dealing with sane inputs
+                if (Number.isInteger(parsed) && parsed % 10 === 0 && Math.abs(parsed) < ResinCap) {
                   values.push(parsed);
                 }
               }

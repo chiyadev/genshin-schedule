@@ -321,7 +321,7 @@ msgctxt "components.Customize.SettingsList.LanguageSwitch.cb5677"
 msgid "Language"
 msgstr ""
 
-#: components/Customize/SettingsList/ResinCalcButtonInput.tsx:27
+#: components/Customize/SettingsList/ResinCalcButtonInput.tsx:28
 msgctxt "components.Customize.SettingsList.ResinCalcButtonInput.040acf"
 msgid "Resin calculator buttons"
 msgstr ""
