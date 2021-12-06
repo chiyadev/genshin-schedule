@@ -145,6 +145,7 @@ add(registerMessage({ defaultMessage: "Whiteblind" }), Guyun, [FatuiKnife, Treas
 // Mist Veiled Elixir
 add(registerMessage({ defaultMessage: "Blackcliff Pole" }), MistVeiledElixir, [MistGrass, FatuiInsignia]);
 add(registerMessage({ defaultMessage: "Blackcliff Slasher" }), MistVeiledElixir, [MistGrass, FatuiInsignia]);
+add(registerMessage({ defaultMessage: "Calamity Queller" }), MistVeiledElixir, [MistGrass, WhopperflowerNectar], true);
 add(registerMessage({ defaultMessage: "Debate Club" }), MistVeiledElixir, [MistGrass, HilichurlMask]);
 add(registerMessage({ defaultMessage: "Dragon's Bane" }), MistVeiledElixir, [MistGrass, SamachurlScroll]);
 add(registerMessage({ defaultMessage: "Eye of Perception" }), MistVeiledElixir, [MistGrass, HilichurlMask]);

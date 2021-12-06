@@ -1,4 +1,3 @@
-debugger;
 import React, { memo, useState } from "react";
 import { Character } from "../../../db/characters";
 import { CommonMaterial, CommonMaterialWiki } from "../../../db/commonMaterials";
