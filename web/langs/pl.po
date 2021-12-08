@@ -3,35 +3,37 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-08 23:23+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-12-09 22:52+0000\n"
+"Last-Translator: typek52 <typek52@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/genshin-schedule/"
+"web/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.5.1\n"
-
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #: components/Auth/UserSignIn.tsx:62
 msgctxt "components.Auth.UserSignIn.242220"
 msgid "Username"
-msgstr ""
+msgstr "Nazwa użytkownika"
 
 #: components/Auth/UserSignIn.tsx:46
 msgctxt "components.Auth.UserSignIn.28def3"
 msgid "Error"
-msgstr ""
+msgstr "Błąd"
 
 #: components/Auth/UserSignIn.tsx:93
 msgctxt "components.Auth.UserSignIn.57f247"
 msgid "Forgot password?"
-msgstr ""
+msgstr "Zapomniałeś hasła?"
 
 #: components/Auth/UserSignIn.tsx:157
 msgctxt "components.Auth.UserSignIn.67b73d"
 msgid "Continue without signing in"
-msgstr ""
+msgstr "Kontynuuj bez logowania"
 
 #: components/Auth/UserSignIn.tsx:98
 msgctxt "components.Auth.UserSignIn.7249ee"
@@ -41,7 +43,7 @@ msgstr ""
 #: components/Auth/UserSignIn.tsx:144
 msgctxt "components.Auth.UserSignIn.93eb72"
 msgid "All data will be stored locally on the browser."
-msgstr ""
+msgstr "Wszystkie dane będą przechowywane lokalnie w przeglądarce."
 
 #: components/Auth/UserSignIn.tsx:105
 msgctxt "components.Auth.UserSignIn.bc7fa7"
@@ -56,12 +58,12 @@ msgstr ""
 #: components/Auth/UserSignIn.tsx:78
 msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
-msgstr ""
+msgstr "Hasło"
 
 #: components/ChangelogModal.tsx:247
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
-msgstr ""
+msgstr "Dziennik zmian"
 
 #: components/ClockOffsetWarning.tsx:24
 msgctxt "components.ClockOffsetWarning.85fdee"
@@ -71,7 +73,7 @@ msgstr ""
 #: components/ClockOffsetWarning.tsx:36
 msgctxt "components.ClockOffsetWarning.8e6fec"
 msgid "Reset"
-msgstr ""
+msgstr "Resetuj"
 
 #: components/Customize/ArtifactInfo/NoteInput.tsx:24
 msgctxt "components.Customize.ArtifactInfo.NoteInput.ab582f"
@@ -96,7 +98,7 @@ msgstr ""
 #: components/Customize/ArtifactList/index.tsx:19
 msgctxt "components.Customize.ArtifactList.index.796e5e"
 msgid "Artifacts"
-msgstr ""
+msgstr "Artefakty"
 
 #: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:62
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.8b6c08"
@@ -146,12 +148,12 @@ msgstr ""
 #: components/Customize/Notifications/Info.tsx:104
 msgctxt "components.Customize.Notifications.Info.049a4d"
 msgid "Invite the bot"
-msgstr ""
+msgstr "Zaproś bota"
 
 #: components/Customize/Notifications/Info.tsx:36
 msgctxt "components.Customize.Notifications.Info.34089d"
 msgid "Notifications"
-msgstr ""
+msgstr "Powiadomienia"
 
 #: components/Customize/Notifications/Info.tsx:53
 msgctxt "components.Customize.Notifications.Info.63d176"
@@ -161,12 +163,12 @@ msgstr ""
 #: components/Customize/Notifications/Info.tsx:67
 msgctxt "components.Customize.Notifications.Info.70feee"
 msgid "Genshin Schedule server"
-msgstr ""
+msgstr "Serwer Genshin Schedule"
 
 #: components/Customize/Notifications/Info.tsx:72
 msgctxt "components.Customize.Notifications.Info.8f57ce"
 msgid "invite the bot"
-msgstr ""
+msgstr "Zaproś bota"
 
 #: components/Customize/Notifications/Info.tsx:60
 msgctxt "components.Customize.Notifications.Info.9da5a0"
@@ -181,7 +183,7 @@ msgstr ""
 #: components/Customize/Notifications/Info.tsx:90
 msgctxt "components.Customize.Notifications.Info.aebf2a"
 msgid "Join the server"
-msgstr ""
+msgstr "Dołącz do serwera"
 
 #: components/Customize/Notifications/Info.tsx:121
 msgctxt "components.Customize.Notifications.Info.e159bf"
@@ -201,12 +203,12 @@ msgstr ""
 #: components/Customize/Notifications/MessageDisplay.tsx:34
 msgctxt "components.Customize.Notifications.MessageDisplay.e25eaf"
 msgid "Copy"
-msgstr ""
+msgstr "Kopiuj"
 
 #: components/Customize/Notifications/MessageDisplay.tsx:20
 msgctxt "components.Customize.Notifications.MessageDisplay.fbf09e"
 msgid "You are not signed in."
-msgstr ""
+msgstr "Nie jesteś zalogowany."
 
 #: components/Customize/Search.tsx:43
 msgctxt "components.Customize.Search.2027a7"
@@ -216,7 +218,7 @@ msgstr ""
 #: components/Customize/Search.tsx:37
 msgctxt "components.Customize.Search.7c993e"
 msgid "Search characters, weapons and artifacts…"
-msgstr ""
+msgstr "Wyszukaj postacie, bronie, albo artefakty…"
 
 #: components/Customize/Search.tsx:55
 msgctxt "components.Customize.Search.9e7721"
@@ -236,12 +238,12 @@ msgstr ""
 #: components/Customize/SettingsList/AccountManageButton.tsx:93
 msgctxt "components.Customize.SettingsList.AccountManageButton.242220"
 msgid "Username"
-msgstr ""
+msgstr "Nazwa użytkownika"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:51
 msgctxt "components.Customize.SettingsList.AccountManageButton.2d40ff"
 msgid "Manage account"
-msgstr ""
+msgstr "Zarządzaj kontem"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:121
 msgctxt "components.Customize.SettingsList.AccountManageButton.2f8c01"
@@ -251,27 +253,27 @@ msgstr ""
 #: components/Customize/SettingsList/AccountManageButton.tsx:113
 msgctxt "components.Customize.SettingsList.AccountManageButton.7d31e1"
 msgid "New password"
-msgstr ""
+msgstr "Nowe hasło"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:98
 msgctxt "components.Customize.SettingsList.AccountManageButton.a58ae0"
 msgid "New username"
-msgstr ""
+msgstr "Nowa nazwa użytkownika"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:129
 msgctxt "components.Customize.SettingsList.AccountManageButton.c12651"
 msgid "Submit"
-msgstr ""
+msgstr "Wyślij"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:133
 msgctxt "components.Customize.SettingsList.AccountManageButton.e3b158"
 msgid "Cancel"
-msgstr ""
+msgstr "Anuluj"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:107
 msgctxt "components.Customize.SettingsList.AccountManageButton.e6c83b"
 msgid "Password"
-msgstr ""
+msgstr "Hasło"
 
 #: components/Customize/SettingsList/BackgroundSwitch.tsx:18
 msgctxt "components.Customize.SettingsList.BackgroundSwitch.5d0640"
@@ -286,7 +288,7 @@ msgstr ""
 #: components/Customize/SettingsList/ConfigExportButton.tsx:67
 msgctxt "components.Customize.SettingsList.ConfigExportButton.243268"
 msgid "This action cannot be undone."
-msgstr ""
+msgstr "Ta akcja nie może zostać cofnięta."
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:99
 msgctxt "components.Customize.SettingsList.ConfigExportButton.8ff2e0"
