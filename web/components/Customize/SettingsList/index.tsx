@@ -12,6 +12,7 @@ import ResinEstimateModeSwitch from "./ResinEstimateModeSwitch";
 import TaskListCompactSwitch from "./TaskListCompactSwitch";
 import LanguageSwitch from "./LanguageSwitch";
 import { FormattedMessage } from "react-intl";
+import ResinCalcButtonInput from "./ResinCalcButtonInput";
 
 const SettingsList = ({ user }: { user?: User }) => {
   return (
@@ -26,6 +27,7 @@ const SettingsList = ({ user }: { user?: User }) => {
         <LanguageSwitch />
         <BackgroundSwitch />
         <ResinEstimateModeSwitch />
+        <ResinCalcButtonInput />
         <ResinNotifyMarkSlider />
         <TaskDefaultZoomSlider />
 

@@ -45,6 +45,7 @@ export type Config = {
     value: number;
     time: number;
   };
+  resinCalcButtons: number[];
   characters: string[]; // talent mats
   charactersWeekly: string[]; // weekly talent mats
   charactersGem: string[]; // ascension gems
@@ -118,6 +119,7 @@ export const DefaultConfig: Config = {
     value: 0,
     time: Date.now(),
   },
+  resinCalcButtons: [-60, -40, -30, -20],
   characters: [],
   charactersWeekly: [],
   charactersGem: [],

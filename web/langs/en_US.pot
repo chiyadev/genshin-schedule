@@ -46,7 +46,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:247
+#: components/ChangelogModal.tsx:250
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -321,6 +321,11 @@ msgctxt "components.Customize.SettingsList.LanguageSwitch.cb5677"
 msgid "Language"
 msgstr ""
 
+#: components/Customize/SettingsList/ResinCalcButtonInput.tsx:28
+msgctxt "components.Customize.SettingsList.ResinCalcButtonInput.040acf"
+msgid "Resin calculator buttons"
+msgstr ""
+
 #: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:18
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.6eef86"
 msgid "Resin estimation mode"
@@ -361,7 +366,7 @@ msgctxt "components.Customize.SettingsList.ThemeSwitch.84c510"
 msgid "Dark mode"
 msgstr ""
 
-#: components/Customize/SettingsList/index.tsx:20
+#: components/Customize/SettingsList/index.tsx:21
 msgctxt "components.Customize.SettingsList.index.0f789d"
 msgid "Settings"
 msgstr ""
@@ -686,9 +691,14 @@ msgctxt "components.Home.Resin.NotificationSetter.db8673"
 msgid "Resin recharged"
 msgstr ""
 
-#: components/Home/Resin/Subtractor.tsx:61
-msgctxt "components.Home.Resin.Subtractor.387912"
+#: components/Home/Resin/SideButtons.tsx:88
+msgctxt "components.Home.Resin.SideButtons.387912"
 msgid "Subtract {amount} resins"
+msgstr ""
+
+#: components/Home/Resin/SideButtons.tsx:87
+msgctxt "components.Home.Resin.SideButtons.9f72cf"
+msgid "Add {amount} resins"
 msgstr ""
 
 #: components/Home/Resin/index.tsx:121
@@ -876,9 +886,14 @@ msgctxt "components.MapPage.TaskListOverlay.f36c72"
 msgid "Hide list"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:67
+#: components/ShortcutHelp.tsx:79
 msgctxt "components.ShortcutHelp.0b8e0c"
 msgid "Focus next task"
+msgstr ""
+
+#: components/ShortcutHelp.tsx:58
+msgctxt "components.ShortcutHelp.0eca1d"
+msgid "Add {values}"
 msgstr ""
 
 #: components/ShortcutHelp.tsx:34
@@ -886,7 +901,7 @@ msgctxt "components.ShortcutHelp.44c3b9"
 msgid "Previous day"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:69
+#: components/ShortcutHelp.tsx:81
 msgctxt "components.ShortcutHelp.49f4fc"
 msgid "shift"
 msgstr ""
@@ -906,17 +921,17 @@ msgctxt "components.ShortcutHelp.723949"
 msgid "Server clock"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:59
+#: components/ShortcutHelp.tsx:71
 msgctxt "components.ShortcutHelp.755c57"
 msgid "Task scheduler"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:61
+#: components/ShortcutHelp.tsx:73
 msgctxt "components.ShortcutHelp.7acb8d"
 msgid "Search tasks"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:73
+#: components/ShortcutHelp.tsx:85
 msgctxt "components.ShortcutHelp.927523"
 msgid "Mark as done"
 msgstr ""
@@ -926,7 +941,7 @@ msgctxt "components.ShortcutHelp.96d48b"
 msgid "Resin calculator"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:79
+#: components/ShortcutHelp.tsx:91
 msgctxt "components.ShortcutHelp.9f8054"
 msgid "Show keyboard shortcuts"
 msgstr ""
@@ -941,7 +956,7 @@ msgctxt "components.ShortcutHelp.bf360f"
 msgid "Keyboard shortcuts"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:64
+#: components/ShortcutHelp.tsx:76
 msgctxt "components.ShortcutHelp.c03f14"
 msgid "Toggle list overlay"
 msgstr ""
@@ -956,7 +971,7 @@ msgctxt "components.ShortcutHelp.dd708b"
 msgid "Next day"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:70
+#: components/ShortcutHelp.tsx:82
 msgctxt "components.ShortcutHelp.efcb6e"
 msgid "Focus previous task"
 msgstr ""
@@ -966,7 +981,7 @@ msgctxt "components.ShortcutHelp.fcc2fc"
 msgid "Reset offset"
 msgstr ""
 
-#: components/ShortcutHelp.tsx:77
+#: components/ShortcutHelp.tsx:89
 msgctxt "components.ShortcutHelp.fd59c3"
 msgid "Other"
 msgstr ""

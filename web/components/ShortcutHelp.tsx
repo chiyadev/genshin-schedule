@@ -54,6 +54,18 @@ const ShortcutHelp = ({ open, setOpen }: { open: boolean; setOpen: Dispatch<bool
                   }}
                 />
               </KeyHint>
+              <KeyHint>
+                <FormattedMessage
+                  defaultMessage="Add {values}"
+                  values={{
+                    values: (
+                      <>
+                        20 <Kbd>shift+2</Kbd>, 30 <Kbd>shift+3</Kbd>, 40 <Kbd>shift+4</Kbd>, 60 <Kbd>shift+6</Kbd>
+                      </>
+                    ),
+                  }}
+                />
+              </KeyHint>
             </Category>
 
             <Category heading={<FormattedMessage defaultMessage="Task scheduler" />}>
