@@ -192,7 +192,7 @@ add(registerMessage({ defaultMessage: "Hamayumi" }), Narukami, [MirrorPrism, Hil
 add(registerMessage({ defaultMessage: "Katsuragikiri Nagamasa" }), Narukami, [ChaosGear, Handguard]);
 add(registerMessage({ defaultMessage: "Mouun's Moon" }), Narukami, [MirrorPrism, SpectralCore]);
 add(registerMessage({ defaultMessage: "Predator" }), Narukami, [MirrorPrism, HilichurlArrowhead]);
-add(registerMessage({ defaultMessage: "Redhorn Stonethresher" }), Narukami, [ConcealedClaw, Handguard], true);
+add(registerMessage({ defaultMessage: "Redhorn Stonethresher" }), Narukami, [ConcealedClaw, Handguard]);
 
 // Mask
 add(registerMessage({ defaultMessage: "Engulfing Lightning" }), NarukamiMask, [ChaosGear, Handguard]);
