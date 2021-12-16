@@ -17,12 +17,15 @@ import {
 import { FormattedMessage } from "react-intl";
 import { GitPullRequest } from "react-feather";
 
-const LatestChangelog = 37;
+const LatestChangelog = 38;
 
 function buildChangelog() {
   // To create a new changelog section, increment LatestChangelog counter by one
   // and ensure that the counter is equal to the key of the first element in this array.
   return [
+    <ChangelogSection key={38} date="2021/12/16">
+      <ChangelogItem github={107}>Removed leaked warnings from Gorou, Itto, and Redhorn Stonethresher.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={37} date="2021/12/13">
       <ChangelogItem github={106}>Added support for custom resin calculator buttons.</ChangelogItem>
     </ChangelogSection>,
