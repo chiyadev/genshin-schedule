@@ -413,8 +413,8 @@ export const MaguuKenkiDrops: DomainDropSet = {
 export const CryoRegisvineDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Any,
-  items: [PrayersToSpringtime, ShivadaJade, HoarfrostCore],
-  itemsAux: [LuckyDog, Berserker, TheExile, GladiatorsFinale, WanderersTroupe],
+  items: [ShivadaJade, HoarfrostCore],
+  itemsAux: [LuckyDog, Berserker, TheExile, PrayersToSpringtime, GladiatorsFinale, WanderersTroupe],
 };
 
 export const CryoHypostasisDrops: DomainDropSet = {
@@ -491,31 +491,15 @@ export const PerpetualMechanicalArrayDrops: DomainDropSet = {
 export const ThunderManifestationDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Any,
-  items: [StormBeads],
-  itemsAux: [
-    TravelingDoctor,
-    Instructor,
-    TheExile,
-    PrayersForWisdom,
-    GladiatorsFinale,
-    WanderersTroupe,
-    VajradaAmethyst,
-  ],
+  items: [VajradaAmethyst, StormBeads],
+  itemsAux: [TravelingDoctor, Instructor, TheExile, PrayersForWisdom, GladiatorsFinale, WanderersTroupe],
 };
 
 export const HydroHypostasisDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Any,
-  items: [DewOfRepudiation],
-  itemsAux: [
-    TravelingDoctor,
-    Instructor,
-    TheExile,
-    PrayersForDestiny,
-    GladiatorsFinale,
-    WanderersTroupe,
-    VarunadaLazurite,
-  ],
+  items: [VarunadaLazurite, DewOfRepudiation],
+  itemsAux: [TravelingDoctor, Instructor, TheExile, PrayersForDestiny, GladiatorsFinale, WanderersTroupe],
 };
 
 export const NarukamiIslandTenshukakuDrops: DomainDropSet = {
@@ -528,8 +512,8 @@ export const NarukamiIslandTenshukakuDrops: DomainDropSet = {
 export const GoldenWolflordDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Any,
-  items: [RiftbornRegalia],
-  itemsAux: [TravelingDoctor, Instructor, TheExile, GladiatorsFinale, WanderersTroupe, PrithivaTopaz],
+  items: [PrithivaTopaz, RiftbornRegalia],
+  itemsAux: [TravelingDoctor, Instructor, TheExile, GladiatorsFinale, WanderersTroupe],
 };
 
 export const SlumberingCourtDrops: DomainDropSet = {
