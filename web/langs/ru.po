@@ -61,7 +61,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr "Пароль"
 
-#: components/ChangelogModal.tsx:253
+#: components/ChangelogModal.tsx:256
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr "Список изменений обновлений"
@@ -669,12 +669,12 @@ msgctxt "components.Home.RealmCurrency.EstimatorByTime.f0f932"
 msgid "{value} in {duration}"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:80
+#: components/Home/RealmCurrency/index.tsx:82
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
 msgid "Trust rank"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:87
+#: components/Home/RealmCurrency/index.tsx:89
 msgctxt "components.Home.RealmCurrency.index.27268e"
 msgid "Realm currency"
 msgstr ""
@@ -684,7 +684,7 @@ msgctxt "components.Home.RealmCurrency.index.33dd2d"
 msgid "Adeptal energy"
 msgstr ""
 
-#: components/Home/RealmCurrency/index.tsx:100
+#: components/Home/RealmCurrency/index.tsx:102
 msgctxt "components.Home.RealmCurrency.index.9ca85f"
 msgid "Your realm currency is full."
 msgstr ""
@@ -739,17 +739,17 @@ msgctxt "components.Home.Resin.SideButtons.9f72cf"
 msgid "Add {amount} resins"
 msgstr ""
 
-#: components/Home/Resin/index.tsx:121
+#: components/Home/Resin/index.tsx:122
 msgctxt "components.Home.Resin.index.506b0c"
 msgid "Your resins are full."
 msgstr ""
 
-#: components/Home/Resin/index.tsx:54
+#: components/Home/Resin/index.tsx:55
 msgctxt "components.Home.Resin.index.c3eb42"
 msgid "Switch estimation mode"
 msgstr ""
 
-#: components/Home/Resin/index.tsx:47
+#: components/Home/Resin/index.tsx:48
 msgctxt "components.Home.Resin.index.fe85b2"
 msgid "Resin Calculator"
 msgstr ""
