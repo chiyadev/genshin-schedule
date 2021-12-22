@@ -553,7 +553,6 @@ export const Gorou: Character = {
   talentMaterialWeekly: MoltenMoment,
   talentMaterial: Light,
   commonMaterials: [SpectralCore, SangoPearl],
-  leaked: true,
 };
 
 export const Itto: Character = {
@@ -564,7 +563,6 @@ export const Itto: Character = {
   talentMaterialWeekly: AshenHeart,
   talentMaterial: Elegance,
   commonMaterials: [Slime, Onikabuto],
-  leaked: true,
 };
 
 export const YunJin: Character = {
