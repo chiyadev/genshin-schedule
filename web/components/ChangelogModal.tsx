@@ -25,6 +25,9 @@ function buildChangelog() {
   return [
     <ChangelogSection key={38} date="2021/12/22">
       <ChangelogItem github={107}>Removed leaked warnings from Gorou, Itto, and Redhorn Stonethresher.</ChangelogItem>
+      <ChangelogItem github={108}>
+        Made resin and realm currency calculator buttons always show on touch-input devices.
+      </ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={37} date="2021/12/13">
       <ChangelogItem github={106}>Added support for custom resin calculator buttons.</ChangelogItem>
