@@ -17,7 +17,7 @@ import {
   VStack,
   Icon,
   Link,
-  useBreakpointValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useServerTime } from "../../../utils/time";
@@ -37,7 +37,8 @@ const Resin = () => {
   const [mode, setMode] = useConfig("resinEstimateMode");
   const [notifyMark] = useConfig("resinNotifyMark");
   const [hover, setHover] = useState(false);
-  const isMobile = useBreakpointValue({ base: true, md: false });
+  const [isTouchDevice] = useMediaQuery("(any-pointer: coarse)");
+
   const resinInput = useRef<HTMLInputElement>(null);
 
   const time = useServerTime(60000);
@@ -103,7 +104,7 @@ const Resin = () => {
 
           <Spacer />
 
-          <motion.div animate={{ opacity: hover || isMobile ? 1 : 0 }}>
+          <motion.div animate={{ opacity: hover || isTouchDevice ? 1 : 0 }}>
             <SideButtons current={current} />
           </motion.div>
         </HStack>
