@@ -60,7 +60,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr "Passord"
 
-#: components/ChangelogModal.tsx:250
+#: components/ChangelogModal.tsx:253
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -1519,7 +1519,7 @@ msgctxt "db.characters.1c8781"
 msgid "Venti"
 msgstr ""
 
-#: db/characters.ts:561
+#: db/characters.ts:560
 msgctxt "db.characters.24a6dc"
 msgid "Itto"
 msgstr ""
@@ -1574,7 +1574,7 @@ msgctxt "db.characters.653885"
 msgid "Beidou"
 msgstr ""
 
-#: db/characters.ts:583
+#: db/characters.ts:581
 msgctxt "db.characters.67a132"
 msgid "Shenhe"
 msgstr ""
@@ -1589,7 +1589,7 @@ msgctxt "db.characters.7ce9c6"
 msgid "Noelle"
 msgstr ""
 
-#: db/characters.ts:572
+#: db/characters.ts:570
 msgctxt "db.characters.7eee26"
 msgid "Yun Jin"
 msgstr ""
