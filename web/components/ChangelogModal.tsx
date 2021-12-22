@@ -23,7 +23,7 @@ function buildChangelog() {
   // To create a new changelog section, increment LatestChangelog counter by one
   // and ensure that the counter is equal to the key of the first element in this array.
   return [
-    <ChangelogSection key={38} date="2021/12/16">
+    <ChangelogSection key={38} date="2021/12/22">
       <ChangelogItem github={107}>Removed leaked warnings from Gorou, Itto, and Redhorn Stonethresher.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={37} date="2021/12/13">
