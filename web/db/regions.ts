@@ -58,7 +58,6 @@ import {
   Keqing,
   Klee,
   Kokomi,
-  KujouSara,
   Lisa,
   Mona,
   Ningguang,
@@ -66,6 +65,7 @@ import {
   Qiqi,
   RaidenShogun,
   Razor,
+  Sara,
   Sayu,
   Shenhe,
   Sucrose,
@@ -185,7 +185,7 @@ export const Inazuma: Region = {
     SlumberingCourt,
     BathysmalVishaps,
   ],
-  characters: [Ayaka, Gorou, Itto, Kazuha, Kokomi, KujouSara, RaidenShogun, Sayu, Thoma, Yoimiya],
+  characters: [Ayaka, Gorou, Itto, Kazuha, Kokomi, Sara, RaidenShogun, Sayu, Thoma, Yoimiya],
 };
 
 export const Snezhnaya: Region = {

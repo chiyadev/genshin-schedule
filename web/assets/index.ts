@@ -197,7 +197,6 @@ import Keqing from "./game/Keqing.png";
 import KitainCrossSpear from "./game/Kitain Cross Spear.png";
 import Klee from "./game/Klee.png";
 import Kokomi from "./game/Kokomi.png";
-import KujouSara from "./game/Kujou Sara.png";
 import Lavawalker from "./game/Lavawalker.png";
 import LightningPrism from "./game/Lightning Prism.png";
 import LionsRoar from "./game/Lion's Roar.png";
@@ -313,6 +312,7 @@ import SacrificialSword from "./game/Sacrificial Sword.png";
 import SakuraBloom from "./game/Sakura Bloom.png";
 import SandbearerWood from "./game/Sandbearer Wood.png";
 import SangoPearl from "./game/Sango Pearl.png";
+import Sara from "./game/Sara.png";
 import Sayu from "./game/Sayu.png";
 import Scholar from "./game/Scholar.png";
 import SeaGanoderma from "./game/Sea Ganoderma.png";
@@ -631,7 +631,6 @@ export {
   KitainCrossSpear,
   Klee,
   Kokomi,
-  KujouSara,
   Lavawalker,
   LightningPrism,
   LionsRoar,
@@ -747,6 +746,7 @@ export {
   SakuraBloom,
   SandbearerWood,
   SangoPearl,
+  Sara,
   Sayu,
   Scholar,
   SeaGanoderma,
@@ -1067,7 +1067,6 @@ export function getAssetByName(name: string): string | undefined {
     case "Kitain Cross Spear": return KitainCrossSpear.src;
     case "Klee": return Klee.src;
     case "Kokomi": return Kokomi.src;
-    case "Kujou Sara": return KujouSara.src;
     case "Lavawalker": return Lavawalker.src;
     case "Lightning Prism": return LightningPrism.src;
     case "Lion's Roar": return LionsRoar.src;
@@ -1183,6 +1182,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Sakura Bloom": return SakuraBloom.src;
     case "Sandbearer Wood": return SandbearerWood.src;
     case "Sango Pearl": return SangoPearl.src;
+    case "Sara": return Sara.src;
     case "Sayu": return Sayu.src;
     case "Scholar": return Scholar.src;
     case "Sea Ganoderma": return SeaGanoderma.src;

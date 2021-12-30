@@ -505,9 +505,9 @@ export const RaidenShogun: Character = {
   commonMaterials: [Handguard, AmakumoFruit],
 };
 
-export const KujouSara: Character = {
+export const Sara: Character = {
   type: "Character",
-  name: registerMessage({ defaultMessage: "Kujou Sara" }),
+  name: registerMessage({ defaultMessage: "Sara" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Kujou_Sara",
   materials: [VajradaAmethyst, StormBeads],
   talentMaterialWeekly: AshenHeart,
@@ -612,7 +612,6 @@ export const Characters = [
   Keqing,
   Klee,
   Kokomi,
-  KujouSara,
   Lisa,
   Mona,
   Ningguang,
@@ -621,6 +620,7 @@ export const Characters = [
   RaidenShogun,
   Razor,
   Rosaria,
+  Sara,
   Sayu,
   Shenhe,
   Sucrose,
