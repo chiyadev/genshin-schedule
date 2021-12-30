@@ -52,6 +52,7 @@ import {
   HydroHypostasisDrops,
   GoldenWolflordDrops,
   SlumberingCourtDrops,
+  BathysmalVishapsDrops,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
 
@@ -302,6 +303,13 @@ export const SlumberingCourt: Domain = {
   drops: [SlumberingCourtDrops],
 };
 
+export const BathysmalVishaps: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Bathysmal Vishaps" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Slumbering_Court",
+  drops: [BathysmalVishapsDrops],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -337,4 +345,5 @@ export const Domains = [
   NarukamiIslandTenshukaku,
   GoldenWolflord,
   SlumberingCourt,
+  BathysmalVishaps,
 ];

@@ -86,6 +86,7 @@ import {
   CleansingHeart,
   CrystallineBloom,
   DewOfRepudiation,
+  DragonheirsFalseFin,
   EverflameSeed,
   HoarfrostCore,
   HurricaneSeed,
@@ -523,6 +524,13 @@ export const SlumberingCourtDrops: DomainDropSet = {
   itemsAux: [DefendersWill, BraveHeart],
 };
 
+export const BathysmalVishapsDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [DragonheirsFalseFin],
+  itemsAux: [VajradaAmethyst, ShivadaJade, DefendersWill, BraveHeart],
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
@@ -576,4 +584,5 @@ export const DomainDropSets = [
   NarukamiIslandTenshukakuDrops,
   GoldenWolflordDrops,
   SlumberingCourtDrops,
+  BathysmalVishapsDrops,
 ];

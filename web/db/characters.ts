@@ -573,7 +573,6 @@ export const YunJin: Character = {
   talentMaterialWeekly: AshenHeart,
   talentMaterial: Diligence,
   commonMaterials: [HilichurlMask, GlazeLily],
-  leaked: true,
 };
 
 export const Shenhe: Character = {
@@ -584,7 +583,6 @@ export const Shenhe: Character = {
   talentMaterialWeekly: HellfireButterfly,
   talentMaterial: Prosperity,
   commonMaterials: [WhopperflowerNectar, Qingxin],
-  leaked: true,
 };
 
 export const Characters = [

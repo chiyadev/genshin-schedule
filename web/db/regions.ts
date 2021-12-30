@@ -1,5 +1,6 @@
 import {
   AnemoHypostasis,
+  BathysmalVishaps,
   BeneathTheDragonQueller,
   CeciliaGarden,
   ClearPoolAndMountainCavern,
@@ -182,6 +183,7 @@ export const Inazuma: Region = {
     NarukamiIslandTenshukaku,
     GoldenWolflord,
     SlumberingCourt,
+    BathysmalVishaps,
   ],
   characters: [Ayaka, Gorou, Itto, Kazuha, Kokomi, KujouSara, RaidenShogun, Sayu, Thoma, Yoimiya],
 };
