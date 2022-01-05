@@ -524,11 +524,20 @@ export const SlumberingCourtDrops: DomainDropSet = {
   itemsAux: [DefendersWill, BraveHeart],
 };
 
-export const BathysmalVishapsDrops: DomainDropSet = {
+export const BathysmalVishapHerdDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Any,
   items: [DragonheirsFalseFin],
-  itemsAux: [VajradaAmethyst, ShivadaJade, DefendersWill, BraveHeart],
+  itemsAux: [
+    Berserker,
+    TheExile,
+    LuckyDog,
+    PrayersToSpringtime,
+    GladiatorsFinale,
+    WanderersTroupe,
+    VajradaAmethyst,
+    ShivadaJade,
+  ],
 };
 
 export const DomainDropSets = [
@@ -584,5 +593,5 @@ export const DomainDropSets = [
   NarukamiIslandTenshukakuDrops,
   GoldenWolflordDrops,
   SlumberingCourtDrops,
-  BathysmalVishapsDrops,
+  BathysmalVishapHerdDrops,
 ];

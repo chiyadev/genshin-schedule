@@ -34,7 +34,7 @@ import {
   ValleyOfRemembrance,
   VioletCourt,
   WolfOfTheNorthChallenge,
-  BathysmalVishaps,
+  BathysmalVishapHerd,
 } from "./domains";
 import { registerMessage } from "../utils";
 
@@ -122,7 +122,7 @@ export const NormalBoss: DomainCategory = {
     PerpetualMechanicalArray,
     ThunderManifestation,
     GoldenWolflord,
-    BathysmalVishaps,
+    BathysmalVishapHerd,
   ],
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Normal_Bosses",
   colorHint: "purple",

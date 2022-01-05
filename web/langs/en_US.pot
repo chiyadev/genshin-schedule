@@ -2216,11 +2216,6 @@ msgctxt "db.domains.a55538"
 msgid "Thunder Manifestation"
 msgstr ""
 
-#: db/domains.ts:308
-msgctxt "db.domains.b3d028"
-msgid "Bathysmal Vishaps"
-msgstr ""
-
 #: db/domains.ts:266
 msgctxt "db.domains.bd9e6f"
 msgid "Pyro Hypostasis"
@@ -2259,6 +2254,11 @@ msgstr ""
 #: db/domains.ts:273
 msgctxt "db.domains.f07d15"
 msgid "Perpetual Mechanical Array"
+msgstr ""
+
+#: db/domains.ts:308
+msgctxt "db.domains.f3ba00"
+msgid "Bathysmal Vishap Herd"
 msgstr ""
 
 #: db/domains.ts:133

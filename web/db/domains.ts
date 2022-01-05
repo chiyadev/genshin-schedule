@@ -52,7 +52,7 @@ import {
   HydroHypostasisDrops,
   GoldenWolflordDrops,
   SlumberingCourtDrops,
-  BathysmalVishapsDrops,
+  BathysmalVishapHerdDrops,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
 
@@ -303,11 +303,11 @@ export const SlumberingCourt: Domain = {
   drops: [SlumberingCourtDrops],
 };
 
-export const BathysmalVishaps: Domain = {
+export const BathysmalVishapHerd: Domain = {
   type: "Domain",
-  name: registerMessage({ defaultMessage: "Bathysmal Vishaps" }),
-  wiki: "https://genshin-impact.fandom.com/wiki/Slumbering_Court",
-  drops: [BathysmalVishapsDrops],
+  name: registerMessage({ defaultMessage: "Bathysmal Vishap Herd" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Bathysmal_Vishap_Herd",
+  drops: [BathysmalVishapHerdDrops],
 };
 
 export const Domains = [
@@ -345,5 +345,5 @@ export const Domains = [
   NarukamiIslandTenshukaku,
   GoldenWolflord,
   SlumberingCourt,
-  BathysmalVishaps,
+  BathysmalVishapHerd,
 ];
