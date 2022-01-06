@@ -3,4467 +3,4497 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-05 21:22+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-01-07 09:56+0000\n"
+"Last-Translator: Colin Tirion <grotehoed@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/genshin-schedule/"
+"web/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 3.5.2\n"
-
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #: components/Auth/UserSignIn.tsx:62
 msgctxt "components.Auth.UserSignIn.242220"
 msgid "Username"
-msgstr ""
+msgstr "Gebruikersnaam"
 
 #: components/Auth/UserSignIn.tsx:46
 msgctxt "components.Auth.UserSignIn.28def3"
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: components/Auth/UserSignIn.tsx:93
 msgctxt "components.Auth.UserSignIn.57f247"
 msgid "Forgot password?"
-msgstr ""
+msgstr "Wachtwoord vergeten?"
 
 #: components/Auth/UserSignIn.tsx:157
 msgctxt "components.Auth.UserSignIn.67b73d"
 msgid "Continue without signing in"
-msgstr ""
+msgstr "Doorgaan zonder in te loggen"
 
 #: components/Auth/UserSignIn.tsx:98
 msgctxt "components.Auth.UserSignIn.7249ee"
 msgid "Never reuse your miHoYo password on Genshin-related websites."
-msgstr ""
+msgstr "Hergebruik nooit je miHoYo wachtwoord op Genshin-gerelateerde websites."
 
 #: components/Auth/UserSignIn.tsx:144
 msgctxt "components.Auth.UserSignIn.93eb72"
 msgid "All data will be stored locally on the browser."
-msgstr ""
+msgstr "Alle gegevens worden lokaal in de browser opgeslagen."
 
 #: components/Auth/UserSignIn.tsx:105
 msgctxt "components.Auth.UserSignIn.bc7fa7"
 msgid "Read more."
-msgstr ""
+msgstr "Lees verder."
 
 #: components/Auth/UserSignIn.tsx:138
 msgctxt "components.Auth.UserSignIn.c12651"
 msgid "Submit"
-msgstr ""
+msgstr "Verstuur"
 
 #: components/Auth/UserSignIn.tsx:78
 msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
-msgstr ""
+msgstr "Wachtwoord"
 
 #: components/ChangelogModal.tsx:256
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
-msgstr ""
+msgstr "Wijzigingslogboek bijwerken"
 
 #: components/ClockOffsetWarning.tsx:24
 msgctxt "components.ClockOffsetWarning.85fdee"
 msgid "Showing schedule {offset, plural, =1 {for tomorrow} =-1 {for yesterday} other {in # days}}."
 msgstr ""
+"Schema {compensatie, meervoud, =1 {voor morgen} =-1 {voor gisteren} anders {"
+"in # dagen}}."
 
 #: components/ClockOffsetWarning.tsx:36
 msgctxt "components.ClockOffsetWarning.8e6fec"
 msgid "Reset"
-msgstr ""
+msgstr "Resetten"
 
 #: components/Customize/ArtifactInfo/NoteInput.tsx:24
 msgctxt "components.Customize.ArtifactInfo.NoteInput.ab582f"
 msgid "e.g. Lumine's artifact"
-msgstr ""
+msgstr "bijv. Lumines artefact"
 
 #: components/Customize/ArtifactInfo/NoteInput.tsx:17
 msgctxt "components.Customize.ArtifactInfo.NoteInput.c6a1b4"
 msgid "Additional notes"
-msgstr ""
+msgstr "Extra notities"
 
 #: components/Customize/ArtifactInfo/Toggle.tsx:23
 msgctxt "components.Customize.ArtifactInfo.Toggle.cce039"
 msgid "Show on schedule"
-msgstr ""
+msgstr "Toon op schema"
 
 #: components/Customize/ArtifactInfo/Toggle.tsx:27
 msgctxt "components.Customize.ArtifactInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
-msgstr ""
+msgstr "Geplande domeinen verschijnen op de dagen dat ze beschikbaar zijn."
 
 #: components/Customize/ArtifactList/index.tsx:19
 msgctxt "components.Customize.ArtifactList.index.796e5e"
 msgid "Artifacts"
-msgstr ""
+msgstr "Artefacten"
 
 #: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:62
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
-msgstr ""
+msgstr "Als taak toevoegen"
 
 #: components/Customize/CharacterInfo/CommonMaterialDisplay.tsx:52
 msgctxt "components.Customize.CharacterInfo.CommonMaterialDisplay.b4b55a"
 msgid "ascension material for {name}"
-msgstr ""
+msgstr "ascensie materiaal voor {naam}"
 
 #: components/Customize/CharacterInfo/NoteInput.tsx:24
 msgctxt "components.Customize.CharacterInfo.NoteInput.1cfa1e"
 msgid "e.g. Anemo traveler"
-msgstr ""
+msgstr "Bijv. Anemo reiziger"
 
 #: components/Customize/CharacterInfo/NoteInput.tsx:17
 msgctxt "components.Customize.CharacterInfo.NoteInput.c6a1b4"
 msgid "Additional notes"
-msgstr ""
+msgstr "Extra notities"
 
 #: components/Customize/CharacterInfo/Toggle.tsx:25
 msgctxt "components.Customize.CharacterInfo.Toggle.cce039"
 msgid "Show on schedule"
-msgstr ""
+msgstr "Toon op schema"
 
 #: components/Customize/CharacterInfo/Toggle.tsx:29
 msgctxt "components.Customize.CharacterInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
-msgstr ""
+msgstr "Geplande domeinen verschijnen op de dagen dat ze beschikbaar zijn."
 
 #: components/Customize/CharacterList/index.tsx:27
 msgctxt "components.Customize.CharacterList.index.4e372c"
 msgid "Characters"
-msgstr ""
+msgstr "Personages"
 
 #: components/Customize/LeakedWarning.tsx:10
 msgctxt "components.Customize.LeakedWarning.8c8c3a"
 msgid "This page may be inaccurate."
-msgstr ""
+msgstr "Deze pagina kan fouten bevatten."
 
 #: components/Customize/LeakedWarning.tsx:13
 msgctxt "components.Customize.LeakedWarning.ddaaad"
 msgid "The following information is based on leaked data from beta versions of the game. Take it with a grain of salt."
 msgstr ""
+"De volgende informatie is gebaseerd op gelekte gegevens van bèta versies van "
+"het spel. Neem het met een korreltje zout."
 
 #: components/Customize/Notifications/Info.tsx:104
 msgctxt "components.Customize.Notifications.Info.049a4d"
 msgid "Invite the bot"
-msgstr ""
+msgstr "Nodig de bot uit"
 
 #: components/Customize/Notifications/Info.tsx:36
 msgctxt "components.Customize.Notifications.Info.34089d"
 msgid "Notifications"
-msgstr ""
+msgstr "Meldingen"
 
 #: components/Customize/Notifications/Info.tsx:53
 msgctxt "components.Customize.Notifications.Info.63d176"
 msgid "Genshin Schedule has a Discord bot that can send you notifications when your resin recharges or resources respawn."
 msgstr ""
+"Genshin Schedule heeft een Discord bot die je notificaties kan sturen "
+"wanneer je resin is opgeladen of middelen respawnen."
 
 #: components/Customize/Notifications/Info.tsx:67
 msgctxt "components.Customize.Notifications.Info.70feee"
 msgid "Genshin Schedule server"
-msgstr ""
+msgstr "Genshin Schedule server"
 
 #: components/Customize/Notifications/Info.tsx:72
 msgctxt "components.Customize.Notifications.Info.8f57ce"
 msgid "invite the bot"
-msgstr ""
+msgstr "nodig de bot uit"
 
 #: components/Customize/Notifications/Info.tsx:60
 msgctxt "components.Customize.Notifications.Info.9da5a0"
 msgid "1. Join the {server}, or {invite} to your server. Either method is fine because you can only interact with the bot via DM anyway, but at least one common server is required for the bot to be able to message you."
 msgstr ""
+"1. Wordt lid van de {server}, of {uitnodigen} voor je eigen server. Allebei "
+"de methoden zijn goed omdat je alleen via DM de bot kunt gebruiken. Je moet "
+"minstens één gemeenschappelijke server hebben om de bot te kunnen gebruiken."
 
 #: components/Customize/Notifications/Info.tsx:112
 msgctxt "components.Customize.Notifications.Info.a7c1c8"
 msgid "2. Make sure DMs from server members are enabled, otherwise the bot cannot message you."
 msgstr ""
+"2. Zorg ervoor dat DMs van server leden aan staat, anders kan de bot je geen "
+"berichten sturen."
 
 #: components/Customize/Notifications/Info.tsx:90
 msgctxt "components.Customize.Notifications.Info.aebf2a"
 msgid "Join the server"
-msgstr ""
+msgstr "Lid worden van de server"
 
 #: components/Customize/Notifications/Info.tsx:121
 msgctxt "components.Customize.Notifications.Info.e159bf"
 msgid "3. Copy the following message and send it to the bot via DM. Don't share this message with anyone else, ever!"
 msgstr ""
+"3. Kopieer het volgende bericht en verstuur het naar de bot via DM. Deel dit "
+"bericht nooit met anderen!"
 
 #: components/Customize/Notifications/Info.tsx:40
 msgctxt "components.Customize.Notifications.Info.e180cd"
 msgid "Queue"
-msgstr ""
+msgstr "Wachtrij"
 
 #: components/Customize/Notifications/MessageDisplay.tsx:34
 msgctxt "components.Customize.Notifications.MessageDisplay.a79e7a"
 msgid "Copied"
-msgstr ""
+msgstr "Gekopieerd"
 
 #: components/Customize/Notifications/MessageDisplay.tsx:34
 msgctxt "components.Customize.Notifications.MessageDisplay.e25eaf"
 msgid "Copy"
-msgstr ""
+msgstr "Kopiëren"
 
 #: components/Customize/Notifications/MessageDisplay.tsx:20
 msgctxt "components.Customize.Notifications.MessageDisplay.fbf09e"
 msgid "You are not signed in."
-msgstr ""
+msgstr "Je bent niet ingelogd."
 
 #: components/Customize/Search.tsx:43
 msgctxt "components.Customize.Search.2027a7"
 msgid "Select items to be added to your farming schedule."
-msgstr ""
+msgstr "Selecteer items die je aan je farming schema wilt toevoegen."
 
 #: components/Customize/Search.tsx:37
 msgctxt "components.Customize.Search.7c993e"
 msgid "Search characters, weapons and artifacts…"
-msgstr ""
+msgstr "Zoek personages, wapens en artefacten…"
 
 #: components/Customize/Search.tsx:55
 msgctxt "components.Customize.Search.9e7721"
 msgid "create an issue"
-msgstr ""
+msgstr "een probleem melden"
 
 #: components/Customize/Search.tsx:46
 msgctxt "components.Customize.Search.bb5522"
 msgid "If there are any missing items, please {link} on GitHub."
-msgstr ""
+msgstr "Als er items ontbreken, {link} op GitHub."
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:88
 msgctxt "components.Customize.SettingsList.AccountManageButton.12c3f9"
 msgid "You can change your account username and password."
-msgstr ""
+msgstr "Je kunt je gebruikersnaam en wachtwoord veranderen."
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:93
 msgctxt "components.Customize.SettingsList.AccountManageButton.242220"
 msgid "Username"
-msgstr ""
+msgstr "Gebruikersnaam"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:51
 msgctxt "components.Customize.SettingsList.AccountManageButton.2d40ff"
 msgid "Manage account"
-msgstr ""
+msgstr "Account beheren"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:121
 msgctxt "components.Customize.SettingsList.AccountManageButton.2f8c01"
 msgid "Linked Discord ID"
-msgstr ""
+msgstr "Gekoppelde Discord-ID"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:113
 msgctxt "components.Customize.SettingsList.AccountManageButton.7d31e1"
 msgid "New password"
-msgstr ""
+msgstr "Nieuw wachtwoord"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:98
 msgctxt "components.Customize.SettingsList.AccountManageButton.a58ae0"
 msgid "New username"
-msgstr ""
+msgstr "Nieuwe gebruikersnaam"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:129
 msgctxt "components.Customize.SettingsList.AccountManageButton.c12651"
 msgid "Submit"
-msgstr ""
+msgstr "Verstuur"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:133
 msgctxt "components.Customize.SettingsList.AccountManageButton.e3b158"
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleer"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:107
 msgctxt "components.Customize.SettingsList.AccountManageButton.e6c83b"
 msgid "Password"
-msgstr ""
+msgstr "Wachtwoord"
 
 #: components/Customize/SettingsList/BackgroundSwitch.tsx:18
 msgctxt "components.Customize.SettingsList.BackgroundSwitch.5d0640"
 msgid "Background"
-msgstr ""
+msgstr "Achtergrond"
 
 #: components/Customize/SettingsList/BackgroundSwitch.tsx:40
 msgctxt "components.Customize.SettingsList.BackgroundSwitch.b6d853"
 msgid "Disabled"
-msgstr ""
+msgstr "Uitgeschakeld"
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:67
 msgctxt "components.Customize.SettingsList.ConfigExportButton.243268"
 msgid "This action cannot be undone."
-msgstr ""
+msgstr "Deze actie kan niet ongedaan gemaakt worden."
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:99
 msgctxt "components.Customize.SettingsList.ConfigExportButton.8ff2e0"
 msgid "Overwrite"
-msgstr ""
+msgstr "Overschrijven"
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:60
 msgctxt "components.Customize.SettingsList.ConfigExportButton.a27849"
 msgid "Input is not validated. Corrupted input can make data recovery impossible."
 msgstr ""
+"Invoer is niet geldig. Beschadigde invoer kan gegevensherstel onmogelijk "
+"maken."
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:109
 msgctxt "components.Customize.SettingsList.ConfigExportButton.a79e7a"
 msgid "Copied"
-msgstr ""
+msgstr "Gekopieerd"
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:64
 msgctxt "components.Customize.SettingsList.ConfigExportButton.b0e5f6"
 msgid "You can export your account data for backup and restore."
-msgstr ""
+msgstr "Je kunt je gegevens exporteren voor back-up en herstel."
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:52
 msgctxt "components.Customize.SettingsList.ConfigExportButton.dcad88"
 msgid "Manage data"
-msgstr ""
+msgstr "Gegevens beheren"
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:109
 msgctxt "components.Customize.SettingsList.ConfigExportButton.e25eaf"
 msgid "Copy"
-msgstr ""
+msgstr "Kopiëren"
 
 #: components/Customize/SettingsList/LanguageSwitch.tsx:44
 msgctxt "components.Customize.SettingsList.LanguageSwitch.4b7b37"
 msgid "Add new language"
-msgstr ""
+msgstr "Nieuwe taal toevoegen"
 
 #: components/Customize/SettingsList/LanguageSwitch.tsx:36
 msgctxt "components.Customize.SettingsList.LanguageSwitch.94abfc"
 msgid "Default"
-msgstr ""
+msgstr "Standaard"
 
 #: components/Customize/SettingsList/LanguageSwitch.tsx:19
 msgctxt "components.Customize.SettingsList.LanguageSwitch.cb5677"
 msgid "Language"
-msgstr ""
+msgstr "Taal"
 
 #: components/Customize/SettingsList/ResinCalcButtonInput.tsx:28
 msgctxt "components.Customize.SettingsList.ResinCalcButtonInput.040acf"
 msgid "Resin calculator buttons"
-msgstr ""
+msgstr "Resin rekenmachine knoppen"
 
 #: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:18
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.6eef86"
 msgid "Resin estimation mode"
-msgstr ""
+msgstr "Resin schattingsmodus"
 
 #: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:33
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.a854bc"
 msgid "Value steps (20, 40, 60)"
-msgstr ""
+msgstr "Waarde stappen (20, 40, 60)"
 
 #: components/Customize/SettingsList/ResinEstimateModeSwitch.tsx:32
 msgctxt "components.Customize.SettingsList.ResinEstimateModeSwitch.e2e5d9"
 msgid "Time steps (2h, 4h, 8h…)"
-msgstr ""
+msgstr "Tijd stappen (2u, 4u, 8u...)"
 
 #: components/Customize/SettingsList/ResinNotifyMarkSlider.tsx:32
 msgctxt "components.Customize.SettingsList.ResinNotifyMarkSlider.b9f3be"
 msgid "Send resin notification at"
-msgstr ""
+msgstr "Stuur resin melding naar"
 
 #: components/Customize/SettingsList/SignOutButton.tsx:22
 msgctxt "components.Customize.SettingsList.SignOutButton.c576c9"
 msgid "Sign out"
-msgstr ""
+msgstr "Uitloggen"
 
 #: components/Customize/SettingsList/TaskDefaultZoomSlider.tsx:28
 msgctxt "components.Customize.SettingsList.TaskDefaultZoomSlider.9c6d23"
 msgid "Zoom on task focus"
-msgstr ""
+msgstr "Zoom op taakfocus"
 
 #: components/Customize/SettingsList/TaskListCompactSwitch.tsx:17
 msgctxt "components.Customize.SettingsList.TaskListCompactSwitch.a852ad"
 msgid "Compact task list"
-msgstr ""
+msgstr "Compacte takenlijst"
 
 #: components/Customize/SettingsList/ThemeSwitch.tsx:17
 msgctxt "components.Customize.SettingsList.ThemeSwitch.84c510"
 msgid "Dark mode"
-msgstr ""
+msgstr "Duistere modus"
 
 #: components/Customize/SettingsList/index.tsx:21
 msgctxt "components.Customize.SettingsList.index.0f789d"
 msgid "Settings"
-msgstr ""
+msgstr "Instellingen"
 
 #: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:62
 msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.8b6c08"
 msgid "Add as task"
-msgstr ""
+msgstr "Als taak toevoegen"
 
 #: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:52
 msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.b4b55a"
 msgid "ascension material for {name}"
-msgstr ""
+msgstr "ascensie materiaal voor {naam}"
 
 #: components/Customize/WeaponInfo/NoteInput.tsx:24
 msgctxt "components.Customize.WeaponInfo.NoteInput.72b891"
 msgid "e.g. Lumine's weapon"
-msgstr ""
+msgstr "bijv. Lumines wapen"
 
 #: components/Customize/WeaponInfo/NoteInput.tsx:17
 msgctxt "components.Customize.WeaponInfo.NoteInput.c6a1b4"
 msgid "Additional notes"
-msgstr ""
+msgstr "Extra notities"
 
 #: components/Customize/WeaponInfo/Toggle.tsx:23
 msgctxt "components.Customize.WeaponInfo.Toggle.cce039"
 msgid "Show on schedule"
-msgstr ""
+msgstr "Toon op schema"
 
 #: components/Customize/WeaponInfo/Toggle.tsx:27
 msgctxt "components.Customize.WeaponInfo.Toggle.cf77f8"
 msgid "Scheduled domains will appear on the days they are available."
-msgstr ""
+msgstr "Geplande domeinen verschijnen op de dagen dat ze beschikbaar zijn."
 
 #: components/Customize/WeaponList/index.tsx:19
 msgctxt "components.Customize.WeaponList.index.4477a1"
 msgid "Weapons"
-msgstr ""
+msgstr "Wapens"
 
 #: components/DropLabel.tsx:72
 msgctxt "components.DropLabel.0388b5"
 msgid "{category}, {region}"
-msgstr ""
+msgstr "{categorie}, {regio}"
 
 #: components/DropLabel.tsx:66
 msgctxt "components.DropLabel.30b06c"
 msgid "Auxiliary drop based on probability"
-msgstr ""
+msgstr "Extra drop op basis van waarschijnlijkheid"
 
 #: components/DropLabel.tsx:88
 msgctxt "components.DropLabel.9f8862"
 msgid "{domain}{days, select, undefined {} other { on {days}}}"
-msgstr ""
+msgstr "{domein}{dagen, selecteer, ongedefinieerd {} anders {op {dagen}}}"
 
 #: components/DropLabel.tsx:41
 msgctxt "components.DropLabel.abb354"
 msgid "This item does not currently drop from any domains."
-msgstr ""
+msgstr "Dit item komt momenteel niet voor in domeinen."
 
 #: components/Footer.tsx:77
 msgctxt "components.Footer.16f995"
 msgid "Discord"
-msgstr ""
+msgstr "Discord"
 
 #: components/Footer.tsx:71
 msgctxt "components.Footer.484351"
 msgid "Help"
-msgstr ""
+msgstr "Help"
 
 #: components/Footer.tsx:40
 msgctxt "components.Footer.76b2f1"
 msgid "Written by {chiya} and {contrib} on GitHub."
-msgstr ""
+msgstr "Geschreven door {chiya} en {contrib} op GitHub."
 
 #: components/Footer.tsx:34
 msgctxt "components.Footer.865a3c"
 msgid "Data on this website may not always be accurate or up-to-date with in-game changes."
 msgstr ""
+"Gegevens op deze website zijn mogelijk niet altijd nauwkeurig of up-to-date "
+"met in-game wijzigingen."
 
 #: components/Footer.tsx:25
 msgctxt "components.Footer.a0a9e9"
 msgid "miHoYo"
-msgstr ""
+msgstr "miHoYo"
 
 #: components/Footer.tsx:83
 msgctxt "components.Footer.c0ef70"
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: components/Footer.tsx:12
 msgctxt "components.Footer.d541af"
 msgid "{app} is not affiliated with or endorsed by {mihoyo}."
-msgstr ""
+msgstr "{app} is niet verwant met of ondersteund door {mihoyo}."
 
 #: components/Footer.tsx:64
 msgctxt "components.Footer.ec5030"
 msgid "Shortcuts"
-msgstr ""
+msgstr "Sneltoetsen"
 
 #: components/Footer.tsx:54
 msgctxt "components.Footer.fdbaf2"
 msgid "contributors"
-msgstr ""
+msgstr "bijdragers"
 
 #: components/Header.tsx:30
 msgctxt "components.Header.4d7a4e"
 msgid "Customize"
-msgstr ""
+msgstr "Aanpassen"
 
 #: components/Header.tsx:17
 msgctxt "components.Header.e3e15c"
 msgid "Genshin Schedule"
-msgstr ""
+msgstr "Genshin Schema"
 
 #: components/Home/Clock/DateDisplay.tsx:33
 msgctxt "components.Home.Clock.DateDisplay.d1826b"
 msgid "{value, plural, one {# resin} other {# resins}}"
-msgstr ""
+msgstr "{waarde, meervoud, één {# resin} anders {# resins}}"
 
 #: components/Home/Clock/DateDisplay.tsx:25
 msgctxt "components.Home.Clock.DateDisplay.de212c"
 msgid "{duration} until reset"
-msgstr ""
+msgstr "{looptijd} tot reset"
 
 #: components/Home/Clock/ServerText.tsx:36
 msgctxt "components.Home.Clock.ServerText.0fe07e"
 msgid "Switch server"
-msgstr ""
+msgstr "Wisselen van server"
 
 #: components/Home/Clock/ServerText.tsx:28
 msgctxt "components.Home.Clock.ServerText.125d0a"
 msgid "TW, HK, MO"
-msgstr ""
+msgstr "TW, HK, MO"
 
 #: components/Home/Clock/ServerText.tsx:20
 msgctxt "components.Home.Clock.ServerText.5f7008"
 msgid "Europe"
-msgstr ""
+msgstr "Europa"
 
 #: components/Home/Clock/ServerText.tsx:24
 msgctxt "components.Home.Clock.ServerText.8a04bd"
 msgid "Asia"
-msgstr ""
+msgstr "Azië"
 
 #: components/Home/Clock/ServerText.tsx:16
 msgctxt "components.Home.Clock.ServerText.9d0209"
 msgid "America"
-msgstr ""
+msgstr "Amerika"
 
 #: components/Home/Clock/TimeDisplay.tsx:62
 msgctxt "components.Home.Clock.TimeDisplay.44c3b9"
 msgid "Previous day"
-msgstr ""
+msgstr "Vorige dag"
 
 #: components/Home/Clock/TimeDisplay.tsx:72
 msgctxt "components.Home.Clock.TimeDisplay.dd708b"
 msgid "Next day"
-msgstr ""
+msgstr "Volgende dag"
 
 #: components/Home/Clock/index.tsx:16
 msgctxt "components.Home.Clock.index.2cbf2a"
 msgid "Time in Teyvat"
-msgstr ""
+msgstr "Tijd in Teyvat"
 
 #: components/Home/DomainView/ArtifactList.tsx:16
 msgctxt "components.Home.DomainView.ArtifactList.742197"
 msgid "This item is not guaranteed to drop."
-msgstr ""
+msgstr "Dit item valt niet gegarandeerd."
 
 #: components/Home/DomainView/DomainDisplay.tsx:31
 msgctxt "components.Home.DomainView.DomainDisplay.0388b5"
 msgid "{category}, {region}"
-msgstr ""
+msgstr "{categorie},{regio}"
 
 #: components/Home/DomainView/FilterButtons.tsx:14
 msgctxt "components.Home.DomainView.FilterButtons.bca303"
 msgid "Filter by efficiency"
-msgstr ""
+msgstr "Filter op efficiëntie"
 
 #: components/Home/DomainView/FilterRegionButtons.tsx:26
 msgctxt "components.Home.DomainView.FilterRegionButtons.06cea1"
 msgid "Inazuma"
-msgstr ""
+msgstr "Inazuma"
 
 #: components/Home/DomainView/FilterRegionButtons.tsx:14
 msgctxt "components.Home.DomainView.FilterRegionButtons.5a37ea"
 msgid "Mondstadt"
-msgstr ""
+msgstr "Mondstadt"
 
 #: components/Home/DomainView/FilterRegionButtons.tsx:20
 msgctxt "components.Home.DomainView.FilterRegionButtons.691c58"
 msgid "Liyue"
-msgstr ""
+msgstr "Liyue"
 
 #: components/Home/DomainView/FilterTypeButtons.tsx:27
 msgctxt "components.Home.DomainView.FilterTypeButtons.4477a1"
 msgid "Weapons"
-msgstr ""
+msgstr "Wapens"
 
 #: components/Home/DomainView/FilterTypeButtons.tsx:21
 msgctxt "components.Home.DomainView.FilterTypeButtons.4e372c"
 msgid "Characters"
-msgstr ""
+msgstr "Personages"
 
 #: components/Home/DomainView/FilterTypeButtons.tsx:33
 msgctxt "components.Home.DomainView.FilterTypeButtons.796e5e"
 msgid "Artifacts"
-msgstr ""
+msgstr "Artefacten"
 
 #: components/Home/DomainView/Item.tsx:39
 msgctxt "components.Home.DomainView.Item.238d34"
 msgid "Highlight item"
-msgstr ""
+msgstr "Merkeer item"
 
 #: components/Home/DomainView/MaterialList.tsx:34
 msgctxt "components.Home.DomainView.MaterialList.742197"
 msgid "This item is not guaranteed to drop."
-msgstr ""
+msgstr "Dit item valt niet gegarandeerd."
 
 #: components/Home/DomainView/index.tsx:376
 msgctxt "components.Home.DomainView.index.4af108"
 msgid "Ley Lines"
-msgstr ""
+msgstr "Leylijnen"
 
 #: components/Home/DomainView/index.tsx:366
 msgctxt "components.Home.DomainView.index.4d7a4e"
 msgid "Customize"
-msgstr ""
+msgstr "Aanpassen"
 
 #: components/Home/DomainView/index.tsx:322
 msgctxt "components.Home.DomainView.index.c49d9f"
 msgid "Today's Domains"
-msgstr ""
+msgstr "Domeinen van vandaag"
 
 #: components/Home/DomainView/index.tsx:357
 msgctxt "components.Home.DomainView.index.e73ff2"
 msgid "No domains for today."
-msgstr ""
+msgstr "Geen domeinen voor vandaag."
 
 #: components/Home/DomainView/index.tsx:360
 msgctxt "components.Home.DomainView.index.f52777"
 msgid "Go to {customize} to add domains, or maybe try some {link}?"
 msgstr ""
+"Ga naar {aanpassen} om domeinen toe te voegen, of probeer misschien wat "
+"{link}?"
 
 #: components/Home/RealmCurrency/ClearButton.tsx:22
 msgctxt "components.Home.RealmCurrency.ClearButton.3bc57c"
 msgid "Clear currency"
-msgstr ""
+msgstr "Valuta wissen"
 
 #: components/Home/RealmCurrency/ClearButton.tsx:24
 msgctxt "components.Home.RealmCurrency.ClearButton.fc60a8"
 msgid "Clear"
-msgstr ""
+msgstr "Wissen"
 
 #: components/Home/RealmCurrency/EstimatorByCurrency.tsx:48
 msgctxt "components.Home.RealmCurrency.EstimatorByCurrency.5921a5"
 msgid "{value} in {time}"
-msgstr ""
+msgstr "{waarde} in {tijd}"
 
 #: components/Home/RealmCurrency/EstimatorByTime.tsx:52
 msgctxt "components.Home.RealmCurrency.EstimatorByTime.f0f932"
 msgid "{value} in {duration}"
-msgstr ""
+msgstr "{waarde} in {tijdsloop}"
 
 #: components/Home/RealmCurrency/index.tsx:82
 msgctxt "components.Home.RealmCurrency.index.1b0b98"
 msgid "Trust rank"
-msgstr ""
+msgstr "Vertrouwensrang"
 
 #: components/Home/RealmCurrency/index.tsx:89
 msgctxt "components.Home.RealmCurrency.index.27268e"
 msgid "Realm currency"
-msgstr ""
+msgstr "Rijksvaluta"
 
 #: components/Home/RealmCurrency/index.tsx:64
 msgctxt "components.Home.RealmCurrency.index.33dd2d"
 msgid "Adeptal energy"
-msgstr ""
+msgstr "Adeptische energie"
 
 #: components/Home/RealmCurrency/index.tsx:102
 msgctxt "components.Home.RealmCurrency.index.9ca85f"
 msgid "Your realm currency is full."
-msgstr ""
+msgstr "Je rijksvaluta is vol."
 
 #: components/Home/RealmCurrency/index.tsx:44
 msgctxt "components.Home.RealmCurrency.index.c3eb42"
 msgid "Switch estimation mode"
-msgstr ""
+msgstr "Schattingsmodus wisselen"
 
 #: components/Home/RealmCurrency/index.tsx:37
 msgctxt "components.Home.RealmCurrency.index.d43d9b"
 msgid "Realm Currency Calculator"
-msgstr ""
+msgstr "Rijksvaluta Rekenmachine"
 
 #: components/Home/Resin/EstimatorByNotifyMark.tsx:18
 msgctxt "components.Home.Resin.EstimatorByNotifyMark.5921a5"
 msgid "{value} in {time}"
-msgstr ""
+msgstr "{waarde} in {tijd}"
 
 #: components/Home/Resin/EstimatorByResin.tsx:38
 msgctxt "components.Home.Resin.EstimatorByResin.5921a5"
 msgid "{value} in {time}"
-msgstr ""
+msgstr "{waarde} in {tijd}"
 
 #: components/Home/Resin/EstimatorByTime.tsx:48
 msgctxt "components.Home.Resin.EstimatorByTime.f0f932"
 msgid "{value} in {duration}"
-msgstr ""
+msgstr "{waarde} in {tijdsloop}"
 
 #: components/Home/Resin/NotificationSetter.tsx:32
 msgctxt "components.Home.Resin.NotificationSetter.94aedd"
 msgid "You have {value} resins right now!"
-msgstr ""
+msgstr "Je hebt {Waarde} resins momenteel!"
 
 #: components/Home/Resin/NotificationSetter.tsx:31
 msgctxt "components.Home.Resin.NotificationSetter.d9f446"
 msgid "Your resins have fully recharged!"
-msgstr ""
+msgstr "Je resins zijn volledige opgeladen!"
 
 #: components/Home/Resin/NotificationSetter.tsx:28
 msgctxt "components.Home.Resin.NotificationSetter.db8673"
 msgid "Resin recharged"
-msgstr ""
+msgstr "Resin opgeladen"
 
 #: components/Home/Resin/SideButtons.tsx:88
 msgctxt "components.Home.Resin.SideButtons.387912"
 msgid "Subtract {amount} resins"
-msgstr ""
+msgstr "Trek {bedrag} resins af"
 
 #: components/Home/Resin/SideButtons.tsx:87
 msgctxt "components.Home.Resin.SideButtons.9f72cf"
 msgid "Add {amount} resins"
-msgstr ""
+msgstr "Voeg {bedrag} resins toe"
 
 #: components/Home/Resin/index.tsx:122
 msgctxt "components.Home.Resin.index.506b0c"
 msgid "Your resins are full."
-msgstr ""
+msgstr "Je resins zijn vol."
 
 #: components/Home/Resin/index.tsx:55
 msgctxt "components.Home.Resin.index.c3eb42"
 msgid "Switch estimation mode"
-msgstr ""
+msgstr "Schattingsmodus wisselen"
 
 #: components/Home/Resin/index.tsx:48
 msgctxt "components.Home.Resin.index.fe85b2"
 msgid "Resin Calculator"
-msgstr ""
+msgstr "Resin Rekenmachine"
 
 #: components/Home/Tasks/MarkAllDone.tsx:40
 msgctxt "components.Home.Tasks.MarkAllDone.ec7046"
 msgid "Mark everything as done"
-msgstr ""
+msgstr "Markeer alles as gedaan"
 
 #: components/Home/Tasks/SearchButton.tsx:20
 msgctxt "components.Home.Tasks.SearchButton.c66715"
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
 #: components/Home/Tasks/ShowDoneButton.tsx:14
 msgctxt "components.Home.Tasks.ShowDoneButton.1e4bd0"
 msgid "Hide done"
-msgstr ""
+msgstr "Verberg gedaan"
 
 #: components/Home/Tasks/ShowDoneButton.tsx:14
 msgctxt "components.Home.Tasks.ShowDoneButton.e73315"
 msgid "Show done"
-msgstr ""
+msgstr "Toon gedaan"
 
 #: components/Home/Tasks/ShowHiddenButton.tsx:15
 msgctxt "components.Home.Tasks.ShowHiddenButton.7a418f"
 msgid "Show hidden"
-msgstr ""
+msgstr "Toon verborgen"
 
 #: components/Home/Tasks/ShowHiddenButton.tsx:15
 msgctxt "components.Home.Tasks.ShowHiddenButton.e9f3d0"
 msgid "Hide hidden"
-msgstr ""
+msgstr "Verberg verborgen"
 
 #: components/Home/Tasks/index.tsx:58
 msgctxt "components.Home.Tasks.index.0b9931"
 msgid "Today's Tasks"
-msgstr ""
+msgstr "Taken van vandaag"
 
 #: components/Home/Tasks/index.tsx:87
 msgctxt "components.Home.Tasks.index.4ab261"
 msgid "Create one by clicking on the map."
-msgstr ""
+msgstr "Maak een door op de map te klikken."
 
 #: components/Home/Tasks/index.tsx:84
 msgctxt "components.Home.Tasks.index.5c6f2d"
 msgid "No tasks for now."
-msgstr ""
+msgstr "Geen taken voor nu."
 
 #: components/Home/Tasks/index.tsx:117
 msgctxt "components.Home.Tasks.index.778f27"
 msgid "Open map"
-msgstr ""
+msgstr "Map openen"
 
 #: components/Layout.tsx:63
 msgctxt "components.Layout.1f7783"
 msgid "Statistics"
-msgstr ""
+msgstr "Statistieken"
 
 #: components/Layout.tsx:53
 msgctxt "components.Layout.34089d"
 msgid "Notifications"
-msgstr ""
+msgstr "Meldingen"
 
 #: components/Layout.tsx:71
 msgctxt "components.Layout.484351"
 msgid "Help"
-msgstr ""
+msgstr "Help"
 
 #: components/Map/TaskCreateLayer/CreateButton.tsx:32
 msgctxt "components.Map.TaskCreateLayer.CreateButton.573cd8"
 msgid "Create"
-msgstr ""
+msgstr "Maken"
 
 #: components/Map/TaskLayer/DeleteButton.tsx:31
 msgctxt "components.Map.TaskLayer.DeleteButton.2b7afa"
 msgid "Delete"
-msgstr ""
+msgstr "Verwijderen"
 
 #: components/Map/TaskLayer/DoneButton.tsx:31
 msgctxt "components.Map.TaskLayer.DoneButton.395490"
 msgid "Mark as to-do"
-msgstr ""
+msgstr "Markeer als te doen"
 
 #: components/Map/TaskLayer/DoneButton.tsx:33
 msgctxt "components.Map.TaskLayer.DoneButton.927523"
 msgid "Mark as done"
-msgstr ""
+msgstr "Markeer als gedaan"
 
 #: components/Map/TaskMarker/BackButton.tsx:12
 msgctxt "components.Map.TaskMarker.BackButton.73247b"
 msgid "Back"
-msgstr ""
+msgstr "Terug"
 
 #: components/Map/TaskMarker/InfoPage/DueText.tsx:25
 msgctxt "components.Map.TaskMarker.InfoPage.DueText.17572f"
 msgid "Due {time} ago"
-msgstr ""
+msgstr "Te doen {tijd} geleden"
 
 #: components/Map/TaskMarker/InfoPage/DueText.tsx:20
 msgctxt "components.Map.TaskMarker.InfoPage.DueText.767ec9"
 msgid "Due in {time}"
-msgstr ""
+msgstr "Te doen in {tijd}"
 
 #: components/Map/TaskMarker/InfoPage/HideCheck.tsx:17
 msgctxt "components.Map.TaskMarker.InfoPage.HideCheck.fdf592"
 msgid "Hide temporarily"
-msgstr ""
+msgstr "Tijdelijk verbergen"
 
 #: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:70
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.52cf48"
 msgid "{time}AM"
-msgstr ""
+msgstr "{tijd}AM"
 
 #: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:69
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.6e6cc8"
 msgid "Server reset"
-msgstr ""
+msgstr "Server reset"
 
 #: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:20
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.a736a6"
 msgid "Respawns every"
-msgstr ""
+msgstr "Respawnt elke"
 
 #: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:15
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalResetCheck.4b91b9"
 msgid "Respawns on server reset"
-msgstr ""
+msgstr "Respawnt op server reset"
 
 #: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:16
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalResetCheck.52cf48"
 msgid "{time}AM"
-msgstr ""
+msgstr "{tijd}AM"
 
 #: components/Map/TaskMarker/InfoPage/NotifyToggle.tsx:30
 msgctxt "components.Map.TaskMarker.InfoPage.NotifyToggle.0b66a8"
 msgid "{name} respawned"
-msgstr ""
+msgstr "{naam} gerespawned"
 
 #: components/Map/TaskMarker/InfoPage/NotifyToggle.tsx:46
 msgctxt "components.Map.TaskMarker.InfoPage.NotifyToggle.da9e7e"
 msgid "Notify respawn"
-msgstr ""
+msgstr "Respawn melden"
 
 #: components/Map/TaskMarker/InfoPage/index.tsx:94
 msgctxt "components.Map.TaskMarker.InfoPage.index.343579"
 msgid "Options"
-msgstr ""
+msgstr "Opties"
 
 #: components/Map/TaskMarker/InfoPage/index.tsx:46
 msgctxt "components.Map.TaskMarker.InfoPage.index.656cac"
 msgid "Change icon"
-msgstr ""
+msgstr "Icoon veranderen"
 
 #: components/Map/TaskMarker/InfoPage/index.tsx:82
 msgctxt "components.Map.TaskMarker.InfoPage.index.906238"
 msgid "Task description"
-msgstr ""
+msgstr "Taak beschrijving"
 
 #: components/MapPage/SearchButton.tsx:26
 msgctxt "components.MapPage.SearchButton.c66715"
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
 #: components/MapPage/TaskListOverlay.tsx:54
 msgctxt "components.MapPage.TaskListOverlay.ea3f7e"
 msgid "Show list"
-msgstr ""
+msgstr "Lijst tonen"
 
 #: components/MapPage/TaskListOverlay.tsx:52
 msgctxt "components.MapPage.TaskListOverlay.f36c72"
 msgid "Hide list"
-msgstr ""
+msgstr "Lijst verbergen"
 
 #: components/ShortcutHelp.tsx:79
 msgctxt "components.ShortcutHelp.0b8e0c"
 msgid "Focus next task"
-msgstr ""
+msgstr "Focus volgende taak"
 
 #: components/ShortcutHelp.tsx:58
 msgctxt "components.ShortcutHelp.0eca1d"
 msgid "Add {values}"
-msgstr ""
+msgstr "{waarde} toevoegen"
 
 #: components/ShortcutHelp.tsx:34
 msgctxt "components.ShortcutHelp.44c3b9"
 msgid "Previous day"
-msgstr ""
+msgstr "Vorige dag"
 
 #: components/ShortcutHelp.tsx:81
 msgctxt "components.ShortcutHelp.49f4fc"
 msgid "shift"
-msgstr ""
+msgstr "verschuiven"
 
 #: components/ShortcutHelp.tsx:33
 msgctxt "components.ShortcutHelp.5451c7"
 msgid "left"
-msgstr ""
+msgstr "links"
 
 #: components/ShortcutHelp.tsx:36
 msgctxt "components.ShortcutHelp.55c972"
 msgid "right"
-msgstr ""
+msgstr "rechts"
 
 #: components/ShortcutHelp.tsx:32
 msgctxt "components.ShortcutHelp.723949"
 msgid "Server clock"
-msgstr ""
+msgstr "Server klok"
 
 #: components/ShortcutHelp.tsx:71
 msgctxt "components.ShortcutHelp.755c57"
 msgid "Task scheduler"
-msgstr ""
+msgstr "Taakplanner"
 
 #: components/ShortcutHelp.tsx:73
 msgctxt "components.ShortcutHelp.7acb8d"
 msgid "Search tasks"
-msgstr ""
+msgstr "Taken doorzoeken"
 
 #: components/ShortcutHelp.tsx:85
 msgctxt "components.ShortcutHelp.927523"
 msgid "Mark as done"
-msgstr ""
+msgstr "Markeer als gedaan"
 
 #: components/ShortcutHelp.tsx:44
 msgctxt "components.ShortcutHelp.96d48b"
 msgid "Resin calculator"
-msgstr ""
+msgstr "Resin rekenmachine"
 
 #: components/ShortcutHelp.tsx:91
 msgctxt "components.ShortcutHelp.9f8054"
 msgid "Show keyboard shortcuts"
-msgstr ""
+msgstr "Toon toetsenbord sneltoetsen"
 
 #: components/ShortcutHelp.tsx:46
 msgctxt "components.ShortcutHelp.b13795"
 msgid "Subtract {values}"
-msgstr ""
+msgstr "Trek {waarden} af"
 
 #: components/ShortcutHelp.tsx:25
 msgctxt "components.ShortcutHelp.bf360f"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Toetsenbord sneltoetsen"
 
 #: components/ShortcutHelp.tsx:76
 msgctxt "components.ShortcutHelp.c03f14"
 msgid "Toggle list overlay"
-msgstr ""
+msgstr "Lijst overlay in/uitschakelen"
 
 #: components/ShortcutHelp.tsx:39
 msgctxt "components.ShortcutHelp.c886e7"
 msgid "esc"
-msgstr ""
+msgstr "esc"
 
 #: components/ShortcutHelp.tsx:37
 msgctxt "components.ShortcutHelp.dd708b"
 msgid "Next day"
-msgstr ""
+msgstr "Volgende dag"
 
 #: components/ShortcutHelp.tsx:82
 msgctxt "components.ShortcutHelp.efcb6e"
 msgid "Focus previous task"
-msgstr ""
+msgstr "Focus vorige taak"
 
 #: components/ShortcutHelp.tsx:40
 msgctxt "components.ShortcutHelp.fcc2fc"
 msgid "Reset offset"
-msgstr ""
+msgstr "Verschil resetten"
 
 #: components/ShortcutHelp.tsx:89
 msgctxt "components.ShortcutHelp.fd59c3"
 msgid "Other"
-msgstr ""
+msgstr "Anders"
 
 #: components/Statistics/InfoText.tsx:22
 msgctxt "components.Statistics.InfoText.22e144"
 msgid "Duration"
-msgstr ""
+msgstr "Tijdsloop"
 
 #: components/Statistics/InfoText.tsx:19
 msgctxt "components.Statistics.InfoText.be142a"
 msgid "Range"
-msgstr ""
+msgstr "Bereik"
 
 #: components/Statistics/ResetButton.tsx:32
 msgctxt "components.Statistics.ResetButton.1e2167"
 msgid "Reset statistics"
-msgstr ""
+msgstr "Statistieken resetten"
 
 #: components/Statistics/ResetButton.tsx:36
 msgctxt "components.Statistics.ResetButton.243268"
 msgid "This action cannot be undone."
-msgstr ""
+msgstr "Deze actie kan niet ongedaan gemaakt worden."
 
 #: components/Statistics/ResetButton.tsx:48
 msgctxt "components.Statistics.ResetButton.8e6fec"
 msgid "Reset"
-msgstr ""
+msgstr "Resetten"
 
 #: components/Statistics/ResetButton.tsx:52
 msgctxt "components.Statistics.ResetButton.e3b158"
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleer"
 
 #: components/Statistics/ResinStats.tsx:101
 msgctxt "components.Statistics.ResinStats.101bad"
 msgid "{percent}% efficiency"
-msgstr ""
+msgstr "{percentage}% werking"
 
 #: components/Statistics/ResinStats.tsx:93
 msgctxt "components.Statistics.ResinStats.309da3"
 msgid "Total"
-msgstr ""
+msgstr "Totaal"
 
 #: components/Statistics/ResinStats.tsx:119
 msgctxt "components.Statistics.ResinStats.6b30d3"
 msgid "Peak"
-msgstr ""
+msgstr "Top"
 
 #: components/Statistics/ResinStats.tsx:127
 msgctxt "components.Statistics.ResinStats.76ed65"
 msgid "Never"
-msgstr ""
+msgstr "Nooit"
 
 #: components/Statistics/ResinStats.tsx:26
 msgctxt "components.Statistics.ResinStats.99ed7d"
 msgid "Resins spent"
-msgstr ""
+msgstr "Resin besteedt"
 
 #: components/Statistics/ResinStats.tsx:74
 msgctxt "components.Statistics.ResinStats.cd681b"
 msgid "Today"
-msgstr ""
+msgstr "Vandaag"
 
 #: components/Statistics/TaskStats.tsx:90
 msgctxt "components.Statistics.TaskStats.309da3"
 msgid "Total"
-msgstr ""
+msgstr "Totaal"
 
 #: components/Statistics/TaskStats.tsx:109
 msgctxt "components.Statistics.TaskStats.6b30d3"
 msgid "Peak"
-msgstr ""
+msgstr "Top"
 
 #: components/Statistics/TaskStats.tsx:117
 msgctxt "components.Statistics.TaskStats.76ed65"
 msgid "Never"
-msgstr ""
+msgstr "Nooit"
 
 #: components/Statistics/TaskStats.tsx:25
 msgctxt "components.Statistics.TaskStats.c90f7d"
 msgid "Tasks done"
-msgstr ""
+msgstr "Taken gedaan"
 
 #: components/Statistics/TaskStats.tsx:72
 msgctxt "components.Statistics.TaskStats.cd681b"
 msgid "Today"
-msgstr ""
+msgstr "Vandaag"
 
 #: components/TaskListCard/DoneButton.tsx:42
 msgctxt "components.TaskListCard.DoneButton.395490"
 msgid "Mark as to-do"
-msgstr ""
+msgstr "Markeer als te doen"
 
 #: components/TaskListCard/DoneButton.tsx:42
 msgctxt "components.TaskListCard.DoneButton.927523"
 msgid "Mark as done"
-msgstr ""
+msgstr "Markeer als gedaan"
 
 #: components/TaskListCard/HideButton.tsx:41
 msgctxt "components.TaskListCard.HideButton.2bb024"
 msgid "Show"
-msgstr ""
+msgstr "Toon"
 
 #: components/TaskListCard/HideButton.tsx:28
 msgctxt "components.TaskListCard.HideButton.3106fe"
 msgid "Unhide"
-msgstr ""
+msgstr "Tonen"
 
 #: components/TaskListCard/HideButton.tsx:41
 msgctxt "components.TaskListCard.HideButton.540fd9"
 msgid "Hide"
-msgstr ""
+msgstr "Verbergen"
 
 #: components/TaskListCard/HideButton.tsx:26
 msgctxt "components.TaskListCard.HideButton.fdf592"
 msgid "Hide temporarily"
-msgstr ""
+msgstr "Tijdelijk verbergen"
 
 #: components/TaskListCard/Item.tsx:51
 msgctxt "components.TaskListCard.Item.0ababe"
 msgid "Highlight task"
-msgstr ""
+msgstr "Taak markeren"
 
 #: components/TaskSearchModal.tsx:34
 msgctxt "components.TaskSearchModal.4ae60b"
 msgid "Search tasks…"
-msgstr ""
+msgstr "Taken doorzoeken…"
 
 #: db/artifacts.ts:27
 msgctxt "db.artifacts.05500a"
 msgid "Berserker"
-msgstr ""
+msgstr "Berserker"
 
 #: db/artifacts.ts:93
 msgctxt "db.artifacts.069da3"
 msgid "Maiden Beloved"
-msgstr ""
+msgstr "Maiden Beloved"
 
 #: db/artifacts.ts:117
 msgctxt "db.artifacts.1c37ab"
 msgid "Prayers for Destiny"
-msgstr ""
+msgstr "Prayers for Destiny"
 
 #: db/artifacts.ts:75
 msgctxt "db.artifacts.214709"
 msgid "Instructor"
-msgstr ""
+msgstr "Instructor"
 
 #: db/artifacts.ts:51
 msgctxt "db.artifacts.21612b"
 msgid "Defender's Will"
-msgstr ""
+msgstr "Verdedigers Wil"
 
 #: db/artifacts.ts:207
 msgctxt "db.artifacts.21a80b"
 msgid "Pale Flame"
-msgstr ""
+msgstr "Pale Flame"
 
 #: db/artifacts.ts:105
 msgctxt "db.artifacts.280c08"
 msgid "Noblesse Oblige"
-msgstr ""
+msgstr "Noblesse Oblige"
 
 #: db/artifacts.ts:15
 msgctxt "db.artifacts.2ff052"
 msgid "Adventurer"
-msgstr ""
+msgstr "Adventurer"
 
 #: db/artifacts.ts:231
 msgctxt "db.artifacts.380a40"
 msgid "Husk of Opulent Dreams"
-msgstr ""
+msgstr "Husk of Opulent Dreams"
 
 #: db/artifacts.ts:183
 msgctxt "db.artifacts.38bb7d"
 msgid "Traveling Doctor"
-msgstr ""
+msgstr "Traveling Doctor"
 
 #: db/artifacts.ts:11
 msgctxt "db.artifacts.3e9210"
 msgid "Artifact"
-msgstr ""
+msgstr "Artefact"
 
 #: db/artifacts.ts:225
 msgctxt "db.artifacts.47ea6f"
 msgid "Ocean-Hued Clam"
-msgstr ""
+msgstr "Ocean-Hued Clam"
 
 #: db/artifacts.ts:171
 msgctxt "db.artifacts.485473"
 msgid "Thundersoother"
-msgstr ""
+msgstr "Thundersoother"
 
 #: db/artifacts.ts:99
 msgctxt "db.artifacts.4f913f"
 msgid "Martial Artist"
-msgstr ""
+msgstr "Martial Artist"
 
 #: db/artifacts.ts:135
 msgctxt "db.artifacts.51460e"
 msgid "Prayers to Springtime"
-msgstr ""
+msgstr "Prayers to Springtime"
 
 #: db/artifacts.ts:39
 msgctxt "db.artifacts.5681e8"
 msgid "Brave Heart"
-msgstr ""
+msgstr "Brave Heart"
 
 #: db/artifacts.ts:81
 msgctxt "db.artifacts.5bcd27"
 msgid "Lavawalker"
-msgstr ""
+msgstr "Lavawalker"
 
 #: db/artifacts.ts:111
 msgctxt "db.artifacts.6d7eb3"
 msgid "Ocean Conqueror"
-msgstr ""
+msgstr "Ocean Conqueror"
 
 #: db/artifacts.ts:87
 msgctxt "db.artifacts.730401"
 msgid "Lucky Dog"
-msgstr ""
+msgstr "Lucky Dog"
 
 #: db/artifacts.ts:177
 msgctxt "db.artifacts.7e4369"
 msgid "Tiny Miracle"
-msgstr ""
+msgstr "Tiny Miracle"
 
 #: db/artifacts.ts:159
 msgctxt "db.artifacts.7e7a67"
 msgid "The Exile"
-msgstr ""
+msgstr "The Exile"
 
 #: db/artifacts.ts:201
 msgctxt "db.artifacts.8003f4"
 msgid "Tenacity of the Millelith"
-msgstr ""
+msgstr "Tenacity of the Millelith"
 
 #: db/artifacts.ts:45
 msgctxt "db.artifacts.851f90"
 msgid "Crimson Witch of Flames"
-msgstr ""
+msgstr "Crimson Witch of Flames"
 
 #: db/artifacts.ts:219
 msgctxt "db.artifacts.898ec3"
 msgid "Emblem of Severed Fate"
-msgstr ""
+msgstr "Emblem of Severed Fate"
 
 #: db/artifacts.ts:189
 msgctxt "db.artifacts.95e53b"
 msgid "Viridescent Venerer"
-msgstr ""
+msgstr "Viridescent Venerer"
 
 #: db/artifacts.ts:165
 msgctxt "db.artifacts.9f336e"
 msgid "Thundering Fury"
-msgstr ""
+msgstr "Thundering Fury"
 
 #: db/artifacts.ts:57
 msgctxt "db.artifacts.a5f405"
 msgid "Gambler"
-msgstr ""
+msgstr "Gambler"
 
 #: db/artifacts.ts:69
 msgctxt "db.artifacts.b45e3e"
 msgid "Icebreaker"
-msgstr ""
+msgstr "Icebreaker"
 
 #: db/artifacts.ts:153
 msgctxt "db.artifacts.bf3cde"
 msgid "Scholar"
-msgstr ""
+msgstr "Scholar"
 
 #: db/artifacts.ts:21
 msgctxt "db.artifacts.c4de81"
 msgid "Archaic Petra"
-msgstr ""
+msgstr "Archaic Petra"
 
 #: db/artifacts.ts:33
 msgctxt "db.artifacts.c4ee4e"
 msgid "Bloodstained Chivalry"
-msgstr ""
+msgstr "Bloodstained Chivalry"
 
 #: db/artifacts.ts:141
 msgctxt "db.artifacts.d086de"
 msgid "Resolution of Sojourner"
-msgstr ""
+msgstr "Resolution of Sojourner"
 
 #: db/artifacts.ts:213
 msgctxt "db.artifacts.de601b"
 msgid "Shimenawa's Reminiscence"
-msgstr ""
+msgstr "Shimenawas Herinnering"
 
 #: db/artifacts.ts:147
 msgctxt "db.artifacts.e2996a"
 msgid "Retracing Bolide"
-msgstr ""
+msgstr "Retracing Bolide"
 
 #: db/artifacts.ts:195
 msgctxt "db.artifacts.e34cca"
 msgid "Wanderer's Troupe"
-msgstr ""
+msgstr "Dwalers Troep"
 
 #: db/artifacts.ts:129
 msgctxt "db.artifacts.e52b68"
 msgid "Prayers for Wisdom"
-msgstr ""
+msgstr "Prayers for Wisdom"
 
 #: db/artifacts.ts:63
 msgctxt "db.artifacts.efac76"
 msgid "Gladiator's Finale"
-msgstr ""
+msgstr "Gladiators Finale"
 
 #: db/artifacts.ts:123
 msgctxt "db.artifacts.fa86c6"
 msgid "Prayers for Illumination"
-msgstr ""
+msgstr "Prayers for Illumination"
 
 #: db/characterMaterials.ts:115
 msgctxt "db.characterMaterials.075225"
 msgid "Smoldering Pearl"
-msgstr ""
+msgstr "Smeulende Parel"
 
 #: db/characterMaterials.ts:30
 msgctxt "db.characterMaterials.1197ab"
 msgid "Shivada Jade"
-msgstr ""
+msgstr "Shivada Jade"
 
 #: db/characterMaterials.ts:80
 msgctxt "db.characterMaterials.1a889f"
 msgid "Crystalline Bloom"
-msgstr ""
+msgstr "Kristallijne Bloei"
 
 #: db/characterMaterials.ts:87
 msgctxt "db.characterMaterials.1d76b3"
 msgid "Lightning Prism"
-msgstr ""
+msgstr "Bliksem Prisma"
 
 #: db/characterMaterials.ts:143
 msgctxt "db.characterMaterials.2273a3"
 msgid "Storm Beads"
-msgstr ""
+msgstr "Strom Kralen"
 
 #: db/characterMaterials.ts:17
 msgctxt "db.characterMaterials.263550"
 msgid "Brilliant Diamond Silver"
-msgstr ""
+msgstr "Briljant Diamant Zilver"
 
 #: db/characterMaterials.ts:12
 msgctxt "db.characterMaterials.2c5da2"
 msgid "Character Ascension Material"
-msgstr ""
+msgstr "Personage Ascensie Materiaal"
 
 #: db/characterMaterials.ts:23
 msgctxt "db.characterMaterials.402219"
 msgid "Vayuda Turquoise"
-msgstr ""
+msgstr "Vayuda Turkoois"
 
 #: db/characterMaterials.ts:59
 msgctxt "db.characterMaterials.442b7d"
 msgid "Agnidus Agate Silver"
-msgstr ""
+msgstr "Agnidus Agaat Zilver"
 
 #: db/characterMaterials.ts:38
 msgctxt "db.characterMaterials.544601"
 msgid "Vajrada Amethyst Silver"
-msgstr ""
+msgstr "Vajrada Amethist Zilver"
 
 #: db/characterMaterials.ts:45
 msgctxt "db.characterMaterials.61a03d"
 msgid "Prithiva Topaz Silver"
-msgstr ""
+msgstr "Prithiva Topaas Zilver"
 
 #: db/characterMaterials.ts:166
 msgctxt "db.characterMaterials.674d0f"
 msgid "Dragonheir's False Fin"
-msgstr ""
+msgstr "Dragonheirs Valse Fin"
 
 #: db/characterMaterials.ts:129
 msgctxt "db.characterMaterials.69e399"
 msgid "Marionette Core"
-msgstr ""
+msgstr "Marionette Kern"
 
 #: db/characterMaterials.ts:108
 msgctxt "db.characterMaterials.6dacd8"
 msgid "Everflame Seed"
-msgstr ""
+msgstr "Everflame-Zaad"
 
 #: db/characterMaterials.ts:66
 msgctxt "db.characterMaterials.71aa4d"
 msgid "Hurricane Seed"
-msgstr ""
+msgstr "Orkaanzaad"
 
 #: db/characterMaterials.ts:31
 msgctxt "db.characterMaterials.7bbaf1"
 msgid "Shivada Jade Silver"
-msgstr ""
+msgstr "Shivada Jade Zilver"
 
 #: db/characterMaterials.ts:94
 msgctxt "db.characterMaterials.84ad4f"
 msgid "Basalt Pillar"
-msgstr ""
+msgstr "Basalt Pilaar"
 
 #: db/characterMaterials.ts:122
 msgctxt "db.characterMaterials.aef1aa"
 msgid "Juvenile Jade"
-msgstr ""
+msgstr "Jong Jade"
 
 #: db/characterMaterials.ts:150
 msgctxt "db.characterMaterials.b1845e"
 msgid "Dew of Repudiation"
-msgstr ""
+msgstr "Dauw van Verwerping"
 
 #: db/characterMaterials.ts:157
 msgctxt "db.characterMaterials.b7e9f6"
 msgid "Riftborn Regalia"
-msgstr ""
+msgstr "Riftborn Regalia"
 
 #: db/characterMaterials.ts:58
 msgctxt "db.characterMaterials.ba86ce"
 msgid "Agnidus Agate"
-msgstr ""
+msgstr "Agnidus Agaat"
 
 #: db/characterMaterials.ts:24
 msgctxt "db.characterMaterials.c0b022"
 msgid "Vayuda Turquoise Silver"
-msgstr ""
+msgstr "Vayuda Turkoois Zilver"
 
 #: db/characterMaterials.ts:51
 msgctxt "db.characterMaterials.cd566f"
 msgid "Varunada Lazurite"
-msgstr ""
+msgstr "Varunada Lazuriet"
 
 #: db/characterMaterials.ts:16
 msgctxt "db.characterMaterials.d82be1"
 msgid "Brilliant Diamond"
-msgstr ""
+msgstr "Briljante Diamant"
 
 #: db/characterMaterials.ts:73
 msgctxt "db.characterMaterials.e422cf"
 msgid "Hoarfrost Core"
-msgstr ""
+msgstr "Rijp Kern"
 
 #: db/characterMaterials.ts:44
 msgctxt "db.characterMaterials.e52e52"
 msgid "Prithiva Topaz"
-msgstr ""
+msgstr "Prithiva Topaas"
 
 #: db/characterMaterials.ts:101
 msgctxt "db.characterMaterials.e5dbaa"
 msgid "Cleansing Heart"
-msgstr ""
+msgstr "Reinigend Hart"
 
 #: db/characterMaterials.ts:37
 msgctxt "db.characterMaterials.eaa616"
 msgid "Vajrada Amethyst"
-msgstr ""
+msgstr "Vajrada Amethist"
 
 #: db/characterMaterials.ts:136
 msgctxt "db.characterMaterials.f0ec25"
 msgid "Perpetual Heart"
-msgstr ""
+msgstr "Eeuwig Hart"
 
 #: db/characterMaterials.ts:52
 msgctxt "db.characterMaterials.f20cfa"
 msgid "Varunada Lazurite Silver"
-msgstr ""
+msgstr "Varunada Lazuriet Zilver"
 
 #: db/characters.ts:370
 msgctxt "db.characters.07f6ca"
 msgid "Zhongli"
-msgstr ""
+msgstr "Zhongli"
 
 #: db/characters.ts:105
 msgctxt "db.characters.096e0e"
 msgid "Character"
-msgstr ""
+msgstr "Personage"
 
 #: db/characters.ts:200
 msgctxt "db.characters.0e89af"
 msgid "Fischl"
-msgstr ""
+msgstr "Fischl"
 
 #: db/characters.ts:380
 msgctxt "db.characters.17ba95"
 msgid "Xinyan"
-msgstr ""
+msgstr "Xinyan"
 
 #: db/characters.ts:440
 msgctxt "db.characters.18d80a"
 msgid "Xiao"
-msgstr ""
+msgstr "Xiao"
 
 #: db/characters.ts:550
 msgctxt "db.characters.1a3695"
 msgid "Gorou"
-msgstr ""
+msgstr "Gorou"
 
 #: db/characters.ts:310
 msgctxt "db.characters.1c8781"
 msgid "Venti"
-msgstr ""
+msgstr "Venti"
 
 #: db/characters.ts:560
 msgctxt "db.characters.24a6dc"
 msgid "Itto"
-msgstr ""
+msgstr "Itto"
 
 #: db/characters.ts:390
 msgctxt "db.characters.2fbbd1"
 msgid "Yanfei"
-msgstr ""
+msgstr "Yanfei"
 
 #: db/characters.ts:320
 msgctxt "db.characters.35f4f4"
 msgid "Xiangling"
-msgstr ""
+msgstr "Xiangling"
 
 #: db/characters.ts:300
 msgctxt "db.characters.3988a8"
 msgid "Sucrose"
-msgstr ""
+msgstr "Sucrose"
 
 #: db/characters.ts:240
 msgctxt "db.characters.42ddab"
 msgid "Lisa"
-msgstr ""
+msgstr "Lisa"
 
 #: db/characters.ts:400
 msgctxt "db.characters.47f14e"
 msgid "Eula"
-msgstr ""
+msgstr "Eula"
 
 #: db/characters.ts:430
 msgctxt "db.characters.579564"
 msgid "Ayaka"
-msgstr ""
+msgstr "Ayaka"
 
 #: db/characters.ts:120
 msgctxt "db.characters.584d1b"
 msgid "Traveler (Geo)"
-msgstr ""
+msgstr "Reiziger (Geo)"
 
 #: db/characters.ts:290
 msgctxt "db.characters.5934e2"
 msgid "Razor"
-msgstr ""
+msgstr "Razor"
 
 #: db/characters.ts:260
 msgctxt "db.characters.5e045b"
 msgid "Ningguang"
-msgstr ""
+msgstr "Ningguang"
 
 #: db/characters.ts:160
 msgctxt "db.characters.653885"
 msgid "Beidou"
-msgstr ""
+msgstr "Beidou"
 
 #: db/characters.ts:581
 msgctxt "db.characters.67a132"
 msgid "Shenhe"
-msgstr ""
+msgstr "Shenhe"
 
 #: db/characters.ts:180
 msgctxt "db.characters.7267c2"
 msgid "Chongyun"
-msgstr ""
+msgstr "Chongyun"
 
 #: db/characters.ts:270
 msgctxt "db.characters.7ce9c6"
 msgid "Noelle"
-msgstr ""
+msgstr "Noelle"
 
 #: db/characters.ts:570
 msgctxt "db.characters.7eee26"
 msgid "Yun Jin"
-msgstr ""
+msgstr "Yun Jin"
 
 #: db/characters.ts:210
 msgctxt "db.characters.7f3adf"
 msgid "Jean"
-msgstr ""
+msgstr "Jean"
 
 #: db/characters.ts:360
 msgctxt "db.characters.89304e"
 msgid "Diona"
-msgstr ""
+msgstr "Diona"
 
 #: db/characters.ts:480
 msgctxt "db.characters.89d67c"
 msgid "Sayu"
-msgstr ""
+msgstr "Sayu"
 
 #: db/characters.ts:220
 msgctxt "db.characters.921292"
 msgid "Kaeya"
-msgstr ""
+msgstr "Kaeya"
 
 #: db/characters.ts:540
 msgctxt "db.characters.9a051f"
 msgid "Thoma"
-msgstr ""
+msgstr "Thoma"
 
 #: db/characters.ts:490
 msgctxt "db.characters.9d0c00"
 msgid "Yoimiya"
-msgstr ""
+msgstr "Yoimiya"
 
 #: db/characters.ts:280
 msgctxt "db.characters.9de495"
 msgid "Qiqi"
-msgstr ""
+msgstr "Qiqi"
 
 #: db/characters.ts:330
 msgctxt "db.characters.9e37b6"
 msgid "Xingqiu"
-msgstr ""
+msgstr "Xingqiu"
 
 #: db/characters.ts:190
 msgctxt "db.characters.a1bb56"
 msgid "Diluc"
-msgstr ""
+msgstr "Diluc"
 
 #: db/characters.ts:150
 msgctxt "db.characters.a808c9"
 msgid "Barbara"
-msgstr ""
+msgstr "Barbara"
 
 #: db/characters.ts:250
 msgctxt "db.characters.af88fa"
 msgid "Mona"
-msgstr ""
+msgstr "Mona"
 
 #: db/characters.ts:410
 msgctxt "db.characters.b60444"
 msgid "Albedo"
-msgstr ""
+msgstr "Albedo"
 
 #: db/characters.ts:170
 msgctxt "db.characters.b96249"
 msgid "Bennett"
-msgstr ""
+msgstr "Bennett"
 
 #: db/characters.ts:420
 msgctxt "db.characters.bc58dc"
 msgid "Ganyu"
-msgstr ""
+msgstr "Ganyu"
 
 #: db/characters.ts:350
 msgctxt "db.characters.bdaeb2"
 msgid "Tartaglia"
-msgstr ""
+msgstr "Tartaglia"
 
 #: db/characters.ts:520
 msgctxt "db.characters.c68789"
 msgid "Kokomi"
-msgstr ""
+msgstr "Kokomi"
 
 #: db/characters.ts:510
 msgctxt "db.characters.c976d6"
 msgid "Kujou Sara"
-msgstr ""
+msgstr "Kujou Sara"
 
 #: db/characters.ts:340
 msgctxt "db.characters.ce2cb0"
 msgid "Klee"
-msgstr ""
+msgstr "Klee"
 
 #: db/characters.ts:110
 msgctxt "db.characters.d09c64"
 msgid "Traveler (Anemo)"
-msgstr ""
+msgstr "Reiziger (Anemo)"
 
 #: db/characters.ts:230
 msgctxt "db.characters.d9c480"
 msgid "Keqing"
-msgstr ""
+msgstr "Keqing"
 
 #: db/characters.ts:450
 msgctxt "db.characters.dd7597"
 msgid "Rosaria"
-msgstr ""
+msgstr "Rosaria"
 
 #: db/characters.ts:530
 msgctxt "db.characters.dd770d"
 msgid "Aloy"
-msgstr ""
+msgstr "Aloy"
 
 #: db/characters.ts:460
 msgctxt "db.characters.de01da"
 msgid "Hu Tao"
-msgstr ""
+msgstr "Hu Tao"
 
 #: db/characters.ts:470
 msgctxt "db.characters.e9f35f"
 msgid "Kazuha"
-msgstr ""
+msgstr "Kazuha"
 
 #: db/characters.ts:130
 msgctxt "db.characters.f0737d"
 msgid "Traveler (Electro)"
-msgstr ""
+msgstr "Reiziger (Electro)"
 
 #: db/characters.ts:500
 msgctxt "db.characters.f55126"
 msgid "Raiden Shogun"
-msgstr ""
+msgstr "Raiden Shogun"
 
 #: db/characters.ts:106
 msgctxt "db.characters.fc54ed"
 msgid "Paimon"
-msgstr ""
+msgstr "Paimon"
 
 #: db/characters.ts:140
 msgctxt "db.characters.fdb676"
 msgid "Amber"
-msgstr ""
+msgstr "Amber"
 
 #: db/commonMaterials.ts:52
 msgctxt "db.commonMaterials.02b6af"
 msgid "Dead Ley Line Branch"
-msgstr ""
+msgstr "Dode Leylijn-tak"
 
 #: db/commonMaterials.ts:143
 msgctxt "db.commonMaterials.16740f"
 msgid "Jueyun Chili"
-msgstr ""
+msgstr "Jueyun Chili"
 
 #: db/commonMaterials.ts:192
 msgctxt "db.commonMaterials.19c45b"
 msgid "Valberry"
-msgstr ""
+msgstr "Valberry"
 
 #: db/commonMaterials.ts:262
 msgctxt "db.commonMaterials.21acbf"
 msgid "Crystal Marrow"
-msgstr ""
+msgstr "Kristal Merg"
 
 #: db/commonMaterials.ts:164
 msgctxt "db.commonMaterials.248863"
 msgid "Qingxin"
-msgstr ""
+msgstr "Qingxin"
 
 #: db/commonMaterials.ts:290
 msgctxt "db.commonMaterials.2a674f"
 msgid "Amakumo Fruit"
-msgstr ""
+msgstr "Amakumo Fruit"
 
 #: db/commonMaterials.ts:297
 msgctxt "db.commonMaterials.2b3cd3"
 msgid "Sango Pearl"
-msgstr ""
+msgstr "Sango Parel"
 
 #: db/commonMaterials.ts:45
 msgctxt "db.commonMaterials.3ef728"
 msgid "Heavy Horn"
-msgstr ""
+msgstr "Zware Hoorn"
 
 #: db/commonMaterials.ts:38
 msgctxt "db.commonMaterials.42027c"
 msgid "Divining Scroll"
-msgstr ""
+msgstr "Toverrol"
 
 #: db/commonMaterials.ts:226
 msgctxt "db.commonMaterials.4fb069"
 msgid "Handguard"
-msgstr ""
+msgstr "Handbeschermer"
 
 #: db/commonMaterials.ts:268
 msgctxt "db.commonMaterials.505973"
 msgid "Spectral Core"
-msgstr ""
+msgstr "Spectrale Kern"
 
 #: db/commonMaterials.ts:31
 msgctxt "db.commonMaterials.574218"
 msgid "Firm Arrowhead"
-msgstr ""
+msgstr "Stevige Pijlpunt"
 
 #: db/commonMaterials.ts:23
 msgctxt "db.commonMaterials.5e010a"
 msgid "Hilichurl Mask"
-msgstr ""
+msgstr "Hilichurl Masker"
 
 #: db/commonMaterials.ts:241
 msgctxt "db.commonMaterials.60776e"
 msgid "Naku Weed"
-msgstr ""
+msgstr "Naku Onkruid"
 
 #: db/commonMaterials.ts:283
 msgctxt "db.commonMaterials.6154c2"
 msgid "Onikabuto"
-msgstr ""
+msgstr "Onikabuto"
 
 #: db/commonMaterials.ts:276
 msgctxt "db.commonMaterials.6204f3"
 msgid "Dendrobium"
-msgstr ""
+msgstr "Dendrobium"
 
 #: db/commonMaterials.ts:254
 msgctxt "db.commonMaterials.6224ad"
 msgid "Mirror Prism"
-msgstr ""
+msgstr "Spiegel Prisma"
 
 #: db/commonMaterials.ts:101
 msgctxt "db.commonMaterials.6405d0"
 msgid "Whopperflower Nectar"
-msgstr ""
+msgstr "Whopperflower Nectar"
 
 #: db/commonMaterials.ts:129
 msgctxt "db.commonMaterials.6f7fb1"
 msgid "Dandelion Seed"
-msgstr ""
+msgstr "Paardenbloem Zaad"
 
 #: db/commonMaterials.ts:16
 msgctxt "db.commonMaterials.76ab19"
 msgid "Slime"
-msgstr ""
+msgstr "Slijm"
 
 #: db/commonMaterials.ts:311
 msgctxt "db.commonMaterials.76d056"
 msgid "Fluorescent Fungus"
-msgstr ""
+msgstr "Fluorescerende Schimmel"
 
 #: db/commonMaterials.ts:59
 msgctxt "db.commonMaterials.7ccd68"
 msgid "Chaos Device"
-msgstr ""
+msgstr "Chaos Apparaat"
 
 #: db/commonMaterials.ts:178
 msgctxt "db.commonMaterials.7ce6fd"
 msgid "Small Lamp Grass"
-msgstr ""
+msgstr "Kleine Lamp Gras"
 
 #: db/commonMaterials.ts:17
 msgctxt "db.commonMaterials.866176"
 msgid "Slime Condensate"
-msgstr ""
+msgstr "Slijm Condensaat"
 
 #: db/commonMaterials.ts:269
 msgctxt "db.commonMaterials.88dd49"
 msgid "Spectral Husk"
-msgstr ""
+msgstr "Spectrale Husk"
 
 #: db/commonMaterials.ts:108
 msgctxt "db.commonMaterials.8d1274"
 msgid "Calla Lily"
-msgstr ""
+msgstr "Calla Lelie"
 
 #: db/commonMaterials.ts:234
 msgctxt "db.commonMaterials.929cdd"
 msgid "Sakura Bloom"
-msgstr ""
+msgstr "Sakura Bloei"
 
 #: db/commonMaterials.ts:304
 msgctxt "db.commonMaterials.93c0a9"
 msgid "Concealed Claw"
-msgstr ""
+msgstr "Verborgen Klauw"
 
 #: db/commonMaterials.ts:185
 msgctxt "db.commonMaterials.9653ee"
 msgid "Starconch"
-msgstr ""
+msgstr "Sterschelp"
 
 #: db/commonMaterials.ts:255
 msgctxt "db.commonMaterials.9d4696"
 msgid "Dismal Prism"
-msgstr ""
+msgstr "Akelig Prisma"
 
 #: db/commonMaterials.ts:51
 msgctxt "db.commonMaterials.9f19e7"
 msgid "Ley Line"
-msgstr ""
+msgstr "Leylijn"
 
 #: db/commonMaterials.ts:12
 msgctxt "db.commonMaterials.a20818"
 msgid "Common Ascension Material"
-msgstr ""
+msgstr "Gewoon Ascensiemateriaal"
 
 #: db/commonMaterials.ts:248
 msgctxt "db.commonMaterials.a831e1"
 msgid "Chaos Gear"
-msgstr ""
+msgstr "Chaos Gereedschap"
 
 #: db/commonMaterials.ts:199
 msgctxt "db.commonMaterials.ace079"
 msgid "Violetgrass"
-msgstr ""
+msgstr "Viooltjesgras"
 
 #: db/commonMaterials.ts:79
 msgctxt "db.commonMaterials.b1e166"
 msgid "Fatui Insignia"
-msgstr ""
+msgstr "Fatui Insigne"
 
 #: db/commonMaterials.ts:171
 msgctxt "db.commonMaterials.bc0224"
 msgid "Silk Flower"
-msgstr ""
+msgstr "Zijden Bloem"
 
 #: db/commonMaterials.ts:94
 msgctxt "db.commonMaterials.be8c87"
 msgid "Fragile Bone Shard"
-msgstr ""
+msgstr "Breekbare Botscherf"
 
 #: db/commonMaterials.ts:37
 msgctxt "db.commonMaterials.bf08d6"
 msgid "Samachurl Scroll"
-msgstr ""
+msgstr "Samachurl Lijst"
 
 #: db/commonMaterials.ts:220
 msgctxt "db.commonMaterials.c15ca5"
 msgid "Sea Ganoderma"
-msgstr ""
+msgstr "Zee Ganoderma"
 
 #: db/commonMaterials.ts:87
 msgctxt "db.commonMaterials.c5a9ac"
 msgid "Treasure Hoarder Insignia"
-msgstr ""
+msgstr "Treasure Hoarder Insigne"
 
 #: db/commonMaterials.ts:44
 msgctxt "db.commonMaterials.c631e3"
 msgid "Hilichurl Horn"
-msgstr ""
+msgstr "Hilichurl Hoorn"
 
 #: db/commonMaterials.ts:73
 msgctxt "db.commonMaterials.c6cff7"
 msgid "Hunter's Sacrificial Knife"
-msgstr ""
+msgstr "Jager's Offer Mes"
 
 #: db/commonMaterials.ts:66
 msgctxt "db.commonMaterials.cd7e10"
 msgid "Mist Grass Pollen"
-msgstr ""
+msgstr "Mist Gras Pollen"
 
 #: db/commonMaterials.ts:213
 msgctxt "db.commonMaterials.ce7fa6"
 msgid "Wolfhook"
-msgstr ""
+msgstr "Wolfshaak"
 
 #: db/commonMaterials.ts:65
 msgctxt "db.commonMaterials.d47bda"
 msgid "Mist Grass"
-msgstr ""
+msgstr "Mist Gras"
 
 #: db/commonMaterials.ts:150
 msgctxt "db.commonMaterials.d8877a"
 msgid "Noctilucous Jade"
-msgstr ""
+msgstr "Nachtelijke Jade"
 
 #: db/commonMaterials.ts:93
 msgctxt "db.commonMaterials.d88f11"
 msgid "Bone Shard"
-msgstr ""
+msgstr "Botscherf"
 
 #: db/commonMaterials.ts:58
 msgctxt "db.commonMaterials.db3ec4"
 msgid "Chaos Part"
-msgstr ""
+msgstr "Chaos Deel"
 
 #: db/commonMaterials.ts:24
 msgctxt "db.commonMaterials.e1a50a"
 msgid "Damaged Mask"
-msgstr ""
+msgstr "Beschadigd Masker"
 
 #: db/commonMaterials.ts:115
 msgctxt "db.commonMaterials.e513cc"
 msgid "Cecilia"
-msgstr ""
+msgstr "Cecilia"
 
 #: db/commonMaterials.ts:157
 msgctxt "db.commonMaterials.e78aed"
 msgid "Philanemo Mushroom"
-msgstr ""
+msgstr "Philanemo Paddestoel"
 
 #: db/commonMaterials.ts:136
 msgctxt "db.commonMaterials.ee85bc"
 msgid "Glaze Lily"
-msgstr ""
+msgstr "Glazuur Lelie"
 
 #: db/commonMaterials.ts:30
 msgctxt "db.commonMaterials.f31a91"
 msgid "Hilichurl Arrowhead"
-msgstr ""
+msgstr "Hilichurl Pijlpunt"
 
 #: db/commonMaterials.ts:72
 msgctxt "db.commonMaterials.f55bde"
 msgid "Fatui Knife"
-msgstr ""
+msgstr "Fatui Mes"
 
 #: db/commonMaterials.ts:206
 msgctxt "db.commonMaterials.fb66ad"
 msgid "Windwheel Aster"
-msgstr ""
+msgstr "Windwiel Aster"
 
 #: db/commonMaterials.ts:80
 msgctxt "db.commonMaterials.fd54ff"
 msgid "Recruit's Insignia"
-msgstr ""
+msgstr "Rekruut's Insigne"
 
 #: db/commonMaterials.ts:227
 msgctxt "db.commonMaterials.fd9d15"
 msgid "Old Handguard"
-msgstr ""
+msgstr "Oude Handbeschermer"
 
 #: db/commonMaterials.ts:122
 msgctxt "db.commonMaterials.fe06d4"
 msgid "Cor Lapis"
-msgstr ""
+msgstr "Cor Lapis"
 
 #: db/domainCategories.ts:77
 msgctxt "db.domainCategories.08e597"
 msgid "Forgery"
-msgstr ""
+msgstr "Namaak"
 
 #: db/domainCategories.ts:107
 msgctxt "db.domainCategories.09a1d0"
 msgid "Boss"
-msgstr ""
+msgstr "Eindbaas"
 
 #: db/domainCategories.ts:108
 msgctxt "db.domainCategories.4b2b5d"
 msgid "Character Ascension Materials and Artifacts"
-msgstr ""
+msgstr "Personage Ascensiemateriaal en Artefacten"
 
 #: db/domainCategories.ts:69
 msgctxt "db.domainCategories.6a94a1"
 msgid "Talent Level-Up Materials"
-msgstr ""
+msgstr "Talent Level-up Materialen"
 
 #: db/domainCategories.ts:87
 msgctxt "db.domainCategories.796e5e"
 msgid "Artifacts"
-msgstr ""
+msgstr "Artefacten"
 
 #: db/domainCategories.ts:49
 msgctxt "db.domainCategories.999229"
 msgid "Domain Category"
-msgstr ""
+msgstr "Domein Categorie"
 
 #: db/domainCategories.ts:86
 msgctxt "db.domainCategories.a02f64"
 msgid "Blessing"
-msgstr ""
+msgstr "Zegening"
 
 #: db/domainCategories.ts:78
 msgctxt "db.domainCategories.a4758a"
 msgid "Weapon Ascension Materials"
-msgstr ""
+msgstr "Wapen Ascensiematerialen"
 
 #: db/domainCategories.ts:53
 msgctxt "db.domainCategories.a6ee01"
 msgid "Trounce"
-msgstr ""
+msgstr "Afrossen"
 
 #: db/domainCategories.ts:68
 msgctxt "db.domainCategories.aeab32"
 msgid "Mastery"
-msgstr ""
+msgstr "Meesterschap"
 
 #: db/domainCategories.ts:54
 msgctxt "db.domainCategories.f98247"
 msgid "Weekly Challenge"
-msgstr ""
+msgstr "Wekelijkse Uitdaging"
 
 #: db/domainDropSets.ts:381
 msgctxt "db.domainDropSets.3153a6"
 msgid "Altar of Sands"
-msgstr ""
+msgstr "Altaar van Zanden"
 
 #: db/domainDropSets.ts:374
 msgctxt "db.domainDropSets.350bc4"
 msgid "Sunken Sands"
-msgstr ""
+msgstr "Gezonken Zanden"
 
 #: db/domainDropSets.ts:121
 msgctxt "db.domainDropSets.4284f2"
 msgid "Domain Drop Set"
-msgstr ""
+msgstr "Domein Drop Set"
 
 #: db/domainDropSets.ts:166
 msgctxt "db.domainDropSets.5a8238"
 msgid "Trial Grounds of Thunder"
-msgstr ""
+msgstr "Proefgronden van Bliksem"
 
 #: db/domainDropSets.ts:152
 msgctxt "db.domainDropSets.6db45f"
 msgid "Thundercloud"
-msgstr ""
+msgstr "Onweerswolk"
 
 #: db/domainDropSets.ts:125
 msgctxt "db.domainDropSets.727bc7"
 msgid "City of Reflections"
-msgstr ""
+msgstr "Stad van Weerspiegelingen"
 
 #: db/domainDropSets.ts:132
 msgctxt "db.domainDropSets.b61667"
 msgid "Submerged Valley"
-msgstr ""
+msgstr "Onderstroomde Vallei"
 
 #: db/domainDropSets.ts:388
 msgctxt "db.domainDropSets.c47ef9"
 msgid "Sand Burial"
-msgstr ""
+msgstr "Zandbegrafenis"
 
 #: db/domainDropSets.ts:139
 msgctxt "db.domainDropSets.dfec8a"
 msgid "Ruins of Thirsting Capital"
-msgstr ""
+msgstr "Ruïnes van Dorstig Kapitaal"
 
 #: db/domainDropSets.ts:173
 msgctxt "db.domainDropSets.f12070"
 msgid "Electrostatic Field"
-msgstr ""
+msgstr "Elektrostatisch Veld"
 
 #: db/domainDropSets.ts:159
 msgctxt "db.domainDropSets.ffe184"
 msgid "Thundering Ruins"
-msgstr ""
+msgstr "Donderende Ruïnes"
 
 #: db/domains.ts:76
 msgctxt "db.domains.011253"
 msgid "Hidden Palace of Lianshan Formula"
-msgstr ""
+msgstr "Verborgen Paleis van Lianshan Formule"
 
 #: db/domains.ts:118
 msgctxt "db.domains.0cfa31"
 msgid "Forsaken Rift"
-msgstr ""
+msgstr "Verlaten Kloof"
 
 #: db/domains.ts:230
 msgctxt "db.domains.1a6b1b"
 msgid "Primo Geovishap"
-msgstr ""
+msgstr "Primo Geovishap"
 
 #: db/domains.ts:174
 msgctxt "db.domains.1c6c7d"
 msgid "Ridge Watch"
-msgstr ""
+msgstr "Ridge Wacht"
 
 #: db/domains.ts:202
 msgctxt "db.domains.20c902"
 msgid "Anemo Hypostasis"
-msgstr ""
+msgstr "Anemo Hypostase"
 
 #: db/domains.ts:83
 msgctxt "db.domains.24e0e0"
 msgid "Midsummer Courtyard"
-msgstr ""
+msgstr "Midzomer Binnenplaats"
 
 #: db/domains.ts:125
 msgctxt "db.domains.2bbe8b"
 msgid "Taishan Mansion"
-msgstr ""
+msgstr "Taishan Vila"
 
 #: db/domains.ts:258
 msgctxt "db.domains.2d6984"
 msgid "Pyro Regisvine"
-msgstr ""
+msgstr "Pyro Regisvine"
 
 #: db/domains.ts:167
 msgctxt "db.domains.2e59fb"
 msgid "Narukami Island: Tenshukaku"
-msgstr ""
+msgstr "Narukami Eiland: Tenshukaku"
 
 #: db/domains.ts:286
 msgctxt "db.domains.31c6bb"
 msgid "Hydro Hypostasis"
-msgstr ""
+msgstr "Hydro Hypostase"
 
 #: db/domains.ts:216
 msgctxt "db.domains.5749e3"
 msgid "Cryo Regisvine"
-msgstr ""
+msgstr "Cryo Regisvine"
 
 #: db/domains.ts:104
 msgctxt "db.domains.5d9d5d"
 msgid "Hidden Palace of Zhou Formula"
-msgstr ""
+msgstr "Verborgen Paleis van Zhou Formule"
 
 #: db/domains.ts:293
 msgctxt "db.domains.68fb19"
 msgid "Golden Wolflord"
-msgstr ""
+msgstr "Gouden Wolfsheer"
 
 #: db/domains.ts:195
 msgctxt "db.domains.6ea1ac"
 msgid "Court of Flowing Sand"
-msgstr ""
+msgstr "Hof van Stromend Zand"
 
 #: db/domains.ts:181
 msgctxt "db.domains.6f9aa8"
 msgid "Momiji-Dyed Court"
-msgstr ""
+msgstr "Momiji-Geverfd Hof"
 
 #: db/domains.ts:139
 msgctxt "db.domains.70d1b9"
 msgid "Wolf of the North Challenge"
-msgstr ""
+msgstr "Wolf van het Noorden Uitdaging"
 
 #: db/domains.ts:188
 msgctxt "db.domains.76827f"
 msgid "Violet Court"
-msgstr ""
+msgstr "Violet Hof"
 
 #: db/domains.ts:237
 msgctxt "db.domains.7bb25e"
 msgid "Electro Hypostasis"
-msgstr ""
+msgstr "Electro Hypostase"
 
 #: db/domains.ts:97
 msgctxt "db.domains.85e44a"
 msgid "Valley of Remembrance"
-msgstr ""
+msgstr "Vallei der Herinnering"
 
 #: db/domains.ts:153
 msgctxt "db.domains.8e6257"
 msgid "Enter the Golden House"
-msgstr ""
+msgstr "Betreed het Gouden Huis"
 
 #: db/domains.ts:65
 msgctxt "db.domains.a00160"
 msgid "Domain"
-msgstr ""
+msgstr "Domein"
 
 #: db/domains.ts:223
 msgctxt "db.domains.a0d4e3"
 msgid "Cryo Hypostasis"
-msgstr ""
+msgstr "Cryo Hypostase"
 
 #: db/domains.ts:279
 msgctxt "db.domains.a55538"
 msgid "Thunder Manifestation"
-msgstr ""
+msgstr "Bliksem Manifestatie"
 
 #: db/domains.ts:265
 msgctxt "db.domains.bd9e6f"
 msgid "Pyro Hypostasis"
-msgstr ""
+msgstr "Pyro Hypostase"
 
 #: db/domains.ts:146
 msgctxt "db.domains.c4c6cc"
 msgid "Peak of Vindagnyr"
-msgstr ""
+msgstr "Piek van Vindagnyr"
 
 #: db/domains.ts:251
 msgctxt "db.domains.d4a950"
 msgid "Rhodeia of Loch"
-msgstr ""
+msgstr "Rhodeia van Loch"
 
 #: db/domains.ts:160
 msgctxt "db.domains.dbf3b5"
 msgid "Beneath the Dragon-Queller"
-msgstr ""
+msgstr "Onder de Dragon-Queller"
 
 #: db/domains.ts:300
 msgctxt "db.domains.e0808d"
 msgid "Slumbering Court"
-msgstr ""
+msgstr "Sluimerend Hof"
 
 #: db/domains.ts:209
 msgctxt "db.domains.e09906"
 msgid "Maguu Kenki"
-msgstr ""
+msgstr "Maguu Kenki"
 
 #: db/domains.ts:244
 msgctxt "db.domains.e2e8f5"
 msgid "Geo Hypostasis"
-msgstr ""
+msgstr "Geo Hypostase"
 
 #: db/domains.ts:272
 msgctxt "db.domains.f07d15"
 msgid "Perpetual Mechanical Array"
-msgstr ""
+msgstr "Eeuwigdurende Mechanische Array"
 
 #: db/domains.ts:132
 msgctxt "db.domains.f93fee"
 msgid "Confront Stormterror"
-msgstr ""
+msgstr "Confronteer Stormterreur"
 
 #: db/domains.ts:90
 msgctxt "db.domains.fc295a"
 msgid "Domain of Guyun"
-msgstr ""
+msgstr "Domein van Guyun"
 
 #: db/domains.ts:111
 msgctxt "db.domains.fc83f4"
 msgid "Clear Pool and Mountain Cavern"
-msgstr ""
+msgstr "Helder Poel en Berggrot"
 
 #: db/domains.ts:69
 msgctxt "db.domains.fe4688"
 msgid "Cecilia Garden"
-msgstr ""
+msgstr "Cecilia Tuin"
 
 #: db/icons.ts:209
 msgctxt "db.icons.0026fa"
 msgid "Guidance of the Land"
-msgstr ""
+msgstr "Geleiding van het Land"
 
 #: db/icons.ts:148
 msgctxt "db.icons.013c82"
 msgid "Red Dye"
-msgstr ""
+msgstr "Rode Kleurstof"
 
 #: db/icons.ts:68
 msgctxt "db.icons.02b6af"
 msgid "Dead Ley Line Branch"
-msgstr ""
+msgstr "Dode Leylijn-tak"
 
 #: db/icons.ts:141
 msgctxt "db.icons.03bcc1"
 msgid "Tomato"
-msgstr ""
+msgstr "Tomaat"
 
 #: db/icons.ts:181
 msgctxt "db.icons.07244e"
 msgid "Other Shops"
-msgstr ""
+msgstr "Andere Winkels"
 
 #: db/icons.ts:195
 msgctxt "db.icons.087659"
 msgid "Genesis Crystal"
-msgstr ""
+msgstr "Genesis Kristal"
 
 #: db/icons.ts:161
 msgctxt "db.icons.0b2b2d"
 msgid "Crystal Core"
-msgstr ""
+msgstr "Kristalkern"
 
 #: db/icons.ts:95
 msgctxt "db.icons.0dc52d"
 msgid "Bamboo"
-msgstr ""
+msgstr "Bamboe"
 
 #: db/icons.ts:36
 msgctxt "db.icons.0e7ca0"
 msgid "Starsilver"
-msgstr ""
+msgstr "Sterrenzilver"
 
 #: db/icons.ts:164
 msgctxt "db.icons.0e95d3"
 msgid "Lizard Tail"
-msgstr ""
+msgstr "Hagedis Staart"
 
 #: db/icons.ts:128
 msgctxt "db.icons.0f0eeb"
 msgid "Matsutake"
-msgstr ""
+msgstr "Matsutake"
 
 #: db/icons.ts:52
 msgctxt "db.icons.10fe45"
 msgid "Character ascension material"
-msgstr ""
+msgstr "Personage ascensiemateriaal"
 
 #: db/icons.ts:48
 msgctxt "db.icons.13fe0a"
 msgid "Fine Enhancement Ore"
-msgstr ""
+msgstr "Fijn Verbeterings Erts"
 
 #: db/icons.ts:29
 msgctxt "db.icons.15e7d8"
 msgid "Iron Chunk"
-msgstr ""
+msgstr "Ijzeren Brok"
 
 #: db/icons.ts:98
 msgctxt "db.icons.16740f"
 msgid "Jueyun Chili"
-msgstr ""
+msgstr "Jueyun Chili"
 
 #: db/icons.ts:191
 msgctxt "db.icons.16b73a"
 msgid "Resin"
-msgstr ""
+msgstr "Resin"
 
 #: db/icons.ts:89
 msgctxt "db.icons.19c45b"
 msgid "Valberry"
-msgstr ""
+msgstr "Valberry"
 
 #: db/icons.ts:167
 msgctxt "db.icons.1a2bb9"
 msgid "Mist Flower Corolla"
-msgstr ""
+msgstr "Mist Bloem Corolla"
 
 #: db/icons.ts:134
 msgctxt "db.icons.1e3dc1"
 msgid "Radish"
-msgstr ""
+msgstr "Radijs"
 
 #: db/icons.ts:106
 msgctxt "db.icons.21acbf"
 msgid "Crystal Marrow"
-msgstr ""
+msgstr "Kristal Merg"
 
 #: db/icons.ts:22
 msgctxt "db.icons.22457b"
 msgid "Portable Waypoint"
-msgstr ""
+msgstr "Draagbaar Waypoint"
 
 #: db/icons.ts:28
 msgctxt "db.icons.23dfdf"
 msgid "Ore"
-msgstr ""
+msgstr "Erts"
 
 #: db/icons.ts:147
 msgctxt "db.icons.2456aa"
 msgid "Blue Dye"
-msgstr ""
+msgstr "Blauwe Kleurstof"
 
 #: db/icons.ts:99
 msgctxt "db.icons.248863"
 msgid "Qingxin"
-msgstr ""
+msgstr "Qingxin"
 
 #: db/icons.ts:218
 msgctxt "db.icons.2532a7"
 msgid "Yellow Circle"
-msgstr ""
+msgstr "Gele Cirkel"
 
 #: db/icons.ts:54
 msgctxt "db.icons.263550"
 msgid "Brilliant Diamond Silver"
-msgstr ""
+msgstr "Briljant Diamant Zilver"
 
 #: db/icons.ts:137
 msgctxt "db.icons.29514d"
 msgid "Shrimp Meat"
-msgstr ""
+msgstr "Garnalen Vlees"
 
 #: db/icons.ts:112
 msgctxt "db.icons.2a674f"
 msgid "Amakumo Fruit"
-msgstr ""
+msgstr "Amakumo Fruit"
 
 #: db/icons.ts:113
 msgctxt "db.icons.2b3cd3"
 msgid "Sango Pearl"
-msgstr ""
+msgstr "Sango Parel"
 
 #: db/icons.ts:204
 msgctxt "db.icons.2d0e3a"
 msgid "Companionship Experience"
-msgstr ""
+msgstr "Gezelschap XP"
 
 #: db/icons.ts:145
 msgctxt "db.icons.2ecbee"
 msgid "Furnishing"
-msgstr ""
+msgstr "Meubilair"
 
 #: db/icons.ts:211
 msgctxt "db.icons.33c8b8"
 msgid "Battle Pass Bundle"
-msgstr ""
+msgstr "Battle Pass Bundel"
 
 #: db/icons.ts:133
 msgctxt "db.icons.38f5ee"
 msgid "Potato"
-msgstr ""
+msgstr "Aardappel"
 
 #: db/icons.ts:119
 msgctxt "db.icons.393374"
 msgid "Apple"
-msgstr ""
+msgstr "Appel"
 
 #: db/icons.ts:46
 msgctxt "db.icons.3a604c"
 msgid "Weapon enhancement material"
-msgstr ""
+msgstr "Wapen verbeterings materiaal"
 
 #: db/icons.ts:129
 msgctxt "db.icons.3b03be"
 msgid "Mint"
-msgstr ""
+msgstr "Munt"
 
 #: db/icons.ts:142
 msgctxt "db.icons.3e81e3"
 msgid "Wheat"
-msgstr ""
+msgstr "Tarwe"
 
 #: db/icons.ts:172
 msgctxt "db.icons.3e9210"
 msgid "Artifact"
-msgstr ""
+msgstr "Artefact"
 
 #: db/icons.ts:67
 msgctxt "db.icons.3ef728"
 msgid "Heavy Horn"
-msgstr ""
+msgstr "Zware Hoorn"
 
 #: db/icons.ts:126
 msgctxt "db.icons.40be2a"
 msgid "Fowl"
-msgstr ""
+msgstr "Kip"
 
 #: db/icons.ts:177
 msgctxt "db.icons.4129ff"
 msgid "General Goods"
-msgstr ""
+msgstr "Algemene Goederen"
 
 #: db/icons.ts:125
 msgctxt "db.icons.41cfca"
 msgid "Fish"
-msgstr ""
+msgstr "Vis"
 
 #: db/icons.ts:31
 msgctxt "db.icons.41d4a2"
 msgid "Crystal Chunk"
-msgstr ""
+msgstr "Kristal Brok"
 
 #: db/icons.ts:176
 msgctxt "db.icons.41f111"
 msgid "NPC"
-msgstr ""
+msgstr "NPC"
 
 #: db/icons.ts:66
 msgctxt "db.icons.42027c"
 msgid "Divining Scroll"
-msgstr ""
+msgstr "Toverrol"
 
 #: db/icons.ts:53
 msgctxt "db.icons.442b7d"
 msgid "Agnidus Agate Silver"
-msgstr ""
+msgstr "Agnidus Agaat Zilver"
 
 #: db/icons.ts:160
 msgctxt "db.icons.4a3007"
 msgid "Butterfly Wings"
-msgstr ""
+msgstr "Vlindervleugels"
 
 #: db/icons.ts:154
 msgctxt "db.icons.4ae142"
 msgid "Fir Wood"
-msgstr ""
+msgstr "Vurenhout"
 
 #: db/icons.ts:192
 msgctxt "db.icons.4c9716"
 msgid "Condensed Resin"
-msgstr ""
+msgstr "Gecondenseerde Resin"
 
 #: db/icons.ts:205
 msgctxt "db.icons.4d4e7c"
 msgid "Battle Pass Experience"
-msgstr ""
+msgstr "Battle Pass XP"
 
 #: db/icons.ts:40
 msgctxt "db.icons.4dbe55"
 msgid "Character EXP material"
-msgstr ""
+msgstr "Personage XP materiaal"
 
 #: db/icons.ts:166
 msgctxt "db.icons.525124"
 msgid "Luminescent Spine"
-msgstr ""
+msgstr "Lichtgevende Ruggengraat"
 
 #: db/icons.ts:132
 msgctxt "db.icons.53f73c"
 msgid "Pinecone"
-msgstr ""
+msgstr "Dennenappel"
 
 #: db/icons.ts:57
 msgctxt "db.icons.544601"
 msgid "Vajrada Amethyst Silver"
-msgstr ""
+msgstr "Vajrada Amethist Zilver"
 
 #: db/icons.ts:65
 msgctxt "db.icons.574218"
 msgid "Firm Arrowhead"
-msgstr ""
+msgstr "Stevige Pijlpunt"
 
 #: db/icons.ts:199
 msgctxt "db.icons.57fb2f"
 msgid "Masterless Stardust"
-msgstr ""
+msgstr "Meesterloze Sterrenstof"
 
 #: db/icons.ts:186
 msgctxt "db.icons.58f564"
 msgid "Geo Sigil"
-msgstr ""
+msgstr "Geo-Sigil"
 
 #: db/icons.ts:94
 msgctxt "db.icons.5bdc86"
 msgid "Local specialty of Liyue"
-msgstr ""
+msgstr "Lokale specialiteit van Liyue"
 
 #: db/icons.ts:108
 msgctxt "db.icons.60776e"
 msgid "Naku Weed"
-msgstr ""
+msgstr "Naku Onkruid"
 
 #: db/icons.ts:109
 msgctxt "db.icons.6154c2"
 msgid "Onikabuto"
-msgstr ""
+msgstr "Onikabuto"
 
 #: db/icons.ts:55
 msgctxt "db.icons.61a03d"
 msgid "Prithiva Topaz Silver"
-msgstr ""
+msgstr "Prithiva Topaas Zilver"
 
 #: db/icons.ts:107
 msgctxt "db.icons.6204f3"
 msgid "Dendrobium"
-msgstr ""
+msgstr "Dendrobium"
 
 #: db/icons.ts:117
 msgctxt "db.icons.6232ee"
 msgid "Cooking ingredient"
-msgstr ""
+msgstr "Kook ingrediënt"
 
 #: db/icons.ts:75
 msgctxt "db.icons.6405d0"
 msgid "Whopperflower Nectar"
-msgstr ""
+msgstr "Whopperflower Nectar"
 
 #: db/icons.ts:97
 msgctxt "db.icons.6453b7"
 msgid "Horsetail"
-msgstr ""
+msgstr "Paardenstaart"
 
 #: db/icons.ts:184
 msgctxt "db.icons.66d12a"
 msgid "Sigil"
-msgstr ""
+msgstr "Sigil"
 
 #: db/icons.ts:156
 msgctxt "db.icons.698018"
 msgid "Sandbearer Wood"
-msgstr ""
+msgstr "Zanddrager Hout"
 
 #: db/icons.ts:86
 msgctxt "db.icons.6f7fb1"
 msgid "Dandelion Seed"
-msgstr ""
+msgstr "Paardenbloem Zaad"
 
 #: db/icons.ts:105
 msgctxt "db.icons.740397"
 msgid "Local Specialty of Inazuma"
-msgstr ""
+msgstr "Lokale specialiteit van Inazuma"
 
 #: db/icons.ts:30
 msgctxt "db.icons.7486de"
 msgid "White Iron Chunk"
-msgstr ""
+msgstr "Wit IJzeren Brok"
 
 #: db/icons.ts:41
 msgctxt "db.icons.74bf77"
 msgid "Wanderer's Advice"
-msgstr ""
+msgstr "Dwalers Advies"
 
 #: db/icons.ts:121
 msgctxt "db.icons.767429"
 msgid "Bird Egg"
-msgstr ""
+msgstr "Vogelei"
 
 #: db/icons.ts:114
 msgctxt "db.icons.76d056"
 msgid "Fluorescent Fungus"
-msgstr ""
+msgstr "Fluorescerende Schimmel"
 
 #: db/icons.ts:56
 msgctxt "db.icons.7bbaf1"
 msgid "Shivada Jade Silver"
-msgstr ""
+msgstr "Shivada Jade Zilver"
 
 #: db/icons.ts:197
 msgctxt "db.icons.7c09ca"
 msgid "Acquaint Fate"
-msgstr ""
+msgstr "Acquaint Fate"
 
 #: db/icons.ts:159
 msgctxt "db.icons.7cc8a0"
 msgid "Material"
-msgstr ""
+msgstr "Materiaal"
 
 #: db/icons.ts:69
 msgctxt "db.icons.7ccd68"
 msgid "Chaos Device"
-msgstr ""
+msgstr "Chaos Apparaat"
 
 #: db/icons.ts:88
 msgctxt "db.icons.7ce6fd"
 msgid "Small Lamp Grass"
-msgstr ""
+msgstr "Kleine Lamp Gras"
 
 #: db/icons.ts:43
 msgctxt "db.icons.7ef6f5"
 msgid "Hero's Wit"
-msgstr ""
+msgstr "Heldenverstand"
 
 #: db/icons.ts:130
 msgctxt "db.icons.7fa082"
 msgid "Mushroom"
-msgstr ""
+msgstr "Paddenstoel"
 
 #: db/icons.ts:136
 msgctxt "db.icons.7fd8e5"
 msgid "Chilled Meat"
-msgstr ""
+msgstr "Gekoeld Vlees"
 
 #: db/icons.ts:63
 msgctxt "db.icons.866176"
 msgid "Slime Condensate"
-msgstr ""
+msgstr "Slijm Condensaat"
 
 #: db/icons.ts:79
 msgctxt "db.icons.88dd49"
 msgid "Spectral Husk"
-msgstr ""
+msgstr "Spectrale Husk"
 
 #: db/icons.ts:224
 msgctxt "db.icons.89d95a"
 msgid "Pink Circle"
-msgstr ""
+msgstr "Roze Cirkel"
 
 #: db/icons.ts:25
 msgctxt "db.icons.8c9a21"
 msgid "Serenitea Pot"
-msgstr ""
+msgstr "Serenitea Pot"
 
 #: db/icons.ts:84
 msgctxt "db.icons.8d1274"
 msgid "Calla Lily"
-msgstr ""
+msgstr "Calla Lelie"
 
 #: db/icons.ts:120
 msgctxt "db.icons.8d722e"
 msgid "Berry"
-msgstr ""
+msgstr "Bes"
 
 #: db/icons.ts:223
 msgctxt "db.icons.901e12"
 msgid "Purple Circle"
-msgstr ""
+msgstr "Paarse Cirkel"
 
 #: db/icons.ts:131
 msgctxt "db.icons.90c287"
 msgid "Onion"
-msgstr ""
+msgstr "Ui"
 
 #: db/icons.ts:110
 msgctxt "db.icons.929cdd"
 msgid "Sakura Bloom"
-msgstr ""
+msgstr "Sakura Bloei"
 
 #: db/icons.ts:80
 msgctxt "db.icons.93c0a9"
 msgid "Concealed Claw"
-msgstr ""
+msgstr "Verborgen Klauw"
 
 #: db/icons.ts:24
 msgctxt "db.icons.9410ec"
 msgid "Parametric Transformer"
-msgstr ""
+msgstr "Parametrische Transformator"
 
 #: db/icons.ts:101
 msgctxt "db.icons.9653ee"
 msgid "Starconch"
-msgstr ""
+msgstr "Sterschelp"
 
 #: db/icons.ts:78
 msgctxt "db.icons.9d4696"
 msgid "Dismal Prism"
-msgstr ""
+msgstr "Akelig Prisma"
 
 #: db/icons.ts:179
 msgctxt "db.icons.9edf8f"
 msgid "Blacksmith"
-msgstr ""
+msgstr "Smid"
 
 #: db/icons.ts:155
 msgctxt "db.icons.9ef200"
 msgid "Pine Wood"
-msgstr ""
+msgstr "Dennenhout"
 
 #: db/icons.ts:83
 msgctxt "db.icons.a01a12"
 msgid "Local specialty of Mondstadt"
-msgstr ""
+msgstr "Lokale specialiteit van Mondstadt"
 
 #: db/icons.ts:153
 msgctxt "db.icons.a5adc2"
 msgid "Cuihua Wood"
-msgstr ""
+msgstr "Cuihua Hout"
 
 #: db/icons.ts:33
 msgctxt "db.icons.a5b195"
 msgid "Electro Crystal"
-msgstr ""
+msgstr "Electro Kristal"
 
 #: db/icons.ts:47
 msgctxt "db.icons.a5dfca"
 msgid "Enhancement Ore"
-msgstr ""
+msgstr "Verbetering Erts"
 
 #: db/icons.ts:77
 msgctxt "db.icons.a831e1"
 msgid "Chaos Gear"
-msgstr ""
+msgstr "Chaos Gereedschap"
 
 #: db/icons.ts:202
 msgctxt "db.icons.aa6277"
 msgid "Experience"
-msgstr ""
+msgstr "XP"
 
 #: db/icons.ts:180
 msgctxt "db.icons.abfa4a"
 msgid "Souvenir Shop"
-msgstr ""
+msgstr "Souvenirwinkel"
 
 #: db/icons.ts:102
 msgctxt "db.icons.ace079"
 msgid "Violetgrass"
-msgstr ""
+msgstr "Viooltjesgras"
 
 #: db/icons.ts:196
 msgctxt "db.icons.ae75da"
 msgid "Intertwined Fate"
-msgstr ""
+msgstr "Intertwined Fate"
 
 #: db/icons.ts:222
 msgctxt "db.icons.b11983"
 msgid "Cyan Circle"
-msgstr ""
+msgstr "Cyaan Cirkel"
 
 #: db/icons.ts:193
 msgctxt "db.icons.b324da"
 msgid "Transient Resin"
-msgstr ""
+msgstr "Voorbijgaande Resin"
 
 #: db/icons.ts:217
 msgctxt "db.icons.b35f1b"
 msgid "Orange Circle"
-msgstr ""
+msgstr "Oranje Cirkel"
 
 #: db/icons.ts:152
 msgctxt "db.icons.b38d81"
 msgid "Fragrant Cedar Wood"
-msgstr ""
+msgstr "Geurig Cederhout"
 
 #: db/icons.ts:42
 msgctxt "db.icons.b42c8b"
 msgid "Adventurer's Experience"
-msgstr ""
+msgstr "Avonturiers XP"
 
 #: db/icons.ts:37
 msgctxt "db.icons.b5d05a"
 msgid "Amethyst Lump"
-msgstr ""
+msgstr "Amethist Klomp"
 
 #: db/icons.ts:168
 msgctxt "db.icons.b9fa1d"
 msgid "Vitalized Dragontooth"
-msgstr ""
+msgstr "Geactiveerde Drakentand"
 
 #: db/icons.ts:100
 msgctxt "db.icons.bc0224"
 msgid "Silk Flower"
-msgstr ""
+msgstr "Zijden Bloem"
 
 #: db/icons.ts:214
 msgctxt "db.icons.bc7f2c"
 msgid "Circle"
-msgstr ""
+msgstr "Cirkel"
 
 #: db/icons.ts:216
 msgctxt "db.icons.bd5cf8"
 msgid "Red Circle"
-msgstr ""
+msgstr "Rode Cirkel"
 
 #: db/icons.ts:74
 msgctxt "db.icons.be8c87"
 msgid "Fragile Bone Shard"
-msgstr ""
+msgstr "Breekbare Botscherf"
 
 #: db/icons.ts:59
 msgctxt "db.icons.c0b022"
 msgid "Vayuda Turquoise Silver"
-msgstr ""
+msgstr "Vayuda Turkoois Zilver"
 
 #: db/icons.ts:215
 msgctxt "db.icons.c138a3"
 msgid "Gray Circle"
-msgstr ""
+msgstr "Grijze Cirkel"
 
 #: db/icons.ts:111
 msgctxt "db.icons.c15ca5"
 msgid "Sea Ganoderma"
-msgstr ""
+msgstr "Zee Ganoderma"
 
 #: db/icons.ts:135
 msgctxt "db.icons.c331fe"
 msgid "Raw Meat"
-msgstr ""
+msgstr "Rauw Vlees"
 
 #: db/icons.ts:73
 msgctxt "db.icons.c5a9ac"
 msgid "Treasure Hoarder Insignia"
-msgstr ""
+msgstr "Treasure Hoarder Insigne"
 
 #: db/icons.ts:71
 msgctxt "db.icons.c6cff7"
 msgid "Hunter's Sacrificial Knife"
-msgstr ""
+msgstr "Jager's Offer Mes"
 
 #: db/icons.ts:127
 msgctxt "db.icons.c7c1c1"
 msgid "Lotus Head"
-msgstr ""
+msgstr "Lotus Kop"
 
 #: db/icons.ts:165
 msgctxt "db.icons.ca10ad"
 msgid "Loach Pearl"
-msgstr ""
+msgstr "Voorn Parel"
 
 #: db/icons.ts:219
 msgctxt "db.icons.caa480"
 msgid "Green Circle"
-msgstr ""
+msgstr "Groene Cirkel"
 
 #: db/icons.ts:49
 msgctxt "db.icons.cc7a59"
 msgid "Mystic Enhancement Ore"
-msgstr ""
+msgstr "Mystieke Verbetering Erts"
 
 #: db/icons.ts:123
 msgctxt "db.icons.ccba58"
 msgid "Carrot"
-msgstr ""
+msgstr "Wortel"
 
 #: db/icons.ts:149
 msgctxt "db.icons.cd14cb"
 msgid "Fabric"
-msgstr ""
+msgstr "Stof"
 
 #: db/icons.ts:70
 msgctxt "db.icons.cd7e10"
 msgid "Mist Grass Pollen"
-msgstr ""
+msgstr "Mist Gras Pollen"
 
 #: db/icons.ts:91
 msgctxt "db.icons.ce7fa6"
 msgid "Wolfhook"
-msgstr ""
+msgstr "Wolfshaak"
 
 #: db/icons.ts:190
 msgctxt "db.icons.cf9bf2"
 msgid "Mora"
-msgstr ""
+msgstr "Mora"
 
 #: db/icons.ts:198
 msgctxt "db.icons.d53c75"
 msgid "Masterless Starglitter"
-msgstr ""
+msgstr "Meesterloze Sterrenglitter"
 
 #: db/icons.ts:62
 msgctxt "db.icons.d8468e"
 msgid "Common ascension material"
-msgstr ""
+msgstr "Gewoon ascensie materiaal"
 
 #: db/icons.ts:35
 msgctxt "db.icons.d8877a"
 msgid "Noctilucous Jade"
-msgstr ""
+msgstr "Nachtelijke Jade"
 
 #: db/icons.ts:21
 msgctxt "db.icons.ddc40f"
 msgid "Gadget"
-msgstr ""
+msgstr "Gadget"
 
 #: db/icons.ts:139
 msgctxt "db.icons.dee07a"
 msgid "Sunsettia"
-msgstr ""
+msgstr "Sunsettia"
 
 #: db/icons.ts:23
 msgctxt "db.icons.e0e475"
 msgid "Adepti Seeker's Stove"
-msgstr ""
+msgstr "Adepti Zoekers Haard"
 
 #: db/icons.ts:64
 msgctxt "db.icons.e1a50a"
 msgid "Damaged Mask"
-msgstr ""
+msgstr "Beschadigd Masker"
 
 #: db/icons.ts:118
 msgctxt "db.icons.e1c624"
 msgid "Almond"
-msgstr ""
+msgstr "Amandel"
 
 #: db/icons.ts:85
 msgctxt "db.icons.e513cc"
 msgid "Cecilia"
-msgstr ""
+msgstr "Cecilia"
 
 #: db/icons.ts:210
 msgctxt "db.icons.e770a4"
 msgid "Philosophies of the Land"
-msgstr ""
+msgstr "Filosofieën van het Land"
 
 #: db/icons.ts:87
 msgctxt "db.icons.e78aed"
 msgid "Philanemo Mushroom"
-msgstr ""
+msgstr "Philanemo Paddestoel"
 
 #: db/icons.ts:189
 msgctxt "db.icons.e7985d"
 msgid "Currency"
-msgstr ""
+msgstr "Valuta"
 
 #: db/icons.ts:194
 msgctxt "db.icons.e91a4f"
 msgid "Primogem"
-msgstr ""
+msgstr "Primogem"
 
 #: db/icons.ts:220
 msgctxt "db.icons.eabb1d"
 msgid "Teal Circle"
-msgstr ""
+msgstr "Wintergroene Cirkel"
 
 #: db/icons.ts:96
 msgctxt "db.icons.ee85bc"
 msgid "Glaze Lily"
-msgstr ""
+msgstr "Glazuur Lelie"
 
 #: db/icons.ts:208
 msgctxt "db.icons.effb8d"
 msgid "Bundle"
-msgstr ""
+msgstr "Bundel"
 
 #: db/icons.ts:163
 msgctxt "db.icons.f01710"
 msgid "Frog"
-msgstr ""
+msgstr "Kikker"
 
 #: db/icons.ts:185
 msgctxt "db.icons.f03b85"
 msgid "Anemo Sigil"
-msgstr ""
+msgstr "Anemo Sigil"
 
 #: db/icons.ts:221
 msgctxt "db.icons.f0480a"
 msgid "Blue Circle"
-msgstr ""
+msgstr "Blauwe Cirkel"
 
 #: db/icons.ts:146
 msgctxt "db.icons.f089f5"
 msgid "Yellow Dye"
-msgstr ""
+msgstr "Gele Kleurstof"
 
 #: db/icons.ts:162
 msgctxt "db.icons.f0996a"
 msgid "Flaming Flower Stamen"
-msgstr ""
+msgstr "Vlammende Bloem Meeldraden"
 
 #: db/icons.ts:58
 msgctxt "db.icons.f20cfa"
 msgid "Varunada Lazurite Silver"
-msgstr ""
+msgstr "Varunada Lazuriet Zilver"
 
 #: db/icons.ts:178
 msgctxt "db.icons.f28595"
 msgid "Restaurant"
-msgstr ""
+msgstr "Restaurant"
 
 #: db/icons.ts:32
 msgctxt "db.icons.f462d2"
 msgid "Magical Crystal Chunk"
-msgstr ""
+msgstr "Magische Kristal Brok"
 
 #: db/icons.ts:151
 msgctxt "db.icons.f493cf"
 msgid "Birch Wood"
-msgstr ""
+msgstr "Berkenhout"
 
 #: db/icons.ts:203
 msgctxt "db.icons.f4d3f2"
 msgid "Adventure Experience"
-msgstr ""
+msgstr "Avontuur XP"
 
 #: db/icons.ts:150
 msgctxt "db.icons.f4f3bd"
 msgid "Bamboo Segment"
-msgstr ""
+msgstr "Bamboe Segment"
 
 #: db/icons.ts:122
 msgctxt "db.icons.f5cea5"
 msgid "Cabbage"
-msgstr ""
+msgstr "Kool"
 
 #: db/icons.ts:138
 msgctxt "db.icons.f9a862"
 msgid "Snapdragon"
-msgstr ""
+msgstr "Snapdragon"
 
 #: db/icons.ts:140
 msgctxt "db.icons.fa7985"
 msgid "Sweet Flower"
-msgstr ""
+msgstr "Zoete Bloem"
 
 #: db/icons.ts:90
 msgctxt "db.icons.fb66ad"
 msgid "Windwheel Aster"
-msgstr ""
+msgstr "Windwiel Aster"
 
 #: db/icons.ts:72
 msgctxt "db.icons.fd54ff"
 msgid "Recruit's Insignia"
-msgstr ""
+msgstr "Rekruut's Insigne"
 
 #: db/icons.ts:76
 msgctxt "db.icons.fd9d15"
 msgid "Old Handguard"
-msgstr ""
+msgstr "Oude Handbeschermer"
 
 #: db/icons.ts:34
 msgctxt "db.icons.fe06d4"
 msgid "Cor Lapis"
-msgstr ""
+msgstr "Cor Lapis"
 
 #: db/icons.ts:124
 msgctxt "db.icons.fe8ed6"
 msgid "Crab"
-msgstr ""
+msgstr "Krab"
 
 #: db/map.ts:73
 msgctxt "db.map.03b6ce"
 msgid "Cider Lake"
-msgstr ""
+msgstr "Cidermeer"
 
 #: db/map.ts:13
 msgctxt "db.map.0427ba"
 msgid "Wolvendom"
-msgstr ""
+msgstr "Wolvendom"
 
 #: db/map.ts:61
 msgctxt "db.map.082833"
 msgid "Cape Oath"
-msgstr ""
+msgstr "Kaapse Eed"
 
 #: db/map.ts:173
 msgctxt "db.map.135688"
 msgid "Mt. Aocang"
-msgstr ""
+msgstr "Mt. Aocang"
 
 #: db/map.ts:197
 msgctxt "db.map.145456"
 msgid "Starglow Cavern"
-msgstr ""
+msgstr "Sterrenlicht Grot"
 
 #: db/map.ts:193
 msgctxt "db.map.15da53"
 msgid "Skyfrost Nail"
-msgstr ""
+msgstr "Hemelvorst Nagel"
 
 #: db/map.ts:37
 msgctxt "db.map.16620e"
 msgid "Starsnatch Cliff"
-msgstr ""
+msgstr "Sterrenkijker Klif"
 
 #: db/map.ts:89
 msgctxt "db.map.1b9ba5"
 msgid "Sal Terrae"
-msgstr ""
+msgstr "Sal Terrae"
 
 #: db/map.ts:177
 msgctxt "db.map.1f32ba"
 msgid "Snow-Covered Path"
-msgstr ""
+msgstr "Besneeuwd Pad"
 
 #: db/map.ts:121
 msgctxt "db.map.222770"
 msgid "Mt. Tianheng"
-msgstr ""
+msgstr "Mt. Tianheng"
 
 #: db/map.ts:153
 msgctxt "db.map.2674f8"
 msgid "Cuijue Slope"
-msgstr ""
+msgstr "Cuijue Helling"
 
 #: db/map.ts:157
 msgctxt "db.map.27ea30"
 msgid "Jueyun Karst"
-msgstr ""
+msgstr "Jueyun Karst"
 
 #: db/map.ts:185
 msgctxt "db.map.3af338"
 msgid "Entombed City - Outskirts"
-msgstr ""
+msgstr "Verborgen Stad - Buitenwijken"
 
 #: db/map.ts:21
 msgctxt "db.map.430ff6"
 msgid "Springvale"
-msgstr ""
+msgstr "Springvale"
 
 #: db/map.ts:5
 msgctxt "db.map.48d455"
 msgid "Stormterror's Lair"
-msgstr ""
+msgstr "Stormterreurs Schuilplaats"
 
 #: db/map.ts:97
 msgctxt "db.map.4a30b1"
 msgid "Wangshu Inn"
-msgstr ""
+msgstr "Wangshu Herberg"
 
 #: db/map.ts:117
 msgctxt "db.map.4b454f"
 msgid "Luhua Pool"
-msgstr ""
+msgstr "Luhua Poel"
 
 #: db/map.ts:133
 msgctxt "db.map.510a40"
 msgid "Lingju Pass"
-msgstr ""
+msgstr "Lingju Pass"
 
 #: db/map.ts:113
 msgctxt "db.map.540286"
 msgid "Guyun Stone Forest"
-msgstr ""
+msgstr "Guyun Stenen Bos"
 
 #: db/map.ts:145
 msgctxt "db.map.576457"
 msgid "Tianqiu Valley"
-msgstr ""
+msgstr "Tianqiu Vallei"
 
 #: db/map.ts:161
 msgctxt "db.map.587277"
 msgid "Qingyun Peak"
-msgstr ""
+msgstr "Qingyun Piek"
 
 #: db/map.ts:69
 msgctxt "db.map.5a37ea"
 msgid "Mondstadt"
-msgstr ""
+msgstr "Mondstadt"
 
 #: db/map.ts:33
 msgctxt "db.map.67056c"
 msgid "Thousand Winds Temple"
-msgstr ""
+msgstr "Duizend Winden Tempel"
 
 #: db/map.ts:141
 msgctxt "db.map.68f8de"
 msgid "Chasm"
-msgstr ""
+msgstr "Afgrond"
 
 #: db/map.ts:29
 msgctxt "db.map.6da2ab"
 msgid "Falcon Coast"
-msgstr ""
+msgstr "Valkenkust"
 
 #: db/map.ts:41
 msgctxt "db.map.6dcc87"
 msgid "Whispering Woods"
-msgstr ""
+msgstr "Fluisterend Bos"
 
 #: db/map.ts:101
 msgctxt "db.map.74fcf0"
 msgid "Mingyun Village"
-msgstr ""
+msgstr "Mingyun Dorp"
 
 #: db/map.ts:109
 msgctxt "db.map.7febf1"
 msgid "Guili Plains"
-msgstr ""
+msgstr "Guili Vlakten"
 
 #: db/map.ts:45
 msgctxt "db.map.8566ec"
 msgid "Starfell Lake"
-msgstr ""
+msgstr "Starfell Meer"
 
 #: db/map.ts:81
 msgctxt "db.map.8cfe9e"
 msgid "Qingce Village"
-msgstr ""
+msgstr "Qingce Dorp"
 
 #: db/map.ts:93
 msgctxt "db.map.8e2190"
 msgid "Dihua Marsh"
-msgstr ""
+msgstr "Dihua Moeras"
 
 #: db/map.ts:9
 msgctxt "db.map.9aa982"
 msgid "Brightcrown Canyon"
-msgstr ""
+msgstr "Brightcrown Canyon"
 
 #: db/map.ts:165
 msgctxt "db.map.a61d69"
 msgid "Huaguang Stone Forest"
-msgstr ""
+msgstr "Huaguang Stenen Bos"
 
 #: db/map.ts:125
 msgctxt "db.map.aaa08a"
 msgid "Liyue Harbor"
-msgstr ""
+msgstr "Liyue Haven"
 
 #: db/map.ts:105
 msgctxt "db.map.ab7b85"
 msgid "Yaoguang Shoal"
-msgstr ""
+msgstr "Yaoguang Shoal"
 
 #: db/map.ts:129
 msgctxt "db.map.ad2439"
 msgid "Dunyu Ruins"
-msgstr ""
+msgstr "Dunyu Ruïnes"
 
 #: db/map.ts:77
 msgctxt "db.map.afc0c3"
 msgid "Wuwang Hill"
-msgstr ""
+msgstr "Wuwang Heuvel"
 
 #: db/map.ts:189
 msgctxt "db.map.b724b2"
 msgid "Entombed City - Ancient Palace"
-msgstr ""
+msgstr "Verborgen Stad - Antiek Paleis"
 
 #: db/map.ts:57
 msgctxt "db.map.bf26ec"
 msgid "Dadaupa Gorge"
-msgstr ""
+msgstr "Dadaupa Kloof"
 
 #: db/map.ts:65
 msgctxt "db.map.c333f8"
 msgid "Musk Reef"
-msgstr ""
+msgstr "Muskusrif"
 
 #: db/map.ts:49
 msgctxt "db.map.c3ef8e"
 msgid "Stormbearer Mountains"
-msgstr ""
+msgstr "Stormbewaarder Bergen"
 
 #: db/map.ts:149
 msgctxt "db.map.c42db6"
 msgid "Nantianmen"
-msgstr ""
+msgstr "Nantianmen"
 
 #: db/map.ts:53
 msgctxt "db.map.cb3dbb"
 msgid "Stormbearer Point"
-msgstr ""
+msgstr "Stormbewaarder Punt"
 
 #: db/map.ts:169
 msgctxt "db.map.e8f2c9"
 msgid "Mt. Hulao"
-msgstr ""
+msgstr "Mt. Hulao"
 
 #: db/map.ts:25
 msgctxt "db.map.eabd3a"
 msgid "Windrise"
-msgstr ""
+msgstr "Windrise"
 
 #: db/map.ts:181
 msgctxt "db.map.ee39fa"
 msgid "Wyrmrest Valley"
-msgstr ""
+msgstr "Wyrmrest Vallei"
 
 #: db/map.ts:85
 msgctxt "db.map.f7d6f3"
 msgid "Stone Gate"
-msgstr ""
+msgstr "Stenen Poort"
 
 #: db/map.ts:17
 msgctxt "db.map.f978c6"
 msgid "Dawn Winery"
-msgstr ""
+msgstr "Dawn Wijnmakerij"
 
 #: db/map.ts:137
 msgctxt "db.map.fbe305"
 msgid "Qingxu Pool"
-msgstr ""
+msgstr "Qingxu Poel"
 
 #: db/regions.ts:171
 msgctxt "db.regions.06cea1"
 msgid "Inazuma"
-msgstr ""
+msgstr "Inazuma"
 
 #: db/regions.ts:191
 msgctxt "db.regions.38ab8d"
 msgid "Snezhnaya"
-msgstr ""
+msgstr "Snezhnaya"
 
 #: db/regions.ts:97
 msgctxt "db.regions.5a37ea"
 msgid "Mondstadt"
-msgstr ""
+msgstr "Mondstadt"
 
 #: db/regions.ts:135
 msgctxt "db.regions.691c58"
 msgid "Liyue"
-msgstr ""
+msgstr "Liyue"
 
 #: db/regions.ts:93
 msgctxt "db.regions.967696"
 msgid "Region"
-msgstr ""
+msgstr "Regio"
 
 #: db/talentMaterials.ts:139
 msgctxt "db.talentMaterials.03c76b"
 msgid "Shard of a Foul Legacy"
-msgstr ""
+msgstr "Scherf van een Vuile Erfenis"
 
 #: db/talentMaterials.ts:125
 msgctxt "db.talentMaterials.08f385"
 msgid "Spirit Locket of Boreas"
-msgstr ""
+msgstr "Geest Locket van Boreas"
 
 #: db/talentMaterials.ts:57
 msgctxt "db.talentMaterials.1b0aa2"
 msgid "Gold"
-msgstr ""
+msgstr "Goud"
 
 #: db/talentMaterials.ts:90
 msgctxt "db.talentMaterials.2238ed"
 msgid "Dvalin's Plume"
-msgstr ""
+msgstr "Dvalins Pluim"
 
 #: db/talentMaterials.ts:146
 msgctxt "db.talentMaterials.2276fe"
 msgid "Shadow of the Warrior"
-msgstr ""
+msgstr "Schaduw van de Krijger"
 
 #: db/talentMaterials.ts:160
 msgctxt "db.talentMaterials.24721e"
 msgid "Bloodjade Branch"
-msgstr ""
+msgstr "Bloedjade Tak"
 
 #: db/talentMaterials.ts:167
 msgctxt "db.talentMaterials.248351"
 msgid "Gilded Scale"
-msgstr ""
+msgstr "Vergulde Schub"
 
 #: db/talentMaterials.ts:42
 msgctxt "db.talentMaterials.2d7841"
 msgid "Teachings of Diligence"
-msgstr ""
+msgstr "Leringen van Volharding"
 
 #: db/talentMaterials.ts:111
 msgctxt "db.talentMaterials.33d5e3"
 msgid "Tail of Boreas"
-msgstr ""
+msgstr "Staart van Boreas"
 
 #: db/talentMaterials.ts:174
 msgctxt "db.talentMaterials.3b3d82"
 msgid "Molten Moment"
-msgstr ""
+msgstr "Gesmolten Moment"
 
 #: db/talentMaterials.ts:74
 msgctxt "db.talentMaterials.3d6db9"
 msgid "Teachings of Elegance"
-msgstr ""
+msgstr "Leringen van Elegantie"
 
 #: db/talentMaterials.ts:49
 msgctxt "db.talentMaterials.476508"
 msgid "Ballad"
-msgstr ""
+msgstr "Ballade"
 
 #: db/talentMaterials.ts:66
 msgctxt "db.talentMaterials.4a54fe"
 msgid "Teachings of Transience"
-msgstr ""
+msgstr "Leringen van Vergankelijkheid"
 
 #: db/talentMaterials.ts:65
 msgctxt "db.talentMaterials.4f38f4"
 msgid "Transience"
-msgstr ""
+msgstr "Vergankelijkheid"
 
 #: db/talentMaterials.ts:118
 msgctxt "db.talentMaterials.5a4b80"
 msgid "Ring of Boreas"
-msgstr ""
+msgstr "Ring van Boreas"
 
 #: db/talentMaterials.ts:50
 msgctxt "db.talentMaterials.5b3857"
 msgid "Teachings of Ballad"
-msgstr ""
+msgstr "Leringen van Ballade"
 
 #: db/talentMaterials.ts:104
 msgctxt "db.talentMaterials.6955de"
 msgid "Dvalin's Claw"
-msgstr ""
+msgstr "Dvalins Klauw"
 
 #: db/talentMaterials.ts:73
 msgctxt "db.talentMaterials.6f9de0"
 msgid "Elegance"
-msgstr ""
+msgstr "Elegantie"
 
 #: db/talentMaterials.ts:97
 msgctxt "db.talentMaterials.7d035f"
 msgid "Dvalin's Sigh"
-msgstr ""
+msgstr "Dvalins Zucht"
 
 #: db/talentMaterials.ts:18
 msgctxt "db.talentMaterials.90c99f"
 msgid "Teachings of Freedom"
-msgstr ""
+msgstr "Leringen van Vrijheid"
 
 #: db/talentMaterials.ts:26
 msgctxt "db.talentMaterials.969122"
 msgid "Teachings of Prosperity"
-msgstr ""
+msgstr "Leringen van Welvaart"
 
 #: db/talentMaterials.ts:25
 msgctxt "db.talentMaterials.997cd8"
 msgid "Prosperity"
-msgstr ""
+msgstr "Welvaart"
 
 #: db/talentMaterials.ts:132
 msgctxt "db.talentMaterials.a0af03"
 msgid "Tusk of Monoceros Caeli"
-msgstr ""
+msgstr "Slagtand van Monoceros Caeli"
 
 #: db/talentMaterials.ts:34
 msgctxt "db.talentMaterials.a5ac2e"
 msgid "Teachings of Resistance"
-msgstr ""
+msgstr "Leringen van Verzet"
 
 #: db/talentMaterials.ts:188
 msgctxt "db.talentMaterials.bc67eb"
 msgid "Ashen Heart"
-msgstr ""
+msgstr "Asgrauw Hart"
 
 #: db/talentMaterials.ts:33
 msgctxt "db.talentMaterials.c6a0f7"
 msgid "Resistance"
-msgstr ""
+msgstr "Verzet"
 
 #: db/talentMaterials.ts:153
 msgctxt "db.talentMaterials.cbd4e8"
 msgid "Dragon Lord's Crown"
-msgstr ""
+msgstr "Drakenheers Kroon"
 
 #: db/talentMaterials.ts:17
 msgctxt "db.talentMaterials.ce07c6"
 msgid "Freedom"
-msgstr ""
+msgstr "Vrijheid"
 
 #: db/talentMaterials.ts:81
 msgctxt "db.talentMaterials.ddc738"
 msgid "Light"
-msgstr ""
+msgstr "Licht"
 
 #: db/talentMaterials.ts:13
 msgctxt "db.talentMaterials.e14aed"
 msgid "Talent Level-Up Material"
-msgstr ""
+msgstr "Talent Level-Up Materiaal"
 
 #: db/talentMaterials.ts:82
 msgctxt "db.talentMaterials.e5d4a4"
 msgid "Teachings of Light"
-msgstr ""
+msgstr "Leringen van Licht"
 
 #: db/talentMaterials.ts:181
 msgctxt "db.talentMaterials.fb1067"
 msgid "Hellfire Butterfly"
-msgstr ""
+msgstr "Hellevuur Vlinder"
 
 #: db/talentMaterials.ts:58
 msgctxt "db.talentMaterials.fc587a"
 msgid "Teachings of Gold"
-msgstr ""
+msgstr "Leringen van Goud"
 
 #: db/talentMaterials.ts:41
 msgctxt "db.talentMaterials.ffd8d6"
 msgid "Diligence"
-msgstr ""
+msgstr "Volharding"
 
 #: db/weaponMaterials.ts:58
 msgctxt "db.weaponMaterials.009f9a"
 msgid "Grain of Aerosiderite"
-msgstr ""
+msgstr "Korrel van Aerosideriet"
 
 #: db/weaponMaterials.ts:18
 msgctxt "db.weaponMaterials.040efa"
 msgid "Tile of Decarabian's Tower"
-msgstr ""
+msgstr "Tegel van Decarabians Toren"
 
 #: db/weaponMaterials.ts:81
 msgctxt "db.weaponMaterials.097db0"
 msgid "Mask"
-msgstr ""
+msgstr "Masker"
 
 #: db/weaponMaterials.ts:50
 msgctxt "db.weaponMaterials.12045a"
 msgid "Fetters of the Dandelion Gladiator"
-msgstr ""
+msgstr "Boeien van de Paardenbloem Gladiator"
 
 #: db/weaponMaterials.ts:25
 msgctxt "db.weaponMaterials.2140ff"
 msgid "Guyun"
-msgstr ""
+msgstr "Guyun"
 
 #: db/weaponMaterials.ts:34
 msgctxt "db.weaponMaterials.33389c"
 msgid "Boreal Wolf's Milk Tooth"
-msgstr ""
+msgstr "Boreale Wolven Melktand"
 
 #: db/weaponMaterials.ts:73
 msgctxt "db.weaponMaterials.4b2f40"
 msgid "Narukami"
-msgstr ""
+msgstr "Narukami"
 
 #: db/weaponMaterials.ts:17
 msgctxt "db.weaponMaterials.4d0c6f"
 msgid "Decarabian"
-msgstr ""
+msgstr "Decarabiaan"
 
 #: db/weaponMaterials.ts:57
 msgctxt "db.weaponMaterials.580f83"
 msgid "Aerosiderite"
-msgstr ""
+msgstr "Aerosideriet"
 
 #: db/weaponMaterials.ts:26
 msgctxt "db.weaponMaterials.5c6a21"
 msgid "Luminous Sands from Guyun"
-msgstr ""
+msgstr "Lichtgevend Zand van Guyun"
 
 #: db/weaponMaterials.ts:13
 msgctxt "db.weaponMaterials.5fb6f7"
 msgid "Weapon Ascension Material"
-msgstr ""
+msgstr "Wapen Ascensie Materiaal"
 
 #: db/weaponMaterials.ts:82
 msgctxt "db.weaponMaterials.673ee5"
 msgid "Mask of the Wicked Lieutenant"
-msgstr ""
+msgstr "Masker van de Gemene Luitenant"
 
 #: db/weaponMaterials.ts:33
 msgctxt "db.weaponMaterials.735b94"
 msgid "Boreal Wolf"
-msgstr ""
+msgstr "Boreale Wolf"
 
 #: db/weaponMaterials.ts:49
 msgctxt "db.weaponMaterials.cf0c7e"
 msgid "Dandelion Gladiator"
-msgstr ""
+msgstr "Paardenbloem Gladiator"
 
 #: db/weaponMaterials.ts:66
 msgctxt "db.weaponMaterials.de26b9"
 msgid "Coral Branch of a Distant Sea"
-msgstr ""
+msgstr "Koraaltak van een Verre Zee"
 
 #: db/weaponMaterials.ts:74
 msgctxt "db.weaponMaterials.f3c2f2"
 msgid "Narukami's Wisdom"
-msgstr ""
+msgstr "Narukami's Wijsheid"
 
 #: db/weaponMaterials.ts:41
 msgctxt "db.weaponMaterials.f51889"
 msgid "Mist Veiled Elixir"
-msgstr ""
+msgstr "Mist Versluierd Elixir"
 
 #: db/weaponMaterials.ts:42
 msgctxt "db.weaponMaterials.f94a84"
 msgid "Mist Veiled Lead Elixir"
-msgstr ""
+msgstr "Mist Versluierd Lood Elixir"
 
 #: db/weaponMaterials.ts:65
 msgctxt "db.weaponMaterials.fa188c"
 msgid "Branch of Distant Sea"
-msgstr ""
+msgstr "Tak van Verre Zee"
 
 #: db/weapons.ts:124
 msgctxt "db.weapons.02470f"
 msgid "White Iron Greatsword"
-msgstr ""
+msgstr "Wit IJzeren Grootzwaard"
 
 #: db/weapons.ts:104
 msgctxt "db.weapons.025ed2"
 msgid "Amos' Bow"
-msgstr ""
+msgstr "Amos' Boog"
 
 #: db/weapons.ts:85
 msgctxt "db.weapons.03f248"
 msgid "Dragonspine Spear"
-msgstr ""
+msgstr "Drakenrug Speer"
 
 #: db/weapons.ts:199
 msgctxt "db.weapons.040218"
 msgid "Kitain Cross Spear"
-msgstr ""
+msgstr "Kitaans Kruis Speer"
 
 #: db/weapons.ts:164
 msgctxt "db.weapons.073d1f"
 msgid "The Unforged"
-msgstr ""
+msgstr "De Onvervalste"
 
 #: db/weapons.ts:93
 msgctxt "db.weapons.0c4b78"
 msgid "Skyward Harp"
-msgstr ""
+msgstr "Hemelse Harp"
 
 #: db/weapons.ts:68
 msgctxt "db.weapons.0c570b"
 msgid "Magic Guide"
-msgstr ""
+msgstr "Magische Gids"
 
 #: db/weapons.ts:130
 msgctxt "db.weapons.0c59e2"
 msgid "Blackcliff Longsword"
-msgstr ""
+msgstr "Blackcliff Langzwaard"
 
 #: db/weapons.ts:89
 msgctxt "db.weapons.119465"
 msgid "Sacrificial Greatsword"
-msgstr ""
+msgstr "Opofferend Grootzwaard"
 
 #: db/weapons.ts:200
 msgctxt "db.weapons.119676"
 msgid "Polar Star"
-msgstr ""
+msgstr "Poolster"
 
 #: db/weapons.ts:147
 msgctxt "db.weapons.138035"
 msgid "Blackcliff Slasher"
-msgstr ""
+msgstr "Blackcliff Slachter"
 
 #: db/weapons.ts:113
 msgctxt "db.weapons.13b285"
 msgid "Otherworldly Story"
-msgstr ""
+msgstr "Buitenaards Verhaal"
 
 #: db/weapons.ts:64
 msgctxt "db.weapons.15dfab"
 msgid "Cool Steel"
-msgstr ""
+msgstr "Koel Staal"
 
 #: db/weapons.ts:71
 msgctxt "db.weapons.16cefd"
 msgid "Royal Grimoire"
-msgstr ""
+msgstr "Koninklijk Grimoire"
 
 #: db/weapons.ts:152
 msgctxt "db.weapons.180e9e"
 msgid "Fillet Blade"
-msgstr ""
+msgstr "Fileermes"
 
 #: db/weapons.ts:109
 msgctxt "db.weapons.188019"
 msgid "Festering Desire"
-msgstr ""
+msgstr "Hunkerend Verlangen"
 
 #: db/weapons.ts:185
 msgctxt "db.weapons.19a216"
 msgid "Amenoma Kageuchi"
-msgstr ""
+msgstr "Amenoma Kageuchi"
 
 #: db/weapons.ts:192
 msgctxt "db.weapons.1a2044"
 msgid "Katsuragikiri Nagamasa"
-msgstr ""
+msgstr "Katsuragikiri Nagamasa"
 
 #: db/weapons.ts:138
 msgctxt "db.weapons.1ac9a9"
 msgid "Rust"
-msgstr ""
+msgstr "Roest"
 
 #: db/weapons.ts:163
 msgctxt "db.weapons.1c3519"
 msgid "Royal Spear"
-msgstr ""
+msgstr "Koninklijke Speer"
 
 #: db/weapons.ts:202
 msgctxt "db.weapons.1fc19a"
 msgid "Wavebreaker's Fin"
-msgstr ""
+msgstr "Golfbrekers Vin"
 
 #: db/weapons.ts:79
 msgctxt "db.weapons.1fd882"
 msgid "Cinnabar Spindle"
-msgstr ""
+msgstr "Cinnaber Spindel"
 
 #: db/weapons.ts:84
 msgctxt "db.weapons.230154"
 msgid "Dodoco Tales"
-msgstr ""
+msgstr "Dodoco Verhalen"
 
 #: db/weapons.ts:161
 msgctxt "db.weapons.28794d"
 msgid "Prototype Rancour"
-msgstr ""
+msgstr "Prototype Rancour"
 
 #: db/weapons.ts:178
 msgctxt "db.weapons.313d62"
 msgid "Skyrider Greatsword"
-msgstr ""
+msgstr "Luchtrijder Grootzwaard"
 
 #: db/weapons.ts:75
 msgctxt "db.weapons.3801e6"
 msgid "The Alley Flash"
-msgstr ""
+msgstr "De Steeg Flits"
 
 #: db/weapons.ts:186
 msgctxt "db.weapons.39d5a4"
 msgid "Everlasting Moonglow"
-msgstr ""
+msgstr "Eeuwige Maangloed"
 
 #: db/weapons.ts:146
 msgctxt "db.weapons.3ba383"
 msgid "Blackcliff Pole"
-msgstr ""
+msgstr "Blackcliff Stok"
 
 #: db/weapons.ts:88
 msgctxt "db.weapons.3bc913"
 msgid "Sacrificial Bow"
-msgstr ""
+msgstr "Offerboog"
 
 #: db/weapons.ts:111
 msgctxt "db.weapons.3e536f"
 msgid "Frostbearer"
-msgstr ""
+msgstr "IJsdrager"
 
 #: db/weapons.ts:83
 msgctxt "db.weapons.4488ef"
 msgid "Deathmatch"
-msgstr ""
+msgstr "Doodslag"
 
 #: db/weapons.ts:174
 msgctxt "db.weapons.46ab3b"
 msgid "Memory of Dust"
-msgstr ""
+msgstr "Geheugen van Stof"
 
 #: db/weapons.ts:133
 msgctxt "db.weapons.471e2a"
 msgid "Dark Iron Sword"
-msgstr ""
+msgstr "Donker IJzeren Zwaard"
 
 #: db/weapons.ts:99
 msgctxt "db.weapons.48bcb2"
 msgid "Thrilling Tales of Dragon Slayers"
-msgstr ""
+msgstr "Spannende Verhalen van Drakendoders"
 
 #: db/weapons.ts:117
 msgctxt "db.weapons.48dcf8"
 msgid "Sacrificial Fragments"
-msgstr ""
+msgstr "Offer Fragmenten"
 
 #: db/weapons.ts:115
 msgctxt "db.weapons.48e9df"
 msgid "Royal Bow"
-msgstr ""
+msgstr "Koninklijke Boog"
 
 #: db/weapons.ts:149
 msgctxt "db.weapons.4da5a4"
 msgid "Debate Club"
-msgstr ""
+msgstr "Debat Knuppel"
 
 #: db/weapons.ts:179
 msgctxt "db.weapons.4df4c4"
 msgid "Skyrider Sword"
-msgstr ""
+msgstr "Luchtrijder Zwaard"
 
 #: db/weapons.ts:135
 msgctxt "db.weapons.4f92ed"
 msgid "Lithic Blade"
-msgstr ""
+msgstr "Lithisch Mes"
 
 #: db/weapons.ts:170
 msgctxt "db.weapons.500132"
 msgid "Iron Sting"
-msgstr ""
+msgstr "IJzeren Steek"
 
 #: db/weapons.ts:150
 msgctxt "db.weapons.5553fb"
 msgid "Dragon's Bane"
-msgstr ""
+msgstr "Draken Gif"
 
 #: db/weapons.ts:86
 msgctxt "db.weapons.587ae5"
 msgid "Elegy for the End"
-msgstr ""
+msgstr "Elegie voor het Eind"
 
 #: db/weapons.ts:169
 msgctxt "db.weapons.59adc6"
 msgid "Compound Bow"
-msgstr ""
+msgstr "Compoundboog"
 
 #: db/weapons.ts:171
 msgctxt "db.weapons.59b38a"
 msgid "Lithic Spear"
-msgstr ""
+msgstr "Lithische Speer"
 
 #: db/weapons.ts:140
 msgctxt "db.weapons.5e235d"
 msgid "Solar Pearl"
-msgstr ""
+msgstr "Zonne Parel"
 
 #: db/weapons.ts:148
 msgctxt "db.weapons.5e65dc"
 msgid "Calamity Queller"
-msgstr ""
+msgstr "Kalamiteiten Bestrijder"
 
 #: db/weapons.ts:153
 msgctxt "db.weapons.623be3"
 msgid "Halberd"
-msgstr ""
+msgstr "Hellebaard"
 
 #: db/weapons.ts:165
 msgctxt "db.weapons.630c0f"
 msgid "Twin Nephrite"
-msgstr ""
+msgstr "Tweeling Nefriet"
 
 #: db/weapons.ts:187
 msgctxt "db.weapons.64f159"
 msgid "Hakushin Ring"
-msgstr ""
+msgstr "Hakushin Ring"
 
 #: db/weapons.ts:96
 msgctxt "db.weapons.6a706f"
 msgid "The Black Sword"
-msgstr ""
+msgstr "Het Zwarte Zwaard"
 
 #: db/weapons.ts:137
 msgctxt "db.weapons.737d80"
 msgid "Primordial Jade Winged-Spear"
-msgstr ""
+msgstr "Gevleugelde Oerjade Speer"
 
 #: db/weapons.ts:126
 msgctxt "db.weapons.7443eb"
 msgid "Wolf's Gravestone"
-msgstr ""
+msgstr "Wolven Grafsteen"
 
 #: db/weapons.ts:160
 msgctxt "db.weapons.748ca0"
 msgid "Prototype Amber"
-msgstr ""
+msgstr "Prototype Barnsteen"
 
 #: db/weapons.ts:95
 msgctxt "db.weapons.78c45f"
 msgid "Sword of Descension"
-msgstr ""
+msgstr "Zwaard van Ondergang"
 
 #: db/weapons.ts:76
 msgctxt "db.weapons.7b69b8"
 msgid "The Bell"
-msgstr ""
+msgstr "De Bel"
 
 #: db/weapons.ts:100
 msgctxt "db.weapons.867c82"
 msgid "Wine and Song"
-msgstr ""
+msgstr "Wijn en Lied"
 
 #: db/weapons.ts:151
 msgctxt "db.weapons.874a83"
 msgid "Eye of Perception"
-msgstr ""
+msgstr "Oog van Waarneming"
 
 #: db/weapons.ts:176
 msgctxt "db.weapons.88b507"
 msgid "Prototype Starglitter"
-msgstr ""
+msgstr "Prototype Sterrenglitter"
 
 #: db/weapons.ts:159
 msgctxt "db.weapons.8990d6"
 msgid "Prototype Crescent"
-msgstr ""
+msgstr "Prototype Halve Maan"
 
 #: db/weapons.ts:47
 msgctxt "db.weapons.8b8a4f"
 msgid "Weapon"
-msgstr ""
+msgstr "Wapen"
 
 #: db/weapons.ts:121
 msgctxt "db.weapons.8de396"
 msgid "Sacrificial Sword"
-msgstr ""
+msgstr "Offerzwaard"
 
 #: db/weapons.ts:108
 msgctxt "db.weapons.8e76e6"
 msgid "Favonius Warbow"
-msgstr ""
+msgstr "Favonius Oorlogsboog"
 
 #: db/weapons.ts:125
 msgctxt "db.weapons.8f3c08"
 msgid "Windblume Ode"
-msgstr ""
+msgstr "Ode aan de Windblume"
 
 #: db/weapons.ts:191
 msgctxt "db.weapons.91de62"
 msgid "Hamayumi"
-msgstr ""
+msgstr "Hamayumi"
 
 #: db/weapons.ts:134
 msgctxt "db.weapons.932810"
 msgid "Emerald Orb"
-msgstr ""
+msgstr "Smaragden Bol"
 
 #: db/weapons.ts:110
 msgctxt "db.weapons.9c6933"
 msgid "Freedom-Sworn"
-msgstr ""
+msgstr "Vrijheid Gezworen"
 
 #: db/weapons.ts:175
 msgctxt "db.weapons.9d7f69"
 msgid "Prototype Archaic"
-msgstr ""
+msgstr "Prototype Archaïsch"
 
 #: db/weapons.ts:141
 msgctxt "db.weapons.9fe22c"
 msgid "Summit Shaper"
-msgstr ""
+msgstr "Top Vormer"
 
 #: db/weapons.ts:154
 msgctxt "db.weapons.a0205e"
 msgid "Messenger"
-msgstr ""
+msgstr "Boodschapper"
 
 #: db/weapons.ts:162
 msgctxt "db.weapons.a1a162"
 msgid "Rainslasher"
-msgstr ""
+msgstr "Regen Slachter"
 
 #: db/weapons.ts:201
 msgctxt "db.weapons.a2de1f"
 msgid "The Catch"
-msgstr ""
+msgstr "De Vangst"
 
 #: db/weapons.ts:123
 msgctxt "db.weapons.a66256"
 msgid "Traveler's Handy Sword"
-msgstr ""
+msgstr "Reizigers Handige Zwaard"
 
 #: db/weapons.ts:77
 msgctxt "db.weapons.a77ea9"
 msgid "The Stringless"
-msgstr ""
+msgstr "De Snaarloze"
 
 #: db/weapons.ts:129
 msgctxt "db.weapons.a794cd"
 msgid "Blackcliff Agate"
-msgstr ""
+msgstr "Blackcliff Agaat"
 
 #: db/weapons.ts:194
 msgctxt "db.weapons.ad7045"
 msgid "Predator"
-msgstr ""
+msgstr "Roofdier"
 
 #: db/weapons.ts:65
 msgctxt "db.weapons.af9dce"
 msgid "Favonius Codex"
-msgstr ""
+msgstr "Favonius Codex"
 
 #: db/weapons.ts:92
 msgctxt "db.weapons.b1b853"
 msgid "Skyward Blade"
-msgstr ""
+msgstr "Hemelse Kling"
 
 #: db/weapons.ts:112
 msgctxt "db.weapons.b2d661"
 msgid "Lost Prayer to the Sacred Winds"
-msgstr ""
+msgstr "Verloren Gebed tot de Heilige Winden"
 
 #: db/weapons.ts:116
 msgctxt "db.weapons.b5f792"
 msgid "Royal Greatsword"
-msgstr ""
+msgstr "Koninklijk Grootzwaard"
 
 #: db/weapons.ts:193
 msgctxt "db.weapons.b70f24"
 msgid "Mouun's Moon"
-msgstr ""
+msgstr "Mouun's Maan"
 
 #: db/weapons.ts:70
 msgctxt "db.weapons.bde733"
 msgid "Raven Bow"
-msgstr ""
+msgstr "Ravenboog"
 
 #: db/weapons.ts:107
 msgctxt "db.weapons.bffca8"
 msgid "Favonius Lance"
-msgstr ""
+msgstr "Favonius Lans"
 
 #: db/weapons.ts:184
 msgctxt "db.weapons.c0d32e"
 msgid "Akuoumaru"
-msgstr ""
+msgstr "Akuoumaru"
 
 #: db/weapons.ts:69
 msgctxt "db.weapons.c1ee71"
 msgid "Mitternachts Waltz"
-msgstr ""
+msgstr "Nachtelijke Waltz"
 
 #: db/weapons.ts:136
 msgctxt "db.weapons.ca27da"
 msgid "Lion's Roar"
-msgstr ""
+msgstr "Leeuwen Brul"
 
 #: db/weapons.ts:188
 msgctxt "db.weapons.caea60"
 msgid "Mistsplitter Reforged"
-msgstr ""
+msgstr "Mistsplitser Hersmeed"
 
 #: db/weapons.ts:114
 msgctxt "db.weapons.cb0fdc"
 msgid "Recurve Bow"
-msgstr ""
+msgstr "Recurve Boog"
 
 #: db/weapons.ts:87
 msgctxt "db.weapons.cd6a74"
 msgid "Harbinger of Dawn"
-msgstr ""
+msgstr "Voorbode van Schemering"
 
 #: db/weapons.ts:173
 msgctxt "db.weapons.cd75c9"
 msgid "Mappa Mare"
-msgstr ""
+msgstr "Mappa Merrie"
 
 #: db/weapons.ts:132
 msgctxt "db.weapons.ce3943"
 msgid "Crescent Pike"
-msgstr ""
+msgstr "Halvemaan Spies"
 
 #: db/weapons.ts:82
 msgctxt "db.weapons.ced704"
 msgid "Bloodtainted Greatsword"
-msgstr ""
+msgstr "Bloeddorstig Grootzwaard"
 
 #: db/weapons.ts:155
 msgctxt "db.weapons.d21193"
 msgid "Primordial Jade Cutter"
-msgstr ""
+msgstr "Oerjade Snijder"
 
 #: db/weapons.ts:198
 msgctxt "db.weapons.d54d9d"
 msgid "Engulfing Lightning"
-msgstr ""
+msgstr "Overspoelende Bliksem"
 
 #: db/weapons.ts:181
 msgctxt "db.weapons.d63451"
 msgid "Vortex Vanquisher"
-msgstr ""
+msgstr "Vortex Verdelger"
 
 #: db/weapons.ts:106
 msgctxt "db.weapons.d6fdb8"
 msgid "Favonius Greatsword"
-msgstr ""
+msgstr "Favonius Grootzwaard"
 
 #: db/weapons.ts:103
 msgctxt "db.weapons.d8a782"
 msgid "Alley Hunter"
-msgstr ""
+msgstr "Steeg Jager"
 
 #: db/weapons.ts:97
 msgctxt "db.weapons.da3955"
 msgid "The Flute"
-msgstr ""
+msgstr "De Fluit"
 
 #: db/weapons.ts:143
 msgctxt "db.weapons.de23c9"
 msgid "Whiteblind"
-msgstr ""
+msgstr "Witblind"
 
 #: db/weapons.ts:78
 msgctxt "db.weapons.df6bad"
 msgid "The Viridescent Hunt"
-msgstr ""
+msgstr "De Maagdelijke Jacht"
 
 #: db/weapons.ts:172
 msgctxt "db.weapons.e33267"
 msgid "Luxurious Sea-Lord"
-msgstr ""
+msgstr "Luxueuze Zeeheer"
 
 #: db/weapons.ts:180
 msgctxt "db.weapons.e43450"
 msgid "Staff of Homa"
-msgstr ""
+msgstr "Staf van Homa"
 
 #: db/weapons.ts:94
 msgctxt "db.weapons.e53a5e"
 msgid "Skyward Pride"
-msgstr ""
+msgstr "Hemelse Trots"
 
 #: db/weapons.ts:131
 msgctxt "db.weapons.e6fc75"
 msgid "Blackcliff Warbow"
-msgstr ""
+msgstr "Blackcliff Oorlogsboog"
 
 #: db/weapons.ts:90
 msgctxt "db.weapons.e87597"
 msgid "Sharpshooter's Oath"
-msgstr ""
+msgstr "Scherpschutters Eed"
 
 #: db/weapons.ts:66
 msgctxt "db.weapons.e95d91"
 msgid "Favonius Sword"
-msgstr ""
+msgstr "Favonius Zwaard"
 
 #: db/weapons.ts:122
 msgctxt "db.weapons.e9f646"
 msgid "Skyward Spine"
-msgstr ""
+msgstr "Hemelse Ruggegraat"
 
 #: db/weapons.ts:63
 msgctxt "db.weapons.ebc3d0"
 msgid "Aquila Favonia"
-msgstr ""
+msgstr "Aquila Favonia"
 
 #: db/weapons.ts:67
 msgctxt "db.weapons.ece880"
 msgid "Ferrous Shadow"
-msgstr ""
+msgstr "IJzeren Schaduw"
 
 #: db/weapons.ts:177
 msgctxt "db.weapons.ed05a0"
 msgid "Serpent Spine"
-msgstr ""
+msgstr "Slangenrug"
 
 #: db/weapons.ts:142
 msgctxt "db.weapons.f20081"
 msgid "White Tassel"
-msgstr ""
+msgstr "Witte Kwast"
 
 #: db/weapons.ts:98
 msgctxt "db.weapons.f531f1"
 msgid "The Widsith"
-msgstr ""
+msgstr "De Widsith"
 
 #: db/weapons.ts:73
 msgctxt "db.weapons.f62d45"
 msgid "Song of Broken Pines"
-msgstr ""
+msgstr "Lied van Gebroken Dennen"
 
 #: db/weapons.ts:168
 msgctxt "db.weapons.f67ae4"
 msgid "Black Tassel"
-msgstr ""
+msgstr "Zwarte Kwast"
 
 #: db/weapons.ts:139
 msgctxt "db.weapons.f7393e"
 msgid "Slingshot"
-msgstr ""
+msgstr "Katapult"
 
 #: db/weapons.ts:74
 msgctxt "db.weapons.f7afc0"
 msgid "Snow-Tombed Starsilver"
-msgstr ""
+msgstr "Besneeuwd Sterrenzilver"
 
 #: db/weapons.ts:195
 msgctxt "db.weapons.f81f58"
 msgid "Redhorn Stonethresher"
-msgstr ""
+msgstr "Roodhoorn Steenhouwer"
 
 #: db/weapons.ts:72
 msgctxt "db.weapons.f8cb91"
 msgid "Royal Longsword"
-msgstr ""
+msgstr "Koninklijk Langzwaard"
 
 #: db/weapons.ts:91
 msgctxt "db.weapons.fda75f"
 msgid "Skyward Atlas"
-msgstr ""
+msgstr "Hemelse Atlas"
 
 #: db/weapons.ts:105
 msgctxt "db.weapons.ffe36a"
 msgid "Beginner's Protector"
-msgstr ""
+msgstr "Beginners Beschermer"
 
 #: pages/customize/artifacts/[name].tsx:77
 msgctxt "pages.customize.artifacts.[name].146974"
 msgid "artifact"
-msgstr ""
+msgstr "artefact"
 
 #: pages/customize/artifacts/[name].tsx:90
 msgctxt "pages.customize.artifacts.[name].f87fc3"
 msgid "No such artifact."
-msgstr ""
+msgstr "Geen dergelijk artefact."
 
 #: pages/customize/characters/[name].tsx:114
 msgctxt "pages.customize.characters.[name].9bd832"
 msgid "No such character."
-msgstr ""
+msgstr "Geen dergelijk personage."
 
 #: pages/customize/characters/[name].tsx:81
 msgctxt "pages.customize.characters.[name].e5ae51"
 msgid "character"
-msgstr ""
+msgstr "personage"
 
 #: pages/customize/weapons/[name].tsx:95
 msgctxt "pages.customize.weapons.[name].6a78b3"
 msgid "No such weapon."
-msgstr ""
+msgstr "Geen dergelijk wapen."
 
 #: pages/customize/weapons/[name].tsx:80
 msgctxt "pages.customize.weapons.[name].78facd"
 msgid "weapon"
-msgstr ""
+msgstr "wapen"
 
 #: pages/home/notifications/queue.tsx:48
 msgctxt "pages.home.notifications.queue.67684b"
 msgid "Notification queue"
-msgstr ""
+msgstr "Meldingen wachtrij"
 
 #: pages/home/notifications/queue.tsx:116
 msgctxt "pages.home.notifications.queue.76b25d"
 msgid "Send now"
-msgstr ""
+msgstr "Nu versturen"
 
 #: pages/home/notifications/queue.tsx:132
 msgctxt "pages.home.notifications.queue.87f26c"
 msgid "Dequeue"
-msgstr ""
+msgstr "Uit wachtrij verwijderen"
 
 #: pages/home/notifications/queue.tsx:90
 msgctxt "pages.home.notifications.queue.c5b4ec"
 msgid "Scheduled at {time} in {duration}."
-msgstr ""
+msgstr "Gepland om {tijd} in {tijdsloop}."
 
 #: pages/home/notifications/queue.tsx:57
 msgctxt "pages.home.notifications.queue.fcf2e1"
 msgid "There are no notifications in queue."
-msgstr ""
+msgstr "Er zijn geen meldingen in de wachtrij."
 
 #: pages/index.tsx:108
 msgctxt "pages.index.0b66ba"
 msgid "Tracks open world resources and reminds you as soon as they respawn. There is no limit to the number of pins."
 msgstr ""
+"Volgt open wereld grondstoffen en herinner je eraan zodra ze respawnen. Er "
+"is geen limiet aan het aantal pins."
 
 #: pages/index.tsx:93
 msgctxt "pages.index.0ed193"
 msgid "Tracks your resins and estimates when it will recharge without having to open the game."
 msgstr ""
+"Houd je resin bij en voorspeld wanneer het opgeladen is zonder dat je het "
+"spel hoeft te openen."
 
 #: pages/index.tsx:140
 msgctxt "pages.index.37b47a"
 msgid "Signing in will enable synchronization across multiple devices. If you do not already have an account, it will be created automatically."
 msgstr ""
+"Inloggen zal synchronisatie voor meerdere apparaten aanzetten. Als je nog "
+"geen account hebt, zal deze automatisch aangemaakt worden."
 
 #: pages/index.tsx:137
 msgctxt "pages.index.49026d"
 msgid "Sign in"
-msgstr ""
+msgstr "Inloggen"
 
 #: pages/index.tsx:83
 msgctxt "pages.index.657a74"
 msgid "Features"
-msgstr ""
+msgstr "Functies"
 
 #: pages/index.tsx:105
 msgctxt "pages.index.755c57"
 msgid "Task scheduler"
-msgstr ""
+msgstr "Taakplanner"
 
 #: pages/index.tsx:120
 msgctxt "pages.index.79dc9c"
 msgid "Domain view"
-msgstr ""
+msgstr "Domein overzicht"
 
 #: pages/index.tsx:90
 msgctxt "pages.index.96d48b"
 msgid "Resin calculator"
-msgstr ""
+msgstr "Resin rekenmachine"
 
 #: pages/index.tsx:123
 msgctxt "pages.index.a92dae"
 msgid "Shows which domains can be cleared for ascension materials and artifacts for the day."
 msgstr ""
+"Laat zien welke domeinen je kan doen voor ascensiemateriaal of artefacten "
+"voor die dag."
 
 #: pages/index.tsx:76
 msgctxt "pages.index.c0ef70"
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: pages/index.tsx:54
 msgctxt "pages.index.e3e15c"
 msgid "Genshin Schedule"
-msgstr ""
+msgstr "Genshin Schema"
 
 #: pages/index.tsx:57
 msgctxt "pages.index.fcffbd"
 msgid "Genshin Schedule is a website to help you keep track of time-related game activities in Genshin Impact."
 msgstr ""
+"Genshin Schema is een website die je helpt bij het bijhouden van "
+"tijdgerelateerde spelactiviteiten in Genshin Impact."
 
 #: utils/time.tsx:202
 msgctxt "utils.time.19685b"
 msgid "Millisecond"
-msgstr ""
+msgstr "Milliseconde"
 
 #: utils/time.tsx:169
 msgctxt "utils.time.1eb30e"
 msgid "{value, plural, one {# millisecond} other {# milliseconds}}"
-msgstr ""
+msgstr "{waarde, meervoud, één {# milliseconde} andere {# milliseconden}}"
 
 #: utils/time.tsx:190
 msgctxt "utils.time.205a35"
 msgid "Year"
-msgstr ""
+msgstr "Jaar"
 
 #: utils/time.tsx:185
 msgctxt "utils.time.42b8a1"
 msgid "Friday"
-msgstr ""
+msgstr "Vrijdag"
 
 #: utils/time.tsx:159
 msgctxt "utils.time.4ee319"
 msgid "{value, plural, one {# week} other {# weeks}}"
-msgstr ""
+msgstr "{waarde, meervoud, één {# week} andere {# weken}}"
 
 #: utils/time.tsx:157
 msgctxt "utils.time.577d30"
 msgid "{value, plural, one {# year} other {# years}}"
-msgstr ""
+msgstr "{waarde, meervoud, één {# jaar} andere {# jaren}}"
 
 #: utils/time.tsx:187
 msgctxt "utils.time.58c347"
 msgid "Saturday"
-msgstr ""
+msgstr "Zaterdag"
 
 #: utils/time.tsx:179
 msgctxt "utils.time.600818"
 msgid "Tuesday"
-msgstr ""
+msgstr "Dinsdag"
 
 #: utils/time.tsx:177
 msgctxt "utils.time.6b332c"
 msgid "Monday"
-msgstr ""
+msgstr "Maandag"
 
 #: utils/time.tsx:163
 msgctxt "utils.time.6c080b"
 msgid "{value, plural, one {# hour} other {# hours}}"
-msgstr ""
+msgstr "{waarde, meervoud, één {# uur} andere {# uur}}"
 
 #: utils/time.tsx:196
 msgctxt "utils.time.6f5d56"
 msgid "Hour"
-msgstr ""
+msgstr "Uur"
 
 #: utils/time.tsx:181
 msgctxt "utils.time.9716e5"
 msgid "Wednesday"
-msgstr ""
+msgstr "Woensdag"
 
 #: utils/time.tsx:175
 msgctxt "utils.time.989474"
 msgid "Sunday"
-msgstr ""
+msgstr "Zondag"
 
 #: utils/time.tsx:161
 msgctxt "utils.time.9febbe"
 msgid "{value, plural, one {# day} other {# days}}"
-msgstr ""
+msgstr "{waarde, meervoud, één {# dag} andere {# dagen}}"
 
 #: utils/time.tsx:183
 msgctxt "utils.time.a80854"
 msgid "Thursday"
-msgstr ""
+msgstr "Donderdag"
 
 #: utils/time.tsx:192
 msgctxt "utils.time.b1dda2"
 msgid "Week"
-msgstr ""
+msgstr "Week"
 
 #: utils/time.tsx:200
 msgctxt "utils.time.b71604"
 msgid "Second"
-msgstr ""
+msgstr "Tweede"
 
 #: utils/time.tsx:165
 msgctxt "utils.time.c32d7f"
 msgid "{value, plural, one {# minute} other {# minutes}}"
-msgstr ""
+msgstr "{waarde, meervoud, één {# minuut} andere {# minuten}}"
 
 #: utils/time.tsx:167
 msgctxt "utils.time.c67dcc"
 msgid "{value, plural, one {# second} other {# seconds}}"
-msgstr ""
+msgstr "{waarde, meervoud, één {# seconde} andere {# seconden}}"
 
 #: utils/time.tsx:198
 msgctxt "utils.time.c743e7"
 msgid "Minute"
-msgstr ""
+msgstr "Minuut"
 
 #: utils/time.tsx:194
 msgctxt "utils.time.ee95eb"
 msgid "Day"
-msgstr ""
+msgstr "Dag"
