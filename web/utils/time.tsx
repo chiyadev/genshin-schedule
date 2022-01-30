@@ -81,7 +81,7 @@ export function getNextRefreshTime(time: DateTime, refreshTime: TaskRefreshTime)
 
   const needNextWeek = time.weekday >= rDayInWeek && !(time.weekday === rDayInWeek && time.hour < ServerResetHour);
 
-  localTime = localTime.plus({ week: needNextWeek ? 1 : 0 }).set({ weekday: rDayInWeek });
+  localTime = localTime.plus({ week: needNextWeek ? 1 : 0 }).set({ weekday: rDayInWeek, hour: ServerResetHour });
 
   return localTime;
 }
