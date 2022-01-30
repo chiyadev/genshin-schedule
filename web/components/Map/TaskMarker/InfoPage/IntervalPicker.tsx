@@ -50,7 +50,14 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch
         onChange={({ currentTarget: { value } }) => {
           switch (value) {
             case "reset":
-              setValue("reset");
+            case "monday":
+            case "tuesday":
+            case "wednesday":
+            case "thursday":
+            case "friday":
+            case "saturday":
+            case "sunday":
+              setValue(value);
               break;
 
             default:
@@ -65,7 +72,13 @@ const IntervalPicker = ({ value, setValue }: { value: number; setValue: Dispatch
           </option>
         ))}
 
-        <option value="reset">
+        {["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"].map((day) => (
+          <option key={`day.${day}`} value={day}>
+            {useFormatUnit(`day.${day}`)} ({formatMessage({ defaultMessage: "{time}AM" }, { time: ServerResetHour })})
+          </option>
+        ))}
+
+        <option key="reset" value="reset">
           {formatMessage({ defaultMessage: "Server reset" })} (
           {formatMessage({ defaultMessage: "{time}AM" }, { time: ServerResetHour })})
         </option>

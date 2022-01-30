@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useConfig } from "./config";
+import { TaskRefreshTime, useConfig } from "./config";
 import { DateTime, Duration } from "luxon";
 import { useIntl } from "react-intl";
 
@@ -67,6 +67,26 @@ export function getServerResetTime(time: DateTime) {
     .setZone(time.zone)
     .plus({ days: time.hour < ServerResetHour ? 0 : 1 })
     .set({ hour: ServerResetHour });
+}
+
+export function getNextRefreshTime(time: DateTime, refreshTime: TaskRefreshTime) {
+  if (refreshTime === "reset") return getServerResetTime(time);
+
+  const utc = time.toUTC();
+  let localTime = DateTime.utc(utc.year, utc.month, utc.day, utc.hour).setZone(time.zone);
+
+  // refresh day in a week
+  let rDayInWeek = Weekdays.indexOf(refreshTime as Weekday);
+  if (rDayInWeek == 0) rDayInWeek = 7;
+
+  let needNextWeek = false;
+  if (time.weekday >= rDayInWeek) {
+    needNextWeek = !(time.weekday === rDayInWeek && time.hour < ServerResetHour);
+  }
+
+  localTime = localTime.plus({ week: needNextWeek ? 1 : 0 }).set({ weekday: rDayInWeek });
+
+  return localTime;
 }
 
 export type Weekday = "sunday" | "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday";

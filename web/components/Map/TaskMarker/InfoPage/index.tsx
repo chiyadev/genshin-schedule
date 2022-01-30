@@ -98,9 +98,9 @@ const InfoPage = ({
 
             <AccordionPanel p={0} mb={1}>
               <VStack align="stretch" spacing={1}>
-                {task.refreshTime === "reset" ? (
+                {typeof task.refreshTime !== "number" ? (
                   <IntervalResetCheck
-                    value
+                    value={task.refreshTime}
                     setValue={() => {
                       setTask((task) => {
                         const timer = KnownResourceTimers[task.icon];

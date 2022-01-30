@@ -74,6 +74,17 @@ export type Config = {
   statRetention: number;
 };
 
+export type TaskRefreshTime =
+  | number
+  | "reset"
+  | "monday"
+  | "tuesday"
+  | "wednesday"
+  | "thursday"
+  | "friday"
+  | "saturday"
+  | "sunday";
+
 export type Task = {
   id: string;
   icon: string;
@@ -82,7 +93,7 @@ export type Task = {
   visible: boolean;
   location: MapLocation;
   dueTime: number;
-  refreshTime: number | "reset";
+  refreshTime: TaskRefreshTime;
   notify?: boolean;
   highlight?: boolean;
 };
