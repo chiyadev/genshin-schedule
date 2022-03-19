@@ -505,9 +505,9 @@ export const RaidenShogun: Character = {
   commonMaterials: [Handguard, AmakumoFruit],
 };
 
-export const KujouSara: Character = {
+export const Sara: Character = {
   type: "Character",
-  name: registerMessage({ defaultMessage: "Kujou Sara" }),
+  name: registerMessage({ defaultMessage: "Sara" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Kujou_Sara",
   materials: [VajradaAmethyst, StormBeads],
   talentMaterialWeekly: AshenHeart,
@@ -573,7 +573,6 @@ export const YunJin: Character = {
   talentMaterialWeekly: AshenHeart,
   talentMaterial: Diligence,
   commonMaterials: [HilichurlMask, GlazeLily],
-  leaked: true,
 };
 
 export const Shenhe: Character = {
@@ -584,7 +583,6 @@ export const Shenhe: Character = {
   talentMaterialWeekly: HellfireButterfly,
   talentMaterial: Prosperity,
   commonMaterials: [WhopperflowerNectar, Qingxin],
-  leaked: true,
 };
 
 export const Characters = [
@@ -614,7 +612,6 @@ export const Characters = [
   Keqing,
   Klee,
   Kokomi,
-  KujouSara,
   Lisa,
   Mona,
   Ningguang,
@@ -623,6 +620,7 @@ export const Characters = [
   RaidenShogun,
   Razor,
   Rosaria,
+  Sara,
   Sayu,
   Shenhe,
   Sucrose,
