@@ -57,7 +57,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr ""
 
-#: components/ChangelogModal.tsx:256
+#: components/ChangelogModal.tsx:263
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr ""
@@ -848,12 +848,12 @@ msgctxt "components.Map.TaskMarker.InfoPage.HideCheck.fdf592"
 msgid "Hide temporarily"
 msgstr ""
 
-#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:70
+#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:83
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.52cf48"
 msgid "{time}AM"
 msgstr ""
 
-#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:69
+#: components/Map/TaskMarker/InfoPage/IntervalPicker.tsx:82
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.6e6cc8"
 msgid "Server reset"
 msgstr ""
@@ -863,14 +863,19 @@ msgctxt "components.Map.TaskMarker.InfoPage.IntervalPicker.a736a6"
 msgid "Respawns every"
 msgstr ""
 
-#: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:15
+#: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:17
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalResetCheck.4b91b9"
 msgid "Respawns on server reset"
 msgstr ""
 
-#: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:16
+#: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:29
 msgctxt "components.Map.TaskMarker.InfoPage.IntervalResetCheck.52cf48"
 msgid "{time}AM"
+msgstr ""
+
+#: components/Map/TaskMarker/InfoPage/IntervalResetCheck.tsx:27
+msgctxt "components.Map.TaskMarker.InfoPage.IntervalResetCheck.fdce60"
+msgid "Respawn on every"
 msgstr ""
 
 #: components/Map/TaskMarker/InfoPage/NotifyToggle.tsx:30
@@ -4393,107 +4398,107 @@ msgid ""
 "activities in Genshin Impact."
 msgstr ""
 
-#: utils/time.tsx:202
+#: utils/time.tsx:220
 msgctxt "utils.time.19685b"
 msgid "Millisecond"
 msgstr ""
 
-#: utils/time.tsx:169
+#: utils/time.tsx:187
 msgctxt "utils.time.1eb30e"
 msgid "{value, plural, one {# millisecond} other {# milliseconds}}"
 msgstr ""
 
-#: utils/time.tsx:190
+#: utils/time.tsx:208
 msgctxt "utils.time.205a35"
 msgid "Year"
 msgstr ""
 
-#: utils/time.tsx:185
+#: utils/time.tsx:203
 msgctxt "utils.time.42b8a1"
 msgid "Friday"
 msgstr ""
 
-#: utils/time.tsx:159
+#: utils/time.tsx:177
 msgctxt "utils.time.4ee319"
 msgid "{value, plural, one {# week} other {# weeks}}"
 msgstr ""
 
-#: utils/time.tsx:157
+#: utils/time.tsx:175
 msgctxt "utils.time.577d30"
 msgid "{value, plural, one {# year} other {# years}}"
 msgstr ""
 
-#: utils/time.tsx:187
+#: utils/time.tsx:205
 msgctxt "utils.time.58c347"
 msgid "Saturday"
 msgstr ""
 
-#: utils/time.tsx:179
+#: utils/time.tsx:197
 msgctxt "utils.time.600818"
 msgid "Tuesday"
 msgstr ""
 
-#: utils/time.tsx:177
+#: utils/time.tsx:195
 msgctxt "utils.time.6b332c"
 msgid "Monday"
 msgstr ""
 
-#: utils/time.tsx:163
+#: utils/time.tsx:181
 msgctxt "utils.time.6c080b"
 msgid "{value, plural, one {# hour} other {# hours}}"
 msgstr ""
 
-#: utils/time.tsx:196
+#: utils/time.tsx:214
 msgctxt "utils.time.6f5d56"
 msgid "Hour"
 msgstr ""
 
-#: utils/time.tsx:181
+#: utils/time.tsx:199
 msgctxt "utils.time.9716e5"
 msgid "Wednesday"
 msgstr ""
 
-#: utils/time.tsx:175
+#: utils/time.tsx:193
 msgctxt "utils.time.989474"
 msgid "Sunday"
 msgstr ""
 
-#: utils/time.tsx:161
+#: utils/time.tsx:179
 msgctxt "utils.time.9febbe"
 msgid "{value, plural, one {# day} other {# days}}"
 msgstr ""
 
-#: utils/time.tsx:183
+#: utils/time.tsx:201
 msgctxt "utils.time.a80854"
 msgid "Thursday"
 msgstr ""
 
-#: utils/time.tsx:192
+#: utils/time.tsx:210
 msgctxt "utils.time.b1dda2"
 msgid "Week"
 msgstr ""
 
-#: utils/time.tsx:200
+#: utils/time.tsx:218
 msgctxt "utils.time.b71604"
 msgid "Second"
 msgstr ""
 
-#: utils/time.tsx:165
+#: utils/time.tsx:183
 msgctxt "utils.time.c32d7f"
 msgid "{value, plural, one {# minute} other {# minutes}}"
 msgstr ""
 
-#: utils/time.tsx:167
+#: utils/time.tsx:185
 msgctxt "utils.time.c67dcc"
 msgid "{value, plural, one {# second} other {# seconds}}"
 msgstr ""
 
-#: utils/time.tsx:198
+#: utils/time.tsx:216
 msgctxt "utils.time.c743e7"
 msgid "Minute"
 msgstr ""
 
-#: utils/time.tsx:194
+#: utils/time.tsx:212
 msgctxt "utils.time.ee95eb"
 msgid "Day"
 msgstr ""
