@@ -17,15 +17,18 @@ import {
 import { FormattedMessage } from "react-intl";
 import { GitPullRequest } from "react-feather";
 
-const LatestChangelog = 39;
+const LatestChangelog = 40;
 
 function buildChangelog() {
   // To create a new changelog section, increment LatestChangelog counter by one
   // and ensure that the counter is equal to the key of the first element in this array.
   return [
+    <ChangelogSection key={40} date="2022/03/19">
+      <ChangelogItem github={113}>Added Monday-Sunday 4AM respawn options to tasks.</ChangelogItem>
+    </ChangelogSection>,
     <ChangelogSection key={39} date="2022/01/05">
-      <ChangelogItem github={111}>Finalize 2.4 characters and weapons.</ChangelogItem>
-      <ChangelogItem github={111}>Rename Kujou Sara to Sara for consistency with other characters.</ChangelogItem>
+      <ChangelogItem github={111}>Finalized 2.4 characters and weapons.</ChangelogItem>
+      <ChangelogItem github={111}>Renamed Kujou Sara to Sara for consistency with other characters.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={38} date="2021/12/22">
       <ChangelogItem github={107}>Removed leaked warnings from Gorou, Itto, and Redhorn Stonethresher.</ChangelogItem>
