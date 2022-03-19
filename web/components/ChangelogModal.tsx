@@ -24,6 +24,7 @@ function buildChangelog() {
   // and ensure that the counter is equal to the key of the first element in this array.
   return [
     <ChangelogSection key={40} date="2022/03/19">
+      <ChangelogItem>Upgraded all dependencies to the latest versions.</ChangelogItem>
       <ChangelogItem github={113}>Added Monday-Sunday 4AM respawn options to tasks.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={39} date="2022/01/05">
