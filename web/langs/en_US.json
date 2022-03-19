@@ -168,6 +168,7 @@
   "components.Map.TaskMarker.InfoPage.IntervalPicker.a736a6": "Respawns every",
   "components.Map.TaskMarker.InfoPage.IntervalResetCheck.4b91b9": "Respawns on server reset",
   "components.Map.TaskMarker.InfoPage.IntervalResetCheck.52cf48": "{time}AM",
+  "components.Map.TaskMarker.InfoPage.IntervalResetCheck.fdce60": "Respawn on every",
   "components.Map.TaskMarker.InfoPage.NotifyToggle.0b66a8": "{name} respawned",
   "components.Map.TaskMarker.InfoPage.NotifyToggle.da9e7e": "Notify respawn",
   "components.Map.TaskMarker.InfoPage.index.343579": "Options",
