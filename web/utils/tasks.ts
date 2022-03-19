@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, useCallback, useMemo } from "react";
 import { DefaultConfig, Task, useConfig, useCurrentStats, useSync } from "./config";
 import { useRouter } from "next/router";
 import { randomStr } from "./index";
-import { getServerResetTime, useServerTime } from "./time";
+import { getNextRefreshTime, useServerTime } from "./time";
 import { IconNames } from "../db/icons";
 import { MemorySearch } from "./memorySearch";
 
@@ -114,7 +114,9 @@ export function useTaskDoneSetter(setTask: Dispatch<SetStateAction<Task>>) {
         setTask((task) => ({
           ...task,
           dueTime:
-            task.refreshTime === "reset" ? getServerResetTime(time).valueOf() : time.plus(task.refreshTime).valueOf(),
+            typeof task.refreshTime !== "number"
+              ? getNextRefreshTime(time, task.refreshTime).valueOf()
+              : time.plus(task.refreshTime).valueOf(),
         }));
 
         setStats((stats) => stats && { ...stats, tasksDone: Math.max(0, stats.tasksDone + 1) });

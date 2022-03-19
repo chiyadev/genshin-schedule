@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { useConfig } from "../../../utils/config";
 import { trackEvent } from "../../../utils/umami";
 import { HStack, Icon, Link } from "@chakra-ui/react";
-import { getServerResetTime, useServerTime } from "../../../utils/time";
+import { getNextRefreshTime, useServerTime } from "../../../utils/time";
 import { FormattedMessage } from "react-intl";
 import { Check } from "react-feather";
 
@@ -22,8 +22,8 @@ const MarkAllDone = () => {
               return {
                 ...task,
                 dueTime:
-                  task.refreshTime === "reset"
-                    ? getServerResetTime(time).valueOf()
+                  typeof task.refreshTime !== "number"
+                    ? getNextRefreshTime(time, task.refreshTime).valueOf()
                     : time.plus(task.refreshTime).valueOf(),
               };
             } else {
