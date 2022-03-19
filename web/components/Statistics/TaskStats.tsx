@@ -29,7 +29,7 @@ const TaskStats = () => {
         <HStack
           align="stretch"
           spacing={0}
-          divider={<StackDivider orientation="vertical" borderColor={useColorModeValue("gray.200", "gray.700")} />}
+          divider={<StackDivider borderColor={useColorModeValue("gray.200", "gray.700")} />}
         >
           <TodayPanel />
           <TotalPanel />
