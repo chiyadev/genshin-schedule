@@ -60,7 +60,7 @@ msgctxt "components.Auth.UserSignIn.e6c83b"
 msgid "Password"
 msgstr "Wachtwoord"
 
-#: components/ChangelogModal.tsx:263
+#: components/ChangelogModal.tsx:264
 msgctxt "components.ChangelogModal.3a15e6"
 msgid "Update changelog"
 msgstr "Wijzigingslogboek bijwerken"
