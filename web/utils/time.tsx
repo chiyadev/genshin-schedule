@@ -60,30 +60,31 @@ export function useServerTimeZone() {
 
 export const ServerResetHour = 4;
 
-export function getServerResetTime(time: DateTime) {
-  const utc = time.toUTC();
+export function getServerResetTime(current: DateTime) {
+  const utc = current.toUTC();
 
   return DateTime.utc(utc.year, utc.month, utc.day, utc.hour)
-    .setZone(time.zone)
-    .plus({ days: time.hour < ServerResetHour ? 0 : 1 })
+    .setZone(current.zone)
+    .plus({ days: current.hour < ServerResetHour ? 0 : 1 })
     .set({ hour: ServerResetHour });
 }
 
-export function getNextRefreshTime(time: DateTime, refreshTime: TaskRefreshTime) {
-  if (refreshTime === "reset") return getServerResetTime(time);
+export function getNextRefreshTime(current: DateTime, refreshTime: TaskRefreshTime) {
+  if (refreshTime === "reset") {
+    return getServerResetTime(current);
+  }
 
-  const utc = time.toUTC();
-  let localTime = DateTime.utc(utc.year, utc.month, utc.day, utc.hour).setZone(time.zone);
+  const utc = current.toUTC();
+  let local = DateTime.utc(utc.year, utc.month, utc.day, utc.hour).setZone(current.zone);
 
-  // refresh day in a week
-  let rDayInWeek = Weekdays.indexOf(refreshTime as Weekday);
-  if (rDayInWeek == 0) rDayInWeek = 7;
+  // refresh day of week
+  let rWeekday = Weekdays.indexOf(refreshTime as Weekday);
+  if (rWeekday == 0) rWeekday = 7;
 
-  const needNextWeek = time.weekday >= rDayInWeek && !(time.weekday === rDayInWeek && time.hour < ServerResetHour);
+  // add one week if current weekday is past the refresh weekday
+  const nextWeek = current.weekday > rWeekday || (current.weekday === rWeekday && current.hour >= ServerResetHour);
 
-  localTime = localTime.plus({ week: needNextWeek ? 1 : 0 }).set({ weekday: rDayInWeek, hour: ServerResetHour });
-
-  return localTime;
+  return local.plus({ week: nextWeek ? 1 : 0 }).set({ weekday: rWeekday, hour: ServerResetHour });
 }
 
 export type Weekday = "sunday" | "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday";
