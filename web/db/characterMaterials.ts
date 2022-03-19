@@ -158,11 +158,9 @@ export const RiftbornRegalia: CharacterMaterial = {
   wiki: "https://genshin-impact.fandom.com/wiki/Riftborn_Regalia",
 };
 
-// possibly dropped by a new boss called Bathysmal Vishap in 2.4
-// that boss is not available in the database yet
 export const DragonheirsFalseFin: CharacterMaterial = {
   type: "Character Ascension Material",
   name: registerMessage({ defaultMessage: "Dragonheir's False Fin" }),
   item: registerMessage({ defaultMessage: "Dragonheir's False Fin" }),
-  wiki: "https://genshin.honeyhunterworld.com/db/item/i_216/",
+  wiki: "https://genshin-impact.fandom.com/wiki/Dragonheir%27s_False_Fin",
 };
