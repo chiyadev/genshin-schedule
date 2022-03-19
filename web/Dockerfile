@@ -1,7 +1,7 @@
 FROM node:lts-alpine AS build
-WORKDIR /app
+WORKDIR /genshin
 
-COPY web/package.json web/yarn.lock ./
+COPY package.json yarn.lock ./
 RUN yarn install --production --frozen-lockfile
 RUN cp -R ./node_modules /tmp/node_modules
 RUN yarn install --frozen-lockfile
@@ -14,16 +14,16 @@ ENV NEXT_PUBLIC_UMAMI_URL $NEXT_PUBLIC_UMAMI_URL
 ENV NEXT_PUBLIC_API_PUBLIC $NEXT_PUBLIC_API_PUBLIC
 ENV NEXT_PUBLIC_API_INTERNAL $NEXT_PUBLIC_API_INTERNAL
 
-COPY web ./
+COPY . ./
 RUN yarn build
 
 FROM node:lts-alpine
-WORKDIR /app
+WORKDIR /genshin
 
-COPY --from=build /app/package.json ./
+COPY --from=build /genshin/package.json ./
 COPY --from=build /tmp/node_modules ./node_modules
-COPY --from=build /app/.next ./.next
-COPY --from=build /app/public ./public
+COPY --from=build /genshin/.next ./.next
+COPY --from=build /genshin/public ./public
 
 EXPOSE 3000
 CMD ["yarn", "start"]

@@ -1,17 +1,16 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
-WORKDIR /app
+WORKDIR /genshin
 
-COPY sync/GenshinSchedule.SyncServer.csproj ./
+COPY GenshinSchedule.SyncServer.csproj ./
 RUN dotnet restore
 
-COPY sync ./
+COPY . ./
 RUN dotnet build -c Release -o build --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
-WORKDIR /app
+WORKDIR /genshin
 
-COPY --from=build /app/build ./
+COPY --from=build /genshin/build ./
 
 ENV ASPNETCORE_ENVIRONMENT Production
-
 ENTRYPOINT ["dotnet", "GenshinSchedule.SyncServer.dll"]
