@@ -1386,7 +1386,7 @@ msgctxt "db.characterMaterials.61a03d"
 msgid "Prithiva Topaz Silver"
 msgstr ""
 
-#: db/characterMaterials.ts:166
+#: db/characterMaterials.ts:164
 msgctxt "db.characterMaterials.674d0f"
 msgid "Dragonheir's False Fin"
 msgstr ""
@@ -1571,7 +1571,7 @@ msgctxt "db.characters.653885"
 msgid "Beidou"
 msgstr ""
 
-#: db/characters.ts:581
+#: db/characters.ts:580
 msgctxt "db.characters.67a132"
 msgid "Shenhe"
 msgstr ""
@@ -1656,6 +1656,11 @@ msgctxt "db.characters.b96249"
 msgid "Bennett"
 msgstr ""
 
+#: db/characters.ts:510
+msgctxt "db.characters.bafe92"
+msgid "Sara"
+msgstr ""
+
 #: db/characters.ts:420
 msgctxt "db.characters.bc58dc"
 msgid "Ganyu"
@@ -1669,11 +1674,6 @@ msgstr ""
 #: db/characters.ts:520
 msgctxt "db.characters.c68789"
 msgid "Kokomi"
-msgstr ""
-
-#: db/characters.ts:510
-msgctxt "db.characters.c976d6"
-msgid "Kujou Sara"
 msgstr ""
 
 #: db/characters.ts:340
@@ -2021,287 +2021,292 @@ msgctxt "db.commonMaterials.fe06d4"
 msgid "Cor Lapis"
 msgstr ""
 
-#: db/domainCategories.ts:77
+#: db/domainCategories.ts:78
 msgctxt "db.domainCategories.08e597"
 msgid "Forgery"
 msgstr ""
 
-#: db/domainCategories.ts:107
+#: db/domainCategories.ts:108
 msgctxt "db.domainCategories.09a1d0"
 msgid "Boss"
 msgstr ""
 
-#: db/domainCategories.ts:108
+#: db/domainCategories.ts:109
 msgctxt "db.domainCategories.4b2b5d"
 msgid "Character Ascension Materials and Artifacts"
 msgstr ""
 
-#: db/domainCategories.ts:69
+#: db/domainCategories.ts:70
 msgctxt "db.domainCategories.6a94a1"
 msgid "Talent Level-Up Materials"
 msgstr ""
 
-#: db/domainCategories.ts:87
+#: db/domainCategories.ts:88
 msgctxt "db.domainCategories.796e5e"
 msgid "Artifacts"
 msgstr ""
 
-#: db/domainCategories.ts:49
+#: db/domainCategories.ts:50
 msgctxt "db.domainCategories.999229"
 msgid "Domain Category"
 msgstr ""
 
-#: db/domainCategories.ts:86
+#: db/domainCategories.ts:87
 msgctxt "db.domainCategories.a02f64"
 msgid "Blessing"
 msgstr ""
 
-#: db/domainCategories.ts:78
+#: db/domainCategories.ts:79
 msgctxt "db.domainCategories.a4758a"
 msgid "Weapon Ascension Materials"
 msgstr ""
 
-#: db/domainCategories.ts:53
+#: db/domainCategories.ts:54
 msgctxt "db.domainCategories.a6ee01"
 msgid "Trounce"
 msgstr ""
 
-#: db/domainCategories.ts:68
+#: db/domainCategories.ts:69
 msgctxt "db.domainCategories.aeab32"
 msgid "Mastery"
 msgstr ""
 
-#: db/domainCategories.ts:54
+#: db/domainCategories.ts:55
 msgctxt "db.domainCategories.f98247"
 msgid "Weekly Challenge"
 msgstr ""
 
-#: db/domainDropSets.ts:381
+#: db/domainDropSets.ts:382
 msgctxt "db.domainDropSets.3153a6"
 msgid "Altar of Sands"
 msgstr ""
 
-#: db/domainDropSets.ts:374
+#: db/domainDropSets.ts:375
 msgctxt "db.domainDropSets.350bc4"
 msgid "Sunken Sands"
 msgstr ""
 
-#: db/domainDropSets.ts:121
+#: db/domainDropSets.ts:122
 msgctxt "db.domainDropSets.4284f2"
 msgid "Domain Drop Set"
 msgstr ""
 
-#: db/domainDropSets.ts:166
+#: db/domainDropSets.ts:167
 msgctxt "db.domainDropSets.5a8238"
 msgid "Trial Grounds of Thunder"
 msgstr ""
 
-#: db/domainDropSets.ts:152
+#: db/domainDropSets.ts:153
 msgctxt "db.domainDropSets.6db45f"
 msgid "Thundercloud"
 msgstr ""
 
-#: db/domainDropSets.ts:125
+#: db/domainDropSets.ts:126
 msgctxt "db.domainDropSets.727bc7"
 msgid "City of Reflections"
 msgstr ""
 
-#: db/domainDropSets.ts:132
+#: db/domainDropSets.ts:133
 msgctxt "db.domainDropSets.b61667"
 msgid "Submerged Valley"
 msgstr ""
 
-#: db/domainDropSets.ts:388
+#: db/domainDropSets.ts:389
 msgctxt "db.domainDropSets.c47ef9"
 msgid "Sand Burial"
 msgstr ""
 
-#: db/domainDropSets.ts:139
+#: db/domainDropSets.ts:140
 msgctxt "db.domainDropSets.dfec8a"
 msgid "Ruins of Thirsting Capital"
 msgstr ""
 
-#: db/domainDropSets.ts:173
+#: db/domainDropSets.ts:174
 msgctxt "db.domainDropSets.f12070"
 msgid "Electrostatic Field"
 msgstr ""
 
-#: db/domainDropSets.ts:159
+#: db/domainDropSets.ts:160
 msgctxt "db.domainDropSets.ffe184"
 msgid "Thundering Ruins"
 msgstr ""
 
-#: db/domains.ts:76
+#: db/domains.ts:77
 msgctxt "db.domains.011253"
 msgid "Hidden Palace of Lianshan Formula"
 msgstr ""
 
-#: db/domains.ts:118
+#: db/domains.ts:119
 msgctxt "db.domains.0cfa31"
 msgid "Forsaken Rift"
 msgstr ""
 
-#: db/domains.ts:230
+#: db/domains.ts:231
 msgctxt "db.domains.1a6b1b"
 msgid "Primo Geovishap"
 msgstr ""
 
-#: db/domains.ts:174
+#: db/domains.ts:175
 msgctxt "db.domains.1c6c7d"
 msgid "Ridge Watch"
 msgstr ""
 
-#: db/domains.ts:202
+#: db/domains.ts:203
 msgctxt "db.domains.20c902"
 msgid "Anemo Hypostasis"
 msgstr ""
 
-#: db/domains.ts:83
+#: db/domains.ts:84
 msgctxt "db.domains.24e0e0"
 msgid "Midsummer Courtyard"
 msgstr ""
 
-#: db/domains.ts:125
+#: db/domains.ts:126
 msgctxt "db.domains.2bbe8b"
 msgid "Taishan Mansion"
 msgstr ""
 
-#: db/domains.ts:258
+#: db/domains.ts:259
 msgctxt "db.domains.2d6984"
 msgid "Pyro Regisvine"
 msgstr ""
 
-#: db/domains.ts:167
+#: db/domains.ts:168
 msgctxt "db.domains.2e59fb"
 msgid "Narukami Island: Tenshukaku"
 msgstr ""
 
-#: db/domains.ts:286
+#: db/domains.ts:287
 msgctxt "db.domains.31c6bb"
 msgid "Hydro Hypostasis"
 msgstr ""
 
-#: db/domains.ts:216
+#: db/domains.ts:217
 msgctxt "db.domains.5749e3"
 msgid "Cryo Regisvine"
 msgstr ""
 
-#: db/domains.ts:104
+#: db/domains.ts:105
 msgctxt "db.domains.5d9d5d"
 msgid "Hidden Palace of Zhou Formula"
 msgstr ""
 
-#: db/domains.ts:293
+#: db/domains.ts:294
 msgctxt "db.domains.68fb19"
 msgid "Golden Wolflord"
 msgstr ""
 
-#: db/domains.ts:195
+#: db/domains.ts:196
 msgctxt "db.domains.6ea1ac"
 msgid "Court of Flowing Sand"
 msgstr ""
 
-#: db/domains.ts:181
+#: db/domains.ts:182
 msgctxt "db.domains.6f9aa8"
 msgid "Momiji-Dyed Court"
 msgstr ""
 
-#: db/domains.ts:139
+#: db/domains.ts:140
 msgctxt "db.domains.70d1b9"
 msgid "Wolf of the North Challenge"
 msgstr ""
 
-#: db/domains.ts:188
+#: db/domains.ts:189
 msgctxt "db.domains.76827f"
 msgid "Violet Court"
 msgstr ""
 
-#: db/domains.ts:237
+#: db/domains.ts:238
 msgctxt "db.domains.7bb25e"
 msgid "Electro Hypostasis"
 msgstr ""
 
-#: db/domains.ts:97
+#: db/domains.ts:98
 msgctxt "db.domains.85e44a"
 msgid "Valley of Remembrance"
 msgstr ""
 
-#: db/domains.ts:153
+#: db/domains.ts:154
 msgctxt "db.domains.8e6257"
 msgid "Enter the Golden House"
 msgstr ""
 
-#: db/domains.ts:65
+#: db/domains.ts:66
 msgctxt "db.domains.a00160"
 msgid "Domain"
 msgstr ""
 
-#: db/domains.ts:223
+#: db/domains.ts:224
 msgctxt "db.domains.a0d4e3"
 msgid "Cryo Hypostasis"
 msgstr ""
 
-#: db/domains.ts:279
+#: db/domains.ts:280
 msgctxt "db.domains.a55538"
 msgid "Thunder Manifestation"
 msgstr ""
 
-#: db/domains.ts:265
+#: db/domains.ts:266
 msgctxt "db.domains.bd9e6f"
 msgid "Pyro Hypostasis"
 msgstr ""
 
-#: db/domains.ts:146
+#: db/domains.ts:147
 msgctxt "db.domains.c4c6cc"
 msgid "Peak of Vindagnyr"
 msgstr ""
 
-#: db/domains.ts:251
+#: db/domains.ts:252
 msgctxt "db.domains.d4a950"
 msgid "Rhodeia of Loch"
 msgstr ""
 
-#: db/domains.ts:160
+#: db/domains.ts:161
 msgctxt "db.domains.dbf3b5"
 msgid "Beneath the Dragon-Queller"
 msgstr ""
 
-#: db/domains.ts:300
+#: db/domains.ts:301
 msgctxt "db.domains.e0808d"
 msgid "Slumbering Court"
 msgstr ""
 
-#: db/domains.ts:209
+#: db/domains.ts:210
 msgctxt "db.domains.e09906"
 msgid "Maguu Kenki"
 msgstr ""
 
-#: db/domains.ts:244
+#: db/domains.ts:245
 msgctxt "db.domains.e2e8f5"
 msgid "Geo Hypostasis"
 msgstr ""
 
-#: db/domains.ts:272
+#: db/domains.ts:273
 msgctxt "db.domains.f07d15"
 msgid "Perpetual Mechanical Array"
 msgstr ""
 
-#: db/domains.ts:132
+#: db/domains.ts:308
+msgctxt "db.domains.f3ba00"
+msgid "Bathysmal Vishap Herd"
+msgstr ""
+
+#: db/domains.ts:133
 msgctxt "db.domains.f93fee"
 msgid "Confront Stormterror"
 msgstr ""
 
-#: db/domains.ts:90
+#: db/domains.ts:91
 msgctxt "db.domains.fc295a"
 msgid "Domain of Guyun"
 msgstr ""
 
-#: db/domains.ts:111
+#: db/domains.ts:112
 msgctxt "db.domains.fc83f4"
 msgid "Clear Pool and Mountain Cavern"
 msgstr ""
 
-#: db/domains.ts:69
+#: db/domains.ts:70
 msgctxt "db.domains.fe4688"
 msgid "Cecilia Garden"
 msgstr ""
@@ -3381,27 +3386,27 @@ msgctxt "db.map.fbe305"
 msgid "Qingxu Pool"
 msgstr ""
 
-#: db/regions.ts:171
+#: db/regions.ts:172
 msgctxt "db.regions.06cea1"
 msgid "Inazuma"
 msgstr ""
 
-#: db/regions.ts:191
+#: db/regions.ts:193
 msgctxt "db.regions.38ab8d"
 msgid "Snezhnaya"
 msgstr ""
 
-#: db/regions.ts:97
+#: db/regions.ts:98
 msgctxt "db.regions.5a37ea"
 msgid "Mondstadt"
 msgstr ""
 
-#: db/regions.ts:135
+#: db/regions.ts:136
 msgctxt "db.regions.691c58"
 msgid "Liyue"
 msgstr ""
 
-#: db/regions.ts:93
+#: db/regions.ts:94
 msgctxt "db.regions.967696"
 msgid "Region"
 msgstr ""
