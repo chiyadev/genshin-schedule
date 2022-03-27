@@ -14,6 +14,7 @@ import {
   HellfireButterfly,
   Light,
   MoltenMoment,
+  MudraOfTheMaleficGeneral,
   Prosperity,
   Resistance,
   RingOfBoreas,
@@ -596,6 +597,16 @@ export const YaeMiko: Character = {
   commonMaterials: [SeaGanoderma, Handguard],
 };
 
+export const Ayato: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Ayato" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Kamisato_Ayato",
+  materials: [VarunadaLazurite, DewOfRepudiation],
+  talentMaterialWeekly: MudraOfTheMaleficGeneral,
+  talentMaterial: Elegance,
+  commonMaterials: [SakuraBloom, Handguard],
+};
+
 export const Characters = [
   // https://github.com/chiyadev/genshin-schedule/issues/11
   //TravelerAnemo,
@@ -605,6 +616,7 @@ export const Characters = [
   Aloy,
   Amber,
   Ayaka,
+  Ayato,
   Barbara,
   Beidou,
   Bennett,

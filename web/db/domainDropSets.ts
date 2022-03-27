@@ -7,6 +7,7 @@ import {
   BraveHeart,
   CrimsonWitchOfFlames,
   DefendersWill,
+  EchoesOfAnOffering,
   EmblemOfSeveredFate,
   Gambler,
   GladiatorsFinale,
@@ -35,6 +36,7 @@ import {
   Thundersoother,
   TinyMiracle,
   TravelingDoctor,
+  VermillionHereafter,
   ViridescentVenerer,
   WanderersTroupe,
 } from "./artifacts";
@@ -550,6 +552,13 @@ export const EndOfTheOneiricEuthymiaDrops: DomainDropSet = {
   itemsAux: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe],
 };
 
+export const TheLostValleyDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [EchoesOfAnOffering, VermillionHereafter],
+  itemsAux: [DefendersWill, BraveHeart],
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
@@ -605,4 +614,5 @@ export const DomainDropSets = [
   SlumberingCourtDrops,
   BathysmalVishapHerdDrops,
   EndOfTheOneiricEuthymiaDrops,
+  TheLostValleyDrops,
 ];

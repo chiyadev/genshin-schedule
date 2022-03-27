@@ -312,6 +312,13 @@ export const FluorescentFungus: CommonMaterial = {
   wiki: "https://genshin-impact.fandom.com/wiki/Fluorescent_Fungus",
 };
 
+export const Statuette: CommonMaterial = {
+  type: "Common Ascension Material",
+  name: registerMessage({ defaultMessage: "Statuette" }),
+  item: registerMessage({ defaultMessage: "Gloomy Statuette" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Gloomy_Statuette",
+};
+
 export const CommonMaterials = [
   BoneShard,
   CallaLily,
@@ -355,4 +362,5 @@ export const CommonMaterials = [
   SangoPearl,
   ConcealedClaw,
   FluorescentFungus,
+  Statuette,
 ];

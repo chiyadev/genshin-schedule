@@ -36,6 +36,7 @@ import {
   WolfOfTheNorthChallenge,
   BathysmalVishapHerd,
   EndOfTheOneiricEuthymia,
+  TheLostValley,
 } from "./domains";
 import { registerMessage } from "../utils";
 
@@ -98,6 +99,7 @@ export const DomainOfBlessing: DomainCategory = {
     RidgeWatch,
     MomijiDyedCourt,
     SlumberingCourt,
+    TheLostValley,
   ],
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Domains_of_Blessing",
   colorHint: "yellow",

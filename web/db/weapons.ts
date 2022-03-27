@@ -28,6 +28,7 @@ import {
   SamachurlScroll,
   Slime,
   SpectralCore,
+  Statuette,
   TreasureHoarderInsignia,
   WhopperflowerNectar,
 } from "./commonMaterials";
@@ -194,6 +195,7 @@ add(registerMessage({ defaultMessage: "Katsuragikiri Nagamasa" }), Narukami, [Ch
 add(registerMessage({ defaultMessage: "Mouun's Moon" }), Narukami, [MirrorPrism, SpectralCore]);
 add(registerMessage({ defaultMessage: "Predator" }), Narukami, [MirrorPrism, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "Redhorn Stonethresher" }), Narukami, [ConcealedClaw, Handguard]);
+add(registerMessage({ defaultMessage: "Haran Geppaku Futsu" }), Narukami, [Statuette, Handguard]);
 
 // Mask
 add(registerMessage({ defaultMessage: "Engulfing Lightning" }), NarukamiMask, [ChaosGear, Handguard]);

@@ -32,6 +32,7 @@ import {
   RidgeWatch,
   SlumberingCourt,
   TaishanMansion,
+  TheLostValley,
   ThunderManifestation,
   ValleyOfRemembrance,
   VioletCourt,
@@ -41,6 +42,7 @@ import {
   Albedo,
   Amber,
   Ayaka,
+  Ayato,
   Barbara,
   Beidou,
   Bennett,
@@ -150,6 +152,7 @@ export const Liyue: Region = {
     GeoHypostasis,
     RhodeiaOfLoch,
     PyroRegisvine,
+    TheLostValley,
   ],
   characters: [
     Beidou,
@@ -188,7 +191,7 @@ export const Inazuma: Region = {
     BathysmalVishapHerd,
     EndOfTheOneiricEuthymia,
   ],
-  characters: [Ayaka, Gorou, Itto, Kazuha, Kokomi, Sara, RaidenShogun, Sayu, Thoma, YaeMiko, Yoimiya],
+  characters: [Ayaka, Ayato, Gorou, Itto, Kazuha, Kokomi, Sara, RaidenShogun, Sayu, Thoma, YaeMiko, Yoimiya],
 };
 
 export const Snezhnaya: Region = {

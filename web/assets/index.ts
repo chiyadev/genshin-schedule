@@ -22,6 +22,7 @@ import AquilaFavonia from "./game/Aquila Favonia.png";
 import ArchaicPetra from "./game/Archaic Petra.png";
 import AshenHeart from "./game/Ashen Heart.png";
 import Ayaka from "./game/Ayaka.png";
+import Ayato from "./game/Ayato.png";
 import BackgroundAyaka from "./game/BackgroundAyaka.png";
 import BackgroundDiluc from "./game/BackgroundDiluc.png";
 import BackgroundHuTao from "./game/BackgroundHuTao.png";
@@ -118,6 +119,7 @@ import DragonspineSpear from "./game/Dragonspine Spear.png";
 import DvalinsClaw from "./game/Dvalin's Claw.png";
 import DvalinsPlume from "./game/Dvalin's Plume.png";
 import DvalinsSigh from "./game/Dvalin's Sigh.png";
+import EchoesofanOffering from "./game/Echoes of an Offering.png";
 import ElectroCrystal from "./game/Electro Crystal.png";
 import Electro from "./game/Electro.png";
 import ElegyfortheEnd from "./game/Elegy for the End.png";
@@ -161,6 +163,7 @@ import Geo from "./game/Geo.png";
 import GildedScale from "./game/Gilded Scale.png";
 import GladiatorsFinale from "./game/Gladiator's Finale.png";
 import GlazeLily from "./game/Glaze Lily.png";
+import GloomyStatuette from "./game/Gloomy Statuette.png";
 import Gorou from "./game/Gorou.png";
 import GrainofAerosiderite from "./game/Grain of Aerosiderite.png";
 import GrayCircle from "./game/Gray Circle.png";
@@ -169,6 +172,7 @@ import GuidanceoftheLand from "./game/Guidance of the Land.png";
 import HakushinRing from "./game/Hakushin Ring.png";
 import Halberd from "./game/Halberd.png";
 import Hamayumi from "./game/Hamayumi.png";
+import HaranGeppakuFutsu from "./game/Haran Geppaku Futsu.png";
 import HarbingerofDawn from "./game/Harbinger of Dawn.png";
 import HeavyHorn from "./game/Heavy Horn.png";
 import HellfireButterfly from "./game/Hellfire Butterfly.png";
@@ -401,6 +405,7 @@ import Valberry from "./game/Valberry.png";
 import VarunadaLazuriteSilver from "./game/Varunada Lazurite Silver.png";
 import VayudaTurquoiseSilver from "./game/Vayuda Turquoise Silver.png";
 import Venti from "./game/Venti.png";
+import VermillionHereafter from "./game/Vermillion Hereafter.png";
 import Violetgrass from "./game/Violetgrass.png";
 import ViridescentVenerer from "./game/Viridescent Venerer.png";
 import VitalizedDragontooth from "./game/Vitalized Dragontooth.png";
@@ -462,6 +467,7 @@ export {
   ArchaicPetra,
   AshenHeart,
   Ayaka,
+  Ayato,
   BackgroundAyaka,
   BackgroundDiluc,
   BackgroundHuTao,
@@ -558,6 +564,7 @@ export {
   DvalinsClaw,
   DvalinsPlume,
   DvalinsSigh,
+  EchoesofanOffering,
   ElectroCrystal,
   Electro,
   ElegyfortheEnd,
@@ -601,6 +608,7 @@ export {
   GildedScale,
   GladiatorsFinale,
   GlazeLily,
+  GloomyStatuette,
   Gorou,
   GrainofAerosiderite,
   GrayCircle,
@@ -609,6 +617,7 @@ export {
   HakushinRing,
   Halberd,
   Hamayumi,
+  HaranGeppakuFutsu,
   HarbingerofDawn,
   HeavyHorn,
   HellfireButterfly,
@@ -841,6 +850,7 @@ export {
   VarunadaLazuriteSilver,
   VayudaTurquoiseSilver,
   Venti,
+  VermillionHereafter,
   Violetgrass,
   ViridescentVenerer,
   VitalizedDragontooth,
@@ -904,6 +914,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Archaic Petra": return ArchaicPetra.src;
     case "Ashen Heart": return AshenHeart.src;
     case "Ayaka": return Ayaka.src;
+    case "Ayato": return Ayato.src;
     case "BackgroundAyaka": return BackgroundAyaka.src;
     case "BackgroundDiluc": return BackgroundDiluc.src;
     case "BackgroundHuTao": return BackgroundHuTao.src;
@@ -1000,6 +1011,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Dvalin's Claw": return DvalinsClaw.src;
     case "Dvalin's Plume": return DvalinsPlume.src;
     case "Dvalin's Sigh": return DvalinsSigh.src;
+    case "Echoes of an Offering": return EchoesofanOffering.src;
     case "Electro Crystal": return ElectroCrystal.src;
     case "Electro": return Electro.src;
     case "Elegy for the End": return ElegyfortheEnd.src;
@@ -1043,6 +1055,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Gilded Scale": return GildedScale.src;
     case "Gladiator's Finale": return GladiatorsFinale.src;
     case "Glaze Lily": return GlazeLily.src;
+    case "Gloomy Statuette": return GloomyStatuette.src;
     case "Gorou": return Gorou.src;
     case "Grain of Aerosiderite": return GrainofAerosiderite.src;
     case "Gray Circle": return GrayCircle.src;
@@ -1051,6 +1064,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Hakushin Ring": return HakushinRing.src;
     case "Halberd": return Halberd.src;
     case "Hamayumi": return Hamayumi.src;
+    case "Haran Geppaku Futsu": return HaranGeppakuFutsu.src;
     case "Harbinger of Dawn": return HarbingerofDawn.src;
     case "Heavy Horn": return HeavyHorn.src;
     case "Hellfire Butterfly": return HellfireButterfly.src;
@@ -1283,6 +1297,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Varunada Lazurite Silver": return VarunadaLazuriteSilver.src;
     case "Vayuda Turquoise Silver": return VayudaTurquoiseSilver.src;
     case "Venti": return Venti.src;
+    case "Vermillion Hereafter": return VermillionHereafter.src;
     case "Violetgrass": return Violetgrass.src;
     case "Viridescent Venerer": return ViridescentVenerer.src;
     case "Vitalized Dragontooth": return VitalizedDragontooth.src;

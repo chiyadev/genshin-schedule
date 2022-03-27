@@ -54,8 +54,10 @@ import {
   SlumberingCourtDrops,
   BathysmalVishapHerdDrops,
   EndOfTheOneiricEuthymiaDrops,
+  TheLostValleyDrops,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
+import { EchoesOfAnOffering, VermillionHereafter } from "./artifacts";
 
 export type Domain = {
   type: "Domain";
@@ -318,6 +320,13 @@ export const EndOfTheOneiricEuthymia: Domain = {
   drops: [EndOfTheOneiricEuthymiaDrops],
 };
 
+export const TheLostValley: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "The Lost Valley" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/The_Lost_Valley",
+  drops: [TheLostValleyDrops],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -355,4 +364,5 @@ export const Domains = [
   SlumberingCourt,
   BathysmalVishapHerd,
   EndOfTheOneiricEuthymia,
+  TheLostValley,
 ];
