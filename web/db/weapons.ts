@@ -186,6 +186,7 @@ add(registerMessage({ defaultMessage: "Amenoma Kageuchi" }), BranchOfDistantSea,
 add(registerMessage({ defaultMessage: "Everlasting Moonglow" }), BranchOfDistantSea, [MirrorPrism, SpectralCore]);
 add(registerMessage({ defaultMessage: "Hakushin Ring" }), BranchOfDistantSea, [MirrorPrism, SamachurlScroll]);
 add(registerMessage({ defaultMessage: "Mistsplitter Reforged" }), BranchOfDistantSea, [ChaosGear, Handguard]);
+add(registerMessage({ defaultMessage: "Oathsworn Eye" }), BranchOfDistantSea, [ConcealedClaw, SpectralCore]);
 
 // Narukami
 add(registerMessage({ defaultMessage: "Hamayumi" }), Narukami, [MirrorPrism, HilichurlArrowhead]);
@@ -200,3 +201,4 @@ add(registerMessage({ defaultMessage: "Kitain Cross Spear" }), NarukamiMask, [Ch
 add(registerMessage({ defaultMessage: "Polar Star" }), NarukamiMask, [ConcealedClaw, SpectralCore]);
 add(registerMessage({ defaultMessage: "The Catch" }), NarukamiMask, [ChaosGear, SpectralCore]);
 add(registerMessage({ defaultMessage: "Wavebreaker's Fin" }), NarukamiMask, [ConcealedClaw, Handguard]);
+add(registerMessage({ defaultMessage: "Kagura's Verity" }), NarukamiMask, [ConcealedClaw, SpectralCore]);

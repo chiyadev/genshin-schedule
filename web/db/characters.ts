@@ -22,6 +22,7 @@ import {
   SpiritLocketOfBoreas,
   TailOfBoreas,
   TalentMaterial,
+  TheMeaningOfAeons,
   Transience,
   TuskOfMonocerosCaeli,
 } from "./talentMaterials";
@@ -585,6 +586,16 @@ export const Shenhe: Character = {
   commonMaterials: [WhopperflowerNectar, Qingxin],
 };
 
+export const YaeMiko: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Yae Miko" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Yae_Miko",
+  materials: [VajradaAmethyst, DragonheirsFalseFin],
+  talentMaterialWeekly: TheMeaningOfAeons,
+  talentMaterial: Light,
+  commonMaterials: [SeaGanoderma, Handguard],
+};
+
 export const Characters = [
   // https://github.com/chiyadev/genshin-schedule/issues/11
   //TravelerAnemo,
@@ -631,6 +642,7 @@ export const Characters = [
   Xiao,
   Xingqiu,
   Xinyan,
+  YaeMiko,
   Yanfei,
   Yoimiya,
   YunJin,

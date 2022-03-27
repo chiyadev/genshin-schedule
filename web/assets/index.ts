@@ -191,6 +191,7 @@ import Jean from "./game/Jean.png";
 import JueyunChili from "./game/Jueyun Chili.png";
 import JuvenileJade from "./game/Juvenile Jade.png";
 import Kaeya from "./game/Kaeya.png";
+import KagurasVerity from "./game/Kagura's Verity.png";
 import KatsuragikiriNagamasa from "./game/Katsuragikiri Nagamasa.png";
 import Kazuha from "./game/Kazuha.png";
 import Keqing from "./game/Keqing.png";
@@ -235,6 +236,7 @@ import Mona from "./game/Mona.png";
 import Mondstadt from "./game/Mondstadt.png";
 import Mora from "./game/Mora.png";
 import MouunsMoon from "./game/Mouun's Moon.png";
+import MudraoftheMaleficGeneral from "./game/Mudra of the Malefic General.png";
 import Mushroom from "./game/Mushroom.png";
 import MysticEnhancementOre from "./game/Mystic Enhancement Ore.png";
 import NakuWeed from "./game/Naku Weed.png";
@@ -243,6 +245,7 @@ import Ningguang from "./game/Ningguang.png";
 import NoblesseOblige from "./game/Noblesse Oblige.png";
 import NoctilucousJade from "./game/Noctilucous Jade.png";
 import Noelle from "./game/Noelle.png";
+import OathswornEye from "./game/Oathsworn Eye.png";
 import OceanConqueror from "./game/Ocean Conqueror.png";
 import OceanHuedClam from "./game/Ocean-Hued Clam.png";
 import OldHandguard from "./game/Old Handguard.png";
@@ -365,6 +368,7 @@ import TeachingsofProsperity from "./game/Teachings of Prosperity.png";
 import TeachingsofResistance from "./game/Teachings of Resistance.png";
 import TeachingsofTransience from "./game/Teachings of Transience.png";
 import TealCircle from "./game/Teal Circle.png";
+import TearsoftheCalamitousGod from "./game/Tears of the Calamitous God.png";
 import TenacityoftheMillelith from "./game/Tenacity of the Millelith.png";
 import TheAlleyFlash from "./game/The Alley Flash.png";
 import TheBell from "./game/The Bell.png";
@@ -372,6 +376,7 @@ import TheBlackSword from "./game/The Black Sword.png";
 import TheCatch from "./game/The Catch.png";
 import TheExile from "./game/The Exile.png";
 import TheFlute from "./game/The Flute.png";
+import TheMeaningofAeons from "./game/The Meaning of Aeons.png";
 import TheStringless from "./game/The Stringless.png";
 import TheUnforged from "./game/The Unforged.png";
 import TheViridescentHunt from "./game/The Viridescent Hunt.png";
@@ -425,6 +430,7 @@ import Xiangling from "./game/Xiangling.png";
 import Xiao from "./game/Xiao.png";
 import Xingqiu from "./game/Xingqiu.png";
 import Xinyan from "./game/Xinyan.png";
+import YaeMiko from "./game/Yae Miko.png";
 import Yanfei from "./game/Yanfei.png";
 import YellowCircle from "./game/Yellow Circle.png";
 import YellowDye from "./game/Yellow Dye.png";
@@ -625,6 +631,7 @@ export {
   JueyunChili,
   JuvenileJade,
   Kaeya,
+  KagurasVerity,
   KatsuragikiriNagamasa,
   Kazuha,
   Keqing,
@@ -669,6 +676,7 @@ export {
   Mondstadt,
   Mora,
   MouunsMoon,
+  MudraoftheMaleficGeneral,
   Mushroom,
   MysticEnhancementOre,
   NakuWeed,
@@ -677,6 +685,7 @@ export {
   NoblesseOblige,
   NoctilucousJade,
   Noelle,
+  OathswornEye,
   OceanConqueror,
   OceanHuedClam,
   OldHandguard,
@@ -799,6 +808,7 @@ export {
   TeachingsofResistance,
   TeachingsofTransience,
   TealCircle,
+  TearsoftheCalamitousGod,
   TenacityoftheMillelith,
   TheAlleyFlash,
   TheBell,
@@ -806,6 +816,7 @@ export {
   TheCatch,
   TheExile,
   TheFlute,
+  TheMeaningofAeons,
   TheStringless,
   TheUnforged,
   TheViridescentHunt,
@@ -859,6 +870,7 @@ export {
   Xiao,
   Xingqiu,
   Xinyan,
+  YaeMiko,
   Yanfei,
   YellowCircle,
   YellowDye,
@@ -1061,6 +1073,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Jueyun Chili": return JueyunChili.src;
     case "Juvenile Jade": return JuvenileJade.src;
     case "Kaeya": return Kaeya.src;
+    case "Kagura's Verity": return KagurasVerity.src;
     case "Katsuragikiri Nagamasa": return KatsuragikiriNagamasa.src;
     case "Kazuha": return Kazuha.src;
     case "Keqing": return Keqing.src;
@@ -1105,6 +1118,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Mondstadt": return Mondstadt.src;
     case "Mora": return Mora.src;
     case "Mouun's Moon": return MouunsMoon.src;
+    case "Mudra of the Malefic General": return MudraoftheMaleficGeneral.src;
     case "Mushroom": return Mushroom.src;
     case "Mystic Enhancement Ore": return MysticEnhancementOre.src;
     case "Naku Weed": return NakuWeed.src;
@@ -1113,6 +1127,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Noblesse Oblige": return NoblesseOblige.src;
     case "Noctilucous Jade": return NoctilucousJade.src;
     case "Noelle": return Noelle.src;
+    case "Oathsworn Eye": return OathswornEye.src;
     case "Ocean Conqueror": return OceanConqueror.src;
     case "Ocean-Hued Clam": return OceanHuedClam.src;
     case "Old Handguard": return OldHandguard.src;
@@ -1235,6 +1250,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Teachings of Resistance": return TeachingsofResistance.src;
     case "Teachings of Transience": return TeachingsofTransience.src;
     case "Teal Circle": return TealCircle.src;
+    case "Tears of the Calamitous God": return TearsoftheCalamitousGod.src;
     case "Tenacity of the Millelith": return TenacityoftheMillelith.src;
     case "The Alley Flash": return TheAlleyFlash.src;
     case "The Bell": return TheBell.src;
@@ -1242,6 +1258,7 @@ export function getAssetByName(name: string): string | undefined {
     case "The Catch": return TheCatch.src;
     case "The Exile": return TheExile.src;
     case "The Flute": return TheFlute.src;
+    case "The Meaning of Aeons": return TheMeaningofAeons.src;
     case "The Stringless": return TheStringless.src;
     case "The Unforged": return TheUnforged.src;
     case "The Viridescent Hunt": return TheViridescentHunt.src;
@@ -1295,6 +1312,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Xiao": return Xiao.src;
     case "Xingqiu": return Xingqiu.src;
     case "Xinyan": return Xinyan.src;
+    case "Yae Miko": return YaeMiko.src;
     case "Yanfei": return Yanfei.src;
     case "Yellow Circle": return YellowCircle.src;
     case "Yellow Dye": return YellowDye.src;

@@ -53,6 +53,7 @@ import {
   GoldenWolflordDrops,
   SlumberingCourtDrops,
   BathysmalVishapHerdDrops,
+  EndOfTheOneiricEuthymiaDrops,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
 
@@ -310,6 +311,13 @@ export const BathysmalVishapHerd: Domain = {
   drops: [BathysmalVishapHerdDrops],
 };
 
+export const EndOfTheOneiricEuthymia: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "End of the Oneiric Euthymia" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/End_of_the_Oneiric_Euthymia",
+  drops: [EndOfTheOneiricEuthymiaDrops],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -346,4 +354,5 @@ export const Domains = [
   GoldenWolflord,
   SlumberingCourt,
   BathysmalVishapHerd,
+  EndOfTheOneiricEuthymia,
 ];

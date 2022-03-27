@@ -11,6 +11,7 @@ import {
   Domain,
   DomainOfGuyun,
   ElectroHypostasis,
+  EndOfTheOneiricEuthymia,
   EnterTheGoldenHouse,
   ForsakenRift,
   GeoHypostasis,
@@ -76,6 +77,7 @@ import {
   Xiao,
   Xingqiu,
   Xinyan,
+  YaeMiko,
   Yanfei,
   Yoimiya,
   YunJin,
@@ -184,8 +186,9 @@ export const Inazuma: Region = {
     GoldenWolflord,
     SlumberingCourt,
     BathysmalVishapHerd,
+    EndOfTheOneiricEuthymia,
   ],
-  characters: [Ayaka, Gorou, Itto, Kazuha, Kokomi, Sara, RaidenShogun, Sayu, Thoma, Yoimiya],
+  characters: [Ayaka, Gorou, Itto, Kazuha, Kokomi, Sara, RaidenShogun, Sayu, Thoma, YaeMiko, Yoimiya],
 };
 
 export const Snezhnaya: Region = {

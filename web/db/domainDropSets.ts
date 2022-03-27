@@ -76,6 +76,9 @@ import {
   MoltenMoment,
   HellfireButterfly,
   AshenHeart,
+  MudraOfTheMaleficGeneral,
+  TheMeaningOfAeons,
+  TearsOfTheCalamitousGod,
 } from "./talentMaterials";
 import { Weekday } from "../utils/time";
 import { registerMessage } from "../utils";
@@ -540,6 +543,13 @@ export const BathysmalVishapHerdDrops: DomainDropSet = {
   ],
 };
 
+export const EndOfTheOneiricEuthymiaDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Trounce,
+  items: [VajradaAmethyst, MudraOfTheMaleficGeneral, TheMeaningOfAeons, TearsOfTheCalamitousGod],
+  itemsAux: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe],
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
@@ -594,4 +604,5 @@ export const DomainDropSets = [
   GoldenWolflordDrops,
   SlumberingCourtDrops,
   BathysmalVishapHerdDrops,
+  EndOfTheOneiricEuthymiaDrops,
 ];

@@ -35,6 +35,7 @@ import {
   VioletCourt,
   WolfOfTheNorthChallenge,
   BathysmalVishapHerd,
+  EndOfTheOneiricEuthymia,
 } from "./domains";
 import { registerMessage } from "../utils";
 
@@ -59,6 +60,7 @@ export const Trounce: DomainCategory = {
     EnterTheGoldenHouse,
     BeneathTheDragonQueller,
     NarukamiIslandTenshukaku,
+    EndOfTheOneiricEuthymia,
   ],
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Weekly_Bosses",
   colorHint: "green",
