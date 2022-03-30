@@ -164,3 +164,10 @@ export const DragonheirsFalseFin: CharacterMaterial = {
   item: registerMessage({ defaultMessage: "Dragonheir's False Fin" }),
   wiki: "https://genshin-impact.fandom.com/wiki/Dragonheir%27s_False_Fin",
 };
+
+export const RunicFang: CharacterMaterial = {
+  type: "Character Ascension Material",
+  name: registerMessage({ defaultMessage: "Runic Fang" }),
+  item: registerMessage({ defaultMessage: "Runic Fang" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Runic_Fang",
+};

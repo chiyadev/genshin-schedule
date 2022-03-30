@@ -30,6 +30,7 @@ import {
   PyroRegisvine,
   RhodeiaOfLoch,
   RidgeWatch,
+  RuinSerpent,
   SlumberingCourt,
   TaishanMansion,
   TheLostValley,
@@ -153,6 +154,7 @@ export const Liyue: Region = {
     RhodeiaOfLoch,
     PyroRegisvine,
     TheLostValley,
+    RuinSerpent,
   ],
   characters: [
     Beidou,

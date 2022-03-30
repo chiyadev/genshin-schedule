@@ -55,6 +55,7 @@ import {
   BathysmalVishapHerdDrops,
   EndOfTheOneiricEuthymiaDrops,
   TheLostValleyDrops,
+  RuinSerpentDrops,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
 import { EchoesOfAnOffering, VermillionHereafter } from "./artifacts";
@@ -327,6 +328,13 @@ export const TheLostValley: Domain = {
   drops: [TheLostValleyDrops],
 };
 
+export const RuinSerpent: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Ruin Serpent" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Ruin_Serpent",
+  drops: [RuinSerpentDrops],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -365,4 +373,5 @@ export const Domains = [
   BathysmalVishapHerd,
   EndOfTheOneiricEuthymia,
   TheLostValley,
+  RuinSerpent,
 ];

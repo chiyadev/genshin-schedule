@@ -37,6 +37,7 @@ import {
   BathysmalVishapHerd,
   EndOfTheOneiricEuthymia,
   TheLostValley,
+  RuinSerpent,
 } from "./domains";
 import { registerMessage } from "../utils";
 
@@ -127,6 +128,7 @@ export const NormalBoss: DomainCategory = {
     ThunderManifestation,
     GoldenWolflord,
     BathysmalVishapHerd,
+    RuinSerpent,
   ],
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Normal_Bosses",
   colorHint: "purple",

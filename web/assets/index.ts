@@ -311,6 +311,7 @@ import RoyalGreatsword from "./game/Royal Greatsword.png";
 import RoyalGrimoire from "./game/Royal Grimoire.png";
 import RoyalLongsword from "./game/Royal Longsword.png";
 import RoyalSpear from "./game/Royal Spear.png";
+import RunicFang from "./game/Runic Fang.png";
 import Rust from "./game/Rust.png";
 import SacrificialBow from "./game/Sacrificial Bow.png";
 import SacrificialFragments from "./game/Sacrificial Fragments.png";
@@ -756,6 +757,7 @@ export {
   RoyalGrimoire,
   RoyalLongsword,
   RoyalSpear,
+  RunicFang,
   Rust,
   SacrificialBow,
   SacrificialFragments,
@@ -1203,6 +1205,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Royal Grimoire": return RoyalGrimoire.src;
     case "Royal Longsword": return RoyalLongsword.src;
     case "Royal Spear": return RoyalSpear.src;
+    case "Runic Fang": return RunicFang.src;
     case "Rust": return Rust.src;
     case "Sacrificial Bow": return SacrificialBow.src;
     case "Sacrificial Fragments": return SacrificialFragments.src;

@@ -101,6 +101,7 @@ import {
   PerpetualHeart,
   PrithivaTopaz,
   RiftbornRegalia,
+  RunicFang,
   ShivadaJade,
   SmolderingPearl,
   StormBeads,
@@ -556,7 +557,14 @@ export const TheLostValleyDrops: DomainDropSet = {
   type: "Domain Drop Set",
   days: Any,
   items: [EchoesOfAnOffering, VermillionHereafter],
-  itemsAux: [DefendersWill, BraveHeart],
+  itemsAux: [MartialArtist, Gambler],
+};
+
+export const RuinSerpentDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [PrithivaTopaz, RunicFang],
+  itemsAux: [TravelingDoctor, Instructor, TheExile, GladiatorsFinale, WanderersTroupe],
 };
 
 export const DomainDropSets = [
@@ -615,4 +623,5 @@ export const DomainDropSets = [
   BathysmalVishapHerdDrops,
   EndOfTheOneiricEuthymiaDrops,
   TheLostValleyDrops,
+  RuinSerpentDrops,
 ];
