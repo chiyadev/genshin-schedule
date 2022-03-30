@@ -189,6 +189,28 @@ export const AshenHeart: TalentMaterial = {
   wiki: "https://genshin-impact.fandom.com/wiki/Ashen_Heart",
 };
 
+export const MudraOfTheMaleficGeneral: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: registerMessage({ defaultMessage: "Mudra of the Malefic General" }),
+  item: registerMessage({ defaultMessage: "Mudra of the Malefic General" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Mudra_of_the_Malefic_General",
+};
+
+export const TheMeaningOfAeons: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: registerMessage({ defaultMessage: "The Meaning of Aeons" }),
+  item: registerMessage({ defaultMessage: "The Meaning of Aeons" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/The_Meaning_of_Aeons",
+};
+
+export const TearsOfTheCalamitousGod: TalentMaterial = {
+  type: "Talent Level-Up Material",
+  name: registerMessage({ defaultMessage: "Tears of the Calamitous God" }),
+  item: registerMessage({ defaultMessage: "Tears of the Calamitous God" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Tears_of_the_Calamitous_God",
+};
+
+
 export const TalentMaterials = [
   Freedom,
   Prosperity,
@@ -214,4 +236,7 @@ export const TalentMaterials = [
   MoltenMoment,
   HellfireButterfly,
   AshenHeart,
+  MudraOfTheMaleficGeneral,
+  TheMeaningOfAeons,
+  TearsOfTheCalamitousGod,
 ];

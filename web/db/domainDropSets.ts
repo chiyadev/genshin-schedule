@@ -7,6 +7,7 @@ import {
   BraveHeart,
   CrimsonWitchOfFlames,
   DefendersWill,
+  EchoesOfAnOffering,
   EmblemOfSeveredFate,
   Gambler,
   GladiatorsFinale,
@@ -35,6 +36,7 @@ import {
   Thundersoother,
   TinyMiracle,
   TravelingDoctor,
+  VermillionHereafter,
   ViridescentVenerer,
   WanderersTroupe,
 } from "./artifacts";
@@ -76,6 +78,9 @@ import {
   MoltenMoment,
   HellfireButterfly,
   AshenHeart,
+  MudraOfTheMaleficGeneral,
+  TheMeaningOfAeons,
+  TearsOfTheCalamitousGod,
 } from "./talentMaterials";
 import { Weekday } from "../utils/time";
 import { registerMessage } from "../utils";
@@ -96,6 +101,7 @@ import {
   PerpetualHeart,
   PrithivaTopaz,
   RiftbornRegalia,
+  RunicFang,
   ShivadaJade,
   SmolderingPearl,
   StormBeads,
@@ -540,6 +546,27 @@ export const BathysmalVishapHerdDrops: DomainDropSet = {
   ],
 };
 
+export const EndOfTheOneiricEuthymiaDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Trounce,
+  items: [VajradaAmethyst, MudraOfTheMaleficGeneral, TheMeaningOfAeons, TearsOfTheCalamitousGod],
+  itemsAux: [Berserker, Instructor, TheExile, GladiatorsFinale, WanderersTroupe],
+};
+
+export const TheLostValleyDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [EchoesOfAnOffering, VermillionHereafter],
+  itemsAux: [MartialArtist, Gambler],
+};
+
+export const RuinSerpentDrops: DomainDropSet = {
+  type: "Domain Drop Set",
+  days: Any,
+  items: [PrithivaTopaz, RunicFang],
+  itemsAux: [TravelingDoctor, Instructor, TheExile, GladiatorsFinale, WanderersTroupe],
+};
+
 export const DomainDropSets = [
   CityOfReflections,
   SubmergedValley,
@@ -594,4 +621,7 @@ export const DomainDropSets = [
   GoldenWolflordDrops,
   SlumberingCourtDrops,
   BathysmalVishapHerdDrops,
+  EndOfTheOneiricEuthymiaDrops,
+  TheLostValleyDrops,
+  RuinSerpentDrops,
 ];

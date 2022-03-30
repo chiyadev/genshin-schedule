@@ -28,6 +28,7 @@ import {
   SamachurlScroll,
   Slime,
   SpectralCore,
+  Statuette,
   TreasureHoarderInsignia,
   WhopperflowerNectar,
 } from "./commonMaterials";
@@ -186,6 +187,7 @@ add(registerMessage({ defaultMessage: "Amenoma Kageuchi" }), BranchOfDistantSea,
 add(registerMessage({ defaultMessage: "Everlasting Moonglow" }), BranchOfDistantSea, [MirrorPrism, SpectralCore]);
 add(registerMessage({ defaultMessage: "Hakushin Ring" }), BranchOfDistantSea, [MirrorPrism, SamachurlScroll]);
 add(registerMessage({ defaultMessage: "Mistsplitter Reforged" }), BranchOfDistantSea, [ChaosGear, Handguard]);
+add(registerMessage({ defaultMessage: "Oathsworn Eye" }), BranchOfDistantSea, [ConcealedClaw, SpectralCore]);
 
 // Narukami
 add(registerMessage({ defaultMessage: "Hamayumi" }), Narukami, [MirrorPrism, HilichurlArrowhead]);
@@ -193,6 +195,7 @@ add(registerMessage({ defaultMessage: "Katsuragikiri Nagamasa" }), Narukami, [Ch
 add(registerMessage({ defaultMessage: "Mouun's Moon" }), Narukami, [MirrorPrism, SpectralCore]);
 add(registerMessage({ defaultMessage: "Predator" }), Narukami, [MirrorPrism, HilichurlArrowhead]);
 add(registerMessage({ defaultMessage: "Redhorn Stonethresher" }), Narukami, [ConcealedClaw, Handguard]);
+add(registerMessage({ defaultMessage: "Haran Geppaku Futsu" }), Narukami, [Statuette, Handguard]);
 
 // Mask
 add(registerMessage({ defaultMessage: "Engulfing Lightning" }), NarukamiMask, [ChaosGear, Handguard]);
@@ -200,3 +203,4 @@ add(registerMessage({ defaultMessage: "Kitain Cross Spear" }), NarukamiMask, [Ch
 add(registerMessage({ defaultMessage: "Polar Star" }), NarukamiMask, [ConcealedClaw, SpectralCore]);
 add(registerMessage({ defaultMessage: "The Catch" }), NarukamiMask, [ChaosGear, SpectralCore]);
 add(registerMessage({ defaultMessage: "Wavebreaker's Fin" }), NarukamiMask, [ConcealedClaw, Handguard]);
+add(registerMessage({ defaultMessage: "Kagura's Verity" }), NarukamiMask, [ConcealedClaw, SpectralCore]);

@@ -22,6 +22,7 @@ import AquilaFavonia from "./game/Aquila Favonia.png";
 import ArchaicPetra from "./game/Archaic Petra.png";
 import AshenHeart from "./game/Ashen Heart.png";
 import Ayaka from "./game/Ayaka.png";
+import Ayato from "./game/Ayato.png";
 import BackgroundAyaka from "./game/BackgroundAyaka.png";
 import BackgroundDiluc from "./game/BackgroundDiluc.png";
 import BackgroundHuTao from "./game/BackgroundHuTao.png";
@@ -118,6 +119,7 @@ import DragonspineSpear from "./game/Dragonspine Spear.png";
 import DvalinsClaw from "./game/Dvalin's Claw.png";
 import DvalinsPlume from "./game/Dvalin's Plume.png";
 import DvalinsSigh from "./game/Dvalin's Sigh.png";
+import EchoesofanOffering from "./game/Echoes of an Offering.png";
 import ElectroCrystal from "./game/Electro Crystal.png";
 import Electro from "./game/Electro.png";
 import ElegyfortheEnd from "./game/Elegy for the End.png";
@@ -161,6 +163,7 @@ import Geo from "./game/Geo.png";
 import GildedScale from "./game/Gilded Scale.png";
 import GladiatorsFinale from "./game/Gladiator's Finale.png";
 import GlazeLily from "./game/Glaze Lily.png";
+import GloomyStatuette from "./game/Gloomy Statuette.png";
 import Gorou from "./game/Gorou.png";
 import GrainofAerosiderite from "./game/Grain of Aerosiderite.png";
 import GrayCircle from "./game/Gray Circle.png";
@@ -169,6 +172,7 @@ import GuidanceoftheLand from "./game/Guidance of the Land.png";
 import HakushinRing from "./game/Hakushin Ring.png";
 import Halberd from "./game/Halberd.png";
 import Hamayumi from "./game/Hamayumi.png";
+import HaranGeppakuFutsu from "./game/Haran Geppaku Futsu.png";
 import HarbingerofDawn from "./game/Harbinger of Dawn.png";
 import HeavyHorn from "./game/Heavy Horn.png";
 import HellfireButterfly from "./game/Hellfire Butterfly.png";
@@ -191,6 +195,7 @@ import Jean from "./game/Jean.png";
 import JueyunChili from "./game/Jueyun Chili.png";
 import JuvenileJade from "./game/Juvenile Jade.png";
 import Kaeya from "./game/Kaeya.png";
+import KagurasVerity from "./game/Kagura's Verity.png";
 import KatsuragikiriNagamasa from "./game/Katsuragikiri Nagamasa.png";
 import Kazuha from "./game/Kazuha.png";
 import Keqing from "./game/Keqing.png";
@@ -235,6 +240,7 @@ import Mona from "./game/Mona.png";
 import Mondstadt from "./game/Mondstadt.png";
 import Mora from "./game/Mora.png";
 import MouunsMoon from "./game/Mouun's Moon.png";
+import MudraoftheMaleficGeneral from "./game/Mudra of the Malefic General.png";
 import Mushroom from "./game/Mushroom.png";
 import MysticEnhancementOre from "./game/Mystic Enhancement Ore.png";
 import NakuWeed from "./game/Naku Weed.png";
@@ -243,6 +249,7 @@ import Ningguang from "./game/Ningguang.png";
 import NoblesseOblige from "./game/Noblesse Oblige.png";
 import NoctilucousJade from "./game/Noctilucous Jade.png";
 import Noelle from "./game/Noelle.png";
+import OathswornEye from "./game/Oathsworn Eye.png";
 import OceanConqueror from "./game/Ocean Conqueror.png";
 import OceanHuedClam from "./game/Ocean-Hued Clam.png";
 import OldHandguard from "./game/Old Handguard.png";
@@ -304,6 +311,7 @@ import RoyalGreatsword from "./game/Royal Greatsword.png";
 import RoyalGrimoire from "./game/Royal Grimoire.png";
 import RoyalLongsword from "./game/Royal Longsword.png";
 import RoyalSpear from "./game/Royal Spear.png";
+import RunicFang from "./game/Runic Fang.png";
 import Rust from "./game/Rust.png";
 import SacrificialBow from "./game/Sacrificial Bow.png";
 import SacrificialFragments from "./game/Sacrificial Fragments.png";
@@ -365,6 +373,7 @@ import TeachingsofProsperity from "./game/Teachings of Prosperity.png";
 import TeachingsofResistance from "./game/Teachings of Resistance.png";
 import TeachingsofTransience from "./game/Teachings of Transience.png";
 import TealCircle from "./game/Teal Circle.png";
+import TearsoftheCalamitousGod from "./game/Tears of the Calamitous God.png";
 import TenacityoftheMillelith from "./game/Tenacity of the Millelith.png";
 import TheAlleyFlash from "./game/The Alley Flash.png";
 import TheBell from "./game/The Bell.png";
@@ -372,6 +381,7 @@ import TheBlackSword from "./game/The Black Sword.png";
 import TheCatch from "./game/The Catch.png";
 import TheExile from "./game/The Exile.png";
 import TheFlute from "./game/The Flute.png";
+import TheMeaningofAeons from "./game/The Meaning of Aeons.png";
 import TheStringless from "./game/The Stringless.png";
 import TheUnforged from "./game/The Unforged.png";
 import TheViridescentHunt from "./game/The Viridescent Hunt.png";
@@ -396,6 +406,7 @@ import Valberry from "./game/Valberry.png";
 import VarunadaLazuriteSilver from "./game/Varunada Lazurite Silver.png";
 import VayudaTurquoiseSilver from "./game/Vayuda Turquoise Silver.png";
 import Venti from "./game/Venti.png";
+import VermillionHereafter from "./game/Vermillion Hereafter.png";
 import Violetgrass from "./game/Violetgrass.png";
 import ViridescentVenerer from "./game/Viridescent Venerer.png";
 import VitalizedDragontooth from "./game/Vitalized Dragontooth.png";
@@ -425,6 +436,7 @@ import Xiangling from "./game/Xiangling.png";
 import Xiao from "./game/Xiao.png";
 import Xingqiu from "./game/Xingqiu.png";
 import Xinyan from "./game/Xinyan.png";
+import YaeMiko from "./game/Yae Miko.png";
 import Yanfei from "./game/Yanfei.png";
 import YellowCircle from "./game/Yellow Circle.png";
 import YellowDye from "./game/Yellow Dye.png";
@@ -456,6 +468,7 @@ export {
   ArchaicPetra,
   AshenHeart,
   Ayaka,
+  Ayato,
   BackgroundAyaka,
   BackgroundDiluc,
   BackgroundHuTao,
@@ -552,6 +565,7 @@ export {
   DvalinsClaw,
   DvalinsPlume,
   DvalinsSigh,
+  EchoesofanOffering,
   ElectroCrystal,
   Electro,
   ElegyfortheEnd,
@@ -595,6 +609,7 @@ export {
   GildedScale,
   GladiatorsFinale,
   GlazeLily,
+  GloomyStatuette,
   Gorou,
   GrainofAerosiderite,
   GrayCircle,
@@ -603,6 +618,7 @@ export {
   HakushinRing,
   Halberd,
   Hamayumi,
+  HaranGeppakuFutsu,
   HarbingerofDawn,
   HeavyHorn,
   HellfireButterfly,
@@ -625,6 +641,7 @@ export {
   JueyunChili,
   JuvenileJade,
   Kaeya,
+  KagurasVerity,
   KatsuragikiriNagamasa,
   Kazuha,
   Keqing,
@@ -669,6 +686,7 @@ export {
   Mondstadt,
   Mora,
   MouunsMoon,
+  MudraoftheMaleficGeneral,
   Mushroom,
   MysticEnhancementOre,
   NakuWeed,
@@ -677,6 +695,7 @@ export {
   NoblesseOblige,
   NoctilucousJade,
   Noelle,
+  OathswornEye,
   OceanConqueror,
   OceanHuedClam,
   OldHandguard,
@@ -738,6 +757,7 @@ export {
   RoyalGrimoire,
   RoyalLongsword,
   RoyalSpear,
+  RunicFang,
   Rust,
   SacrificialBow,
   SacrificialFragments,
@@ -799,6 +819,7 @@ export {
   TeachingsofResistance,
   TeachingsofTransience,
   TealCircle,
+  TearsoftheCalamitousGod,
   TenacityoftheMillelith,
   TheAlleyFlash,
   TheBell,
@@ -806,6 +827,7 @@ export {
   TheCatch,
   TheExile,
   TheFlute,
+  TheMeaningofAeons,
   TheStringless,
   TheUnforged,
   TheViridescentHunt,
@@ -830,6 +852,7 @@ export {
   VarunadaLazuriteSilver,
   VayudaTurquoiseSilver,
   Venti,
+  VermillionHereafter,
   Violetgrass,
   ViridescentVenerer,
   VitalizedDragontooth,
@@ -859,6 +882,7 @@ export {
   Xiao,
   Xingqiu,
   Xinyan,
+  YaeMiko,
   Yanfei,
   YellowCircle,
   YellowDye,
@@ -892,6 +916,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Archaic Petra": return ArchaicPetra.src;
     case "Ashen Heart": return AshenHeart.src;
     case "Ayaka": return Ayaka.src;
+    case "Ayato": return Ayato.src;
     case "BackgroundAyaka": return BackgroundAyaka.src;
     case "BackgroundDiluc": return BackgroundDiluc.src;
     case "BackgroundHuTao": return BackgroundHuTao.src;
@@ -988,6 +1013,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Dvalin's Claw": return DvalinsClaw.src;
     case "Dvalin's Plume": return DvalinsPlume.src;
     case "Dvalin's Sigh": return DvalinsSigh.src;
+    case "Echoes of an Offering": return EchoesofanOffering.src;
     case "Electro Crystal": return ElectroCrystal.src;
     case "Electro": return Electro.src;
     case "Elegy for the End": return ElegyfortheEnd.src;
@@ -1031,6 +1057,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Gilded Scale": return GildedScale.src;
     case "Gladiator's Finale": return GladiatorsFinale.src;
     case "Glaze Lily": return GlazeLily.src;
+    case "Gloomy Statuette": return GloomyStatuette.src;
     case "Gorou": return Gorou.src;
     case "Grain of Aerosiderite": return GrainofAerosiderite.src;
     case "Gray Circle": return GrayCircle.src;
@@ -1039,6 +1066,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Hakushin Ring": return HakushinRing.src;
     case "Halberd": return Halberd.src;
     case "Hamayumi": return Hamayumi.src;
+    case "Haran Geppaku Futsu": return HaranGeppakuFutsu.src;
     case "Harbinger of Dawn": return HarbingerofDawn.src;
     case "Heavy Horn": return HeavyHorn.src;
     case "Hellfire Butterfly": return HellfireButterfly.src;
@@ -1061,6 +1089,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Jueyun Chili": return JueyunChili.src;
     case "Juvenile Jade": return JuvenileJade.src;
     case "Kaeya": return Kaeya.src;
+    case "Kagura's Verity": return KagurasVerity.src;
     case "Katsuragikiri Nagamasa": return KatsuragikiriNagamasa.src;
     case "Kazuha": return Kazuha.src;
     case "Keqing": return Keqing.src;
@@ -1105,6 +1134,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Mondstadt": return Mondstadt.src;
     case "Mora": return Mora.src;
     case "Mouun's Moon": return MouunsMoon.src;
+    case "Mudra of the Malefic General": return MudraoftheMaleficGeneral.src;
     case "Mushroom": return Mushroom.src;
     case "Mystic Enhancement Ore": return MysticEnhancementOre.src;
     case "Naku Weed": return NakuWeed.src;
@@ -1113,6 +1143,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Noblesse Oblige": return NoblesseOblige.src;
     case "Noctilucous Jade": return NoctilucousJade.src;
     case "Noelle": return Noelle.src;
+    case "Oathsworn Eye": return OathswornEye.src;
     case "Ocean Conqueror": return OceanConqueror.src;
     case "Ocean-Hued Clam": return OceanHuedClam.src;
     case "Old Handguard": return OldHandguard.src;
@@ -1174,6 +1205,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Royal Grimoire": return RoyalGrimoire.src;
     case "Royal Longsword": return RoyalLongsword.src;
     case "Royal Spear": return RoyalSpear.src;
+    case "Runic Fang": return RunicFang.src;
     case "Rust": return Rust.src;
     case "Sacrificial Bow": return SacrificialBow.src;
     case "Sacrificial Fragments": return SacrificialFragments.src;
@@ -1235,6 +1267,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Teachings of Resistance": return TeachingsofResistance.src;
     case "Teachings of Transience": return TeachingsofTransience.src;
     case "Teal Circle": return TealCircle.src;
+    case "Tears of the Calamitous God": return TearsoftheCalamitousGod.src;
     case "Tenacity of the Millelith": return TenacityoftheMillelith.src;
     case "The Alley Flash": return TheAlleyFlash.src;
     case "The Bell": return TheBell.src;
@@ -1242,6 +1275,7 @@ export function getAssetByName(name: string): string | undefined {
     case "The Catch": return TheCatch.src;
     case "The Exile": return TheExile.src;
     case "The Flute": return TheFlute.src;
+    case "The Meaning of Aeons": return TheMeaningofAeons.src;
     case "The Stringless": return TheStringless.src;
     case "The Unforged": return TheUnforged.src;
     case "The Viridescent Hunt": return TheViridescentHunt.src;
@@ -1266,6 +1300,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Varunada Lazurite Silver": return VarunadaLazuriteSilver.src;
     case "Vayuda Turquoise Silver": return VayudaTurquoiseSilver.src;
     case "Venti": return Venti.src;
+    case "Vermillion Hereafter": return VermillionHereafter.src;
     case "Violetgrass": return Violetgrass.src;
     case "Viridescent Venerer": return ViridescentVenerer.src;
     case "Vitalized Dragontooth": return VitalizedDragontooth.src;
@@ -1295,6 +1330,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Xiao": return Xiao.src;
     case "Xingqiu": return Xingqiu.src;
     case "Xinyan": return Xinyan.src;
+    case "Yae Miko": return YaeMiko.src;
     case "Yanfei": return Yanfei.src;
     case "Yellow Circle": return YellowCircle.src;
     case "Yellow Dye": return YellowDye.src;

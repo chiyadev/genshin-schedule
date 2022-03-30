@@ -232,6 +232,18 @@ export const HuskOfOpulentDreams: Artifact = {
   wiki: "https://genshin-impact.fandom.com/wiki/Husk_of_Opulent_Dreams",
 };
 
+export const VermillionHereafter: Artifact = {
+  type: "Artifact",
+  name: registerMessage({ defaultMessage: "Vermillion Hereafter" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Vermillion_Hereafter",
+};
+
+export const EchoesOfAnOffering: Artifact = {
+  type: "Artifact",
+  name: registerMessage({ defaultMessage: "Echoes of an Offering" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Echoes_of_an_Offering",
+};
+
 export const Artifacts = [
   Adventurer,
   ArchaicPetra,
@@ -270,4 +282,6 @@ export const Artifacts = [
   EmblemOfSeveredFate,
   OceanHuedClam,
   HuskOfOpulentDreams,
+  VermillionHereafter,
+  EchoesOfAnOffering,
 ];

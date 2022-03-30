@@ -14,6 +14,7 @@ import {
   HellfireButterfly,
   Light,
   MoltenMoment,
+  MudraOfTheMaleficGeneral,
   Prosperity,
   Resistance,
   RingOfBoreas,
@@ -22,6 +23,7 @@ import {
   SpiritLocketOfBoreas,
   TailOfBoreas,
   TalentMaterial,
+  TheMeaningOfAeons,
   Transience,
   TuskOfMonocerosCaeli,
 } from "./talentMaterials";
@@ -585,6 +587,26 @@ export const Shenhe: Character = {
   commonMaterials: [WhopperflowerNectar, Qingxin],
 };
 
+export const YaeMiko: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Yae Miko" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Yae_Miko",
+  materials: [VajradaAmethyst, DragonheirsFalseFin],
+  talentMaterialWeekly: TheMeaningOfAeons,
+  talentMaterial: Light,
+  commonMaterials: [SeaGanoderma, Handguard],
+};
+
+export const Ayato: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Ayato" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Kamisato_Ayato",
+  materials: [VarunadaLazurite, DewOfRepudiation],
+  talentMaterialWeekly: MudraOfTheMaleficGeneral,
+  talentMaterial: Elegance,
+  commonMaterials: [SakuraBloom, Handguard],
+};
+
 export const Characters = [
   // https://github.com/chiyadev/genshin-schedule/issues/11
   //TravelerAnemo,
@@ -594,6 +616,7 @@ export const Characters = [
   Aloy,
   Amber,
   Ayaka,
+  Ayato,
   Barbara,
   Beidou,
   Bennett,
@@ -631,6 +654,7 @@ export const Characters = [
   Xiao,
   Xingqiu,
   Xinyan,
+  YaeMiko,
   Yanfei,
   Yoimiya,
   YunJin,

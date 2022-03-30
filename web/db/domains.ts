@@ -53,6 +53,9 @@ import {
   GoldenWolflordDrops,
   SlumberingCourtDrops,
   BathysmalVishapHerdDrops,
+  EndOfTheOneiricEuthymiaDrops,
+  TheLostValleyDrops,
+  RuinSerpentDrops,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
 
@@ -310,6 +313,27 @@ export const BathysmalVishapHerd: Domain = {
   drops: [BathysmalVishapHerdDrops],
 };
 
+export const EndOfTheOneiricEuthymia: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "End of the Oneiric Euthymia" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/End_of_the_Oneiric_Euthymia",
+  drops: [EndOfTheOneiricEuthymiaDrops],
+};
+
+export const TheLostValley: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "The Lost Valley" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/The_Lost_Valley",
+  drops: [TheLostValleyDrops],
+};
+
+export const RuinSerpent: Domain = {
+  type: "Domain",
+  name: registerMessage({ defaultMessage: "Ruin Serpent" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Ruin_Serpent",
+  drops: [RuinSerpentDrops],
+};
+
 export const Domains = [
   CeciliaGarden,
   HiddenPalaceOfLianshanFormula,
@@ -346,4 +370,7 @@ export const Domains = [
   GoldenWolflord,
   SlumberingCourt,
   BathysmalVishapHerd,
+  EndOfTheOneiricEuthymia,
+  TheLostValley,
+  RuinSerpent,
 ];

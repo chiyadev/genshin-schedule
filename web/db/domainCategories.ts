@@ -35,6 +35,9 @@ import {
   VioletCourt,
   WolfOfTheNorthChallenge,
   BathysmalVishapHerd,
+  EndOfTheOneiricEuthymia,
+  TheLostValley,
+  RuinSerpent,
 } from "./domains";
 import { registerMessage } from "../utils";
 
@@ -59,6 +62,7 @@ export const Trounce: DomainCategory = {
     EnterTheGoldenHouse,
     BeneathTheDragonQueller,
     NarukamiIslandTenshukaku,
+    EndOfTheOneiricEuthymia,
   ],
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Weekly_Bosses",
   colorHint: "green",
@@ -96,6 +100,7 @@ export const DomainOfBlessing: DomainCategory = {
     RidgeWatch,
     MomijiDyedCourt,
     SlumberingCourt,
+    TheLostValley,
   ],
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Domains_of_Blessing",
   colorHint: "yellow",
@@ -123,6 +128,7 @@ export const NormalBoss: DomainCategory = {
     ThunderManifestation,
     GoldenWolflord,
     BathysmalVishapHerd,
+    RuinSerpent,
   ],
   wiki: "https://genshin-impact.fandom.com/wiki/Category:Normal_Bosses",
   colorHint: "purple",
