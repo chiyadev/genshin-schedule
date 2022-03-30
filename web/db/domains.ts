@@ -58,7 +58,6 @@ import {
   RuinSerpentDrops,
 } from "./domainDropSets";
 import { registerMessage } from "../utils";
-import { EchoesOfAnOffering, VermillionHereafter } from "./artifacts";
 
 export type Domain = {
   type: "Domain";
