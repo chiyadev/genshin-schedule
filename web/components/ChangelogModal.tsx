@@ -23,8 +23,8 @@ function buildChangelog() {
   // To create a new changelog section, increment LatestChangelog counter by one
   // and ensure that the counter is equal to the key of the first element in this array.
   return [
-    <ChangelogSection key={41} date="2022/03/29">
-      <ChangelogItem github={115}>Add 2.5 and 2.6 characters, weapons and artifacts.</ChangelogItem>
+    <ChangelogSection key={41} date="2022/03/30">
+      <ChangelogItem github={115}>Added 2.5 and 2.6 characters, weapons and artifacts.</ChangelogItem>
     </ChangelogSection>,
     <ChangelogSection key={40} date="2022/03/19">
       <ChangelogItem>Upgraded all dependencies to the latest versions.</ChangelogItem>
