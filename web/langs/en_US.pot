@@ -1471,262 +1471,272 @@ msgctxt "db.characterMaterials.f20cfa"
 msgid "Varunada Lazurite Silver"
 msgstr ""
 
-#: db/characters.ts:372
+#: db/characters.ts:374
 msgctxt "db.characters.07f6ca"
 msgid "Zhongli"
 msgstr ""
 
-#: db/characters.ts:107
+#: db/characters.ts:109
 msgctxt "db.characters.096e0e"
 msgid "Character"
 msgstr ""
 
-#: db/characters.ts:202
+#: db/characters.ts:204
 msgctxt "db.characters.0e89af"
 msgid "Fischl"
 msgstr ""
 
-#: db/characters.ts:382
+#: db/characters.ts:384
 msgctxt "db.characters.17ba95"
 msgid "Xinyan"
 msgstr ""
 
-#: db/characters.ts:442
+#: db/characters.ts:444
 msgctxt "db.characters.18d80a"
 msgid "Xiao"
 msgstr ""
 
-#: db/characters.ts:552
+#: db/characters.ts:554
 msgctxt "db.characters.1a3695"
 msgid "Gorou"
 msgstr ""
 
-#: db/characters.ts:312
+#: db/characters.ts:314
 msgctxt "db.characters.1c8781"
 msgid "Venti"
 msgstr ""
 
-#: db/characters.ts:562
+#: db/characters.ts:564
 msgctxt "db.characters.24a6dc"
 msgid "Itto"
 msgstr ""
 
-#: db/characters.ts:392
+#: db/characters.ts:394
 msgctxt "db.characters.2fbbd1"
 msgid "Yanfei"
 msgstr ""
 
-#: db/characters.ts:322
+#: db/characters.ts:324
 msgctxt "db.characters.35f4f4"
 msgid "Xiangling"
 msgstr ""
 
-#: db/characters.ts:302
+#: db/characters.ts:304
 msgctxt "db.characters.3988a8"
 msgid "Sucrose"
 msgstr ""
 
-#: db/characters.ts:242
+#: db/characters.ts:244
 msgctxt "db.characters.42ddab"
 msgid "Lisa"
 msgstr ""
 
-#: db/characters.ts:402
+#: db/characters.ts:404
 msgctxt "db.characters.47f14e"
 msgid "Eula"
 msgstr ""
 
-#: db/characters.ts:432
+#: db/characters.ts:614
+msgctxt "db.characters.5641d7"
+msgid "Yelan"
+msgstr ""
+
+#: db/characters.ts:434
 msgctxt "db.characters.579564"
 msgid "Ayaka"
 msgstr ""
 
-#: db/characters.ts:122
+#: db/characters.ts:124
 msgctxt "db.characters.584d1b"
 msgid "Traveler (Geo)"
 msgstr ""
 
-#: db/characters.ts:292
+#: db/characters.ts:294
 msgctxt "db.characters.5934e2"
 msgid "Razor"
 msgstr ""
 
-#: db/characters.ts:262
+#: db/characters.ts:264
 msgctxt "db.characters.5e045b"
 msgid "Ningguang"
 msgstr ""
 
-#: db/characters.ts:162
+#: db/characters.ts:164
 msgctxt "db.characters.653885"
 msgid "Beidou"
 msgstr ""
 
-#: db/characters.ts:582
+#: db/characters.ts:584
 msgctxt "db.characters.67a132"
 msgid "Shenhe"
 msgstr ""
 
-#: db/characters.ts:182
+#: db/characters.ts:184
 msgctxt "db.characters.7267c2"
 msgid "Chongyun"
 msgstr ""
 
-#: db/characters.ts:272
+#: db/characters.ts:274
 msgctxt "db.characters.7ce9c6"
 msgid "Noelle"
 msgstr ""
 
-#: db/characters.ts:572
+#: db/characters.ts:574
 msgctxt "db.characters.7eee26"
 msgid "Yun Jin"
 msgstr ""
 
-#: db/characters.ts:212
+#: db/characters.ts:214
 msgctxt "db.characters.7f3adf"
 msgid "Jean"
 msgstr ""
 
-#: db/characters.ts:362
+#: db/characters.ts:364
 msgctxt "db.characters.89304e"
 msgid "Diona"
 msgstr ""
 
-#: db/characters.ts:482
+#: db/characters.ts:484
 msgctxt "db.characters.89d67c"
 msgid "Sayu"
 msgstr ""
 
-#: db/characters.ts:222
+#: db/characters.ts:224
 msgctxt "db.characters.921292"
 msgid "Kaeya"
 msgstr ""
 
-#: db/characters.ts:542
+#: db/characters.ts:544
 msgctxt "db.characters.9a051f"
 msgid "Thoma"
 msgstr ""
 
-#: db/characters.ts:492
+#: db/characters.ts:494
 msgctxt "db.characters.9d0c00"
 msgid "Yoimiya"
 msgstr ""
 
-#: db/characters.ts:282
+#: db/characters.ts:284
 msgctxt "db.characters.9de495"
 msgid "Qiqi"
 msgstr ""
 
-#: db/characters.ts:332
+#: db/characters.ts:334
 msgctxt "db.characters.9e37b6"
 msgid "Xingqiu"
 msgstr ""
 
-#: db/characters.ts:192
+#: db/characters.ts:194
 msgctxt "db.characters.a1bb56"
 msgid "Diluc"
 msgstr ""
 
-#: db/characters.ts:152
+#: db/characters.ts:154
 msgctxt "db.characters.a808c9"
 msgid "Barbara"
 msgstr ""
 
-#: db/characters.ts:592
+#: db/characters.ts:594
 msgctxt "db.characters.af20bc"
 msgid "Yae Miko"
 msgstr ""
 
-#: db/characters.ts:252
+#: db/characters.ts:254
 msgctxt "db.characters.af88fa"
 msgid "Mona"
 msgstr ""
 
-#: db/characters.ts:412
+#: db/characters.ts:414
 msgctxt "db.characters.b60444"
 msgid "Albedo"
 msgstr ""
 
-#: db/characters.ts:172
+#: db/characters.ts:174
 msgctxt "db.characters.b96249"
 msgid "Bennett"
 msgstr ""
 
-#: db/characters.ts:512
+#: db/characters.ts:624
+msgctxt "db.characters.b9937e"
+msgid "Kuki Shinobu"
+msgstr ""
+
+#: db/characters.ts:514
 msgctxt "db.characters.bafe92"
 msgid "Sara"
 msgstr ""
 
-#: db/characters.ts:422
+#: db/characters.ts:424
 msgctxt "db.characters.bc58dc"
 msgid "Ganyu"
 msgstr ""
 
-#: db/characters.ts:352
+#: db/characters.ts:354
 msgctxt "db.characters.bdaeb2"
 msgid "Tartaglia"
 msgstr ""
 
-#: db/characters.ts:522
+#: db/characters.ts:524
 msgctxt "db.characters.c68789"
 msgid "Kokomi"
 msgstr ""
 
-#: db/characters.ts:342
+#: db/characters.ts:344
 msgctxt "db.characters.ce2cb0"
 msgid "Klee"
 msgstr ""
 
-#: db/characters.ts:112
+#: db/characters.ts:114
 msgctxt "db.characters.d09c64"
 msgid "Traveler (Anemo)"
 msgstr ""
 
-#: db/characters.ts:232
+#: db/characters.ts:234
 msgctxt "db.characters.d9c480"
 msgid "Keqing"
 msgstr ""
 
-#: db/characters.ts:602
+#: db/characters.ts:604
 msgctxt "db.characters.dd1225"
 msgid "Ayato"
 msgstr ""
 
-#: db/characters.ts:452
+#: db/characters.ts:454
 msgctxt "db.characters.dd7597"
 msgid "Rosaria"
 msgstr ""
 
-#: db/characters.ts:532
+#: db/characters.ts:534
 msgctxt "db.characters.dd770d"
 msgid "Aloy"
 msgstr ""
 
-#: db/characters.ts:462
+#: db/characters.ts:464
 msgctxt "db.characters.de01da"
 msgid "Hu Tao"
 msgstr ""
 
-#: db/characters.ts:472
+#: db/characters.ts:474
 msgctxt "db.characters.e9f35f"
 msgid "Kazuha"
 msgstr ""
 
-#: db/characters.ts:132
+#: db/characters.ts:134
 msgctxt "db.characters.f0737d"
 msgid "Traveler (Electro)"
 msgstr ""
 
-#: db/characters.ts:502
+#: db/characters.ts:504
 msgctxt "db.characters.f55126"
 msgid "Raiden Shogun"
 msgstr ""
 
-#: db/characters.ts:108
+#: db/characters.ts:110
 msgctxt "db.characters.fc54ed"
 msgid "Paimon"
 msgstr ""
 
-#: db/characters.ts:142
+#: db/characters.ts:144
 msgctxt "db.characters.fdb676"
 msgid "Amber"
 msgstr ""
@@ -3411,27 +3421,27 @@ msgctxt "db.map.fbe305"
 msgid "Qingxu Pool"
 msgstr ""
 
-#: db/regions.ts:179
+#: db/regions.ts:182
 msgctxt "db.regions.06cea1"
 msgid "Inazuma"
 msgstr ""
 
-#: db/regions.ts:201
+#: db/regions.ts:204
 msgctxt "db.regions.38ab8d"
 msgid "Snezhnaya"
 msgstr ""
 
-#: db/regions.ts:103
+#: db/regions.ts:105
 msgctxt "db.regions.5a37ea"
 msgid "Mondstadt"
 msgstr ""
 
-#: db/regions.ts:141
+#: db/regions.ts:143
 msgctxt "db.regions.691c58"
 msgid "Liyue"
 msgstr ""
 
-#: db/regions.ts:99
+#: db/regions.ts:101
 msgctxt "db.regions.967696"
 msgid "Region"
 msgstr ""
@@ -3731,12 +3741,12 @@ msgctxt "db.weapons.03f248"
 msgid "Dragonspine Spear"
 msgstr ""
 
-#: db/weapons.ts:202
+#: db/weapons.ts:205
 msgctxt "db.weapons.040218"
 msgid "Kitain Cross Spear"
 msgstr ""
 
-#: db/weapons.ts:165
+#: db/weapons.ts:166
 msgctxt "db.weapons.073d1f"
 msgid "The Unforged"
 msgstr ""
@@ -3761,12 +3771,12 @@ msgctxt "db.weapons.119465"
 msgid "Sacrificial Greatsword"
 msgstr ""
 
-#: db/weapons.ts:203
+#: db/weapons.ts:206
 msgctxt "db.weapons.119676"
 msgid "Polar Star"
 msgstr ""
 
-#: db/weapons.ts:148
+#: db/weapons.ts:149
 msgctxt "db.weapons.138035"
 msgid "Blackcliff Slasher"
 msgstr ""
@@ -3786,7 +3796,7 @@ msgctxt "db.weapons.16cefd"
 msgid "Royal Grimoire"
 msgstr ""
 
-#: db/weapons.ts:153
+#: db/weapons.ts:154
 msgctxt "db.weapons.180e9e"
 msgid "Fillet Blade"
 msgstr ""
@@ -3796,12 +3806,12 @@ msgctxt "db.weapons.188019"
 msgid "Festering Desire"
 msgstr ""
 
-#: db/weapons.ts:186
+#: db/weapons.ts:189
 msgctxt "db.weapons.19a216"
 msgid "Amenoma Kageuchi"
 msgstr ""
 
-#: db/weapons.ts:194
+#: db/weapons.ts:197
 msgctxt "db.weapons.1a2044"
 msgid "Katsuragikiri Nagamasa"
 msgstr ""
@@ -3811,12 +3821,12 @@ msgctxt "db.weapons.1ac9a9"
 msgid "Rust"
 msgstr ""
 
-#: db/weapons.ts:164
+#: db/weapons.ts:165
 msgctxt "db.weapons.1c3519"
 msgid "Royal Spear"
 msgstr ""
 
-#: db/weapons.ts:205
+#: db/weapons.ts:208
 msgctxt "db.weapons.1fc19a"
 msgid "Wavebreaker's Fin"
 msgstr ""
@@ -3831,12 +3841,12 @@ msgctxt "db.weapons.230154"
 msgid "Dodoco Tales"
 msgstr ""
 
-#: db/weapons.ts:162
+#: db/weapons.ts:163
 msgctxt "db.weapons.28794d"
 msgid "Prototype Rancour"
 msgstr ""
 
-#: db/weapons.ts:179
+#: db/weapons.ts:180
 msgctxt "db.weapons.313d62"
 msgid "Skyrider Greatsword"
 msgstr ""
@@ -3846,12 +3856,12 @@ msgctxt "db.weapons.3801e6"
 msgid "The Alley Flash"
 msgstr ""
 
-#: db/weapons.ts:187
+#: db/weapons.ts:190
 msgctxt "db.weapons.39d5a4"
 msgid "Everlasting Moonglow"
 msgstr ""
 
-#: db/weapons.ts:147
+#: db/weapons.ts:148
 msgctxt "db.weapons.3ba383"
 msgid "Blackcliff Pole"
 msgstr ""
@@ -3871,7 +3881,7 @@ msgctxt "db.weapons.4488ef"
 msgid "Deathmatch"
 msgstr ""
 
-#: db/weapons.ts:175
+#: db/weapons.ts:176
 msgctxt "db.weapons.46ab3b"
 msgid "Memory of Dust"
 msgstr ""
@@ -3896,12 +3906,12 @@ msgctxt "db.weapons.48e9df"
 msgid "Royal Bow"
 msgstr ""
 
-#: db/weapons.ts:150
+#: db/weapons.ts:151
 msgctxt "db.weapons.4da5a4"
 msgid "Debate Club"
 msgstr ""
 
-#: db/weapons.ts:180
+#: db/weapons.ts:181
 msgctxt "db.weapons.4df4c4"
 msgid "Skyrider Sword"
 msgstr ""
@@ -3911,12 +3921,12 @@ msgctxt "db.weapons.4f92ed"
 msgid "Lithic Blade"
 msgstr ""
 
-#: db/weapons.ts:171
+#: db/weapons.ts:172
 msgctxt "db.weapons.500132"
 msgid "Iron Sting"
 msgstr ""
 
-#: db/weapons.ts:151
+#: db/weapons.ts:152
 msgctxt "db.weapons.5553fb"
 msgid "Dragon's Bane"
 msgstr ""
@@ -3926,12 +3936,12 @@ msgctxt "db.weapons.587ae5"
 msgid "Elegy for the End"
 msgstr ""
 
-#: db/weapons.ts:170
+#: db/weapons.ts:171
 msgctxt "db.weapons.59adc6"
 msgid "Compound Bow"
 msgstr ""
 
-#: db/weapons.ts:172
+#: db/weapons.ts:173
 msgctxt "db.weapons.59b38a"
 msgid "Lithic Spear"
 msgstr ""
@@ -3941,22 +3951,22 @@ msgctxt "db.weapons.5e235d"
 msgid "Solar Pearl"
 msgstr ""
 
-#: db/weapons.ts:149
+#: db/weapons.ts:150
 msgctxt "db.weapons.5e65dc"
 msgid "Calamity Queller"
 msgstr ""
 
-#: db/weapons.ts:154
+#: db/weapons.ts:155
 msgctxt "db.weapons.623be3"
 msgid "Halberd"
 msgstr ""
 
-#: db/weapons.ts:166
+#: db/weapons.ts:167
 msgctxt "db.weapons.630c0f"
 msgid "Twin Nephrite"
 msgstr ""
 
-#: db/weapons.ts:188
+#: db/weapons.ts:191
 msgctxt "db.weapons.64f159"
 msgid "Hakushin Ring"
 msgstr ""
@@ -3976,7 +3986,7 @@ msgctxt "db.weapons.7443eb"
 msgid "Wolf's Gravestone"
 msgstr ""
 
-#: db/weapons.ts:161
+#: db/weapons.ts:162
 msgctxt "db.weapons.748ca0"
 msgid "Prototype Amber"
 msgstr ""
@@ -3996,17 +4006,17 @@ msgctxt "db.weapons.867c82"
 msgid "Wine and Song"
 msgstr ""
 
-#: db/weapons.ts:152
+#: db/weapons.ts:153
 msgctxt "db.weapons.874a83"
 msgid "Eye of Perception"
 msgstr ""
 
-#: db/weapons.ts:177
+#: db/weapons.ts:178
 msgctxt "db.weapons.88b507"
 msgid "Prototype Starglitter"
 msgstr ""
 
-#: db/weapons.ts:160
+#: db/weapons.ts:161
 msgctxt "db.weapons.8990d6"
 msgid "Prototype Crescent"
 msgstr ""
@@ -4031,7 +4041,7 @@ msgctxt "db.weapons.8f3c08"
 msgid "Windblume Ode"
 msgstr ""
 
-#: db/weapons.ts:193
+#: db/weapons.ts:196
 msgctxt "db.weapons.91de62"
 msgid "Hamayumi"
 msgstr ""
@@ -4046,7 +4056,7 @@ msgctxt "db.weapons.9c6933"
 msgid "Freedom-Sworn"
 msgstr ""
 
-#: db/weapons.ts:176
+#: db/weapons.ts:177
 msgctxt "db.weapons.9d7f69"
 msgid "Prototype Archaic"
 msgstr ""
@@ -4056,17 +4066,17 @@ msgctxt "db.weapons.9fe22c"
 msgid "Summit Shaper"
 msgstr ""
 
-#: db/weapons.ts:155
+#: db/weapons.ts:156
 msgctxt "db.weapons.a0205e"
 msgid "Messenger"
 msgstr ""
 
-#: db/weapons.ts:163
+#: db/weapons.ts:164
 msgctxt "db.weapons.a1a162"
 msgid "Rainslasher"
 msgstr ""
 
-#: db/weapons.ts:204
+#: db/weapons.ts:207
 msgctxt "db.weapons.a2de1f"
 msgid "The Catch"
 msgstr ""
@@ -4086,7 +4096,7 @@ msgctxt "db.weapons.a794cd"
 msgid "Blackcliff Agate"
 msgstr ""
 
-#: db/weapons.ts:196
+#: db/weapons.ts:199
 msgctxt "db.weapons.ad7045"
 msgid "Predator"
 msgstr ""
@@ -4111,7 +4121,7 @@ msgctxt "db.weapons.b5f792"
 msgid "Royal Greatsword"
 msgstr ""
 
-#: db/weapons.ts:195
+#: db/weapons.ts:198
 msgctxt "db.weapons.b70f24"
 msgid "Mouun's Moon"
 msgstr ""
@@ -4126,7 +4136,7 @@ msgctxt "db.weapons.bffca8"
 msgid "Favonius Lance"
 msgstr ""
 
-#: db/weapons.ts:185
+#: db/weapons.ts:188
 msgctxt "db.weapons.c0d32e"
 msgid "Akuoumaru"
 msgstr ""
@@ -4141,7 +4151,7 @@ msgctxt "db.weapons.ca27da"
 msgid "Lion's Roar"
 msgstr ""
 
-#: db/weapons.ts:189
+#: db/weapons.ts:192
 msgctxt "db.weapons.caea60"
 msgid "Mistsplitter Reforged"
 msgstr ""
@@ -4156,7 +4166,7 @@ msgctxt "db.weapons.cd6a74"
 msgid "Harbinger of Dawn"
 msgstr ""
 
-#: db/weapons.ts:174
+#: db/weapons.ts:175
 msgctxt "db.weapons.cd75c9"
 msgid "Mappa Mare"
 msgstr ""
@@ -4166,7 +4176,7 @@ msgctxt "db.weapons.ce3943"
 msgid "Crescent Pike"
 msgstr ""
 
-#: db/weapons.ts:198
+#: db/weapons.ts:201
 msgctxt "db.weapons.ce8065"
 msgid "Haran Geppaku Futsu"
 msgstr ""
@@ -4176,17 +4186,17 @@ msgctxt "db.weapons.ced704"
 msgid "Bloodtainted Greatsword"
 msgstr ""
 
-#: db/weapons.ts:156
+#: db/weapons.ts:157
 msgctxt "db.weapons.d21193"
 msgid "Primordial Jade Cutter"
 msgstr ""
 
-#: db/weapons.ts:201
+#: db/weapons.ts:204
 msgctxt "db.weapons.d54d9d"
 msgid "Engulfing Lightning"
 msgstr ""
 
-#: db/weapons.ts:182
+#: db/weapons.ts:183
 msgctxt "db.weapons.d63451"
 msgid "Vortex Vanquisher"
 msgstr ""
@@ -4201,9 +4211,19 @@ msgctxt "db.weapons.d8a782"
 msgid "Alley Hunter"
 msgstr ""
 
+#: db/weapons.ts:145
+msgctxt "db.weapons.d90c3a"
+msgid "Aqua Simulacra"
+msgstr ""
+
 #: db/weapons.ts:98
 msgctxt "db.weapons.da3955"
 msgid "The Flute"
+msgstr ""
+
+#: db/weapons.ts:184
+msgctxt "db.weapons.da75eb"
+msgid "Fading Twilight"
 msgstr ""
 
 #: db/weapons.ts:144
@@ -4216,17 +4236,17 @@ msgctxt "db.weapons.df6bad"
 msgid "The Viridescent Hunt"
 msgstr ""
 
-#: db/weapons.ts:190
+#: db/weapons.ts:193
 msgctxt "db.weapons.e30f3d"
 msgid "Oathsworn Eye"
 msgstr ""
 
-#: db/weapons.ts:173
+#: db/weapons.ts:174
 msgctxt "db.weapons.e33267"
 msgid "Luxurious Sea-Lord"
 msgstr ""
 
-#: db/weapons.ts:181
+#: db/weapons.ts:182
 msgctxt "db.weapons.e43450"
 msgid "Staff of Homa"
 msgstr ""
@@ -4236,7 +4256,7 @@ msgctxt "db.weapons.e53a5e"
 msgid "Skyward Pride"
 msgstr ""
 
-#: db/weapons.ts:206
+#: db/weapons.ts:209
 msgctxt "db.weapons.e5d778"
 msgid "Kagura's Verity"
 msgstr ""
@@ -4271,7 +4291,7 @@ msgctxt "db.weapons.ece880"
 msgid "Ferrous Shadow"
 msgstr ""
 
-#: db/weapons.ts:178
+#: db/weapons.ts:179
 msgctxt "db.weapons.ed05a0"
 msgid "Serpent Spine"
 msgstr ""
@@ -4291,7 +4311,7 @@ msgctxt "db.weapons.f62d45"
 msgid "Song of Broken Pines"
 msgstr ""
 
-#: db/weapons.ts:169
+#: db/weapons.ts:170
 msgctxt "db.weapons.f67ae4"
 msgid "Black Tassel"
 msgstr ""
@@ -4306,7 +4326,7 @@ msgctxt "db.weapons.f7afc0"
 msgid "Snow-Tombed Starsilver"
 msgstr ""
 
-#: db/weapons.ts:197
+#: db/weapons.ts:200
 msgctxt "db.weapons.f81f58"
 msgid "Redhorn Stonethresher"
 msgstr ""

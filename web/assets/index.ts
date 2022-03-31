@@ -18,6 +18,7 @@ import AmosBow from "./game/Amos' Bow.png";
 import AnemoSigil from "./game/Anemo Sigil.png";
 import Anemo from "./game/Anemo.png";
 import Apple from "./game/Apple.png";
+import AquaSimulacra from "./game/Aqua Simulacra.png";
 import AquilaFavonia from "./game/Aquila Favonia.png";
 import ArchaicPetra from "./game/Archaic Petra.png";
 import AshenHeart from "./game/Ashen Heart.png";
@@ -132,6 +133,7 @@ import EverflameSeed from "./game/Everflame Seed.png";
 import EverlastingMoonglow from "./game/Everlasting Moonglow.png";
 import EyeofPerception from "./game/Eye of Perception.png";
 import Fabric from "./game/Fabric.png";
+import FadingTwilight from "./game/Fading Twilight.png";
 import FavoniusCodex from "./game/Favonius Codex.png";
 import FavoniusGreatsword from "./game/Favonius Greatsword.png";
 import FavoniusLance from "./game/Favonius Lance.png";
@@ -202,6 +204,7 @@ import Keqing from "./game/Keqing.png";
 import KitainCrossSpear from "./game/Kitain Cross Spear.png";
 import Klee from "./game/Klee.png";
 import Kokomi from "./game/Kokomi.png";
+import KukiShinobu from "./game/Kuki Shinobu.png";
 import Lavawalker from "./game/Lavawalker.png";
 import LightningPrism from "./game/Lightning Prism.png";
 import LionsRoar from "./game/Lion's Roar.png";
@@ -438,6 +441,7 @@ import Xingqiu from "./game/Xingqiu.png";
 import Xinyan from "./game/Xinyan.png";
 import YaeMiko from "./game/Yae Miko.png";
 import Yanfei from "./game/Yanfei.png";
+import Yelan from "./game/Yelan.png";
 import YellowCircle from "./game/Yellow Circle.png";
 import YellowDye from "./game/Yellow Dye.png";
 import Yoimiya from "./game/Yoimiya.png";
@@ -464,6 +468,7 @@ export {
   AnemoSigil,
   Anemo,
   Apple,
+  AquaSimulacra,
   AquilaFavonia,
   ArchaicPetra,
   AshenHeart,
@@ -578,6 +583,7 @@ export {
   EverlastingMoonglow,
   EyeofPerception,
   Fabric,
+  FadingTwilight,
   FavoniusCodex,
   FavoniusGreatsword,
   FavoniusLance,
@@ -648,6 +654,7 @@ export {
   KitainCrossSpear,
   Klee,
   Kokomi,
+  KukiShinobu,
   Lavawalker,
   LightningPrism,
   LionsRoar,
@@ -884,6 +891,7 @@ export {
   Xinyan,
   YaeMiko,
   Yanfei,
+  Yelan,
   YellowCircle,
   YellowDye,
   Yoimiya,
@@ -912,6 +920,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Anemo Sigil": return AnemoSigil.src;
     case "Anemo": return Anemo.src;
     case "Apple": return Apple.src;
+    case "Aqua Simulacra": return AquaSimulacra.src;
     case "Aquila Favonia": return AquilaFavonia.src;
     case "Archaic Petra": return ArchaicPetra.src;
     case "Ashen Heart": return AshenHeart.src;
@@ -1026,6 +1035,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Everlasting Moonglow": return EverlastingMoonglow.src;
     case "Eye of Perception": return EyeofPerception.src;
     case "Fabric": return Fabric.src;
+    case "Fading Twilight": return FadingTwilight.src;
     case "Favonius Codex": return FavoniusCodex.src;
     case "Favonius Greatsword": return FavoniusGreatsword.src;
     case "Favonius Lance": return FavoniusLance.src;
@@ -1096,6 +1106,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Kitain Cross Spear": return KitainCrossSpear.src;
     case "Klee": return Klee.src;
     case "Kokomi": return Kokomi.src;
+    case "Kuki Shinobu": return KukiShinobu.src;
     case "Lavawalker": return Lavawalker.src;
     case "Lightning Prism": return LightningPrism.src;
     case "Lion's Roar": return LionsRoar.src;
@@ -1332,6 +1343,7 @@ export function getAssetByName(name: string): string | undefined {
     case "Xinyan": return Xinyan.src;
     case "Yae Miko": return YaeMiko.src;
     case "Yanfei": return Yanfei.src;
+    case "Yelan": return Yelan.src;
     case "Yellow Circle": return YellowCircle.src;
     case "Yellow Dye": return YellowDye.src;
     case "Yoimiya": return Yoimiya.src;

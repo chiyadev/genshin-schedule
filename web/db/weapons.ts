@@ -142,6 +142,7 @@ add(registerMessage({ defaultMessage: "Solar Pearl" }), Guyun, [FatuiKnife, Whop
 add(registerMessage({ defaultMessage: "Summit Shaper" }), Guyun, [FatuiKnife, HilichurlMask]);
 add(registerMessage({ defaultMessage: "White Tassel" }), Guyun, [FatuiKnife, FatuiInsignia]);
 add(registerMessage({ defaultMessage: "Whiteblind" }), Guyun, [FatuiKnife, TreasureHoarderInsignia]);
+add(registerMessage({ defaultMessage: "Aqua Simulacra" }), Guyun, [Statuette, SpectralCore]);
 
 // Mist Veiled Elixir
 add(registerMessage({ defaultMessage: "Blackcliff Pole" }), MistVeiledElixir, [MistGrass, FatuiInsignia]);
@@ -180,6 +181,7 @@ add(registerMessage({ defaultMessage: "Skyrider Greatsword" }), Aerosiderite, [B
 add(registerMessage({ defaultMessage: "Skyrider Sword" }), Aerosiderite, [BoneShard, FatuiInsignia]);
 add(registerMessage({ defaultMessage: "Staff of Homa" }), Aerosiderite, [LeyLine, Slime]);
 add(registerMessage({ defaultMessage: "Vortex Vanquisher" }), Aerosiderite, [BoneShard, TreasureHoarderInsignia]);
+add(registerMessage({ defaultMessage: "Fading Twilight" }), Aerosiderite, [FatuiKnife, SamachurlScroll]);
 
 // Branch of Distant Sea
 add(registerMessage({ defaultMessage: "Akuoumaru" }), BranchOfDistantSea, [ConcealedClaw, Handguard]);
