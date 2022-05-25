@@ -210,7 +210,6 @@ export const TearsOfTheCalamitousGod: TalentMaterial = {
   wiki: "https://genshin-impact.fandom.com/wiki/Tears_of_the_Calamitous_God",
 };
 
-
 export const TalentMaterials = [
   Freedom,
   Prosperity,

@@ -23,6 +23,7 @@ import {
   SpiritLocketOfBoreas,
   TailOfBoreas,
   TalentMaterial,
+  TearsOfTheCalamitousGod,
   TheMeaningOfAeons,
   Transience,
   TuskOfMonocerosCaeli,
@@ -89,6 +90,7 @@ import {
   VajradaAmethyst,
   VarunadaLazurite,
   VayudaTurquoise,
+  RunicFang,
 } from "./characterMaterials";
 
 export const CharacterWiki = "https://genshin-impact.fandom.com/wiki/Characters";
@@ -607,6 +609,26 @@ export const Ayato: Character = {
   commonMaterials: [SakuraBloom, Handguard],
 };
 
+export const Yelan: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Yelan" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Yelan",
+  materials: [VarunadaLazurite, RunicFang],
+  talentMaterialWeekly: GildedScale,
+  talentMaterial: Prosperity,
+  commonMaterials: [Starconch, FatuiInsignia],
+};
+
+export const KukiShinobu: Character = {
+  type: "Character",
+  name: registerMessage({ defaultMessage: "Kuki Shinobu" }),
+  wiki: "https://genshin-impact.fandom.com/wiki/Kuki_Shinobu",
+  materials: [VajradaAmethyst, RunicFang],
+  talentMaterialWeekly: TearsOfTheCalamitousGod,
+  talentMaterial: Elegance,
+  commonMaterials: [NakuWeed, SpectralCore],
+};
+
 export const Characters = [
   // https://github.com/chiyadev/genshin-schedule/issues/11
   //TravelerAnemo,
@@ -635,6 +657,7 @@ export const Characters = [
   Keqing,
   Klee,
   Kokomi,
+  KukiShinobu,
   Lisa,
   Mona,
   Ningguang,
@@ -656,6 +679,7 @@ export const Characters = [
   Xinyan,
   YaeMiko,
   Yanfei,
+  Yelan,
   Yoimiya,
   YunJin,
   Zhongli,
