@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-01 08:42+0200\n"
-"PO-Revision-Date: 2021-08-02 07:33+0000\n"
-"Last-Translator: The_BadUser <vanjavs@mail.ru>\n"
+"PO-Revision-Date: 2022-08-25 01:21+0000\n"
+"Last-Translator: Sergey Shavin <Seriy-sh@yandex.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/genshin-schedule/"
 "web/ru/>\n"
 "Language: ru\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.8-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #: components/Auth/UserSignIn.tsx:62
 msgctxt "components.Auth.UserSignIn.242220"
@@ -146,7 +146,7 @@ msgstr "Персонажи"
 #: components/Customize/LeakedWarning.tsx:10
 msgctxt "components.Customize.LeakedWarning.8c8c3a"
 msgid "This page may be inaccurate."
-msgstr ""
+msgstr "Эта страница может быть неточной."
 
 #: components/Customize/LeakedWarning.tsx:13
 msgctxt "components.Customize.LeakedWarning.ddaaad"
@@ -154,6 +154,8 @@ msgid ""
 "The following information is based on leaked data from beta versions of the "
 "game. Take it with a grain of salt."
 msgstr ""
+"Следующая информация основана на утечке данных из бета-версий игры, поэтому "
+"к ней стоит относиться скептически."
 
 #: components/Customize/Notifications/Info.tsx:104
 msgctxt "components.Customize.Notifications.Info.049a4d"
@@ -274,7 +276,7 @@ msgstr ""
 #: components/Customize/SettingsList/AccountManageButton.tsx:113
 msgctxt "components.Customize.SettingsList.AccountManageButton.7d31e1"
 msgid "New password"
-msgstr ""
+msgstr "Новый пароль"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:98
 msgctxt "components.Customize.SettingsList.AccountManageButton.a58ae0"
@@ -289,17 +291,17 @@ msgstr ""
 #: components/Customize/SettingsList/AccountManageButton.tsx:133
 msgctxt "components.Customize.SettingsList.AccountManageButton.e3b158"
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 #: components/Customize/SettingsList/AccountManageButton.tsx:107
 msgctxt "components.Customize.SettingsList.AccountManageButton.e6c83b"
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 #: components/Customize/SettingsList/BackgroundSwitch.tsx:18
 msgctxt "components.Customize.SettingsList.BackgroundSwitch.5d0640"
 msgid "Background"
-msgstr ""
+msgstr "Фон"
 
 #: components/Customize/SettingsList/BackgroundSwitch.tsx:40
 msgctxt "components.Customize.SettingsList.BackgroundSwitch.b6d853"
@@ -314,7 +316,7 @@ msgstr ""
 #: components/Customize/SettingsList/ConfigExportButton.tsx:99
 msgctxt "components.Customize.SettingsList.ConfigExportButton.8ff2e0"
 msgid "Overwrite"
-msgstr ""
+msgstr "Перезаписать"
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:60
 msgctxt "components.Customize.SettingsList.ConfigExportButton.a27849"
@@ -325,7 +327,7 @@ msgstr ""
 #: components/Customize/SettingsList/ConfigExportButton.tsx:109
 msgctxt "components.Customize.SettingsList.ConfigExportButton.a79e7a"
 msgid "Copied"
-msgstr ""
+msgstr "Скопировано"
 
 #: components/Customize/SettingsList/ConfigExportButton.tsx:64
 msgctxt "components.Customize.SettingsList.ConfigExportButton.b0e5f6"
@@ -340,12 +342,12 @@ msgstr ""
 #: components/Customize/SettingsList/ConfigExportButton.tsx:109
 msgctxt "components.Customize.SettingsList.ConfigExportButton.e25eaf"
 msgid "Copy"
-msgstr ""
+msgstr "Копировать"
 
 #: components/Customize/SettingsList/LanguageSwitch.tsx:44
 msgctxt "components.Customize.SettingsList.LanguageSwitch.4b7b37"
 msgid "Add new language"
-msgstr ""
+msgstr "Добавить новый язык"
 
 #: components/Customize/SettingsList/LanguageSwitch.tsx:36
 msgctxt "components.Customize.SettingsList.LanguageSwitch.94abfc"
@@ -355,7 +357,7 @@ msgstr ""
 #: components/Customize/SettingsList/LanguageSwitch.tsx:19
 msgctxt "components.Customize.SettingsList.LanguageSwitch.cb5677"
 msgid "Language"
-msgstr ""
+msgstr "Язык"
 
 #: components/Customize/SettingsList/ResinCalcButtonInput.tsx:28
 msgctxt "components.Customize.SettingsList.ResinCalcButtonInput.040acf"
@@ -405,7 +407,7 @@ msgstr ""
 #: components/Customize/SettingsList/index.tsx:21
 msgctxt "components.Customize.SettingsList.index.0f789d"
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: components/Customize/WeaponInfo/CommonMaterialDisplay.tsx:62
 msgctxt "components.Customize.WeaponInfo.CommonMaterialDisplay.8b6c08"
@@ -440,7 +442,7 @@ msgstr ""
 #: components/Customize/WeaponList/index.tsx:19
 msgctxt "components.Customize.WeaponList.index.4477a1"
 msgid "Weapons"
-msgstr ""
+msgstr "Оружия"
 
 #: components/DropLabel.tsx:72
 msgctxt "components.DropLabel.0388b5"
@@ -465,12 +467,12 @@ msgstr ""
 #: components/Footer.tsx:77
 msgctxt "components.Footer.16f995"
 msgid "Discord"
-msgstr ""
+msgstr "Discord"
 
 #: components/Footer.tsx:71
 msgctxt "components.Footer.484351"
 msgid "Help"
-msgstr ""
+msgstr "Помощь"
 
 #: components/Footer.tsx:40
 msgctxt "components.Footer.76b2f1"
@@ -542,27 +544,27 @@ msgstr ""
 #: components/Home/Clock/ServerText.tsx:20
 msgctxt "components.Home.Clock.ServerText.5f7008"
 msgid "Europe"
-msgstr ""
+msgstr "Европа"
 
 #: components/Home/Clock/ServerText.tsx:24
 msgctxt "components.Home.Clock.ServerText.8a04bd"
 msgid "Asia"
-msgstr ""
+msgstr "Азия"
 
 #: components/Home/Clock/ServerText.tsx:16
 msgctxt "components.Home.Clock.ServerText.9d0209"
 msgid "America"
-msgstr ""
+msgstr "Америка"
 
 #: components/Home/Clock/TimeDisplay.tsx:62
 msgctxt "components.Home.Clock.TimeDisplay.44c3b9"
 msgid "Previous day"
-msgstr ""
+msgstr "Предыдущий день"
 
 #: components/Home/Clock/TimeDisplay.tsx:72
 msgctxt "components.Home.Clock.TimeDisplay.dd708b"
 msgid "Next day"
-msgstr ""
+msgstr "Следующий день"
 
 #: components/Home/Clock/index.tsx:16
 msgctxt "components.Home.Clock.index.2cbf2a"
@@ -602,12 +604,12 @@ msgstr ""
 #: components/Home/DomainView/FilterTypeButtons.tsx:27
 msgctxt "components.Home.DomainView.FilterTypeButtons.4477a1"
 msgid "Weapons"
-msgstr ""
+msgstr "Оружия"
 
 #: components/Home/DomainView/FilterTypeButtons.tsx:21
 msgctxt "components.Home.DomainView.FilterTypeButtons.4e372c"
 msgid "Characters"
-msgstr ""
+msgstr "Персонажи"
 
 #: components/Home/DomainView/FilterTypeButtons.tsx:33
 msgctxt "components.Home.DomainView.FilterTypeButtons.796e5e"
