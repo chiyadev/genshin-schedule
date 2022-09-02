@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-15 11:50+0200\n"
-"PO-Revision-Date: 2022-08-26 08:22+0000\n"
-"Last-Translator: Hugel <qihu@nfschina.com>\n"
+"PO-Revision-Date: 2022-09-03 04:15+0000\n"
+"Last-Translator: Jason Clermont <lunme1008@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "genshin-schedule/web/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14-dev\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: components/Auth/UserSignIn.tsx:62
 msgctxt "components.Auth.UserSignIn.242220"
@@ -146,7 +146,7 @@ msgctxt "components.Customize.LeakedWarning.ddaaad"
 msgid ""
 "The following information is based on leaked data from beta versions of the "
 "game. Take it with a grain of salt."
-msgstr ""
+msgstr "下面的信息是基于游戏测试版的泄露数据。请谨慎对待。"
 
 #: components/Customize/Notifications/Info.tsx:104
 msgctxt "components.Customize.Notifications.Info.049a4d"
@@ -568,7 +568,7 @@ msgstr "提瓦特时间"
 #: components/Home/DomainView/ArtifactList.tsx:16
 msgctxt "components.Home.DomainView.ArtifactList.742197"
 msgid "This item is not guaranteed to drop."
-msgstr ""
+msgstr "此物品不保证会掉落。"
 
 #: components/Home/DomainView/DomainDisplay.tsx:31
 msgctxt "components.Home.DomainView.DomainDisplay.0388b5"
@@ -613,12 +613,12 @@ msgstr "圣遗物"
 #: components/Home/DomainView/Item.tsx:39
 msgctxt "components.Home.DomainView.Item.238d34"
 msgid "Highlight item"
-msgstr ""
+msgstr "高亮物品"
 
 #: components/Home/DomainView/MaterialList.tsx:34
 msgctxt "components.Home.DomainView.MaterialList.742197"
 msgid "This item is not guaranteed to drop."
-msgstr ""
+msgstr "此物品不保证会掉落。"
 
 #: components/Home/DomainView/index.tsx:376
 msgctxt "components.Home.DomainView.index.4af108"
